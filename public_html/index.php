@@ -11,7 +11,6 @@ if (!defined('LC_MESSAGES'))
 // if (isset($_GET["lang"]) && $_GET["lang"] == "de"){ $lang = "de"; $locale = "de_DE"; }
 
 
-$lang = "en"; 
 $locale = "en_US";
 if(isset($_GET["lang"]))
 {
@@ -39,6 +38,7 @@ bind_textdomain_codeset('messages', $codeset);
 // var_dump(__DIR__);
 // var_dump( preg_replace("[\\\\]", "/", __DIR__) );
 bindtextdomain('messages', preg_replace("[\\\\]", "/", __DIR__).'/locale');
+setlocale(LC_MESSAGES, $lang.'.'.$codeset);
 setlocale(LC_ALL, $lang.'.'.$codeset);
 textdomain('messages');
 
