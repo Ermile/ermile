@@ -17,28 +17,30 @@ if(isset($_GET["lang"]))
 	$locale =$_GET["lang"];
 }
 
-// var_dump($locale);
-// var_dump( getenv('LANG'), putenv('LANG=en_GB'), getenv('LANG') );
 
+// putenv("LC_ALL=$locale"); // wrong in windows
+// putenv('LC_ALL='.$locale);
 
-putenv("LC_ALL=$locale"); // wrong in windows
-putenv('LC_ALL='.$locale);
-
-setlocale(LC_ALL, $locale);
-setlocale(LC_MESSAGES, $locale);
-bindtextdomain('messages', __DIR__ . '/locale');
-textdomain("messages");
-
-
-// print "”._(“hi! This website is written in English.”).”\n”;
-
-
-// putenv("LC_ALL=en_US");
-
-
-
-// bindtextdomain("messages", "./locale");
+// setlocale(LC_ALL, $locale);
+// setlocale(LC_MESSAGES, $locale);
+// bindtextdomain('messages', __DIR__ . '/locale');
 // textdomain("messages");
+
+
+$lang = $locale;
+
+$codeset = "UTF8";  // warning ! not UTF-8 with dash '-' 
+putenv('LANG='.$lang.'.'.$codeset);
+putenv('LANGUAGE='.$lang.'.'.$codeset);
+bind_textdomain_codeset('messages', $codeset);
+
+// set locale
+bindtextdomain('messages', __DIR__.'/locale');
+setlocale(LC_ALL, $lang.'.'.$codeset);
+textdomain('messages');
+
+
+
 
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale?>" lang="<?=$locale?>">
