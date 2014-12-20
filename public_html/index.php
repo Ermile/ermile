@@ -17,7 +17,6 @@ if(isset($_GET["lang"]))
 	$locale =$_GET["lang"];
 }
 
-
 // putenv("LC_ALL=$locale"); // wrong in windows
 // putenv('LC_ALL='.$locale);
 
@@ -29,13 +28,16 @@ if(isset($_GET["lang"]))
 
 $lang = $locale;
 
+
 $codeset = "UTF8";  // warning ! not UTF-8 with dash '-' 
 putenv('LANG='.$lang.'.'.$codeset);
 putenv('LANGUAGE='.$lang.'.'.$codeset);
 bind_textdomain_codeset('messages', $codeset);
 
 // set locale
-bindtextdomain('messages', __DIR__.'/locale');
+// var_dump(__DIR__);
+// var_dump( preg_replace("[\\\\]", "/", __DIR__) );
+bindtextdomain('messages', preg_replace("[\\\\]", "/", __DIR__).'/locale');
 setlocale(LC_ALL, $lang.'.'.$codeset);
 textdomain('messages');
 
