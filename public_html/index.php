@@ -26,34 +26,38 @@ if(isset($_GET["lang"]))
 // textdomain("messages");
 
 
-$lang = $locale;
-var_dump($lang);
+// $lang = $locale;
+// var_dump($lang);
 
-$codeset = "UTF8";  // warning ! not UTF-8 with dash '-' 
-putenv('LANG='.$lang.'.'.$codeset);
-putenv('LANGUAGE='.$lang.'.'.$codeset);
-bind_textdomain_codeset('messages', $codeset);
+// $codeset = "UTF8";  // warning ! not UTF-8 with dash '-' 
+// putenv('LANG='.$lang.'.'.$codeset);
+// putenv('LANGUAGE='.$lang.'.'.$codeset);
+// bind_textdomain_codeset('messages', $codeset);
 
-// set locale
-// var_dump(__DIR__);
-// var_dump( preg_replace("[\\\\]", "/", __DIR__) );
-bindtextdomain('messages', preg_replace("[\\\\]", "/", __DIR__).'/locale');
-// setlocale(LC_MESSAGES, $lang.'.'.$codeset);
-setlocale(LC_ALL, $lang.'.'.$codeset);
-textdomain('messages');
-
-
+// // set locale
+// // var_dump(__DIR__);
+// // var_dump( preg_replace("[\\\\]", "/", __DIR__) );
+// bindtextdomain('messages', preg_replace("[\\\\]", "/", __DIR__).'/locale');
+// // setlocale(LC_MESSAGES, $lang.'.'.$codeset);
+// setlocale(LC_ALL, $lang.'.'.$codeset);
+// textdomain('messages');
 
 
-// /**
-//  * local lang
-//  */
-// $locale = 'fa_IR';
-// putenv( "LC_ALL={$locale}" );
-// setlocale( LC_ALL, $locale );
-// $domain = $locale;
-// bindtextdomain($domain, preg_replace("[\\\\]", "/", __DIR__).'/locale');
-// textdomain("*");
+
+
+
+$language = "fa_IR";
+putenv("LANG=" . $language); 
+setlocale(LC_ALL, $language);
+ 
+// Set the text domain as "messages"
+$domain = "messages";
+bindtextdomain($domain, "locale"); 
+bind_textdomain_codeset($domain, 'UTF-8');
+ 
+textdomain($domain);
+ 
+echo _("Hi");
 
 
 

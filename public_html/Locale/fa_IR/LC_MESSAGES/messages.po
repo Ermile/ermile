@@ -33,3 +33,8 @@ msgid ""
 "sample page to compare the various localization methods. This is just a "
 "sample page to compare the various localization methods."
 msgstr "Hi World - FAAAAAAA"
+
+
+#: gettext-php.php:60
+msgid "Hi"
+msgstr "Salaaaaaaaaaaaaaaaaaaam"
