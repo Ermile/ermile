@@ -11,7 +11,8 @@ if (!defined('LC_MESSAGES'))
 // if (isset($_GET["lang"]) && $_GET["lang"] == "de"){ $lang = "de"; $locale = "de_DE"; }
 
 
-$lang = "en"; $locale = "en_US";
+$lang = "en"; 
+$locale = "en_US";
 if(isset($_GET["lang"]))
 {
 	$locale =$_GET["lang"];
@@ -27,7 +28,7 @@ if(isset($_GET["lang"]))
 
 
 $lang = $locale;
-
+var_dump($lang);
 
 $codeset = "UTF8";  // warning ! not UTF-8 with dash '-' 
 putenv('LANG='.$lang.'.'.$codeset);
