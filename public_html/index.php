@@ -1,7 +1,11 @@
 <?php
 
-if(function_exists("gettext")){ var_dump("get text enabled!");}
-if (!defined('LC_MESSAGES')) define('LC_MESSAGES', 6);
+if (!defined('LC_MESSAGES')) 
+	{
+		define('LC_MESSAGES', 6);
+		var_dump("not defined");
+	}
+
 
 $lang = "en"; $locale = "en_US";
 if ($_GET["lang"] == "de"){ $lang = "de"; $locale = "de_DE"; }
