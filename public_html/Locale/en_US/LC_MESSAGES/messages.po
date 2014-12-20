@@ -1,19 +1,35 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: 2014-12-20 15:04+0330\n"
-"PO-Revision-Date: 2014-12-20 15:04+0330\n"
-"Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
-"Language-Team: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.9\n"
-"X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: PHP Localization Benchmark\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-12-20 17:37+0330\n"
+"Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
+"Language-Team: Pablo Hoch <mel@melaxis.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Language: en_US\n"
+"X-Generator: Poedit 1.6.9\n"
 
+#: gettext-php.php:20
+msgid "Hello World!"
+msgstr "En"
 
-#Test1
-msgid "test"
-msgstr "Tesssssssst";
+#: gettext-php.php:25
+msgid "PHP Localization Benchmark"
+msgstr "English"
+
+#: gettext-php.php:27
+msgid ""
+"This is just a sample page to compare the various localization methods. This "
+"is just a sample page to compare the various localization methods. This is "
+"just a sample page to compare the various localization methods. This is just "
+"a sample page to compare the various localization methods. This is just a "
+"sample page to compare the various localization methods. This is just a "
+"sample page to compare the various localization methods. This is just a "
+"sample page to compare the various localization methods. This is just a "
+"sample page to compare the various localization methods. This is just a "
+"sample page to compare the various localization methods. This is just a "
+"sample page to compare the various localization methods."
+msgstr "Hi World"
