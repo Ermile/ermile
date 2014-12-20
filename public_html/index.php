@@ -1,78 +1,38 @@
 <?php
 
-if (!defined('LC_MESSAGES')) 
-	{
-		define('LC_MESSAGES', 6);
-		var_dump("LC_MESSAGES not defined");
-	}
+require_once("lib/streams.php");
+require_once("lib/gettext.php");
 
-// $lang = "en"; $locale = "en_GB";
-// if (isset($_GET["lang"]) && $_GET["lang"] == "fa"){ $lang = "fa"; $locale = "fa_IR"; }
-// if (isset($_GET["lang"]) && $_GET["lang"] == "de"){ $lang = "de"; $locale = "de_DE"; }
+// $lang = "en"; $locale_file = "en_US";
+// if ($_GET["lang"] == "de"){ $lang = "de"; $locale_file = "de_DE"; }
+// if ($_GET["lang"] == "fa"){ $lang = "fa"; $locale_file = "fa_IR"; }
+// var_dump($locale_file);
 
-
-$locale = "en_US";
+$locale_file = "en_US";
 if(isset($_GET["lang"]))
 {
-	$locale =$_GET["lang"];
+	$locale_file =$_GET["lang"];
 }
 
-// putenv("LC_ALL=$locale"); // wrong in windows
-// putenv('LC_ALL='.$locale);
+$locale_file_reader = new FileReader("locale/$locale_file/LC_MESSAGES/messages.mo");
+$locale_reader = new gettext_reader($locale_file_reader);
 
-// setlocale(LC_ALL, $locale);
-// setlocale(LC_MESSAGES, $locale);
-// bindtextdomain('messages', __DIR__ . '/locale');
-// textdomain("messages");
-
-
-// $lang = $locale;
-// var_dump($lang);
-
-// $codeset = "UTF8";  // warning ! not UTF-8 with dash '-' 
-// putenv('LANG='.$lang.'.'.$codeset);
-// putenv('LANGUAGE='.$lang.'.'.$codeset);
-// bind_textdomain_codeset('messages', $codeset);
-
-// // set locale
-// // var_dump(__DIR__);
-// // var_dump( preg_replace("[\\\\]", "/", __DIR__) );
-// bindtextdomain('messages', preg_replace("[\\\\]", "/", __DIR__).'/locale');
-// // setlocale(LC_MESSAGES, $lang.'.'.$codeset);
-// setlocale(LC_ALL, $lang.'.'.$codeset);
-// textdomain('messages');
-
-
-
-
-
-$language = "fa_IR";
-putenv("LANG=" . $language); 
-setlocale(LC_ALL, $language);
- 
-// Set the text domain as "messages"
-$domain = "messages";
-bindtextdomain($domain, "locale"); 
-bind_textdomain_codeset($domain, 'UTF-8');
- 
-textdomain($domain);
- 
-echo _("Hi");
-
-
-
+function __($text){
+	global $locale_reader;
+	return $locale_reader->translate($text);
+}
 
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale?>" lang="<?=$locale?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale_file?>" lang="<?=$locale_file?>">
 <head>
-	<title><?=_("Hello World!")?></title>
+	<title><?=__("Hello World!")?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
-	<h1><?=_("Hi")?></h1>
-	<h1><?=_("PHP Localization Benchmark")?></h1>
+	<h1><?=__("Hi")?></h1>
+	<h1><?=__("PHP Localization Benchmark")?></h1>
 	
-	<p><?=_("This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods.")?></p>
+	<p><?=__("This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods.")?></p>
 
 </body>
 </html>
