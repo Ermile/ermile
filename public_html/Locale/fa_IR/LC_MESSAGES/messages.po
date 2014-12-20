@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: PHP Localization Benchmark\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-12-20 17:37+0330\n"
+"PO-Revision-Date: 2014-12-20 20:59+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Pablo Hoch <mel@melaxis.com>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr "Fa"
 
 #: gettext-php.php:25
 msgid "PHP Localization Benchmark"
-msgstr "English"
+msgstr "Farsi"
 
 #: gettext-php.php:27
 msgid ""
