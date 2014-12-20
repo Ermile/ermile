@@ -1,5 +1,6 @@
 <?php
 
+if(function_exists("gettext")){ var_dump("get text enabled!");}
 if (!defined('LC_MESSAGES')) define('LC_MESSAGES', 6);
 
 $lang = "en"; $locale = "en_US";
