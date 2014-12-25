@@ -12,15 +12,6 @@ else
 	exit();
 }
 
-// if settings exist, require it else show related error message
-if ( file_exists( __DIR__ . '/../includes/settings.php') )
-	require_once( __DIR__ . '/../includes/settings.php');
-else
-{   // A settings file doesn't exist
-	echo( "<p>There doesn't seem to be a <code>Settings.php</code> file in includes folder. Please contact administrator!</p>" );
-	exit();
-}
-
 // if Saloos exist, require it else show related error message
 if ( file_exists( '../../saloos/autoload.php') )
 {
