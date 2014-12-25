@@ -11,7 +11,6 @@ else
 	echo( "<p>There doesn't seem to be a <code>config.php</code> file. I need this before we can get started.</p>" );
 	exit();
 }
-
 // if Saloos exist, require it else show related error message
 if ( file_exists( '../../saloos/autoload.php') )
 {

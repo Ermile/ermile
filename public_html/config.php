@@ -6,14 +6,14 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database */
-define("db_name", 'ermile');
+ /** The name of the database */
+ define("db_name", 'ermile');
 
-/** MySQL database username */
-define("db_user", 'ermile');
+ /** MySQL database username */
+ define("db_user", 'ermile');
 
-/** MySQL database password */
-define("db_pass", 'ermile@#$567');
+ /** MySQL database password */
+ define("db_pass", 'ermile@#$567');
 
 /**
  * For developers: debugging mode.

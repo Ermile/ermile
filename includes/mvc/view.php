@@ -9,7 +9,7 @@ class view extends \lib\view
 		// var_dump(T_("Ermile"));
 		// var_dump(T_(1));
 		$this->global->site_title		= T_("Ermile");
-		$this->global->site_desc		= T_("Ermile is our company");
+		$this->global->site_desc			= T_("Ermile is our company");
 		$this->global->site_slogan		= T_("Ermile is our company");
 		$this->global->login			= false;
 
