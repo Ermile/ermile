@@ -1,4 +1,5 @@
 {%extends display%}
+{% import "includes/cls/macro/forms.html" as forms %}
 {%block head_def%}
   <meta charset="UTF-8" />
   <base href="{{url.current}}" />
@@ -20,11 +21,11 @@
 {%block body_def%}
   <div class="center">
     <header>
-      <a target="_blank" href="{{url.root}}" title="{{global.site_desc}}"><img id='logo' alt="{{global.site_title}}-logo"  src='{{url.static}}images/logo.svg'></a>
-      <h1>{{global.page_title}}</h1>
+      <a target="_blank" href="{{url.root}}" title="{{global.site_desc}}"><img id='logo' alt="{{global.site_title}}-logo" src='{{url.static}}images/logo.svg'></a>
+      <h1>{{global.page_title |capitalize}}</h1>
     </header>
 
-    <form class="ajx" method="post" id="{{form_title}}">
+    <form class="ajx" method="post" id="{{module}}">
       {{forms.make(form[module])}}
     </form>
 

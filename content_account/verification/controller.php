@@ -1,5 +1,5 @@
 <?php
-namespace content\login;
+namespace content\verification;
 use \lib\saloos;
 
 class controller extends \content\home\controller
@@ -9,6 +9,5 @@ class controller extends \content\home\controller
 		$this->view_name	= 'content\home\view';
 		$this->display_name	= 'content_account\home\display.html';
 	}
-
 }
 ?>

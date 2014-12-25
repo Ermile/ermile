@@ -29,8 +29,15 @@ class controller extends \mvc\controller{
 		$this->post('signup')
 		->ALL("signup");
 
-		$this->get(false, 'login')
-		->ALL("login");
+		$this->post(false, 'login')->ALL("login");
+		$this->get(false, 'login')->ALL("login");
+		
+		$this->post(false, 'recovery')->ALL("recovery");
+		$this->get(false, 'recovery')->ALL("recovery");
+		
+		$this->post(false, 'verification')->ALL("verification");
+		$this->get(false, 'verification')->ALL("verification");
+
 
 		// $this->get(false, 'signup')
 		// ->ALL("signup");
