@@ -6,11 +6,13 @@ class view extends \lib\view
 	function _construct()
 	{
 		// define default value for global
-		$this->global->site_title		= __("Ermile");
-		$this->global->site_desc		= __("Ermile is our company");
-		$this->global->site_slogan		= __("Ermile is our company");
-		$this->global->page_title		= __("");
-		$this->global->page_desc		= __("Ermile is new");
+		// var_dump(T_("Ermile"));
+		// var_dump(T_(1));
+		$this->global->site_title		= T_("Ermile");
+		$this->global->site_desc		= T_("Ermile is our company");
+		$this->global->site_slogan		= T_("Ermile is our company");
+		$this->global->page_title		= null;
+		$this->global->page_desc		= T_("Ermile is new");
 		$this->global->site_title_show	= true;
 		$this->global->login			= false;
 
@@ -23,6 +25,7 @@ class view extends \lib\view
 		$this->include->customjs		= true;
 
 		$this->data->layout_account		= "content_account/home/display.html";
+		// var_dump($this->global->site_slogan);
 	}
 }
 ?>

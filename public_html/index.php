@@ -2,7 +2,7 @@
 /**
  @ In the name Of Allah
 **/
-session_start();
+
 // if config exist, require it else show related error message
 if ( file_exists( __DIR__ . '/config.php') )
 	require_once( __DIR__ . '/config.php');

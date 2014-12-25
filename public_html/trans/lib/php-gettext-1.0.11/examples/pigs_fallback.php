@@ -21,7 +21,7 @@
 
 */
 
-error_reporting(E_ALL | E_STRICT);
+// error_reporting(E_ALL | E_STRICT);
 
 // define constants
 define('PROJECT_DIR', realpath('./'));
@@ -30,7 +30,7 @@ define('DEFAULT_LOCALE', 'en_US');
 
 require_once('../gettext.inc');
 
-$supported_locales = array('en_US', 'sr_CS', 'de_CH');
+$supported_locales = array('en_US', 'sr_CS', 'de_CH','fa_IR');
 $encoding = 'UTF-8';
 
 $locale = (isset($_GET['lang']))? $_GET['lang'] : DEFAULT_LOCALE;
