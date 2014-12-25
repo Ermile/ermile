@@ -32,14 +32,6 @@ class autoload{
 		// bind_textdomain_codeset("index", "UTF-8");
 		// textdomain("index");
 		// var_dump(_('Version'));
-
-		if (!locale_emulation()) {
-			var_dump("locale is supported by your system, using native gettext implementation.");
-		}
-		else {
-			var_dump("locale is <strong>not</strong> supported on your system, using custom gettext implementation.");
-		}
-
 	}
 }
 ?>

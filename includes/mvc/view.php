@@ -23,6 +23,13 @@ class view extends \lib\view
 
 		$this->data->layout_account		= "content_account/home/display.html";
 		// var_dump($this->global->site_slogan);
+
+		if (!locale_emulation()) {
+			$this->include->gettext 	= 'Translation use native gettext dll';
+		}
+		else {
+			$this->include->gettext 	= 'Translation use PHP gettext class';
+		}
 	}
 }
 ?>
