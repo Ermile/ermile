@@ -1,0 +1,1858 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: haram\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: baravak <itb.baravak@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fa_IR\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgid "captcha"
+msgstr "ماشین نیستم!"
+
+#
+#  START TRANSLATION MENU
+#
+msgid "capacity"
+msgstr "ظرفیت"
+
+msgid "some_else"
+msgstr "سایر"
+
+msgid "private_home"
+msgstr "شخصی"
+
+msgid "list"
+msgstr "لیست"
+
+msgid "learn"
+msgstr "آموزش"
+
+msgid "text must be persian"
+msgstr "متن باید فارسی باشند"
+
+msgid "branch name must be persian"
+msgstr "نام شعبه باید به فارسی باشد"
+
+msgid "name should be between 2 and 32 characters"
+msgstr "نام باید بین 2 و 32 حرف باشد"
+
+msgid "family name should be between 2 and 32 characters"
+msgstr "نام خانوادگی باید بین 2 و 32 حرف باشد"
+
+msgid "father name should be between 2 and 32 characters"
+msgstr "نام پدر باید بین 2 و 32 حرف باشد"
+
+msgid "birthday incorrect"
+msgstr "تولد نادرست"
+
+msgid "code incorrect"
+msgstr "کد نادرست"
+
+msgid "number of children is not valid"
+msgstr "تعداد کودکان معتبر نیست"
+
+msgid "passport date is not valid"
+msgstr "تاریخ گذرنامه معتبر نیست"
+
+msgid "entered value is not valid"
+msgstr "مقدار وارد شده معتبر نیست"
+
+msgid "meetings number should be between 1 and 999"
+msgstr "تعداد جلسات باید بین 1 و 999 بود"
+
+msgid "start time is not valid"
+msgstr "زمان شروع معتبر نیست"
+
+msgid "end time is not valid"
+msgstr "زمان پایان است، معتبر نیست"
+
+msgid "start date is not valid"
+msgstr "تاریخ شروع معتبر نیست"
+
+msgid "end date is not valid"
+msgstr "تاریخ پایان معتبر نیست"
+
+msgid "name should be persian"
+msgstr "نام باید فارسی باشند"
+
+msgid "country name should be persian"
+msgstr "نام کشور باید فارسی باشند"
+
+msgid "city name should be persian"
+msgstr "نام شهرستان باید فارسی باشند"
+
+msgid "plan name should be persian"
+msgstr "نام طرح باید فارسی باشند"
+
+msgid "entered price is not valid"
+msgstr "قیمت وارد شده معتبر نیست"
+
+msgid "absences number is not valid"
+msgstr "تعداد غیبت معتبر نیست"
+
+msgid "plan score is not valid"
+msgstr "نمره طرح معتبر نیست"
+
+msgid "minimum persons number is not valid"
+msgstr "حداقل تعداد افراد معتبر نیست"
+
+msgid "maximum persons number is not valid"
+msgstr "حداکثر تعداد افراد معتبر نیست"
+
+msgid "education is not valid"
+msgstr "آموزش معتبر نیست"
+
+msgid "number of girl children should be less than 99"
+msgstr "تعداد فرزندان دختر باید کمتر از 99 شود"
+
+msgid "number of boy children should be less than 99"
+msgstr "تعداد فرزندان پسر باید کمتر از 99 شود"
+
+msgid "number of dependents is not valid"
+msgstr "تعداد افراد وابسته به معتبر نیست"
+
+msgid "job title should be persian"
+msgstr "عنوان شغلی باید فارسی باشند"
+
+msgid "melli_account"
+msgstr "شماره حساب بانک ملی"
+
+msgid "melat_account"
+msgstr "شماره حساب بانک ملت"
+
+msgid "home_address"
+msgstr "نشانی منزل"
+
+msgid "study_address"
+msgstr "نشانی محل تحصیل"
+
+msgid "work_address"
+msgstr "نشانی محل کار"
+
+msgid "zipcode"
+msgstr "کد پستی"
+
+msgid "website"
+msgstr "سایت"
+
+msgid "fax"
+msgstr "دورنگار"
+
+msgid "cultural"
+msgstr "فرهنگی"
+
+msgid "training"
+msgstr "پرورشی"
+
+msgid "administrative"
+msgstr "اداری"
+
+msgid "learning"
+msgstr "یادگیری"
+
+msgid "caption"
+msgstr "عنوان"
+
+msgid "trend"
+msgstr "تخصص / پایه"
+
+msgid "average"
+msgstr "معدل"
+
+msgid "education_users"
+msgstr "سوابق تحصیلی"
+
+msgid "oldcertification"
+msgstr "گواهی نامه قدیم"
+
+msgid "person_extera"
+msgstr "مشخصات تکمیلی"
+
+msgid "place_birth"
+msgstr "محل تولد"
+
+msgid "child_daughter"
+msgstr "تعداد فرزندان دختر"
+
+msgid "child_son"
+msgstr "تعداد فرزندان پسر"
+
+msgid "soldiering"
+msgstr "وضعیت نظام وظیفه"
+
+msgid "exempt"
+msgstr "معاف"
+
+msgid "exemption_type"
+msgstr "نوع معافیت"
+
+msgid "dependents"
+msgstr "کفالت"
+
+msgid "temp"
+msgstr "موقت"
+
+msgid "medical"
+msgstr "پزشکی"
+
+msgid "continual"
+msgstr "دائمی"
+
+msgid "job"
+msgstr "شغل"
+
+msgid "residence"
+msgstr "وضعیت سکونت"
+
+msgid "rent"
+msgstr "اجاره"
+
+msgid "health"
+msgstr "وضعیت جسمانی"
+
+msgid "healthy"
+msgstr "سالم"
+
+msgid "maim"
+msgstr "بیمار"
+
+msgid "treated"
+msgstr "آیا تحت درمان هستید"
+
+msgid "stature"
+msgstr "قد"
+
+msgid "weight"
+msgstr "وزن"
+
+msgid "blood_group"
+msgstr "گروه خون"
+
+msgid "disease"
+msgstr "نام بیماری خاص"
+
+msgid "insurance_type"
+msgstr "نوع بیمه"
+
+msgid "insurance_code"
+msgstr "کد بیمه"
+
+msgid "tahqiq"
+msgstr "تحقیق"
+
+msgid "tartil"
+msgstr "ترتیل"
+
+msgid "tajvid"
+msgstr "تجوید"
+
+msgid "parvande"
+msgstr "شماره پرونده قدیم"
+
+msgid "oldclasses"
+msgstr "کلاس ها"
+
+msgid "oldprice"
+msgstr "شهریه - قدیم"
+
+msgid "oldclassification"
+msgstr "کلاس بندی - قدیم"
+
+msgid "date_in"
+msgstr "تاریخ ورود"
+
+msgid "date_ou"
+msgstr "تاریخ خروج"
+
+msgid "date_sabt"
+msgstr "تاریخ ثبت"
+
+msgid "oldid"
+msgstr "شمارگان - قدیم"
+
+msgid "dore"
+msgstr "دوره - طرح"
+
+msgid "dateback"
+msgstr "تاریخ ارجاع"
+
+msgid "mablaqerja"
+msgstr "مبلغ ارجاع"
+
+msgid "status_erja"
+msgstr "وضعیت ارجاع"
+
+msgid "mablaq_erja"
+msgstr "مبلغ ارجاع"
+
+msgid "moadel"
+msgstr "امتیاز"
+
+msgid "joze"
+msgstr "جزء"
+
+msgid "sath"
+msgstr "سطح"
+
+msgid "tsabt"
+msgstr "تاریخ ثبت"
+
+msgid "chap"
+msgstr "وضعیت چاپ"
+
+msgid "ttahvil"
+msgstr "تارخی تحویل"
+
+msgid "tozih"
+msgstr "توضیحات"
+
+msgid "op"
+msgstr "ثبت کننده"
+
+msgid "noe"
+msgstr "نوع"
+
+msgid "sader"
+msgstr "وضعیت صدور"
+
+msgid "olddb"
+msgstr "اطلاعات سیستم قدیم"
+
+msgid "taahvil"
+msgstr "وضعیت تحویل"
+
+msgid "empty name, family, father"
+msgstr "تکمیل کردن نام،نام خانوادگی و نام پدر الزامی است"
+
+msgid "print"
+msgstr "چاپ"
+
+msgid "NULL"
+msgstr " "
+
+msgid "null"
+msgstr " "
+
+msgid "report"
+msgstr "گزارش اشکالات"
+
+msgid "person edit"
+msgstr "اصلاح مشخصات فردی"
+
+msgid "yes"
+msgstr "بله"
+
+msgid "no"
+msgstr "خیر"
+
+msgid "name1"
+msgstr "شماره پرونده"
+
+msgid "name2"
+msgstr "نام"
+
+msgid "name3"
+msgstr "نام خانوادگی"
+
+msgid "name4"
+msgstr "نام پدر"
+
+msgid "name5"
+msgstr "تاریخ تولد"
+
+msgid "name6"
+msgstr "شماره شناسنامه"
+
+msgid "name7"
+msgstr "صاره از شهر"
+
+msgid "name8"
+msgstr "ملیت"
+
+msgid "name9"
+msgstr "مذهب"
+
+msgid "name10"
+msgstr "کد ملی"
+
+msgid "name11"
+msgstr "شماره گذرنامه"
+
+msgid "name12"
+msgstr "وضعیت تاهل"
+
+msgid "name13"
+msgstr "تعداد فرزندان"
+
+msgid "name14"
+msgstr "مدرک تحصیلی"
+
+msgid "name15"
+msgstr "نام استاد"
+
+msgid "name16"
+msgstr "شماره سیستم قدیم"
+
+msgid "name17"
+msgstr "تلفن ثابت"
+
+msgid "name18"
+msgstr "تلفن همراه"
+
+msgid "name19"
+msgstr "کد کارت"
+
+msgid "name20"
+msgstr "کلاس شماره یک"
+
+msgid "name21"
+msgstr "کارشناس ثبت کننده"
+
+msgid "name22"
+msgstr "تاریخ ثبت"
+
+msgid "name23"
+msgstr "کلاس شماره دو"
+
+msgid "name24"
+msgstr "کلاس شماره سه"
+
+msgid "name25"
+msgstr "کلاس شماره چهار"
+
+msgid "name26"
+msgstr "کلاس شماره پنج"
+
+msgid "name27"
+msgstr "نام و نام خانوادگی"
+
+msgid "name28"
+msgstr "انتخاب"
+
+msgid "name29"
+msgstr "شماره"
+
+msgid "name30"
+msgstr "شماره"
+
+msgid "britday"
+msgstr "تاریخ تولد"
+
+msgid "search"
+msgstr "جستجو"
+
+msgid "record_id"
+msgstr "ردیف سیستمی"
+
+msgid "person_from"
+msgstr "صادره از شهر"
+
+msgid "menu_education_add"
+msgstr "ثبت مقطع تحصیلات"
+
+msgid "classes_detail"
+msgstr "مشخصات کلاس"
+
+msgid "users_detail"
+msgstr "مشخصات کاربر"
+
+msgid "malefemale"
+msgstr "زن و مرد"
+
+msgid "waiting"
+msgstr "در حال انتظار"
+
+msgid "block"
+msgstr "قفل شده"
+
+msgid "enable"
+msgstr "فعال"
+
+msgid "user"
+msgstr "کاربران"
+
+msgid "class"
+msgstr "کلاس"
+
+msgid "attendance"
+msgstr "حضور و غیاب"
+
+msgid "letters"
+msgstr "درخواست ها"
+
+msgid "media"
+msgstr "چند رسانه ای"
+
+msgid "private"
+msgstr "خصوصی"
+
+msgid "consultation_list"
+msgstr "لیست مشاوره"
+
+msgid "consultation"
+msgstr "مشاوره"
+
+msgid "folders"
+msgstr "پوشه ها"
+
+msgid "detail"
+msgstr "توضیحات"
+
+msgid "view"
+msgstr "نمایش"
+
+msgid "person_list"
+msgstr "لیست فراگیران"
+
+msgid "more"
+msgstr "بیشتر"
+
+msgid "menu_classes_add"
+msgstr "ثبت کلاس"
+
+msgid "menu_classes_list"
+msgstr "لیست کلاس ها"
+
+msgid "menu_place_add"
+msgstr "ثبت مدرس"
+
+msgid "menu_posts_add"
+msgstr "ثبت خبر"
+
+msgid "sunday"
+msgstr "یک‌شنبه"
+
+msgid "monday"
+msgstr "دوشنبه"
+
+msgid "tuesday"
+msgstr "سه‌شنبه"
+
+msgid "wednesday"
+msgstr "چهارشنبه"
+
+msgid "thursday"
+msgstr "پنج‌شنبه"
+
+msgid "friday"
+msgstr "جمعه"
+
+msgid "saturday"
+msgstr "شنبه"
+
+msgid "menu user edit"
+msgstr "تغییر مشخصات"
+
+msgid "oldpasswd"
+msgstr "کلمه عبور فعلی"
+
+msgid "newpasswd"
+msgstr "کلمه عبور جدید"
+
+msgid "repasswd"
+msgstr "تکرار کلمه عبور جدید"
+
+msgid "Mr."
+msgstr "جناب آقای"
+
+msgid "Mrs."
+msgstr "سرکار خانم"
+
+msgid "menu branch add"
+msgstr "ثبت شعبه"
+
+msgid "menu group add"
+msgstr "ثبت گروه"
+
+msgid "menu plan add"
+msgstr "ثبت طرح"
+
+msgid "menu course add"
+msgstr "ثبت دوره"
+
+msgid "menu permission add"
+msgstr "سطح دسترسی"
+
+msgid "menu absence add"
+msgstr "ثبت غیبت"
+
+msgid "menu city add"
+msgstr "ثبت شهر"
+
+msgid "menu person add"
+msgstr "ثبت کاربر"
+
+msgid "menu person list"
+msgstr "لیست کاربران"
+
+msgid "Profile"
+msgstr "صفحه شخصی"
+
+msgid "change password"
+msgstr "تغییر کلمه عبور"
+
+msgid "new password not match whit repssword"
+msgstr "تکرار کلمه عبور اشتباه است"
+
+msgid "old password is incorect"
+msgstr "کلمه عبور فعلی صحیح نیست"
+
+msgid "password changed"
+msgstr "کلمه عبور تغییر کرد"
+
+msgid "You are logged"
+msgstr "شمار وارد شدید"
+
+msgid "quran_hadith"
+msgstr "مرکز قرآن و حدیث"
+
+msgid "show the regulation"
+msgstr "نمایش آیین نامه"
+
+msgid "logout"
+msgstr "خروج"
+
+msgid "share"
+msgstr "گروه ها"
+
+msgid "settings"
+msgstr "امکانات"
+
+msgid "home"
+msgstr "خانه"
+
+msgid "age_range"
+msgstr "رده سنی"
+
+msgid "bad_remember"
+msgstr "نیاز به تثبیت"
+
+msgid "because"
+msgstr "علت"
+
+msgid "begin_time"
+msgstr "زمان شروع"
+
+msgid "birthday"
+msgstr "تاریخ تولد"
+
+msgid "card"
+msgstr "شماره کارت"
+
+msgid "casecode"
+msgstr "شماره پرونده"
+
+msgid "casecode_old"
+msgstr "شماره پرونده قدیمی"
+
+msgid "certificate"
+msgstr "گواهینامه"
+
+msgid "club"
+msgstr "موسسه"
+
+msgid "code"
+msgstr "کد"
+
+msgid "condition"
+msgstr "شرط"
+
+msgid "consultation_id"
+msgstr "مشاوره"
+
+msgid "count"
+msgstr "تعداد"
+
+msgid "curl"
+msgstr "عنوانک"
+
+msgid "date"
+msgstr "تاریخ"
+
+msgid "date_change_status"
+msgstr "تاریخ تغییر وضعیت"
+
+msgid "date_delete"
+msgstr "تاریخ حذف"
+
+msgid "date_deliver"
+msgstr "تاریخ تحویل"
+
+msgid "date_design"
+msgstr "تاریخ طراحی"
+
+msgid "date_entry"
+msgstr "تاریخ ورود"
+
+msgid "date_print"
+msgstr "تاریخ چاپ"
+
+msgid "date_receive"
+msgstr "تاریخ دریافت"
+
+msgid "date_request"
+msgstr "تاریخ درخواست"
+
+msgid "description"
+msgstr "توضیح"
+
+msgid "email"
+msgstr "رایانامه"
+
+msgid "end_date"
+msgstr "زمان پایان"
+
+msgid "end_spread"
+msgstr "پایان انتشار"
+
+msgid "end_time"
+msgstr "زمان پایان"
+
+msgid "en_family"
+msgstr "نام خانوادگی به انگلیسی"
+
+msgid "en_father"
+msgstr "نام پدر به انگلیسی"
+
+msgid "en_name"
+msgstr "نام به انگلیسی"
+
+msgid "family"
+msgstr "نام خانوادگی"
+
+msgid "faname"
+msgstr "نام به فارسی"
+
+msgid "father"
+msgstr "نام پدر"
+
+msgid "field"
+msgstr "رشته"
+
+msgid "folder"
+msgstr "پوشه"
+
+msgid "from"
+msgstr "صادره"
+
+msgid "gender"
+msgstr "جنسیت"
+
+msgid "good_remember"
+msgstr "محفوضات مسلط"
+
+msgid "id"
+msgstr "شناسه"
+
+msgid "ip"
+msgstr "آی پی"
+
+msgid "length"
+msgstr "مدت"
+
+msgid "mark"
+msgstr "نمره"
+
+msgid "marriage"
+msgstr "تاهل"
+
+msgid "max_person"
+msgstr "حداکثر اعضا"
+
+msgid "meeting_no"
+msgstr "تعداد جلسات"
+
+msgid "min_person"
+msgstr "حداقل اعضا"
+
+msgid "name"
+msgstr "نام"
+
+msgid "nationalcode"
+msgstr "شماره ملی"
+
+msgid "nationality"
+msgstr "ملیت"
+
+msgid "pasport_date"
+msgstr "تاریخ گذرنامه"
+
+msgid "password"
+msgstr "گذرواژه"
+
+msgid "quality"
+msgstr "سطح کیفی"
+
+msgid "query_type"
+msgstr "نوع درخواست"
+
+msgid "rank"
+msgstr "رتبه"
+
+msgid "receiver"
+msgstr "دریافت کننده"
+
+msgid "result"
+msgstr "نتیجه"
+
+msgid "rule"
+msgstr "قانون"
+
+msgid "section"
+msgstr "مقطع"
+
+msgid "select"
+msgstr "انتخاب"
+
+msgid "short"
+msgstr "کوتاه"
+
+msgid "size"
+msgstr "اندازه"
+
+msgid "start_date"
+msgstr "تاریخ شروع"
+
+msgid "start_time"
+msgstr "زمان شروع"
+
+msgid "status"
+msgstr "وضعیت"
+
+msgid "step"
+msgstr "مرحله"
+
+msgid "table"
+msgstr "جدول"
+
+msgid "text"
+msgstr "متن"
+
+msgid "third_family"
+msgstr "نام خانوادگی به زبان سوم"
+
+msgid "third_father"
+msgstr "نام پدر به زبان سوم"
+
+msgid "third_name"
+msgstr "نام به زبان سوم"
+
+msgid "time_spread"
+msgstr "زمان انتشار"
+
+msgid "title"
+msgstr "عنوان"
+
+msgid "transactions"
+msgstr "تراکنش"
+
+msgid "type"
+msgstr "نوع"
+
+msgid "username"
+msgstr "نام کاربری"
+
+msgid "value"
+msgstr "مقدار"
+
+msgid "value_back"
+msgstr "میزان بازگشتی"
+
+msgid "week_days"
+msgstr "روزهای هفته"
+
+msgid "year"
+msgstr "سال"
+
+#
+#  START TRANSLATION MENU
+#
+#
+#  START TRANSLATION GLOBAL
+#
+msgid "[[please agree the regulation]]"
+msgstr "آیین نامه قبول نشده است؟!"
+
+msgid "pending_classes_id"
+msgstr "شماره لیست انتظار کلاس"
+
+msgid "pending_classes_date"
+msgstr "تاریخ درخواست استفاده از کلاس"
+
+msgid "pending_classes_description"
+msgstr "توضیحات"
+
+msgid "I Agree"
+msgstr "قوانین را خوانده و قبول دارم"
+
+msgid "IAgree"
+msgstr "قوانین را خوانده و قبول دارم"
+
+msgid "-IAgree-"
+msgstr "قوانین را خوانده و قبول دارم"
+
+msgid "please select one item"
+msgstr "لطفا یکی از گزینه ها را انتخاب کنید"
+
+msgid "file"
+msgstr "فایل"
+
+msgid "successful"
+msgstr "موفق"
+
+msgid "failed"
+msgstr "ناموفق"
+
+msgid "true"
+msgstr "صحیح"
+
+msgid "false"
+msgstr "غلط"
+
+msgid "only persian text accepted"
+msgstr "فقط متن فارسی پذیرفته می شود"
+
+msgid "the text should be between 3 and 255 characters long"
+msgstr "طول متن باید بین 3 و 255 حرف باشد"
+
+msgid "the text should be between 3 and 32 characters long"
+msgstr "طول متن باید بین 3 و 32 حرف باشد"
+
+msgid "the text should be between 3 and 64 characters long"
+msgstr "طول متن باید بین 3 و 64 حرف باشد"
+
+msgid "the text should be between 3 and 16 characters long"
+msgstr "طول متن باید بین 3 و 16 حرف باشد"
+
+msgid "please input email"
+msgstr "لطفا رایانامه را وارد کنید"
+
+msgid "email incorrect, check email"
+msgstr "رایانامه اشتباه است"
+
+msgid "only number text accepted"
+msgstr "فقط مقدار عددی معتبر می باشد"
+
+msgid "the number should be between 1 and 10"
+msgstr "عدد وارد شده باید بین 1 و 10 باشد"
+
+msgid "pasport date incorect"
+msgstr "تاریخ اعتبار گذرنامه اشتباه است"
+
+msgid "username incorrect"
+msgstr "نام کاربری اشتباه است"
+
+msgid "password incorrect"
+msgstr "کلمه عبور اشتباه است"
+
+msgid "number incorrect"
+msgstr "عدد وارد شده صحیح نیست"
+
+msgid "price incorrect"
+msgstr "مبلغ وارد شده اشتباه است"
+
+msgid "nationalcode incorrect"
+msgstr "شماره ملی / گذرنامه صحیح نیست"
+
+msgid "description overflow"
+msgstr "متن توضیحات باید کمتر از 255 حرف باشد"
+
+msgid "text must be english"
+msgstr "متن باید با حروف انگلیسی وارد شود"
+
+msgid "date incorrect"
+msgstr "تاریخ وارد شده صحیح نیست"
+
+msgid "email incorrect"
+msgstr "رایانامه وارد شده اشتباه است"
+
+#
+#  END TRANSLATION GLOBAL
+#
+#
+#  START TRANSLATION BUTTON
+#
+msgid "insert"
+msgstr "ایجاد"
+
+msgid "edit"
+msgstr "ویرایش"
+
+msgid "delete"
+msgstr "حذف"
+
+msgid "update"
+msgstr "به روز رسانی"
+
+#
+# END TRANSLATION BUTTON
+#
+#
+# STATR TRANSLATION TABLES NAME
+#
+msgid "branch"
+msgstr "شعبه ها"
+
+msgid "branch_description"
+msgstr "توضیحات شعب"
+
+msgid "bridge"
+msgstr "پل های ارتباطی"
+
+msgid "certification"
+msgstr "گواهی نامه"
+
+msgid "city"
+msgstr "شهر ها"
+
+msgid "classes"
+msgstr "کلاس ها"
+
+msgid "classification"
+msgstr "کلاس بندی"
+
+msgid "course"
+msgstr "دوره ها"
+
+msgid "course_description"
+msgstr "توضیحات دوره"
+
+msgid "education"
+msgstr "تحصیلی"
+
+msgid "experiences"
+msgstr "تجارب"
+
+msgid "files"
+msgstr "فایل ها"
+
+msgid "get_price"
+msgstr "مبالغ دریافتی شهریه"
+
+msgid "graduate"
+msgstr "دانش آموختگان"
+
+msgid "graduate_classes"
+msgstr "کلاس های دانش آموخته"
+
+msgid "group"
+msgstr "گروه های علمی"
+
+msgid "group_expert"
+msgstr "کارشناس گروه ها"
+
+msgid "group_list"
+msgstr "گروه بندی فراگیران"
+
+msgid "history"
+msgstr "تاریخچه"
+
+msgid "login_counter"
+msgstr "شمارنده ورود"
+
+msgid "permission"
+msgstr "سطح دسترسی"
+
+msgid "person"
+msgstr "مشخصات فردی"
+
+msgid "place"
+msgstr "مدرس"
+
+msgid "plan"
+msgstr "طرح"
+
+msgid "plan_section"
+msgstr "مقاطع درسی طرح"
+
+msgid "position"
+msgstr "سمت"
+
+msgid "posts"
+msgstr "رویداد"
+
+msgid "posts_group"
+msgstr "گروه رویداد"
+
+msgid "posts_tags"
+msgstr "نشانک های رویداد"
+
+msgid "prerequisite"
+msgstr "پیش نیاز طرح"
+
+msgid "price"
+msgstr "شهریه"
+
+msgid "province"
+msgstr "استان"
+
+msgid "racehistory"
+msgstr "سابقه شرکت در مسابقه"
+
+msgid "regulation"
+msgstr "آیین نامه"
+
+msgid "tables"
+msgstr "جدول ها"
+
+msgid "table_files"
+msgstr "فایل های مرتبط با جدول"
+
+msgid "tags"
+msgstr "نشانک ها"
+
+msgid "teachinghistory"
+msgstr "سوابق تدریس"
+
+msgid "users"
+msgstr "کاربران"
+
+msgid "users_branch"
+msgstr "شعبه کاربران"
+
+msgid "users_description"
+msgstr "توضیحات کاربر"
+
+msgid "users_group"
+msgstr "گروه بندی کاربران"
+
+msgid "pending_classes"
+msgstr "درخواست شرکت در کلاس"
+
+#
+# END TRANSLATION TABLES NAME
+#
+#
+# START TRANSLATION ENUM COLUMNS
+#
+msgid "delay"
+msgstr "تاخیر"
+
+msgid "leave"
+msgstr "مرخصی"
+
+msgid "unjustified absence"
+msgstr "غیبت غیر موجه"
+
+msgid "justified absence"
+msgstr "غیبت موجه"
+
+msgid "buss"
+msgstr "رئیس / مسئول"
+
+msgid "address"
+msgstr "آدرس"
+
+msgid "working hours"
+msgstr "ساعت کاری"
+
+msgid "phone"
+msgstr "تلفن تماس"
+
+msgid "branch sections"
+msgstr "بخش های شعبه"
+
+msgid "mobile"
+msgstr "شماره همراه"
+
+msgid "child"
+msgstr "کودکان"
+
+msgid "teen"
+msgstr "نوجوانان"
+
+msgid "young"
+msgstr "جوانان"
+
+msgid "adult"
+msgstr "بزرگسالان"
+
+msgid "level one"
+msgstr "سطح یک"
+
+msgid "level two"
+msgstr "سطح دو"
+
+msgid "level three"
+msgstr "سطح سه"
+
+msgid "begginer level"
+msgstr "مقدماتی"
+
+msgid "medium"
+msgstr "نیمه تکمیلی"
+
+msgid "advanced"
+msgstr "تکمیلی"
+
+msgid "ready"
+msgstr "آماده شروع"
+
+msgid "running"
+msgstr "در حال اجرا"
+
+msgid "physical"
+msgstr "حضوری"
+
+msgid "virtual"
+msgstr "مجازی"
+
+msgid "absence"
+msgstr "غیبت"
+
+msgid "cansel"
+msgstr "انصراف"
+
+msgid "done"
+msgstr "اتمام"
+
+msgid "test date"
+msgstr "تاریخ آزمون"
+
+msgid "end test date"
+msgstr "تاریخ آزمون پایانی"
+
+msgid "academic"
+msgstr "کلاسیک"
+
+msgid "howzah"
+msgstr "حوزوی"
+
+msgid "experience"
+msgstr "تجازب"
+
+msgid "recommend"
+msgstr "توصیه"
+
+msgid "tip"
+msgstr "نکته"
+
+msgid "checking"
+msgstr "در حال بررسی"
+
+msgid "personal"
+msgstr "شخصی"
+
+msgid "public"
+msgstr "عمومی"
+
+msgid "pose"
+msgstr "دستگاه پز"
+
+msgid "bank"
+msgstr "فیش بانکی"
+
+msgid "cash"
+msgstr "نقدی"
+
+msgid "active"
+msgstr "فعال"
+
+msgid "inactive"
+msgstr "غیر فعال"
+
+msgid "responsible"
+msgstr "مسئول"
+
+msgid "expert"
+msgstr "کارشناس"
+
+msgid "login"
+msgstr "ورود"
+
+msgid "register"
+msgstr "ثبت نام"
+
+msgid "male"
+msgstr "مرد"
+
+msgid "female"
+msgstr "زن"
+
+msgid "single"
+msgstr "مجرد"
+
+msgid "married"
+msgstr "متاهل"
+
+msgid "student"
+msgstr "فراگیر"
+
+msgid "teacher"
+msgstr "استاد"
+
+msgid "operator"
+msgstr "پرسنل"
+
+msgid "baby"
+msgstr "مهد کودک"
+
+msgid "page"
+msgstr "صفحه"
+
+msgid "post"
+msgstr "رویداد"
+
+msgid "provincial"
+msgstr "استانی"
+
+msgid "country"
+msgstr "کشور"
+
+msgid "international"
+msgstr "بین المللی"
+
+msgid "less than one year"
+msgstr "کمتر از یک سال"
+
+msgid "between one and two years"
+msgstr "بین یک و دو سال"
+
+msgid "between two and five years"
+msgstr "بین دو و پنج سال"
+
+msgid "more than five years"
+msgstr "بیش از پنج سال"
+
+#
+# END TRANSLATION ENUM COLUMNS
+#
+#
+# STATR TRANSLATION LABEL OF TABLES FIELD
+#
+# TABLE  absence
+msgid "absence_id"
+msgstr "غیبت"
+
+msgid "absence_type"
+msgstr "نوع غیبت"
+
+msgid "absence_date"
+msgstr "تاریخ غیبت"
+
+msgid "absence_because"
+msgstr "علت غیبت"
+
+# TABLE  branch
+msgid "branch_id"
+msgstr "شعبه"
+
+msgid "branch_name"
+msgstr "نام شعبه"
+
+msgid "branch_code"
+msgstr "کد اختصاصی شعبه"
+
+# TABLE  branch_description
+msgid "branch_description_id"
+msgstr "توضیحات شعب"
+
+msgid "branch_description_title"
+msgstr "عنوان توضیحات"
+
+msgid "branch_description_value"
+msgstr "توضیحات"
+
+# TABLE  bridge
+msgid "bridge_id"
+msgstr "پل ارتباطی"
+
+msgid "bridge_title"
+msgstr "عنوان پل ارتباطی"
+
+msgid "bridge_value"
+msgstr "پل ارتباطی"
+
+msgid "bridge_description"
+msgstr "توضیحات"
+
+# TABLE  certification
+msgid "certification_id"
+msgstr "گواهی نامه"
+
+msgid "certification_date_design"
+msgstr "تاریخ طراحی گواهی نامه"
+
+msgid "certification_date_print"
+msgstr "تاریخ چاپ گواهی نامه"
+
+msgid "certification_date_deliver"
+msgstr "تاریخ تحویل گواهی نامه"
+
+msgid "certification_date_request"
+msgstr "تاریخ درخواست گواهی نامه"
+
+# TABLE  city
+msgid "city_id"
+msgstr "شهر"
+
+msgid "city_name"
+msgstr "نام شهر"
+
+# TABLE  classes
+msgid "classes_id"
+msgstr "کلاس"
+
+msgid "classes_meeting_no"
+msgstr "تعداد جلسات"
+
+msgid "classes_teacher"
+msgstr "نام استاد"
+
+msgid "classes_age_range"
+msgstr "مقطع سنی"
+
+msgid "classes_quality"
+msgstr "سطح"
+
+msgid "classes_name"
+msgstr "نام کلاس"
+
+msgid "classes_start_time"
+msgstr "ساعت شروع کلاس"
+
+msgid "classes_end_time"
+msgstr "ساعت پایان کلاس"
+
+msgid "classes_start_date"
+msgstr "تاریخ شروع کلاس"
+
+msgid "classes_end_date"
+msgstr "تاریخ پایان کلاس"
+
+msgid "classes_week_days"
+msgstr "روز های برگزاری کلاس"
+
+msgid "classes_status"
+msgstr "وضعیت کلاس"
+
+msgid "classes_type"
+msgstr "نوع کلاس"
+
+# TABLE  classification
+msgid "classification_id"
+msgstr "کلاس بندی"
+
+msgid "classification_date_entry"
+msgstr "تاریخ ورود به کلاس"
+
+msgid "classification_date_delete"
+msgstr "تاریخ خروج از کلاس"
+
+msgid "classification_because"
+msgstr "علت خروج از کلاس"
+
+msgid "classification_mark"
+msgstr "امتیاز این کلاس"
+
+# TABLE  country
+msgid "country_id"
+msgstr "کشور"
+
+msgid "country_name"
+msgstr "نام کشور"
+
+# TABLE  course
+msgid "course_id"
+msgstr "دوره"
+
+msgid "course_begin_time"
+msgstr "تاریخ شروع دوره"
+
+msgid "course_end_time"
+msgstr "تاریخ پایان دوره"
+
+msgid "course_name"
+msgstr "نام دوره"
+
+msgid "course_expert"
+msgstr "کارشناس دوره"
+
+# TABLE  course_description
+msgid "course_description_id"
+msgstr "توضیحات دوره"
+
+msgid "course_description_title"
+msgstr "عنوان توضیحات"
+
+msgid "course_description_description"
+msgstr "توضیحات"
+
+# TABLE  education
+msgid "education_id"
+msgstr "تحصیلات"
+
+msgid "education_group"
+msgstr "گروه تحصیلات"
+
+msgid "education_section"
+msgstr "مقطع تحصیلات"
+
+# TABLE  expreences
+msgid "experiences_id"
+msgstr "تجربه"
+
+msgid "experiences_short"
+msgstr "عنوان خلاصه"
+
+msgid "experiences_type"
+msgstr "نوع"
+
+msgid "experiences_status"
+msgstr "متن"
+
+# TABLE  files
+msgid "files_id"
+msgstr "فایل"
+
+msgid "files_title"
+msgstr "عنوان فایل"
+
+msgid "files_size"
+msgstr "حجم فایل"
+
+msgid "files_type"
+msgstr "نوع فایل"
+
+msgid "files_folders"
+msgstr "پوشه"
+
+msgid "files_description"
+msgstr "توضیحات"
+
+# TABLE  graduate
+msgid "graduate_id"
+msgstr "دانش آموخته"
+
+msgid "graduate_status"
+msgstr "وضعیت"
+
+# TABLE  graduate_classes
+msgid "graduate_classes_id"
+msgstr "کلاس دانش آموخته"
+
+# TABLE  group
+msgid "group_id"
+msgstr "گروه"
+
+msgid "group_name"
+msgstr "نام گروه علمی"
+
+# TABLE  group_expert
+msgid "group_expert_id"
+msgstr "کارشناسان گروه"
+
+msgid "group_expert_start_date"
+msgstr "تاریخ شروع فعالیت کارشناس"
+
+msgid "group_expert_end_date"
+msgstr "تاریخ خاتمه فعالیت کارشناس"
+
+msgid "group_expert_status"
+msgstr "وضعیت"
+
+# TABLE  group_list
+msgid "group_list_id"
+msgstr "گروه بندی"
+
+msgid "group_list_name"
+msgstr "نام گروه"
+
+msgid "group_list_description"
+msgstr "توضیحات"
+
+msgid "group_list_expert"
+msgstr "کارشناس مرتبط"
+
+msgid "group_list_status"
+msgstr "وضعیت لیست"
+
+# TABLE  permission
+msgid "permission_id"
+msgstr "سطح دسترسی"
+
+msgid "permission_tables"
+msgstr "جدول"
+
+msgid "permission_select"
+msgstr "امکان نمایش"
+
+msgid "permission_update"
+msgstr "امکان اصلاح"
+
+msgid "permission_insert"
+msgstr "امکاان ایجاد"
+
+msgid "permission_delete"
+msgstr "امکان حذف"
+
+# TABLE  person
+msgid "person_id"
+msgstr "اطلاعات فردی"
+
+msgid "person_name"
+msgstr "نام"
+
+msgid "person_family"
+msgstr "نام خانوادگی"
+
+msgid "person_father"
+msgstr "نام پدر"
+
+msgid "person_birthday"
+msgstr "تاریخ تولد"
+
+msgid "person_gender"
+msgstr "جنسیت"
+
+msgid "person_nationality"
+msgstr "ملیت"
+
+msgid "person_nationalcode"
+msgstr "کد ملی / شماره گذر نامه"
+
+msgid "person_code"
+msgstr "شماره شناسنامه"
+
+msgid "person_marriage"
+msgstr "وضعیت تاهل"
+
+msgid "person_child"
+msgstr "تعداد فرزندان"
+
+msgid "person_type"
+msgstr "نوع کاربر"
+
+msgid "person_casecode"
+msgstr "شماره پرونده"
+
+msgid "person_casecode_old"
+msgstr "شماره پرونده قدیم"
+
+msgid "person_en_name"
+msgstr "نام به زبان لاتین"
+
+msgid "person_en_family"
+msgstr "نام خانوادگی به زبان لاتین"
+
+msgid "person_en_father"
+msgstr "نام پدر به زبان لاتین"
+
+msgid "person_third_name"
+msgstr "نام به زبان محلی کاربر"
+
+msgid "person_third_family"
+msgstr "نام خانوادگی به زبان محلی کاربر"
+
+msgid "person_third_father"
+msgstr "نام پدر به زبان محلی کاربر"
+
+msgid "person_pasport_date"
+msgstr "تاریخ اتمام اعتبار گذر نامه"
+
+# TABLE  plase
+msgid "place_id"
+msgstr "مدرس"
+
+msgid "place_name"
+msgstr "نام مدرس"
+
+msgid "place_description"
+msgstr "توضیحات"
+
+# TABLE  plan
+msgid "plan_id"
+msgstr "طرح"
+
+msgid "plan_name"
+msgstr "نام طرح"
+
+msgid "plan_price"
+msgstr "مبلغ شهریه"
+
+msgid "plan_absence"
+msgstr "تعداد غیبت مجاز در طرح"
+
+msgid "plan_certificate"
+msgstr "گواهی نامه پایان دوره"
+
+msgid "plan_mark"
+msgstr "حد اقل امتیاز قبولی"
+
+msgid "plan_rule"
+msgstr "آیین نامه طرح"
+
+msgid "plan_min_person"
+msgstr "حد اقل اعضاء"
+
+msgid "plan_max_person"
+msgstr "حد اکثر اعضاء"
+
+# TABLE  plan_section
+msgid "plan_section_id"
+msgstr "مقاطع طرح"
+
+msgid "plan_section_section"
+msgstr "مقطع درسی طرح"
+
+# TABLE  position
+msgid "position_id"
+msgstr "سمت"
+
+msgid "position_position"
+msgstr "نام سمت"
+
+# TABLE  posts
+msgid "posts_id"
+msgstr "رویداد"
+
+msgid "posts_title"
+msgstr "عنوان رویداد"
+
+msgid "posts_short"
+msgstr "خلاصه رویداد"
+
+msgid "posts_text"
+msgstr "متن رویداد"
+
+msgid "posts_time_spread"
+msgstr "تاریخ انتشار"
+
+msgid "posts_end_spread"
+msgstr "تاریخ خاتمه انتشار"
+
+msgid "posts_curl"
+msgstr "نامک"
+
+msgid "posts_posts"
+msgstr "صفحه / رویداد"
+
+# TABLE  posts_group
+msgid "posts_group_id"
+msgstr "شماره گروه رویداد"
+
+msgid "posts_group_group"
+msgstr "گروه رویداد"
+
+# TABLE  posts_tags
+msgid "posts_tags_id"
+msgstr "نشانک های رویداد"
+
+# TABLE  prerequisite
+msgid "prerequisite_id"
+msgstr "پیش نیاز"
+
+msgid "prerequisite_prerequisite"
+msgstr "طرح پیش نیاز"
+
+# TABLE  province
+msgid "province_id"
+msgstr "استان"
+
+msgid "province_name"
+msgstr "نام استان"
+
+# TABLE  racehistory
+msgid "racehistory_id"
+msgstr "سابقه شرکت در مسابقه"
+
+msgid "racehistory_field"
+msgstr "رشته شرکت کرده"
+
+msgid "racehistory_club"
+msgstr "مرکز برگزار کننده"
+
+msgid "racehistory_step"
+msgstr "مرحله"
+
+msgid "racehistory_rank"
+msgstr "رتبه"
+
+msgid "racehistory_year"
+msgstr "سال"
+
+# TABLE  regulation
+msgid "regulation_id"
+msgstr "آیین نامه"
+
+msgid "regulation_status"
+msgstr "وضعیت"
+
+msgid "regulation_text"
+msgstr "متن آیین نامه"
+
+# TABLE  files
+msgid "table_files_id"
+msgstr "جدول فایل های مرتبط"
+
+msgid "table_files_table"
+msgstr "جدول مرتبط"
+
+msgid "table_files_record_id"
+msgstr "ردیف مرتبط"
+
+msgid "table_files_description"
+msgstr "توضیحات"
+
+# TABLE  tables
+msgid "tables_id"
+msgstr "جدول ها"
+
+msgid "tables_name"
+msgstr "نام جدول"
+
+msgid "tables_faname"
+msgstr "نام فارسی جدول"
+
+# TABLE  tags
+msgid "tags_id"
+msgstr "نشانک"
+
+msgid "tags_name"
+msgstr "نام نشانک"
+
+# TABLE  teachinghistory
+msgid "teachinghistory_id"
+msgstr "سابقه تدریس"
+
+msgid "teachinghistory_field"
+msgstr "رشته"
+
+msgid "teachinghistory_club"
+msgstr "برگزار کننده"
+
+msgid "teachinghistory_lenght"
+msgstr "میزان فعالیت"
+
+# TABLE  users
+msgid "users_id"
+msgstr "کاربر"
+
+msgid "users_name"
+msgstr "نام کاربری"
+
+msgid "users_password"
+msgstr "کلمه عبور"
+
+msgid "users_email"
+msgstr "رایانامه"
+
+# TABLE  users_branch
+msgid "users_branch_id"
+msgstr "شعبه بندی کاربران"
+
+# TABLE  users_description
+msgid "users_description_id"
+msgstr "توضیحات کاربر"
+
+msgid "users_description_text"
+msgstr "توضیحات"
+
+# TABLE  users_group
+msgid "users_group_id"
+msgstr "گروه بندی فراگیران"

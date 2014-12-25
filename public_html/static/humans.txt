@@ -1,0 +1,27 @@
+/** in The name of Allah **/
+Proudly made in IRAN, powered by Saloos.
+
+/* MAIN */
+Back-End Programmer:
+	Mohammad Hasan Salehi HajiAbadi	| itb.baravak@gmail.com
+	Reza Mohiti						| rm.biqarar@gmail.com
+
+Front-End Programmer:
+	Javad Evazzadeh Kakroudi		| Javad@Evazzadeh.com
+	Saman Soltani					| Sam.Soltani@gmail.com
+	Ahmad Karimi 					| ahmadkarimi1991@gmail.com
+
+Javascript:
+	Mahdi Dibaiee					| mdibaiee@aol.com
+
+Designer:
+	Sadegh Salehi HajiAbadi 		| sahelekaj@gmail.com
+
+Usability: Samac Business Solutions
+website: http://Ermile.com
+
+/* SITE */
+Last update: 23/12/2014
+Version: 2.0.0
+Doctype: HTML5
+IDE: Sublime!

@@ -1,38 +1,35 @@
 <?php
+/**
+ @ In the name Of Allah
+**/
+session_start();
+// if config exist, require it else show related error message
+if ( file_exists( __DIR__ . '/config.php') )
+	require_once( __DIR__ . '/config.php');
+else
+{   // A config file doesn't exist
+	echo( "<p>There doesn't seem to be a <code>config.php</code> file. I need this before we can get started.</p>" );
+	exit();
+}
 
-require_once("lib/streams.php");
-require_once("lib/gettext.php");
+// if settings exist, require it else show related error message
+if ( file_exists( __DIR__ . '/../includes/settings.php') )
+	require_once( __DIR__ . '/../includes/settings.php');
+else
+{   // A settings file doesn't exist
+	echo( "<p>There doesn't seem to be a <code>Settings.php</code> file in includes folder. Please contact administrator!</p>" );
+	exit();
+}
 
-// $lang = "en"; $locale_file = "en_US";
-// if ($_GET["lang"] == "de"){ $lang = "de"; $locale_file = "de_DE"; }
-// if ($_GET["lang"] == "fa"){ $lang = "fa"; $locale_file = "fa_IR"; }
-// var_dump($locale_file);
-
-$locale_file = "en_US";
-if(isset($_GET["lang"]))
+// if Saloos exist, require it else show related error message
+if ( file_exists( '../../saloos/autoload.php') )
 {
-	$locale_file =$_GET["lang"];
+	require_once( '../../saloos/autoload.php');
+	new \lib\saloos;
 }
-
-$locale_file_reader = new FileReader("locale/$locale_file/LC_MESSAGES/messages.mo");
-$locale_reader = new gettext_reader($locale_file_reader);
-
-function __($text){
-	global $locale_reader;
-	return $locale_reader->translate($text);
+else
+{   // A config file doesn't exist
+	echo( "<p>We can't find <b>Saloos</b>! Please contact administrator!</p>" );
+	exit();
 }
-
-?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale_file?>" lang="<?=$locale_file?>">
-<head>
-	<title><?=__("Hello World!")?></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-<body>
-	<h1><?=__("Hi")?></h1>
-	<h1><?=__("PHP Localization Benchmark")?></h1>
-	
-	<p><?=__("This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods. This is just a sample page to compare the various localization methods.")?></p>
-
-</body>
-</html>
+?>
