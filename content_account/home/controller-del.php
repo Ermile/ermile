@@ -1,14 +1,15 @@
 <?php
 namespace content\home;
-use \lib\saloos;
 
-class controller extends \mvc\controller{
+class controller extends \mvc\controller
+{
 // 	$x = new \lib\redirector("login"); // default: your url
 // $x->set_domain("ermile.com") // default: your doamin
 // ->set_protocol("https") // default:http 
 // ->redirect();
 
-	public function _route(){
+	public function _route()
+	{
 		//return all array
 		// var_dump(\lib\router::get_url(-1));
 		// //return index array

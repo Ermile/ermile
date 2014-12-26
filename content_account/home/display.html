@@ -11,7 +11,7 @@
 
   <div class="center">
     <header>
-      <a target="_blank" href="{{url.root}}" title="{{global.site_slogan}}"><img id='logo' alt="{{global.site_title}}-logo" src='{{url.static}}images/logo.svg'></a>
+      <a target="_blank" href="{{url.root}}" title="{{global.site_slogan}}" tabindex="-1"><img id='logo' alt="{{global.site_title}}-logo" src='{{url.static}}images/logo.svg'></a>
       <h1>{{global.page_desc}}</h1>
     </header>
 
@@ -22,8 +22,8 @@
     {%block content%}
     <footer>
       <div id="desc">
-        <p><a href="/recovery" title="click here to recovery your password">Can't access your account?</a></p>
-        <p>Don't have an account? <a href="/signup" title="click here to create an account">Sign Up</a></p>
+        <p><a href="/recovery" title="click here to recovery your password" tabindex="-1">Can't access your account?</a></p>
+        <p>Don't have an account? <a href="/signup" title="click here to create an account" tabindex="-1">Sign Up</a></p>
       </div>
     </footer>
     {%endblock%}
@@ -34,7 +34,7 @@
      <div id="copyright">
       {%block footer%}
         <div class="left">&copy; {{'now'|date('Y')}} 
-          <a href="{{url.root}}" title="{{global.site_desc}}" >{{global.site_title}}</a>
+          <a href="{{url.root}}" title="{{global.site_desc}}" tabindex="-1">{{global.site_title}}</a>
         </div>
       {%endblock%}
        
