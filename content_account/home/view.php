@@ -39,7 +39,8 @@ class view extends \mvc\view
 
 	public function view_signup()
 	{
-		var_dump("signup");
+		$form = $this->createform(".account",'signup');
+		// var_dump("signup");
 		// var_dump($this->form(".signup"))
 		// $form = $this->createform(".signup");
 		// or var_dump($this->controller()->api_callback); 

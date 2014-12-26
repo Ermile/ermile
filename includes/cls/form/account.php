@@ -50,5 +50,11 @@ class account extends \lib\form
 		$this->submit	= $this->make('submit')->label('signup');
 	}
 
+	private function signup()
+	{
+		$this->mobile	= $this->make('#mobile')->label('');
+		$this->password	= $this->make('#password')->label('');
+		$this->submit	= $this->make('submit')->label('signup');
+	}
 }
 ?>
