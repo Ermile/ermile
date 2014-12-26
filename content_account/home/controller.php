@@ -26,16 +26,14 @@ class controller extends \mvc\controller{
 
 		// var_dump(\lib\router::get_url_property('add'));
 
-		$this->post('signup')
-		->ALL("signup");
+		$this->post('signup')->ALL("signup");
 
-		$this->get(false, 'signup')
-		->ALL("signup");
+		$this->get(false, 'signup')->ALL("signup");
 
-		$this->post(false, 'login')->ALL("login");
+		$this->post('login')->ALL("login");
 		$this->get(false, 'login')->ALL("login");
 		
-		$this->post('recovery', 'recovery')->ALL("recovery");
+		$this->post('recovery')->ALL("recovery");
 		$this->get(false, 'recovery')->ALL("recovery");
 		
 		$this->post(false, 'verification')->ALL("verification");
