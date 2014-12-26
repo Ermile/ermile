@@ -18,6 +18,7 @@ class account extends \lib\form
 
 	private function login()
 	{
+
 		var_dump("test login");
 		$this->username	= $this->make('input')->name("username")->label('username');
 		$this->password	= $this->make('password')->name("password")->label('password');
@@ -45,11 +46,11 @@ class account extends \lib\form
 	private function recovery()
 	{
 		$this->hidden	= $this->make("hidden")->name("_post")->value(__FUNCTION__);
-		$this->mobile	= $this->make('mobile')->name("mobile")->label('mobile');
+		$this->mobile	= $this->make('#mobile')->name("mobile")->label('mobile');
 
 		
 		// var_dump("test recovery");
-		$this->password	= $this->make('password')->name("password")->label('password');
+		$this->password= $this->make('password')->name("password")->label('password');
 		$this->submit	= $this->make('submit')->label('signup');
 	}
 
