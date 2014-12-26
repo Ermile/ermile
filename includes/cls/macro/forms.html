@@ -46,7 +46,6 @@
 
 {% macro submit(array) %}
 	{% spaceless %}
-		<label class="input-label"></label>
 		<button {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>{{array.attr.value}}</button>
 	{% endspaceless %}
 {% endmacro %}

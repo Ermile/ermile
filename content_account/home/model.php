@@ -12,5 +12,18 @@ class model extends \mvc\model{
 			var_dump("rollback");
 		});
 	}
+
+	public function post_recovery()
+	{
+		var_dump("recovery model");
+
+	}
+
+	public function get_recovery()
+	{
+		var_dump("recovery model");
+		exit();
+
+	}
 }
 ?>

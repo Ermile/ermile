@@ -8,6 +8,7 @@ class controller extends \content\home\controller
 	{
 		$this->view_name	= 'content\home\view';
 		$this->display_name	= 'content_account\home\display.html';
+		
 	}
 }
 ?>

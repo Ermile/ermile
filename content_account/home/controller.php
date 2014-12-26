@@ -32,7 +32,7 @@ class controller extends \mvc\controller{
 		$this->post(false, 'login')->ALL("login");
 		$this->get(false, 'login')->ALL("login");
 		
-		$this->post(false, 'recovery')->ALL("recovery");
+		$this->post('recovery', 'recovery')->ALL("recovery");
 		$this->get(false, 'recovery')->ALL("recovery");
 		
 		$this->post(false, 'verification')->ALL("verification");

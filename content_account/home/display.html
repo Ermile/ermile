@@ -25,7 +25,7 @@
       <h1>{{global.page_title |capitalize}}</h1>
     </header>
 
-    <form class="ajx" method="post" id="{{module}}">
+    <form class="ajx" method="post" id="{{global.page_title | lower}}">
       {{forms.make(form[module])}}
     </form>
 
