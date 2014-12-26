@@ -1,5 +1,5 @@
 <?php
-namespace content\login;
+namespace content\signup;
 
 class model extends \mvc\model{
 

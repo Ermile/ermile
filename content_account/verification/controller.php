@@ -1,8 +1,7 @@
 <?php
 namespace content\verification;
-use \lib\saloos;
 
-class controller extends \content\home\controller
+class controller extends \mvc\controller
 {
 	function config()
 	{

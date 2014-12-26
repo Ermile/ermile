@@ -1,7 +1,7 @@
 <?php
 namespace content\verification;
 
-class model extends \content\home\model{
+class model extends \mvc\model{
 
 }
 ?>

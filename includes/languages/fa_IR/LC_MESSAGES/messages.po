@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2014-12-25 15:03+0330\n"
-"PO-Revision-Date: 2014-12-25 15:04+0330\n"
+"POT-Creation-Date: 2014-12-26 16:16+0330\n"
+"PO-Revision-Date: 2014-12-26 16:16+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -16,43 +16,74 @@ msgstr ""
 "X-Poedit-KeywordsList: __;T_\n"
 "X-Poedit-SearchPath-0: ../../../../.\n"
 
-#: ../../../.././content_account/home/view.php:6
-msgid "One Account for all service"
+#: ../../../.././content_account/home/view.php:12
+msgid "One Account for all services"
 msgstr "یک اکانت برای همه حساب ها"
 
-#: ../../../.././content_account/home/view.php:7
-msgid "Account Manager"
-msgstr "مدیریت اکانت"
+#: ../../../.././content_account/home/view.php:16
+#: ../../../.././includes/cls/form/account.php:24
+msgid "Login"
+msgstr "ورود به سیستم"
 
-#: ../../../.././content_account/home/view.php:8
-msgid "Manage your account"
-msgstr "اکانت خود را مدیریت کنید"
-
-#: ../../../.././includes/cls/form/symbol.php:53
-msgid "Submit"
-msgstr "ارسال"
-
-#: ../../../.././includes/cls/form/symbol.php:54
-msgid "Save"
-msgstr "ذخیره"
-
-#: ../../../.././includes/cls/form/symbol.php:55
-msgid "Sign in"
-msgstr "ورود به اکانت"
-
-#: ../../../.././includes/cls/form/symbol.php:56
-msgid "Create Account"
+#: ../../../.././content_account/home/view.php:20
+#: ../../../.././includes/cls/form/account.php:32
+msgid "Create an account"
 msgstr "اکانت بسازید"
+
+#: ../../../.././content_account/home/view.php:24
+#: ../../../.././includes/cls/form/account.php:39
+msgid "Recovery"
+msgstr "بازیابی کلمه عبور"
+
+#: ../../../.././content_account/home/view.php:28
+msgid "Verificate"
+msgstr "اعتبارسنجی"
+
+#: ../../../.././includes/cls/form/account.php:46
+msgid "Code"
+msgstr "کد"
+
+#: ../../../.././includes/cls/form/account.php:47
+msgid "Verification"
+msgstr "اعتبارسنجی"
+
+#: ../../../.././includes/cls/form/symbol.php:76
+msgid "Mobile"
+msgstr "موبایل"
+
+#: ../../../.././includes/cls/form/symbol.php:80
+msgid "Password"
+msgstr "کلمه عبور"
 
 #: ../../../.././includes/mvc/view.php:11
 msgid "Ermile"
 msgstr "ارمایل"
 
 #: ../../../.././includes/mvc/view.php:12
+msgid "Ermile is new"
+msgstr "ارمایل جدید است!"
+
 #: ../../../.././includes/mvc/view.php:13
 msgid "Ermile is our company"
 msgstr "ارمایل نام شرکت ماست"
 
-#: ../../../.././includes/mvc/view.php:15
-msgid "Ermile is new"
-msgstr "ارمایل جدید است!"
+#~ msgid "mobile"
+#~ msgstr "موبایل"
+
+#~ msgid "password"
+#~ msgstr "کلمه عبور"
+
+#~ msgid "Account Manager"
+#~ msgstr "مدیریت اکانت"
+
+#~ msgid "Manage your account"
+#~ msgstr "اکانت خود را مدیریت کنید"
+
+#~ msgid "Submit"
+#~ msgstr "ارسال"
+
+#~ msgid "Save"
+#~ msgstr "ذخیره"
+
+#~ msgid "Sign in"
+#~ msgstr "ورود به اکانت"

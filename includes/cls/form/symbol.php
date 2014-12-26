@@ -66,12 +66,25 @@ class symbol extends \lib\form{
 		// $this->foreignkey->validate()->foreignkey()->formForeignkey("foreignkey incorrect");
 
 
+/**
+ * if parameter for second col is not set, copy from first variable to second
+ * name 	-> id
+ * label 	-> placeholder
+ */
 
 
-		$this->mobile = $this->make("mobile")->name("mobile")->label("mobile")->pl('mobile');
+		$this->mobile 	= $this->make("mobile")->type("tel")->label(T_("Mobile"))->pl(T_("Mobile"))
+							->required()->maxlength(17)->pattern(".{10,}");
+		// $this->form()->type("tel")->name("mobile")->pl("Mobile")->pattern(".{10,}")->maxlength(17)->required();
 
-		$this->password = $this->make("password")->name("password")->label("password")->pl('password');
+		$this->password = $this->make("password")->type("password")->label(T_("Password"))->pl(T_("Password"))
+							->required()->maxlength(20)->pattern("^.{5,20}$")->title("between 5-20 character");
+							// ->validate()->password();
 
+		// $this->form()->name("pass")->pl("Password")->type("password")->required()->maxlength(20)
+		// 	->pattern("^.{5,20}$")->title("between 5-20 character")->validate()->password();
+
+			
 		// $this->password = $this->make("password")->name("password")->label("password");
 		// $this->password->validate()->password()->formPassword("password incorrect");
 	}

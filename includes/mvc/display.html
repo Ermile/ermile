@@ -23,11 +23,14 @@
 {%if include.customcss   %}  <link rel="stylesheet"    href="{{url.static}}css/style.css?ver=0.0.1">{{include.newline}}{%endif%}
 {%if include.fontawesome %}  <link rel="stylesheet"    href="{{url.static}}css/font-awesome.min.css?v4.2.0">{{include.newline}}{%endif%}
 {%if include.datatable   %}  <link rel="stylesheet"    href="{{url.static}}css/jquery.dataTables.css">{{include.newline}}{%endif%}
+{%if include.telinput    %}  <link rel="stylesheet"    href="{{url.static}}css/intlTelInput.css" >{{include.newline}}{%endif%}
 {%block head_css%}{%endblock%}
 
 {%if include.jquery      %}  <script src="{{url.static}}js/jquery-modern.js"></script>{{include.newline}}{%endif%}
 {%if include.datatable   %}  <script src="{{url.static}}js/jquery.dataTables.min.js"></script>{{include.newline}}{%endif%}
-{%if include.customjs    %}  <script src="{{url.static}}js/custom.js"></script>{%endif%}
+{%if include.telinput    %}  <script src="{{url.static}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
+
+{%block head_js%}{%endblock%}
 
 {%endblock%}
 {%block head%}{%endblock%}
@@ -71,6 +74,7 @@
   </div>
 {%endif%}
 
+{%if include.customjs    %}  <script src="{{url.static}}js/custom.js"></script>{%endif%}
 {%if include.datatable%}
   <script>$(document).ready(function(){$('.datatable').DataTable();});</script>
 {%endif%}

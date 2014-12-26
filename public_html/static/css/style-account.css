@@ -77,10 +77,7 @@ input:-webkit-autofill:focus {-webkit-box-shadow: /*your box-shadow*/,0 0 0 50px
 #formError ul li{padding:1px 1%;margin-top: 10px;padding:15px;border-radius: 4px;}
 
 
-input {
-  transition: background-color 100ms ease-out;
-}
-input.flash {
-  transition: background-color 0;
-  background-color: #FFC7C7;
-}
+input {transition: background-color 100ms ease-out;}
+form input.flash {transition: color 0;color: #FFC7C7;}
+form input.valid {color: #4C5E3B;}
+form input.invalid {color: #5E3B3B;}

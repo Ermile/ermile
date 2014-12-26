@@ -1,33 +1,23 @@
 {%extends display%}
-{% import "includes/cls/macro/forms.html" as forms %}
-{%block head_def%}
-  <meta charset="UTF-8" />
-  <base href="{{url.current}}" />
-  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><![endif]-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-  <title>{{global.page_title}}{%if global.site_title_show and global.page_title%} | {%endif%}{%if global.site_title_show%}{{global.site_title}}{%endif%}</title>
-  <meta name="description"        content="{{global.page_desc}}"/>
-
-  <!-- [if lte IE 8]><script>document.location = 'http://www.whatbrowser.org/intl/fa/';</script><![endif] -->
-  <link rel="author"        href="{{url.static}}humans.txt"  />
-  <link rel="shortcut icon" href="{{url.static}}images/favicon.png" />
-
-  <link rel="stylesheet"    href="{{url.static}}css/style-account.css?ver=1.1.0">{{include.newline}}
+{%block head_css%}
+  <link rel="stylesheet"    href="{{url.static}}css/style-account.css?ver=1.1.0">
 {%endblock%}
 
-{%block body_init%}<body id="account" class="unselectable">{%endblock%}
+
+{%block body_init%}<body id="{{module}}" class="unselectable">{%endblock%}
+
 
 {%block body_def%}
+
   <div class="center">
     <header>
-      <a target="_blank" href="{{url.root}}" title="{{global.site_desc}}"><img id='logo' alt="{{global.site_title}}-logo" src='{{url.static}}images/logo.svg'></a>
-      <h1>{{global.page_title |capitalize}}</h1>
+      <a target="_blank" href="{{url.root}}" title="{{global.site_slogan}}"><img id='logo' alt="{{global.site_title}}-logo" src='{{url.static}}images/logo.svg'></a>
+      <h1>{{global.page_desc}}</h1>
     </header>
 
-    <form class="ajx" method="post" id="{{global.page_title | lower}}">
-      {{forms.make(form[module])}}
-    </form>
+<form class="ajx" method="post" id="{{module}}">
+{{forms.make(form[myform])}}
+</form>
 
     {%block content%}
     <footer>
@@ -52,3 +42,6 @@
    </div>
   </footer>
 {%endblock%}
+
+
+{% import "includes/cls/macro/forms.html" as forms %}
