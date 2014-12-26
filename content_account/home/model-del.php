@@ -2,7 +2,7 @@
 namespace content\home;
 
 class model extends \mvc\model{
-	public function post_signup(){
+	public function post_signup_old(){
 		\lib\debug::fatal("hi", 'username', 'form');
 		$test = 190;
 		$this->commit(function($arg_test){
@@ -13,9 +13,9 @@ class model extends \mvc\model{
 		});
 	}
 
-	public function post_recovery()
+	public function post_signup()
 	{
-		var_dump("recovery model");
+		var_dump("signup model");
 		exit();
 
 	}

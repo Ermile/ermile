@@ -18,43 +18,39 @@ class account extends \lib\form
 
 	private function login()
 	{
-
-		var_dump("test login");
-		$this->username	= $this->make('input')->name("username")->label('username');
-		$this->password	= $this->make('password')->name("password")->label('password');
-		$this->submit	= $this->make('submit')->label('signup');
-
-
-
-
-		// $form->hidden->value(__FUNCTION__);
-
-		// 	$form = new forms_lib;
-		// 	$form = $form->make("@users");
-		// 	$form->white("hidden, user_mobile, user_pass, submit");
-			
-		// 	$form->before("user_mobile","user_pass");
-		// 	$form->user_mobile->label('')->pl('Mobile');
-		// 	$form->user_mobile->value( ((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):"") );
-		// 	$form->user_pass->label('')->pl('Password');
-		// 	$form->submit->value("");
-		// 	return $form;
-
-
-	}
-
-	private function recovery()
-	{
-		$this->mobile	= $this->make('#mobile')->label('');
-		// $this->password	= $this->make('#password')->label('');
-		$this->submit	= $this->make('submit')->label('signup');
+		$this->mobile	= $this->make('#mobile')->label(null)
+							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
+		$this->password	= $this->make('#password')->label(null);
+		$this->submit	= $this->make('submit')->title(T_('Login'));
 	}
 
 	private function signup()
 	{
-		$this->mobile	= $this->make('#mobile')->label('');
-		$this->password	= $this->make('#password')->label('');
-		$this->submit	= $this->make('submit')->label('signup');
+		$this->mobile	= $this->make('#mobile')->label(null)
+							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
+		$this->password	= $this->make('#password')->label(null);
+		$this->submit	= $this->make('submit')->title(T_('Create an account'));
+	}
+
+	private function verification()
+	{
+		$this->mobile	= $this->make('#mobile')->label(null)
+							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
+		$this->code		= $this->make('code')->label(null)->pl(T_('Code'))->maxlength(4)->autofocus();
+		$this->submit	= $this->make('submit')->title(T_('Verification'));
+	}
+
+	private function recovery()
+	{
+		$this->mobile	= $this->make('#mobile')->label(null)
+							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
+		$this->submit	= $this->make('submit')->title(T_('Recovery'));
+	}
+
+	private function changepass()
+	{
+		$this->password	= $this->make('#password')->label(null);
+		$this->submit	= $this->make('submit')->title(T_('Change my password'));
 	}
 }
 ?>

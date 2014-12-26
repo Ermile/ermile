@@ -1,5 +1,5 @@
 <?php
-namespace content\login;
+namespace content\logout;
 
 class model extends \mvc\model{
 

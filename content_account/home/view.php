@@ -5,63 +5,42 @@ class view extends \mvc\view
 {
 	public function config()
 	{
+		$this->include->customcss		= false;
+		$this->data->myform				= 'account';
+		$this->data->module				= \lib\router::get_real_url();
 		$this->include->telinput		= true;
-		$this->include->fontawesome		= false;
-		// $this->data->module				= \lib\router::get_real_url();
-		$this->global->page_title		= ucfirst(\lib\router::get_real_url());
-		$this->global->site_title_show	= false;
-		$this->global->site_desc		= T_("One Account for all services");
-		
-		$this->data->module				= 'account';
+		$this->global->site_slogan		= T_("One Account for all services");
 
-		// $form 									= $this->form(".signup");
-		// $this->data->module = 'accounts';
-        // var_dump($this->data->module);
-        
-  //       $this->createform('.'.$this->data->module);
+		if($this->data->module =='login')
+		{
+			$this->global->page_desc	= T_('Login');
+		}
+		elseif($this->data->module =='signup')
+		{
+			$this->global->page_desc	= T_('Create an account');
+		}
+		elseif($this->data->module =='verification')
+		{
+			$this->global->page_desc	= T_('Verificate');
+		}
+		elseif($this->data->module =='recovery')
+		{
+			$this->global->page_desc	= T_('Recovery');
+		}
+		elseif($this->data->module =='changepass')
+		{
+			$this->global->page_desc	= T_('Change password');
+		}
+		else
+		{
+			return;
+		}
 
-
-		// $this->global->page_title               = T_("Account Manager");
-		// $this->global->page_desc                = T_("Manage your account");
+		$this->global->page_title		= $this->global->page_desc;
+		$form = $this->createform('.'.$this->data->myform, $this->data->module);
 
 		// $form = $this->form("@jibres.accounts");
 		// $form->before('account_slug', 'account_title');
-		// 
-
-
-	}
-
-	public function view_login()
-	{
-		// $form = $this->form(".login");
-		$form = $this->createform(".account",'login');
-	}
-
-	public function view_signup()
-	{
-		$form = $this->createform(".account",'signup');
-		// var_dump("signup");
-		// var_dump($this->form(".signup"))
-		// $form = $this->createform(".signup");
-		// or var_dump($this->controller()->api_callback); 
-	}
-
-
-	public function view_recovery()
-	{
-		$form = $this->createform(".account",'recovery');
-
-		// var_dump("recovery");
-		// $form = $this->createform(".recovery");
-		// $form = $this->form(".signup");
-		// or var_dump($this->controller()->api_callback); 
-	}
-
-	public function view_verification()
-	{
-		$form = $this->createform(".account",'verification');
-		// $form = $this->createform(".verification");
-		// var_dump("verification");
 	}
 }
 ?>

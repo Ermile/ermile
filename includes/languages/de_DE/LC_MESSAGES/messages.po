@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2014-12-25 15:19+0330\n"
-"PO-Revision-Date: 2014-12-25 15:19+0330\n"
+"POT-Creation-Date: 2014-12-26 16:15+0330\n"
+"PO-Revision-Date: 2014-12-26 16:15+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: de_DE\n"
@@ -16,32 +16,43 @@ msgstr ""
 "X-Poedit-KeywordsList: __;T_\n"
 "X-Poedit-SearchPath-0: ../../../../.\n"
 
-#: ../../../.././content_account/home/view.php:6
-msgid "One Account for all service"
+#: ../../../.././content_account/home/view.php:12
+msgid "One Account for all services"
 msgstr ""
 
-#: ../../../.././content_account/home/view.php:7
-msgid "Account Manager"
+#: ../../../.././content_account/home/view.php:16
+#: ../../../.././includes/cls/form/account.php:24
+msgid "Login"
 msgstr ""
 
-#: ../../../.././content_account/home/view.php:8
-msgid "Manage your account"
+#: ../../../.././content_account/home/view.php:20
+#: ../../../.././includes/cls/form/account.php:32
+msgid "Create an account"
 msgstr ""
 
-#: ../../../.././includes/cls/form/symbol.php:53
-msgid "Submit"
+#: ../../../.././content_account/home/view.php:24
+#: ../../../.././includes/cls/form/account.php:39
+msgid "Recovery"
 msgstr ""
 
-#: ../../../.././includes/cls/form/symbol.php:54
-msgid "Save"
+#: ../../../.././content_account/home/view.php:28
+msgid "Verificate"
 msgstr ""
 
-#: ../../../.././includes/cls/form/symbol.php:55
-msgid "Sign in"
+#: ../../../.././includes/cls/form/account.php:46
+msgid "Code"
 msgstr ""
 
-#: ../../../.././includes/cls/form/symbol.php:56
-msgid "Create Account"
+#: ../../../.././includes/cls/form/account.php:47
+msgid "Verification"
+msgstr ""
+
+#: ../../../.././includes/cls/form/symbol.php:76
+msgid "Mobile"
+msgstr ""
+
+#: ../../../.././includes/cls/form/symbol.php:80
+msgid "Password"
 msgstr ""
 
 #: ../../../.././includes/mvc/view.php:11
@@ -49,10 +60,9 @@ msgid "Ermile"
 msgstr "Ermile DE"
 
 #: ../../../.././includes/mvc/view.php:12
+msgid "Ermile is new"
+msgstr "Germany"
+
 #: ../../../.././includes/mvc/view.php:13
 msgid "Ermile is our company"
 msgstr ""
-
-#: ../../../.././includes/mvc/view.php:15
-msgid "Ermile is new"
-msgstr "Germany"

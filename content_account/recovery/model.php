@@ -1,7 +1,7 @@
 <?php
 namespace content\recovery;
 
-class model extends \content\home\model{
+class model extends \mvc\model{
 
 	public function post_recovery()
 	{
