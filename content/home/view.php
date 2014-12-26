@@ -3,7 +3,7 @@ namespace content\home;
 
 class view extends \mvc\view{
 	public function config(){
-		$formEdit = $this->form(".custom", "edit");
+		$formEdit = $this->createform(".custom", "edit");
 	}
 
 

@@ -64,6 +64,11 @@ class symbol extends \lib\form{
 
 		$this->foreignkey = $this->make("text")->name("foreignkey")->label("foreignkey");
 		$this->foreignkey->validate()->foreignkey()->formForeignkey("foreignkey incorrect");
+
+
+
+
+		$this->mobile = $this->make("mobile")->name("mobile2")->label("mobile2")->pl('mobile2');
 	}
 }
 ?>
