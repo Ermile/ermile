@@ -41,7 +41,7 @@ class view extends \mvc\view
 	{
 		var_dump("signup");
 		// var_dump($this->form(".signup"))
-		$form = $this->createform(".signup");
+		// $form = $this->createform(".signup");
 		// or var_dump($this->controller()->api_callback); 
 	}
 
