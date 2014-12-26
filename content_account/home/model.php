@@ -7,7 +7,7 @@ class model extends \mvc\model{
 		$test = 190;
 		$this->commit(function($arg_test){
 			var_dump("commit - ".$arg_test);
-		}, $test);
+	}, $test);
 		$this->rollback(function(){
 			var_dump("rollback");
 		});
