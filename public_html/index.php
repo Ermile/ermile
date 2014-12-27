@@ -15,7 +15,6 @@ else
 if ( file_exists( '../../saloos/autoload.php') )
 {
 	require_once( '../../saloos/autoload.php');
-	new \lib\saloos;
 }
 else
 {   // A config file doesn't exist
