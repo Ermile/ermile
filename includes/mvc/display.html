@@ -28,7 +28,7 @@
 
 {%if include.jquery      %}  <script src="{{url.static}}js/jquery-modern.js"></script>{{include.newline}}{%endif%}
 {%if include.datatable   %}  <script src="{{url.static}}js/jquery.dataTables.min.js"></script>{{include.newline}}{%endif%}
-{%if include.telinput    %}  <script src="{{url.static}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
+
 
 {%block head_js%}{%endblock%}
 
@@ -60,13 +60,13 @@
 
 {%if debug is iterable%}
   <div id="formError" class="error_{{debug.status}}">
-  {%for mydebug in debug if mydebug is iterable %}
-   <ul>
-   {%for err in mydebug%}
+  {%for key, mydebug in debug if mydebug is iterable %}
+   <ul class="{{key}}">
+   {%for key, err in mydebug%}
    {%if err.error is defined%}
     <li>{{err[err.group]}} : {{err.error}}</li>
    {%else%}
-    <li>{{err}}</li>
+    <li class="n_{{key}}">{{err}}</li>
    {%endif%}
    {%endfor%}
    </ul>
@@ -74,6 +74,7 @@
   </div>
 {%endif%}
 
+{%if include.telinput    %}  <script src="{{url.static}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
 {%if include.customjs    %}  <script src="{{url.static}}js/custom.js"></script>{%endif%}
 {%if include.datatable%}
   <script>$(document).ready(function(){$('.datatable').DataTable();});</script>
