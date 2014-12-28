@@ -51,7 +51,10 @@ class model extends \mvc\model
 			// mobile exist more than 2 times!
 			debug::fatal("Please forward this message to Administrator");
 		}
-		
+		$this->redirector()
+				->set_domain("ermile.com")
+				->set_url()
+				->set_protocol("https");
 	}
 	public function post_signup()
 	{
@@ -118,7 +121,10 @@ class model extends \mvc\model
 				// $x->set_domain("ermile.com") // default: your doamin
 				// ->set_protocol("https") // default:http 
 				// ->redirect();
-
+				$redirect = $this->redirector();
+				$redirect->set_domain("ermile.com");
+				$redirect->set_url();
+				$redirect->set_protocol("https");
 
 			}, $mymobile, $mycode);
 
