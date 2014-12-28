@@ -40,12 +40,12 @@ class model extends \mvc\model
 					//Send SMS
 					\lib\utility::send_sms($_parameter);
 
-					// $this->redirect('/login?from=verification&mobile='.(substr($_parameter,1)));
+					$this->redirector()->set_url('login?from=verification&mobile='.(substr($_parameter,1)) )->redirect();
 					debug::true("Verify successfully");
 				}
 				elseif($_parameter2=='recovery')
 				{
-					// $this->redirect('/changepass?from=verification&mobile='.(substr($_parameter,1)));
+					$this->redirector()->set_url('changepass?from=verification&mobile='.(substr($_parameter,1)) )->redirect();
 					// login user to system
 					debug::true("Verify successfully. Please Input your new password");	
 				}
