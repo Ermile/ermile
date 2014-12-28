@@ -18,7 +18,7 @@ class controller extends \mvc\controller
 			$this->post($module)->ALL($module);
 		});
 
-		$this->route("/^verification|changepass$/", function(){
+		$this->route("/^(verification|changepass)$/", function(){
 			$module	= \lib\router::get_real_url();
 			$this->model_name	= 'content\\'.$module.'\model';
 			$this->display_name	= 'content_account\\'.$module.'\display.html';
