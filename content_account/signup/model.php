@@ -10,9 +10,9 @@ class model extends \mvc\model
 		// for debug you can uncomment below line to disallow redirect
 		// $this->controller()->redirector	= false; 
 
-		$mymobile						= str_replace(' ', '', utility::post('mobile'));
-		$mypass							= utility::post('password');
-		$tmp_result						=  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
+		$mymobile	= str_replace(' ', '', utility::post('mobile'));
+		$mypass		= utility::post('password');
+		$tmp_result	=  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
 
 
 		if($tmp_result->num() == 1)
@@ -22,7 +22,6 @@ class model extends \mvc\model
 			if(DEBUG)
 				var_dump('Mobile number exist!');
 		}
-
 		elseif($tmp_result->num() == 0 )
 		{
 			if(DEBUG)
@@ -57,9 +56,7 @@ class model extends \mvc\model
 					var_dump('Register successfully. commit');
 
 				//Send SMS
-				// $sendnotify = new sendnotify_cls;
 				\lib\utility::send_sms($_parameter, $_parameter2);
-				// $sendnotify->sms();
 
 				debug::true("Register successfully");
 				// $this->redirect('/verification?mobile='.(substr($_parameter,1)).'&code='.$_parameter2);
@@ -83,7 +80,6 @@ class model extends \mvc\model
 				debug::fatal("Register failed!");
 			} );
 		}
-
 		else
 		{
 			// mobile exist more than 2 times!
