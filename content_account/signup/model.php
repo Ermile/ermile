@@ -58,7 +58,7 @@ class model extends \mvc\model
 				//Send SMS
 				\lib\utility::send_sms($_parameter, $_parameter2);
 
-				$this->redirector()->set_url('verification?from=signup&mobile='.(substr($_parameter,1)) )->redirect();
+				$this->redirector()->set_url('verification?from=signup&mobile='.(substr($_parameter,1)) );
 				debug::true("Register successfully");
 			}, $mymobile, $mycode);
 
