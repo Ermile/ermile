@@ -8,13 +8,9 @@ Author URI: Samac.ir
 Version: 1.1.0
 */
 
-
-
-
-
 html {font-size:62.5%;font-family:Tahoma, Helvetica, Arial, Sans-Serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-rendering: optimizeLegibility;}
 body {margin:0;padding:0;background-color: #34383d;color:#4f5561;background: #34383d;}
-a{color:#6f7787;text-decoration:none;}
+a{color:#6f7787;text-decoration:none;outline:none;}
 ul{list-style-type:none }
 pre{direction:ltr;text-align:left;background:#eee;font-size:15px;font-size:1.5rem;line-height:1.6;margin:1em auto;padding:1.6em;overflow:auto;max-width:90%;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
 .center{position: relative;width:350px;margin: 0 auto;}

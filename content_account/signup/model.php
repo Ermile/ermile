@@ -19,13 +19,9 @@ class model extends \mvc\model
 		{
 			// mobile exist
 			debug::fatal("Mobile number exist!");
-			if(DEBUG)
-				var_dump('Mobile number exist!');
 		}
 		elseif($tmp_result->num() == 0 )
 		{
-			if(DEBUG)
-				var_dump('Mobile number not exist. go for register');
 			// mobile does not exits
 			$qry		= $this->sql()->tableUsers()
 							->setUser_type('store_admin')
@@ -40,34 +36,28 @@ class model extends \mvc\model
 							->setVerification_value($mymobile)
 							->setVerification_code($mycode)
 							->setUser_id($myuserid)
-							->setVerification_verified('no');
+							->setVerification_verified('no')
+							->setVerification_createdate(date('Y-m-d H:i:s'));
 			$sql		= $qry->insert();
-
 
 
 			// ======================================================
 			// you can manage next event with one of these variables,
 			// commit for successfull and rollback for failed
 			// if query run without error means commit
-
 			$this->commit(function($_parameter, $_parameter2)
 			{
-				if(DEBUG)
-					var_dump('Register successfully. commit');
-
 				//Send SMS
 				\lib\utility::send_sms($_parameter, $_parameter2);
 
-				$this->redirector()->set_url('verification?from=signup&mobile='.(substr($_parameter,1)) );
+				$this->redirector()->set_url('verification?from=signup&mobile='.(substr($_parameter,1)).
+					'&referer='.utility::get('referer') );
 				debug::true("Register successfully");
 			}, $mymobile, $mycode);
 
 			// if a query has error or any error occour in any part of codes, run roolback
 			$this->rollback(function()
 			{
-				if(DEBUG)
-					var_dump('Register failed. rollback');
-
 				debug::fatal("Register failed!");
 			} );
 		}

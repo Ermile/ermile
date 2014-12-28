@@ -10,7 +10,7 @@ class model extends \mvc\model
 		// for debug you can uncomment below line to disallow redirect
 		// $this->controller()->redirector	= false; 
 
-		$mymobile			= str_replace(' ', '', utility::post('mobile'));
+		$mymobile			= '+'.utility::get('mobile');
 		$mycode				= utility::post('code');
 		$tmp_result			=  $this->sql()->tableVerifications()
 								->whereVerification_value($mymobile)
@@ -18,6 +18,7 @@ class model extends \mvc\model
 								->andVerification_verified('no')
 								->select();
 
+// var_dump($tmp_result);exit();
 		if($tmp_result->num() == 1)
 		{
 			// mobile and code exist update the record and verify
@@ -38,14 +39,16 @@ class model extends \mvc\model
 				if($_parameter2=='signup')
 				{
 					//Send SMS
-					\lib\utility::send_sms($_parameter);
+					// \lib\utility::send_sms($_parameter);
 
-					$this->redirector()->set_url('login?from=verification&mobile='.(substr($_parameter,1)) )->redirect();
-					debug::true("Verify successfully");
+					$this->redirector()->set_url('login?from=verification&mobile='.(substr($_parameter,1)).
+						'&referer='.utility::get('referer') );
+					debug::true("Verify successfully. Now you can login and enjoy!");
 				}
 				elseif($_parameter2=='recovery')
 				{
-					$this->redirector()->set_url('changepass?from=verification&mobile='.(substr($_parameter,1)) )->redirect();
+					$this->redirector()->set_url('changepass?from=verification&mobile='.(substr($_parameter,1)).
+						'&referer='.utility::get('referer') );
 					// login user to system
 					debug::true("Verify successfully. Please Input your new password");	
 				}

@@ -33,6 +33,7 @@ class view extends \mvc\view
 		}
 		else
 		{
+			$this->global->page_desc	= T_('Ermile');
 			return;
 		}
 

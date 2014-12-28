@@ -44,10 +44,8 @@ class model extends \mvc\model
 				\lib\utility::send_sms($_parameter, $_parameter2);
 
 				debug::true("Step 1 of 2 is complete. Please check your mobile to continue");
-				// $this->redirect('/verification?mobile='.(substr($_parameter,1)).'&code='.$_parameter2);
-				// $this->redirect('/verification?from=recovery&mobile='.(substr($_parameter,1)));
-				
-
+				$this->redirector()->set_url('verification?from=recovery&mobile='.(substr($_parameter,1)).
+					'&referer='.utility::get('referer') );
 			}, $mymobile, $mycode);
 
 			// if a query has error or any error occour in any part of codes, run roolback

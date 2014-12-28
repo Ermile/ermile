@@ -9,12 +9,11 @@ class controller extends \mvc\controller
 			$this->redirector()->set_url("login")->redirect();
 		});
 
-		$this->route("/^(login|signup|recovery|logout)$/", function(){
+		$this->route("/^(login|signup|recovery|smsdelivery)$/", function(){
 
 			$module	= \lib\router::get_real_url();
 			$this->model_name	= 'content\\'.$module.'\model';
 			$this->display_name	= 'content_account\\'.$module.'\display.html';
-			// $this->display_name	= 'content_account\home\display.html';
 			$this->post($module)->ALL($module);
 		});
 
@@ -30,8 +29,9 @@ class controller extends \mvc\controller
 			// redirect to ermile
 			session_unset();
 			session_destroy();
-			header("location: http://".\lib\router::get_root_domain());
 			\lib\debug::true("Logout successfully");
+			$this->redirector()->set_domain()->set_url();
+			header("location: http://".\lib\router::get_root_domain());
 			exit();
 		});		
 	}

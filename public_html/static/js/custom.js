@@ -109,7 +109,7 @@ telInput.intlTelInput({
 //autoFormat: false,
 //autoHideDialCode: false,
 defaultCountry: "ir",
-defaultCountry: "auto",
+// defaultCountry: "auto",
 // nationalMode: true,
 // numberType: "MOBILE",
 //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
