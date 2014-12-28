@@ -58,17 +58,8 @@ class model extends \mvc\model
 				//Send SMS
 				\lib\utility::send_sms($_parameter, $_parameter2);
 
+				$this->redirector()->set_url('verification?from=signup&mobile='.(substr($_parameter,1)) )->redirect();
 				debug::true("Register successfully");
-				// $this->redirect('/verification?mobile='.(substr($_parameter,1)).'&code='.$_parameter2);
-				// $this->redirect('/verification?from=signup&mobile='.(substr($_parameter,1)));
-
-				// \lib\redirector::
-				// $x = new \lib\redirector(); // default: your url
-				// $x->set_domain("ermile.com") // default: your doamin
-				// ->set_protocol("https") // default:http 
-				// ->redirect();
-
-
 			}, $mymobile, $mycode);
 
 			// if a query has error or any error occour in any part of codes, run roolback

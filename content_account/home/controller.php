@@ -6,9 +6,9 @@ class controller extends \mvc\controller
 	function config()
 	{
 		$this->route("/^$/", function(){
-			$this->redirector()->set_url("login");
-			$this->redirector()->redirect();
+			$this->redirector()->set_url("login")->redirect();
 		});
+
 		$this->route("/^(login|signup|recovery|logout)$/", function(){
 
 			$module	= \lib\router::get_real_url();

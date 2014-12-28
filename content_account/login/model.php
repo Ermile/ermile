@@ -52,9 +52,9 @@ class model extends \mvc\model
 			debug::fatal("Please forward this message to Administrator");
 		}
 		$this->redirector()
-				->set_domain("ermile.com")
+				// ->set_domain("ermile.dev")
 				->set_url()
-				->set_protocol("https");
+				->set_protocol("http");
 	}
 	public function post_signup()
 	{
@@ -122,7 +122,8 @@ class model extends \mvc\model
 				// ->set_protocol("https") // default:http 
 				// ->redirect();
 				$redirect = $this->redirector();
-				$redirect->set_domain("ermile.com");
+				// $redirect->set_domain("ermile.com");
+				$redirect->set_sub_domain("aa");
 				$redirect->set_url();
 				$redirect->set_protocol("https");
 
