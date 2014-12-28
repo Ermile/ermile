@@ -9,10 +9,26 @@ class model extends \mvc\model
 	{
 		// for debug you can uncomment below line to disallow redirect
 		// $this->redirect 	= false;
+		$this->controller()->redirector = false; 
 		$mymobile			= str_replace(' ', '', utility::post('mobile'));
 		$mypass				= utility::post('password');
 		// var_dump($mymobile);var_dump($mypass);
 		$tmp_result			=  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
+
+
+
+
+		$test = 190;
+		$this->commit(function($arg_test){
+			var_dump("commit - ".$arg_test);
+		}, $test);
+		$this->rollback(function(){
+			var_dump("rollback");
+		});
+
+
+
+
 
 		if($tmp_result->num() == 1)
 		{
@@ -42,39 +58,31 @@ class model extends \mvc\model
 			$sql		= $qry->insert();
 
 
-		$test = 190;
-		$this->commit(function($arg_test){
-			var_dump("commit - ".$arg_test);
-		}, $test);
-		$this->rollback(function(){
-			var_dump("rollback");
-		});
-
 
 			// ======================================================
 			// you can manage next event with one of these variables,
 			// commit for successfull and rollback for failed
 			//
 			// if query run without error means commit
-			$this->commit(function($_parameter, $_parameter2)
-			{
-				//Send SMS
-				$sendnotify = new sendnotify_cls;
-				$sendnotify->sms($_parameter, $_parameter2);
+			// $this->commit(function($_parameter, $_parameter2)
+			// {
+			// 	//Send SMS
+			// 	// $sendnotify = new sendnotify_cls;
+			// 	// $sendnotify->sms($_parameter, $_parameter2);
 
-				debug::true("Register successfully");
-				var_dump("Register successfully");
-				// $this->redirect('/verification?mobile='.(substr($_parameter,1)).'&code='.$_parameter2);
-				$this->redirect('/verification?from=signup&mobile='.(substr($_parameter,1)));
-			}, $mymobile, $mycode);
+			// 	debug::true("Register successfully");
+			// 	var_dump("Register successfully");
+			// 	// $this->redirect('/verification?mobile='.(substr($_parameter,1)).'&code='.$_parameter2);
+			// 	$this->redirect('/verification?from=signup&mobile='.(substr($_parameter,1)));
+			// }, $mymobile, $mycode);
 
-			// if a query has error or any error occour in any part of codes, run roolback
-			$this->rollback(function()
-			{
-				debug::fatal("Register failed!");
-				var_dump("Register failed");
-			} );
-			var_dump("Register");
+			// // if a query has error or any error occour in any part of codes, run roolback
+			// $this->rollback(function()
+			// {
+			// 	debug::fatal("Register failed!");
+			// 	var_dump("Register failed");
+			// } );
+			// var_dump("Register");
 		}
 
 		else
@@ -88,7 +96,7 @@ class model extends \mvc\model
 		// $x->query("my QUERY")
 
 
-		$this->controller()->redirector = false; 
+		
 		// exit();
 		// \lib\debug::fatal("hi", 'username', 'form');
 
