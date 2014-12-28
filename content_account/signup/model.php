@@ -88,8 +88,8 @@ class model extends \mvc\model
 		// $x->query("my QUERY")
 
 
-
-		exit();
+		$this->controller()->redirector = false; 
+		// exit();
 		// \lib\debug::fatal("hi", 'username', 'form');
 
 	}
