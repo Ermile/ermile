@@ -71,5 +71,12 @@ class model extends \mvc\model
 			debug::fatal("Please forward this message to Administrator");
 		}
 	}
+
+	public function post_checksms()
+	{
+		var_dump( utility::get('check') );
+		echo 'test';
+		exit();
+	}
 }
 ?>

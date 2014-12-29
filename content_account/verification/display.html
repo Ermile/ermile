@@ -4,7 +4,14 @@
     <div id="desc" >
       <p>Please check your mobile and enter the code</p>
       <div id="delay" class="hide">
-          <p><a href="/verification/send">Don't receive message? Click here!</a></p>
+		<a href="#" onclick='document.getElementById("desc2").setAttribute("style","opacity:0.5; -moz-opacity:0.5; filter:alpha(opacity=50)");'>Don't receive message?</a>
+
+		<div id="desc2" style="opacity:0;">
+			<p class="desc">Please send number <b>2015</b> to <b>1000 666 00 666 00</b></p>
+			<p class="desc">Then wait we receive your message and verificate your account</p>
+			<a id="checkbtn" href="#" onclick=''>Check it!</a>
+		</div>
+
       </div>
     </div>
   </footer>
