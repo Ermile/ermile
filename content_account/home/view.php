@@ -31,6 +31,14 @@ class view extends \mvc\view
 		{
 			$this->global->page_desc	= T_('Change password');
 		}
+		elseif($this->data->module =='smsdelivery')
+		{
+			$this->global->page_desc	= T_('SMS Delivery');
+		}
+		elseif($this->data->module =='smscallback')
+		{
+			$this->global->page_desc	= T_('SMS Callback');
+		}
 		else
 		{
 			$this->global->page_desc	= T_('Ermile');

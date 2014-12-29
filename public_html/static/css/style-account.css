@@ -20,21 +20,23 @@ h1{color: #222;text-shadow: 0px 2px 3px #555;text-align: center;font: 30px Helve
 #desc{text-align:center;font-size:12px;color:#888;}
 #desc a{color: #999;text-shadow: 0px 3px 8px #2a2a2a;text-align: center;}
 #desc a:hover{color: #aaa;}
+#delay{transition: opacity 2s ease;font-size:20px;color:#eee;}
+.hide{opacity: 0;}
+.show{opacity: 1;}
+
+.account button{position: absolute;display: inline;right:-30px;top:15px;-webkit-border-radius: 100%;border-radius: 100%;height: 60px;width:60px;background-color: #1c1e21;border: 10px solid #34383d;color:#4f5561;z-index:3}
+.account button:after{-webkit-filter: drop-shadow(-2px 0 0 rgba(0, 0, 0, 0.2));filter: drop-shadow(-2px 0 0 rgba(0, 0, 0, 0.2));}
+.account button:after,.account button:before{position: absolute;content: " ";right: 15px;top: 7px;width: 6px;height: 18px;background: #4f5561;-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg);-webkit-transform: rotate(-45deg);transform: rotate(-45deg);display: block;z-index: 102;transition: all .3s ease;-webkit-transition: all .3s ease;-o-transition: all .3s ease;-moz-transition: all .3s ease;}
+.account button:before{height: 14px;top: 19px;right: 16px;z-index: 103;-moz-transform: rotate(-137deg);-ms-transform: rotate(-137deg);-webkit-transform: rotate(-137deg);transform: rotate(-137deg);-webkit-filter: drop-shadow(0 -2px 0 rgba(0, 0, 0, 0.15));filter: drop-shadow(0 -2px 0 rgba(0, 0, 0, 0.15));}
+.account button:hover:after,.account button:hover:before,.account button:focus:after,.account button:focus:before{background:#fff;}
+#recovery .account button{top:-2px;}
+#changepass .account button{top:-2px;}
 
 
-button{position: absolute;display: inline;right:-30px;top:15px;-webkit-border-radius: 100%;border-radius: 100%;height: 60px;width:60px;background-color: #1c1e21;border: 10px solid #34383d;color:#4f5561;z-index:3}
-button:after{-webkit-filter: drop-shadow(-2px 0 0 rgba(0, 0, 0, 0.2));filter: drop-shadow(-2px 0 0 rgba(0, 0, 0, 0.2));}
-button:after,button:before{position: absolute;content: " ";right: 15px;top: 7px;width: 6px;height: 18px;background: #4f5561;-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg);-webkit-transform: rotate(-45deg);transform: rotate(-45deg);display: block;z-index: 102;transition: all .3s ease;-webkit-transition: all .3s ease;-o-transition: all .3s ease;-moz-transition: all .3s ease;}
-button:before{height: 14px;top: 19px;right: 16px;z-index: 103;-moz-transform: rotate(-137deg);-ms-transform: rotate(-137deg);-webkit-transform: rotate(-137deg);transform: rotate(-137deg);-webkit-filter: drop-shadow(0 -2px 0 rgba(0, 0, 0, 0.15));filter: drop-shadow(0 -2px 0 rgba(0, 0, 0, 0.15));}
-button:hover:after,button:hover:before,button:focus:after,button:focus:before{background:#fff;}
-#recovery button{top:-2px;}
-#changepass button{top:-2px;}
-
-
-form{position:relative;background-color: #1c1e21;padding:10px 20px;color: #4f5561;-webkit-border-radius: 10px;border-radius: 10px;}
-form input{background-color: transparent;padding: 10px 0px;color: #4f5561;border:none;width:100%;transition: color .3s ease;}
-form input:focus,form input:active{color:#eee}
-form input::selection{color:#4f5561;}
+.account{position:relative;background-color: #1c1e21;padding:10px 20px;color: #4f5561;-webkit-border-radius: 10px;border-radius: 10px;}
+.account input{background-color: transparent;padding: 10px 0px;color: #4f5561;border:none;width:100%;transition: color .3s ease;}
+.account input:focus,.account input:active{color:#eee}
+.account input::selection{color:#4f5561;}
 .form-element{border-bottom:3px solid #34383d;}
 .form-element:last-child,.center .form-element:nth-last-child(2){border:none;}
 
