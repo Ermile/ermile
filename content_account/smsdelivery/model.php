@@ -18,6 +18,9 @@ class model extends \mvc\model
 		$_messageid	= utility::post('messageid');
 		$_status	= utility::post('status');
 
+		$_messageid = is_null($_messageid)?utility::get('messageid'):$_messageid;
+		$_messageid = is_null($_status)?utility::get('status'):$_status;
+
 		if($_messageid == 123)
 		{
 			$qry		= $this->sql()->tableUserlogs()->select();
