@@ -5,6 +5,12 @@ class controller extends \mvc\controller
 {
 	function _route()
 	{
+		// route sample
+		// $this->route("/^hasan\/you\/any\/time$/")
+		// $this->route(array("url|=>array("hasan", "you", "any", "time"))
+		// $this->route("hasan/you/any/time")
+		// $this->route(array("url|=> "hasan/you/any/time")
+
 		$this->route("/^$/", function(){
 			$this->redirector()->set_url("login")->redirect();
 		});
@@ -22,6 +28,14 @@ class controller extends \mvc\controller
 			$this->model_name	= 'content\\'.$module.'\model';
 			$this->display_name	= 'content_account\\'.$module.'\display.html';
 			$this->put($module)->ALL($module);
+		});
+
+		// handel user for search in db and verify user
+		$this->route("verification/send", function(){
+			$module	= 'verification\send';
+			$this->model_name	= 'content\\'.$module.'\model';
+			$this->display_name	= 'content_account\\'.$module.'\display.html';
+			$this->get('verificationsend')->ALL($module);
 		});
 
 		// manage sms inputs and filter addresses without uid

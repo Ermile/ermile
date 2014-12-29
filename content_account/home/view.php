@@ -11,32 +11,28 @@ class view extends \mvc\view
 		$this->include->telinput		= true;
 		$this->global->site_slogan		= T_("One Account for all services");
 
-		if($this->data->module =='login')
-		{
+		if($this->data->module =='login'){
 			$this->global->page_desc	= T_('Login');
 		}
-		elseif($this->data->module =='signup')
-		{
+		elseif($this->data->module =='signup'){
 			$this->global->page_desc	= T_('Create an account');
 		}
-		elseif($this->data->module =='verification')
-		{
+		elseif($this->data->module =='verification'){
 			$this->global->page_desc	= T_('Verificate');
 		}
-		elseif($this->data->module =='recovery')
-		{
+		elseif($this->data->module =='verification/send'){
+			$this->global->page_desc	= T_('Verificate');
+		}
+		elseif($this->data->module =='recovery'){
 			$this->global->page_desc	= T_('Recovery');
 		}
-		elseif($this->data->module =='changepass')
-		{
+		elseif($this->data->module =='changepass'){
 			$this->global->page_desc	= T_('Change password');
 		}
-		elseif($this->data->module =='smsdelivery')
-		{
+		elseif($this->data->module =='smsdelivery'){
 			$this->global->page_desc	= T_('SMS Delivery');
 		}
-		elseif($this->data->module =='smscallback')
-		{
+		elseif($this->data->module =='smscallback'){
 			$this->global->page_desc	= T_('SMS Callback');
 		}
 		else
@@ -44,6 +40,7 @@ class view extends \mvc\view
 			$this->global->page_desc	= T_('Ermile');
 			return;
 		}
+
 
 		$this->global->page_title		= $this->global->page_desc;
 		$form = $this->createform('.'.$this->data->myform, $this->data->module);
