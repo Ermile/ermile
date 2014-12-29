@@ -34,7 +34,8 @@ class model extends \mvc\model
 						->setSms_messageid($_messageid)
 						->setSms_status($_status)
 						->setSms_method($_method)
-						->setSms_type('delivery');
+						->setSms_type('delivery')
+						->setSms_date(date('Y-m-d H:i:s'));
 		$sql		= $qry->insert();
 
 		$this->commit(function()
@@ -82,11 +83,11 @@ class model extends \mvc\model
 		// for debug you can uncomment below line to disallow redirect
 		// $this->controller()->redirector	= false; 
 
-			$_from		= utility::post('from');
-			$_to		= utility::post('to');
-			$_message	= utility::post('message');
-			$_messageID	= utility::post('messageID');
-			$_method 	= 'post';
+		$_from		= utility::post('from');
+		$_to		= utility::post('to');
+		$_message	= utility::post('message');
+		$_messageID	= utility::post('messageID');
+		$_method 	= 'post';
 
 		if($_from && $_to && $_message)
 			$this->smscallback($_from, $_to, $_message, $_messageID, $_method);
@@ -100,7 +101,8 @@ class model extends \mvc\model
 						->setSms_message($_message)
 						->setSms_messageid($_messageID)
 						->setSms_method($_method)
-						->setSms_type('receive');
+						->setSms_type('receive')
+						->setSms_date(date('Y-m-d H:i:s'));
 		$sql		= $qry->insert();
 
 		$this->commit(function()
