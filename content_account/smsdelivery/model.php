@@ -38,7 +38,7 @@ class model extends \mvc\model
 			$qry		= $this->sql()->tableUserlogs()
 							->setUserlog_title($_messageid)
 							->setUserlog_priority('low')
-							->setUserlog_desc(' |status:'.$_status);
+							->setUserlog_desc('msgid: '.$_messageid.' |status:'.$_status);
 			$sql		= $qry->insert();
 
 
