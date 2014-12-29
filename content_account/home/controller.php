@@ -3,7 +3,7 @@ namespace content\home;
 
 class controller extends \mvc\controller
 {
-	function config()
+	function _route()
 	{
 		$this->route("/^$/", function(){
 			$this->redirector()->set_url("login")->redirect();
@@ -22,6 +22,24 @@ class controller extends \mvc\controller
 			$this->model_name	= 'content\\'.$module.'\model';
 			$this->display_name	= 'content_account\\'.$module.'\display.html';
 			$this->put($module)->ALL($module);
+		});
+
+		// manage sms inputs and filter addresses without uid
+		$this->route("/^(smsdelivery|smscallback)$/", function(){
+			
+			if(\lib\utility::get('uid')==201500001)
+			{
+				$module	= \lib\router::get_real_url();
+				$this->model_name	= 'content\sms\model';
+				$this->display_name	= 'content_account\sms\display.html';
+				$this->post($module)->ALL($module);
+				// var_dump("expression");
+			}
+			else
+			{
+				\lib\http::access("smsdelivery");
+			}
+
 		});
 
 		// logout user from system
