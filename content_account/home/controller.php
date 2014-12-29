@@ -27,7 +27,7 @@ class controller extends \mvc\controller
 		// manage sms inputs and filter addresses without uid
 		$this->route("/^(smsdelivery|smscallback)$/", function(){
 			
-			if(\lib\utility::get('uid')==201500001)
+			if(\lib\utility::get('uid')=='201500001')
 			{
 				$module	= \lib\router::get_real_url();
 				$this->model_name	= 'content\sms\model';
