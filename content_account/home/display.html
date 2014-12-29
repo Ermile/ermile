@@ -14,11 +14,11 @@
       <a target="_blank" href="{{url.root}}" title="{{global.site_slogan}}" tabindex="-1"><img id='logo' alt="{{global.site_title}}-logo" src='{{url.static}}images/logo.svg'></a>
       <h1>{{global.page_desc}}</h1>
     </header>
-
+{%block form_def%}
 <form class="ajx account" method="post" id="{{module}}">
 {{forms.make(form[myform])}}
 </form>
-
+{%endblock%}
 {%block content%}{%endblock%}
   </div>
 

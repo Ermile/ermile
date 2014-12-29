@@ -17,7 +17,7 @@ pre{direction:ltr;text-align:left;background:#eee;font-size:15px;font-size:1.5re
 h1{color: #222;text-shadow: 0px 2px 3px #555;text-align: center;font: 30px Helvetica,Tahoma, Sans-Serif;}
 #logo{display: block;margin:10vh auto 0px;width:120px;height:auto;}
 .unselectable{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
-#desc{text-align:center;font-size:12px;color:#888;}
+#desc,.desc{text-align:center;font-size:12px;color:#888;}
 #desc a{color: #999;text-shadow: 0px 3px 8px #2a2a2a;text-align: center;}
 #desc a:hover{color: #aaa;}
 #delay{transition: opacity 2s ease;font-size:20px;color:#eee;}

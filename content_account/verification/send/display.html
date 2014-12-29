@@ -1,0 +1,19 @@
+{%extends layout_account%}
+{%block content%}
+  <footer>
+    <div id="desc" >
+      <p>Please check your mobile and enter the code</p>
+      <div id="delay" class="hide">
+          <p>You are registered! NO!</p>
+      </div>
+    </div>
+  </footer>
+{%endblock%}
+
+{%block form_def%}
+<form class="ajx account" method="post" id="{{module}}">
+<p class="desc">Please send number <b>2015</b> to <b>1000 666 00 666 00</b></p>
+<p>Then wait we receive your message and verificate your account</p>
+<button type="submit" title="I am send message. Check it!" name="submit" id="submit"></button>
+</form>
+{%endblock%}
