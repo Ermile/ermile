@@ -61,5 +61,14 @@ class account extends \lib\form
 		$this->status	= $this->make('status')->label(null)->pl('status');
 		$this->submit	= $this->make('submit')->title(T_('Send Delivery'));
 	}
+
+	private function smscallback()
+	{
+		$this->from			= $this->make('from')->label(null)->pl('from');
+		$this->to			= $this->make('to')->label(null)->pl('to');
+		$this->message		= $this->make('message')->label(null)->pl('message');
+		$this->messageID	= $this->make('messageID')->label(null)->pl('message id');
+		$this->submit		= $this->make('submit')->title(T_('Send Delivery'));
+	}
 }
 ?>

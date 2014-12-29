@@ -9,7 +9,7 @@ class controller extends \mvc\controller
 			$this->redirector()->set_url("login")->redirect();
 		});
 
-		$this->route("/^(login|signup|recovery|smsdelivery)$/", function(){
+		$this->route("/^(login|signup|recovery|smsdelivery|smscallback)$/", function(){
 
 			$module	= \lib\router::get_real_url();
 			$this->model_name	= 'content\\'.$module.'\model';
