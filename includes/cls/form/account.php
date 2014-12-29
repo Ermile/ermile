@@ -54,5 +54,12 @@ class account extends \lib\form
 		$this->password	= $this->make('#password')->label(null);
 		$this->submit	= $this->make('submit')->title(T_('Change my password'));
 	}
+
+	private function smsdelivery()
+	{
+		$this->messageid	= $this->make('messageid')->label(null)->pl('message id');
+		$this->status	= $this->make('status')->label(null)->pl('status');
+		$this->submit	= $this->make('submit')->title(T_('Send Delivery'));
+	}
 }
 ?>
