@@ -37,7 +37,8 @@ class model extends \mvc\model
 		$qry		= $this->sql()->tableSms()
 						->setSms_messageid($_messageid)
 						->setSms_status($_status)
-						->setSms_method($_method);
+						->setSms_method($_method)
+						->setSms_type('delivery');
 		$sql		= $qry->insert();
 
 		$this->commit(function()
@@ -96,7 +97,8 @@ class model extends \mvc\model
 						->setSms_to($_to)
 						->setSms_message($_message)
 						->setSms_messageid($_messageID)
-						->setSms_method($_method);
+						->setSms_method($_method)
+						->setSms_type('receive');
 		$sql		= $qry->insert();
 
 		$this->commit(function()

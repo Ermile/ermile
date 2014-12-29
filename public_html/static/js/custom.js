@@ -9,7 +9,13 @@ $(document).ready(function () {
         $("#meta").toggleClass('hide');
     });
 
+  setTimeout(createdelay, 2000);
 });
+
+function createdelay()
+{
+  document.getElementById("delay").className="show";
+}
 
 function hideFields() {
     $("input:checkbox").each(function()
