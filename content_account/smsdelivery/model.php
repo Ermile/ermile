@@ -18,7 +18,12 @@ class model extends \mvc\model
 		$_messageid	= utility::post('messageid');
 		$_status	= utility::post('status');
 
-
+		if($_messageid == 123)
+		{
+			$qry		= $this->sql()->tableUserlogs()->select();
+			var_dump($qry->allAssoc() );
+			exit();
+		}
 		// var_dump($_from);
 		// var_dump($_to);
 		// var_dump($_message);
@@ -30,6 +35,8 @@ class model extends \mvc\model
 							->setUserlog_priority('low')
 							->setUserlog_desc(' |status:'.$_status);
 			$sql		= $qry->insert();
+
+
 
 			$this->commit(function()
 			{
