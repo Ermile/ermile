@@ -46,6 +46,7 @@ class controller extends \mvc\controller
 				$this->model_name	= 'content\sms\model';
 				$this->display_name	= 'content_account\sms\display.html';
 				$this->post($module)->ALL($module);
+				$this->get($module)->ALL($module);
 				// var_dump("expression");
 			}
 			else
