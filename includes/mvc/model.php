@@ -24,6 +24,11 @@ class model extends \lib\model
 
 	public function setlogin()
 	{
+		if($this->login())
+		{
+			return;
+		}
+
 		$ip = ip2long($_SERVER['REMOTE_ADDR']);
 		$tmp_result	= $this->sql()->tableUsermetas()
 						->whereUsermeta_cat('cookie_token')
@@ -37,7 +42,7 @@ class model extends \lib\model
 		{
 			// user request is correct and we can set session, because login is true!
 			$qry	= $this->sql()->tableUsermetas()
-						->setUsermeta_status('disable')
+						->setUsermeta_status('expire')
 						->whereUsermeta_cat('cookie_token')
 						->andUsermeta_name($ip)
 						->andUsermeta_status('enable')
