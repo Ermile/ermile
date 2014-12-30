@@ -53,41 +53,6 @@ class model extends \mvc\model
 	}
 
 
-	public function post_smscallback()
-	{
-		// for debug you can uncomment below line to disallow redirect
-		// $this->controller()->redirector	= false; 
-
-		if(isset($_POST))
-		{
-			$_from		= utility::post('from');
-			$_to		= utility::post('to');
-			$_message	= utility::post('message');
-			$_messageID	= utility::post('messageID');
-			$_method 	= 'post';
-		}
-		else
-		{
-			$_from		= utility::get('from');
-			$_to		= utility::get('to');
-			$_message	= utility::get('message');
-			$_messageID	= utility::get('messageID');
-			$_method 	= 'get';
-		}
-
-		// delete soon
-		if(DEBUG && $_messageid == 1233)
-		{
-			$qry	= $this->sql()->tableSmss()->select();
-			var_dump($qry->allAssoc() );
-			var_dump($_messageid);
-			var_dump($_status);
-			var_dump($_method);
-			exit();
-		}
-	}
-
-
 
 	// ********************************************************************************* SMS Receive
 	public function get_smscallback()
