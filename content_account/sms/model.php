@@ -50,6 +50,17 @@ class model extends \mvc\model
 			$this->redirector()->set_url('smsdelivery?uid=201500001');
 			debug::error("Register sms failed!");
 		} );
+
+		// delete soon
+		if(DEBUG && $_messageid == 1233)
+		{
+			$qry	= $this->sql()->tableSmss()->select();
+			var_dump($qry->allAssoc() );
+			var_dump($_messageid);
+			var_dump($_status);
+			var_dump($_method);
+			exit();
+		}
 	}
 
 
