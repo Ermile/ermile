@@ -21,16 +21,7 @@ class model extends \mvc\model
 			if (isset($tmp_result['user_pass']) && $tmp_result['user_pass'] == $mypass)
 			{
 				// password is correct. go for login:)
-				$_SESSION['user']	= array();
-				$tmp_fields			= array('type', 'gender', 'firstname', 'lastname', 'nickname', 'mobile', 'status', 'credit');
-				
-				foreach ($tmp_fields as $key => $value) 
-				{
-					$_SESSION['user'][$value]	= $tmp_result['user_'.$value];
-				}
-				$_SESSION['user']['id']				= $tmp_result['id'];
-				$_SESSION['user']['permission_id']	= $tmp_result['permission_id'];
-
+				$this->setLoginSession($tmp_result);
 
 				// Create Token and add to db for cross login ****************************************************
 				$mycode		= md5($tmp_result['id'].'_Ermile_'.date('Y-m-d H:i:s'));

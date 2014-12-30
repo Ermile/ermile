@@ -17,7 +17,6 @@ class model extends \lib\model
 		if($referer =='http://account.ermile.dev/login' && \lib\router::get_real_url()=='')
 		{
 			$this->setlogin();
-			\lib\debug::true("Login successfully");
 		}
 	}
 
