@@ -15,27 +15,23 @@ class controller extends \mvc\controller
 			$this->redirector()->set_url("login")->redirect();
 		});
 
-		$this->route("/^(login|signup|recovery|smsdelivery|smscallback)$/", function(){
+
+		$this->route("/^(login|signup|recovery)$/", function(){
 			$module	= \lib\router::get_real_url();
 			$this->model_name	= 'content\\'.$module.'\model';
 			$this->display_name	= 'content_account\\'.$module.'\display.html';
 			$this->post($module)->ALL($module);
 		});
 
+
 		$this->route("/^(verification|changepass)$/", function(){
 			$module	= \lib\router::get_real_url();
 			$this->model_name	= 'content\\'.$module.'\model';
 			$this->display_name	= 'content_account\\'.$module.'\display.html';
 			$this->put($module)->ALL($module);
+			$this->post('checksms')->ALL($module);
 		});
 
-		// handel user for search in db and verify user
-		$this->route("verification/send", function(){
-			$module	= 'verification\send';
-			$this->model_name	= 'content\\'.$module.'\model';
-			$this->display_name	= 'content_account\\'.$module.'\display.html';
-			$this->get('verificationsend')->ALL($module);
-		});
 
 		// manage sms inputs and filter addresses without uid
 		$this->route("/^(smsdelivery|smscallback)$/", function(){
@@ -45,7 +41,7 @@ class controller extends \mvc\controller
 				$this->model_name	= 'content\sms\model';
 				$this->display_name	= 'content_account\sms\display.html';
 				$this->post($module)->ALL($module);
-				// var_dump("expression");
+				$this->get($module)->ALL($module);
 			}
 			else
 			{
@@ -53,6 +49,7 @@ class controller extends \mvc\controller
 			}
 
 		});
+
 
 		// logout user from system
 		$this->route("/^logout$/", function(){
