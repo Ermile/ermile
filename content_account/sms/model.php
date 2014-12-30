@@ -30,7 +30,7 @@ class model extends \mvc\model
 
 	private function smsdelivery($_messageid, $_status, $_method)
 	{
-		$qry		= $this->sql()->tableSms()
+		$qry		= $this->sql()->tableSmss()
 						->setSms_messageid($_messageid)
 						->setSms_status($_status)
 						->setSms_method($_method)
@@ -84,7 +84,7 @@ class model extends \mvc\model
 		// delete soon
 		if(DEBUG && $_messageid == 1233)
 		{
-			$qry	= $this->sql()->tableSms()->select();
+			$qry	= $this->sql()->tableSmss()->select();
 			var_dump($qry->allAssoc() );
 			var_dump($_messageid);
 			var_dump($_status);
@@ -125,7 +125,7 @@ class model extends \mvc\model
 
 	private function smscallback($_from, $_to, $_message, $_messageID, $_method)
 	{
-		$qry		= $this->sql()->tableSms()
+		$qry		= $this->sql()->tableSmss()
 						->setSms_from($_from)
 						->setSms_to($_to)
 						->setSms_message($_message)
@@ -156,7 +156,7 @@ class model extends \mvc\model
 		// delete soon
 		if(DEBUG && $_messageID == 1233)
 		{
-			$qry	= $this->sql()->tableSms()->select();
+			$qry	= $this->sql()->tableSmss()->select();
 			var_dump($qry->allAssoc() );
 			var_dump($_from);
 			var_dump($_to);
