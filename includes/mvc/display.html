@@ -64,7 +64,7 @@
    <ul class="{{key}}">
    {%for key, err in mydebug%}
    {%if err.title is defined%}
-    <li>{{err.group}} : {{err.title}}</li>
+    <li class="{{err.group}}">{{err.title}}</li>
    {%else%}
     <li class="n_{{key}}">{{err}}</li>
    {%endif%}

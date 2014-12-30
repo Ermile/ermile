@@ -14,7 +14,7 @@ class model extends \lib\model
 		$this->addVisitor();
 
 		$referer = isset($_SERVER['HTTP_REFERER'])? $_SERVER['HTTP_REFERER']: null;
-		if($referer =='http://account.ermile.dev/login' && \lib\router::get_real_url()=='' && !$this->login())
+		if($referer =='http://account.ermile.dev/login' && \lib\router::get_real_url()=='')
 		{
 			$this->setlogin();
 			\lib\debug::true("Login successfully");
@@ -24,11 +24,12 @@ class model extends \lib\model
 
 	public function setlogin()
 	{
+		$ip = ip2long($_SERVER['REMOTE_ADDR']);
 		$tmp_result	= $this->sql()->tableUsermetas()
 						->whereUsermeta_cat('cookie_token')
-						->andUsermeta_name($_SERVER['REMOTE_ADDR'])
+						->andUsermeta_name($ip)
 						->andUsermeta_status('enable')
-						->andUsermeta_extra(\lib\utility::get('ssid'))
+						->andUsermeta_value(\lib\utility::get('ssid'))
 						->select();
 		
 		var_dump($this->login());
@@ -38,9 +39,9 @@ class model extends \lib\model
 			$qry	= $this->sql()->tableUsermetas()
 						->setUsermeta_status('disable')
 						->whereUsermeta_cat('cookie_token')
-						->andUsermeta_name($_SERVER['REMOTE_ADDR'])
+						->andUsermeta_name($ip)
 						->andUsermeta_status('enable')
-						->andUsermeta_extra(\lib\utility::get('ssid'));
+						->andUsermeta_value(\lib\utility::get('ssid'));
 			$sql	= $qry->update();
 			// var_dump($sql);
 
@@ -50,17 +51,7 @@ class model extends \lib\model
 				// if user_id set in usermetas table continue
 				$tmp_result	=  $this->sql()->tableUsers()->whereId($tmp_result['user_id'])->select();
 				$tmp_result = $tmp_result->assoc();
-
-				// set session for logined user
-				$_SESSION['user']	= array();
-				$tmp_fields			= array('type', 'gender', 'firstname', 'lastname', 'nickname', 'mobile', 'status', 'credit');
-				
-				foreach ($tmp_fields as $key => $value) 
-				{
-					$_SESSION['user'][$value]	= $tmp_result['user_'.$value];
-				}
-				$_SESSION['user']['id']				= $tmp_result['id'];
-				$_SESSION['user']['permission_id']	= $tmp_result['permission_id'];				
+				$this->setLoginSession($tmp_result);
 			}
 		}
 		else
@@ -68,6 +59,21 @@ class model extends \lib\model
 			\lib\http::bad("You want hijack us!!?");
 		}
 	}
+
+	private function setLoginSession($tmp_result)
+	{
+		// set session for logined user
+		$_SESSION['user']	= array();
+		$tmp_fields			= array('type', 'gender', 'firstname', 'lastname', 'nickname', 'mobile', 'status', 'credit');
+		
+		foreach ($tmp_fields as $key => $value) 
+		{
+			$_SESSION['user'][$value]	= $tmp_result['user_'.$value];
+		}
+		$_SESSION['user']['id']				= $tmp_result['id'];
+		$_SESSION['user']['permission_id']	= $tmp_result['permission_id'];
+	}
+
 
 	public function addVisitor()
 	{

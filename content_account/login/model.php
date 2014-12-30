@@ -33,13 +33,12 @@ class model extends \mvc\model
 
 
 				// Create Token and add to db for cross login ****************************************************
-				$mycode		= md5($_SERVER['REMOTE_ADDR'].'_Ermile_'.date('Y-m-d H:i:s'));
+				$mycode		= md5($tmp_result['id'].'_Ermile_'.date('Y-m-d H:i:s'));
 				$qry		= $this->sql()->tableUsermetas()
 								->setUser_id($tmp_result['id'])
 								->setUsermeta_cat('cookie_token')
-								->setUsermeta_name($_SERVER['REMOTE_ADDR'])
-								->setUsermeta_value( md5($tmp_result['id'].'_Ermile_'.date('Y-m-d H:i:s')) )
-								->setUsermeta_extra($mycode);
+								->setUsermeta_name(ip2long($_SERVER['REMOTE_ADDR']))
+								->setUsermeta_value($mycode);
 				$sql		= $qry->insert();
 
 				$this->commit(function($_parameter1)
