@@ -47,9 +47,39 @@ class model extends \mvc\model
 		// if a query has error or any error occour in any part of codes, run roolback
 		$this->rollback(function()
 		{
+<<<<<<< HEAD
 			$this->redirector()->set_url();
 			debug::fatal("Register sms failed!");
 		});
+=======
+			$this->redirector()->set_url('smsdelivery?uid=201500001');
+			debug::error("Register sms failed!");
+		} );
+	}
+
+
+	public function post_smscallback()
+	{
+		// for debug you can uncomment below line to disallow redirect
+		// $this->controller()->redirector	= false; 
+
+		if(isset($_POST))
+		{
+			$_from		= utility::post('from');
+			$_to		= utility::post('to');
+			$_message	= utility::post('message');
+			$_messageID	= utility::post('messageID');
+			$_method 	= 'post';
+		}
+		else
+		{
+			$_from		= utility::get('from');
+			$_to		= utility::get('to');
+			$_message	= utility::get('message');
+			$_messageID	= utility::get('messageID');
+			$_method 	= 'get';
+		}
+>>>>>>> change_debug
 
 		// delete soon
 		if(DEBUG && $_messageid == 1233)
@@ -114,8 +144,13 @@ class model extends \mvc\model
 		// if a query has error or any error occour in any part of codes, run roolback
 		$this->rollback(function()
 		{
+<<<<<<< HEAD
 			debug::fatal("Register sms failed!");
 			$this->redirector()->set_url();
+=======
+			debug::error("Register sms failed!");
+			$this->redirector()->set_url('smscallback?uid=201500001');
+>>>>>>> change_debug
 		} );
 
 		// delete soon

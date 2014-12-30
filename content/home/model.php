@@ -22,7 +22,7 @@ class model extends \mvc\model{
 		$result = $query->select()->allObject();
 		$x = $this->sql('bankss')->tableAccounts()->where("##1", "=", '#1')->delete();
 		var_dump($x->String());
-		\lib\debug::fatal("fuck");
+		\lib\debug::error("fuck");
 		var_dump(\lib\debug::compile());
 		return $result;
 	}

@@ -57,18 +57,18 @@ class model extends \mvc\model
 			// if a query has error or any error occour in any part of codes, run roolback
 			$this->rollback(function()
 			{
-				debug::fatal("Verify failed!");
+				debug::error("Verify failed!");
 			} );
 		}
 		elseif($tmp_result->num() == 0 )
 		{
 			// mobile does not exits
-			debug::fatal("This code or mobile is incorrect");
+			debug::error("This code or mobile is incorrect");
 		}
 		else
 		{
 			// mobile exist more than 2 times!
-			debug::fatal("Please forward this message to Administrator");
+			debug::error("Please forward this message to Administrator");
 		}
 	}
 

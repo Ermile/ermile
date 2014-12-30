@@ -37,18 +37,18 @@ class model extends \mvc\model
 			else
 			{
 				// password is incorrect:(
-				debug::fatal("Password is incorrect");
+				debug::error("Password is incorrect", "mobile", "password");
 			}
 		}
 		elseif($tmp_result->num() == 0 )
 		{
 			// mobile does not exits
-			debug::fatal("Mobile number is incorrect");
+			debug::error("Mobile number is incorrect", "mobile", "form");
 		}
 		else
 		{
 			// mobile exist more than 2 times!
-			debug::fatal("Please forward this message to Administrator");
+			debug::error("Please forward this message to Administrator");
 		}
 	}
 }

@@ -18,7 +18,7 @@ class model extends \mvc\model
 		if($tmp_result->num() == 1)
 		{
 			// mobile exist
-			debug::fatal("Mobile number exist!");
+			debug::error("Mobile number exist!");
 		}
 		elseif($tmp_result->num() == 0 )
 		{
@@ -58,13 +58,13 @@ class model extends \mvc\model
 			// if a query has error or any error occour in any part of codes, run roolback
 			$this->rollback(function()
 			{
-				debug::fatal("Register failed!");
+				debug::error("Register failed!");
 			} );
 		}
 		else
 		{
 			// mobile exist more than 2 times!
-			debug::fatal("Please forward this message to Administrator");
+			debug::error("Please forward this message to Administrator");
 		}
 	}
 }
