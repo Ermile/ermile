@@ -80,6 +80,7 @@ class symbol extends \lib\form{
 		$this->password = $this->make("password")->type("password")->label(T_("Password"))->pl(T_("Password"))
 							->required()->maxlength(20)->pattern("^.{5,20}$")->title("between 5-20 character");
 							// ->validate()->password();
+		// $this->password->validate()->password(); //->formPassword("password incorrect");
 
 		// $this->form()->name("pass")->pl("Password")->type("password")->required()->maxlength(20)
 		// 	->pattern("^.{5,20}$")->title("between 5-20 character")->validate()->password();

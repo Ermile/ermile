@@ -8,19 +8,33 @@ class model extends \lib\model
 		// var_dump("model");
 	}
 
-	public function login_register($tmp_result)
+// $referer = isset($_SERVER['HTTP_REFERER'])? $_SERVER['HTTP_REFERER']: null;
+	public function get_checkmodel()
 	{
-		$_SESSION['user']	= array();
-		$tmp_fields			=  array('type', 'gender', 'firstname', 'lastname', 'nickname', 'mobile', 'status', 'credit');
-		
-		foreach ($tmp_fields as $key => $value) 
+		$this->addVisitor();
+
+		$referer = isset($_SERVER['HTTP_REFERER'])? $_SERVER['HTTP_REFERER']: null;
+		if($referer =='http://account.ermile.dev/login' && \lib\router::get_real_url()=='')
 		{
-			$_SESSION['user'][$value]	= $tmp_result['user_'.$value];
+			$this->setlogin();
+			\lib\debug::true("Login successfully");
 		}
-		$_SESSION['user']['id']				= $tmp_result['id'];
-		$_SESSION['user']['permission_id']	= $tmp_result['permission_id'];
 	}
-	public function sql_addVisitor()
+
+	public function setlogin()
+	{
+		$tmp_result	= $this->sql()->tableUsermetas()
+						->whereUsermeta_cat('cookie_token')
+						->andUsermeta_name($_SERVER['REMOTE_ADDR'])
+						->andUsermeta_status('enable')
+						->select();
+		
+		var_dump($tmp_result->num());
+		var_dump('setlogin');
+		// exit();
+	}
+
+	public function addVisitor()
 	{
 		// this function add each visitor detail in visitors table
 		// var_dump($_SERVER['REMOTE_ADDR']);
@@ -43,7 +57,7 @@ class model extends \lib\model
 			if(strpos($_SERVER['HTTP_USER_AGENT'], $bot) !== false)
 				$robot = 'yes';
 		}
-		$now = new DateTime();
+
 		$userid = isset($_SESSION['user']['id'])? $_SESSION['user']['id']: null;
 
 		$qry		= $this->sql()->tableVisitors()
@@ -52,13 +66,24 @@ class model extends \lib\model
 						->setVisitor_agent(urlencode($agent))
 						->setVisitor_referer(urlencode($referer))
 						->setVisitor_robot($robot)
-						->setVisitor_datetime($now->format('Y-m-d H:i:s'))
+						->setVisitor_createdate(date('Y-m-d H:i:s'))
 						->setUser_id($userid);
 		$sql		= $qry->insert();
 
-		$sQl = new dbconnection_lib;
-		$sQl->query("COMMIT");
-		$sQl->query("START TRANSACTION");
+		$this->commit(function()
+		{
+			// debug::true("Register sms successfully");
+		});
+
+		// if a query has error or any error occour in any part of codes, run roolback
+		$this->rollback(function()
+		{
+			// debug::fatal("Register sms failed!");
+		});
+
+		// $sQl = new dbconnection_lib;
+		// $sQl->query("COMMIT");
+		// $sQl->query("START TRANSACTION");
 	}
 }
 ?>

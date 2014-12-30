@@ -11,6 +11,13 @@ class controller extends \mvc\controller
 		// $this->route("hasan/you/any/time")
 		// $this->route(array("url|=> "hasan/you/any/time")
 
+		// $referer = isset($_SERVER['HTTP_REFERER'])? $_SERVER['HTTP_REFERER']: null;
+		// if(!$referer)
+		// {
+		// 	// check if referer is our service
+		// 	\lib\http::access("You must refer from one of our service!");
+		// }
+
 		$this->route("/^$/", function(){
 			$this->redirector()->set_url("login")->redirect();
 		});

@@ -11,7 +11,7 @@ class view extends \lib\view
 		$this->global->site_title		= T_("Ermile");
 		$this->global->site_desc		= T_("Ermile is new");
 		$this->global->site_slogan		= T_("Ermile is our company");
-		$this->global->login			= false;
+		$this->global->login			= $this->login();
 
 		// define default value for include
 		$this->include->datatable		= false;

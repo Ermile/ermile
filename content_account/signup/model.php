@@ -24,9 +24,10 @@ class model extends \mvc\model
 		{
 			// mobile does not exits
 			$qry		= $this->sql()->tableUsers()
-							->setUser_type('store_admin')
+							->setUser_type('storeadmin')
 							->setUser_mobile($mymobile)
-							->setUser_pass($mypass);
+							->setUser_pass($mypass)
+							->setUser_createdate(date('Y-m-d H:i:s'));
 			$sql		= $qry->insert();
 
 			$myuserid	= $sql->LAST_INSERT_ID();

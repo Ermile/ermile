@@ -1,6 +1,5 @@
 {%extends layout%}
 {%block content%}
-{{forms.make(form.custom)}}
 	<section>
 		<div class="topic cover light1">
 			<div class="row Slogan">
@@ -12,7 +11,7 @@
 					<div class="span5">
 						<h2>{{global.site_title}}</h2>
 						<div class="desc">
-							
+
 						</div>
 
 					</div>
@@ -30,6 +29,7 @@
 						<h2>your security</h2>
 						<div class="desc">
 							Station is your secure space
+							{{forms.make(form.custom)}}
 						</div>
 					</div>
 				</div>
