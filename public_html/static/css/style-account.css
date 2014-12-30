@@ -68,7 +68,7 @@ input:-webkit-autofill:focus {-webkit-box-shadow: /*your box-shadow*/,0 0 0 50px
 /* Form Error Box  || error_0: failed | error_1: successful | error_2: warning;*/
 #formError{position: fixed;z-index:100;bottom:60px;right:10px;min-width:30%;color:#fff;font-size:1.5em}
 .error_false{color:#3a87ad;background-color:#d9edf7;}
-.fatal li{background-color:rgba(254,26,0,.9);}
+.error li{background-color:rgba(254,26,0,.9);}
 .true li{background-color:rgba(92,184,17,.9);}
 .warn li{background-color:rgba(0,0,0,.9);}
 #formError ul{margin:0;padding:0 2%}

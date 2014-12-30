@@ -51,7 +51,7 @@ class model extends \mvc\model
 			// if a query has error or any error occour in any part of codes, run roolback
 			$this->rollback(function()
 			{
-				debug::fatal("Recovery failed!");
+				debug::error("Recovery failed!");
 			} );
 		}
 
@@ -60,13 +60,13 @@ class model extends \mvc\model
 			// mobile does not exits
 			// login: show mobile does not exist
 			// register: ok, can register
-			debug::fatal("Mobile number is incorrect");
+			debug::error("Mobile number is incorrect");
 		}
 
 		else
 		{
 			// mobile exist more than 2 times!
-			debug::fatal("Please forward this message to Administrator");
+			debug::error("Please forward this message to Administrator");
 		}
 	}
 }
