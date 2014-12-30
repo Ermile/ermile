@@ -22,7 +22,7 @@ class model extends \mvc\model
 			{
 				// password is correct. go for login:)
 				$_SESSION['user']	= array();
-				$tmp_fields			=  array('type', 'gender', 'firstname', 'lastname', 'nickname', 'mobile', 'status', 'credit');
+				$tmp_fields			= array('type', 'gender', 'firstname', 'lastname', 'nickname', 'mobile', 'status', 'credit');
 				
 				foreach ($tmp_fields as $key => $value) 
 				{
@@ -31,31 +31,33 @@ class model extends \mvc\model
 				$_SESSION['user']['id']				= $tmp_result['id'];
 				$_SESSION['user']['permission_id']	= $tmp_result['permission_id'];
 
-				
+
+				// Create Token and add to db for cross login ****************************************************
+				$mycode		= md5($_SERVER['REMOTE_ADDR'].'_Ermile_'.date('Y-m-d H:i:s'));
 				$qry		= $this->sql()->tableUsermetas()
 								->setUser_id($tmp_result['id'])
 								->setUsermeta_cat('cookie_token')
 								->setUsermeta_name($_SERVER['REMOTE_ADDR'])
-								->setUsermeta_value( md5($tmp_result['id'].'_Ermile_'.date('Y-m-d H:i:s')) );
+								->setUsermeta_value( md5($tmp_result['id'].'_Ermile_'.date('Y-m-d H:i:s')) )
+								->setUsermeta_extra($mycode);
 				$sql		= $qry->insert();
 
-				$this->commit(function()
+				$this->commit(function($_parameter1)
 				{
 					// create code for pass with get to service home page
-					$mycode		= $_SERVER['REMOTE_ADDR'].'_Ermile_'.date('Y-m-d H:i:s');
 
 					// debug::true("Register sms successfully");
 					debug::true("Login successfully");
 
 					if(utility::get('referer')=='jibres')
-						$this->redirector()->set_domain('jibres.dev')->set_url();
+						$this->redirector()->set_domain('jibres.dev')->set_url('?ssid='.$_parameter1);
 
 					elseif(utility::get('referer')=='station')
-						$this->redirector()->set_domain('station.dev')->set_url();
+						$this->redirector()->set_domain('station.dev')->set_url('?ssid='.$_parameter1);
 
 					else
-						$this->redirector()->set_domain()->set_url('?ssid='.$mycode);
-				});
+						$this->redirector()->set_domain()->set_url('?ssid='.$_parameter1);
+				}, $mycode);
 				$this->rollback(function()
 				{
 					debug::true("Login Failed!");

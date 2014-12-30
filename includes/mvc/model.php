@@ -8,18 +8,19 @@ class model extends \lib\model
 		// var_dump("model");
 	}
 
-// $referer = isset($_SERVER['HTTP_REFERER'])? $_SERVER['HTTP_REFERER']: null;
+
 	public function get_checkmodel()
 	{
 		$this->addVisitor();
 
 		$referer = isset($_SERVER['HTTP_REFERER'])? $_SERVER['HTTP_REFERER']: null;
-		if($referer =='http://account.ermile.dev/login' && \lib\router::get_real_url()=='')
+		if($referer =='http://account.ermile.dev/login' && \lib\router::get_real_url()=='' && !$this->login())
 		{
 			$this->setlogin();
 			\lib\debug::true("Login successfully");
 		}
 	}
+
 
 	public function setlogin()
 	{
@@ -27,11 +28,45 @@ class model extends \lib\model
 						->whereUsermeta_cat('cookie_token')
 						->andUsermeta_name($_SERVER['REMOTE_ADDR'])
 						->andUsermeta_status('enable')
+						->andUsermeta_extra(\lib\utility::get('ssid'))
 						->select();
 		
-		var_dump($tmp_result->num());
-		var_dump('setlogin');
-		// exit();
+		var_dump($this->login());
+		if($tmp_result->num() == 1)
+		{
+			// user request is correct and we can set session, because login is true!
+			$qry	= $this->sql()->tableUsermetas()
+						->setUsermeta_status('disable')
+						->whereUsermeta_cat('cookie_token')
+						->andUsermeta_name($_SERVER['REMOTE_ADDR'])
+						->andUsermeta_status('enable')
+						->andUsermeta_extra(\lib\utility::get('ssid'));
+			$sql	= $qry->update();
+			// var_dump($sql);
+
+			$tmp_result = $tmp_result->assoc();
+			if(isset($tmp_result['user_id']))
+			{
+				// if user_id set in usermetas table continue
+				$tmp_result	=  $this->sql()->tableUsers()->whereId($tmp_result['user_id'])->select();
+				$tmp_result = $tmp_result->assoc();
+
+				// set session for logined user
+				$_SESSION['user']	= array();
+				$tmp_fields			= array('type', 'gender', 'firstname', 'lastname', 'nickname', 'mobile', 'status', 'credit');
+				
+				foreach ($tmp_fields as $key => $value) 
+				{
+					$_SESSION['user'][$value]	= $tmp_result['user_'.$value];
+				}
+				$_SESSION['user']['id']				= $tmp_result['id'];
+				$_SESSION['user']['permission_id']	= $tmp_result['permission_id'];				
+			}
+		}
+		else
+		{
+			\lib\http::bad("You want hijack us!!?");
+		}
 	}
 
 	public function addVisitor()
