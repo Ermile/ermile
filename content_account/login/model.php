@@ -5,6 +5,11 @@ use \lib\debug;
 
 class model extends \mvc\model
 {
+
+	public function get_f(){
+		var_dump(20);
+	}
+
 	public function post_login()
 	{
 
@@ -38,7 +43,7 @@ class model extends \mvc\model
 					// create code for pass with get to service home page
 
 					// debug::true("Register sms successfully");
-					debug::true("Login successfully");
+					debug::title("Login successfully");
 
 					if(utility::get('referer')=='jibres')
 						$this->redirector()->set_domain('jibres.dev')->set_url('?ssid='.$_parameter1);
@@ -51,7 +56,7 @@ class model extends \mvc\model
 				}, $mycode);
 				$this->rollback(function()
 				{
-					debug::true("Login Failed!");
+					debug::title("Login Failed!");
 				});
 
 			}
@@ -63,6 +68,7 @@ class model extends \mvc\model
 		}
 		elseif($tmp_result->num() == 0 )
 		{
+			debug::title("Login Failed!");
 			// mobile does not exits
 			debug::error("Mobile number is incorrect", "mobile", "form");
 			// $this->controller()->redirector = false;
@@ -72,6 +78,7 @@ class model extends \mvc\model
 		else
 		{
 			// mobile exist more than 2 times!
+			debug::title("Login Failed!");
 			debug::error("Please forward this message to Administrator");
 		}
 	}
