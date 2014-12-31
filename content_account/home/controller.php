@@ -5,6 +5,7 @@ class controller extends \mvc\controller
 {
 	function _route()
 	{
+		
 		// route sample
 		// $this->route("/^hasan\/you\/any\/time$/")
 		// $this->route(array("url|=>array("hasan", "you", "any", "time"))
