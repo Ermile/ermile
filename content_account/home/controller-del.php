@@ -1,5 +1,5 @@
 <?php
-namespace content\home;
+namespace content_account\home;
 
 class controller extends \mvc\controller
 {

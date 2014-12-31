@@ -1,5 +1,5 @@
 <?php
-namespace content\login;
+namespace content_account\login;
 
 class view extends \content\home\view{
 

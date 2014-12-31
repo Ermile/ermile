@@ -1,5 +1,5 @@
 <?php
-namespace content\signup;
+namespace content_account\signup;
 use \lib\utility;
 use \lib\debug;
 

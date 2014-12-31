@@ -1,5 +1,5 @@
 <?php
-namespace content\verification;
+namespace content_account\verification;
 use \lib\utility;
 use \lib\debug;
 

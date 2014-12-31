@@ -1,5 +1,5 @@
 <?php
-namespace content\recovery;
+namespace content_account\recovery;
 use \lib\utility;
 use \lib\debug;
 

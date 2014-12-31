@@ -1,5 +1,5 @@
 <?php
-namespace content\home;
+namespace content_account\home;
 
 class model extends \mvc\model{
 	public function post_signup_old(){

@@ -1,11 +1,10 @@
 <?php
-namespace content\home;
+namespace content_account\home;
 
 class controller extends \mvc\controller
 {
 	function _route()
 	{
-		
 		// route sample
 		// $this->route("/^hasan\/you\/any\/time$/")
 		// $this->route(array("url|=>array("hasan", "you", "any", "time"))
@@ -26,7 +25,7 @@ class controller extends \mvc\controller
 
 		$this->route("/^(login|signup|recovery)$/", function(){
 			$module	= \lib\router::get_real_url();
-			$this->model_name	= 'content\\'.$module.'\model';
+			$this->model_name	= 'content_account\\'.$module.'\model';
 			$this->display_name	= 'content_account\\'.$module.'\display.html';
 			$this->post($module)->ALL($module);
 		});
@@ -34,7 +33,7 @@ class controller extends \mvc\controller
 
 		$this->route("/^(verification|changepass)$/", function(){
 			$module	= \lib\router::get_real_url();
-			$this->model_name	= 'content\\'.$module.'\model';
+			$this->model_name	= 'content_account\\'.$module.'\model';
 			$this->display_name	= 'content_account\\'.$module.'\display.html';
 			$this->put($module)->ALL($module);
 			$this->post('checksms')->ALL($module);
@@ -46,7 +45,7 @@ class controller extends \mvc\controller
 			if(\lib\utility::get('uid')==201500001)
 			{
 				$module	= \lib\router::get_real_url();
-				$this->model_name	= 'content\sms\model';
+				$this->model_name	= 'content_account\sms\model';
 				$this->display_name	= 'content_account\sms\display.html';
 				$this->post($module)->ALL($module);
 				$this->get($module)->ALL($module);

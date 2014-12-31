@@ -1,5 +1,5 @@
 <?php
-namespace content\sms;
+namespace content_account\sms;
 use \lib\utility;
 use \lib\debug;
 
