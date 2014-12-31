@@ -64,7 +64,7 @@ class model extends \lib\model
 		}
 	}
 
-	private function setLoginSession($tmp_result)
+	public function setLoginSession($tmp_result)
 	{
 		// set session for logined user
 		$_SESSION['user']	= array();
