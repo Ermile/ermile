@@ -1,21 +1,22 @@
 {%extends display%}
+
 {%block head_css%}
   <link rel="stylesheet"    href="{{url.static}}css/style-account.css?ver=1.1.0">
 {%endblock%}
+{%block foot_js%}
+  <script src="{{url.static}}js/account.js"></script>
+{%endblock%}
 
-
-{%block body_init%}<body id="{{module}}" class="unselectable">{%endblock%}
 
 
 {%block body_def%}
-
   <div class="center">
     <header>
       <a target="_blank" href="{{url.root}}" title="{{global.site_slogan}}" tabindex="-1"><img id='logo' alt="{{global.site_title}}-logo" src='{{url.static}}images/logo.svg'></a>
       <h1>{{global.page_desc}}</h1>
     </header>
 {%block form_def%}
-<form class="ajx account" method="post" id="{{module}}">
+<form class="ajx account" method="post" id="frm_{{module}}">
 {{forms.make(form[myform])}}
 </form>
 {%endblock%}
@@ -36,5 +37,3 @@
   </footer>
 {%endblock%}
 
-
-{% import "includes/cls/macro/forms.html" as forms %}

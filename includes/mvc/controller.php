@@ -9,6 +9,9 @@ class controller extends \lib\controller
 		$this->get('checkmodel')->ALL(\lib\router::get_real_url());
 	}
 
+	// Return login status without parameter
+	// If you pass the name as all return all of user session
+	// If you pass specefic user data field name return it
 	public function login($_name = null)
 	{
 		if(isset($_name))
@@ -25,6 +28,14 @@ class controller extends \lib\controller
 		else
 			return false;
 
+	}
+
+	// return module name for use in view or other place
+	public function module()
+	{
+		$mymodule	= str_replace('/', '_', \lib\router::get_real_url());
+		$mymodule	= $mymodule? $mymodule: 'home';
+		return $mymodule;
 	}
 }
 ?>

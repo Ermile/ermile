@@ -1,20 +1,18 @@
-{%- macro radio(array) -%}
+{% macro radio(array) %}
  <label class="input-label">{{array.label}}</label>
  <div class="row-clear radio">
-  {%- for child in array.child -%}
+  {% for child in array.child %}
    <label class="label-custom label-radio">
-    <input type="radio" name="{{array.attr.name}}" {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{-child.label-}}
+    <input name="{{array.attr.name}}" {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}
    </label>
-  {%- endfor -%}
+  {% endfor %}
  </div>
-{%- endmacro -%}
+{% endmacro %}
 
 
 {% macro checkbox(array) %}
- <label class="input-label"></label>
-  <label class="label-custom">{{-array.label-}}
-   <input type="checkbox" name="{{array.attr.name}}" {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
-   <span class="brk-form-custom"><span></span><span></span></span>
+  <label class="label-custom">{{array.label}}
+   <input name="{{array.attr.name}}" {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
   </label>
 {% endmacro %}
 
@@ -54,12 +52,12 @@
 
   {% if array.attr.type == 'robot' %}
    <label for="{{array.attr.id}}" class="input-label">{{array.label}}</label>
-   <input type="{{array.attr.type}}" {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
+   <input {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
   {% else %}
     {%if array.label %}
       <label for="{{array.attr.id}}" class="input-label">{{array.label}}</label>
     {%endif%}
-   <input type="{{array.attr.type}}" {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
+   <input {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
   {% endif %}
 
 {% endmacro %}

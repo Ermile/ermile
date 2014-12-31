@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{global.lang}}" class="{{global.direction}}">
 <head>
 {%block head_def%}
   <meta charset="UTF-8" />
   <base href="{{url.current}}" />
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><![endif]-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 
   <title>{{global.page_title}}{%if global.site_title_show and global.page_title%} | {%endif%}{%if global.site_title_show%}{{global.site_title}}{%endif%}</title>
   <meta name="description"        content="{{global.page_desc}}"/>
@@ -17,8 +17,8 @@
   <meta property='og:locale'      content='fa_IR'/>
 
   <!-- [if lte IE 8]><script>document.location = 'http://www.whatbrowser.org/intl/fa/';</script><![endif] -->
-  <link rel="author"        href="{{url.static}}humans.txt"  />
-  <link rel="shortcut icon" href="{{url.static}}images/favicon.png" />
+  <link rel="author"        href="{{url.static}}humans.txt"/>
+  <link rel="shortcut icon" href="{{url.static}}images/favicon.png"/>
 
 {%if include.customcss   %}  <link rel="stylesheet"    href="{{url.static}}css/style.css?ver=0.0.1">{{include.newline}}{%endif%}
 {%if include.fontawesome %}  <link rel="stylesheet"    href="{{url.static}}css/font-awesome.min.css?v4.2.0">{{include.newline}}{%endif%}
@@ -41,7 +41,8 @@
     salam
  {% endif %}
 
-{%block body_init%}<body>{%endblock%}
+<body id="{{module}}" class="{{bodyclass}}">
+
 {%block body_def%}
 {%block header_def%}
 {%endblock%}
@@ -74,11 +75,14 @@
   </div>
 {%endif%}
 
+{%block foot_css%}{%endblock%}
+
 {%if include.telinput    %}  <script src="{{url.static}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
-{%if include.customjs    %}  <script src="{{url.static}}js/custom.js"></script>{%endif%}
-<script src="{{url.static}}js/main.js"></script>
+{%if include.customjs    %}  <script src="{{url.static}}js/custom.js"></script>{{include.newline}}{%endif%}
 {%if include.datatable%}
   <script>$(document).ready(function(){$('.datatable').DataTable();});</script>
 {%endif%}
+{%block foot_js%}{%endblock%}
+  <script src="{{url.static}}js/main.js"></script>
 </body>
 </html>

@@ -1,20 +1,32 @@
 /*
 @ in the name of Allah
-Theme Name:Lazood
-Theme URL: http://Samac.ir/Lazood/
-Description: Lazood is our new Project, enjoy!
-Author: Samac Business Solutions
-Author URI: Samac.ir
-Version: 1.1.0
+Theme Name: Ermile
+Theme URL: http://Ermile.com
+Description: Ermile is our company
+Author: Ermile
+Author URI: Ermile.com
+Version: 1.2.0
 */
-
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url(../fonts/robotoslab.woff2) format('woff2'); 
+}
+@font-face {
+  font-family: 'IRAN';
+  src: url('../fonts/IRAN Sans.woff') format('woff'),  /* FF3.6+, IE9, IE10, Chrome6+, Saf5.1+*/
+  url('../fonts/IRAN Sans.woff2') format('woff2');
+}
+.ltr body{font-family:'Roboto Slab',serif;}
+.rtl body{font-family:'IRAN',serif;}
 html {font-size:62.5%;font-family:Tahoma, Helvetica, Arial, Sans-Serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-rendering: optimizeLegibility;}
 body {margin:0;padding:0;background-color: #34383d;color:#4f5561;background: #34383d;}
 a{color:#6f7787;text-decoration:none;outline:none;}
 ul{list-style-type:none }
 pre{direction:ltr;text-align:left;background:#eee;font-size:15px;font-size:1.5rem;line-height:1.6;margin:1em auto;padding:1.6em;overflow:auto;max-width:90%;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
 .center{position: relative;width:350px;margin: 0 auto;}
-h1{color: #222;text-shadow: 0px 2px 3px #555;text-align: center;font: 30px Helvetica,Tahoma, Sans-Serif;}
+h1{color: #222;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 30px;}
 #logo{display: block;margin:10vh auto 0px;width:120px;height:auto;}
 .unselectable{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
 #desc,.desc{text-align:center;font-size:12px;color:#888;}
@@ -24,17 +36,15 @@ h1{color: #222;text-shadow: 0px 2px 3px #555;text-align: center;font: 30px Helve
 .hide{opacity: 0;}
 .show{opacity: 1;}
 
-.account button{position: absolute;display: inline;right:-30px;top:15px;-webkit-border-radius: 100%;border-radius: 100%;height: 60px;width:60px;background-color: #1c1e21;border: 10px solid #34383d;color:#4f5561;z-index:3}
+.account button{position: absolute;display: inline;right:-30px;top:21px;-webkit-border-radius: 100%;border-radius: 100%;height: 60px;width:60px;background-color: #1c1e21;border: 10px solid #34383d;color:#4f5561;z-index:3}
 .account button:after{-webkit-filter: drop-shadow(-2px 0 0 rgba(0, 0, 0, 0.2));filter: drop-shadow(-2px 0 0 rgba(0, 0, 0, 0.2));}
 .account button:after,.account button:before{position: absolute;content: " ";right: 15px;top: 7px;width: 6px;height: 18px;background: #4f5561;-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg);-webkit-transform: rotate(-45deg);transform: rotate(-45deg);display: block;z-index: 102;transition: all .3s ease;-webkit-transition: all .3s ease;-o-transition: all .3s ease;-moz-transition: all .3s ease;}
 .account button:before{height: 14px;top: 19px;right: 16px;z-index: 103;-moz-transform: rotate(-137deg);-ms-transform: rotate(-137deg);-webkit-transform: rotate(-137deg);transform: rotate(-137deg);-webkit-filter: drop-shadow(0 -2px 0 rgba(0, 0, 0, 0.15));filter: drop-shadow(0 -2px 0 rgba(0, 0, 0, 0.15));}
 .account button:hover:after,.account button:hover:before,.account button:focus:after,.account button:focus:before{background:#fff;}
-#recovery .account button{top:-2px;}
-#changepass .account button{top:-2px;}
-
+#recovery .account button, #changepass .account button{top:0;}
 
 .account{position:relative;background-color: #1c1e21;padding:10px 20px;color: #4f5561;-webkit-border-radius: 10px;border-radius: 10px;}
-.account input{background-color: transparent;padding: 10px 0px;color: #4f5561;border:none;width:100%;transition: color .3s ease;}
+.account input{background-color: transparent;padding:0px;color: #4f5561;border:none;width:100%;transition: color .3s ease;height: 40px;}
 .account input:focus,.account input:active{color:#eee}
 .account input::selection{color:#4f5561;}
 .form-element{border-bottom:3px solid #34383d;}
@@ -74,7 +84,7 @@ input:-webkit-autofill:focus {-webkit-box-shadow: /*your box-shadow*/,0 0 0 50px
 #formError ul{margin:0;padding:0 2%}
 #formError ul li{padding:1px 1%;margin-top: 10px;padding:15px;border-radius: 4px;}
 
-input {transition: background-color 100ms ease-out;}
+input {transition: background-color 100ms ease-out;font-family:tahoma,serif;}
 form input.flash {transition: color 0;color: #FFC7C7;}
 form input.valid {color: #4C5E3B;}
 form input.invalid {color: #5E3B3B;}
