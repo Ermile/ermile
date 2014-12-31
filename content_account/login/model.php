@@ -7,6 +7,7 @@ class model extends \mvc\model
 {
 	public function post_login()
 	{
+
 		// for debug you can uncomment below line to disallow redirect
 		// $this->controller()->redirector	= false; 
 
@@ -64,6 +65,9 @@ class model extends \mvc\model
 		{
 			// mobile does not exits
 			debug::error("Mobile number is incorrect", "mobile", "form");
+			// $this->controller()->redirector = false;
+					// var_dump(\saloos::is_ajax());
+					// var_dump($this->controller());
 		}
 		else
 		{
