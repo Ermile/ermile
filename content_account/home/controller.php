@@ -31,22 +31,31 @@ class controller extends \mvc\controller
 			case 'login':
 			case 'signup':
 			case 'recovery':
-				if($islogin)
-				{
-					\lib\http::access(T_("You are logined to system!"));
-				}
-				else
+				if(!$islogin)
 				{
 					$module	= \lib\router::get_real_url();
 					$this->model_name	= 'content_account\\'.$module.'\model';
 					$this->display_name	= 'content_account\\'.$module.'\display.html';
 					$this->post($module)->ALL($module);
 				}
+				else
+				{
+					\lib\http::access(T_("You are logined to system!"));
+				}
 				break;
 
 
-			case 'verification':
 			case 'changepass':
+				if(!$islogin)
+				{
+					\lib\http::access(T_("You can't access to this page!"));
+				}
+			case 'verification':
+				// if user 
+				$mymobile = strlen(\lib\utility::get('mobile'));
+				if($mymobile<11 || $mymobile>12)
+					\lib\http::access(T_("Mobile not exist"));
+
 				$module	= \lib\router::get_real_url();
 				$this->model_name	= 'content_account\\'.$module.'\model';
 				$this->display_name	= 'content_account\\'.$module.'\display.html';
@@ -66,10 +75,8 @@ class controller extends \mvc\controller
 					// redirect to ermile
 					session_unset();
 					session_destroy();
-					\lib\debug::true("Logout successfully");
+					\lib\debug::true(T_("Logout successfully"));
 					$this->redirector()->set_domain('ermile.dev')->set_url()->redirect();
-					// header("location: http://".\lib\router::get_root_domain());
-					exit();
 				}
 				break;
 
@@ -87,7 +94,7 @@ class controller extends \mvc\controller
 				}
 				else
 				{
-					\lib\http::access("smsdelivery");
+					\lib\http::access("SMS");
 				}
 				break;
 

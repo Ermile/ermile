@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2014-12-26 16:16+0330\n"
-"PO-Revision-Date: 2014-12-26 16:16+0330\n"
+"POT-Creation-Date: 2015-01-01 16:54+0330\n"
+"PO-Revision-Date: 2015-01-01 16:58+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -16,36 +16,111 @@ msgstr ""
 "X-Poedit-KeywordsList: __;T_\n"
 "X-Poedit-SearchPath-0: ../../../../.\n"
 
-#: ../../../.././content_account/home/view.php:12
+#: ../../../.././content_account/home/controller.php:43
+msgid "You are logined to system!"
+msgstr "شما قبلا به سیستم وارد شده اید!"
+
+#: ../../../.././content_account/home/controller.php:51
+msgid "You can't access to this page!"
+msgstr "شما اجازه دسترسی به این صفحه را ندارید!"
+
+#: ../../../.././content_account/home/controller.php:57
+msgid "Mobile not exist"
+msgstr "این شماره موبایل در سیستم ثبت نشده است!"
+
+#: ../../../.././content_account/home/controller.php:71
+msgid "You must first logined to system!"
+msgstr "شما ابتدا باید وارد سیستم شوید!"
+
+#: ../../../.././content_account/home/controller.php:78
+msgid "Logout successfully"
+msgstr "خروج موفقیت آمیز"
+
+#: ../../../.././content_account/home/view.php:17
 msgid "One Account for all services"
 msgstr "یک اکانت برای همه حساب ها"
 
-#: ../../../.././content_account/home/view.php:16
-#: ../../../.././includes/cls/form/account.php:24
+#: ../../../.././content_account/home/view.php:20
+#: ../../../.././includes/cls/form/account.php:25
 msgid "Login"
 msgstr "ورود به سیستم"
 
-#: ../../../.././content_account/home/view.php:20
-#: ../../../.././includes/cls/form/account.php:32
+#: ../../../.././content_account/home/view.php:23
+#: ../../../.././includes/cls/form/account.php:33
 msgid "Create an account"
 msgstr "اکانت بسازید"
 
-#: ../../../.././content_account/home/view.php:24
-#: ../../../.././includes/cls/form/account.php:39
-msgid "Recovery"
-msgstr "بازیابی کلمه عبور"
-
-#: ../../../.././content_account/home/view.php:28
+#: ../../../.././content_account/home/view.php:26
+#: ../../../.././content_account/home/view.php:29
 msgid "Verificate"
 msgstr "اعتبارسنجی"
 
-#: ../../../.././includes/cls/form/account.php:46
+#: ../../../.././content_account/home/view.php:32
+#: ../../../.././includes/cls/form/account.php:49
+msgid "Recovery"
+msgstr "بازیابی کلمه عبور"
+
+#: ../../../.././content_account/home/view.php:35
+msgid "Change password"
+msgstr "کلمه عبور"
+
+#: ../../../.././content_account/home/view.php:39
+msgid "SMS Delivery"
+msgstr "رسید دریافت پیامک"
+
+#: ../../../.././content_account/home/view.php:43
+msgid "SMS Callback"
+msgstr "پیامک های دریافتی"
+
+#: ../../../.././content_account/home/view.php:48
+#: ../../../.././includes/mvc/view.php:11
+msgid "Ermile"
+msgstr "ارمایل"
+
+#: ../../../.././content_account/login/model.php:41
+msgid "Login successfully"
+msgstr "ورود موفقیت آمیز"
+
+#: ../../../.././content_account/login/model.php:55
+msgid "Login Failed!"
+msgstr "ثبت نام ناموفق!"
+
+#: ../../../.././content_account/signup/model.php:21
+msgid "Mobile number exist!"
+msgstr "این شماره موبایل قبلا در سیستم ثبت شده است."
+
+#: ../../../.././content_account/signup/model.php:56
+msgid "Register successfully"
+msgstr "ثبت نام با موفقیت انجام شد."
+
+#: ../../../.././content_account/signup/model.php:62
+msgid "Register failed!"
+msgstr "ثبت نام ناموفق بود!"
+
+#: ../../../.././content_account/signup/model.php:68
+msgid "Please forward this message to Administrator"
+msgstr "لطفا این پیغام را برای مدیر سیستم ارسال کنید"
+
+#: ../../../.././includes/cls/form/account.php:40
 msgid "Code"
 msgstr "کد"
 
-#: ../../../.././includes/cls/form/account.php:47
+#: ../../../.././includes/cls/form/account.php:41
+msgid "input 4 number"
+msgstr "کد حاوی 4 عدد را وارد کنید"
+
+#: ../../../.././includes/cls/form/account.php:42
 msgid "Verification"
 msgstr "اعتبارسنجی"
+
+#: ../../../.././includes/cls/form/account.php:55
+msgid "Change my password"
+msgstr "کلمه عبور"
+
+#: ../../../.././includes/cls/form/account.php:62
+#: ../../../.././includes/cls/form/account.php:71
+msgid "Send Delivery"
+msgstr "رسید پیامک"
 
 #: ../../../.././includes/cls/form/symbol.php:76
 msgid "Mobile"
@@ -54,10 +129,6 @@ msgstr "موبایل"
 #: ../../../.././includes/cls/form/symbol.php:80
 msgid "Password"
 msgstr "کلمه عبور"
-
-#: ../../../.././includes/mvc/view.php:11
-msgid "Ermile"
-msgstr "ارمایل"
 
 #: ../../../.././includes/mvc/view.php:12
 msgid "Ermile is new"
@@ -69,9 +140,6 @@ msgstr "ارمایل نام شرکت ماست"
 
 #~ msgid "mobile"
 #~ msgstr "موبایل"
-
-#~ msgid "password"
-#~ msgstr "کلمه عبور"
 
 #~ msgid "Account Manager"
 #~ msgstr "مدیریت اکانت"

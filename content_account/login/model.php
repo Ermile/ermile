@@ -38,7 +38,7 @@ class model extends \mvc\model
 
 					// debug::true("Register sms successfully");
 					// debug::title("Login successfully");
-					debug::true("Login successfully");
+					debug::true(T_("Login successfully"));
 					// debug::true("Login successfully");
 
 					if(utility::get('referer')=='jibres')
@@ -52,7 +52,7 @@ class model extends \mvc\model
 				}, $mycode);
 				$this->rollback(function()
 				{
-					debug::true("Login Failed!");
+					debug::true(T_("Login Failed!"));
 				});
 
 			}
