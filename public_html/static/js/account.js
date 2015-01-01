@@ -14,7 +14,7 @@ function createdelay()
   function loop() {
     console.log('Request');
     $.ajax({
-      url: location.href,
+      url: location.search,
       type: 'post'
     }).done(function(response) {
       if(response === 'true') {
