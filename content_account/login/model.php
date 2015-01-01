@@ -44,6 +44,7 @@ class model extends \mvc\model
 
 					// debug::true("Register sms successfully");
 					debug::title("Login successfully");
+					debug::true("Login successfully");
 
 					if(utility::get('referer')=='jibres')
 						$this->redirector()->set_domain('jibres.dev')->set_url('?ssid='.$_parameter1);
@@ -56,7 +57,7 @@ class model extends \mvc\model
 				}, $mycode);
 				$this->rollback(function()
 				{
-					debug::title("Login Failed!");
+					debug::true("Login Failed!");
 				});
 
 			}
