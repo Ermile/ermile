@@ -5,14 +5,8 @@ use \lib\debug;
 
 class model extends \mvc\model
 {
-
-	public function get_f(){
-		var_dump(20);
-	}
-
 	public function post_login()
 	{
-
 		// for debug you can uncomment below line to disallow redirect
 		// $this->controller()->redirector	= false; 
 
@@ -43,8 +37,9 @@ class model extends \mvc\model
 					// create code for pass with get to service home page
 
 					// debug::true("Register sms successfully");
-					debug::title("Login successfully");
+					// debug::title("Login successfully");
 					debug::true("Login successfully");
+					// debug::true("Login successfully");
 
 					if(utility::get('referer')=='jibres')
 						$this->redirector()->set_domain('jibres.dev')->set_url('?ssid='.$_parameter1);

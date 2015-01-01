@@ -33,12 +33,15 @@ class view extends \mvc\view
 		}
 		elseif($this->data->module =='changepass'){
 			$this->global->page_desc	= T_('Change password');
+			$this->include->telinput	= false;
 		}
 		elseif($this->data->module =='smsdelivery'){
 			$this->global->page_desc	= T_('SMS Delivery');
+			$this->include->telinput	= false;
 		}
 		elseif($this->data->module =='smscallback'){
 			$this->global->page_desc	= T_('SMS Callback');
+			$this->include->telinput	= false;
 		}
 		else
 		{
