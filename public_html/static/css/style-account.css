@@ -5,7 +5,7 @@ Theme URL: http://Ermile.com
 Description: Ermile is our company
 Author: Ermile
 Author URI: Ermile.com
-Version: 1.2.0
+Version: 1.2.1
 */
 @font-face {
   font-family: 'Roboto Slab';
@@ -27,7 +27,7 @@ ul{list-style-type:none }
 pre{direction:ltr;text-align:left;background:#eee;font-size:15px;font-size:1.5rem;line-height:1.6;margin:1em auto;padding:1.6em;overflow:auto;max-width:90%;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
 .center{position: relative;width:350px;margin: 0 auto;}
 h1{color: #222;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 30px;}
-#logo{display: block;margin:10vh auto 0px;width:120px;height:auto;}
+#logo{display: block;margin:10vh auto 0px;width:120px;height:auto;border:none}
 .unselectable{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
 #desc,.desc{text-align:center;font-size:12px;color:#888;}
 #desc a{color: #999;text-shadow: 0px 3px 8px #2a2a2a;text-align: center;}
@@ -84,7 +84,8 @@ input:-webkit-autofill:focus {-webkit-box-shadow: /*your box-shadow*/,0 0 0 50px
 #formError ul{margin:0;padding:0 2%}
 #formError ul li{padding:1px 1%;margin-top: 10px;padding:15px;border-radius: 4px;}
 
-input {transition: background-color 100ms ease-out;font-family:tahoma,serif;}
+input {transition: background-color 100ms ease-out;font-family:'Roboto Slab',serif;font-size: 18px;}
+.rtl input {font-family:'IRAN',serif;font-size: 16px;}
 form input.flash {transition: color 0;color: #FFC7C7;}
 form input.valid {color: #4C5E3B;}
 form input.invalid {color: #5E3B3B;}
