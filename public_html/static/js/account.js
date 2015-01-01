@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   if(document.getElementById('delay')){
       setTimeout(createdelay, 2000);
     }
@@ -7,6 +8,29 @@ $(document).ready(function () {
 function createdelay()
 {
   document.getElementById("delay").className="show";
+
+  var requestDelay = 3000;
+
+  function loop() {
+    console.log('Request');
+    $.ajax({
+      url: location.href,
+      type: 'post'
+    }).done(function(response) {
+      if(response === 'true') {
+        Navigate({
+          url: '/login'
+        });
+      } else {
+        setTimeout(loop, requestDelay);
+      }
+    }).fail(function() {
+      setTimeout(loop, requestDelay);
+    })
+    requestDelay += 2000;
+  };
+
+  setTimeout(loop, 1000);
 }
 
 
