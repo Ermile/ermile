@@ -89,3 +89,15 @@ input {transition: background-color 100ms ease-out;font-family:'Roboto Slab',ser
 form input.flash {transition: color 0;color: #FFC7C7;}
 form input.valid {color: #4C5E3B;}
 form input.invalid {color: #5E3B3B;}
+
+
+/* SVG Effect Creator */
+.loading .svgperload path,.loading .svgperload circle{opacity:0.05;-webkit-animation:fadeit 1.0s ease infinite;animation:fadeit 1.0s ease infinite}
+.svgperload circle{-webkit-animation-delay:-.9s;animation-delay:-.9s}
+.svgperload path:nth-child(2){-webkit-animation-delay:-.8s;animation-delay:-.8s}
+.svgperload path:nth-child(3){-webkit-animation-delay:-.5s;animation-delay:-.5s}
+.svgperload path:nth-child(4){-webkit-animation-delay:-.4s;animation-delay:-.4s}
+.svgperload path:nth-child(5){-webkit-animation-delay:-.2s;animation-delay:-.2s}
+
+@-webkit-keyframes fadeit{0%{ opacity:1; }100%{ opacity:0.1;}}
+@keyframes fadeit{0%{ opacity:1; }100%{ opacity:0.1;}}
