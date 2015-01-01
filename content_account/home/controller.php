@@ -60,7 +60,7 @@ class controller extends \mvc\controller
 				$this->model_name	= 'content_account\\'.$module.'\model';
 				$this->display_name	= 'content_account\\'.$module.'\display.html';
 				$this->put($module)->ALL($module);
-				$this->post('checksms')->ALL($module);
+				$this->post('verification')->ALL('verification');
 				break;
 
 

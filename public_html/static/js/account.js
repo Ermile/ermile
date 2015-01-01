@@ -15,9 +15,10 @@ function createdelay()
     console.log('Request');
     $.ajax({
       url: location.search,
-      type: 'post'
+      type: 'POST'
     }).done(function(response) {
       if(response === 'true') {
+        alert(response);
         Navigate({
           url: '/login'
         });

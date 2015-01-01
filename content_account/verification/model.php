@@ -5,6 +5,11 @@ use \lib\debug;
 
 class model extends \mvc\model
 {
+	function post_verification()
+	{
+		debug::true("true");
+	}
+
 	function put_verification()
 	{
 		// for debug you can uncomment below line to disallow redirect
