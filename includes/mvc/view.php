@@ -25,7 +25,8 @@ class view extends \lib\view
 		$this->include->customcss		= true;
 		$this->include->customjs		= true;
 
-		$this->data->layout_account		= "content_account/home/display.html";
+		$this->data->layout_account		= "content_account/main/layout.html";
+		$this->data->layout_cp			= "content_cp/main/layout.html";
 		// var_dump($this->global->site_slogan);
 
 

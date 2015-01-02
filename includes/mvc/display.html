@@ -39,9 +39,30 @@
 
 {%block body_def%}
 {%block header_def%}
+ <header>
+   <div id="header" class="unselectable animated">
+     <div id="site-title">
+       <h1 id="logo"><a class="navbar-brand" href="{{url.root}}">{{global.site_title}}</a></h1>
+       <nav>
+         <div id="header-nav">
+           <a href="{{url.root}}">Home Page</a>
+           <a href="http://admin.{{url.raw}}/none">Admin</a>
+           <a href="http://cp.{{url.raw}}">Control Panel</a>
+{%if global.login%}
+           <a href="{{url.root}}store/create">Create store</a>
+           <a href="http://account.{{url.raw}}/logout">Logout</a>
+{%else%}
+           <a href="http://account.{{url.raw}}/login">Login</a>
+{%endif%}
+         </div>
+       </nav>
+     </div>
+   </div>
+   <div id="header-back"></div>
+ </header>
 {%endblock%}
 {%block header%}{%endblock%}
-{%block content%}
+{%block content_def%}
   <style type="text/css">
     body{background-color:#eee}.def-msg{font-family:sans-serif;padding-left:15%;color:#403B33;}h1.def-msg{margin-top:10%;color:#9E4949}
   </style>
@@ -49,7 +70,25 @@
   <h2 class='def-msg'>{{global.site_desc}}</h2>
   <p class='def-msg'>Let start using Saloos! start edit twig block for show your content. for replace this text use <b>block content</b>.</p>
 {%endblock%}
-{%block footer_def%}{%endblock%}
+{%block footer_def%}
+  <footer>
+   <div id="footer">
+    <div class="light1 row-padding-medium">
+     <div class="container">
+      <div class="row">
+       <div class="span12">
+        <p>Goto <a href="{{url.root}}" title="{{global.site_desc}}" class="roller cursor-help"><span data-title="{{global.site_title}} Homepage">{{global.site_title}} Homepage</span></a>.</p>
+          <p>
+          [<a href="?lang=en_US">en_US</a>] [<a href="?lang=de_DE">de_DE</a>] [<a href="?lang=fa_IR">fa_IR</a>] 
+          {{include.gettext}}
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </footer>
+{%endblock%}
 {%block footer%}{%endblock%}
 {%endblock%}
 {%if debug is iterable%}

@@ -9,15 +9,12 @@ class route{
 			router::remove_url($reg[0]);
 			router::add_storage('api', true);
 		});
-		new router\route(
-			array(
-				"sub_domain" => "account",
-				"url" => "/.*/"
-			),
-			function(){
-				router::set_repository("content_account");
-			}
-		);
+
+
+		// automatically set repository if folder of it exist
+		$myrep = 'content_'.router::get_sub_domain();
+		if(is_dir(root.$myrep))
+			router::set_repository($myrep);
 	}
 }
 ?>

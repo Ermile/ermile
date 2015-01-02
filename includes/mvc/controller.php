@@ -31,11 +31,21 @@ class controller extends \lib\controller
 	}
 
 	// return module name for use in view or other place
-	public function module()
+	public function module($full = false)
 	{
-		$mymodule	= str_replace('/', '_', \lib\router::get_real_url());
+		if($full)
+			$mymodule	= str_replace('/', '_', \lib\router::get_real_url());
+		else
+			$mymodule	= \lib\router::get_real_url(0);
+		
 		$mymodule	= $mymodule? $mymodule: 'home';
 		return $mymodule;
+	}
+
+	// return module name for use in view or other place
+	public function child()
+	{
+		return \lib\router::get_real_url(1);
 	}
 }
 ?>

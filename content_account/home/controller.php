@@ -33,10 +33,9 @@ class controller extends \mvc\controller
 			case 'recovery':
 				if(!$islogin)
 				{
-					$module	= \lib\router::get_real_url();
-					$this->model_name	= 'content_account\\'.$module.'\model';
-					$this->display_name	= 'content_account\\'.$module.'\display.html';
-					$this->post($module)->ALL($module);
+					$this->model_name	= 'content_account\\'.$mymodule.'\model';
+					$this->display_name	= 'content_account\\'.$mymodule.'\display.html';
+					$this->post($mymodule)->ALL($mymodule);
 				}
 				else
 				{
@@ -56,10 +55,9 @@ class controller extends \mvc\controller
 				if($mymobile<11 || $mymobile>12)
 					\lib\http::access(T_("Mobile not exist"));
 
-				$module	= \lib\router::get_real_url();
-				$this->model_name	= 'content_account\\'.$module.'\model';
-				$this->display_name	= 'content_account\\'.$module.'\display.html';
-				$this->put($module)->ALL($module);
+				$this->model_name	= 'content_account\\'.$mymodule.'\model';
+				$this->display_name	= 'content_account\\'.$mymodule.'\display.html';
+				$this->put($mymodule)->ALL($mymodule);
 				$this->post('verification')->ALL('verification');
 				break;
 
@@ -86,11 +84,10 @@ class controller extends \mvc\controller
 			case 'smscallback':
 				if(\lib\utility::get('uid')==201500001)
 				{
-					$module	= \lib\router::get_real_url();
 					$this->model_name	= 'content_account\sms\model';
 					$this->display_name	= 'content_account\sms\display.html';
-					$this->post($module)->ALL($module);
-					$this->get($module)->ALL($module);
+					$this->post($mymodule)->ALL($mymodule);
+					$this->get($mymodule)->ALL($mymodule);
 				}
 				else
 				{
