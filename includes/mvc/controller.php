@@ -6,7 +6,7 @@ class controller extends \lib\controller
 	function _construct()
 	{
 		// add all visitor to visitor table
-		$this->get('checkmodel')->ALL(\lib\router::get_real_url());
+		$this->get('modeldef')->ALL(\lib\router::get_real_url());
 	}
 
 	// Return login status without parameter

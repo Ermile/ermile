@@ -5,19 +5,33 @@ class view extends \mvc\view
 {
 	public function config()
 	{
-		$mymodule	= $this->module();
-		$mychild	= $this->child();
+		$this->data->module	= $this->module();
+		$this->data->child	= $this->child();
 
-		if($mymodule && $mymodule!="home")
+		if($this->data->module=="home"){
+			return;
+		}
+
+		if($this->data->child)
 		{
-			if($mychild)
-			{
-				
-				$this->data->form_show		= true;
-			}
-			else
-			{
+			
+			$this->data->form_show		= true;
+		}
+		else
+		{
+			// in root page like site.com/admin/banks show datatable
 
+			// get data from database through model
+			// $this->data->datatable		= $this->sql("#datatable");
+			$this->data->datatable =null;
+			if($this->data->datatable)
+			{
+				// get all fields of table and filter fields name for show in datatable, access from columns variable
+				// check if datatable exist then get this data
+				$this->include->datatable	= true;
+				// $this->data->columns		= getTable_cls::fields($this->data->module);
+				// var_dump($this->data->columns);
+				$this->data->columns		= getTable_cls::datatable($this->data->module);
 			}
 		}
 
