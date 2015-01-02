@@ -1,4 +1,5 @@
 <?php
+require_once('../../public_html/config.php');
 /**
 ***********************************************************************************
 CAUTIONS : IF YOU DON'T KNOW WHAT'S THIS, PLEASE DON'T RUN IT!
@@ -6,8 +7,8 @@ CAUTIONS : IF YOU DON'T KNOW WHAT'S THIS, PLEASE DON'T RUN IT!
 *THIS FILE READ DATABASE AND CREATE A PHP FILE FOR CREATING FORM
 ***********************************************************************************
 **/
-$connect = mysqli_connect("localhost", "jibres", "Jibres@#$567", "jibres");
-$qTables = $connect->query("SHOW TABLES FROM jibres");
+$connect = mysqli_connect("localhost", db_user, db_pass, db_name);
+$qTables = $connect->query("SHOW TABLES FROM ".db_name);
 function _type($type, $def)
 {
 	$def = $def ? "!$def" : null;
@@ -62,6 +63,7 @@ function setproperty($myparam)
 
 
 		case 'smallint':
+		case 'tinyint':
 		case 'int':
 		case 'bigint':
 		case 'decimal':
@@ -108,7 +110,8 @@ function setproperty($myparam)
 	{
 		$content	= "<?php\n";
 		$content	.= "namespace sql;\n";
-		$TABLENAME	= $row->Tables_in_jibres;
+		$tmp_t 		= 'Tables_in_'.db_name;
+		$TABLENAME	= $row->$tmp_t;
 		$content	.= "class $TABLENAME \n{\n";
 		$qCOL		= $connect->query("DESCRIBE $TABLENAME");
 		$fn			="\n";
@@ -129,6 +132,7 @@ function setproperty($myparam)
 			$property		= "";
 			$property_type	= "";
 			$tmp_result		= setproperty($crow);
+			// var_dump($TABLENAME);
 			// var_dump($tmp_result);
 			foreach ($tmp_result as $key => $value) 
 			{
@@ -373,7 +377,7 @@ function setproperty($myparam)
 		$content	.= "}\n";
 		$content	.= "?>";
 		// file_put_contents("./created/$TABLENAME.sql.php", $content);
-		file_put_contents("../$TABLENAME.sql.php", $content);
+		file_put_contents(db_name."/$TABLENAME.sql.php", $content);
 	}
 	$connect->close();
 
