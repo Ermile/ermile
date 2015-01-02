@@ -55,8 +55,8 @@ class controller extends \mvc\controller
 
 			$this->model_name	= 'content_account\\'.$mymodule.'\model';
 			$this->display_name	= 'content_account\\'.$mymodule.'\display.html';
-			$this->put($mymodule)->ALL($mymodule);
 			$this->post('verification')->ALL('verification');
+			$this->put($mymodule)->ALL($mymodule);
 			break;
 
 

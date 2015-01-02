@@ -91,21 +91,23 @@
 {%endblock%}
 {%block footer%}{%endblock%}
 {%endblock%}
-{%if debug is iterable%}
-  <div id="formError" class="error_{{debug.status}}">
-  {%for key, mydebug in debug.messages if mydebug is iterable %}
-   <ul class="{{key}}">
-   {%for key, err in mydebug%}
-   {%if err.title is defined%}
-    <li class="{{err.group}} {{err.redirect}}">{{err.title}}</li>
-   {%else%}
-    <li class="n_{{key}}">{{err}}</li>
-   {%endif%}
-   {%endfor%}
-   </ul>
-   {%endfor%}
-  </div>
-{%endif%}
+{%block debug%}
+  {%if debug is iterable%}
+    <div id="formError" class="error_{{debug.status}}">
+    {%for key, mydebug in debug.messages if mydebug is iterable %}
+     <ul class="{{key}}">
+     {%for key, err in mydebug%}
+     {%if err.title is defined%}
+      <li class="{{err.group}} {{err.redirect}}">{{err.title}}</li>
+     {%else%}
+      <li class="n_{{key}}">{{err}}</li>
+     {%endif%}
+     {%endfor%}
+     </ul>
+     {%endfor%}
+    </div>
+  {%endif%}
+{%endblock%}
 {%block foot_css%}{%endblock%}
 
 {%if include.telinput    %}  <script src="{{url.static}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
