@@ -9,7 +9,7 @@ class model extends \lib\model
 	}
 
 
-	public function get_checkmodel()
+	public function get_modeldef()
 	{
 		$this->addVisitor();
 

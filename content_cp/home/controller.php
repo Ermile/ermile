@@ -9,6 +9,11 @@ class controller extends \mvc\controller
 		$mychild	= $this->child();
 		$islogin	= $this->login();
 
+		// Restrict unwanted child
+		if($mychild && ($mychild!='add' && $mychild!='edit'))
+			\lib\http::page(T_("Not found!"));
+
+
 		if($islogin)
 		{
 			// var_dump("welcome to admin panel");
@@ -22,7 +27,9 @@ class controller extends \mvc\controller
 		{
 			// @hasan: write regular experssion for childs
 			// add, edit, delete
-
+			$a = $this->get('modelcp')->ALL(\lib\router::get_real_url());
+			// var_dump("expression");
+			var_dump($a);
 		}
 
 

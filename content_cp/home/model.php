@@ -3,7 +3,7 @@ namespace content_cp\home;
 use \lib\utility;
 use \lib\debug;
 
-class model extends \mvc\model
+class model extends \content_cp\main\model
 {
 	public function post_login()
 	{
