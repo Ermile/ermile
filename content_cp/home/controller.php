@@ -3,7 +3,7 @@ namespace content_cp\home;
 
 class controller extends \mvc\controller
 {
-	function _route()
+	function _construct()
 	{
 		$mymodule	= $this->module();
 		$mychild	= $this->child();
