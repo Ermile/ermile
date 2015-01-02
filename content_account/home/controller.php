@@ -30,7 +30,6 @@ class controller extends \mvc\controller
 			$this->post($module)->ALL($module);
 		});
 
-
 		$this->route("/^(verification|changepass)$/", function(){
 			$module	= \lib\router::get_real_url();
 			$this->model_name	= 'content_account\\'.$module.'\model';
@@ -38,7 +37,6 @@ class controller extends \mvc\controller
 			$this->put($module)->ALL($module);
 			$this->post('checksms')->ALL($module);
 		});
-
 
 		// manage sms inputs and filter addresses without uid
 		$this->route("/^(smsdelivery|smscallback)$/", function(){

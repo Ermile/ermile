@@ -6,10 +6,6 @@ use \lib\debug;
 class model extends \mvc\model
 {
 
-	public function get_f(){
-		var_dump(20);
-	}
-
 	public function post_login()
 	{
 
