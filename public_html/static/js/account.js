@@ -18,8 +18,8 @@ function createdelay()
     },
     event: 'send',
     link: true,
-    success: function(response) {
-      if(response.success) {
+    success: function(_super) {
+      if(_super.result.status == 1) {
         Navigate({
           url: '/login'
         });
