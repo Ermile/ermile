@@ -7,7 +7,7 @@ class model extends \mvc\model
 {
 	public function get_modelcp($object)
 	{
-		var_dump($object);
+		// var_dump($object);
 		return 'aaa';
 	}
 }

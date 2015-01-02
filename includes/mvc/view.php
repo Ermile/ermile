@@ -12,6 +12,11 @@ class view extends \lib\view
 		$this->global->site_desc		= T_("Ermile is new");
 		$this->global->site_slogan		= T_("Ermile is our company");
 		$this->global->login			= $this->login();
+		// add language list for use in display
+		$this->global->langlist			= array(
+			'fa_IR' => T_('Farsi'),
+			'en_US' => T_('English'),
+			'de_DE' => T_('Germany') );
 		
 		$this->data->module				= $this->module();
 		// if you need to set a class for body element in html add in this value

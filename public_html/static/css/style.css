@@ -623,3 +623,8 @@ cursor: pointer;
 @-o-keyframes slideUp{0%{-o-transform:translateY(0)}100%{-o-transform:translateY(-100%)}}
 @keyframes slideUp{0%{transform:translateY(0)}100%{transform:translateY(-100%)}}
 .animated.slideUp{-webkit-animation-name:slideUp;-moz-animation-name:slideUp;-o-animation-name:slideUp;animation-name:slideUp}
+
+
+
+#footer select{padding:5px;font-size:1em;border:0;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
+#footer select:hover{opacity:0.8;}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{global.lang}}" class="{{global.direction}}">
+<html lang="{{global.lang|replace({'_': '-'}) }}" class="{{global.direction}}">
 <head>
 {%block head_def%}
   <meta charset="UTF-8"/>
@@ -78,7 +78,15 @@
       <div class="row">
        <div class="span12">
         <p>Goto <a href="{{url.root}}" title="{{global.site_desc}}" class="roller cursor-help"><span data-title="{{global.site_title}} Homepage">{{global.site_title}} Homepage</span></a>.</p>
-          <p>
+        <p>
+          <select id="langlist" onchange="change_lang(this.value);">
+{%for key, value in global.langlist%}{%if key == global.lang%}
+                <option selected="selected" value="{{key}}">{{value}}</option>
+{%else%}
+                <option value="{{key}}">{{value}}</option>
+{%endif%}{% endfor %}
+          </select>
+
           [<a href="?lang=en_US">en_US</a>] [<a href="?lang=de_DE">de_DE</a>] [<a href="?lang=fa_IR">fa_IR</a>] 
           {{include.gettext}}
         </p>
