@@ -37,8 +37,9 @@ class view extends \mvc\view
 
 	}
 
-
-
+	function view_fuckView($obj){
+		var_dump($obj->api_callback);
+	}
 
 	// ---------------------------------------------------------------- default config function for ADMIN
 	public function configold()
