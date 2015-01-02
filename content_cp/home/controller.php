@@ -3,7 +3,7 @@ namespace content_cp\home;
 
 class controller extends \mvc\controller
 {
-	function _route()
+	function _construct()
 	{
 		$mymodule	= $this->module();
 		$mychild	= $this->child();
@@ -27,9 +27,10 @@ class controller extends \mvc\controller
 		{
 			// @hasan: write regular experssion for childs
 			// add, edit, delete
-			$a = $this->get('modelcp')->ALL(\lib\router::get_real_url());
+			$a = $this->get('modelcp', "fuckView")->ALL(\lib\router::get_real_url());
 			// var_dump("expression");
-			var_dump($a);
+			// var_dump($a);
+
 		}
 
 

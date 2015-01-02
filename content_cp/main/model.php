@@ -5,9 +5,8 @@ use \lib\debug;
 
 class model extends \mvc\model
 {
-	public function get_modelcp()
+	public function get_modelcp($object)
 	{
-		// var_dump("model cp");
 		return 'aaa';
 	}
 }

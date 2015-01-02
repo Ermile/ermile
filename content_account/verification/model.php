@@ -7,6 +7,7 @@ class model extends \mvc\model
 {
 	function post_verification()
 	{
+		exit();
 		debug::true("true");
 	}
 
