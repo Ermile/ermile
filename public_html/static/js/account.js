@@ -13,11 +13,11 @@ function createdelay()
 
   $('#delay').ajaxify({
     ajax: {
-      type: 'post'
+      type: 'post',
+      url: location.href
     },
     event: 'send',
     link: true,
-    url: location.href,
     success: function(response) {
       if(response.success) {
         Navigate({
