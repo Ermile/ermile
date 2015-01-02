@@ -7,8 +7,20 @@ class model extends \mvc\model
 {
 	function post_verification()
 	{
+		sleep(1);
+		$mymobile	= '+'.utility::get('mobile');
+		$tmp_result	= $this->sql()->tableSmss()
+						->whereSms_from($mymobile)
+						->andSms_type('receive')
+						->select();
+
+		if($tmp_result->num()==1)
+		{
+			debug::true(T_('We receive your message and your account is now verifited.'));
+			// $this->redirector()->set_url('login?from=verification&mobile='.$mymobile.
+			// 			'&referer='.utility::get('referer') );
+		}
 		$this->controller()->redirector = false;
-		debug::true("true");
 	}
 
 	function put_verification()
@@ -76,13 +88,6 @@ class model extends \mvc\model
 			// mobile exist more than 2 times!
 			debug::error("Please forward this message to Administrator");
 		}
-	}
-
-	public function post_checksms()
-	{
-		var_dump( utility::get('check') );
-		echo 'test';
-		exit();
 	}
 }
 ?>

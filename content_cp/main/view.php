@@ -37,7 +37,7 @@ class view extends \mvc\view
 
 	}
 
-	function view_fuckView($obj){
+	function view_mytestView($obj){
 		var_dump($obj->api_callback);
 	}
 
