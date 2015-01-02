@@ -12,6 +12,10 @@ class view extends \lib\view
 		$this->global->site_desc		= T_("Ermile is new");
 		$this->global->site_slogan		= T_("Ermile is our company");
 		$this->global->login			= $this->login();
+		
+		$this->data->module				= $this->module();
+		// if you need to set a class for body element in html add in this value
+		$this->data->bodyclass			= null;
 
 		// define default value for include
 		$this->include->datatable		= false;
@@ -21,8 +25,10 @@ class view extends \lib\view
 		$this->include->customcss		= true;
 		$this->include->customjs		= true;
 
-		$this->data->layout_account		= "content_account/home/display.html";
+		$this->data->layout_account		= "content_account/main/layout.html";
+		$this->data->layout_cp			= "content_cp/main/layout.html";
 		// var_dump($this->global->site_slogan);
+
 
 		if (!locale_emulation()) {
 			$this->include->gettext 	= 'Translation use native gettext dll';

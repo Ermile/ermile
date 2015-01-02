@@ -18,7 +18,7 @@ class model extends \mvc\model
 		if($tmp_result->num() == 1)
 		{
 			// mobile exist
-			debug::error("Mobile number exist!");
+			debug::error(T_("Mobile number exist!"));
 		}
 		elseif($tmp_result->num() == 0 )
 		{
@@ -53,19 +53,19 @@ class model extends \mvc\model
 
 				$this->redirector()->set_url('verification?from=signup&mobile='.(substr($_parameter,1)).
 					'&referer='.utility::get('referer') );
-				debug::true("Register successfully");
+				debug::true(T_("Register successfully"));
 			}, $mymobile, $mycode);
 
 			// if a query has error or any error occour in any part of codes, run roolback
 			$this->rollback(function()
 			{
-				debug::error("Register failed!");
+				debug::error(T_("Register failed!"));
 			} );
 		}
 		else
 		{
 			// mobile exist more than 2 times!
-			debug::error("Please forward this message to Administrator");
+			debug::error(T_("Please forward this message to Administrator"));
 		}
 	}
 }

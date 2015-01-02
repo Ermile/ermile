@@ -23,20 +23,22 @@ class model extends \lib\model
 
 	public function setlogin()
 	{
-		if($this->login())
+		$ssid 		= \lib\utility::get('ssid');
+		if($this->login() || !$ssid)
 		{
+			// if user logined to system or don't has ssid return and don't need run below code
 			return;
 		}
 
-		$ip = ip2long($_SERVER['REMOTE_ADDR']);
+		$ip 		= ip2long($_SERVER['REMOTE_ADDR']);
 		$tmp_result	= $this->sql()->tableUsermetas()
 						->whereUsermeta_cat('cookie_token')
 						->andUsermeta_name($ip)
 						->andUsermeta_status('enable')
-						->andUsermeta_value(\lib\utility::get('ssid'))
+						->andUsermeta_value($ssid)
 						->select();
 		
-		var_dump($this->login());
+		// var_dump($this->login());
 		if($tmp_result->num() == 1)
 		{
 			// user request is correct and we can set session, because login is true!
@@ -45,7 +47,7 @@ class model extends \lib\model
 						->whereUsermeta_cat('cookie_token')
 						->andUsermeta_name($ip)
 						->andUsermeta_status('enable')
-						->andUsermeta_value(\lib\utility::get('ssid'));
+						->andUsermeta_value($ssid);
 			$sql	= $qry->update();
 			// var_dump($sql);
 

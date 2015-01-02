@@ -5,10 +5,15 @@ class view extends \mvc\view
 {
 	public function config()
 	{
-		$this->include->customcss		= false;
-		$this->data->myform				= 'account';
-		$this->data->module				= \lib\router::get_real_url();
+		// $this->include->datatable		= false;
+		// $this->include->jquery			= true;
+		// $this->include->fontawesome		= false;
 		$this->include->telinput		= true;
+		$this->include->customcss		= false;
+		$this->include->customjs		= false;
+		$this->data->bodyclass			= 'unselectable';
+		
+		$this->data->myform				= 'account';
 		$this->global->site_slogan		= T_("One Account for all services");
 
 		if($this->data->module =='login'){
@@ -20,7 +25,7 @@ class view extends \mvc\view
 		elseif($this->data->module =='verification'){
 			$this->global->page_desc	= T_('Verificate');
 		}
-		elseif($this->data->module =='verification/send'){
+		elseif($this->data->module =='verification_send'){
 			$this->global->page_desc	= T_('Verificate');
 		}
 		elseif($this->data->module =='recovery'){
@@ -28,12 +33,15 @@ class view extends \mvc\view
 		}
 		elseif($this->data->module =='changepass'){
 			$this->global->page_desc	= T_('Change password');
+			$this->include->telinput	= false;
 		}
 		elseif($this->data->module =='smsdelivery'){
 			$this->global->page_desc	= T_('SMS Delivery');
+			$this->include->telinput	= false;
 		}
 		elseif($this->data->module =='smscallback'){
 			$this->global->page_desc	= T_('SMS Callback');
+			$this->include->telinput	= false;
 		}
 		else
 		{

@@ -1,0 +1,100 @@
+{%extends display%}
+
+{%block head_css%}
+  <link rel="stylesheet"    href="{{url.static}}css/style-cp.css?ver=1.1.0">
+{%endblock%}
+{%block foot_js%}
+  <script src="{{url.static}}js/cp.js"></script>
+{%endblock%}
+
+
+
+{%block header%}
+{%if child%}
+  <div id="options" class="unselectable">
+    <div id="meta" class="container hide">
+      <form id="meta-options" method="post">
+{% for key, value in field_list %}
+        <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{key}}" {%if value%}checked="checked"{%endif%}>{{key|title}}</label>
+{% endfor %}
+      </form>
+    </div>
+    <div id="meta-link">
+      <a id="options-link" href="javascript: void(0)">
+        Options
+      </a>
+    </div>
+     
+ </div>
+{%endif%}
+{%endblock%}
+
+
+
+{%block content_def%}
+ <div class="container" id="main">
+  {%if global.page_title%}
+  <h1>{{global.page_title}}</h1><hr />{%endif%}
+  {%if module and module!="home"%}
+   {%if child%}
+    <p class="alert alert-block alert-info">
+     {{module|title}} Section
+     <a class="float-right" href="{{store}}/{{module}}">Go to {{module|title}}</a>
+    </p>
+    {%if form_show %}
+     <form class="ajx" method="post" id="{{form_title}}">
+      {{forms.make(form[module])}}
+     </form>
+    {%else%}
+     <p>Does not exist!!!</p>
+    {%endif%}
+
+   {%else%}
+    <p class="alert alert-block alert-info">
+     <a href="{{store}}/{{module}}/add">Add New Record</a>
+     <a class="float-right" href="/">Home</a>
+    </p>
+
+  		{%block datatable%}
+       {%if include.datatable%}
+  		  <table class="datatable display">
+  		   <thead>
+  		    <tr role="row">
+  		     <th class="column_row">#</th>
+  							{%for value in columns if value%}
+  		     	<th>{{value | title}}</th>
+  							{%endfor%}
+  		     <th class="column_actions">Actions</th>
+  		    </tr>
+  		   </thead>
+
+  		   <tbody>
+  					{%block tbody%}
+  						{%for d in datatable%}
+  			    <tr role="row" class="{{ cycle(['odd', 'even'], loop.index0) }}">
+  			     <td class="column_row">{{loop.index}}</td>
+  								{%for col,value in columns if value%}
+  			     	<td>{{attribute(d,col)}}</td>
+  								{%endfor%}
+  			     <td>
+  			      <span class="hint--top hint--info" data-hint="Edit">
+  			       <a class="action-icons edit hint--top" href="{{store}}/{{module}}/edit={{d.id}}">Edit</a>
+  			      </span>
+  			      <span class="hint--top hint--error" data-hint="Delete">
+  			       <a class="action-icons delete hide-text" href="{{store}}/{{module}}/delete={{d.id}}">Delete</a>
+  			      </span>
+  			     </td>
+  		     </tr>
+  					 {%endfor%}
+  					{%endblock%}
+  		   </tbody>
+  		  </table>
+        {%else%}
+        Data not exist!
+       {%endif%}
+  		{%endblock%}
+   {%endif%}
+  {%endif%}
+
+ </div>
+{%endblock%}

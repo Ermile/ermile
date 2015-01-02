@@ -1,5 +1,5 @@
 <?php
-namespace content_account\login;
+namespace content_cp\home;
 use \lib\utility;
 use \lib\debug;
 
