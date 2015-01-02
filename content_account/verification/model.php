@@ -7,7 +7,7 @@ class model extends \mvc\model
 {
 	function post_verification()
 	{
-		exit();
+		$this->controller()->redirector = false;
 		debug::true("true");
 	}
 
