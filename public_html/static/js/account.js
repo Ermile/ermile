@@ -11,23 +11,29 @@ function createdelay()
 
   var requestDelay = 3000;
 
-  function loop() {
-    console.log('Request');
-    $.ajax({
-      url: location.search,
-      type: 'POST'
-    }).done(function(response) {
-      if(response === 'true') {
-        alert(response);
+  $('#delay').ajaxify({
+    ajax: {
+      type: 'post'
+    },
+    event: 'send',
+    link: true,
+    url: location.href,
+    success: function(response) {
+      if(response.success) {
         Navigate({
           url: '/login'
         });
       } else {
         setTimeout(loop, requestDelay);
       }
-    }).fail(function() {
+    },
+    fail: function() {
       setTimeout(loop, requestDelay);
-    })
+    }
+  });
+
+  function loop() {
+    $('#delay').trigger('send');
     requestDelay += 2000;
   };
 
