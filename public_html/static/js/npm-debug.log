@@ -1,0 +1,83 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/home/mahdi/.bin/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'browsersync' ]
+2 info using npm@2.1.3
+3 info using node@v0.10.32
+4 silly cache add args [ 'browsersync', null ]
+5 verbose cache add spec browsersync
+6 silly cache add parsed spec { raw: 'browsersync',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'browsersync',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed browsersync@*
+8 verbose addNamed browsersync@* not in flight; adding
+9 silly addNamed semver.valid null
+10 silly addNamed semver.validRange *
+11 silly addNameRange { name: 'browsersync', range: '*', hasData: false }
+12 verbose mapToRegistry name browsersync
+13 verbose mapToRegistry uri http://registry.npmjs.org/browsersync
+14 verbose request on initialization, where is /browsersync
+15 verbose request after pass 1, where is /browsersync
+16 verbose request url raw /browsersync
+17 verbose request resolving registry [ 'http://registry.npmjs.org/', './browsersync' ]
+18 verbose request after pass 2, where is http://registry.npmjs.org/browsersync
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 18:04:05
+21 verbose request id 3a4eacd347965735
+22 http request GET http://registry.npmjs.org/browsersync
+23 http 404 http://registry.npmjs.org/browsersync
+24 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 verbose headers   'content-type': 'application/json',
+24 verbose headers   'cache-control': 'max-age=0',
+24 verbose headers   'content-length': '52',
+24 verbose headers   'accept-ranges': 'bytes',
+24 verbose headers   date: 'Fri, 02 Jan 2015 14:34:06 GMT',
+24 verbose headers   age: '0',
+24 verbose headers   'x-served-by': 'cache-jfk1029-JFK',
+24 verbose headers   'x-cache': 'MISS',
+24 verbose headers   'x-cache-hits': '0',
+24 verbose headers   'x-timer': 'S1420209246.863805,VS0,VE76' }
+25 silly registry.get cb [ 404,
+25 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 silly registry.get     'content-type': 'application/json',
+25 silly registry.get     'cache-control': 'max-age=0',
+25 silly registry.get     'content-length': '52',
+25 silly registry.get     'accept-ranges': 'bytes',
+25 silly registry.get     date: 'Fri, 02 Jan 2015 14:34:06 GMT',
+25 silly registry.get     age: '0',
+25 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+25 silly registry.get     'x-cache': 'MISS',
+25 silly registry.get     'x-cache-hits': '0',
+25 silly registry.get     'x-timer': 'S1420209246.863805,VS0,VE76' } ]
+26 verbose stack Error: 404 Not Found: browsersync
+26 verbose stack     at RegClient.<anonymous> (/home/mahdi/.bin/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:258:14)
+26 verbose stack     at Request._callback (/home/mahdi/.bin/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:197:65)
+26 verbose stack     at Request.self.callback (/home/mahdi/.bin/lib/node_modules/npm/node_modules/request/request.js:237:22)
+26 verbose stack     at Request.emit (events.js:98:17)
+26 verbose stack     at Request.<anonymous> (/home/mahdi/.bin/lib/node_modules/npm/node_modules/request/request.js:1146:14)
+26 verbose stack     at Request.emit (events.js:117:20)
+26 verbose stack     at IncomingMessage.<anonymous> (/home/mahdi/.bin/lib/node_modules/npm/node_modules/request/request.js:1097:12)
+26 verbose stack     at IncomingMessage.emit (events.js:117:20)
+26 verbose stack     at _stream_readable.js:943:16
+26 verbose stack     at process._tickCallback (node.js:419:13)
+27 verbose statusCode 404
+28 verbose pkgid browsersync
+29 verbose cwd /home/mahdi/Documents/Workshop/ermile/public_html/static/js
+30 error Linux 3.12.35-1-MANJARO
+31 error argv "node" "/home/mahdi/.bin/bin/npm" "install" "-g" "browsersync"
+32 error node v0.10.32
+33 error npm  v2.1.3
+34 error code E404
+35 error 404 Not Found: browsersync
+35 error 404
+35 error 404 'browsersync' is not in the npm registry.
+35 error 404 You should bug the author to publish it (or use the name yourself!)
+35 error 404
+35 error 404 Note that you can also install from a
+35 error 404 tarball, folder, http url, or git url.
+36 verbose exit [ 1, true ]

@@ -40,7 +40,6 @@ function createdelay()
   setTimeout(loop, 1000);
 }
 
-
 // ******************************************************** declare mobile input
 var telInput = $("#mobile"),
     errorMsg = $("#error-msg"),
