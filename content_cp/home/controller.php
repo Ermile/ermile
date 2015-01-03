@@ -3,16 +3,11 @@ namespace content_cp\home;
 
 class controller extends \mvc\controller
 {
-	function _construct()
+	function _route()
 	{
 		$mymodule	= $this->module();
 		$mychild	= $this->child();
 		$islogin	= $this->login();
-
-		// Restrict unwanted child
-		if($mychild && ($mychild!='add' && $mychild!='edit'))
-			\lib\http::page(T_("Not found!"));
-
 
 		if($islogin)
 		{
@@ -21,22 +16,45 @@ class controller extends \mvc\controller
 		else
 		{
 			// var_dump("you must login to system");
+			// \lib\http::access(T_("You must login to access!"));
+			// redirect to login
 		}
 
-		if($mymodule !='home')
+		// Restrict unwanted child
+		if($mychild && !($mychild=='add' || $mychild=='edit' || $mychild=='delete'))
+			\lib\http::page(T_("Not found!"));
+
+
+
+		$this->display_name	= 'content_cp\\'.$mymodule.'\display.html';
+		if($mymodule=='home')
+			return;
+
+		// on module root without child like /post
+		if(!$mychild)
 		{
+			$this->get('datatable', "datatable")->ALL(\lib\router::get_real_url());
+		}
+
+
+		if($mychild)
+		{
+			// complete soon
+			$this->get()->ALL(\lib\router::get_real_url());
+			return;
+		}
+		// if($mymodule !='home' )
+		// {
 			// @hasan: write regular experssion for childs
 			// add, edit, delete
-			$a = $this->get('modelcp', "mytestView")->ALL(\lib\router::get_real_url());
 			// var_dump("expression");
 			// var_dump($a);
 
-		}
+		// }
 
 
 		// $this->model_name	= 'content_cp\\'.$mymodule.'\model';
-		$this->display_name	= 'content_cp\\'.$mymodule.'\display.html';
-		$this->post($mymodule)->ALL($mymodule);
+		// $this->post($mymodule)->ALL($mymodule);
 	}
 
 

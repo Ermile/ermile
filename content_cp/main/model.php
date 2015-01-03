@@ -5,10 +5,12 @@ use \lib\debug;
 
 class model extends \mvc\model
 {
-	public function get_modelcp($object)
+	public function get_datatable($object)
 	{
-		// var_dump($object);
-		return 'aaa';
+		$mymodule	= $this->module();
+		$mytable	= 'table'.ucfirst($mymodule.'s');
+		$tmp_result	=  $this->sql()->$mytable()->select();
+		return $tmp_result->Allassoc();
 	}
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
-namespace sql;
+namespace database\ermile;
 class smss 
 {
 	public $id = array('type' => 'int@10', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');

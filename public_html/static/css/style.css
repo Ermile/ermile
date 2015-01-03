@@ -27,8 +27,8 @@ html{
   -ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
 }
-.ltr body{font-family:'Roboto Slab',serif;}
-.rtl body{font-family:'IRAN',serif;}
+.ltr body{font-family:'Roboto Slab',serif;direction:ltr;}
+.rtl body{font-family:'IRAN',serif;direction:rtl;}
 body {
   margin: 0;
 }
@@ -626,5 +626,5 @@ cursor: pointer;
 
 
 
-#footer select{padding:5px;font-size:1em;border:0;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
+#footer select{direction:ltr; padding:5px;font-size:1em;border:0;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
 #footer select:hover{opacity:0.8;}

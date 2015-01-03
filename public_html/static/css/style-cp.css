@@ -21,6 +21,8 @@ body {
   margin: 0;
   margin-top:45px;
 }
+.ltr body{font-family:'Roboto Slab',serif;direction:ltr;}
+.rtl body{font-family:'IRAN',serif;direction:rtl;}
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -658,3 +660,5 @@ border-left-color: #2DB2EA;
 
 
 #footer{margin-top:100px;}
+#footer select{direction:ltr; padding:5px;font-size:1em;border:0;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
+#footer select:hover{opacity:0.8;}

@@ -26,6 +26,7 @@ class controller extends \mvc\controller
 			case 'home':
 			$this->redirector()->set_url("login")->redirect();
 			break;
+
 			case 'login':
 			case 'signup':
 			case 'recovery':
@@ -92,6 +93,7 @@ class controller extends \mvc\controller
 				\lib\http::access("SMS");
 			}
 			break;
+
 
 			// if user add another address show 404
 			default:

@@ -29,7 +29,7 @@ class view extends \content_cp\main\view
 		// $this->include->datatable		= false;
 		// $this->include->jquery			= true;
 		// $this->include->fontawesome		= false;
-		$this->include->telinput		= true;
+		$this->include->telinput		= false;
 		$this->include->customcss		= false;
 		$this->include->customjs		= false;
 		$this->data->bodyclass			= 'fixed';

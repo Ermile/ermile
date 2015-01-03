@@ -14,9 +14,10 @@ class view extends \lib\view
 		$this->global->login			= $this->login();
 		// add language list for use in display
 		$this->global->langlist			= array(
-			'fa_IR' => T_('Farsi'),
-			'en_US' => T_('English'),
-			'de_DE' => T_('Germany') );
+												'fa_IR' => 'فارسی',
+												'en_US' => 'English',
+												'de_DE' => 'Deutsch'
+												);
 		
 		$this->data->module				= $this->module();
 		// if you need to set a class for body element in html add in this value

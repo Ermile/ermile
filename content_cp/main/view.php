@@ -16,30 +16,34 @@ class view extends \mvc\view
 		{
 			
 			$this->data->form_show		= true;
+			return;
 		}
 		else
 		{
-			// in root page like site.com/admin/banks show datatable
-
-			// get data from database through model
-			// $this->data->datatable		= $this->sql("#datatable");
-			$this->data->datatable =null;
-			if($this->data->datatable)
-			{
-				// get all fields of table and filter fields name for show in datatable, access from columns variable
-				// check if datatable exist then get this data
-				$this->include->datatable	= true;
-				// $this->data->columns		= getTable_cls::fields($this->data->module);
-				// var_dump($this->data->columns);
-				$this->data->columns		= getTable_cls::datatable($this->data->module);
-			}
 		}
 
 	}
 
-	function view_mytestView($obj){
-		var_dump($obj->api_callback);
+
+	function view_datatable($obj)
+	{		
+		// in root page like site.com/admin/banks show datatable
+		// get data from database through model
+		$this->data->datatable		= $obj->api_callback;
+		// check if datatable exist then get this data
+		if($this->data->datatable)
+		{
+			// get all fields of table and filter fields name for show in datatable, access from columns variable
+			$this->include->datatable	= true;
+			// $this->data->columns		= getTable_cls::fields($this->data->module);
+			// var_dump($this->data->columns);
+			// $this->data->columns		= \cls\getTable::datatable($this->data->module);
+			$this->data->columns		= \lib\sql\getTable::datatable($this->data->module.'s');
+		}
+
+		// var_dump($obj->api_callback);
 	}
+
 
 	// ---------------------------------------------------------------- default config function for ADMIN
 	public function configold()
