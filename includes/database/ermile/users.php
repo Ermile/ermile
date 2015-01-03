@@ -45,7 +45,7 @@ class users
 	//------------------------------------------------------------------ email
 	public function user_email() 
 	{
-		$this->form("#email")->type("email")->required()->maxlength(50);
+		$this->form("email")->type("email")->required()->maxlength(50);
 	}
 
 	//------------------------------------------------------------------ radio button

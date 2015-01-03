@@ -26,7 +26,17 @@ class controller extends \mvc\controller
 
 
 
-		$this->display_name	= 'content_cp\\'.$mymodule.'\display.html';
+
+		if( is_file(root.'content_cp/'.$mymodule.'/display.html') )
+		{
+			$this->display_name	= 'content_cp\\'.$mymodule.'\display.html';
+		}
+		else
+		{
+			$this->display_name	= 'content_cp\main\layout.html';
+		}
+
+
 		if($mymodule=='home')
 			return;
 

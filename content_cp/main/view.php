@@ -39,6 +39,7 @@ class view extends \mvc\view
 			// var_dump($this->data->columns);
 			// $this->data->columns		= \cls\getTable::datatable($this->data->module);
 			$this->data->columns		= \lib\sql\getTable::datatable($this->data->module.'s');
+			var_dump($this->data->columns);
 		}
 
 		// var_dump($obj->api_callback);
