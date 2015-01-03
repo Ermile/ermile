@@ -11,20 +11,13 @@
 
 {%block header%}
 {%if child%}
-  <div id="options" class="unselectable">
-    <div id="meta" class="container hide">
-      <form id="meta-options" method="post">
+ <div id="options" class="unselectable">
+    <div id="options-meta" class="disappear">
 {% for key, value in field_list %}
-        <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{key}}" {%if value%}checked="checked"{%endif%}>{{key|title}}</label>
+      <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{key}}" {%if value%}checked="checked"{%endif%}><span>{{key|title}}</span></label>
 {% endfor %}
-      </form>
     </div>
-    <div id="meta-link">
-      <a id="options-link" href="javascript: void(0)">
-        Options
-      </a>
-    </div>
-     
+    <a id="options-link" href="javascript: void(0)">Options</a>
  </div>
 {%endif%}
 {%endblock%}
