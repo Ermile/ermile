@@ -1,18 +1,18 @@
 <?php
 namespace database\ermile;
-class accounts 
+class smss 
 {
-	public $id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $account_title = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Title');
-	public $account_slug = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Slug');
-	public $bank_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'YES', 'label'=>'Bank', 'foreign'=>'banks@id!bank_title');
-	public $account_branch = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'YES', 'label'=>'Branch');
-	public $account_number = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'YES', 'label'=>'Number');
-	public $account_card = array('type' => 'varchar@30', 'null'=>'YES', 'show'=>'YES', 'label'=>'Card');
+	public $id                     = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
+	public $account_title          = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Title');
+	public $account_slug           = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Slug');
+	public $bank_id                = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'YES', 'label'=>'Bank', 'foreign'=>'banks@id!bank_title');
+	public $account_branch         = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'YES', 'label'=>'Branch');
+	public $account_number         = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'YES', 'label'=>'Number');
+	public $account_card           = array('type' => 'varchar@30', 'null'=>'YES', 'show'=>'YES', 'label'=>'Card');
 	public $account_primarybalance = array('type' => 'decimal@14,4!0.0000', 'null'=>'NO', 'show'=>'YES', 'label'=>'Primarybalance');
-	public $account_desc = array('type' => 'varchar@200', 'null'=>'YES', 'show'=>'NO', 'label'=>'Description');
-	public $user_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $account_desc           = array('type' => 'varchar@200', 'null'=>'YES', 'show'=>'NO', 'label'=>'Description');
+	public $user_id                = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
+	public $date_modified          = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
 
 
 	//------------------------------------------------------------------ id - primary key
@@ -34,7 +34,7 @@ class accounts
 	public function bank_id() 
 	{
 		$this->form("select")->name("bank")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function account_branch() 
 	{
@@ -56,7 +56,7 @@ class accounts
 	//------------------------------------------------------------------ description
 	public function account_desc() 
 	{
-		$this->form("#desc")->maxlength(200)->type('textarea');
+		$this->form("desc")->maxlength(200)->type('textarea');
 	}
 	public function user_id() {$this->validate()->id();}
 	public function date_modified() {}

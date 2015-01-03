@@ -109,7 +109,7 @@ function setproperty($myparam)
 	while ($row = $qTables->fetch_object()) 
 	{
 		$content	= "<?php\n";
-		$content	.= "namespace sql;\n";
+		$content	.= "namespace database\\".db_name.";\n";
 		$tmp_t 		= 'Tables_in_'.db_name;
 		$TABLENAME	= $row->$tmp_t;
 		$content	.= "class $TABLENAME \n{\n";
@@ -376,8 +376,8 @@ function setproperty($myparam)
 		$content	.= $fn;
 		$content	.= "}\n";
 		$content	.= "?>";
-		// file_put_contents("./created/$TABLENAME.sql.php", $content);
-		file_put_contents(db_name."/$TABLENAME.sql.php", $content);
+		// file_put_contents("./created/$TABLENAME.php", $content);
+		file_put_contents(db_name."/$TABLENAME.php", $content);
 	}
 	$connect->close();
 
