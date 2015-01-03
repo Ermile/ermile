@@ -1,121 +1,80 @@
+{% macro make(array) %}
+{% spaceless %}
+{% import _self as form%}
+ {% for input in array%}
+   <div class="form-element">
+    {% if input.attr.pos %}{% set tippos=input.attr.pos %}{%else%}{% set tippos='hint--top' %}{% endif %}
+    {% if input.attr.desc %}<span class="hint--info {{tippos}}" data-hint="{{input.attr.desc}}">{% endif %}
+
+    {% if input.attr.type     == 'radio'%}                                 {{ form.radio(input) }}
+    {% elseif input.attr.type == 'checkbox'%}                              {{ form.checkbox(input) }}
+    {% elseif input.attr.type == 'select'%}                                {{ form.select(input) }}
+    {% elseif input.attr.type == 'textarea'%}                              {{ form.textarea(input) }}
+    {% elseif input.attr.type == 'submit' or input.attr.type == 'button'%} {{ form.submit(input) }}
+    {% else %}                                                             {{ form.input(input) }}
+    {% endif %}
+
+    {% if input.attr.desc %}</span>{% endif %}
+   </div>
+ {% endfor %}
+{% endspaceless %}
+{% endmacro %}
+
+
+
+
 {% macro radio(array) %}
- <label class="input-label">{{array.label}}</label>
+ {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
  <div class="row-clear radio">
-  {% for child in array.child %}
-   <label class="label-custom label-radio">
-    <input name="{{array.attr.name}}" {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}
-   </label>
-  {% endfor %}
+ {% for child in array.child %}
+  <label class="label-custom label-radio">
+  <input name="{{array.attr.name}}" {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}
+  </label>
+ {% endfor %}
  </div>
 {% endmacro %}
 
 
 {% macro checkbox(array) %}
-  <label class="label-custom">{{array.label}}
-   <input name="{{array.attr.name}}" {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
-  </label>
+ {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
+  <input name="{{array.attr.name}}" {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
 {% endmacro %}
 
 
 {% macro select(array) %}
-  <label for="{{array.attr.id}}" class="input-label">{{array.label}}</label>
-  <select {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
-   <option value="" disabled="disabled" selected="selected">Please select one item</option>
-   {% for child in array.child%}
-    <option {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
-   {% endfor %}
-  </select>
+ {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
+ <select {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
+  <option value="" disabled="disabled" selected="selected">Please select one item</option>
+  {% for child in array.child%}
+  <option {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
+  {% endfor %}
+ </select>
 {% endmacro %}
 
 
 {% macro textarea(array) %}
-   <label for="{{array.attr.id}}" class="input-label">{{array.label}}</label>
-   <textarea {% for attr,value in array.attr%}{%if attr != 'value'%}{{attr}}="{{value}}"{%endif%} {% endfor %}>{{array.attr.value}}</textarea>
+  {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
+  <textarea {% for attr,value in array.attr%}{%if attr != 'value'%}{{attr}}="{{value}}"{%endif%} {% endfor %}>{{array.attr.value}}</textarea>
 {% endmacro %}
 
 
 {% macro submit(array) %}
-  <button {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>{{array.attr.value}}</button>
-{% endmacro %}
-
-
-{% macro captcha(array) %}
-  <label class="input-label"></label>
-  <img src="captcha.png">
-  <br>
-  <label for="captcha" class="input-label">{{"captcha"}}</label>
-  <input type="text" name="captcha" id="captcha">
+ <button {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>{{array.attr.value}}</button>
 {% endmacro %}
 
 
 {% macro input(array) %}
-
-  {% if array.attr.type == 'robot' %}
-   <label for="{{array.attr.id}}" class="input-label">{{array.label}}</label>
-   <input {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
-  {% else %}
-    {%if array.label %}
-      <label for="{{array.attr.id}}" class="input-label">{{array.label}}</label>
-    {%endif%}
-    {% if array.attr.desc %}<span class="hint--rounded {{array.attr.tippos}}" data-hint="{{array.attr.desc}}">{% endif %}
-   <input {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
-   {% if array.attr.desc %}</span>{% endif %}
-  {% endif %}
+ {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
+  <input {% for attr,value in array.attr if attr != 'desc' and attr != 'pos'%}{{attr}}="{{value}}" {% endfor %}>
 {% endmacro %}
 
 
 {% macro datalist(array) %}
-  <label for="{{array.attr.id}}" label="input-label">{{array.label}}</label>
-  <input list="{{array.attr.name}}" {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
-  <datalist id="{{array.attr.name}}">
-   {% for child in array.childs%}
-    <option {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
-   {% endfor %}
-  </datalist>
-{% endmacro %}
-
-{% macro make(array) %}
-{% spaceless %}
- {% import _self as form%}
-  {% for input in array%}
-   {% if input.attr.type == 'hidden' %}
-    <input {% for attr,value in input.attr%}{{attr}}="{{value}}" {% endfor %}>
-   {% else %}
-    {% if input.attr.type == 'robot' %}
-     <li class="adam">
-      {{ form.input(input)}}
-     </li>
-    {%else%}
-     <div class="form-element">
-       {% if input.attr.type == 'radio'%}
-        {{ form.radio(input) }}
-
-       {% elseif input.attr.type == 'checkbox'%}
-        {{ form.checkbox(input) }}
-
-       {% elseif input.attr.type == 'select'%}
-        {{ form.select(input) }}
-
-       {% elseif input.attr.type == 'textarea'%}
-        {{ form.textarea(input) }}
-
-       {% elseif input.attr.type == 'submit' or input.attr.type == 'button'%}
-        {{ form.submit(input) }}
-
-       {% elseif input.attr.type == 'captcha'%}
-        {{ form.captcha(input) }}
-
-       {% else %}
-        {{ form.input(input) }}
-
-       {% endif %}
-
-       {% if input.attr.desc is not null %}
-        <!-- <p class="desc">{{input.attr.desc}}</p> -->
-       {% endif %}
-     </div>
-    {% endif %}
-   {% endif %}
+ {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
+ <input list="{{array.attr.name}}" {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
+ <datalist id="{{array.attr.name}}">
+  {% for child in array.childs%}
+  <option {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
   {% endfor %}
-{% endspaceless %}
+ </datalist>
 {% endmacro %}
