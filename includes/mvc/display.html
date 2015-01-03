@@ -120,9 +120,6 @@
 {%if include.datatable   %}  <script src="{{url.static}}js/jquery.dataTables.min.js"></script>{{include.newline}}{%endif%}
 {%if include.telinput    %}  <script src="{{url.static}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
 {%if include.customjs    %}  <script src="{{url.static}}js/custom.js"></script>{{include.newline}}{%endif%}
-{%if include.datatable%}
-  <script>$(document).ready(function(){$('.datatable').DataTable();});</script>
-{%endif%}
 {%block foot_js%}{%endblock%}
 </body>
 </html>
