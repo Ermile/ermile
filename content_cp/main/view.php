@@ -16,10 +16,12 @@ class view extends \mvc\view
 		{
 			
 			$this->data->form_show		= true;
+			$this->data->field_list		= \lib\sql\getTable::forms($this->data->module.'s');
 			return;
 		}
 		else
 		{
+
 		}
 
 	}
