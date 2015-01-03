@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 30, 2014 at 11:49 AM
+-- Generation Time: Jan 04, 2015 at 12:13 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -68,6 +68,22 @@ CREATE TABLE IF NOT EXISTS `addons` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `attachmentmetas`
+--
+
+CREATE TABLE IF NOT EXISTS `attachmentmetas` (
+`id` int(10) unsigned NOT NULL,
+  `attachment_id` int(10) unsigned NOT NULL,
+  `attachmentmeta_cat` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `attachmentmeta_name` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `attachmentmeta_value` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
+  `attachmentmeta_status` enum('enable','disable','expire') CHARACTER SET utf8 NOT NULL DEFAULT 'enable',
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `attachments`
 --
 
@@ -97,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `banks` (
   `bank_title` varchar(50) NOT NULL,
   `bank_slug` varchar(50) NOT NULL,
   `bank_website` varchar(50) DEFAULT NULL,
-  `bank_status` enum('enable','disable') NOT NULL DEFAULT 'enable',
+  `bank_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 
@@ -167,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `costcats` (
   `costcat_father` smallint(5) DEFAULT NULL,
   `costcat_row` smallint(5) DEFAULT NULL,
   `costcat_type` enum('income','outcome') DEFAULT NULL,
-  `costcat_status` enum('enable','disable') NOT NULL DEFAULT 'enable',
+  `costcat_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
@@ -271,7 +287,7 @@ CREATE TABLE IF NOT EXISTS `locations` (
   `location_title` varchar(100) NOT NULL,
   `location_slug` varchar(100) NOT NULL,
   `location_desc` varchar(200) DEFAULT NULL,
-  `location_status` enum('enable','disable') NOT NULL DEFAULT 'enable',
+  `location_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
@@ -307,7 +323,7 @@ CREATE TABLE IF NOT EXISTS `notifications` (
   `notification_title` varchar(50) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `notification_content` varchar(200) CHARACTER SET utf8 COLLATE utf8_persian_ci DEFAULT NULL,
   `notification_url` varchar(100) CHARACTER SET utf8 COLLATE utf8_persian_ci DEFAULT NULL,
-  `notification_status` enum('read','unread') CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL DEFAULT 'unread',
+  `notification_status` enum('read','unread','expire') CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL DEFAULT 'unread',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -323,7 +339,7 @@ CREATE TABLE IF NOT EXISTS `options` (
   `option_name` varchar(50) NOT NULL,
   `option_value` varchar(200) DEFAULT NULL,
   `option_extra` varchar(400) DEFAULT NULL,
-  `option_status` enum('enable','disable') NOT NULL DEFAULT 'enable',
+  `option_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
@@ -419,7 +435,7 @@ CREATE TABLE IF NOT EXISTS `permissions` (
   `permission_add` enum('yes','no') NOT NULL DEFAULT 'no',
   `permission_edit` enum('yes','no') NOT NULL DEFAULT 'no',
   `permission_delete` enum('yes','no') NOT NULL DEFAULT 'no',
-  `permission_status` enum('enable','disable') NOT NULL DEFAULT 'enable',
+  `permission_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
@@ -439,12 +455,12 @@ INSERT INTO `permissions` (`id`, `permission_title`, `Permission_module`, `permi
 --
 
 CREATE TABLE IF NOT EXISTS `postmetas` (
-  `id` smallint(5) NOT NULL,
+  `id` int(10) NOT NULL,
   `post_id` smallint(5) unsigned NOT NULL,
   `postmeta_cat` varchar(50) NOT NULL,
   `postmeta_name` varchar(100) NOT NULL,
   `postmeta_value` varchar(999) DEFAULT NULL,
-  `postmeta_status` enum('enable','disable') NOT NULL DEFAULT 'enable',
+  `postmeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -462,7 +478,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `post_slug` varchar(100) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `post_content` text CHARACTER SET utf8 COLLATE utf8_persian_ci,
   `post_type` enum('post','page') CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL DEFAULT 'post',
-  `post_status` enum('publish','draft','schedule','deleted') CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL DEFAULT 'draft',
+  `post_status` enum('publish','draft','schedule','deleted','expire') CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL DEFAULT 'draft',
   `user_id` smallint(5) unsigned NOT NULL,
   `attachment_id` int(10) unsigned DEFAULT NULL,
   `post_publishdate` datetime DEFAULT NULL,
@@ -483,6 +499,7 @@ CREATE TABLE IF NOT EXISTS `productcats` (
   `productcat_father` smallint(5) unsigned DEFAULT NULL,
   `attachment_id` int(10) unsigned DEFAULT NULL,
   `productcat_row` smallint(5) unsigned DEFAULT '0',
+  `productcat_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
@@ -490,8 +507,8 @@ CREATE TABLE IF NOT EXISTS `productcats` (
 -- Dumping data for table `productcats`
 --
 
-INSERT INTO `productcats` (`id`, `productcat_title`, `productcat_slug`, `productcat_desc`, `productcat_father`, `attachment_id`, `productcat_row`, `date_modified`) VALUES
-(1, 'general', 'general', NULL, NULL, NULL, 0, '2014-11-07 18:11:58');
+INSERT INTO `productcats` (`id`, `productcat_title`, `productcat_slug`, `productcat_desc`, `productcat_father`, `attachment_id`, `productcat_row`, `productcat_status`, `date_modified`) VALUES
+(1, 'general', 'general', NULL, NULL, NULL, 0, 'enable', '2014-11-07 18:11:58');
 
 --
 -- Triggers `productcats`
@@ -516,7 +533,7 @@ CREATE TABLE IF NOT EXISTS `productmetas` (
   `productmeta_cat` varchar(50) NOT NULL,
   `productmeta_name` varchar(100) NOT NULL,
   `productmeta_value` varchar(999) DEFAULT NULL,
-  `productmeta_status` enum('enable','disable') NOT NULL DEFAULT 'enable',
+  `productmeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8;
 
@@ -663,6 +680,7 @@ CREATE TABLE IF NOT EXISTS `productprices` (
   `productprice_price` decimal(13,4) DEFAULT NULL,
   `productprice_discount` decimal(13,4) DEFAULT NULL,
   `productprice_vat` decimal(6,4) DEFAULT NULL,
+  `productprice_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -685,7 +703,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `product_vat` decimal(6,4) DEFAULT NULL,
   `product_initialbalance` int(10) DEFAULT '0',
   `product_mininventory` int(10) DEFAULT NULL,
-  `product_status` enum('unset','available','soon','discontinued','unavailable') DEFAULT 'unset',
+  `product_status` enum('unset','available','soon','discontinued','unavailable','expire') DEFAULT 'unset',
   `product_sold` int(10) DEFAULT '0',
   `product_stock` int(10) DEFAULT '0',
   `product_carton` int(10) DEFAULT NULL,
@@ -796,20 +814,23 @@ CREATE TABLE IF NOT EXISTS `smss` (
   `sms_to` varchar(15) DEFAULT NULL,
   `sms_message` varchar(255) DEFAULT NULL,
   `sms_messageid` int(10) unsigned DEFAULT NULL,
-  `sms_status` tinyint(4) unsigned DEFAULT NULL,
+  `sms_deliverystatus` tinyint(4) unsigned DEFAULT NULL,
   `sms_method` enum('post','get') NOT NULL DEFAULT 'post',
-  `sms_type` enum('receive','delivery') DEFAULT 'delivery',
-  `sms_date` datetime DEFAULT NULL,
+  `sms_type` enum('receive','delivery') NOT NULL DEFAULT 'delivery',
+  `sms_createdate` datetime NOT NULL,
+  `sms_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `smss`
 --
 
-INSERT INTO `smss` (`id`, `sms_from`, `sms_to`, `sms_message`, `sms_messageid`, `sms_status`, `sms_method`, `sms_type`, `sms_date`, `date_modified`) VALUES
-(70, NULL, NULL, NULL, 30221993, 4, 'get', 'delivery', '2014-12-29 22:05:24', NULL),
-(71, NULL, NULL, NULL, 777, 0, 'post', 'delivery', '2014-12-30 10:53:40', NULL);
+INSERT INTO `smss` (`id`, `sms_from`, `sms_to`, `sms_message`, `sms_messageid`, `sms_deliverystatus`, `sms_method`, `sms_type`, `sms_createdate`, `sms_status`, `date_modified`) VALUES
+(70, NULL, NULL, NULL, 30221993, 4, 'get', 'delivery', '2014-12-29 22:05:24', 'enable', NULL),
+(71, NULL, NULL, NULL, 777, 0, 'post', 'delivery', '2014-12-30 10:53:40', 'enable', NULL),
+(72, NULL, NULL, NULL, 12335345, 255, 'post', 'delivery', '2015-01-01 13:14:45', 'enable', NULL),
+(73, '+989357269759', NULL, NULL, NULL, NULL, 'post', 'receive', '0000-00-00 00:00:00', 'expire', '2015-01-03 23:11:29');
 
 -- --------------------------------------------------------
 
@@ -824,7 +845,7 @@ CREATE TABLE IF NOT EXISTS `terms` (
   `term_desc` varchar(200) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `term_father` smallint(5) unsigned DEFAULT NULL,
   `term_type` enum('cat','tag') CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL DEFAULT 'cat',
-  `term_status` enum('enable','disable') NOT NULL DEFAULT 'enable',
+  `term_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
@@ -951,12 +972,12 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `transactionmetas` (
-`id` smallint(6) unsigned NOT NULL,
-  `transaction_id` int(10) unsigned DEFAULT NULL,
-  `transactionmeta_cat` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `transactionmeta_name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+`id` int(10) unsigned NOT NULL,
+  `transaction_id` int(10) unsigned NOT NULL,
+  `transactionmeta_cat` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `transactionmeta_name` varchar(100) CHARACTER SET utf8 NOT NULL,
   `transactionmeta_value` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
-  `transactionmeta_status` enum('enable','disable') CHARACTER SET utf8 NOT NULL DEFAULT 'enable',
+  `transactionmeta_status` enum('enable','disable','expire') CHARACTER SET utf8 NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1028,20 +1049,105 @@ INSERT INTO `userlogs` (`id`, `userlog_title`, `userlog_desc`, `userlog_priority
 
 CREATE TABLE IF NOT EXISTS `usermetas` (
 `id` smallint(6) unsigned NOT NULL,
-  `user_id` smallint(6) unsigned DEFAULT NULL,
-  `usermeta_cat` varchar(50) DEFAULT NULL,
-  `usermeta_name` varchar(100) DEFAULT NULL,
+  `user_id` smallint(6) unsigned NOT NULL,
+  `usermeta_cat` varchar(50) NOT NULL,
+  `usermeta_name` varchar(100) NOT NULL,
   `usermeta_value` varchar(500) DEFAULT NULL,
-  `usermeta_status` enum('enable','disable') NOT NULL DEFAULT 'enable',
+  `usermeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=117 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `usermetas`
 --
 
 INSERT INTO `usermetas` (`id`, `user_id`, `usermeta_cat`, `usermeta_name`, `usermeta_value`, `usermeta_status`, `date_modified`) VALUES
-(1, 14, 'login_token', NULL, '913526532056', 'enable', '2014-12-30 07:40:37');
+(31, 150, 'cookie_token', '2130706433', '07f4a241bc9c3c25955a1ed796827fc9', 'enable', NULL),
+(32, 150, 'cookie_token', '2130706433', 'ab162ad38c17141ebadaf9e2cb190273', 'enable', NULL),
+(33, 150, 'cookie_token', '2130706433', '3843139503ac43f815d4b70239fa2694', 'enable', NULL),
+(34, 150, 'cookie_token', '2130706433', '2a8aeca238758bd424c08ab88854d249', 'enable', NULL),
+(35, 150, 'cookie_token', '2130706433', 'aaea2fd8cc85bd5102fe45831b9a6e81', 'enable', NULL),
+(36, 150, 'cookie_token', '2130706433', 'a68a533c1418574799db31a75b2b321c', 'enable', NULL),
+(37, 150, 'cookie_token', '2130706433', '287b82ca4d1b6f6679a2a0572450ea55', 'enable', NULL),
+(38, 150, 'cookie_token', '2130706433', '3b2347e9047e7ceb57538861db18ef63', 'enable', NULL),
+(39, 150, 'cookie_token', '2130706433', '3b2347e9047e7ceb57538861db18ef63', 'enable', NULL),
+(40, 150, 'cookie_token', '2130706433', '284ba2885b59046ace111cfec76a6d2d', 'enable', NULL),
+(41, 150, 'cookie_token', '2130706433', 'afa9c75f345d3aca5f0d6147d7f45d89', 'enable', NULL),
+(42, 150, 'cookie_token', '2130706433', 'df35951bc73c5cbd243e6af82abb68c1', 'enable', NULL),
+(43, 150, 'cookie_token', '2130706433', '82cac66da7ec3a9ac125783440c5af75', 'enable', NULL),
+(44, 150, 'cookie_token', '2130706433', 'f0b94e00f177234025f99867b1ccb88f', 'enable', NULL),
+(45, 150, 'cookie_token', '2130706433', 'c7d7e2e344f4a63bad77058d2db989e1', 'enable', NULL),
+(46, 150, 'cookie_token', '2130706433', 'c04d6cef0ce35e482250f98deb556b9b', 'enable', NULL),
+(47, 151, 'cookie_token', '2130706433', '164cd8b90bab3d62dce1c923940b66af', 'enable', NULL),
+(48, 150, 'cookie_token', '2130706433', '221ca26fff92c6ec7864f81301b07ddc', 'enable', NULL),
+(49, 150, 'cookie_token', '2130706433', '402aeab1f0c95b927fec2f1d4e663faa', 'enable', NULL),
+(50, 150, 'cookie_token', '2130706433', '628759f5cb6987e092be3753e4bfac9b', 'enable', NULL),
+(51, 150, 'cookie_token', '2130706433', '0fd7bde34a0cd3750ef203de1f028674', 'enable', NULL),
+(52, 150, 'cookie_token', '2130706433', '7449486bf997b1dc3a6ef16467c11b31', 'enable', NULL),
+(53, 150, 'cookie_token', '2130706433', '1f93d269bb76577ab295ff9f3f5cb2f7', 'enable', NULL),
+(54, 150, 'cookie_token', '2130706433', 'b8eb402c60deeb80ff00faa77e123af6', 'enable', NULL),
+(55, 150, 'cookie_token', '2130706433', 'b8eb402c60deeb80ff00faa77e123af6', 'enable', NULL),
+(56, 150, 'cookie_token', '2130706433', 'b8eb402c60deeb80ff00faa77e123af6', 'enable', NULL),
+(57, 150, 'cookie_token', '2130706433', 'b8eb402c60deeb80ff00faa77e123af6', 'enable', NULL),
+(58, 150, 'cookie_token', '2130706433', '4cc5f286ef48a7aa88974706db769705', 'enable', NULL),
+(59, 150, 'cookie_token', '2130706433', '4cc5f286ef48a7aa88974706db769705', 'enable', NULL),
+(60, 150, 'cookie_token', '2130706433', '4cc5f286ef48a7aa88974706db769705', 'enable', NULL),
+(61, 150, 'cookie_token', '2130706433', '4cc5f286ef48a7aa88974706db769705', 'enable', NULL),
+(62, 150, 'cookie_token', '2130706433', 'fd9435a319cedbac7b6989ed2f88d650', 'enable', NULL),
+(63, 150, 'cookie_token', '2130706433', 'dc50b53a346c18dd042a315021bf2535', 'enable', NULL),
+(64, 150, 'cookie_token', '2130706433', 'dc50b53a346c18dd042a315021bf2535', 'enable', NULL),
+(65, 150, 'cookie_token', '2130706433', 'dc50b53a346c18dd042a315021bf2535', 'enable', NULL),
+(66, 150, 'cookie_token', '2130706433', 'dc50b53a346c18dd042a315021bf2535', 'enable', NULL),
+(67, 150, 'cookie_token', '2130706433', '456d1d59babbb823ae54bae104fb360c', 'enable', NULL),
+(68, 150, 'cookie_token', '2130706433', 'a25f678e5aed1d13a9c6aac02eb42de2', 'enable', NULL),
+(69, 150, 'cookie_token', '2130706433', '97babeff1675f673bec457378934ccad', 'enable', NULL),
+(70, 150, 'cookie_token', '2130706433', '4f28ace7cb1a6f0e769045e5320aabd0', 'enable', NULL),
+(71, 150, 'cookie_token', '2130706433', 'f1572e4922aece9f2c7f945f0137e46b', 'enable', NULL),
+(72, 150, 'cookie_token', '2130706433', '2e510eb2325e4cdbf415b572f8f0767f', 'enable', NULL),
+(73, 150, 'cookie_token', '2130706433', '33d20fe1bc9435e89b64fc6a99db4606', 'enable', NULL),
+(74, 150, 'cookie_token', '2130706433', '461abc03b115fdc5d620146cf58aff4d', 'enable', NULL),
+(75, 150, 'cookie_token', '2130706433', '4efbda84ef22532f8978f84186b4c4aa', 'enable', NULL),
+(76, 150, 'cookie_token', '2130706433', '7da1a75a2b3c121a031ae00300b9b69e', 'enable', NULL),
+(77, 150, 'cookie_token', '2130706433', '5b39d013db8f971c61722f4464051adf', 'enable', NULL),
+(78, 150, 'cookie_token', '2130706433', '89ef2fd993444fb11a3888dc26e82fea', 'enable', NULL),
+(79, 150, 'cookie_token', '2130706433', 'afaee8de9cc208366391c3abaf2a860c', 'enable', NULL),
+(80, 150, 'cookie_token', '2130706433', 'afaee8de9cc208366391c3abaf2a860c', 'enable', NULL),
+(81, 150, 'cookie_token', '2130706433', '4b5c3b63692e32cb22b88b396a0e93bf', 'enable', NULL),
+(82, 150, 'cookie_token', '2130706433', '4b5c3b63692e32cb22b88b396a0e93bf', 'enable', NULL),
+(83, 150, 'cookie_token', '2130706433', '73b2af51de9fa90a00b994460922155a', 'enable', NULL),
+(84, 150, 'cookie_token', '2130706433', '595303de6c029da83b527b3181c2023f', 'enable', NULL),
+(85, 150, 'cookie_token', '2130706433', 'a131fc4c317f17de3e168e8de29d954d', 'enable', NULL),
+(86, 150, 'cookie_token', '2130706433', 'a9ba26d3eb8725457361003d2d28ffc3', 'enable', NULL),
+(87, 150, 'cookie_token', '2130706433', '04d122c514d040a01335da2397366f82', 'enable', NULL),
+(88, 150, 'cookie_token', '2130706433', 'a015d9974d91a2e554687ee1f57b0fc6', 'enable', NULL),
+(89, 150, 'cookie_token', '2130706433', 'a015d9974d91a2e554687ee1f57b0fc6', 'enable', NULL),
+(90, 150, 'cookie_token', '2130706433', '63ef43d2c33d04ba0d84a2cb734ac615', 'enable', NULL),
+(91, 150, 'cookie_token', '2130706433', '0f1877f94aeb9ebc7211ed1547c5f024', 'enable', NULL),
+(92, 150, 'cookie_token', '2130706433', '8dee8a476c07762fc6db1f7c3d967ef6', 'enable', NULL),
+(93, 150, 'cookie_token', '2130706433', '154e2e44a6f50c689ba4be88ff5893e1', 'enable', NULL),
+(94, 150, 'cookie_token', '2130706433', '154e2e44a6f50c689ba4be88ff5893e1', 'enable', NULL),
+(95, 150, 'cookie_token', '2130706433', '24d744bb74026c32705209998a5d7cbb', 'enable', NULL),
+(96, 150, 'cookie_token', '2130706433', 'b6ed42d59156395cf8cdd32049c4c92f', 'enable', NULL),
+(97, 150, 'cookie_token', '2130706433', '5fd29daf7d8197c83a508a7c4fd95a56', 'enable', NULL),
+(98, 150, 'cookie_token', '2130706433', '983e67a94750c08e9d2a55fb496aada5', 'enable', NULL),
+(99, 150, 'cookie_token', '2130706433', 'cf133888e93008e37596635335459377', 'enable', NULL),
+(100, 150, 'cookie_token', '2130706433', '883f04d59972682d5fa94d98983082aa', 'enable', NULL),
+(101, 150, 'cookie_token', '2130706433', '9797bb9d78e4e5ef31f0951ce1595dcd', 'enable', NULL),
+(102, 150, 'cookie_token', '2130706433', '608b7c30a135637b0341260b28becf38', 'enable', NULL),
+(103, 150, 'cookie_token', '2130706433', 'ddca28f00e25a5430b96e860a7f57425', 'enable', NULL),
+(104, 150, 'cookie_token', '2130706433', 'c46828560d324c00e3c3e133fffb37ce', 'enable', NULL),
+(105, 150, 'cookie_token', '2130706433', '088ac4df21c65e08aa975d1308537cdd', 'enable', NULL),
+(106, 150, 'cookie_token', '2130706433', '8d6fd7a2c8203b0bf4a1984053334a4e', 'enable', NULL),
+(107, 150, 'cookie_token', '2130706433', 'c2c47f851e496baeee54c4013e1bc9b3', 'enable', NULL),
+(108, 150, 'cookie_token', '2130706433', '49b481aa8747184481263e5eb29c08e9', 'enable', NULL),
+(109, 150, 'cookie_token', '2130706433', 'e728c44aed7148220ffd45925cb2f58f', 'enable', NULL),
+(110, 150, 'cookie_token', '2130706433', '86e726d07575e06309572c73d4e18e02', 'enable', NULL),
+(111, 150, 'cookie_token', '2130706433', '49820ebe8583bfa043ea079a77f669c9', 'enable', NULL),
+(112, 150, 'cookie_token', '2130706433', '2b8b99856ff4dea68fc8e23ebfbaa2eb', 'enable', NULL),
+(113, 150, 'cookie_token', '2130706433', '2bd71dfd3aab61ac98c7708e68e58204', 'enable', NULL),
+(114, 150, 'cookie_token', '2130706433', '41932c357280245542e4e5c9791e4cf6', 'enable', NULL),
+(115, 150, 'cookie_token', '2130706433', '4386a08a9d35403556ddcbc54a38d693', 'enable', NULL),
+(116, 150, 'cookie_token', '2130706433', 'f364460945a59d7f9179e4e8c80cdf60', 'expire', '2015-01-01 13:40:51');
 
 -- --------------------------------------------------------
 
@@ -1051,7 +1157,7 @@ INSERT INTO `usermetas` (`id`, `user_id`, `usermeta_cat`, `usermeta_name`, `user
 
 CREATE TABLE IF NOT EXISTS `users` (
 `id` smallint(5) unsigned NOT NULL COMMENT 'use char(36) if i want use uuid',
-  `user_type` enum('store_admin','store_employee','store_supplier','store_customer','admin','user') DEFAULT 'user',
+  `user_type` enum('storeadmin','storeemployee','storesupplier','storecustomer','admin','user') DEFAULT 'user',
   `user_mobile` varchar(15) NOT NULL COMMENT 'Mobile',
   `user_pass` char(32) NOT NULL COMMENT 'Password',
   `user_email` varchar(50) DEFAULT NULL,
@@ -1060,34 +1166,27 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_firstname` varchar(50) DEFAULT NULL COMMENT 'First Name',
   `user_lastname` varchar(50) DEFAULT NULL COMMENT 'Last Name',
   `user_birthday` datetime DEFAULT NULL,
-  `user_status` enum('active','awaiting','deactive','removed') DEFAULT 'awaiting' COMMENT 'Status',
+  `user_status` enum('active','awaiting','deactive','removed','filter') DEFAULT 'awaiting' COMMENT 'Status',
   `user_credit` enum('yes','no') DEFAULT 'no',
   `permission_id` smallint(5) unsigned DEFAULT NULL,
   `user_createdate` datetime NOT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=150 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=154 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `user_type`, `user_mobile`, `user_pass`, `user_email`, `user_gender`, `user_nickname`, `user_firstname`, `user_lastname`, `user_birthday`, `user_status`, `user_credit`, `permission_id`, `user_createdate`, `date_modified`) VALUES
-(14, 'store_admin', '+989357269758', '96e79218965eb72c92a549dd5a330112', 'eee2', 'male', 'J.Evazzadeh', 'Javad', 'Evazzadeh', NULL, 'active', 'no', 1, '0000-00-00 00:00:00', '2014-12-28 12:23:54'),
-(15, 'store_admin', '+989113334444', '96e79218965eb72c92a549dd5a330112', NULL, NULL, 'Test1', 'Test', NULL, NULL, 'awaiting', 'no', 1, '0000-00-00 00:00:00', '2014-11-25 13:34:29'),
-(16, 'store_admin', '+989357269750', '96e79218965eb72c92a549dd5a330112', 'aaa2', NULL, 'Test3', NULL, 'Test last', NULL, 'active', 'no', 1, '0000-00-00 00:00:00', '2014-11-25 13:34:06'),
-(28, 'store_admin', '+989363334444', '96e79218965eb72c92a549dd5a330112', 'aaa', NULL, 'Javad', 'Javad', 'Evazzadeh', NULL, 'active', 'yes', NULL, '0000-00-00 00:00:00', '2014-11-26 10:14:24'),
-(74, 'store_admin', '+989389105350', '96e79218965eb72c92a549dd5a330112', NULL, NULL, NULL, NULL, NULL, NULL, 'active', 'no', NULL, '0000-00-00 00:00:00', '2014-11-26 15:46:37'),
-(134, 'store_admin', '+989357269759', '111111', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', '2014-12-28 19:17:04'),
-(137, 'store_admin', '+984982364893', '221231231', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', NULL),
-(138, 'store_admin', '+984982364842', '123124321424', NULL, NULL, NULL, NULL, NULL, NULL, 'active', 'no', NULL, '0000-00-00 00:00:00', '2014-12-28 17:56:51'),
-(139, 'store_admin', '+981241242353', '235325213', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', NULL),
-(142, 'store_admin', '+984233242314', '214132432', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', NULL),
-(143, 'store_admin', '+984233242313', '1241224', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', NULL),
-(144, 'store_admin', '+984233242311', '14124124213', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', NULL),
-(145, 'store_admin', '+984233242310', '124124124', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', NULL),
-(146, 'store_admin', '+989357262593', '123123122', NULL, NULL, NULL, NULL, NULL, NULL, 'active', 'no', NULL, '0000-00-00 00:00:00', '2014-12-28 19:00:29'),
-(148, 'store_admin', '+94715247352', '252315325125', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', NULL),
-(149, 'store_admin', '+923141325235', '214324234', NULL, NULL, NULL, NULL, NULL, NULL, 'active', 'no', NULL, '0000-00-00 00:00:00', '2014-12-28 21:10:34');
+(14, 'storeadmin', '+989357269758', '96e79218965eb72c92a549dd5a330112', 'eee2', 'male', 'J.Evazzadeh', 'Javad', 'Evazzadeh', NULL, 'active', 'no', 1, '0000-00-00 00:00:00', '2014-12-30 12:45:59'),
+(15, 'storeadmin', '+989113334444', '96e79218965eb72c92a549dd5a330112', NULL, NULL, 'Test1', 'Test', NULL, NULL, 'awaiting', 'no', 1, '0000-00-00 00:00:00', '2014-12-30 12:46:00'),
+(16, 'storeadmin', '+989357269750', '96e79218965eb72c92a549dd5a330112', 'aaa2', NULL, 'Test3', NULL, 'Test last', NULL, 'active', 'no', 1, '0000-00-00 00:00:00', '2014-12-30 12:46:01'),
+(28, 'storeadmin', '+989363334444', '96e79218965eb72c92a549dd5a330112', 'aaa', NULL, 'Javad', 'Javad', 'Evazzadeh', NULL, 'active', 'yes', NULL, '0000-00-00 00:00:00', '2014-12-30 12:46:01'),
+(74, 'storeadmin', '+989389105350', '96e79218965eb72c92a549dd5a330112', NULL, NULL, NULL, NULL, NULL, NULL, 'active', 'no', NULL, '0000-00-00 00:00:00', '2014-12-30 12:46:01'),
+(150, 'storeadmin', '+989357269759', '111111', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', '2014-12-30 12:46:02'),
+(151, 'storeadmin', '+989357269475', '111111', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', '2014-12-30 12:46:02'),
+(152, 'storeadmin', '+989357269752', '111111', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '2014-12-30 13:24:11', '2014-12-30 12:46:02'),
+(153, 'storeadmin', '+989357269742', '111111', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '2014-12-30 13:58:16', NULL);
 
 -- --------------------------------------------------------
 
@@ -1103,122 +1202,101 @@ CREATE TABLE IF NOT EXISTS `verifications` (
   `verification_url` varchar(100) DEFAULT NULL,
   `user_id` smallint(5) unsigned NOT NULL,
   `verification_verified` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL DEFAULT 'no',
+  `verification_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `verification_createdate` datetime DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=365 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=371 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `verifications`
 --
 
-INSERT INTO `verifications` (`id`, `verification_type`, `verification_value`, `verification_code`, `verification_url`, `user_id`, `verification_verified`, `verification_createdate`, `date_modified`) VALUES
-(27, 'mobileforget', '+989357269759', '4543', NULL, 16, 'no', NULL, '0000-00-00 00:00:00'),
-(28, 'mobileregister', '+9811112222', '2625', NULL, 15, 'no', NULL, '0000-00-00 00:00:00'),
-(29, 'mobileregister', '+989112225555', '8785', NULL, 15, 'no', NULL, '0000-00-00 00:00:00'),
-(30, 'mobileregister', '+989123124112', '4338', NULL, 15, 'no', NULL, '0000-00-00 00:00:00'),
-(31, 'mobileregister', '+989111941061', '8686', NULL, 15, 'no', NULL, '0000-00-00 00:00:00'),
-(32, 'mobileregister', '+98124124124', '2423', NULL, 15, 'no', NULL, '0000-00-00 00:00:00'),
-(33, 'mobileregister', '+9812412412', '6454', NULL, 15, 'no', NULL, '0000-00-00 00:00:00'),
-(34, 'mobileregister', '+98214124124', '8765', NULL, 15, 'no', NULL, '0000-00-00 00:00:00'),
-(35, 'mobileregister', '+98235352135', '3233', NULL, 15, 'no', NULL, '0000-00-00 00:00:00'),
-(36, 'mobileregister', '+98432432423', '5483', NULL, 15, 'no', NULL, '0000-00-00 00:00:00'),
-(37, 'mobileregister', '+98253253215', '3857', NULL, 15, 'no', NULL, '0000-00-00 00:00:00'),
-(38, 'mobileregister', '+983535315', '9456', NULL, 15, 'no', NULL, '0000-00-00 00:00:00'),
-(39, 'mobileregister', '+984325235', '6674', NULL, 15, 'no', NULL, '0000-00-00 00:00:00'),
-(42, 'mobileforget', '+989113334444', '8484', NULL, 14, 'yes', NULL, '2014-11-22 23:54:38'),
-(43, 'mobileforget', '+989113334444', '4893', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(44, 'mobileforget', '+989113334444', '3483', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(45, 'mobileforget', '+989113334444', '9468', NULL, 14, 'yes', NULL, '2014-11-22 23:53:33'),
-(46, 'mobileforget', '+989113334444', '4388', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(62, 'mobileforget', '+989357269759', '8249', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(65, 'mobileforget', '+989357269759', '5768', NULL, 14, 'no', '2014-12-28 21:47:42', '2014-12-28 18:17:44'),
-(66, 'mobileforget', '+989357269759', '4526', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(82, 'mobileforget', '+989357269759', '3536', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(103, 'mobileforget', '+989357269759', '7737', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(104, 'mobileforget', '+989357269759', '3795', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(105, 'mobileforget', '+989357269759', '2253', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(106, 'mobileforget', '+989357269759', '2997', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(107, 'mobileforget', '+989357269759', '9269', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(108, 'mobileforget', '+989357269759', '8682', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(111, 'mobileforget', '+989357269759', '8796', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(112, 'mobileforget', '+989357269759', '6325', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(115, 'mobileforget', '+989357269759', '5526', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(116, 'mobileforget', '+989357269759', '2592', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(117, 'mobileforget', '+989357269759', '2595', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(118, 'mobileforget', '+989357269759', '9994', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(119, 'mobileforget', '+989357269759', '3274', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(120, 'mobileforget', '+989357269759', '9553', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(121, 'mobileforget', '+989357269759', '9954', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(122, 'mobileforget', '+989357269759', '2665', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(123, 'mobileforget', '+989357269759', '9242', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(124, 'mobileforget', '+989357269759', '6634', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(125, 'mobileforget', '+989357269759', '2296', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(126, 'mobileforget', '+989357269759', '4834', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(127, 'mobileforget', '+989357269759', '5676', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(128, 'mobileforget', '+989357269759', '9882', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(129, 'mobileforget', '+989357269759', '7849', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(131, 'mobileforget', '+989357269759', '2947', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(132, 'mobileforget', '+989357269759', '5467', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(133, 'mobileforget', '+989357269759', '7548', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(134, 'mobileforget', '+989357269759', '6982', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(135, 'mobileforget', '+989357269759', '7258', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(136, 'mobileforget', '+989357269759', '7554', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(137, 'mobileforget', '+989357269759', '9349', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(138, 'mobileforget', '+989357269759', '9453', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(139, 'mobileforget', '+989357269759', '8252', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(140, 'mobileforget', '+989357269759', '8437', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(141, 'mobileforget', '+989357269759', '7279', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(142, 'mobileforget', '+989357269759', '3739', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(143, 'mobileforget', '+989357269759', '6467', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(144, 'mobileforget', '+989357269759', '8467', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(145, 'mobileforget', '+989357269759', '5247', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(146, 'mobileforget', '+989357269759', '4955', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(147, 'mobileforget', '+989113334444', '3298', NULL, 15, 'no', NULL, '0000-00-00 00:00:00'),
-(149, 'mobileforget', '+989357269759', '3653', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(150, 'mobileforget', '+989357269759', '4652', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(151, 'mobileforget', '+989357269759', '5379', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(155, 'mobileforget', '+989113334444', '3575', NULL, 15, 'no', NULL, '0000-00-00 00:00:00'),
-(156, 'mobileforget', '+989357269759', '2539', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(161, 'mobileforget', '+989357269759', '6575', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(225, 'mobileforget', '+989357269759', '5284', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(226, 'mobileforget', '+989357269759', '9544', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(227, 'mobileforget', '+989357269759', '9758', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(228, 'mobileforget', '+989357269759', '8763', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(261, 'mobileforget', '+989357269759', '2879', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(262, 'mobileforget', '+989357269759', '6733', NULL, 14, 'yes', NULL, '2014-11-26 15:35:18'),
-(266, 'mobileregister', '+989389105350', '5457', NULL, 74, 'yes', NULL, '2014-11-26 15:46:37'),
-(267, 'mobileforget', '+989389105350', '5282', NULL, 74, 'yes', NULL, '2014-11-26 15:48:00'),
-(274, 'mobileforget', '+989357269759', '6635', NULL, 14, 'no', NULL, '0000-00-00 00:00:00'),
-(275, 'mobileforget', '+989357269759', '6276', NULL, 14, 'yes', NULL, '2014-12-28 13:49:21'),
-(276, 'mobileforget', '+989357269759', '2945', NULL, 14, 'yes', NULL, '2014-12-28 13:49:50'),
-(334, 'mobileregister', '+989357269759', '2682', NULL, 134, 'no', NULL, NULL),
-(337, 'mobileforget', '+989357269759', '6273', NULL, 134, 'no', NULL, NULL),
-(338, 'mobileregister', '+984982364893', '7294', NULL, 137, 'no', NULL, NULL),
-(339, 'mobileregister', '+984982364842', '7676', NULL, 138, 'yes', NULL, '2014-12-28 17:56:51'),
-(340, 'mobileregister', '+981241242353', '5835', NULL, 139, 'no', NULL, NULL),
-(341, 'mobileregister', '+984233242314', '2483', NULL, 142, 'no', '2014-12-28 19:18:26', NULL),
-(342, 'mobileregister', '+984233242313', '4697', NULL, 143, 'no', '0000-00-00 00:00:00', NULL),
-(343, 'mobileregister', '+984233242311', '4863', NULL, 144, 'no', '0000-00-00 00:00:00', NULL),
-(344, 'mobileregister', '+984233242310', '4726', NULL, 145, 'no', '2014-12-28 19:24:39', NULL),
-(345, 'mobileforget', '+989357269759', '9585', NULL, 134, 'no', NULL, NULL),
-(346, 'mobileregister', '+989357262593', '8924', NULL, 146, 'yes', '2014-12-28 20:00:20', '2014-12-28 19:00:29'),
-(348, 'mobileregister', '+94715247352', '2936', NULL, 148, 'no', '2014-12-28 22:05:48', NULL),
-(349, 'mobileregister', '+923141325235', '6448', NULL, 149, 'yes', '2014-12-28 22:08:24', '2014-12-28 21:13:10'),
-(350, 'mobileforget', '+989357269759', '6576', NULL, 134, 'no', NULL, NULL),
-(351, 'mobileforget', '+989357269759', '7775', NULL, 134, 'no', NULL, NULL),
-(352, 'mobileforget', '+989357269759', '4225', NULL, 134, 'no', NULL, NULL),
-(353, 'mobileforget', '+989357269759', '3568', NULL, 134, 'no', NULL, NULL),
-(354, 'mobileforget', '+989357269759', '8293', NULL, 134, 'no', NULL, NULL),
-(355, 'mobileforget', '+989357269759', '3254', NULL, 134, 'no', NULL, NULL),
-(356, 'mobileforget', '+989357269759', '9723', NULL, 134, 'no', NULL, NULL),
-(357, 'mobileforget', '+989357269759', '5648', NULL, 134, 'no', NULL, NULL),
-(358, 'mobileforget', '+989357269759', '3367', NULL, 134, 'no', NULL, NULL),
-(359, 'mobileforget', '+989357269759', '6293', NULL, 134, 'no', NULL, NULL),
-(360, 'mobileforget', '+989357269759', '2355', NULL, 134, 'no', NULL, NULL),
-(361, 'mobileforget', '+989357269759', '8837', NULL, 134, 'no', NULL, NULL),
-(362, 'mobileforget', '+989357269759', '4327', NULL, 134, 'no', NULL, NULL),
-(363, 'mobileforget', '+989357269759', '9275', NULL, 134, 'no', NULL, NULL),
-(364, 'mobileforget', '+989357269759', '6548', NULL, 134, 'no', NULL, NULL);
+INSERT INTO `verifications` (`id`, `verification_type`, `verification_value`, `verification_code`, `verification_url`, `user_id`, `verification_verified`, `verification_status`, `verification_createdate`, `date_modified`) VALUES
+(27, 'mobileforget', '+989357269759', '4543', NULL, 16, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(28, 'mobileregister', '+9811112222', '2625', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(29, 'mobileregister', '+989112225555', '8785', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(30, 'mobileregister', '+989123124112', '4338', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(31, 'mobileregister', '+989111941061', '8686', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(32, 'mobileregister', '+98124124124', '2423', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(33, 'mobileregister', '+9812412412', '6454', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(34, 'mobileregister', '+98214124124', '8765', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(35, 'mobileregister', '+98235352135', '3233', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(36, 'mobileregister', '+98432432423', '5483', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(37, 'mobileregister', '+98253253215', '3857', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(38, 'mobileregister', '+983535315', '9456', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(39, 'mobileregister', '+984325235', '6674', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(42, 'mobileforget', '+989113334444', '8484', NULL, 14, 'yes', 'enable', NULL, '2014-11-22 23:54:38'),
+(43, 'mobileforget', '+989113334444', '4893', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(44, 'mobileforget', '+989113334444', '3483', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(45, 'mobileforget', '+989113334444', '9468', NULL, 14, 'yes', 'enable', NULL, '2014-11-22 23:53:33'),
+(46, 'mobileforget', '+989113334444', '4388', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(62, 'mobileforget', '+989357269759', '8249', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(65, 'mobileforget', '+989357269759', '5768', NULL, 14, 'no', 'enable', '2014-12-28 21:47:42', '2014-12-28 18:17:44'),
+(66, 'mobileforget', '+989357269759', '4526', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(82, 'mobileforget', '+989357269759', '3536', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(103, 'mobileforget', '+989357269759', '7737', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(104, 'mobileforget', '+989357269759', '3795', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(105, 'mobileforget', '+989357269759', '2253', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(106, 'mobileforget', '+989357269759', '2997', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(107, 'mobileforget', '+989357269759', '9269', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(108, 'mobileforget', '+989357269759', '8682', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(111, 'mobileforget', '+989357269759', '8796', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(112, 'mobileforget', '+989357269759', '6325', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(115, 'mobileforget', '+989357269759', '5526', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(116, 'mobileforget', '+989357269759', '2592', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(117, 'mobileforget', '+989357269759', '2595', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(118, 'mobileforget', '+989357269759', '9994', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(119, 'mobileforget', '+989357269759', '3274', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(120, 'mobileforget', '+989357269759', '9553', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(121, 'mobileforget', '+989357269759', '9954', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(122, 'mobileforget', '+989357269759', '2665', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(123, 'mobileforget', '+989357269759', '9242', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(124, 'mobileforget', '+989357269759', '6634', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(125, 'mobileforget', '+989357269759', '2296', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(126, 'mobileforget', '+989357269759', '4834', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(127, 'mobileforget', '+989357269759', '5676', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(128, 'mobileforget', '+989357269759', '9882', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(129, 'mobileforget', '+989357269759', '7849', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(131, 'mobileforget', '+989357269759', '2947', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(132, 'mobileforget', '+989357269759', '5467', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(133, 'mobileforget', '+989357269759', '7548', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(134, 'mobileforget', '+989357269759', '6982', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(135, 'mobileforget', '+989357269759', '7258', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(136, 'mobileforget', '+989357269759', '7554', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(137, 'mobileforget', '+989357269759', '9349', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(138, 'mobileforget', '+989357269759', '9453', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(139, 'mobileforget', '+989357269759', '8252', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(140, 'mobileforget', '+989357269759', '8437', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(141, 'mobileforget', '+989357269759', '7279', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(142, 'mobileforget', '+989357269759', '3739', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(143, 'mobileforget', '+989357269759', '6467', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(144, 'mobileforget', '+989357269759', '8467', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(145, 'mobileforget', '+989357269759', '5247', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(146, 'mobileforget', '+989357269759', '4955', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(147, 'mobileforget', '+989113334444', '3298', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(149, 'mobileforget', '+989357269759', '3653', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(150, 'mobileforget', '+989357269759', '4652', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(151, 'mobileforget', '+989357269759', '5379', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(155, 'mobileforget', '+989113334444', '3575', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(156, 'mobileforget', '+989357269759', '2539', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(161, 'mobileforget', '+989357269759', '6575', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(225, 'mobileforget', '+989357269759', '5284', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(226, 'mobileforget', '+989357269759', '9544', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(227, 'mobileforget', '+989357269759', '9758', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(228, 'mobileforget', '+989357269759', '8763', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(261, 'mobileforget', '+989357269759', '2879', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(262, 'mobileforget', '+989357269759', '6733', NULL, 14, 'yes', 'enable', NULL, '2014-11-26 15:35:18'),
+(266, 'mobileregister', '+989389105350', '5457', NULL, 74, 'yes', 'enable', NULL, '2014-11-26 15:46:37'),
+(267, 'mobileforget', '+989389105350', '5282', NULL, 74, 'yes', 'enable', NULL, '2014-11-26 15:48:00'),
+(274, 'mobileforget', '+989357269759', '6635', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
+(275, 'mobileforget', '+989357269759', '6276', NULL, 14, 'yes', 'enable', NULL, '2014-12-28 13:49:21'),
+(276, 'mobileforget', '+989357269759', '2945', NULL, 14, 'yes', 'enable', NULL, '2014-12-28 13:49:50'),
+(365, 'mobileregister', '+989357269759', '9285', NULL, 150, 'no', 'enable', '2014-12-30 12:17:28', NULL),
+(366, 'mobileregister', '+989357269475', '8335', NULL, 151, 'no', 'enable', '2014-12-30 12:26:49', NULL),
+(367, 'mobileregister', '+989357269752', '5355', NULL, 152, 'no', 'enable', '2014-12-30 13:24:12', NULL),
+(368, 'mobileregister', '+989357269742', '9928', NULL, 153, 'no', 'enable', '2014-12-30 13:58:16', NULL),
+(369, 'mobileforget', '+989357269759', '5453', NULL, 150, 'no', 'enable', NULL, NULL),
+(370, 'mobileforget', '+989357269759', '5433', NULL, 150, 'no', 'enable', NULL, NULL);
 
 --
 -- Triggers `verifications`
@@ -1249,15 +1327,7 @@ CREATE TABLE IF NOT EXISTS `visitors` (
   `user_id` smallint(5) unsigned DEFAULT NULL,
   `visitor_createdate` datetime DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=197 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `visitors`
---
-
-INSERT INTO `visitors` (`id`, `visitor_ip`, `visitor_url`, `visitor_agent`, `visitor_referer`, `visitor_robot`, `user_id`, `visitor_createdate`, `date_modified`) VALUES
-(195, 2130706433, 'http%3A%2F%2Fjibres.dev%2F', 'Mozilla%2F5.0+%28Windows+NT+6.2%3B+WOW64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F39.0.2171.95+Safari%2F537.36', NULL, 'no', NULL, '2014-12-23 10:29:20', NULL),
-(196, 2130706433, 'http%3A%2F%2Fjibres.dev%2F', 'Mozilla%2F5.0+%28Windows+NT+6.2%3B+WOW64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F39.0.2171.95+Safari%2F537.36', NULL, 'no', NULL, '2014-12-23 10:29:21', NULL);
+) ENGINE=InnoDB AUTO_INCREMENT=2484 DEFAULT CHARSET=utf8;
 
 --
 -- Indexes for dumped tables
@@ -1274,6 +1344,12 @@ ALTER TABLE `accounts`
 --
 ALTER TABLE `addons`
  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`addon_slug`) USING BTREE;
+
+--
+-- Indexes for table `attachmentmetas`
+--
+ALTER TABLE `attachmentmetas`
+ ADD PRIMARY KEY (`id`), ADD KEY `attachmentmetas_attachments_id` (`attachment_id`);
 
 --
 -- Indexes for table `attachments`
@@ -1476,6 +1552,11 @@ MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'test comment',
 ALTER TABLE `addons`
 MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `attachmentmetas`
+--
+ALTER TABLE `attachmentmetas`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `attachments`
 --
 ALTER TABLE `attachments`
@@ -1569,7 +1650,7 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 -- AUTO_INCREMENT for table `smss`
 --
 ALTER TABLE `smss`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=73;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=74;
 --
 -- AUTO_INCREMENT for table `terms`
 --
@@ -1584,7 +1665,7 @@ MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `transactionmetas`
 --
 ALTER TABLE `transactionmetas`
-MODIFY `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `transactions`
 --
@@ -1599,22 +1680,22 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 -- AUTO_INCREMENT for table `usermetas`
 --
 ALTER TABLE `usermetas`
-MODIFY `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=117;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'use char(36) if i want use uuid',AUTO_INCREMENT=150;
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'use char(36) if i want use uuid',AUTO_INCREMENT=154;
 --
 -- AUTO_INCREMENT for table `verifications`
 --
 ALTER TABLE `verifications`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=365;
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=371;
 --
 -- AUTO_INCREMENT for table `visitors`
 --
 ALTER TABLE `visitors`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=197;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2484;
 --
 -- Constraints for dumped tables
 --
@@ -1625,6 +1706,12 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=197;
 ALTER TABLE `accounts`
 ADD CONSTRAINT `accounts_banks_id` FOREIGN KEY (`bank_id`) REFERENCES `banks` (`id`),
 ADD CONSTRAINT `accounts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `attachmentmetas`
+--
+ALTER TABLE `attachmentmetas`
+ADD CONSTRAINT `attachmentmetas_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`);
 
 --
 -- Constraints for table `attachments`

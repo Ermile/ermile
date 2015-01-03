@@ -50,11 +50,11 @@ h1{color: #222;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 30px;
 .account input::selection{color:#4f5561;}
 .form-element{border-bottom:3px solid #34383d;}
 .form-element:last-child,.center .form-element:nth-last-child(2){border:none;}
+.form-element span{width:100%;}
 
 .intl-tel-input {width:96%;margin-right:4%;z-index:10;}
 .intl-tel-input input, .intl-tel-input input[type=text], .intl-tel-input input[type=tel] {padding-left: 0px;padding-right: 50px;margin-right: 0;}
 .intl-tel-input .flag-dropdown {top: -5px;right: 0;}
-.intl-tel-input .selected-flag {padding: 0 8px 0 0;}
 .intl-tel-input .selected-flag .arrow {left:inherit;right: 10px;}
 .intl-tel-input .country-list{right:0;width:300px;height:190px;}
 

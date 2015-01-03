@@ -7,10 +7,11 @@ class smss
 	public $sms_to = array('type' => 'varchar@15', 'null'=>'YES', 'show'=>'YES', 'label'=>'To');
 	public $sms_message = array('type' => 'varchar@255', 'null'=>'YES', 'show'=>'YES', 'label'=>'Message');
 	public $sms_messageid = array('type' => 'int@10', 'null'=>'YES', 'show'=>'YES', 'label'=>'Messageid');
-	public $sms_status = array('type' => 'tinyint@4', 'null'=>'YES', 'show'=>'YES', 'label'=>'Status');
+	public $sms_deliverystatus = array('type' => 'tinyint@4', 'null'=>'YES', 'show'=>'YES', 'label'=>'Deliverystatus');
 	public $sms_method = array('type' => 'enum@post,get!post', 'null'=>'NO', 'show'=>'YES', 'label'=>'Method');
-	public $sms_type = array('type' => 'enum@receive,delivery!delivery', 'null'=>'YES', 'show'=>'YES', 'label'=>'Type');
-	public $sms_date = array('type' => 'datetime@', 'null'=>'YES', 'show'=>'YES', 'label'=>'Date');
+	public $sms_type = array('type' => 'enum@receive,delivery!delivery', 'null'=>'NO', 'show'=>'YES', 'label'=>'Type');
+	public $sms_createdate = array('type' => 'datetime@', 'null'=>'NO', 'show'=>'YES', 'label'=>'Createdate');
+	public $sms_status = array('type' => 'enum@enable,disable,expire!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
 	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
 
 
@@ -32,12 +33,9 @@ class smss
 	{
 		$this->form("text")->name("messageid")->min(0)->max(999999999)->type('number');
 	}
-
-	//------------------------------------------------------------------ select button
-	public function sms_status() 
+	public function sms_deliverystatus() 
 	{
-		$this->form("select")->name("status")->type("select")->min(0)->max(999)->validate();
-		$this->setChild($this->form);
+		$this->form("text")->name("deliverystatus")->min(0)->max(999)->type('number');
 	}
 	public function sms_method() 
 	{
@@ -47,12 +45,19 @@ class smss
 	//------------------------------------------------------------------ select button
 	public function sms_type() 
 	{
-		$this->form("select")->name("type")->type("select")->validate();
+		$this->form("select")->name("type")->type("select")->required()->validate();
 		$this->setChild($this->form);
 	}
-	public function sms_date() 
+	public function sms_createdate() 
 	{
-		$this->form("text")->name("date");
+		$this->form("text")->name("createdate")->required();
+	}
+
+	//------------------------------------------------------------------ select button
+	public function sms_status() 
+	{
+		$this->form("select")->name("status")->type("select")->required()->validate();
+		$this->setChild($this->form);
 	}
 	public function date_modified() {}
 }

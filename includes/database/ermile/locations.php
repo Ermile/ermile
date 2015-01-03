@@ -6,7 +6,7 @@ class locations
 	public $location_title = array('type' => 'varchar@100', 'null'=>'NO', 'show'=>'YES', 'label'=>'Title');
 	public $location_slug = array('type' => 'varchar@100', 'null'=>'NO', 'show'=>'YES', 'label'=>'Slug');
 	public $location_desc = array('type' => 'varchar@200', 'null'=>'YES', 'show'=>'NO', 'label'=>'Description');
-	public $location_status = array('type' => 'enum@enable,disable!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
+	public $location_status = array('type' => 'enum@enable,disable,expire!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
 	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
 
 

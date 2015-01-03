@@ -9,7 +9,7 @@ class permissions
 	public $permission_add = array('type' => 'enum@yes,no!no', 'null'=>'NO', 'show'=>'YES', 'label'=>'Add');
 	public $permission_edit = array('type' => 'enum@yes,no!no', 'null'=>'NO', 'show'=>'YES', 'label'=>'Edit');
 	public $permission_delete = array('type' => 'enum@yes,no!no', 'null'=>'NO', 'show'=>'YES', 'label'=>'Delete');
-	public $permission_status = array('type' => 'enum@enable,disable!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
+	public $permission_status = array('type' => 'enum@enable,disable,expire!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
 	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
 
 

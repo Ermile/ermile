@@ -6,7 +6,7 @@ class banks
 	public $bank_title = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Title');
 	public $bank_slug = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Slug');
 	public $bank_website = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'NO', 'label'=>'Website');
-	public $bank_status = array('type' => 'enum@enable,disable!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
+	public $bank_status = array('type' => 'enum@enable,disable,expire!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
 	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
 
 

@@ -19,9 +19,9 @@ class account extends \lib\form
 
 	private function login()
 	{
-		$this->mobile	= $this->make('#mobile')->label(null)
+		$this->mobile	= $this->make('#mobile')->label(null)->desc(T_("Enter your registered mobile"))
 							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
-		$this->password	= $this->make('#password')->label(null);
+		$this->password	= $this->make('#password')->label(null)->desc(T_("Enter your password"));
 		$this->submit	= $this->make('submit')->title(T_('Login'));
 	}
 
@@ -38,7 +38,8 @@ class account extends \lib\form
 		$this->mobile	= $this->make('#mobile')->label(null)
 							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null))->disabled('disabled');
 		$this->code		= $this->make('code')->label(null)->pl(T_('Code'))->maxlength(4)->autofocus()
-							->required()->pattern('[0-9]{4}')->title(T_('input 4 number'));
+							->required()->pattern('[0-9]{4}')->title(T_('input 4 number'))
+							->pos('hint--bottom')->desc(T_("Check your mobile and enter the code"));
 		$this->submit	= $this->make('submit')->title(T_('Verification'));
 	}
 

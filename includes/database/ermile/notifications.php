@@ -8,7 +8,7 @@ class notifications
 	public $notification_title = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Title');
 	public $notification_content = array('type' => 'varchar@200', 'null'=>'YES', 'show'=>'YES', 'label'=>'Content');
 	public $notification_url = array('type' => 'varchar@100', 'null'=>'YES', 'show'=>'YES', 'label'=>'Url');
-	public $notification_status = array('type' => 'enum@read,unread!unread', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
+	public $notification_status = array('type' => 'enum@read,unread,expire!unread', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
 	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
 
 

@@ -32,10 +32,10 @@ class model extends \mvc\model
 	{
 		$qry		= $this->sql()->tableSmss()
 						->setSms_messageid($_messageid)
-						->setSms_status($_status)
+						->setSms_deliverystatus($_status)
 						->setSms_method($_method)
 						->setSms_type('delivery')
-						->setSms_date(date('Y-m-d H:i:s'));
+						->setSms_createdate(date('Y-m-d H:i:s'));
 		$sql		= $qry->insert();
 
 		$this->commit(function()
@@ -102,7 +102,7 @@ class model extends \mvc\model
 						->setSms_messageid($_messageID)
 						->setSms_method($_method)
 						->setSms_type('receive')
-						->setSms_date(date('Y-m-d H:i:s'));
+						->setSms_createdate(date('Y-m-d H:i:s'));
 		$sql		= $qry->insert();
 
 		$this->commit(function()

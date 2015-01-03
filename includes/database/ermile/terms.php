@@ -8,7 +8,7 @@ class terms
 	public $term_desc = array('type' => 'varchar@200', 'null'=>'NO', 'show'=>'NO', 'label'=>'Description');
 	public $term_father = array('type' => 'smallint@5', 'null'=>'YES', 'show'=>'YES', 'label'=>'Father');
 	public $term_type = array('type' => 'enum@cat,tag!cat', 'null'=>'NO', 'show'=>'YES', 'label'=>'Type');
-	public $term_status = array('type' => 'enum@enable,disable!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
+	public $term_status = array('type' => 'enum@enable,disable,expire!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
 	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
 
 

@@ -14,7 +14,7 @@ class products
 	public $product_vat = array('type' => 'decimal@6,4', 'null'=>'YES', 'show'=>'YES', 'label'=>'Vat');
 	public $product_initialbalance = array('type' => 'int@10', 'null'=>'YES', 'show'=>'YES', 'label'=>'Initialbalance');
 	public $product_mininventory = array('type' => 'int@10', 'null'=>'YES', 'show'=>'YES', 'label'=>'Mininventory');
-	public $product_status = array('type' => 'enum@unset,available,soon,discontinued,unavailable!unset', 'null'=>'YES', 'show'=>'YES', 'label'=>'Status');
+	public $product_status = array('type' => 'enum@unset,available,soon,discontinued,unavailable,expire!unset', 'null'=>'YES', 'show'=>'YES', 'label'=>'Status');
 	public $product_sold = array('type' => 'int@10', 'null'=>'YES', 'show'=>'YES', 'label'=>'Sold');
 	public $product_stock = array('type' => 'int@10', 'null'=>'YES', 'show'=>'YES', 'label'=>'Stock');
 	public $product_carton = array('type' => 'int@10', 'null'=>'YES', 'show'=>'YES', 'label'=>'Carton');

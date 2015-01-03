@@ -9,6 +9,7 @@ class productcats
 	public $productcat_father = array('type' => 'smallint@5', 'null'=>'YES', 'show'=>'YES', 'label'=>'Father');
 	public $attachment_id = array('type' => 'int@10', 'null'=>'YES', 'show'=>'YES', 'label'=>'Attachment', 'foreign'=>'attachments@id!attachment_title');
 	public $productcat_row = array('type' => 'smallint@5', 'null'=>'YES', 'show'=>'YES', 'label'=>'Row');
+	public $productcat_status = array('type' => 'enum@enable,disable,expire!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
 	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
 
 
@@ -46,6 +47,13 @@ class productcats
 	public function productcat_row() 
 	{
 		$this->form("text")->name("row")->min(0)->max(9999)->type('number');
+	}
+
+	//------------------------------------------------------------------ select button
+	public function productcat_status() 
+	{
+		$this->form("select")->name("status")->type("select")->required()->validate();
+		$this->setChild($this->form);
 	}
 	public function date_modified() {}
 }

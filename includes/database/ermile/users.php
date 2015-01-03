@@ -12,7 +12,7 @@ class users
 	public $user_firstname = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'YES', 'label'=>'Firstname');
 	public $user_lastname = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'YES', 'label'=>'Lastname');
 	public $user_birthday = array('type' => 'datetime@', 'null'=>'YES', 'show'=>'YES', 'label'=>'Birthday');
-	public $user_status = array('type' => 'enum@active,awaiting,deactive,removed!awaiting', 'null'=>'YES', 'show'=>'YES', 'label'=>'Status');
+	public $user_status = array('type' => 'enum@active,awaiting,deactive,removed,filter!awaiting', 'null'=>'YES', 'show'=>'YES', 'label'=>'Status');
 	public $user_credit = array('type' => 'enum@yes,no!no', 'null'=>'YES', 'show'=>'YES', 'label'=>'Credit');
 	public $permission_id = array('type' => 'smallint@5', 'null'=>'YES', 'show'=>'YES', 'label'=>'Permission', 'foreign'=>'permissions@id!permission_title');
 	public $user_createdate = array('type' => 'datetime@', 'null'=>'NO', 'show'=>'YES', 'label'=>'Createdate');
@@ -45,7 +45,7 @@ class users
 	//------------------------------------------------------------------ email
 	public function user_email() 
 	{
-		$this->form("email")->type("email")->required()->maxlength(50);
+		$this->form("#email")->type("email")->required()->maxlength(50);
 	}
 
 	//------------------------------------------------------------------ radio button

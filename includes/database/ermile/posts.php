@@ -9,7 +9,7 @@ class posts
 	public $post_slug = array('type' => 'varchar@100', 'null'=>'NO', 'show'=>'YES', 'label'=>'Slug');
 	public $post_content = array('type' => 'text@', 'null'=>'YES', 'show'=>'YES', 'label'=>'Content');
 	public $post_type = array('type' => 'enum@post,page!post', 'null'=>'NO', 'show'=>'YES', 'label'=>'Type');
-	public $post_status = array('type' => 'enum@publish,draft,schedule,deleted!draft', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
+	public $post_status = array('type' => 'enum@publish,draft,schedule,deleted,expire!draft', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
 	public $user_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
 	public $attachment_id = array('type' => 'int@10', 'null'=>'YES', 'show'=>'YES', 'label'=>'Attachment', 'foreign'=>'attachments@id!attachment_title');
 	public $post_publishdate = array('type' => 'datetime@', 'null'=>'YES', 'show'=>'YES', 'label'=>'Publishdate');

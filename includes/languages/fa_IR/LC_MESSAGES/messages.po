@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-03 03:04+0330\n"
-"PO-Revision-Date: 2015-01-03 03:06+0330\n"
+"POT-Creation-Date: 2015-01-04 01:05+0330\n"
+"PO-Revision-Date: 2015-01-04 01:17+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -16,23 +16,23 @@ msgstr ""
 "X-Poedit-KeywordsList: __;T_\n"
 "X-Poedit-SearchPath-0: ../../../../.\n"
 
-#: ../../../.././content_account/home/controller.php:40
+#: ../../../.././content_account/home/controller.php:42
 msgid "You are logined to system!"
 msgstr "شما قبلا به سیستم وارد شده اید!"
 
-#: ../../../.././content_account/home/controller.php:48
+#: ../../../.././content_account/home/controller.php:50
 msgid "You can't access to this page!"
 msgstr "شما اجازه دسترسی به این صفحه را ندارید!"
 
-#: ../../../.././content_account/home/controller.php:54
+#: ../../../.././content_account/home/controller.php:56
 msgid "Mobile not exist"
 msgstr "این شماره موبایل در سیستم ثبت نشده است!"
 
-#: ../../../.././content_account/home/controller.php:67
+#: ../../../.././content_account/home/controller.php:70
 msgid "You must first logined to system!"
 msgstr "شما ابتدا باید وارد سیستم شوید!"
 
-#: ../../../.././content_account/home/controller.php:74
+#: ../../../.././content_account/home/controller.php:77
 msgid "Logout successfully"
 msgstr "خروج موفقیت آمیز"
 
@@ -42,6 +42,7 @@ msgid "One Account for all services"
 msgstr "یک اکانت برای همه حساب ها"
 
 #: ../../../.././content_account/home/view.php:20
+#: ../../../.././content_cp/home/view.php:41
 #: ../../../.././includes/cls/form/account.php:25
 msgid "Login"
 msgstr "ورود به سیستم"
@@ -82,15 +83,11 @@ msgstr "ارمایل"
 
 #: ../../../.././content_account/login/model.php:41
 #: ../../../.././content_cp/home/model.php:41
-#: ../../../.././content_cp/page/model.php:41
-#: ../../../.././content_cp/post/model.php:41
 msgid "Login successfully"
 msgstr "ورود موفقیت آمیز"
 
 #: ../../../.././content_account/login/model.php:55
 #: ../../../.././content_cp/home/model.php:55
-#: ../../../.././content_cp/page/model.php:55
-#: ../../../.././content_cp/post/model.php:55
 msgid "Login Failed!"
 msgstr "ثبت نام ناموفق!"
 
@@ -114,14 +111,17 @@ msgstr "لطفا این پیغام را برای مدیر سیستم ارسال 
 msgid "We receive your message and your account is now verifited."
 msgstr "ما پیامک شما را دریافت کرده و اکانت شما را برایتان فعال کردیم"
 
-#: ../../../.././content_cp/home/controller.php:24
+#: ../../../.././content_cp/home/controller.php:25
 msgid "Not found!"
 msgstr "یافت نشد"
 
-#: ../../../.././content_cp/home/view.php:41
-#, fuzzy
-msgid "Loginssss"
-msgstr "ورود به سیستم"
+#: ../../../.././includes/cls/form/account.php:22
+msgid "Enter your registered mobile"
+msgstr "موبایل ثبت شده را وارد کنید"
+
+#: ../../../.././includes/cls/form/account.php:24
+msgid "Enter your password"
+msgstr "کلمه عبور خود را وارد کنید"
 
 #: ../../../.././includes/cls/form/account.php:40
 msgid "Code"
@@ -148,9 +148,17 @@ msgstr "رسید پیامک"
 msgid "Mobile"
 msgstr "موبایل"
 
-#: ../../../.././includes/cls/form/symbol.php:80
+#: ../../../.././includes/cls/form/symbol.php:78
+msgid "we send a verification code to this number"
+msgstr "کد اعتبارسنجی به این شماره ارسال خواهد شد"
+
+#: ../../../.././includes/cls/form/symbol.php:81
 msgid "Password"
 msgstr "کلمه عبور"
+
+#: ../../../.././includes/cls/form/symbol.php:83
+msgid "between 5-20 character. be tricky!"
+msgstr "بین 5 تا 20 کاراکتر. در انتخاب کلمه عبور دقت به خرج دهید"
 
 #: ../../../.././includes/mvc/view.php:12
 msgid "Ermile is new"
@@ -160,17 +168,15 @@ msgstr "ارمایل جدید است!"
 msgid "Ermile is our company"
 msgstr "ارمایل نام شرکت ماست"
 
-#: ../../../.././includes/mvc/view.php:17
-msgid "Farsi"
-msgstr "فارسی"
+#, fuzzy
+#~ msgid "Loginssss"
+#~ msgstr "ورود به سیستم"
 
-#: ../../../.././includes/mvc/view.php:18
-msgid "English"
-msgstr "انگلیسی"
+#~ msgid "Farsi"
+#~ msgstr "فارسی"
 
-#: ../../../.././includes/mvc/view.php:19
-msgid "Germany"
-msgstr ""
+#~ msgid "English"
+#~ msgstr "انگلیسی"
 
 #~ msgid "mobile"
 #~ msgstr "موبایل"

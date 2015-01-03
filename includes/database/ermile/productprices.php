@@ -12,6 +12,7 @@ class productprices
 	public $productprice_price = array('type' => 'decimal@13,4', 'null'=>'YES', 'show'=>'YES', 'label'=>'Price');
 	public $productprice_discount = array('type' => 'decimal@13,4', 'null'=>'YES', 'show'=>'YES', 'label'=>'Discount');
 	public $productprice_vat = array('type' => 'decimal@6,4', 'null'=>'YES', 'show'=>'YES', 'label'=>'Vat');
+	public $productprice_status = array('type' => 'enum@enable,disable,expire!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
 	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
 
 
@@ -58,6 +59,13 @@ class productprices
 	public function productprice_vat() 
 	{
 		$this->form("text")->name("vat")->max(99999)->type('number');
+	}
+
+	//------------------------------------------------------------------ select button
+	public function productprice_status() 
+	{
+		$this->form("select")->name("status")->type("select")->required()->validate();
+		$this->setChild($this->form);
 	}
 	public function date_modified() {}
 }

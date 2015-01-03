@@ -9,6 +9,7 @@ class verifications
 	public $verification_url = array('type' => 'varchar@100', 'null'=>'YES', 'show'=>'YES', 'label'=>'Url');
 	public $user_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
 	public $verification_verified = array('type' => 'enum@yes,no!no', 'null'=>'NO', 'show'=>'YES', 'label'=>'Verified');
+	public $verification_status = array('type' => 'enum@enable,disable,expire!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
 	public $verification_createdate = array('type' => 'datetime@', 'null'=>'YES', 'show'=>'YES', 'label'=>'Createdate');
 	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
 
@@ -40,6 +41,13 @@ class verifications
 	public function verification_verified() 
 	{
 		$this->form("radio")->name("verified")->type("radio")->required();
+		$this->setChild($this->form);
+	}
+
+	//------------------------------------------------------------------ select button
+	public function verification_status() 
+	{
+		$this->form("select")->name("status")->type("select")->required()->validate();
 		$this->setChild($this->form);
 	}
 	public function verification_createdate() 

@@ -7,19 +7,50 @@ class model extends \mvc\model
 {
 	function post_verification()
 	{
-		sleep(1);
 		$mymobile	= '+'.utility::get('mobile');
 		$tmp_result	= $this->sql()->tableSmss()
 						->whereSms_from($mymobile)
 						->andSms_type('receive')
+						->andSms_status('enable')
 						->select();
 
 		if($tmp_result->num()==1)
 		{
-			debug::true(T_('We receive your message and your account is now verifited.'));
-			// $this->redirector()->set_url('login?from=verification&mobile='.$mymobile.
-			// 			'&referer='.utility::get('referer') );
+			$this->put_changeSmsStatus($mymobile);
 		}
+		else
+		{
+			debug::fatal(T_('We are waiting for your message!'));
+		}
+
+		// sleep(1);
+		// debug::fatal(T_('Error on verify your code!'));
+		// $this->redirector()->set_url('login?from=verification&mobile='.$mymobile.
+		// 			'&referer='.utility::get('referer') );
+		$this->controller()->redirector = false;
+	}
+
+	function put_changeSmsStatus($mymobile)
+	{
+		
+		$qry		= $this->sql()->tableSmss()
+						->setSms_status('expire')
+						->whereSms_from($mymobile)
+						->andSms_type('receive')
+						->andSms_status('enable');
+		$sql		= $qry->update();
+
+		$this->commit(function()
+		{
+			sleep(3);
+			debug::true(T_('We receive your message and your account is now verifited.'));
+		});
+
+		// if a query has error or any error occour in any part of codes, run roolback
+		$this->rollback(function()
+		{
+			debug::fatal(T_('Error on verify your code!'));
+		} );
 		$this->controller()->redirector = false;
 	}
 
@@ -33,7 +64,7 @@ class model extends \mvc\model
 		$tmp_result			=  $this->sql()->tableVerifications()
 								->whereVerification_value($mymobile)
 								->andVerification_code($mycode)
-								->andVerification_verified('no')
+								->andVerification_status('enable')
 								->select();
 
 // var_dump($tmp_result);exit();
@@ -41,9 +72,10 @@ class model extends \mvc\model
 		{
 			// mobile and code exist update the record and verify
 			$qry		= $this->sql()->tableVerifications()
-							->setVerification_verified('yes')
+							->setVerification_status('expire')
 							->whereVerification_value($mymobile)
-							->andVerification_code($mycode);
+							->andVerification_code($mycode)
+							->andVerification_status('enable');
 			$sql		= $qry->update();
 
 

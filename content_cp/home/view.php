@@ -38,7 +38,7 @@ class view extends \content_cp\main\view
 		$this->global->site_slogan		= T_("One Account for all services");
 
 		if($this->data->module =='login'){
-			$this->global->page_desc	= T_('Loginssss');
+			$this->global->page_desc	= T_('Login');
 		}
 		elseif($this->data->module =='signup'){
 			$this->global->page_desc	= T_('Create an account');
