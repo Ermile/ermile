@@ -79,7 +79,7 @@
        <div class="span12">
         <p>Goto <a href="{{url.root}}" title="{{global.site_desc}}" class="roller cursor-help"><span data-title="{{global.site_title}} Homepage">{{global.site_title}} Homepage</span></a>.</p>
         <p>
-          <select id="langlist" onchange="change_lang(this.value);">
+          <select id="langlist">
 {%for key, value in global.langlist%}{%if key == global.lang%}
                 <option selected="selected" value="{{key}}">{{value}}</option>
 {%else%}
