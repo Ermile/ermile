@@ -37,7 +37,7 @@
 {%block footer%}
     <span>&copy; {{'now'|date('Y')}}</span>
      <a href="{{url.root}}" title="{{global.site_desc}}" tabindex="-1">{{global.site_title}}</a>
-     <select id="langlist" onchange="change_lang(this.value);">
+     <select id="langlist">
 {%for key, value in global.langlist%}{%if key == global.lang%}
         <option selected="selected" value="{{key}}">{{value}}</option>
 {%else%}

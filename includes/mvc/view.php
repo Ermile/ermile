@@ -25,7 +25,6 @@ class view extends \lib\view
 
 		// define default value for include
 		$this->include->datatable		= false;
-		$this->include->jquery			= true;
 		$this->include->fontawesome		= false;
 		$this->include->telinput		= false;
 		$this->include->customcss		= true;

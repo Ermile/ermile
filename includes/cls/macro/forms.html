@@ -57,9 +57,10 @@
     {%if array.label %}
       <label for="{{array.attr.id}}" class="input-label">{{array.label}}</label>
     {%endif%}
+    {% if array.attr.desc %}<span class="hint--rounded {{array.attr.tippos}}" data-hint="{{array.attr.desc}}">{% endif %}
    <input {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
+   {% if array.attr.desc %}</span>{% endif %}
   {% endif %}
-
 {% endmacro %}
 
 
@@ -110,7 +111,7 @@
        {% endif %}
 
        {% if input.attr.desc is not null %}
-        <p class="desc">{{input.attr.desc}}</p>
+        <!-- <p class="desc">{{input.attr.desc}}</p> -->
        {% endif %}
      </div>
     {% endif %}

@@ -74,11 +74,13 @@ class symbol extends \lib\form{
 
 
 		$this->mobile 	= $this->make("mobile")->type("tel")->label(T_("Mobile"))->pl(T_("Mobile"))
-							->required()->maxlength(17)->pattern(".{10,}");
+							->required()->maxlength(17)->pattern(".{10,}")
+							->tippos('hint--rounded hint--top')->desc("enter your mobile number");
 		// $this->form()->type("tel")->name("mobile")->pl("Mobile")->pattern(".{10,}")->maxlength(17)->required();
 
 		$this->password = $this->make("password")->type("password")->label(T_("Password"))->pl(T_("Password"))
-							->required()->maxlength(20)->pattern("^.{5,20}$")->title("between 5-20 character");
+							->required()->maxlength(20)->pattern("^.{5,20}$")->title("between 5-20 character")
+							->tippos('hint--rounded hint--bottom')->desc("between 5-20 character");
 							// ->validate()->password();
 		// $this->password->validate()->password(); //->formPassword("password incorrect");
 
