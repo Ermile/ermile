@@ -20,7 +20,6 @@ class controller extends \mvc\controller
 
 		$mymodule	= $this->module();
 		$islogin	= $this->login();
-
 		switch ($mymodule) 
 		{
 			case 'home':
@@ -35,6 +34,7 @@ class controller extends \mvc\controller
 				$this->model_name	= 'content_account\\'.$mymodule.'\model';
 				$this->display_name	= 'content_account\\'.$mymodule.'\display.html';
 				$this->post($mymodule)->ALL($mymodule);
+				// return;
 			}
 			else
 			{
