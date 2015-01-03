@@ -70,8 +70,8 @@ input:focus:-ms-input-placeholder{color:#ccc;}
 input:-webkit-autofill {-webkit-box-shadow:0 0 0 50px #1c1e21 inset;-webkit-text-fill-color: #4f5561;z-index: 2;}
 input:-webkit-autofill:focus {-webkit-box-shadow: /*your box-shadow*/,0 0 0 50px #1c1e21 inset;-webkit-text-fill-color: #ccc;}
 
-#footer{position: fixed;bottom: 0;width:80%;z-index:2;background-color: rgba(0, 0, 0, 0.1);padding:15px 10%;font-size: 16px}
-#footer #langlist{float: right;}
+#footer{position: fixed;bottom: 0;width:80%;z-index:2;background-color: rgba(0, 0, 0, 0.1);padding:15px 10%;font-size: 16px;line-height: 30px;height:30px;}
+#footer #langlist{float: right;font-family:tahoma,serif;font-size: 0.8em;height:30px;padding:0 10px;}
 .rtl #footer #langlist{float: left;}
 #footer select{direction:ltr;padding:5px;font-size:1em;border:0;opacity:0.2;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
 #footer select:hover{opacity:0.8;}

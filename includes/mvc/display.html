@@ -79,7 +79,7 @@
         <p>
           <select id="langlist">
 {%for key, value in global.langlist%}{%if key == global.lang%}
-            <option selected="selected" value="{{key}}">{{value}}</option>
+            <option class="{{key}}" value="{{key}}" selected="selected">{{value}}</option>
 {%else%}
             <option value="{{key}}">{{value}}</option>
 {%endif%}{% endfor %}

@@ -34,6 +34,7 @@ class controller extends \mvc\controller
 				$this->model_name	= 'content_account\\'.$mymodule.'\model';
 				$this->display_name	= 'content_account\\'.$mymodule.'\display.html';
 				$this->post($mymodule)->ALL($mymodule);
+				$this->get()->ALL($mymodule);
 				// return;
 			}
 			else
@@ -58,6 +59,7 @@ class controller extends \mvc\controller
 			$this->display_name	= 'content_account\\'.$mymodule.'\display.html';
 			$this->post('verification')->ALL('verification');
 			$this->put($mymodule)->ALL($mymodule);
+			$this->get()->ALL($mymodule);
 			break;
 
 
@@ -74,6 +76,7 @@ class controller extends \mvc\controller
 				session_destroy();
 				\lib\debug::true(T_("Logout successfully"));
 				$this->redirector()->set_domain('ermile.dev')->set_url()->redirect();
+				$this->get()->ALL($mymodule);
 			}
 			break;
 
