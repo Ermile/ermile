@@ -24,7 +24,7 @@ function createdelay()
         Navigate({
           url: '/login'
         }).done(function() {
-          $.ajaxify.showResults(response,
+          $.fn.ajaxify.showResults(response,
             $(document.body).append($('<div id="formError"></div>')).find('#formError'),
             $('#delay'),
             _super);
