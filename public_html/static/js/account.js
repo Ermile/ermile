@@ -19,10 +19,16 @@ function createdelay()
     event: 'send',
     link: true,
     success: function(response) {
+      var _super = this;
       if(response.status == 1) {
         Navigate({
           url: '/login'
-        });
+        }).done(function() {
+          $.ajaxify.showResults(response,
+            $(document.body).append($('<div id="formError"></div>')).find('#formError'),
+            $('#delay'),
+            _super);
+        })
       } else {
         setTimeout(loop, requestDelay);
       }
