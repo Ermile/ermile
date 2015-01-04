@@ -53,13 +53,17 @@ class controller extends \lib\controller
 	public function child($_title = null)
 	{
 		$mychild = router::get_real_url(1);
+		if(strrpos($mychild,'=') !==false){
+			$mychild = substr($mychild,0,strrpos($mychild,'='));
+		}
+
 		if(!$_title)
 			return $mychild;
-		
-		if($_title=='add')
+
+		if($mychild=='add')
 			return T_('Add New');
 
-		$mychild = substr($mychild,0,strrpos($mychild,'='));
+		// $mychild = substr($mychild,0,strrpos($mychild,'='));
 		if($mychild == 'edit')
 			return T_('Edit');
 	}

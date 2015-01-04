@@ -2,7 +2,7 @@
 {% spaceless %}
 {% import _self as form%}
  {% for input in array%}
-   <div class="form-element">
+   <div class="form-element {{input.attr.id}}">
     {% if input.attr.pos %}{% set tippos=input.attr.pos %}{%else%}{% set tippos='hint--top' %}{% endif %}
     {% if input.attr.desc %}<span class="hint--info {{tippos}}" data-hint="{{input.attr.desc}}">{% endif %}
 
