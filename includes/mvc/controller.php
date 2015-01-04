@@ -1,5 +1,6 @@
 <?php
 namespace mvc;
+use \lib\router;
 
 class controller extends \lib\controller
 {
@@ -9,7 +10,7 @@ class controller extends \lib\controller
 			$this->options();
 		}
 		// add all visitor to visitor table
-		// $this->get('modeldef')->ALL(\lib\router::get_real_url());
+		// $this->get('modeldef')->ALL(router::get_real_url());
 		// $this->model()->get_modeldef();
 	}
 
@@ -35,21 +36,32 @@ class controller extends \lib\controller
 	}
 
 	// return module name for use in view or other place
-	public function module($full = false)
+	public function module($full = null)
 	{
-		if($full)
-			$mymodule	= str_replace('/', '_', \lib\router::get_real_url());
+		if($full=='prefix')
+			$mymodule	= substr(router::get_real_url(0), 0, -1);
+		elseif($full)
+			$mymodule	= str_replace('/', '_', router::get_real_url());
 		else
-			$mymodule	= \lib\router::get_real_url(0);
+			$mymodule	= router::get_real_url(0);
 		
 		$mymodule	= $mymodule? $mymodule: 'home';
 		return $mymodule;
 	}
 
 	// return module name for use in view or other place
-	public function child()
+	public function child($_title = null)
 	{
-		return \lib\router::get_real_url(1);
+		$mychild = router::get_real_url(1);
+		if(!$_title)
+			return $mychild;
+		
+		if($_title=='add')
+			return T_('Add New');
+
+		$mychild = substr($mychild,0,strrpos($mychild,'='));
+		if($mychild == 'edit')
+			return T_('Edit');
 	}
 }
 ?>

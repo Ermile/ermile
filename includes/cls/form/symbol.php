@@ -72,6 +72,7 @@ class symbol extends \lib\form{
  * label 	-> placeholder
  */
 
+		$this->website = $this->make("text")->name("website")->label("website");
 
 		$this->mobile 	= $this->make("mobile")->type("tel")->label(T_("Mobile"))->pl(T_("Mobile"))
 							->required()->maxlength(17)->pattern(".{10,}")
