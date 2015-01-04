@@ -43,6 +43,8 @@ h1{color: #222;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 30px;
 .account button:before{height: 14px;top: 19px;right: 16px;z-index: 103;-moz-transform: rotate(-137deg);-ms-transform: rotate(-137deg);-webkit-transform: rotate(-137deg);transform: rotate(-137deg);-webkit-filter: drop-shadow(0 -2px 0 rgba(0, 0, 0, 0.15));filter: drop-shadow(0 -2px 0 rgba(0, 0, 0, 0.15));}
 .account button:hover:after,.account button:hover:before,.account button:focus:after,.account button:focus:before{background:#fff;}
 #recovery .account button, #changepass .account button{top:0;}
+#verification .country-list, #verification .arrow{display:none}
+#verification .selected-flag{ cursor: default;}
 
 .account{direction:ltr;position:relative;background-color: #1c1e21;padding:10px 20px;color: #4f5561;-webkit-border-radius: 10px;border-radius: 10px;margin-right:22px;margin-left:5px}
 .account input{background-color: transparent;padding:0px;color: #4f5561;border:none;width:100%;transition: color .3s ease;height: 40px;}
@@ -78,7 +80,7 @@ input:-webkit-autofill:focus {-webkit-box-shadow: /*your box-shadow*/,0 0 0 50px
 
 
 /* Form Error Box  || error_0: failed | error_1: successful | error_2: warning;*/
-#formError{position: fixed;z-index:100;bottom:60px;right:0px;margin:0 2%;min-width:30%;max-width:100%;width:400px;color:#fff;font-size:1.5em}
+#formError{position: fixed;z-index:100;bottom:70px;right:0px;margin:0 2%;min-width:30%;max-width:100%;width:400px;color:#fff;font-size:1.5em}
 .error_false{color:#3a87ad;background-color:#d9edf7;}
 .error li{background-color:rgba(254,26,0,.9);}
 .true li{background-color:rgba(92,184,17,.9);}

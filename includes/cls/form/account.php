@@ -21,13 +21,13 @@ class account extends \lib\form
 	{
 		$this->mobile	= $this->make('#mobile')->label(null)->desc(T_("Enter your registered mobile"))
 							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
-		$this->password	= $this->make('#password')->label(null)->desc(T_("Enter your password"));
+		$this->password	= $this->make('#password')->label(null)->desc(T_("Enter your password"))->autocomplete('on');
 		$this->submit	= $this->make('submit')->title(T_('Login'));
 	}
 
 	private function signup()
 	{
-		$this->mobile	= $this->make('#mobile')->label(null)
+		$this->mobile	= $this->make('#mobile')->label(null)->autocomplete('off')
 							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
 		$this->password	= $this->make('#password')->label(null);
 		$this->submit	= $this->make('submit')->title(T_('Create an account'));
@@ -35,9 +35,9 @@ class account extends \lib\form
 
 	private function verification()
 	{
-		$this->mobile	= $this->make('#mobile')->label(null)
+		$this->mobile	= $this->make('#mobile')->label(null)->disabled('disabled')->tabindex('-1')->autocomplete('off')
 							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null))->disabled('disabled');
-		$this->code		= $this->make('code')->label(null)->pl(T_('Code'))->maxlength(4)->autofocus()
+		$this->code		= $this->make('code')->label(null)->pl(T_('Code'))->maxlength(4)->autofocus()->autocomplete('off')
 							->required()->pattern('[0-9]{4}')->title(T_('input 4 number'))
 							->pos('hint--bottom')->desc(T_("Check your mobile and enter the code"));
 		$this->submit	= $this->make('submit')->title(T_('Verification'));
@@ -45,7 +45,7 @@ class account extends \lib\form
 
 	private function recovery()
 	{
-		$this->mobile	= $this->make('#mobile')->label(null)
+		$this->mobile	= $this->make('#mobile')->label(null)->autocomplete('off')
 							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
 		$this->submit	= $this->make('submit')->title(T_('Recovery'));
 	}

@@ -78,7 +78,7 @@ class symbol extends \lib\form{
 							->pos('hint--rounded hint--top')->desc(T_("we send a verification code to this number"));
 		// $this->form()->type("tel")->name("mobile")->pl("Mobile")->pattern(".{10,}")->maxlength(17)->required();
 
-		$this->password = $this->make("password")->type("password")->label(T_("Password"))->pl(T_("Password"))
+		$this->password = $this->make("password")->type("password")->label(T_("Password"))->pl(T_("Password"))->autocomplete('off')
 							->required()->maxlength(20)->pattern("^.{5,20}$")->title("between 5-20 character")
 							->pos('hint--rounded hint--bottom')->desc(T_("between 5-20 character. be tricky!"));
 							// ->validate()->password();

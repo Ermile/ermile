@@ -41,6 +41,10 @@ class view extends \lib\view
 		else {
 			$this->include->gettext 	= 'Translation use PHP gettext class';
 		}
+
+		if(method_exists($this, 'options')){
+			$this->options();
+		}
 	}
 }
 ?>

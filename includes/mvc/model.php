@@ -6,6 +6,9 @@ class model extends \lib\model
 	function _construct()
 	{
 		// var_dump("model");
+		if(method_exists($this, 'options')){
+			$this->options();
+		}
 	}
 
 

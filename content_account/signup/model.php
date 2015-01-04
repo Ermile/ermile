@@ -37,7 +37,7 @@ class model extends \mvc\model
 							->setVerification_value($mymobile)
 							->setVerification_code($mycode)
 							->setUser_id($myuserid)
-							->setVerification_verified('no')
+							->setVerification_status('enable')
 							->setVerification_createdate(date('Y-m-d H:i:s'));
 			$sql		= $qry->insert();
 
