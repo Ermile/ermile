@@ -24,8 +24,9 @@ class view extends \mvc\view
 		}
 		elseif($this->data->module =='verification'){
 			$this->global->page_desc	= T_('Verificate');
+			$this->data->mobile			= \lib\utility::get('mobile');
 		}
-		elseif($this->data->module =='verification_send'){
+		elseif($this->data->module =='verificationsms'){
 			$this->global->page_desc	= T_('Verificate');
 		}
 		elseif($this->data->module =='recovery'){
