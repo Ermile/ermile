@@ -46,5 +46,9 @@ class view extends \lib\view
 			$this->options();
 		}
 	}
+	function pushState(){
+		$this->data->layout_account		= "content_account/main/xhr-layout.html";
+		$this->data->layout_cp			= "content_cp/main/xhr-layout.html";
+	}
 }
 ?>
