@@ -46,6 +46,7 @@ class view extends \mvc\view
 	private function prepareChild()
 	{
 		$this->data->form_show		= true;
+		$this->include->editor		= true;
 		$this->data->field_list		= \lib\sql\getTable::get($this->data->module,'form');
 		$this->data->form_title		= ucfirst($this->data->prefix);
 		$this->global->page_title	= $this->child(true) . ' ' . T_($this->data->form_title);

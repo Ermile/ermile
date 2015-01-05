@@ -5,7 +5,7 @@
   src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url(../fonts/robotoslab.woff2) format('woff2'); 
 }
 @font-face {
-  font-family: 'IRAN';
+  font-family: 'IRANSans';
   src: url('../fonts/IRAN Sans.woff') format('woff'),  /* FF3.6+, IE9, IE10, Chrome6+, Saf5.1+*/
   url('../fonts/IRAN Sans.woff2') format('woff2');
 }
@@ -22,7 +22,7 @@ body {
   margin-top:45px;
 }
 .ltr body{font-family:'Roboto Slab',serif;direction:ltr;}
-.rtl body{font-family:'IRAN',serif;direction:rtl;}
+.rtl body{font-family:'IRANSans',serif;direction:rtl;}
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -471,6 +471,13 @@ text-indent:-999999px;
 
 }
 
+.rtl #main form label{
+  float:right;
+}
+
+#main form .label-textarea{width: 100%;float:none}
+.rtl #main form .label-textarea{width: 100%;float:none}
+
 form label.label-radio{
   min-width:50px;
   margin-right: 10px;
@@ -644,3 +651,7 @@ transition: all .2s ease;-webkit-transition: all .2s ease;-o-transition: all .2s
 #footer{margin-top:100px;}
 #footer select{direction:ltr; padding:5px;font-size:1em;border:0;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
 #footer select:hover{opacity:0.8;}
+
+
+
+

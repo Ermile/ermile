@@ -37,9 +37,12 @@ class smss
 	{
 		$this->form("text")->name("deliverystatus")->min(0)->max(999)->type('number');
 	}
+
+	//------------------------------------------------------------------ select button
 	public function sms_method() 
 	{
-		$this->form("text")->name("method")->required()->type('select');
+		$this->form("select")->name("method")->type("select")->required()->validate();
+		$this->setChild($this->form);
 	}
 
 	//------------------------------------------------------------------ select button

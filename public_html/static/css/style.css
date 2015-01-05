@@ -15,7 +15,7 @@ Version: 1.0.3
   src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url(../fonts/robotoslab.woff2) format('woff2'); 
 }
 @font-face {
-  font-family: 'IRAN';
+  font-family: 'IRANSans';
   src: url('../fonts/IRAN Sans.woff') format('woff'),  /* FF3.6+, IE9, IE10, Chrome6+, Saf5.1+*/
   url('../fonts/IRAN Sans.woff2') format('woff2');
 }
@@ -28,7 +28,7 @@ html{
   text-rendering: optimizeLegibility;
 }
 .ltr body{font-family:'Roboto Slab',serif;direction:ltr;}
-.rtl body{font-family:'IRAN',serif;direction:rtl;}
+.rtl body{font-family:'IRANSans',serif;direction:rtl;}
 body {
   margin: 0;
 }

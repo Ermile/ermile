@@ -306,8 +306,8 @@ function setproperty($myparam)
 			}
 
 			// --------------------------------------------------------------------------------- select
-			elseif ($myname=="status" 	|| $myname=="model" || $myname=="priority"
-				|| $myname=="sellin"	|| $myname=="priority"
+			elseif ($myname=="status" 	|| $myname=="model" 	|| $myname=="priority"
+				|| $myname=="sellin"	|| $myname=="priority" 	|| $myname=='method'
 				|| $myname=="type"		|| $myname=="paperstatus"
 				)
 			{

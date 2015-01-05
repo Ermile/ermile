@@ -53,8 +53,8 @@
 
 
 {% macro textarea(array) %}
-  {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
-  <textarea {% for attr,value in array.attr%}{%if attr != 'value'%}{{attr}}="{{value}}"{%endif%} {% endfor %}>{{array.attr.value}}</textarea>
+  {%if array.label %}<label class='label-textarea' for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
+  <textarea class="ckeditor" {% for attr,value in array.attr%}{%if attr != 'value'%}{{attr}}="{{value}}"{%endif%} {% endfor %}>{{array.attr.value}}</textarea>
 {% endmacro %}
 
 
