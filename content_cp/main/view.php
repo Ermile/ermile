@@ -43,11 +43,6 @@ class view extends \mvc\view
 		$this->prepareChild();
 	}
 
-	function view_delete($obj)
-	{
-
-	}
-
 	private function prepareChild()
 	{
 		$this->data->form_show		= true;

@@ -41,7 +41,11 @@ class controller extends \mvc\controller
 		// on module root without child like /post
 		if($mychild)
 		{
-			$this->get($mychild, $mychild)->ALL(\lib\router::get_real_url());
+			if($mychild=='delete')
+				$this->get($mychild)->ALL(\lib\router::get_real_url());
+			else
+				$this->get($mychild, $mychild)->ALL(\lib\router::get_real_url());
+
 		}
 		else
 		{
@@ -75,7 +79,7 @@ class controller extends \mvc\controller
 						'productprices',
 						'products',
 						'receipts',
-						'smsss',
+						'smss',
 						'terms',
 						'transactions',
 						'userlogs',

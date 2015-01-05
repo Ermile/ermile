@@ -10,7 +10,7 @@ class controller extends \lib\controller
 			$this->options();
 		}
 		// add all visitor to visitor table
-		// $this->get('modeldef')->ALL(router::get_real_url());
+		// $this->get('modeldef')->ALL(router::get_url());
 		// $this->model()->get_modeldef();
 	}
 
@@ -39,11 +39,11 @@ class controller extends \lib\controller
 	public function module($full = null)
 	{
 		if($full=='prefix')
-			$mymodule	= substr(router::get_real_url(0), 0, -1);
+			$mymodule	= substr(router::get_url(0), 0, -1);
 		elseif($full)
-			$mymodule	= str_replace('/', '_', router::get_real_url());
+			$mymodule	= str_replace('/', '_', router::get_url());
 		else
-			$mymodule	= router::get_real_url(0);
+			$mymodule	= router::get_url(0);
 		
 		$mymodule	= $mymodule? $mymodule: 'home';
 		return $mymodule;
@@ -52,7 +52,7 @@ class controller extends \lib\controller
 	// return module name for use in view or other place
 	public function child($_title = null)
 	{
-		$mychild = router::get_real_url(1);
+		$mychild = router::get_url(1);
 		if(strrpos($mychild,'=') !==false){
 			$mychild = substr($mychild,0,strrpos($mychild,'='));
 		}
@@ -66,6 +66,15 @@ class controller extends \lib\controller
 		// $mychild = substr($mychild,0,strrpos($mychild,'='));
 		if($mychild == 'edit')
 			return T_('Edit');
+	}
+
+	// if pass parameter return the property of it, else return value of child
+	public function childparam($_name = null)
+	{
+		if($_name)
+			return router::get_url_property($_name);
+		else
+			return router::get_url_property($this->child());
 	}
 }
 ?>
