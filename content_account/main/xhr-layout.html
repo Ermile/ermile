@@ -1,22 +1,12 @@
-{%extends display%}
-
-{%block head_css%}
-<link rel="stylesheet"    href="{{url.static}}css/style-account.css?ver=1.1.0">
-{%endblock%}
-{%block foot_js%}
-<script src="{{url.static}}js/account.js"></script>
-{%endblock%}
-
-
-{%block body_def%}
-{%block form_def%}
-<form class="ajx account" method="post" id="frm_{{module}}">
-  {{forms.make(form[myform])}}
-</form>
-{%endblock%}
-{%block content%}{%endblock%}
-
-{%block footer%}
-{%endblock%}
-{%endblock%}
-
+{% import "includes/cls/macro/forms.html" as forms %}
+<div xhr-base="h1">
+	<h1>{{global.page_desc}}</h1>
+</div>
+<div xhr-base="form">
+	<form class="ajx account" method="post" id="frm_{{module}}">
+		{{forms.make(form[myform])}}
+	</form>
+</div>
+<div xhr-base="desc">
+	{%block content%}{%endblock%}
+</div>
