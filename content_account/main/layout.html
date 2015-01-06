@@ -21,18 +21,18 @@
 			<path fill="#eee" d="M40.083,35c20,5.25,81.417,18,151.854-3.563C141.75,85,51.415,198,59.457,276.611c0.918,10.202-5.894,15.389-10.582,7.014C18.75,230.25,22.5,94.5,40.083,35z"/>
 		</svg>
 	</a>
-	<div class="xhr-base" xhr-base="h1">
+	<div data-xhr="h1">
 		<h1>{{global.page_desc}}</h1>
 	</div>
 </header>
-<div class="xhr-base" xhr-base="form">
+<div data-xhr="form">
 	{%block form_def%}
 	<form class="ajx account" method="post" id="frm_{{module}}">
 		{{forms.make(form[myform])}}
 	</form>
 	{%endblock%}
 </div>
-<div class="xhr-base" xhr-base="desc">
+<div data-xhr="desc">
 	{%block content%}{%endblock%}
 </div>
 </div>

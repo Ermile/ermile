@@ -1,12 +1,12 @@
-<div xhr-base="head_def">
+<div data-xhr="head_def">
 	{%block head_def%}
-	<div xhr-base="head_css">
+	<div data-xhr="head_css">
 		{%block head_css%}{%endblock%}
 	</div>
-	<div xhr-base="head_js">
+	<div data-xhr="head_js">
 		{%block head_js%}{%endblock%}
 	</div>
-	<div xhr-base="head">
+	<div data-xhr="head">
 		{%block head%}{%endblock%}
 	</div>
 	{%endblock%}
@@ -15,25 +15,25 @@
 {% if extendForm%}
 {% import macro.forms as forms %}
 {% endif %}
-<div xhr-base="body_def">
+<div data-xhr="body_def">
 	{%block body_def%}
-	<div xhr-base="header_def">
+	<div data-xhr="header_def">
 		{%block header_def%}{%endblock%}
 	</div>
-	<div xhr-base="header">
+	<div data-xhr="header">
 		{%block header%}{%endblock%}
 	</div>
-	<div xhr-base="content_def">
+	<div data-xhr="content_def">
 		{%block content_def%}{%endblock%}
 	</div>
-	<div xhr-base="footer_def">
+	<div data-xhr="footer_def">
 		{%block footer_def%}{%endblock%}
 	</div>
-	<div xhr-base="footer">
+	<div data-xhr="footer">
 		{%block footer%}{%endblock%}
 	</div>
 	{%endblock%}
 </div>
-<div xhr-base="foot_js">
+<div data-xhr="foot_js">
 	{%block foot_js%}{%endblock%}
 </div>
