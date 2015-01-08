@@ -5,7 +5,7 @@ Theme URL: http://Ermile.com
 Description: Ermile is our company
 Author: Ermile
 Author URI: Ermile.com
-Version: 1.3.4
+Version: 1.3.5
 */
 @font-face {
   font-family: 'Roboto Slab';
@@ -18,8 +18,8 @@ Version: 1.3.4
   src: url('../fonts/IRAN Sans.woff') format('woff'),  /* FF3.6+, IE9, IE10, Chrome6+, Saf5.1+*/
   url('../fonts/IRAN Sans.woff2') format('woff2');
 }
-.ltr body{font-family:'Roboto Slab',serif;direction: ltr;}
-.rtl body{font-family:'IRANSans',serif;direction: rtl;}
+[dir="ltr"] body{font-family:'Roboto Slab',serif;direction: ltr;}
+[dir="rtl"] body{font-family:'IRANSans',serif;direction: rtl;}
 html {font-size:62.5%;font-family:Tahoma, Helvetica, Arial, Sans-Serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-rendering: optimizeLegibility;}
 body {margin:0;padding:0;background-color: #34383d;color:#4f5561;background: #34383d;}
 a{color:#6f7787;text-decoration:none;outline:none;}
@@ -74,7 +74,7 @@ input:-webkit-autofill:focus {-webkit-box-shadow: /*your box-shadow*/,0 0 0 50px
 
 #footer{position: fixed;bottom: 0;width:80%;z-index:2;background-color: rgba(0, 0, 0, 0.1);padding:15px 10%;font-size: 16px;line-height: 30px;height:30px;}
 #footer #langlist{float: right;font-family:tahoma,serif;font-size: 0.8em;height:30px;padding:0 10px;}
-.rtl #footer #langlist{float: left;}
+[dir="rtl"] #footer #langlist{float: left;}
 #footer select{direction:ltr;padding:5px;font-size:1em;border:0;opacity:0.2;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
 #footer select:hover{opacity:0.8;}
 
@@ -89,7 +89,7 @@ input:-webkit-autofill:focus {-webkit-box-shadow: /*your box-shadow*/,0 0 0 50px
 #formError ul li{margin-top: 10px;padding:3% 5%;border-radius: 4px;}
 
 input {transition: background-color 100ms ease-out;font-family:'Roboto Slab',serif;font-size: 18px;}
-.rtl input {font-family:'IRANSans',serif;font-size: 16px;}
+[dir="rtl"] input {font-family:'IRANSans',serif;font-size: 16px;}
 form input.flash {transition: color 0;color: #FFC7C7;}
 form input.valid {color: #4C5E3B;}
 form input.invalid {color: #5E3B3B;}
