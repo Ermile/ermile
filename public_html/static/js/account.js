@@ -1,9 +1,9 @@
-$(document).ready(function () {
+route('*', function() {
+  if($('#delay', this).length){
+    setTimeout(createdelay, 1000);
+  }
+})
 
-  if(document.getElementById('delay')){
-      setTimeout(createdelay, 1000);
-    }
-});
 
 function createdelay()
 {

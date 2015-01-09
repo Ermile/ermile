@@ -1,18 +1,32 @@
-$(document).ready(function () {
+route('*', function() {
     hideFields();
 
-    $(".fields-toggle").change(function () {
+    $(".fields-toggle", this).change(function () {
         $("."+this.value).toggleClass('hide');
     });
 
-    $("#options-link").click(function () {
+    $("#options-link", this).click(function () {
         $("#meta").toggleClass('hide');
     });
-});
+
+   var clonedHeaderRow;
+
+   $(".persist-area", this).each(function() {
+       clonedHeaderRow = $(".persist-header", this);
+       clonedHeaderRow
+         .before(clonedHeaderRow.clone())
+         .addClass("floatingHeader");
+         
+   });
+   
+   $(window)
+    .scroll(UpdateTableHeaders)
+    .trigger("scroll");
+})
 
 
 function hideFields() {
-    $("input:checkbox").each(function()
+    $("input:checkbox", this).each(function()
     {
 
         if( !$(this).is(":checked") )
@@ -27,7 +41,7 @@ function hideFields() {
 
 
 function UpdateTableHeaders() {
-   $(".persist-area").each(function() {
+   $(".persist-area", this).each(function() {
    
        var el             = $(this),
            offset         = el.offset(),
@@ -46,27 +60,6 @@ function UpdateTableHeaders() {
        };
    });
 }
-
-// DOM Ready      
-$(function() {
-
-   var clonedHeaderRow;
-
-   $(".persist-area").each(function() {
-       clonedHeaderRow = $(".persist-header", this);
-       clonedHeaderRow
-         .before(clonedHeaderRow.clone())
-         .addClass("floatingHeader");
-         
-   });
-   
-   $(window)
-    .scroll(UpdateTableHeaders)
-    .trigger("scroll");
-   
-});
-
-
 
 
 var previousScroll = 0;
