@@ -46,9 +46,38 @@ class view extends \lib\view
 			$this->options();
 		}
 	}
-	function pushState(){
+
+	function pushState()
+	{
 		$this->data->layout_account		= "content_account/main/xhr-layout.html";
 		$this->data->layout_cp			= "content_cp/main/xhr-layout.html";
+	}
+
+	function twigextract()
+	{
+		require_once core.'Twig/lib/Twig/Autoloader.php';
+
+		$tmpDir = root.'includes/languages/tmp/cache/';
+		\Twig_Autoloader::register();
+		$loader = new \Twig_Loader_Filesystem(root.'content');
+
+		// force auto-reload to always have the latest version of the template
+		$twig = new \Twig_Environment($loader, array(
+		    'cache' => $tmpDir,
+		    'auto_reload' => true
+		));
+		$twig->addExtension(new \Twig_Extensions_Extension_I18n());
+		// configure Twig the way you want
+
+		// iterate over all your templates
+		foreach (new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator(root.'content'), \RecursiveIteratorIterator::LEAVES_ONLY) as $file)
+		{
+		    // force compilation
+		    if ($file->isFile() && substr($file, -4)=='html') {
+		    		var_dump(substr($file, -4) );
+		        $twig->loadTemplate(str_replace(root.'content'.'/', '', $file));
+		    }
+		}
 	}
 }
 ?>

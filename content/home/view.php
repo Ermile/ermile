@@ -4,6 +4,7 @@ namespace content\home;
 class view extends \mvc\view{
 	public function config(){
 		$formEdit = $this->createform(".custom", "edit");
+		// $this->twigextract();
 	}
 
 
