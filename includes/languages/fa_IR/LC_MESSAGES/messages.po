@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-09 11:06+0330\n"
-"PO-Revision-Date: 2015-01-09 11:20+0330\n"
+"POT-Creation-Date: 2015-01-09 11:22+0330\n"
+"PO-Revision-Date: 2015-01-09 11:28+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -69,7 +69,6 @@ msgid "SMS Callback"
 msgstr "پیامک های دریافتی"
 
 #: ../../../.././content_account/home/view.php:49
-#: ../../../.././includes/languages/tmp/cache/76/01/402ead7db5a3493a8450ef238ac560873738ff89abed0a33606482196980.php:45
 #: ../../../.././includes/mvc/view.php:11
 msgid "Ermile"
 msgstr "ارمایل"
