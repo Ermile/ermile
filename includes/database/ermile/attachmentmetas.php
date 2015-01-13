@@ -18,7 +18,7 @@ class attachmentmetas
 	public function attachment_id() 
 	{
 		$this->form("select")->name("attachment")->min(0)->max(999999999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function attachmentmeta_cat() 
 	{
@@ -37,7 +37,7 @@ class attachmentmetas
 	public function attachmentmeta_status() 
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

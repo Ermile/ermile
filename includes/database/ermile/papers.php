@@ -21,7 +21,7 @@ class papers
 	public function paper_type() 
 	{
 		$this->form("select")->name("type")->type("select")->maxlength(50)->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function paper_number() 
 	{
@@ -40,7 +40,7 @@ class papers
 	public function bank_id() 
 	{
 		$this->form("select")->name("bank")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function paper_holder() 
 	{
@@ -57,7 +57,7 @@ class papers
 	public function paper_status() 
 	{
 		$this->form("select")->name("status")->type("select")->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

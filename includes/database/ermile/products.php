@@ -43,7 +43,7 @@ class products
 	public function productcat_id() 
 	{
 		$this->form("select")->name("productcat")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function product_barcode() 
 	{
@@ -82,7 +82,7 @@ class products
 	public function product_status() 
 	{
 		$this->form("select")->name("status")->type("select")->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function product_sold() 
 	{
@@ -101,21 +101,21 @@ class products
 	public function attachment_id() 
 	{
 		$this->form("select")->name("attachment")->min(0)->max(999999999)->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ radio button
 	public function product_service() 
 	{
 		$this->form("radio")->name("service")->type("radio")->required();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ select button
 	public function product_sellin() 
 	{
 		$this->form("select")->name("sellin")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

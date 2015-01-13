@@ -18,7 +18,7 @@ class postmetas
 	public function post_id() 
 	{
 		$this->form("select")->name("post")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function postmeta_cat() 
 	{
@@ -37,7 +37,7 @@ class postmetas
 	public function postmeta_status() 
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

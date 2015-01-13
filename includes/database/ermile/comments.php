@@ -23,14 +23,14 @@ class comments
 	public function post_id() 
 	{
 		$this->form("select")->name("post")->min(0)->max(9999)->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function product_id() 
 	{
 		$this->form("select")->name("product")->min(0)->max(9999)->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function comment_author() 
 	{
@@ -55,7 +55,7 @@ class comments
 	public function comment_status() 
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function comment_parent() 
 	{
@@ -67,7 +67,7 @@ class comments
 	public function Visitor_id() 
 	{
 		$this->form("select")->name("Visitor")->min(0)->max(999999999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

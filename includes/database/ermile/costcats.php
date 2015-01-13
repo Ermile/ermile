@@ -46,14 +46,14 @@ class costcats
 	public function costcat_type() 
 	{
 		$this->form("select")->name("type")->type("select")->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ select button
 	public function costcat_status() 
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

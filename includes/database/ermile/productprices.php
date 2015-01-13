@@ -23,14 +23,14 @@ class productprices
 	public function product_id() 
 	{
 		$this->form("select")->name("product")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function productmeta_id() 
 	{
 		$this->form("select")->name("productmeta")->min(0)->max(999999999)->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function productprice_cat() 
 	{
@@ -65,7 +65,7 @@ class productprices
 	public function productprice_status() 
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

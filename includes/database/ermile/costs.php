@@ -30,14 +30,14 @@ class costs
 	public function costcat_id() 
 	{
 		$this->form("select")->name("costcat")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function account_id() 
 	{
 		$this->form("select")->name("account")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function cost_date() 
 	{
@@ -54,7 +54,7 @@ class costs
 	public function cost_type() 
 	{
 		$this->form("select")->name("type")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

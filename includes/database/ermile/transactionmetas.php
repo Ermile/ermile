@@ -18,7 +18,7 @@ class transactionmetas
 	public function transaction_id() 
 	{
 		$this->form("select")->name("transaction")->min(0)->max(999999999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function transactionmeta_cat() 
 	{
@@ -37,7 +37,7 @@ class transactionmetas
 	public function transactionmeta_status() 
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

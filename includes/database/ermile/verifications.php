@@ -21,7 +21,7 @@ class verifications
 	public function verification_type() 
 	{
 		$this->form("select")->name("type")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function verification_value() 
 	{
@@ -41,14 +41,14 @@ class verifications
 	public function verification_verified() 
 	{
 		$this->form("radio")->name("verified")->type("radio")->required();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ select button
 	public function verification_status() 
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function verification_createdate() 
 	{

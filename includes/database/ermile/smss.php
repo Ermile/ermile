@@ -42,14 +42,14 @@ class smss
 	public function sms_method() 
 	{
 		$this->form("select")->name("method")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ select button
 	public function sms_type() 
 	{
 		$this->form("select")->name("type")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function sms_createdate() 
 	{
@@ -60,7 +60,7 @@ class smss
 	public function sms_status() 
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

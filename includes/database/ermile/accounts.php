@@ -34,7 +34,7 @@ class accounts
 	public function bank_id() 
 	{
 		$this->form("select")->name("bank")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function account_branch() 
 	{

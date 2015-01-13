@@ -16,7 +16,7 @@ class errorlogs
 	public function errorlog_id() 
 	{
 		$this->form("select")->name("errorlog")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

@@ -30,14 +30,14 @@ class userlogs
 	public function userlog_priority() 
 	{
 		$this->form("select")->name("priority")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ select button
 	public function userlog_type() 
 	{
 		$this->form("select")->name("type")->type("select")->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function user_id() {$this->validate()->id();}
 	public function date_modified() {}

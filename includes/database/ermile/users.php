@@ -25,14 +25,15 @@ class users
 	//------------------------------------------------------------------ select button
 	public function user_type() 
 	{
-		$this->form("select")->name("type")->type("select")->validate();
-		$this->setChild($this->form);
+		$this->form("select")->name("type")->type("select");
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ website
 	public function user_mobile() 
 	{
 		$this->form()->type("tel")->name("mobile")->pl("Mobile")->pattern(".{10,}")->maxlength(17)->required();
+		$this->validate()->tel();
 	}
 
 	//------------------------------------------------------------------ password
@@ -52,7 +53,7 @@ class users
 	public function user_gender() 
 	{
 		$this->form("radio")->name("gender")->type("radio");
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function user_nickname() 
 	{
@@ -75,21 +76,21 @@ class users
 	public function user_status() 
 	{
 		$this->form("select")->name("status")->type("select")->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ radio button
 	public function user_credit() 
 	{
 		$this->form("radio")->name("credit")->type("radio");
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function permission_id() 
 	{
 		$this->form("select")->name("permission")->min(0)->max(9999)->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function user_createdate() 
 	{

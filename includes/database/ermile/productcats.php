@@ -42,7 +42,7 @@ class productcats
 	public function attachment_id() 
 	{
 		$this->form("select")->name("attachment")->min(0)->max(999999999)->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function productcat_row() 
 	{
@@ -53,7 +53,7 @@ class productcats
 	public function productcat_status() 
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

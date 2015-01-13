@@ -18,7 +18,7 @@ class productmetas
 	public function product_id() 
 	{
 		$this->form("select")->name("product")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function productmeta_cat() 
 	{
@@ -37,7 +37,7 @@ class productmetas
 	public function productmeta_status() 
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

@@ -13,7 +13,6 @@ class model extends \mvc\model
 		$mymobile	= str_replace(' ', '', utility::post('mobile'));
 		$mypass		= utility::post('password');
 		$tmp_result	=  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
-
 		if($tmp_result->num() == 1)
 		{
 			// mobile exist

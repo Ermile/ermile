@@ -18,14 +18,14 @@ class transactiondetails
 	public function transaction_id() 
 	{
 		$this->form("select")->name("transaction")->min(0)->max(999999999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function product_id() 
 	{
 		$this->form("select")->name("product")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function transactiondetail_quantity() 
 	{

@@ -35,7 +35,7 @@ class addons
 	public function addon_status() 
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function addon_expire() 
 	{

@@ -39,14 +39,14 @@ class terms
 	public function term_type() 
 	{
 		$this->form("select")->name("type")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ select button
 	public function term_status() 
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

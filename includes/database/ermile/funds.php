@@ -30,7 +30,7 @@ class funds
 	public function location_id() 
 	{
 		$this->form("select")->name("location")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function fund_initialbalance() 
 	{

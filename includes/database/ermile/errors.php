@@ -26,7 +26,7 @@ class errors
 	public function error_priority() 
 	{
 		$this->form("select")->name("priority")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

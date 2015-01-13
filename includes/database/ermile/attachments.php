@@ -29,7 +29,7 @@ class attachments
 	public function attachment_model() 
 	{
 		$this->form("select")->name("model")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function attachment_addr() 
 	{

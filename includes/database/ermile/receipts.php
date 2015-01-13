@@ -29,7 +29,7 @@ class receipts
 	public function receipt_type() 
 	{
 		$this->form("select")->name("type")->type("select")->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function receipt_price() 
 	{
@@ -44,7 +44,7 @@ class receipts
 	public function paper_id() 
 	{
 		$this->form("select")->name("paper")->min(0)->max(9999)->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function receipt_paperdate() 
 	{
@@ -55,7 +55,7 @@ class receipts
 	public function receipt_paperstatus() 
 	{
 		$this->form("select")->name("paperstatus")->type("select")->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ description
@@ -68,14 +68,14 @@ class receipts
 	public function transaction_id() 
 	{
 		$this->form("select")->name("transaction")->min(0)->max(999999999)->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function fund_id() 
 	{
 		$this->form("select")->name("fund")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function user_id() {$this->validate()->id();}
 
@@ -83,7 +83,7 @@ class receipts
 	public function user_id_customer() 
 	{
 		$this->form("select")->name("user")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

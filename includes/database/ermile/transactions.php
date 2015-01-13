@@ -19,7 +19,7 @@ class transactions
 	public function transaction_type() 
 	{
 		$this->form("select")->name("type")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function user_id() {$this->validate()->id();}
 
@@ -27,7 +27,7 @@ class transactions
 	public function user_id_customer() 
 	{
 		$this->form("select")->name("user")->min(0)->max(9999)->required()->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function transaction_date() 
 	{

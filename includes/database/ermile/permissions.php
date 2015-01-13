@@ -30,35 +30,35 @@ class permissions
 	public function permission_view() 
 	{
 		$this->form("radio")->name("view")->type("radio")->required();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ radio button
 	public function permission_add() 
 	{
 		$this->form("radio")->name("add")->type("radio")->required();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ radio button
 	public function permission_edit() 
 	{
 		$this->form("radio")->name("edit")->type("radio")->required();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ radio button
 	public function permission_delete() 
 	{
 		$this->form("radio")->name("delete")->type("radio")->required();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ radio button
 	public function permission_status() 
 	{
 		$this->form("radio")->name("status")->type("radio")->required();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function date_modified() {}
 }

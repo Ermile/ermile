@@ -47,14 +47,14 @@ class posts
 	public function post_type() 
 	{
 		$this->form("select")->name("type")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ select button
 	public function post_status() 
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function user_id() {$this->validate()->id();}
 
@@ -62,7 +62,7 @@ class posts
 	public function attachment_id() 
 	{
 		$this->form("select")->name("attachment")->min(0)->max(999999999)->type("select")->validate()->id();
-		$this->setChild($this->form);
+		$this->setChild();
 	}
 	public function post_publishdate() 
 	{
