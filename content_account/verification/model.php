@@ -43,32 +43,32 @@ class model extends \mvc\model
 
 					$this->redirector()->set_url('login?from=verification&mobile='.(substr($_parameter,1)).
 						'&referer='.utility::get('referer') );
-					debug::true("Verify successfully. Now you can login and enjoy!");
+					debug::true(T_("Verify successfully. Now you can login and enjoy!"));
 				}
 				elseif($_parameter2=='recovery')
 				{
 					$this->redirector()->set_url('changepass?from=verification&mobile='.(substr($_parameter,1)).
 						'&referer='.utility::get('referer') );
 					// login user to system
-					debug::true("Verify successfully. Please Input your new password");	
+					debug::true(T_("Verify successfully. Please Input your new password"));
 				}
 			}, $mymobile, utility::get('from'));
 
 			// if a query has error or any error occour in any part of codes, run roolback
 			$this->rollback(function()
 			{
-				debug::error("Verify failed!");
+				debug::error(T_("Verify failed!"));
 			} );
 		}
 		elseif($tmp_result->num() == 0 )
 		{
 			// mobile does not exits
-			debug::error("This code or mobile is incorrect");
+			debug::error(T_("This code or mobile is incorrect"));
 		}
 		else
 		{
 			// mobile exist more than 2 times!
-			debug::error("Please forward this message to Administrator");
+			debug::error(T_("Please forward this message to Administrator"));
 		}
 	}
 }

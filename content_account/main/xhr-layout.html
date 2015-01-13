@@ -1,9 +1,9 @@
 {% import "includes/cls/macro/forms.html" as forms %}
-<div data-xhr="h1">
+<div data-xhr="title">
 	<h1>{{global.page_desc}}</h1>
 </div>
 <div data-xhr="form">
-	<form class="ajx account" method="post" id="frm_{{module}}">
+	<form class="ajx account" method="post" id="frm_{{module}}" action="{{module}}">
 		{{forms.make(form[myform])}}
 	</form>
 </div>

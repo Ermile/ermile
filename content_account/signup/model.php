@@ -10,9 +10,9 @@ class model extends \mvc\model
 		// for debug you can uncomment below line to disallow redirect
 		// $this->controller()->redirector	= false; 
 
-		$mymobile	= str_replace(' ', '', utility::post('mobile'));
-		$mypass		= utility::post('password');
-		$tmp_result	=  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
+		$mymobile   = str_replace(' ', '', utility::post('mobile'));
+		$mypass     = utility::post('password');
+		$tmp_result =  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
 
 
 		if($tmp_result->num() == 1)

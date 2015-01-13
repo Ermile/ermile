@@ -10,8 +10,9 @@ class model extends \mvc\model
 		// for debug you can uncomment below line to disallow redirect
 		// $this->controller()->redirector	= false; 
 
-		$mymobile	= str_replace(' ', '', utility::post('mobile'));
-		$tmp_result	=  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
+		sleep(2);
+		$mymobile   = str_replace(' ', '', utility::post('mobile'));
+		$tmp_result =  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
 
 		if($tmp_result->num() == 1)
 		{
@@ -21,16 +22,16 @@ class model extends \mvc\model
 			// recovery: let's go
 			
 			$tmp_result = $tmp_result->assoc();
-			$myuserid	= $tmp_result['id'];
-			$mycode		= utility::randomCode();
+			$myuserid   = $tmp_result['id'];
+			$mycode     = utility::randomCode();
 			
-			$qry		= $this->sql()->tableVerifications()
-							->setVerification_type('mobileforget')
-							->setVerification_value($mymobile)
-							->setVerification_code($mycode)
-							->setUser_id($myuserid)
-							->setVerification_verified('no');
-			$sql		= $qry->insert();
+			$qry        = $this->sql()->tableVerifications()
+						->setVerification_type('mobileforget')
+						->setVerification_value($mymobile)
+						->setVerification_code($mycode)
+						->setUser_id($myuserid)
+						->setVerification_verified('no');
+			$sql        = $qry->insert();
 
 
 			// ======================================================
@@ -43,7 +44,7 @@ class model extends \mvc\model
 				//Send SMS
 				\lib\utility::send_sms($_parameter, $_parameter2);
 
-				debug::true("Step 1 of 2 is complete. Please check your mobile to continue");
+				debug::true(T_("Step 1 of 2 is complete. Please check your mobile to continue"));
 				$this->redirector()->set_url('verification?from=recovery&mobile='.(substr($_parameter,1)).
 					'&referer='.utility::get('referer') );
 			}, $mymobile, $mycode);
@@ -51,7 +52,7 @@ class model extends \mvc\model
 			// if a query has error or any error occour in any part of codes, run roolback
 			$this->rollback(function()
 			{
-				debug::error("Recovery failed!");
+				debug::error(T_("Recovery failed!"));
 			} );
 		}
 
@@ -60,13 +61,13 @@ class model extends \mvc\model
 			// mobile does not exits
 			// login: show mobile does not exist
 			// register: ok, can register
-			debug::error("Mobile number is incorrect");
+			debug::error(T_("Mobile number is incorrect"));
 		}
 
 		else
 		{
 			// mobile exist more than 2 times!
-			debug::error("Please forward this message to Administrator");
+			debug::error(T_("Please forward this message to Administrator"));
 		}
 	}
 }

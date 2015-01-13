@@ -1,21 +1,8 @@
-<div data-xhr="head_def">
-	{%block head_def%}
-	<div data-xhr="head_css">
-		{%block head_css%}{%endblock%}
-	</div>
-	<div data-xhr="head_js">
-		{%block head_js%}{%endblock%}
-	</div>
-	<div data-xhr="head">
-		{%block head%}{%endblock%}
-	</div>
-	{%endblock%}
-</div>
 {% import "includes/cls/macro/forms.html" as forms %}
 {% if extendForm%}
 {% import macro.forms as forms %}
 {% endif %}
-<div data-xhr="body_def">
+<body data-xhr="body_def" id="{{module}}" class="{{global.direction}} {{bodyclass}}">
 	{%block body_def%}
 	<div data-xhr="header_def">
 		{%block header_def%}{%endblock%}
@@ -33,7 +20,7 @@
 		{%block footer%}{%endblock%}
 	</div>
 	{%endblock%}
-</div>
+</body>
 <div data-xhr="foot_js">
 	{%block foot_js%}{%endblock%}
 </div>

@@ -10,9 +10,9 @@ class model extends \mvc\model
 		// for debug you can uncomment below line to disallow redirect
 		// $this->controller()->redirector	= false; 
 
-		$mymobile	= str_replace(' ', '', utility::post('mobile'));
-		$mypass		= utility::post('password');
-		$tmp_result	=  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
+		$mymobile   = str_replace(' ', '', utility::post('mobile'));
+		$mypass     = utility::post('password');
+		$tmp_result =  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
 		if($tmp_result->num() == 1)
 		{
 			// mobile exist
@@ -23,12 +23,12 @@ class model extends \mvc\model
 				$this->setLoginSession($tmp_result);
 
 				// Create Token and add to db for cross login ****************************************************
-				$mycode		= md5($tmp_result['id'].'_Ermile_'.date('Y-m-d H:i:s'));
+				$mycode	= md5($tmp_result['id'].'_Ermile_'.date('Y-m-d H:i:s'));
 				$qry		= $this->sql()->tableUsermetas()
-								->setUser_id($tmp_result['id'])
-								->setUsermeta_cat('cookie_token')
-								->setUsermeta_name(ip2long($_SERVER['REMOTE_ADDR']))
-								->setUsermeta_value($mycode);
+							->setUser_id($tmp_result['id'])
+							->setUsermeta_cat('cookie_token')
+							->setUsermeta_name(ip2long($_SERVER['REMOTE_ADDR']))
+							->setUsermeta_value($mycode);
 				$sql		= $qry->insert();
 
 				$this->commit(function($_parameter1)
@@ -58,14 +58,14 @@ class model extends \mvc\model
 			else
 			{
 				// password is incorrect:(
-				debug::error("Password is incorrect", "mobile", "password");
+				debug::error(T_("Password is incorrect", "mobile", "password"));
 			}
 		}
 		elseif($tmp_result->num() == 0 )
 		{
 			debug::title("Login Failed!");
 			// mobile does not exits
-			debug::error("Mobile number is incorrect", "mobile", "form");
+			debug::error(T_("Mobile number is incorrect", "mobile", "form"));
 			// $this->controller()->redirector = false;
 					// var_dump(\saloos::is_ajax());
 					// var_dump($this->controller());
@@ -74,7 +74,7 @@ class model extends \mvc\model
 		{
 			// mobile exist more than 2 times!
 			debug::title("Login Failed!");
-			debug::error("Please forward this message to Administrator");
+			debug::error(T_("Please forward this message to Administrator"));
 		}
 	}
 }
