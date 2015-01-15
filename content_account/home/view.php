@@ -14,44 +14,44 @@ class view extends \mvc\view
 		$this->data->bodyclass			= 'unselectable';
 		
 		$this->data->myform				= 'account';
-		$this->global->site_slogan		= T_("One Account for all services");
+		$this->data->site_slogan		= T_("One Account for all services");
 
 		if($this->data->module =='login'){
-			$this->global->page_desc	= T_('Login');
+			$this->data->page_desc	= T_('Login');
 		}
 		elseif($this->data->module =='signup'){
-			$this->global->page_desc	= T_('Create an account');
+			$this->data->page_desc	= T_('Create an account');
 		}
 		elseif($this->data->module =='verification'){
-			$this->global->page_desc	= T_('Verificate');
+			$this->data->page_desc	= T_('Verificate');
 			$this->data->mobile			= \lib\utility::get('mobile');
 		}
 		elseif($this->data->module =='verificationsms'){
-			$this->global->page_desc	= T_('Verificate');
+			$this->data->page_desc	= T_('Verificate');
 		}
 		elseif($this->data->module =='recovery'){
-			$this->global->page_desc	= T_('Recovery');
+			$this->data->page_desc	= T_('Recovery');
 		}
 		elseif($this->data->module =='changepass'){
-			$this->global->page_desc	= T_('Change password');
+			$this->data->page_desc	= T_('Change password');
 			$this->include->telinput	= false;
 		}
 		elseif($this->data->module =='smsdelivery'){
-			$this->global->page_desc	= T_('SMS Delivery');
+			$this->data->page_desc	= T_('SMS Delivery');
 			$this->include->telinput	= false;
 		}
 		elseif($this->data->module =='smscallback'){
-			$this->global->page_desc	= T_('SMS Callback');
+			$this->data->page_desc	= T_('SMS Callback');
 			$this->include->telinput	= false;
 		}
 		else
 		{
-			$this->global->page_desc	= T_('Ermile');
+			$this->data->page_desc	= T_('Ermile');
 			return;
 		}
 
 
-		$this->global->page_title		= $this->global->page_desc;
+		$this->data->page_title		= $this->data->page_desc;
 		$form = $this->createform('.'.$this->data->myform, $this->data->module);
 
 		// $form = $this->form("@jibres.accounts");

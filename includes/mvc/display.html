@@ -6,14 +6,14 @@
  <base href="{{url.current}}"/>
  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><![endif]-->
  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
- <title>{{global.page_title}}{%if global.site_title_show and global.page_title%} | {%endif%}{%if global.site_title_show%}{{global.site_title}}{%endif%}</title>
- <meta name="description"        content="{{global.page_desc}}"/>
- <meta property="og:site_name"   content="{{global.site_title}}"/>
- <meta property="og:title"       content="{{global.page_title}}"/>
- <meta property="og:description" content="{{global.page_desc}}"/>
+ <title>{{global.title}}</title>
+ <meta name="description"        content="{{page_desc}}"/>
+ <meta property="og:site_name"   content="{{site_title}}"/>
+ <meta property="og:title"       content="{{page_title}}"/>
+ <meta property="og:description" content="{{page_desc}}"/>
  <meta property="og:url"         content="{{url.root}}"/>
  <meta property="og:image"       content="{{url.static}}images/logo.png"/>
- <meta property='og:locale'      content='fa_IR'/>
+ <meta property='og:locale'      content='{{global.lang}}'/>
  <!-- [if lte IE 8]><script>document.location = 'http://www.whatbrowser.org/intl/fa/';</script><![endif] -->
  <link rel="author"        href="{{url.static}}humans.txt"/>
  <link rel="shortcut icon" href="{{url.static}}images/favicon.png"/>
@@ -38,7 +38,7 @@
  <header>
    <div id="header" class="unselectable animated">
      <div id="site-title">
-       <h1 id="logo"><a class="navbar-brand" href="{{url.root}}">{{global.site_title}}</a></h1>
+       <h1 id="logo"><a class="navbar-brand" href="{{url.root}}">{{site_title}}</a></h1>
        <nav>
          <div id="header-nav">
            <a href="{{url.root}}">Home Page</a>
@@ -62,8 +62,8 @@
   <style type="text/css">
     body{background-color:#eee}.def-msg{font-family:sans-serif;padding-left:15%;color:#403B33;}h1.def-msg{margin-top:10%;color:#9E4949}
   </style>
-  <h1 class='def-msg'>{{global.site_title}}</h1>
-  <h2 class='def-msg'>{{global.site_desc}}</h2>
+  <h1 class='def-msg'>{{site_title}}</h1>
+  <h2 class='def-msg'>{{site_desc}}</h2>
   <p class='def-msg'>Let start using Saloos! start edit twig block for show your content. for replace this text use <b>block content</b>.</p>
 {%endblock%}
 {%block footer_def%}
@@ -73,7 +73,7 @@
      <div class="container">
       <div class="row">
        <div class="span12">
-        <p>Goto <a href="{{url.root}}" title="{{global.site_desc}}" class="roller cursor-help"><span data-title="{{global.site_title}} Homepage">{{global.site_title}} Homepage</span></a>.</p>
+        <p>Goto <a href="{{url.root}}" title="{{site_desc}}" class="roller cursor-help"><span data-title="{{site_title}} Homepage">{{site_title}} Homepage</span></a>.</p>
         <p>
           <select id="langlist">
 {%for key, value in global.langlist%}{%if key == global.lang%}

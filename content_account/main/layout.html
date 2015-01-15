@@ -11,7 +11,7 @@
 {%block body_def%}
 <div class="center">
 	<header>
-		<a target="_blank" href="{{url.root}}" title="{{global.site_slogan}}" tabindex="-1">
+		<a target="_blank" href="{{url.root}}" title="{{site_slogan}}" tabindex="-1">
 			<svg id='logo' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 			viewBox="0 0 310.667 368" xml:space="preserve" class="svgperload" width="120" height="150">
 			<circle fill="#eee" cx="112.167" cy="294.807" r="46.167"/>
@@ -22,7 +22,7 @@
 		</svg>
 	</a>
 	<div data-xhr="title">
-		<h1>{{global.page_desc}}</h1>
+		<h1>{{page_desc}}</h1>
 	</div>
 </header>
 <div data-xhr="form">
@@ -42,7 +42,7 @@
 		<div id="copyright">
 			{%block footer%}
 			<span>&copy; {{'now'|date('Y')}}</span>
-			<a href="{{url.root}}" title="{{global.site_desc}}" tabindex="-1">{{global.site_title}}</a>
+			<a href="{{url.root}}" title="{{site_desc}}" tabindex="-1">{{site_title}}</a>
 			<select id="langlist">
 				{%for key, value in global.langlist%}{%if key == global.lang%}
 				<option selected="selected" value="{{key}}">{{value}}</option>

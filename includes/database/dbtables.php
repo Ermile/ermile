@@ -193,7 +193,8 @@ function setproperty($myparam)
 				$fn .= $txtcomment. "id - foreign key\n";
 				// $fn .= $txtstart. '$this->form("#foreignkey")->name("'. $prefix.'")->validate("id");' .$txtend;
 				$fn .= $txtstart. '$this->form("select")->name("'. $prefix.'")'.$property.'->type("select")->validate()->id();';
-				$fn .= "\n\t\t".'$this->setChild($this->form);'.$txtend;
+				// $fn .= "\n\t\t".'$this->setChild($this->form);'.$txtend;
+				$fn .= "\n\t\t".'$this->setChild();'.$txtend;
 
 				// $mylabel = str_replace("_", " ", $myfield);
 				$isforeign		= true;
@@ -302,7 +303,8 @@ function setproperty($myparam)
 			{
 				$fn .= $txtcomment. "radio button\n";
 				$fn .= $txtstart. '$this->form("radio")->name("'. $myname.'")->type("radio")'.$property.';';
-				$fn .= "\n\t\t".'$this->setChild($this->form);'.$txtend;
+				// $fn .= "\n\t\t".'$this->setChild($this->form);'.$txtend;
+				$fn .= "\n\t\t".'$this->setChild();'.$txtend;
 			}
 
 			// --------------------------------------------------------------------------------- select
@@ -313,7 +315,8 @@ function setproperty($myparam)
 			{
 				$fn .= $txtcomment. "select button\n";
 				$fn .= $txtstart. '$this->form("select")->name("'. $myname.'")->type("select")'.$property.'->validate();';
-				$fn .= "\n\t\t".'$this->setChild($this->form);'.$txtend;
+				// $fn .= "\n\t\t".'$this->setChild($this->form);'.$txtend;
+				$fn .= "\n\t\t".'$this->setChild();'.$txtend;
 			}
 
 			// --------------------------------------------------------------------------------- Other
