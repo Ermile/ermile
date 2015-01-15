@@ -63,7 +63,7 @@ class model extends \mvc\model
 		elseif($tmp_result->num() == 0 )
 		{
 			// mobile does not exits
-			debug::error(T_("This code or mobile is incorrect"));
+			debug::error(T_("This data is incorrect"));
 		}
 		else
 		{

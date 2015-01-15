@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-09 11:22+0330\n"
-"PO-Revision-Date: 2015-01-09 11:28+0330\n"
+"POT-Creation-Date: 2015-01-15 22:04+0330\n"
+"PO-Revision-Date: 2015-01-15 22:06+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -73,13 +73,29 @@ msgstr "پیامک های دریافتی"
 msgid "Ermile"
 msgstr "ارمایل"
 
-#: ../../../.././content_account/login/model.php:41
+#: ../../../.././content_account/login/model.php:40
 msgid "Login successfully"
 msgstr "ورود موفقیت آمیز"
 
-#: ../../../.././content_account/login/model.php:55
+#: ../../../.././content_account/login/model.php:54
 msgid "Login Failed!"
 msgstr "ثبت نام ناموفق!"
+
+#: ../../../.././content_account/login/model.php:61
+msgid "Password is incorrect"
+msgstr "کلمه عبور اشتباه است"
+
+#: ../../../.././content_account/login/model.php:68
+#: ../../../.././content_account/recovery/model.php:64
+msgid "Mobile number is incorrect"
+msgstr "این شماره موبایل اشتباه است."
+
+#: ../../../.././content_account/login/model.php:77
+#: ../../../.././content_account/signup/model.php:68
+#: ../../../.././content_account/recovery/model.php:70
+#: ../../../.././content_account/verification/model.php:71
+msgid "Please forward this message to Administrator"
+msgstr "لطفا این پیغام را برای مدیر سیستم ارسال کنید"
 
 #: ../../../.././content_account/signup/model.php:21
 msgid "Mobile number exist!"
@@ -93,10 +109,6 @@ msgstr "ثبت نام با موفقیت انجام شد."
 msgid "Register failed!"
 msgstr "ثبت نام ناموفق بود!"
 
-#: ../../../.././content_account/signup/model.php:68
-msgid "Please forward this message to Administrator"
-msgstr "لطفا این پیغام را برای مدیر سیستم ارسال کنید"
-
 #: ../../../.././content_account/verificationsms/model.php:39
 #: ../../../.././content_account/verificationsms/model.php:44
 msgid "We are waiting for your message!"
@@ -109,6 +121,30 @@ msgstr "ما پیامک شما را دریافت کرده و اکانت شما �
 #: ../../../.././content_account/verificationsms/model.php:71
 msgid "Error on verify your code!"
 msgstr "خطا در تایید اعتبار کد!"
+
+#: ../../../.././content_account/recovery/model.php:47
+msgid "Step 1 of 2 is complete. Please check your mobile to continue"
+msgstr "مرحله ۱ از ۲ کامل شد. لطفا تلفن همراه خود را چک کنید"
+
+#: ../../../.././content_account/recovery/model.php:55
+msgid "Recovery failed!"
+msgstr "بازیابی ناموفق بود!"
+
+#: ../../../.././content_account/verification/model.php:46
+msgid "Verify successfully. Now you can login and enjoy!"
+msgstr "اعتبارسنجی موفق بود. حالا می توانید از سامانه استفاده کنید"
+
+#: ../../../.././content_account/verification/model.php:53
+msgid "Verify successfully. Please Input your new password"
+msgstr "اعتبارسنجی با موفقیت انجام شد. لطفا کلمه عبور جدید را وارد کنید"
+
+#: ../../../.././content_account/verification/model.php:60
+msgid "Verify failed!"
+msgstr "اعتبارسنجی ناموفق بود!"
+
+#: ../../../.././content_account/verification/model.php:66
+msgid "This data is incorrect"
+msgstr "این اطلاعات اشتباه است."
 
 #: ../../../.././content_cp/main/controller.php:25
 msgid "Not found!"
@@ -159,6 +195,22 @@ msgstr "کلمه عبور"
 msgid "Send Delivery"
 msgstr "رسید پیامک"
 
+#: ../../../.././includes/cls/form/symbol.php:53
+msgid "Submit"
+msgstr "ارسال"
+
+#: ../../../.././includes/cls/form/symbol.php:54
+msgid "Save"
+msgstr "ذخیره"
+
+#: ../../../.././includes/cls/form/symbol.php:55
+msgid "Sign in"
+msgstr "ورود به اکانت"
+
+#: ../../../.././includes/cls/form/symbol.php:56
+msgid "Create Account"
+msgstr "اکانت بسازید"
+
 #: ../../../.././includes/cls/form/symbol.php:77
 msgid "Mobile"
 msgstr "موبایل"
@@ -175,13 +227,33 @@ msgstr "کلمه عبور"
 msgid "between 5-20 character. be tricky!"
 msgstr "بین 5 تا 20 کاراکتر. در انتخاب کلمه عبور دقت به خرج دهید"
 
-#: ../../../.././includes/mvc/controller.php:64
-msgid "Add New"
+#: ../../../.././includes/languages/trans.php:5
+msgid "Add"
 msgstr "افزودن"
 
-#: ../../../.././includes/mvc/controller.php:68
+#: ../../../.././includes/languages/trans.php:6
+msgid "Add new"
+msgstr "افزودن"
+
+#: ../../../.././includes/languages/trans.php:7
 msgid "Edit"
 msgstr "ویرایش"
+
+#: ../../../.././includes/languages/trans.php:8
+msgid "Options"
+msgstr "تنظیمات"
+
+#: ../../../.././includes/languages/trans.php:9
+msgid "Does not exist"
+msgstr "هیچ داده ای موجود نیست"
+
+#: ../../../.././includes/languages/trans.php:10
+msgid "Add New Record"
+msgstr "افزودن رکورد جدید"
+
+#: ../../../.././includes/languages/trans.php:11
+msgid "Go to"
+msgstr "برو به"
 
 #: ../../../.././includes/mvc/view.php:12
 msgid "Ermile is new"
@@ -191,11 +263,12 @@ msgstr "ارمایل جدید است!"
 msgid "Ermile is our company"
 msgstr "ارمایل نام شرکت ماست"
 
+#, fuzzy
+#~ msgid "Edit test"
+#~ msgstr "ویرایش"
+
 #~ msgid "Register sms failed!"
 #~ msgstr "ثبت نام ناموفق بود!"
-
-#~ msgid "Mobile not exist"
-#~ msgstr "این شماره موبایل در سیستم ثبت نشده است!"
 
 #, fuzzy
 #~ msgid "Loginssss"
@@ -215,12 +288,3 @@ msgstr "ارمایل نام شرکت ماست"
 
 #~ msgid "Manage your account"
 #~ msgstr "اکانت خود را مدیریت کنید"
-
-#~ msgid "Submit"
-#~ msgstr "ارسال"
-
-#~ msgid "Save"
-#~ msgstr "ذخیره"
-
-#~ msgid "Sign in"
-#~ msgstr "ورود به اکانت"

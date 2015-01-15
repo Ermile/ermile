@@ -16,9 +16,9 @@ class view extends \lib\view
 		// var_dump($this->global->module);
 		// add language list for use in display
 		$this->global->langlist		= array(
-											'fa_IR' => 'فارسی',
-											'en_US' => 'English',
-											'de_DE' => 'Deutsch'
+										'fa_IR' => 'فارسی',
+										'en_US' => 'English',
+										'de_DE' => 'Deutsch'
 									);
 		
 		$this->data->module         = $this->module();
