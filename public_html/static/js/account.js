@@ -1,4 +1,4 @@
-route('*', function() {
+route('*', 'account.js', function() {
   if($('#delay', this).length){
     setTimeout(createdelay, 1000);
   }

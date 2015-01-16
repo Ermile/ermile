@@ -1,4 +1,4 @@
-route('*', function() {
+route('*', 'custom.js', function() {
   hideFields();
 
   $(".fields-toggle", this).change(function () {
