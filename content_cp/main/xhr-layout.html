@@ -1,5 +1,21 @@
 {% import "includes/cls/macro/forms.html" as forms %}
 
+
+{%block header%}
+{%if child%}
+ <div data-xhr="options" id="options" class="unselectable">
+    <div id="options-meta" class="disappear">
+{% for key, value in field_list %}
+      <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{key}}" {%if value%}checked="checked"{%endif%}><span>{{key|title}}</span></label>
+{% endfor %}
+    </div>
+    <a id="options-link" href="javascript: void(0)">{%trans%}Options{%endtrans%}</a>
+ </div>
+{%endif%}
+{%endblock%}
+
+
+
 {%block content_def%}
  <div data-xhr="content_def" class="container" id="main">
   {%if page_title%}
@@ -8,60 +24,60 @@
    {%if child%}
     <p class="alert alert-block alert-info">
      {{module|title}} Section
-     <a class="float-right" href="{{store}}/{{module}}">Go to {{module|title}}</a>
+     <a class="float-right" href="{{store}}/{{module}}">{%trans%}Go to{%endtrans%} {{module|title}}</a>
     </p>
     {%if form_show %}
      <form class="ajx" method="post" id="{{form_title}}">
       {{forms.make(form[module])}}
      </form>
     {%else%}
-     <p>Does not exist!!!</p>
+     <p>{%trans%}Does not exist{%endtrans%}!!!</p>
     {%endif%}
 
    {%else%}
     <p class="alert alert-block alert-info">
-     <a href="{{store}}/{{module}}/add">Add New Record</a>
+     <a href="{{store}}/{{module}}/add">{%trans%}Add New Record{%endtrans%}</a>
      <a class="float-right" href="/">Home</a>
     </p>
 
-  		{%block datatable%}
+      {%block datatable%}
        {%if include.datatable%}
-  		  <table class="datatable display">
-  		   <thead>
-  		    <tr role="row">
-  		     <th class="column_row">#</th>
-  							{%for value in columns if value%}
-  		     	<th>{{value | title}}</th>
-  							{%endfor%}
-  		     <th class="column_actions">Actions</th>
-  		    </tr>
-  		   </thead>
+        <table class="datatable display">
+         <thead>
+          <tr>
+           <th class="column_row">#</th>
+                {%for value in columns if value%}
+            <th>{{value | title}}</th>
+                {%endfor%}
+           <th class="column_actions">Actions</th>
+          </tr>
+         </thead>
 
-  		   <tbody>
-  					{%block tbody%}
-  						{%for d in datatable%}
-  			    <tr role="row" class="{{ cycle(['odd', 'even'], loop.index0) }}">
-  			     <td class="column_row">{{loop.index}}</td>
-  								{%for col,value in columns if value%}
-  			     	<td>{{attribute(d,col)}}</td>
-  								{%endfor%}
-  			     <td>
-  			      <span class="hint--top hint--info" data-hint="Edit">
-  			       <a class="action-icons edit hint--top" href="{{store}}/{{module}}/edit={{d.id}}">Edit</a>
-  			      </span>
-  			      <span class="hint--top hint--error" data-hint="Delete">
-  			       <a class="action-icons delete hide-text" href="{{store}}/{{module}}/delete={{d.id}}">Delete</a>
-  			      </span>
-  			     </td>
-  		     </tr>
-  					 {%endfor%}
-  					{%endblock%}
-  		   </tbody>
-  		  </table>
+         <tbody>
+            {%block tbody%}
+              {%for d in datatable%}
+            <tr class="{{ cycle(['odd', 'even'], loop.index0) }}">
+             <td class="column_row">{{loop.index}}</td>
+                  {%for col,value in columns if value%}
+              <td>{{attribute(d,col)}}</td>
+                  {%endfor%}
+             <td>
+              <span class="hint--top hint--info" data-hint="Edit">
+               <a class="action-icons edit hint--top" href="{{store}}/{{module}}/edit={{d.id}}">Edit</a>
+              </span>
+              <span class="hint--top hint--error" data-hint="Delete">
+               <a class="action-icons delete hide-text" href="{{store}}/{{module}}/delete={{d.id}}" data-ajaxify>Delete</a>
+              </span>
+             </td>
+           </tr>
+             {%endfor%}
+            {%endblock%}
+         </tbody>
+        </table>
         {%else%}
         Data not exist!
        {%endif%}
-  		{%endblock%}
+      {%endblock%}
    {%endif%}
   {%endif%}
 

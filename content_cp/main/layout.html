@@ -11,7 +11,7 @@
 
 {%block header%}
 {%if child%}
- <div id="options" class="unselectable">
+ <div data-xhr="options" id="options" class="unselectable">
     <div id="options-meta" class="disappear">
 {% for key, value in field_list %}
       <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{key}}" {%if value%}checked="checked"{%endif%}><span>{{key|title}}</span></label>
@@ -52,7 +52,7 @@
        {%if include.datatable%}
   		  <table class="datatable display">
   		   <thead>
-  		    <tr role="row">
+  		    <tr>
   		     <th class="column_row">#</th>
   							{%for value in columns if value%}
   		     	<th>{{value | title}}</th>
@@ -64,7 +64,7 @@
   		   <tbody>
   					{%block tbody%}
   						{%for d in datatable%}
-  			    <tr role="row" class="{{ cycle(['odd', 'even'], loop.index0) }}">
+  			    <tr class="{{ cycle(['odd', 'even'], loop.index0) }}">
   			     <td class="column_row">{{loop.index}}</td>
   								{%for col,value in columns if value%}
   			     	<td>{{attribute(d,col)}}</td>
