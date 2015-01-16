@@ -1,64 +1,57 @@
 route('*', function() {
-    hideFields();
+  hideFields();
 
-    $(".fields-toggle", this).change(function () {
-        $("."+this.value).toggleClass('hide');
-    });
+  $(".fields-toggle", this).change(function () {
+    $("."+this.value).toggleClass('hide');
+  });
 
-    $("#options-link", this).click(function () {
-        $("#meta").toggleClass('hide');
-    });
+  $("#options-link", this).click(function () {
+      $("#meta").toggleClass('hide');
+  });
 
-   var clonedHeaderRow;
+ var clonedHeaderRow;
 
-   $(".persist-area", this).each(function() {
-       clonedHeaderRow = $(".persist-header", this);
-       clonedHeaderRow
-         .before(clonedHeaderRow.clone())
-         .addClass("floatingHeader");
-         
-   });
-   
-   $(window)
-    .scroll(UpdateTableHeaders)
-    .trigger("scroll");
+ $(".persist-area", this).each(function() {
+     clonedHeaderRow = $(".persist-header", this);
+     clonedHeaderRow
+       .before(clonedHeaderRow.clone())
+       .addClass("floatingHeader");
+       
+ });
+ 
+ $(window)
+  .scroll(UpdateTableHeaders)
+  .trigger("scroll");
 })
 
 
 function hideFields() {
-    $("input:checkbox", this).each(function()
+  $("input:checkbox", this).each(function() {
+    if( !$(this).is(":checked") )
     {
-
-        if( !$(this).is(":checked") )
-        {
-            $("."+$(this).val()).addClass('hide');
-        }
+        $("."+$(this).val()).addClass('hide');
     }
-);}
-
-
-
-
+  })
+}
 
 function UpdateTableHeaders() {
-   $(".persist-area", this).each(function() {
+ $(".persist-area", this).each(function() {
+   var el             = $(this),
+       offset         = el.offset(),
+       scrollTop      = $(window).scrollTop(),
+       floatingHeader = $(".floatingHeader", this)
    
-       var el             = $(this),
-           offset         = el.offset(),
-           scrollTop      = $(window).scrollTop(),
-           floatingHeader = $(".floatingHeader", this)
-       
-       if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
-           floatingHeader.css({
-            "visibility": "visible",
-            "opacity": "1"
-           });
-       } else {
-           floatingHeader.css({
-            "visibility": "hidden"
-           });      
-       };
-   });
+   if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
+       floatingHeader.css({
+        "visibility": "visible",
+        "opacity": "1"
+       });
+   } else {
+       floatingHeader.css({
+        "visibility": "hidden"
+       });      
+   };
+ });
 }
 
 

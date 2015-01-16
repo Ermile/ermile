@@ -1,18 +1,18 @@
-$(document).ready(function () {
+route('*', function() {
     hideFields();
 
-    $(".fields-toggle").change(function () {
+    $(".fields-toggle", this).change(function () {
     var box = $("."+this.value);
         box.toggleClass('disappear');
     });
-    $("#options-link").click(function () {
+    $("#options-link", this).click(function () {
         $("#options-meta").toggleClass('disappear');
     });
 });
 
 function hideFields()
 {
-    $("input:checkbox").each(function()
+    $("input:checkbox", this).each(function()
     {
         if( !$(this).is(":checked") )
         {
