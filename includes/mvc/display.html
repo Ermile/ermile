@@ -17,8 +17,8 @@
  <!-- [if lte IE 8]><script>document.location = 'http://www.whatbrowser.org/intl/fa/';</script><![endif] -->
  <link rel="author"        href="{{url.static}}humans.txt"/>
  <link rel="shortcut icon" href="{{url.static}}images/favicon.png"/>
-{%if include.customcss   %} <link rel="stylesheet"    href="{{url.static}}css/style.css?ver=0.0.1">{{include.newline}}{%endif%}
-{%if include.fontawesome %} <link rel="stylesheet"    href="{{url.static}}css/font-awesome.min.css?v4.2.0">{{include.newline}}{%endif%}
+{%if include.customcss   %} <link rel="stylesheet"    href="{{url.static}}css/style.css?ver=0.0.1"/>{{include.newline}}{%endif%}
+{%if include.fontawesome %} <link rel="stylesheet"    href="{{url.static}}css/font-awesome.min.css?v4.2.0"/>{{include.newline}}{%endif%}
 {%block head_css%}{%endblock%}
 {%block head_js%}{%endblock%}
 {%endblock%}
@@ -29,7 +29,7 @@
     {% import macro.forms as forms %}
 {% endif %}
 
-<body data-xhr="body_def" id="{{module}}" class="{{global.direction}} {{bodyclass}}">
+<body data-xhr="body_def" id="{{module_full}}" class="{{global.direction}} {{bodyclass}}">
 
 {%block body_def%}
 {%block header_def%}

@@ -6,14 +6,12 @@ class view extends \lib\view
 	function _construct()
 	{
 		// define default value for global
-		// var_dump(T_("Ermile"));
-		// var_dump(T_(1));
 		$this->data->site_title  	= T_("Ermile");
 		$this->data->site_desc   	= T_("Ermile is new");
 		$this->data->site_slogan 	= T_("Ermile is our company");
-		$this->global->login     	= $this->login();
 		// $this->global->module   	= $this->module();
-		// var_dump($this->global->module);
+		// var_dump($this->module('true'));
+		// var_dump($this->data->module);
 		// add language list for use in display
 		$this->global->langlist		= array(
 										'fa_IR' => 'فارسی',
@@ -21,9 +19,9 @@ class view extends \lib\view
 										'de_DE' => 'Deutsch'
 									);
 		
-		$this->data->module         = $this->module();
+		// $this->data->module         = $this->module();
 		// if you need to set a class for body element in html add in this value
-		$this->data->bodyclass      = null;
+		// $this->data->bodyclass      = null;
 		
 		// define default value for include
 		$this->include->datatable   = false;
