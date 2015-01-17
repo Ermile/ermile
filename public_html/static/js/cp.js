@@ -6,6 +6,7 @@ route('*', 'cp.js', function() {
         box.toggleClass('disappear');
     });
     $("#options-link", this).click(function () {
+        console.log('clicked');
         $("#options-meta").toggleClass('disappear');
     });
 });
