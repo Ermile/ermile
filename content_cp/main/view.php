@@ -45,7 +45,7 @@ class view extends \mvc\view
 
 	private function prepareChild()
 	{
-		$this->global->js 	    = array($this->url->static.'js/ckeditor/ckeditor.js');
+		$this->global->js 	    = array($this->url->static.'js/medium-editor.min.js');
 		$this->data->form_show  = true;
 		$this->include->editor  = true;
 		$this->data->field_list = \lib\sql\getTable::get($this->data->module,'form');

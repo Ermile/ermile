@@ -19,7 +19,6 @@
  <link rel="shortcut icon" href="{{url.static}}images/favicon.png"/>
 {%if include.customcss   %} <link rel="stylesheet"    href="{{url.static}}css/style.css?ver=0.0.1">{{include.newline}}{%endif%}
 {%if include.fontawesome %} <link rel="stylesheet"    href="{{url.static}}css/font-awesome.min.css?v4.2.0">{{include.newline}}{%endif%}
-{%if include.editor      %} <link rel="stylesheet"    href="{{url.static}}js/medium/medium-editor.min.css"></script>{{include.newline}}{%endif%}
 {%block head_css%}{%endblock%}
 {%block head_js%}{%endblock%}
 {%endblock%}
@@ -113,7 +112,7 @@
 
  <script src="{{url.static}}js/common.js"></script>
 {%if include.datatable   %} <script src="{{url.static}}js/jquery.dataTables.min.js"></script>{{include.newline}}{%endif%}
-{%if include.editor      %} <script src="{{url.static}}js/medium/medium-editor.min.js"></script>{{include.newline}}{%endif%}
+{%if include.editor      %} <script src="{{url.static}}js/medium-editor.min.js"></script>{{include.newline}}{%endif%}
 {%if include.telinput    %} <script src="{{url.static}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
 {%if include.customjs    %} <script src="{{url.static}}js/custom.js"></script>{{include.newline}}{%endif%}
 {%block foot_js%}{%endblock%}
