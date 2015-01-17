@@ -1,9 +1,12 @@
 {% import "includes/cls/macro/forms.html" as forms %}
 
 
-{%block header%}
+
+{%block content_def%}
+<div data-xhr="content_def">
+
 {%if child%}
- <div data-xhr="options" id="options" class="unselectable">
+ <div id="options" class="unselectable">
     <div id="options-meta" class="disappear">
 {% for key, value in field_list %}
       <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{key}}" {%if value%}checked="checked"{%endif%}><span>{{key|title}}</span></label>
@@ -12,12 +15,7 @@
     <a id="options-link" href="javascript: void(0)">{%trans%}Options{%endtrans%}</a>
  </div>
 {%endif%}
-{%endblock%}
-
-
-
-{%block content_def%}
- <div data-xhr="content_def" class="container" id="main">
+ <div class="container" id="main">
   {%if page_title%}
   <h1>{{page_title}}</h1><hr />{%endif%}
   {%if module and module!="home"%}
@@ -82,4 +80,5 @@
   {%endif%}
 
  </div>
+</div>
 {%endblock%}
