@@ -1,3 +1,12 @@
+function slugify(text) {
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start of text
+    .replace(/-+$/, '');            // Trim - from end of text
+}
+
 route('*', 'cp.js', function() {
   hideFields();
 
@@ -9,11 +18,18 @@ route('*', 'cp.js', function() {
     console.log('clicked');
     $("#options-meta").toggleClass('disappear');
   });
-  
-  var $slug = $('#slug');
+
+  var $slug = $('#slug'),
+      handEdited = false;
   if($slug.length) {
-    $('#title').keypress(function() {
+    $('#title').keyup(function() {
+      var sv = $slug.val();
+      if(sv && handEdited) return;
+      handEdited = false;
       $slug.val(slugify(this.value));
+    });
+    $slug.keyup(function() {
+      if(this.value) handEdited = true;
     });
   }
 });
