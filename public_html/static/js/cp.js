@@ -20,6 +20,7 @@ route('*', 'cp.js', function() {
   });
 
   var $slug = $('#slug'),
+      slug = $slug.get(0),
       handEdited = false;
   if($slug.length) {
     $('#title').keyup(function() {
@@ -28,8 +29,24 @@ route('*', 'cp.js', function() {
       handEdited = false;
       $slug.val(slugify(this.value));
     });
+    $slug.parents('form').submit(function() {
+      if(!slug.value) slug.value = slugify($('#title').val());
+    });
     $slug.keyup(function() {
       if(this.value) handEdited = true;
+    });
+  }
+
+  var $options = $('#options-meta');
+
+  if($options.length) {
+    $options.find('input').change(function() {
+      var data = $options.getData();
+      $.ajax({
+        url: location.protocol + ':/' + location.hostname + 
+             location.pathname.slice(0, location.pathname.lastIndexOf('/')+1) + 'options',
+        data: data
+      });
     });
   }
 });
