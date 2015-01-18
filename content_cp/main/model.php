@@ -7,8 +7,8 @@ class model extends \mvc\model
 {
 	public function get_datatable($object)
 	{
-		$mytable	= 'table'.ucfirst($this->module());
-		$tmp_result	=  $this->sql()->$mytable()->select();
+		$mytable    = 'table'.ucfirst($this->module());
+		$tmp_result =  $this->sql()->$mytable()->select();
 		return $tmp_result->Allassoc();
 	}
 
@@ -20,7 +20,7 @@ class model extends \mvc\model
 
 	function get_edit($obj)
 	{
-
+		$this->prepareChild();
 	}
 
 	private function prepareChild()
@@ -32,11 +32,11 @@ class model extends \mvc\model
 
 	function get_delete($obj)
 	{
-		$qry_module	= $this->module();
-		$qry_table	= 'table'.ucfirst($qry_module);
-		$qry_slug	= $this->childparam('delete');
-		$qry_where	= 'whereId';
-		$qry		= $this->sql()->$qry_table()->$qry_where($qry_slug);
+		$qry_module = $this->module();
+		$qry_table  = 'table'.ucfirst($qry_module);
+		$qry_slug   = $this->childparam('delete');
+		$qry_where  = 'whereId';
+		$qry        = $this->sql()->$qry_table()->$qry_where($qry_slug);
 
 		if($qry->select()->num()>0)
 		{
@@ -69,6 +69,16 @@ class model extends \mvc\model
 			// $this->redirector()->set_url($this->module());
 			debug::error(T_("Delete failed!"));
 		} );
+	}
+
+	function post_add()
+	{
+		debug::warn(T_("Add Record successfully"));
+	}
+
+	function post_edit()
+	{
+		debug::warn(T_("Edit Record successfully"));
 	}
 }
 ?>

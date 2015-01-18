@@ -37,9 +37,9 @@ class controller extends \mvc\controller
 		// only get need second param
 		// other method don't need seccond param
 		// method desc:
-		// 			get 	: show data, (model for get records from db)
+		// 			get 		: show data, (model for get records from db)
 		// 			post 	: post parameter after click on submit, add a new record
-		// 			put 	: change records
+		// 			put 		: change records
 		// 			delete 	: delete record
 
 		// $this->get(false, 'account')->ALL("signup");

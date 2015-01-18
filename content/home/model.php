@@ -1,7 +1,9 @@
 <?php
 namespace content\home;
-class model extends \mvc\model{
+use \lib\debug;
 
+class model extends \content\main\model
+{
 	public function get_validate($object){
 		$maker = $this->validate()->make();
 		$maker->id()->formId("your id is incorrect");

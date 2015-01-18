@@ -2,13 +2,10 @@
 namespace content\home;
 use \lib\saloos;
 
-class controller extends \mvc\controller{
-	public function config(){
-		if($this->login())
-			var_dump($this->login('all'));
-	}
-
-	function _route(){
+class controller extends \content\main\controller
+{
+	function _route2()
+	{
 		$this->get("validate")
 		->REST("validate")
 		->SERVER();

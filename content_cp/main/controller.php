@@ -38,18 +38,22 @@ class controller extends \mvc\controller
 		if($mymodule=='home')
 			return;
 
+		$myaddress = \lib\router::get_real_url();
 		// on module root without child like /post
 		if($mychild)
 		{
 			if($mychild=='delete')
-				$this->get($mychild)->ALL(\lib\router::get_real_url());
+				$this->get($mychild)->ALL($myaddress);
 			else
-				$this->get($mychild, $mychild)->ALL(\lib\router::get_real_url());
+			{
+				$this->get($mychild, $mychild)->ALL($myaddress);
+				$this->post($mychild)->ALL($myaddress);
+			}
 
 		}
 		else
 		{
-			$this->get('datatable', 'datatable')->ALL(\lib\router::get_real_url());
+			$this->get('datatable', 'datatable')->ALL($myaddress);
 		}
 		// $this->model_name	= 'content_cp\\'.$mymodule.'\model';
 		// $this->post($mymodule)->ALL($mymodule);
