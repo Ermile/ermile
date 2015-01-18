@@ -43,9 +43,12 @@ route('*', 'cp.js', function() {
     $options.find('input').change(function() {
       var data = $options.getData();
       $.ajax({
-        url: location.protocol + ':/' + location.hostname + 
+        url: location.protocol + '//' + location.hostname + 
              location.pathname.slice(0, location.pathname.lastIndexOf('/')+1) + 'options',
-        data: data
+        type: 'post',
+        data: data,
+        dataType: 'json',
+        cache: false
       });
     });
   }
