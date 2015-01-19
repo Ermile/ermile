@@ -1,0 +1,21 @@
+{%extends layout%}
+{%block content_def%}
+  <section>
+    <div class="topic cover light1">
+      <div class="row Slogan">
+        <h2>{{post.title}}</h2>
+      </div>
+      <div class="body">
+        <div class="row">
+          <div class="span7"></div>
+          <div class="span5">
+            <div class="desc">
+              {{post.content}}
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{%endblock%}

@@ -4,19 +4,28 @@ use \lib\debug;
 
 class model extends \mvc\model
 {
-	public function get_page($object)
+	public function get_posts($object)
 	{
-		// $myaddress = \lib\router::get_real_url();
-		$myaddress = $object->match->url[0];
-
-		$tmp_result =  $this->sql()->tablePosts()->wherePost_type('page')
-		->andPost_slug($myaddress)->andPost_status('publish')->select();
+		$_url       = $this->module('array');
+		$tmp_result =  $this->sql()->tablePosts()
+								->wherePost_slug($_url[count($_url)-1])->andPost_status('publish')->select();
 
 		if($tmp_result->num()==1)
 			return $tmp_result->assoc();
 		
-		// \lib\http::page(T_("Does not Exist!"));
-			
+		return null;
+	}
+
+	public function get_terms($object)
+	{
+		$_url       = $this->module('array');
+		$tmp_result =  $this->sql()->tableTerms()
+								->whereTerm_slug($_url[count($_url)-1])->andTerm_status('enable')->select();
+
+		if($tmp_result->num()==1)
+			return $tmp_result->assoc();
+		
+		return null;
 	}
 
 	function url_checker($_url = null)

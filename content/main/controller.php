@@ -22,9 +22,32 @@ class controller extends \mvc\controller
 		}
 		else
 		{
-			$this->get()->ALL();
+			if( is_file(root.'content/'.$url_type.'/display.html') )
+				$this->display_name	= 'content\\'.$url_type.'\display.html';
+			else
+				$this->display_name	= 'content\post\display.html';
+
+				// $this->get($url_type, $url_type)->ALL();
+
+			switch ($url_type)
+			{
+				case 'page':
+				case 'post':
+					$this->get('posts', 'posts')->ALL();
+					break;
+
+				case 'cat':
+				case 'tag':
+					$this->get('terms', 'terms')->ALL();
+					break;
+
+				default:
+					break;
+			}
+
+
+			// $this->get()->ALL();
 			// if page exist show it
-			// $this->get('page', 'page')->ALL();
 		}
 	}
 
