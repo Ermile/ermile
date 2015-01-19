@@ -73,7 +73,10 @@ class model extends \mvc\model
 
 	function post_add()
 	{
+		var_dump('expression');
 		debug::warn(T_("Add Record successfully"));
+		sleep(3);
+		// exit();
 	}
 
 	function post_edit()
