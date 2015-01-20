@@ -9,6 +9,7 @@ class view extends \lib\view
 		$this->data->site_title  	= T_("Ermile");
 		$this->data->site_desc   	= T_("Ermile is new");
 		$this->data->site_slogan 	= T_("Ermile is our company");
+
 		// $this->global->module   	= $this->module();
 		// var_dump($this->module('true'));
 		// var_dump($this->data->module);
@@ -45,6 +46,9 @@ class view extends \lib\view
 		if(method_exists($this, 'options')){
 			$this->options();
 		}
+
+
+
 	}
 
 	function pushState()

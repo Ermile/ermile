@@ -54,9 +54,9 @@
   		    <tr>
   		     <th class="column_row">#</th>
   							{%for value in columns if value%}
-  		     	<th>{{value | title}}</th>
+  		     	<th>{%trans value%}</th>
   							{%endfor%}
-  		     <th class="column_actions">Actions</th>
+  		     <th class="column_actions">{%trans "Actions"%}</th>
   		    </tr>
   		   </thead>
 
@@ -70,10 +70,10 @@
   								{%endfor%}
   			     <td>
   			      <span class="hint--top hint--info" data-hint="Edit">
-  			       <a class="action-icons edit hint--top" href="{{store}}/{{module}}/edit={{d.id}}">Edit</a>
+  			       <a class="action-icons edit hint--top" href="{{store}}/{{module}}/edit={{d.id}}">{%trans "Edit"%}</a>
   			      </span>
   			      <span class="hint--top hint--error" data-hint="Delete">
-  			       <a class="action-icons delete hide-text" href="{{store}}/{{module}}/delete={{d.id}}" data-ajaxify>Delete</a>
+  			       <a class="action-icons delete hide-text" href="{{store}}/{{module}}/delete={{d.id}}" data-ajaxify>{%trans "Delete"%}</a>
   			      </span>
   			     </td>
   		     </tr>

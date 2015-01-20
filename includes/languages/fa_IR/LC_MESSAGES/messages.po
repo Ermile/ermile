@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-20 22:52+0330\n"
-"PO-Revision-Date: 2015-01-20 22:55+0330\n"
+"POT-Creation-Date: 2015-01-20 23:34+0330\n"
+"PO-Revision-Date: 2015-01-20 23:34+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -38,7 +38,7 @@ msgstr "یک اکانت برای همه حساب ها"
 
 #: ../../../.././content_account/home/view.php:22
 #: ../../../.././includes/cls/form/account.php:25
-#: ../../../.././includes/languages/trans.php:10
+#: ../../../.././includes/languages/trans.php:15
 msgid "Login"
 msgstr "ورود به سیستم"
 
@@ -256,62 +256,87 @@ msgid "between 5-20 character. be tricky!"
 msgstr "بین 5 تا 20 کاراکتر. در انتخاب کلمه عبور دقت به خرج دهید"
 
 #: ../../../.././includes/languages/trans.php:5
+msgid "Saloos"
+msgstr "سالوس"
+
+#: ../../../.././includes/languages/trans.php:6
+msgid "home"
+msgstr "خانه"
+
+#: ../../../.././includes/languages/trans.php:7
 msgid "Home"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/trans.php:6
+#: ../../../.././includes/languages/trans.php:8
 msgid "Homepage"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/trans.php:7
+#: ../../../.././includes/languages/trans.php:9
 msgid "Home Page"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/trans.php:8
+#: ../../../.././includes/languages/trans.php:10
 msgid "Admin"
 msgstr "مدیریت"
 
-#: ../../../.././includes/languages/trans.php:9
+#: ../../../.././includes/languages/trans.php:11
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
-#: ../../../.././includes/languages/trans.php:11
+#: ../../../.././includes/languages/trans.php:12
+msgid "Sign In"
+msgstr "ورود به سیستم"
+
+#: ../../../.././includes/languages/trans.php:13
+msgid "Sign Up"
+msgstr "ثبت نام"
+
+#: ../../../.././includes/languages/trans.php:14
+msgid "Signup"
+msgstr "ثبت نام"
+
+#: ../../../.././includes/languages/trans.php:16
 msgid "Logout"
 msgstr "خروج از سیستم"
 
-#: ../../../.././includes/languages/trans.php:12
-#: ../../../.././includes/languages/trans.php:19
+#: ../../../.././includes/languages/trans.php:17
+#: ../../../.././includes/languages/trans.php:25
 msgid "Go to"
 msgstr "برو به"
 
-#: ../../../.././includes/languages/trans.php:13
+#: ../../../.././includes/languages/trans.php:18
 #: ../../../.././includes/database/ermile/translation.php:207
 msgid "Add"
 msgstr "افزودن"
 
-#: ../../../.././includes/languages/trans.php:14
+#: ../../../.././includes/languages/trans.php:19
 msgid "Add new"
 msgstr "افزودن"
 
-#: ../../../.././includes/languages/trans.php:15
+#: ../../../.././includes/languages/trans.php:20
 #: ../../../.././includes/database/ermile/translation.php:208
 msgid "Edit"
 msgstr "ویرایش"
 
-#: ../../../.././includes/languages/trans.php:16
+#: ../../../.././includes/languages/trans.php:21
+#: ../../../.././includes/database/ermile/translation.php:209
+msgid "Delete"
+msgstr "حذف"
+
+#: ../../../.././includes/languages/trans.php:22
 #: ../../../.././includes/database/ermile/translation.php:171
 msgid "Options"
 msgstr "تنظیمات"
 
-#: ../../../.././includes/languages/trans.php:17
+#: ../../../.././includes/languages/trans.php:23
 msgid "Does not exist"
 msgstr "هیچ داده ای موجود نیست"
 
-#: ../../../.././includes/languages/trans.php:18
+#: ../../../.././includes/languages/trans.php:24
 msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
-#: ../../../.././includes/languages/trans.php:20
+#: ../../../.././includes/languages/trans.php:26
 #: ../../../.././includes/database/ermile/translation.php:10
 #: ../../../.././includes/database/ermile/translation.php:57
 #: ../../../.././includes/database/ermile/translation.php:71
@@ -330,7 +355,7 @@ msgstr "افزودن رکورد جدید"
 msgid "Title"
 msgstr "عنوان"
 
-#: ../../../.././includes/languages/trans.php:21
+#: ../../../.././includes/languages/trans.php:27
 #: ../../../.././includes/database/ermile/translation.php:11
 #: ../../../.././includes/database/ermile/translation.php:30
 #: ../../../.././includes/database/ermile/translation.php:72
@@ -344,9 +369,45 @@ msgstr "عنوان"
 msgid "Slug"
 msgstr "نامک"
 
-#: ../../../.././includes/languages/trans.php:22
+#: ../../../.././includes/languages/trans.php:28
 msgid "Please select one item"
 msgstr "لطفا یک گزینه را انتخاب کنید"
+
+#: ../../../.././includes/languages/trans.php:29
+msgid "Add New"
+msgstr "افزودن"
+
+#: ../../../.././includes/languages/trans.php:30
+msgid "Actions"
+msgstr "عملیات"
+
+#: ../../../.././includes/languages/trans.php:31
+msgid "Can't access your account?"
+msgstr "نمی توانید به حساب خود وارد شوید؟"
+
+#: ../../../.././includes/languages/trans.php:32
+msgid "Don't have an account?"
+msgstr "اکانت ندارید؟"
+
+#: ../../../.././includes/languages/trans.php:33
+msgid "By signing up"
+msgstr "با ثبت نام"
+
+#: ../../../.././includes/languages/trans.php:34
+msgid "Already have an account?"
+msgstr "اکانت دارید؟"
+
+#: ../../../.././includes/languages/trans.php:35
+msgid "Terms of Service"
+msgstr "قوانین استفاده"
+
+#: ../../../.././includes/languages/trans.php:36
+msgid "you agree to the"
+msgstr "شما موافق هستید با"
+
+#: ../../../.././includes/languages/trans.php:37
+msgid "Are you remember your password!?"
+msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
 
 #: ../../../.././includes/mvc/view.php:10
 msgid "Ermile is new"
@@ -948,10 +1009,6 @@ msgstr "ماژول"
 msgid "View"
 msgstr "نمایش"
 
-#: ../../../.././includes/database/ermile/translation.php:209
-msgid "Delete"
-msgstr "حذف"
-
 #: ../../../.././includes/database/ermile/translation.php:213
 msgid "postmetas"
 msgstr "توضیح اضافی نوشته ها"
@@ -1531,9 +1588,6 @@ msgstr "ربات"
 #~ msgid "Save"
 #~ msgstr "ذخیره"
 
-#~ msgid "Sign in"
-#~ msgstr "ورود به اکانت"
-
 #, fuzzy
 #~ msgid "Edit test"
 #~ msgstr "ویرایش"
@@ -1553,6 +1607,3 @@ msgstr "ربات"
 
 #~ msgid "Account Manager"
 #~ msgstr "مدیریت اکانت"
-
-#~ msgid "Manage your account"
-#~ msgstr "اکانت خود را مدیریت کنید"
