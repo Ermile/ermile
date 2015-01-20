@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-20 23:34+0330\n"
-"PO-Revision-Date: 2015-01-20 23:34+0330\n"
+"POT-Creation-Date: 2015-01-21 02:56+0330\n"
+"PO-Revision-Date: 2015-01-21 02:56+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -408,6 +408,22 @@ msgstr "شما موافق هستید با"
 #: ../../../.././includes/languages/trans.php:37
 msgid "Are you remember your password!?"
 msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
+
+#: ../../../.././includes/languages/trans.php:38
+msgid "Please check your mobile and enter the code"
+msgstr "پس از بررسی موبایل خود کد را وارد کنید"
+
+#: ../../../.././includes/languages/trans.php:39
+msgid "Don't receive message?"
+msgstr "هنوز پیامک ما را دریافت نکردید؟"
+
+#: ../../../.././includes/languages/trans.php:40
+msgid "Then wait we receive your message and verificate your account"
+msgstr "ما پیامک شما را دریافت کرده و اکانت شما را برایتان فعال کردیم"
+
+#: ../../../.././includes/languages/trans.php:41
+msgid "Please send number <b>2015</b> to below number"
+msgstr "لطفا عدد 2015 را به شماره زیر پیامک کنید"
 
 #: ../../../.././includes/mvc/view.php:10
 msgid "Ermile is new"

@@ -35,6 +35,10 @@ function transtext
 	echo T_("Terms of Service");
 	echo T_("you agree to the");
 	echo T_("Are you remember your password!?");
+	echo T_("Please check your mobile and enter the code");
+	echo T_("Don't receive message?");
+	echo T_("Then wait we receive your message and verificate your account");
+	echo T_("Please send number <b>2015</b> to below number");
 
 	
 }
