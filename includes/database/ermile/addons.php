@@ -2,14 +2,14 @@
 namespace database\ermile;
 class addons 
 {
-	public $id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $addon_name = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Name');
-	public $addon_slug = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Slug');
-	public $addon_desc = array('type' => 'varchar@999', 'null'=>'YES', 'show'=>'NO', 'label'=>'Description');
-	public $addon_status = array('type' => 'enum@enable,disable,expire,goingtoexpire!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
-	public $addon_expire = array('type' => 'datetime@', 'null'=>'YES', 'show'=>'YES', 'label'=>'Expire');
-	public $addon_installdate = array('type' => 'datetime@', 'null'=>'YES', 'show'=>'YES', 'label'=>'Installdate');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                                      );
+	public $addon_name        = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@50',                                      );
+	public $addon_slug        = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@50',                                      );
+	public $addon_desc        = array('null' =>'YES', 'show' =>'NO',  'label'=>'Description',   'type' => 'varchar@999',                                     );
+	public $addon_status      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire,goingtoexpire!enable', );
+	public $addon_expire      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Expire',        'type' => 'datetime@',                                       );
+	public $addon_installdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'Installdate',   'type' => 'datetime@',                                       );
+	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                      );
 
 
 	//------------------------------------------------------------------ id - primary key

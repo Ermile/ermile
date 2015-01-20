@@ -2,16 +2,16 @@
 namespace database\ermile;
 class verifications 
 {
-	public $id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $verification_type = array('type' => 'enum@emailregister,emailchange,emailforget,mobileregister,mobilechange,mobileforget', 'null'=>'NO', 'show'=>'YES', 'label'=>'Type');
-	public $verification_value = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Value');
-	public $verification_code = array('type' => 'varchar@32', 'null'=>'NO', 'show'=>'YES', 'label'=>'Code');
-	public $verification_url = array('type' => 'varchar@100', 'null'=>'YES', 'show'=>'YES', 'label'=>'Url');
-	public $user_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
-	public $verification_verified = array('type' => 'enum@yes,no!no', 'null'=>'NO', 'show'=>'YES', 'label'=>'Verified');
-	public $verification_status = array('type' => 'enum@enable,disable,expire!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
-	public $verification_createdate = array('type' => 'datetime@', 'null'=>'YES', 'show'=>'YES', 'label'=>'Createdate');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id                      = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                                                                          );
+	public $verification_type       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@emailregister,emailchange,emailforget,mobileregister,mobilechange,mobileforget', );
+	public $verification_value      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Value',         'type' => 'varchar@50',                                                                          );
+	public $verification_code       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Code',          'type' => 'varchar@32',                                                                          );
+	public $verification_url        = array('null' =>'YES', 'show' =>'YES', 'label'=>'Url',           'type' => 'varchar@100',                                                                         );
+	public $user_id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                                                          'foreign'=>'users@id!user_nickname');
+	public $verification_verified   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Verified',      'type' => 'enum@yes,no!no',                                                                      );
+	public $verification_status     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable',                                                   );
+	public $verification_createdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'Createdate',    'type' => 'datetime@',                                                                           );
+	public $date_modified           = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                                                          );
 
 
 	//------------------------------------------------------------------ id - primary key

@@ -2,10 +2,10 @@
 namespace database\ermile;
 class errorlogs 
 {
-	public $id = array('type' => 'int@10', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $user_id = array('type' => 'smallint@5', 'null'=>'YES', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
-	public $errorlog_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'YES', 'label'=>'Errorlog', 'foreign'=>'errorlogs@id!errorlog_title');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',     );
+	public $user_id       = array('null' =>'YES', 'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5', 'foreign'=>'users@id!user_nickname');
+	public $errorlog_id   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Errorlog',      'type' => 'smallint@5', 'foreign'=>'errorlogs@id!errorlog_title');
+	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@', );
 
 
 	//------------------------------------------------------------------ id - primary key

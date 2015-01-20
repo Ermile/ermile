@@ -2,13 +2,13 @@
 namespace database\ermile;
 class usermetas 
 {
-	public $id = array('type' => 'smallint@6', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $user_id = array('type' => 'smallint@6', 'null'=>'NO', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
-	public $usermeta_cat = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Cat');
-	public $usermeta_name = array('type' => 'varchar@100', 'null'=>'NO', 'show'=>'YES', 'label'=>'Name');
-	public $usermeta_value = array('type' => 'varchar@500', 'null'=>'YES', 'show'=>'YES', 'label'=>'Value');
-	public $usermeta_status = array('type' => 'enum@enable,disable,expire!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@6',                        );
+	public $user_id         = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@6',                        'foreign'=>'users@id!user_nickname');
+	public $usermeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Cat',           'type' => 'varchar@50',                        );
+	public $usermeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@100',                       );
+	public $usermeta_value  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Value',         'type' => 'varchar@500',                       );
+	public $usermeta_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
+	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                        );
 
 
 	//------------------------------------------------------------------ id - primary key

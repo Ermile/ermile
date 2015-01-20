@@ -2,14 +2,14 @@
 namespace database\ermile;
 class notifications 
 {
-	public $id = array('type' => 'int@10', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $user_id_sender = array('type' => 'smallint@5', 'null'=>'YES', 'show'=>'YES', 'label'=>'Id Sender');
-	public $user_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
-	public $notification_title = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Title');
-	public $notification_content = array('type' => 'varchar@200', 'null'=>'YES', 'show'=>'YES', 'label'=>'Content');
-	public $notification_url = array('type' => 'varchar@100', 'null'=>'YES', 'show'=>'YES', 'label'=>'Url');
-	public $notification_status = array('type' => 'enum@read,unread,expire!unread', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id                   = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',                         );
+	public $user_id_sender       = array('null' =>'YES', 'show' =>'YES', 'label'=>'Id Sender',     'type' => 'smallint@5',                     );
+	public $user_id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                     'foreign'=>'users@id!user_nickname');
+	public $notification_title   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                     );
+	public $notification_content = array('null' =>'YES', 'show' =>'YES', 'label'=>'Content',       'type' => 'varchar@200',                    );
+	public $notification_url     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Url',           'type' => 'varchar@100',                    );
+	public $notification_status  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@read,unread,expire!unread', );
+	public $date_modified        = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                     );
 
 
 	//------------------------------------------------------------------ id - primary key

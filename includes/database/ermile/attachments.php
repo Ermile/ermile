@@ -2,18 +2,18 @@
 namespace database\ermile;
 class attachments 
 {
-	public $id = array('type' => 'int@10', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $attachment_title = array('type' => 'varchar@100', 'null'=>'YES', 'show'=>'YES', 'label'=>'Title');
-	public $attachment_model = array('type' => 'enum@productcategory,product,admin,banklogo,post,system,other', 'null'=>'NO', 'show'=>'YES', 'label'=>'Model');
-	public $attachment_addr = array('type' => 'varchar@100', 'null'=>'NO', 'show'=>'YES', 'label'=>'Addr');
-	public $attachment_name = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Name');
-	public $attachment_type = array('type' => 'varchar@10', 'null'=>'NO', 'show'=>'NO', 'label'=>'Type');
-	public $attachment_size = array('type' => 'float@12,0', 'null'=>'NO', 'show'=>'YES', 'label'=>'Size');
-	public $attachment_desc = array('type' => 'varchar@200', 'null'=>'YES', 'show'=>'NO', 'label'=>'Description');
-	public $attachment_server = array('type' => 'int@10', 'null'=>'YES', 'show'=>'YES', 'label'=>'Server');
-	public $attachment_folder = array('type' => 'int@10', 'null'=>'YES', 'show'=>'YES', 'label'=>'Folder');
-	public $user_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',                                                        );
+	public $attachment_title  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@100',                                                   );
+	public $attachment_model  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Model',         'type' => 'enum@productcategory,product,admin,banklogo,post,system,other', );
+	public $attachment_addr   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Addr',          'type' => 'varchar@100',                                                   );
+	public $attachment_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@50',                                                    );
+	public $attachment_type   = array('null' =>'NO',  'show' =>'NO',  'label'=>'Type',          'type' => 'varchar@10',                                                    );
+	public $attachment_size   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Size',          'type' => 'float@12,0',                                                    );
+	public $attachment_desc   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Description',   'type' => 'varchar@200',                                                   );
+	public $attachment_server = array('null' =>'YES', 'show' =>'YES', 'label'=>'Server',        'type' => 'int@10',                                                        );
+	public $attachment_folder = array('null' =>'YES', 'show' =>'YES', 'label'=>'Folder',        'type' => 'int@10',                                                        );
+	public $user_id           = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                                    'foreign'=>'users@id!user_nickname');
+	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                                    );
 
 
 	//------------------------------------------------------------------ id - primary key

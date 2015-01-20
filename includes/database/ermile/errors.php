@@ -2,11 +2,11 @@
 namespace database\ermile;
 class errors 
 {
-	public $id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $error_title = array('type' => 'varchar@100', 'null'=>'NO', 'show'=>'YES', 'label'=>'Title');
-	public $error_solution = array('type' => 'varchar@999', 'null'=>'YES', 'show'=>'YES', 'label'=>'Solution');
-	public $error_priority = array('type' => 'enum@critical,high,medium,low!medium', 'null'=>'NO', 'show'=>'YES', 'label'=>'Priority');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                           );
+	public $error_title    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@100',                          );
+	public $error_solution = array('null' =>'YES', 'show' =>'YES', 'label'=>'Solution',      'type' => 'varchar@999',                          );
+	public $error_priority = array('null' =>'NO',  'show' =>'YES', 'label'=>'Priority',      'type' => 'enum@critical,high,medium,low!medium', );
+	public $date_modified  = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                           );
 
 
 	//------------------------------------------------------------------ id - primary key

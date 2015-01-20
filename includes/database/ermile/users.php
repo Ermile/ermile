@@ -2,21 +2,21 @@
 namespace database\ermile;
 class users 
 {
-	public $id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $user_type = array('type' => 'enum@storeadmin,storeemployee,storesupplier,storecustomer,admin,user!user', 'null'=>'YES', 'show'=>'YES', 'label'=>'Type');
-	public $user_mobile = array('type' => 'varchar@15', 'null'=>'NO', 'show'=>'YES', 'label'=>'Mobile');
-	public $user_pass = array('type' => 'char@32', 'null'=>'NO', 'show'=>'NO', 'label'=>'Password');
-	public $user_email = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'YES', 'label'=>'Email');
-	public $user_gender = array('type' => 'enum@male,female', 'null'=>'YES', 'show'=>'YES', 'label'=>'Gender');
-	public $user_nickname = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'YES', 'label'=>'Nickname');
-	public $user_firstname = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'YES', 'label'=>'Firstname');
-	public $user_lastname = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'YES', 'label'=>'Lastname');
-	public $user_birthday = array('type' => 'datetime@', 'null'=>'YES', 'show'=>'YES', 'label'=>'Birthday');
-	public $user_status = array('type' => 'enum@active,awaiting,deactive,removed,filter!awaiting', 'null'=>'YES', 'show'=>'YES', 'label'=>'Status');
-	public $user_credit = array('type' => 'enum@yes,no!no', 'null'=>'YES', 'show'=>'YES', 'label'=>'Credit');
-	public $permission_id = array('type' => 'smallint@5', 'null'=>'YES', 'show'=>'YES', 'label'=>'Permission', 'foreign'=>'permissions@id!permission_title');
-	public $user_createdate = array('type' => 'datetime@', 'null'=>'NO', 'show'=>'YES', 'label'=>'Createdate');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                                                                );
+	public $user_type       = array('null' =>'YES', 'show' =>'YES', 'label'=>'Type',          'type' => 'enum@storeadmin,storeemployee,storesupplier,storecustomer,admin,user!user', );
+	public $user_mobile     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Mobile',        'type' => 'varchar@15',                                                                );
+	public $user_pass       = array('null' =>'NO',  'show' =>'NO',  'label'=>'Password',      'type' => 'char@32',                                                                   );
+	public $user_email      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Email',         'type' => 'varchar@50',                                                                );
+	public $user_gender     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Gender',        'type' => 'enum@male,female',                                                          );
+	public $user_nickname   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Nickname',      'type' => 'varchar@50',                                                                );
+	public $user_firstname  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Firstname',     'type' => 'varchar@50',                                                                );
+	public $user_lastname   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Lastname',      'type' => 'varchar@50',                                                                );
+	public $user_birthday   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Birthday',      'type' => 'datetime@',                                                                 );
+	public $user_status     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Status',        'type' => 'enum@active,awaiting,deactive,removed,filter!awaiting',                     );
+	public $user_credit     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Credit',        'type' => 'enum@yes,no!no',                                                            );
+	public $permission_id   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Permission',    'type' => 'smallint@5',                                                                'foreign'=>'permissions@id!permission_title');
+	public $user_createdate = array('null' =>'NO',  'show' =>'YES', 'label'=>'Createdate',    'type' => 'datetime@',                                                                 );
+	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                                                );
 
 
 	//------------------------------------------------------------------ id - primary key

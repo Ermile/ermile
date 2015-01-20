@@ -2,19 +2,19 @@
 namespace database\ermile;
 class posts 
 {
-	public $id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $post_language = array('type' => 'char@2', 'null'=>'YES', 'show'=>'YES', 'label'=>'Language');
-	public $post_title = array('type' => 'varchar@100', 'null'=>'NO', 'show'=>'YES', 'label'=>'Title');
-	public $post_cat = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'YES', 'label'=>'Cat');
-	public $post_slug = array('type' => 'varchar@100', 'null'=>'NO', 'show'=>'YES', 'label'=>'Slug');
-	public $post_content = array('type' => 'text@', 'null'=>'YES', 'show'=>'YES', 'label'=>'Content');
-	public $post_type = array('type' => 'enum@post,page!post', 'null'=>'NO', 'show'=>'YES', 'label'=>'Type');
-	public $post_status = array('type' => 'enum@publish,draft,schedule,deleted,expire!draft', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
-	public $post_father = array('type' => 'smallint@5', 'null'=>'YES', 'show'=>'YES', 'label'=>'Father');
-	public $user_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
-	public $attachment_id = array('type' => 'int@10', 'null'=>'YES', 'show'=>'YES', 'label'=>'Attachment', 'foreign'=>'attachments@id!attachment_title');
-	public $post_publishdate = array('type' => 'datetime@', 'null'=>'YES', 'show'=>'YES', 'label'=>'Publishdate');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id               = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                                       );
+	public $post_language    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Language',      'type' => 'char@2',                                           );
+	public $post_title       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@100',                                      );
+	public $post_cat         = array('null' =>'YES', 'show' =>'YES', 'label'=>'Cat',           'type' => 'varchar@50',                                       );
+	public $post_slug        = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@100',                                      );
+	public $post_content     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Content',       'type' => 'text@',                                            );
+	public $post_type        = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@post,page!post',                              );
+	public $post_status      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@publish,draft,schedule,deleted,expire!draft', );
+	public $post_father      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Father',        'type' => 'smallint@5',                                       );
+	public $user_id          = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                       'foreign'=>'users@id!user_nickname');
+	public $attachment_id    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Attachment',    'type' => 'int@10',                                           'foreign'=>'attachments@id!attachment_title');
+	public $post_publishdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'Publishdate',   'type' => 'datetime@',                                        );
+	public $date_modified    = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                       );
 
 
 	//------------------------------------------------------------------ id - primary key

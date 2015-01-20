@@ -2,17 +2,17 @@
 namespace database\ermile;
 class smss 
 {
-	public $id = array('type' => 'int@10', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $sms_from = array('type' => 'varchar@15', 'null'=>'YES', 'show'=>'YES', 'label'=>'From');
-	public $sms_to = array('type' => 'varchar@15', 'null'=>'YES', 'show'=>'YES', 'label'=>'To');
-	public $sms_message = array('type' => 'varchar@255', 'null'=>'YES', 'show'=>'YES', 'label'=>'Message');
-	public $sms_messageid = array('type' => 'int@10', 'null'=>'YES', 'show'=>'YES', 'label'=>'Messageid');
-	public $sms_deliverystatus = array('type' => 'tinyint@4', 'null'=>'YES', 'show'=>'YES', 'label'=>'Deliverystatus');
-	public $sms_method = array('type' => 'enum@post,get!post', 'null'=>'NO', 'show'=>'YES', 'label'=>'Method');
-	public $sms_type = array('type' => 'enum@receive,delivery!delivery', 'null'=>'NO', 'show'=>'YES', 'label'=>'Type');
-	public $sms_createdate = array('type' => 'datetime@', 'null'=>'NO', 'show'=>'YES', 'label'=>'Createdate');
-	public $sms_status = array('type' => 'enum@enable,disable,expire!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',                            );
+	public $sms_from           = array('null' =>'YES', 'show' =>'YES', 'label'=>'From',          'type' => 'varchar@15',                        );
+	public $sms_to             = array('null' =>'YES', 'show' =>'YES', 'label'=>'To',            'type' => 'varchar@15',                        );
+	public $sms_message        = array('null' =>'YES', 'show' =>'YES', 'label'=>'Message',       'type' => 'varchar@255',                       );
+	public $sms_messageid      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Messageid',     'type' => 'int@10',                            );
+	public $sms_deliverystatus = array('null' =>'YES', 'show' =>'YES', 'label'=>'Deliverystatus','type' => 'tinyint@4',                         );
+	public $sms_method         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Method',        'type' => 'enum@post,get!post',                );
+	public $sms_type           = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@receive,delivery!delivery',    );
+	public $sms_createdate     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Createdate',    'type' => 'datetime@',                         );
+	public $sms_status         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
+	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                        );
 
 
 	//------------------------------------------------------------------ id - primary key

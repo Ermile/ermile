@@ -2,15 +2,15 @@
 namespace database\ermile;
 class permissions 
 {
-	public $id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $permission_title = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Title');
-	public $Permission_module = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Module');
-	public $permission_view = array('type' => 'enum@yes,no!yes', 'null'=>'NO', 'show'=>'YES', 'label'=>'View');
-	public $permission_add = array('type' => 'enum@yes,no!no', 'null'=>'NO', 'show'=>'YES', 'label'=>'Add');
-	public $permission_edit = array('type' => 'enum@yes,no!no', 'null'=>'NO', 'show'=>'YES', 'label'=>'Edit');
-	public $permission_delete = array('type' => 'enum@yes,no!no', 'null'=>'NO', 'show'=>'YES', 'label'=>'Delete');
-	public $permission_status = array('type' => 'enum@enable,disable,expire!enable', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                        );
+	public $permission_title  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                        );
+	public $Permission_module = array('null' =>'NO',  'show' =>'YES', 'label'=>'Module',        'type' => 'varchar@50',                        );
+	public $permission_view   = array('null' =>'NO',  'show' =>'YES', 'label'=>'View',          'type' => 'enum@yes,no!yes',                   );
+	public $permission_add    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Add',           'type' => 'enum@yes,no!no',                    );
+	public $permission_edit   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Edit',          'type' => 'enum@yes,no!no',                    );
+	public $permission_delete = array('null' =>'NO',  'show' =>'YES', 'label'=>'Delete',        'type' => 'enum@yes,no!no',                    );
+	public $permission_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
+	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                        );
 
 
 	//------------------------------------------------------------------ id - primary key

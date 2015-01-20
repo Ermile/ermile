@@ -9,7 +9,6 @@ else
 	exit();
 }
 
-
 /**
 ***********************************************************************************
 CAUTIONS : IF YOU DON'T KNOW WHAT'S THIS, PLEASE DON'T RUN IT!
@@ -57,7 +56,6 @@ function setproperty($myparam)
 	// tmp[1]	min
 	// tmp[2]	max
 
-	// '->type("select")'
 	switch ($_type) 
 	{
 		case 'enum':
@@ -67,10 +65,8 @@ function setproperty($myparam)
 
 		case 'timestamp':
 		case 'text':
-			
 			return $tmp;
 			break;
-
 
 		case 'smallint':
 		case 'tinyint':
@@ -81,16 +77,9 @@ function setproperty($myparam)
 			$tmp[0] 	= "->type('number')";
 			if( substr($type, strlen($type)-8) == "unsigned" )
 				array_push($tmp, "->min(0)");
-				
-			// check for max input
-			// $tmp 	.= "->onKeyDown('if(this.value.length==".$mylen.") return false;')";
-			// $tmp 	.= "->max(".str_repeat("9",$mylen-1).")";
 			array_push($tmp, "->max(".str_repeat("9",$mylen-1).")");
-
-
 			return $tmp;
 			break;
-
 
 		case 'varchar':
 		case 'char':
@@ -99,10 +88,8 @@ function setproperty($myparam)
 			else
 				$tmp[0] 	= "->type('text')";
 			array_push($tmp, "->maxlength(".$mylen.")");
-
 			return $tmp;
 			break;
-
 
 		case 'datetime':
 		case 'date':
@@ -110,14 +97,13 @@ function setproperty($myparam)
 			return $tmp;
 			break;
 
-
 		default:
-			return ("N-A: Create Error");
+			return ("N-A: Create Error, Please check for new datatype");
 			break;
 	}
 }
 
-while ($row = $qTables->fetch_object()) 
+while ($row = $qTables->fetch_object())
 {
 	$content   = "<?php\n";
 	$content   .= "namespace database\\".db_name.";\n";
@@ -125,26 +111,40 @@ while ($row = $qTables->fetch_object())
 	$TABLENAME = $row->$tmp_t;
 	$content   .= "class $TABLENAME \n{\n";
 	$qCOL      = $connect->query("DESCRIBE $TABLENAME");
+	$qCOL1      = $connect->query("DESCRIBE $TABLENAME");
 	$fn        ="\n";
 
-	while ($crow = $qCOL->fetch_object()) 
+	// Count number of char of each string
+	$counter   = array();
+	$counter['name'] = 0;
+	$counter['type'] = 0;
+	while ($mycrow1 = $qCOL1->fetch_object())
+	{
+		$mytype          = _type($mycrow1->Type, $mycrow1->Default);
+		if(strlen($mytype) > $counter['type'])
+			$counter['type'] = strlen($mytype);
+
+		if(strlen($mycrow1->Field) > $counter['name'])
+			$counter['name'] = strlen($mycrow1->Field);
+	}
+	// var_dump($counter['type']);
+	// var_dump($counter['name']);
+	// echo '<br/>';
+
+	// create file of each table
+	while ($crow = $qCOL->fetch_object())
 	{
 		// var_dump($crow);
-
 		// ========================================================================================== Edit by Javad
 		// for fields from currect table except foreign key
 		// we remove the table prefix, then show ramained text for name and for label we replace _ with space
 		// for foreign key we remove second part of text after _ and show only the name of table without last char
-		
-		$myfield		= $crow->Field;
+		$myfield		   = $crow->Field;
 		$mynull			= $crow->Null;
 		$myfield_show	= 'YES';
-		// $property		= setproperty($crow);
 		$property		= "";
 		$property_type	= "";
 		$tmp_result		= setproperty($crow);
-		// var_dump($TABLENAME);
-		// var_dump($tmp_result);
 		foreach ($tmp_result as $key => $value) 
 		{
 			if( substr($value, 0, 6)=='->type' )
@@ -366,23 +366,39 @@ while ($row = $qTables->fetch_object())
 
 		// $content .= "\tpublic \$$crow->Field = array(". _type($crow->Type, $crow->Default).", 'label' => '$mylabel');\n";
 		// 'foreign' => 'table@id!value'
-		$fields	= "\tpublic \$$crow->Field = array(". _type($crow->Type, $crow->Default).", 'null'=>'$mynull', 'show'=>'$myfield_show', 'label'=>'$mylabel');\n";
+		// var_dump(strlen($crow->Field));
+		// str_repeat(' ',30-strlen($crow->Field))
+		
+		$mytype     = _type($crow->Type, $crow->Default);
+		$fields		= "\tpublic \$$crow->Field"    .str_repeat(' ',$counter['name']+1-strlen($crow->Field))
+		             ."= array("
+		             ."'null' =>'$mynull',"        .str_repeat(' ',4-strlen($mynull))
+		             ."'show' =>'$myfield_show',"  .str_repeat(' ',4-strlen($myfield_show))
+		             ."'label'=>'$mylabel',"       .str_repeat(' ',14-strlen($mylabel))
+		             .$mytype.","                  .str_repeat(' ',$counter['type']+1-strlen($mytype));
+		             // .");\n";
 		if($isforeign)
 		{
-			$table				= $prefix.'s';
-			$tmp_fields_start	= "\tpublic \$$crow->Field = array(". _type($crow->Type, $crow->Default).", 'null'=>'$mynull', 'show'=>'$myfield_show', 'label'=>'$mylabel', 'foreign'=>'$table@id!";
-			$tmp_fields_end		= "');\n";
-			$tmp_fields_name	= $prefix . "_title";
-			// $fields				= "\tpublic \$$crow->Field = array(". _type($crow->Type, $crow->Default).", 'null' =>'$mynull' ,'label' => '$mylabel', 'foreign' => '$table@id!".$prefix."_title');\n";
-			// if table has a especial record
+			$table           = $prefix.'s';
+			$fields          .= "'foreign'=>'$table@id!";
+
+			$tmp_fields_name = $prefix . "_title";
 			if($table=="users")
 				$tmp_fields_name = $prefix."_nickname";
 			if($table=="receipts" || $table=="transactions" || $table=="papers")
 				$tmp_fields_name = "id";
-			$fields				= $tmp_fields_start. $tmp_fields_name. $tmp_fields_end;
+
+			$fields          .= $tmp_fields_name."'";
+
+
+			// $tmp_fields_start	= "\tpublic \$$crow->Field = array(". _type($crow->Type, $crow->Default).", 'null'=>'$mynull', 'show'=>'$myfield_show', 'label'=>'$mylabel', 'foreign'=>'$table@id!";
+			// $tmp_fields_end		= "');\n";
+			// $fields				= "\tpublic \$$crow->Field = array(". _type($crow->Type, $crow->Default).", 'null' =>'$mynull' ,'label' => '$mylabel', 'foreign' => '$table@id!".$prefix."_title');\n";
+			// if table has a especial record
+			// $fields				= $tmp_fields_start. $tmp_fields_name."'"; //. $tmp_fields_end;
 		}
 
-		$content .= $fields;
+		$content .= $fields.");\n";
 	}
 
 	$content	.= $fn;

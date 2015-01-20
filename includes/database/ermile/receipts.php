@@ -2,20 +2,20 @@
 namespace database\ermile;
 class receipts 
 {
-	public $id = array('type' => 'int@10', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $receipt_code = array('type' => 'varchar@30', 'null'=>'YES', 'show'=>'YES', 'label'=>'Code');
-	public $receipt_type = array('type' => 'enum@income,outcome!income', 'null'=>'YES', 'show'=>'YES', 'label'=>'Type');
-	public $receipt_price = array('type' => 'decimal@13,4!0.0000', 'null'=>'NO', 'show'=>'YES', 'label'=>'Price');
-	public $receipt_date = array('type' => 'datetime@', 'null'=>'NO', 'show'=>'YES', 'label'=>'Date');
-	public $paper_id = array('type' => 'smallint@5', 'null'=>'YES', 'show'=>'YES', 'label'=>'Paper', 'foreign'=>'papers@id!id');
-	public $receipt_paperdate = array('type' => 'datetime@', 'null'=>'YES', 'show'=>'YES', 'label'=>'Paperdate');
-	public $receipt_paperstatus = array('type' => 'enum@pass,recovery,fail,lost,block,delete,inprogress', 'null'=>'YES', 'show'=>'YES', 'label'=>'Paperstatus');
-	public $receipt_desc = array('type' => 'varchar@200', 'null'=>'YES', 'show'=>'NO', 'label'=>'Description');
-	public $transaction_id = array('type' => 'int@10', 'null'=>'YES', 'show'=>'YES', 'label'=>'Transaction', 'foreign'=>'transactions@id!id');
-	public $fund_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'YES', 'label'=>'Fund', 'foreign'=>'funds@id!fund_title');
-	public $user_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
-	public $user_id_customer = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id                  = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',                                               );
+	public $receipt_code        = array('null' =>'YES', 'show' =>'YES', 'label'=>'Code',          'type' => 'varchar@30',                                           );
+	public $receipt_type        = array('null' =>'YES', 'show' =>'YES', 'label'=>'Type',          'type' => 'enum@income,outcome!income',                           );
+	public $receipt_price       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Price',         'type' => 'decimal@13,4!0.0000',                                  );
+	public $receipt_date        = array('null' =>'NO',  'show' =>'YES', 'label'=>'Date',          'type' => 'datetime@',                                            );
+	public $paper_id            = array('null' =>'YES', 'show' =>'YES', 'label'=>'Paper',         'type' => 'smallint@5',                                           'foreign'=>'papers@id!id');
+	public $receipt_paperdate   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Paperdate',     'type' => 'datetime@',                                            );
+	public $receipt_paperstatus = array('null' =>'YES', 'show' =>'YES', 'label'=>'Paperstatus',   'type' => 'enum@pass,recovery,fail,lost,block,delete,inprogress', );
+	public $receipt_desc        = array('null' =>'YES', 'show' =>'NO',  'label'=>'Description',   'type' => 'varchar@200',                                          );
+	public $transaction_id      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Transaction',   'type' => 'int@10',                                               'foreign'=>'transactions@id!id');
+	public $fund_id             = array('null' =>'NO',  'show' =>'YES', 'label'=>'Fund',          'type' => 'smallint@5',                                           'foreign'=>'funds@id!fund_title');
+	public $user_id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                           'foreign'=>'users@id!user_nickname');
+	public $user_id_customer    = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                           'foreign'=>'users@id!user_nickname');
+	public $date_modified       = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                           );
 
 
 	//------------------------------------------------------------------ id - primary key

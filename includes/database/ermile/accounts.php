@@ -2,17 +2,17 @@
 namespace database\ermile;
 class accounts 
 {
-	public $id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $account_title = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Title');
-	public $account_slug = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Slug');
-	public $bank_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'YES', 'label'=>'Bank', 'foreign'=>'banks@id!bank_title');
-	public $account_branch = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'YES', 'label'=>'Branch');
-	public $account_number = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'YES', 'label'=>'Number');
-	public $account_card = array('type' => 'varchar@30', 'null'=>'YES', 'show'=>'YES', 'label'=>'Card');
-	public $account_primarybalance = array('type' => 'decimal@14,4!0.0000', 'null'=>'NO', 'show'=>'YES', 'label'=>'Primarybalance');
-	public $account_desc = array('type' => 'varchar@200', 'null'=>'YES', 'show'=>'NO', 'label'=>'Description');
-	public $user_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id                     = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',          );
+	public $account_title          = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',          );
+	public $account_slug           = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@50',          );
+	public $bank_id                = array('null' =>'NO',  'show' =>'YES', 'label'=>'Bank',          'type' => 'smallint@5',          'foreign'=>'banks@id!bank_title');
+	public $account_branch         = array('null' =>'YES', 'show' =>'YES', 'label'=>'Branch',        'type' => 'varchar@50',          );
+	public $account_number         = array('null' =>'YES', 'show' =>'YES', 'label'=>'Number',        'type' => 'varchar@50',          );
+	public $account_card           = array('null' =>'YES', 'show' =>'YES', 'label'=>'Card',          'type' => 'varchar@30',          );
+	public $account_primarybalance = array('null' =>'NO',  'show' =>'YES', 'label'=>'Primarybalance','type' => 'decimal@14,4!0.0000', );
+	public $account_desc           = array('null' =>'YES', 'show' =>'NO',  'label'=>'Description',   'type' => 'varchar@200',         );
+	public $user_id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',          'foreign'=>'users@id!user_nickname');
+	public $date_modified          = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',          );
 
 
 	//------------------------------------------------------------------ id - primary key

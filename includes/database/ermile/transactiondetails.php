@@ -2,12 +2,12 @@
 namespace database\ermile;
 class transactiondetails 
 {
-	public $transactiondetail_row = array('type' => 'smallint@5', 'null'=>'YES', 'show'=>'YES', 'label'=>'Row');
-	public $transaction_id = array('type' => 'int@10', 'null'=>'NO', 'show'=>'YES', 'label'=>'Transaction', 'foreign'=>'transactions@id!id');
-	public $product_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'YES', 'label'=>'Product', 'foreign'=>'products@id!product_title');
-	public $transactiondetail_quantity = array('type' => 'int@10', 'null'=>'NO', 'show'=>'YES', 'label'=>'Quantity');
-	public $transactiondetail_price = array('type' => 'decimal@13,4', 'null'=>'NO', 'show'=>'YES', 'label'=>'Price');
-	public $transactiondetail_discount = array('type' => 'decimal@13,4', 'null'=>'YES', 'show'=>'YES', 'label'=>'Discount');
+	public $transactiondetail_row      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Row',           'type' => 'smallint@5',   );
+	public $transaction_id             = array('null' =>'NO',  'show' =>'YES', 'label'=>'Transaction',   'type' => 'int@10',       'foreign'=>'transactions@id!id');
+	public $product_id                 = array('null' =>'NO',  'show' =>'YES', 'label'=>'Product',       'type' => 'smallint@5',   'foreign'=>'products@id!product_title');
+	public $transactiondetail_quantity = array('null' =>'NO',  'show' =>'YES', 'label'=>'Quantity',      'type' => 'int@10',       );
+	public $transactiondetail_price    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Price',         'type' => 'decimal@13,4', );
+	public $transactiondetail_discount = array('null' =>'YES', 'show' =>'YES', 'label'=>'Discount',      'type' => 'decimal@13,4', );
 
 	public function transactiondetail_row() 
 	{

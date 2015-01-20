@@ -2,13 +2,13 @@
 namespace database\ermile;
 class funds 
 {
-	public $id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $fund_title = array('type' => 'varchar@100', 'null'=>'NO', 'show'=>'YES', 'label'=>'Title');
-	public $fund_slug = array('type' => 'varchar@100', 'null'=>'NO', 'show'=>'YES', 'label'=>'Slug');
-	public $location_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'YES', 'label'=>'Location', 'foreign'=>'locations@id!location_title');
-	public $fund_initialbalance = array('type' => 'decimal@14,4!0.0000', 'null'=>'NO', 'show'=>'YES', 'label'=>'Initialbalance');
-	public $fund_desc = array('type' => 'varchar@200', 'null'=>'YES', 'show'=>'NO', 'label'=>'Description');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id                  = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',          );
+	public $fund_title          = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@100',         );
+	public $fund_slug           = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@100',         );
+	public $location_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Location',      'type' => 'smallint@5',          'foreign'=>'locations@id!location_title');
+	public $fund_initialbalance = array('null' =>'NO',  'show' =>'YES', 'label'=>'Initialbalance','type' => 'decimal@14,4!0.0000', );
+	public $fund_desc           = array('null' =>'YES', 'show' =>'NO',  'label'=>'Description',   'type' => 'varchar@200',         );
+	public $date_modified       = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',          );
 
 
 	//------------------------------------------------------------------ id - primary key

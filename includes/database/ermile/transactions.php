@@ -2,14 +2,14 @@
 namespace database\ermile;
 class transactions 
 {
-	public $id = array('type' => 'int@10', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $transaction_type = array('type' => 'enum@sale,purchase,customertostore,storetocompany,anbargardani,install,repair,chqeuebackfail!sale', 'null'=>'NO', 'show'=>'YES', 'label'=>'Type');
-	public $user_id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
-	public $user_id_customer = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
-	public $transaction_date = array('type' => 'datetime@', 'null'=>'NO', 'show'=>'YES', 'label'=>'Date');
-	public $transaction_sum = array('type' => 'decimal@13,4', 'null'=>'NO', 'show'=>'YES', 'label'=>'Sum');
-	public $transaction_remained = array('type' => 'decimal@13,4', 'null'=>'YES', 'show'=>'YES', 'label'=>'Remained');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id                   = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',                                                                                            );
+	public $transaction_type     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@sale,purchase,customertostore,storetocompany,anbargardani,install,repair,chqeuebackfail!sale', );
+	public $user_id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                                                                        'foreign'=>'users@id!user_nickname');
+	public $user_id_customer     = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                                                                        'foreign'=>'users@id!user_nickname');
+	public $transaction_date     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Date',          'type' => 'datetime@',                                                                                         );
+	public $transaction_sum      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Sum',           'type' => 'decimal@13,4',                                                                                      );
+	public $transaction_remained = array('null' =>'YES', 'show' =>'YES', 'label'=>'Remained',      'type' => 'decimal@13,4',                                                                                      );
+	public $date_modified        = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                                                                        );
 
 
 	//------------------------------------------------------------------ id - primary key

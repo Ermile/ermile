@@ -2,18 +2,18 @@
 namespace database\ermile;
 class comments 
 {
-	public $id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $post_id = array('type' => 'smallint@5', 'null'=>'YES', 'show'=>'YES', 'label'=>'Post', 'foreign'=>'posts@id!post_title');
-	public $product_id = array('type' => 'smallint@5', 'null'=>'YES', 'show'=>'YES', 'label'=>'Product', 'foreign'=>'products@id!product_title');
-	public $comment_author = array('type' => 'varchar@50', 'null'=>'YES', 'show'=>'YES', 'label'=>'Author');
-	public $comment_email = array('type' => 'varchar@100', 'null'=>'YES', 'show'=>'YES', 'label'=>'Email');
-	public $comment_url = array('type' => 'varchar@100', 'null'=>'YES', 'show'=>'YES', 'label'=>'Url');
-	public $comment_content = array('type' => 'varchar@999', 'null'=>'NO', 'show'=>'YES', 'label'=>'Content');
-	public $comment_status = array('type' => 'enum@approved,unapproved,spam,deleted!unapproved', 'null'=>'NO', 'show'=>'YES', 'label'=>'Status');
-	public $comment_parent = array('type' => 'int@10', 'null'=>'YES', 'show'=>'YES', 'label'=>'Parent');
-	public $user_id = array('type' => 'smallint@5', 'null'=>'YES', 'show'=>'NO', 'label'=>'User', 'foreign'=>'users@id!user_nickname');
-	public $Visitor_id = array('type' => 'int@10', 'null'=>'NO', 'show'=>'YES', 'label'=>'Visitor', 'foreign'=>'Visitors@id!Visitor_title');
-	public $date_modified = array('type' => 'timestamp@', 'null'=>'YES', 'show'=>'NO', 'label'=>'Date Modified');
+	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                                       );
+	public $post_id         = array('null' =>'YES', 'show' =>'YES', 'label'=>'Post',          'type' => 'smallint@5',                                       'foreign'=>'posts@id!post_title');
+	public $product_id      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Product',       'type' => 'smallint@5',                                       'foreign'=>'products@id!product_title');
+	public $comment_author  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Author',        'type' => 'varchar@50',                                       );
+	public $comment_email   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Email',         'type' => 'varchar@100',                                      );
+	public $comment_url     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Url',           'type' => 'varchar@100',                                      );
+	public $comment_content = array('null' =>'NO',  'show' =>'YES', 'label'=>'Content',       'type' => 'varchar@999',                                      );
+	public $comment_status  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@approved,unapproved,spam,deleted!unapproved', );
+	public $comment_parent  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Parent',        'type' => 'int@10',                                           );
+	public $user_id         = array('null' =>'YES', 'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                       'foreign'=>'users@id!user_nickname');
+	public $Visitor_id      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Visitor',       'type' => 'int@10',                                           'foreign'=>'Visitors@id!Visitor_title');
+	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                       );
 
 
 	//------------------------------------------------------------------ id - primary key
