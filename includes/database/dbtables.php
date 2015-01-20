@@ -20,8 +20,10 @@ echo "<!DOCTYPE html><meta charset='UTF-8'/><title>Create file from db</title><b
 $connect     = mysqli_connect("localhost", db_user, db_pass, db_name);
 $qTables     = $connect->query("SHOW TABLES FROM ".db_name);
 $translation = array();
-function _type($type, $def)
+
+function _type($type, $def,$_table  = null)
 {
+	global $translation;
 	$def     = $def ? "!$def" : null;
 	preg_match("/^([^(]*)(\((.*)\))?/", $type, $tp);
 	$_type   = $tp[1];
@@ -29,7 +31,15 @@ function _type($type, $def)
 	switch ($_type) 
 	{
 		case 'enum':
-			$_length = preg_replace("[']", "", $_length);
+			$_length     = preg_replace("[']", "", $_length);
+			if($_table)
+			{
+				$enum_values = explode(",",$_length);
+				foreach ($enum_values as $key => $value)
+				{
+					$translation['Enum '.$value] = $value;
+				}
+			}
 			return ("'type' => '$_type@$_length{$def}'");
 			break;
 
@@ -132,7 +142,7 @@ while ($row = $qTables->fetch_object())
 	$counter['type'] = 0;
 	while ($mycrow1 = $qCOL1->fetch_object())
 	{
-		$mytype = _type($mycrow1->Type, $mycrow1->Default);
+		$mytype = _type($mycrow1->Type, $mycrow1->Default, $TABLENAME);
 		if(strlen($mytype) > $counter['type'])
 			$counter['type'] = strlen($mytype);
 
@@ -140,6 +150,8 @@ while ($row = $qTables->fetch_object())
 			$counter['name'] = strlen($mycrow1->Field);
 	}
 
+	$translation['Table '.$TABLENAME] = $TABLENAME;
+	$translation[$TABLENAME]          = substr($TABLENAME, 0, -1);
 	// create file of each table -------------------------------------------------------------------
 	while ($crow = $qCOL->fetch_object())
 	{
@@ -172,16 +184,12 @@ while ($row = $qTables->fetch_object())
 		$myname     = substr($myfield, ($tmp_pos ? $tmp_pos+1 : 0) );
 		
 		$myname     = strtolower($myname);
-		// echo($myfield.': '.$myname.'--');
 		$mylabel    = str_replace("_", " ", $myname);
 		$mylabel    = ucwords($mylabel);
-		// echo($mylabel);
-		// echo "<br />";
 		
 		$txtcomment = "\n\t//------------------------------------------------------------------ ";
 		$txtstart   = "\tpublic function $myfield() \n\t{\n\t\t";
 		$txtend     ="\n\t}\n";
-		// $content		.= "\tpublic \$$crow->Field = array(". _type($crow->Type, $crow->Default).", 'label' => '$myname');\n";
 
 		// --------------------------------------------------------------------------------- ID
 		if($myfield=="id")
@@ -305,7 +313,7 @@ while ($row = $qTables->fetch_object())
 			$fields          .= $tmp_fields_name."'";
 		}
 
-		$content               .= "\t".$fields.");\n";
+		$content                           .= "\t".$fields.");\n";
 		$translation[$myfield]  = $mylabel;
 	}
 	echo '</ul>';
@@ -321,7 +329,14 @@ $connect->close();
 $translation_output  = '<?php'."\n".'function transtext'."\n{\n";
 foreach ($translation as $key => $value)
 {
-	$translation_output .= "\t".'echo T_("'.$value.'");'.str_repeat(' ',15-strlen($value)).'//'.$key."\n";
+	if(substr($key, 0, 6)=='Table ')
+		$translation_output .= "\n\t// ------------------------------------------------------------------- $key\n";
+
+	$translation_output .= "\t".'echo T_("'.$value.'");'.str_repeat(' ',20-strlen($value)).'// '.$key."\n";
+	// if(substr($key, 0, 5)=='Enum ')
+	// 	$translation_output .= "\t".str_repeat(' ',20-strlen($key))."Enum value";
+
+	// $translation_output .= "\n";
 }
 $translation_output .= "\n}\n?>";
 file_put_contents(__DIR__.'/'.db_name."/translation.php", $translation_output);

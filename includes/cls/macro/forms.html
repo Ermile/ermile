@@ -28,7 +28,7 @@
  <div class="row-clear radio">
  {% for child in array.child %}
   <label class="label-custom label-radio">
-  <input name="{{array.attr.name}}" {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}
+  <input type="radio" name="{{array.attr.name}}" {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}
   </label>
  {% endfor %}
  </div>

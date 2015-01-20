@@ -57,10 +57,13 @@ class symbol extends \lib\form
 							->required()->maxlength(17)->pattern(".{10,}")
 							->pos('hint--rounded hint--top')->desc(T_("we send a verification code to this number"));
 
+		$this->pass =
 		$this->password = $this->make("password")->type("password")->label(T_("Password"))->autocomplete('off')
 							->required()->maxlength(20)->pattern("^.{5,20}$")->title(T_("between 5-20 character"))
 							->pos('hint--rounded hint--bottom')->desc(T_("between 5-20 character. be tricky!"));
 							// ->validate()->password();
+
+
 	}
 }
 ?>
