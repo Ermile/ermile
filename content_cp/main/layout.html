@@ -26,12 +26,12 @@
 {%endif%}
  <div class="container" id="main">
   {%if page_title%}
-  <h1>{{page_title}}</h1><hr />{%endif%}
+  <h1>{%trans page_title %}</h1><hr />{%endif%}
   {%if module and module!="home"%}
    {%if child%}
     <p class="alert alert-block alert-info">
-     {{module|title}} Section
-     <a class="float-right" href="{{store}}/{{module}}">{%trans%}Go to{%endtrans%} {{module|title}}</a>
+     <attr class="float-left">{%trans module%}</attr>|
+     <a class="float-right" href="{{store}}/{{module}}">{%trans%}Go to{%endtrans%} {%trans module%}</a>
     </p>
     {%if form_show %}
      <form class="ajx" method="post" id="{{form_title}}">
@@ -43,8 +43,8 @@
 
    {%else%}
     <p class="alert alert-block alert-info">
-     <a href="{{store}}/{{module}}/add">{%trans%}Add New Record{%endtrans%}</a>
-     <a class="float-right" href="/">Home</a>
+     <a class="float-left" href="{{store}}/{{module}}/add">{%trans%}Add New Record{%endtrans%}</a>|
+     <a class="float-right" href="/">{%trans "Home"%}</a>
     </p>
 
   		{%block datatable%}

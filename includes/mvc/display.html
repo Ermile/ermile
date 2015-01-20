@@ -39,14 +39,13 @@
        <h1 id="logo"><a class="navbar-brand" href="{{url.root}}">{{site_title}}</a></h1>
        <nav>
          <div id="header-nav">
-           <a href="{{url.root}}">Home Page</a>
-           <a href="http://admin.{{url.raw}}/none">Admin</a>
-           <a href="http://cp.{{url.raw}}">Control Panel</a>
+           <a href="{{url.root}}">{%trans "Home Page"%}</a>
+           <a href="http://admin.{{url.raw}}/none">{%trans "Admin"%}</a>
+           <a href="http://cp.{{url.raw}}">{%trans "Control Panel"%}</a>
 {%if global.login%}
-           <a href="{{url.root}}store/create">Create store</a>
-           <a href="http://account.{{url.raw}}/logout">Logout</a>
+           <a href="http://account.{{url.raw}}/logout">{%trans "Logout"%}</a>
 {%else%}
-           <a href="http://account.{{url.raw}}/login">Login</a>
+           <a href="http://account.{{url.raw}}/login">{%trans "Login"%}</a>
 {%endif%}
          </div>
        </nav>
@@ -71,7 +70,7 @@
      <div class="container">
       <div class="row">
        <div class="span12">
-        <p>Goto <a href="{{url.root}}" title="{{site_desc}}" class="roller cursor-help"><span data-title="{{site_title}} Homepage">{{site_title}} Homepage</span></a>.</p>
+        <p>{%trans "Go to"%} <a href="{{url.root}}" title="{{site_desc}}" class="roller cursor-help"><span data-title="{{site_title}}">{{site_title}}</span></a>.</p>
         <p>
           <select id="langlist">
 {%for key, value in global.langlist%}{%if key == global.lang%}
