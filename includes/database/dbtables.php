@@ -1,5 +1,15 @@
 <?php
-require_once('../../public_html/config.php');
+// require_once('../../public_html/config.php');
+if ( file_exists( __DIR__.'/../../public_html/config.php') )
+	require_once( __DIR__.'/../../public_html/config.php');
+else
+{
+	// A config file doesn't exist
+	echo( "<p>There doesn't seem to be a <code>config.php</code> file. I need this before we can get started.</p>" );
+	exit();
+}
+
+
 /**
 ***********************************************************************************
 CAUTIONS : IF YOU DON'T KNOW WHAT'S THIS, PLEASE DON'T RUN IT!
@@ -11,10 +21,10 @@ $connect = mysqli_connect("localhost", db_user, db_pass, db_name);
 $qTables = $connect->query("SHOW TABLES FROM ".db_name);
 function _type($type, $def)
 {
-	$def = $def ? "!$def" : null;
+	$def     = $def ? "!$def" : null;
 	preg_match("/^([^(]*)(\((.*)\))?/", $type, $tp);
-	$_type		= $tp[1];
-	$_length	= isset($tp[3]) ? $tp[3] : null;
+	$_type   = $tp[1];
+	$_length = isset($tp[3]) ? $tp[3] : null;
 	switch ($_type) 
 	{
 		case 'enum':
@@ -35,14 +45,14 @@ function setproperty($myparam)
 	// for add new HTML5 feature to forms
 	preg_match("/^([^(]*)(\((.*)\))?/", $type, $tp);
 	$_type		= $tp[1];
-	$_length	= isset($tp[3]) ? $tp[3] : null;
+	$_length	   = isset($tp[3]) ? $tp[3] : null;
 	$mydotpos	= strpos($_length,',');
 	$mydotpos	= $mydotpos?$mydotpos:strlen($_length);
 	$mylen 		= substr($_length, 0, $mydotpos);
 
 	$mylength	= $_length;
 	$mymax		= "->maxlength('".$_length."')";
-	$tmp		= array();
+	$tmp		   = array();
 	// tmp[0]	type
 	// tmp[1]	min
 	// tmp[2]	max
@@ -108,13 +118,13 @@ function setproperty($myparam)
 }
 	while ($row = $qTables->fetch_object()) 
 	{
-		$content	= "<?php\n";
-		$content	.= "namespace database\\".db_name.";\n";
-		$tmp_t 		= 'Tables_in_'.db_name;
-		$TABLENAME	= $row->$tmp_t;
-		$content	.= "class $TABLENAME \n{\n";
-		$qCOL		= $connect->query("DESCRIBE $TABLENAME");
-		$fn			="\n";
+		$content   = "<?php\n";
+		$content   .= "namespace database\\".db_name.";\n";
+		$tmp_t     = 'Tables_in_'.db_name;
+		$TABLENAME = $row->$tmp_t;
+		$content   .= "class $TABLENAME \n{\n";
+		$qCOL      = $connect->query("DESCRIBE $TABLENAME");
+		$fn        ="\n";
 
 		while ($crow = $qCOL->fetch_object()) 
 		{
@@ -380,7 +390,8 @@ function setproperty($myparam)
 		$content	.= "}\n";
 		$content	.= "?>";
 		// file_put_contents("./created/$TABLENAME.php", $content);
-		file_put_contents(db_name."/$TABLENAME.php", $content);
+		file_put_contents(__DIR__.'/'.db_name."/$TABLENAME.php", $content);
+		// __DIR__
 	}
 	$connect->close();
 

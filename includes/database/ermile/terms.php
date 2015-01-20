@@ -3,7 +3,8 @@ namespace database\ermile;
 class terms 
 {
 	public $id = array('type' => 'smallint@5', 'null'=>'NO', 'show'=>'NO', 'label'=>'ID');
-	public $term_name = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Name');
+	public $term_language = array('type' => 'char@2', 'null'=>'YES', 'show'=>'YES', 'label'=>'Language');
+	public $term_title = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Title');
 	public $term_slug = array('type' => 'varchar@50', 'null'=>'NO', 'show'=>'YES', 'label'=>'Slug');
 	public $term_desc = array('type' => 'varchar@200', 'null'=>'NO', 'show'=>'NO', 'label'=>'Description');
 	public $term_father = array('type' => 'smallint@5', 'null'=>'YES', 'show'=>'YES', 'label'=>'Father');
@@ -14,9 +15,15 @@ class terms
 
 	//------------------------------------------------------------------ id - primary key
 	public function id() {$this->validate()->id();}
-	public function term_name() 
+	public function term_language() 
 	{
-		$this->form("text")->name("name")->maxlength(50)->required()->type('text');
+		$this->form("text")->name("language")->maxlength(2)->type('text');
+	}
+
+	//------------------------------------------------------------------ title
+	public function term_title() 
+	{
+		$this->form("text")->name("title")->maxlength(50)->required()->type('text');
 	}
 
 	//------------------------------------------------------------------ slug

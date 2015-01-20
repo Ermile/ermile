@@ -25,7 +25,7 @@ class users
 	//------------------------------------------------------------------ select button
 	public function user_type() 
 	{
-		$this->form("select")->name("type")->type("select");
+		$this->form("select")->name("type")->type("select")->validate();
 		$this->setChild();
 	}
 
@@ -33,7 +33,6 @@ class users
 	public function user_mobile() 
 	{
 		$this->form()->type("tel")->name("mobile")->pl("Mobile")->pattern(".{10,}")->maxlength(17)->required();
-		$this->validate()->tel();
 	}
 
 	//------------------------------------------------------------------ password
