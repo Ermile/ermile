@@ -9,7 +9,7 @@ class transactions
 	public $transaction_date     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Date',          'type' => 'datetime@',                                                                                         );
 	public $transaction_sum      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Sum',           'type' => 'decimal@13,4',                                                                                      );
 	public $transaction_remained = array('null' =>'YES', 'show' =>'YES', 'label'=>'Remained',      'type' => 'decimal@13,4',                                                                                      );
-	public $date_modified        = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                                                                        );
+	public $date_modified        = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                                                                        );
 
 
 	//------------------------------------------------------------------ id - primary key

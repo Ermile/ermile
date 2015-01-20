@@ -8,7 +8,7 @@ class funds
 	public $location_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Location',      'type' => 'smallint@5',          'foreign'=>'locations@id!location_title');
 	public $fund_initialbalance = array('null' =>'NO',  'show' =>'YES', 'label'=>'Initialbalance','type' => 'decimal@14,4!0.0000', );
 	public $fund_desc           = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',         );
-	public $date_modified       = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',          );
+	public $date_modified       = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',          );
 
 
 	//------------------------------------------------------------------ id - primary key

@@ -16,7 +16,7 @@ class users
 	public $user_credit     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Credit',        'type' => 'enum@yes,no!no',                                                            );
 	public $permission_id   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Permission',    'type' => 'smallint@5',                                                                'foreign'=>'permissions@id!permission_title');
 	public $user_createdate = array('null' =>'NO',  'show' =>'YES', 'label'=>'Createdate',    'type' => 'datetime@',                                                                 );
-	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                                                );
+	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                                                );
 
 
 	//------------------------------------------------------------------ id - primary key

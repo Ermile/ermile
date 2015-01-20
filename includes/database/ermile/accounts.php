@@ -12,7 +12,7 @@ class accounts
 	public $account_primarybalance = array('null' =>'NO',  'show' =>'YES', 'label'=>'Primarybalance','type' => 'decimal@14,4!0.0000', );
 	public $account_desc           = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',         );
 	public $user_id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',          'foreign'=>'users@id!user_nickname');
-	public $date_modified          = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',          );
+	public $date_modified          = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',          );
 
 
 	//------------------------------------------------------------------ id - primary key

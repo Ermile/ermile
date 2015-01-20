@@ -16,8 +16,10 @@ CAUTIONS : IF YOU DON'T KNOW WHAT'S THIS, PLEASE DON'T RUN IT!
 *THIS FILE READ DATABASE AND CREATE A PHP FILE FOR CREATING FORM
 ***********************************************************************************
 **/
-$connect = mysqli_connect("localhost", db_user, db_pass, db_name);
-$qTables = $connect->query("SHOW TABLES FROM ".db_name);
+echo "<!DOCTYPE html><meta charset='UTF-8'/><title>Create file from db</title><body>";
+$connect     = mysqli_connect("localhost", db_user, db_pass, db_name);
+$qTables     = $connect->query("SHOW TABLES FROM ".db_name);
+$translation = array();
 function _type($type, $def)
 {
 	$def     = $def ? "!$def" : null;
@@ -115,13 +117,13 @@ function setproperty($myparam)
 // loop until end of tables
 while ($row = $qTables->fetch_object())
 {
-	$content   = "<?php\n". "namespace database\\".db_name.";\n";
-	$tmp_t     = 'Tables_in_'.db_name;
-	$TABLENAME = $row->$tmp_t;
-	$content  .= "class $TABLENAME \n{\n";
-	$qCOL      = $connect->query("DESCRIBE $TABLENAME");
-	$qCOL1     = $connect->query("DESCRIBE $TABLENAME");
-	$fn        ="\n";
+	$content                 = "<?php\n". "namespace database\\".db_name.";\n";
+	$tmp_t                   = 'Tables_in_'.db_name;
+	$TABLENAME               = $row->$tmp_t;
+	$content                .= "class $TABLENAME \n{\n";
+	$qCOL                    = $connect->query("DESCRIBE $TABLENAME");
+	$qCOL1                   = $connect->query("DESCRIBE $TABLENAME");
+	$fn                      ="\n";
 	echo '<h2>'.$TABLENAME.'</h2><ul>';
 
 	// Count number of char of each string ----------------------------------------------------------
@@ -141,7 +143,6 @@ while ($row = $qTables->fetch_object())
 	// create file of each table -------------------------------------------------------------------
 	while ($crow = $qCOL->fetch_object())
 	{
-		
 		// ========================================================================================== Edit by Javad
 		// for fields from currect table except foreign key
 		// we remove the table prefix, then show ramained text for name and for label we replace _ with space
@@ -238,7 +239,7 @@ while ($row = $qTables->fetch_object())
 			|| $myfield=='user_logincount')
 		{
 			$fn           .= "\tpublic function $myfield() {}\n";
-			$mylabel      = str_replace("_", " ", $myfield);
+			// $mylabel      = str_replace("_", " ", $myfield);
 			$mylabel      = ucwords(strtolower($mylabel));
 			$myfield_show = 'NO';
 		}
@@ -304,18 +305,27 @@ while ($row = $qTables->fetch_object())
 			$fields          .= $tmp_fields_name."'";
 		}
 
-		$content .= "\t".$fields.");\n";
+		$content               .= "\t".$fields.");\n";
+		$translation[$myfield]  = $mylabel;
 	}
 	echo '</ul>';
 
 	$content	.= $fn;
 	$content	.= "}\n";
 	$content	.= "?>";
-	// file_put_contents("./created/$TABLENAME.php", $content);
 	file_put_contents(__DIR__.'/'.db_name."/$TABLENAME.php", $content);
-	// __DIR__
 }
 $connect->close();
 
+// create translation file
+$translation_output  = '<?php'."\n".'function transtext'."\n{\n";
+foreach ($translation as $key => $value)
+{
+	$translation_output .= "\t".'echo T_("'.$value.'");'.str_repeat(' ',15-strlen($value)).'//'.$key."\n";
+}
+$translation_output .= "\n}\n?>";
+file_put_contents(__DIR__.'/'.db_name."/translation.php", $translation_output);
+
 echo "<br/><br/><hr/><h1>Finish..!</h1>";
+echo "<p>Convert db to file and create translation file completed!</p></body></html>";
 ?>

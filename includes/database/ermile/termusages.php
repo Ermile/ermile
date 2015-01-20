@@ -5,7 +5,7 @@ class termusages
 	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5', );
 	public $term_id       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Term',          'type' => 'smallint@5', 'foreign'=>'terms@id!term_title');
 	public $post_id       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Post',          'type' => 'smallint@5', 'foreign'=>'posts@id!post_title');
-	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@', );
+	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@', );
 
 
 	//------------------------------------------------------------------ id - primary key

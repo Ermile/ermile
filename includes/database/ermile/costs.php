@@ -10,7 +10,7 @@ class costs
 	public $cost_date     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Date',          'type' => 'datetime@',                   );
 	public $cost_desc     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',                 );
 	public $cost_type     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@income,outcome!outcome', );
-	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                  );
+	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                  );
 
 
 	//------------------------------------------------------------------ id - primary key

@@ -11,7 +11,7 @@ class verifications
 	public $verification_verified   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Verified',      'type' => 'enum@yes,no!no',                                                                      );
 	public $verification_status     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable',                                                   );
 	public $verification_createdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'Createdate',    'type' => 'datetime@',                                                                           );
-	public $date_modified           = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                                                          );
+	public $date_modified           = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                                                          );
 
 
 	//------------------------------------------------------------------ id - primary key

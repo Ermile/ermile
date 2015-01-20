@@ -12,7 +12,7 @@ class smss
 	public $sms_type           = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@receive,delivery!delivery',    );
 	public $sms_createdate     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Createdate',    'type' => 'datetime@',                         );
 	public $sms_status         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                        );
+	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
 
 
 	//------------------------------------------------------------------ id - primary key

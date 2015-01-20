@@ -27,8 +27,8 @@ html{
   -ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
 }
-[dir="ltr"] body{font-family:'Roboto Slab',serif;direction:ltr;}
-[dir="rtl"] body{font-family:'IRANSans',serif;direction:rtl;}
+body.ltr{font-family:'Roboto Slab',serif;direction:ltr;}
+body.rtl{font-family:'IRANSans',serif;direction:rtl;}
 body {
   margin: 0;
 }

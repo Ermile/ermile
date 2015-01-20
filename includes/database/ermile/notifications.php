@@ -9,7 +9,7 @@ class notifications
 	public $notification_content = array('null' =>'YES', 'show' =>'YES', 'label'=>'Content',       'type' => 'varchar@200',                    );
 	public $notification_url     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Url',           'type' => 'varchar@100',                    );
 	public $notification_status  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@read,unread,expire!unread', );
-	public $date_modified        = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                     );
+	public $date_modified        = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                     );
 
 
 	//------------------------------------------------------------------ id - primary key

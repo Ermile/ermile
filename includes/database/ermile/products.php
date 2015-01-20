@@ -21,7 +21,7 @@ class products
 	public $attachment_id          = array('null' =>'YES', 'show' =>'YES', 'label'=>'Attachment',    'type' => 'int@10',                                                          'foreign'=>'attachments@id!attachment_title');
 	public $product_service        = array('null' =>'NO',  'show' =>'YES', 'label'=>'Service',       'type' => 'enum@yes,no!no',                                                  );
 	public $product_sellin         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Sellin',        'type' => 'enum@store,online,both!both',                                     );
-	public $date_modified          = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                                      );
+	public $date_modified          = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                                      );
 
 
 	//------------------------------------------------------------------ id - primary key

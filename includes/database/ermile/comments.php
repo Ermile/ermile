@@ -13,7 +13,7 @@ class comments
 	public $comment_parent  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Parent',        'type' => 'int@10',                                           );
 	public $user_id         = array('null' =>'YES', 'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                       'foreign'=>'users@id!user_nickname');
 	public $Visitor_id      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Visitor',       'type' => 'int@10',                                           'foreign'=>'Visitors@id!Visitor_title');
-	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                       );
+	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                       );
 
 
 	//------------------------------------------------------------------ id - primary key

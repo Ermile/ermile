@@ -8,7 +8,7 @@ class options
 	public $option_value  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Value',         'type' => 'varchar@200',                       );
 	public $option_extra  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Extra',         'type' => 'varchar@400',                       );
 	public $option_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                        );
+	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
 
 
 	//------------------------------------------------------------------ id - primary key

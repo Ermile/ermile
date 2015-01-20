@@ -9,7 +9,7 @@ class addons
 	public $addon_status      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire,goingtoexpire!enable', );
 	public $addon_expire      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Expire',        'type' => 'datetime@',                                       );
 	public $addon_installdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'Installdate',   'type' => 'datetime@',                                       );
-	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                      );
+	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                      );
 
 
 	//------------------------------------------------------------------ id - primary key

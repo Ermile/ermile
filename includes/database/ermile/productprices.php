@@ -13,7 +13,7 @@ class productprices
 	public $productprice_discount  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Discount',      'type' => 'decimal@13,4',                      );
 	public $productprice_vat       = array('null' =>'YES', 'show' =>'YES', 'label'=>'Vat',           'type' => 'decimal@6,4',                       );
 	public $productprice_status    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified          = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                        );
+	public $date_modified          = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
 
 
 	//------------------------------------------------------------------ id - primary key

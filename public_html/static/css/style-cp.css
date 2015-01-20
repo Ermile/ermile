@@ -24,8 +24,8 @@ body {
   margin: 0;
   margin-top:45px;
 }
-.ltr body{font-family:'Roboto Slab',serif;direction:ltr;}
-.rtl body{font-family:'IRANSans',serif;direction:rtl;}
+body.ltr{font-family:'Roboto Slab',serif;direction:ltr;}
+body.rtl{font-family:'IRANSans',serif;direction:rtl;}
 
 /* HTML5 display definitions
    ========================================================================== */

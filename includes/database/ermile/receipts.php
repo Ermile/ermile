@@ -15,7 +15,7 @@ class receipts
 	public $fund_id             = array('null' =>'NO',  'show' =>'YES', 'label'=>'Fund',          'type' => 'smallint@5',                                           'foreign'=>'funds@id!fund_title');
 	public $user_id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                           'foreign'=>'users@id!user_nickname');
 	public $user_id_customer    = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                           'foreign'=>'users@id!user_nickname');
-	public $date_modified       = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                           );
+	public $date_modified       = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                           );
 
 
 	//------------------------------------------------------------------ id - primary key

@@ -10,7 +10,7 @@ class terms
 	public $term_father   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Father',        'type' => 'smallint@5',                        );
 	public $term_type     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@cat,tag!cat',                  );
 	public $term_status   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                        );
+	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
 
 
 	//------------------------------------------------------------------ id - primary key

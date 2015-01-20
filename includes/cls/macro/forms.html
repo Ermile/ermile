@@ -44,7 +44,7 @@
 {% macro select(array) %}
  {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
  <select {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
-  <option value="" disabled="disabled" selected="selected">Please select one item</option>
+  <option value="" disabled="disabled" selected="selected">{%trans%}Please select one item{%endtrans%}</option>
   {% for child in array.child%}
   <option {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
   {% endfor %}

@@ -10,7 +10,7 @@ class visitors
 	public $visitor_robot      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Robot',         'type' => 'enum@yes,no!no', );
 	public $user_id            = array('null' =>'YES', 'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',     'foreign'=>'users@id!user_nickname');
 	public $visitor_createdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'Createdate',    'type' => 'datetime@',      );
-	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',     );
+	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',     );
 
 
 	//------------------------------------------------------------------ id - primary key

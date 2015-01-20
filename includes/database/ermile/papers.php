@@ -11,7 +11,7 @@ class papers
 	public $paper_holder  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Holder',        'type' => 'varchar@100',                                          );
 	public $paper_desc    = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',                                          );
 	public $paper_status  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Status',        'type' => 'enum@pass,recovery,fail,lost,block,delete,inprogress', );
-	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                           );
+	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                           );
 
 
 	//------------------------------------------------------------------ id - primary key

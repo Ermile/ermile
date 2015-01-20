@@ -10,7 +10,7 @@ class permissions
 	public $permission_edit   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Edit',          'type' => 'enum@yes,no!no',                    );
 	public $permission_delete = array('null' =>'NO',  'show' =>'YES', 'label'=>'Delete',        'type' => 'enum@yes,no!no',                    );
 	public $permission_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                        );
+	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
 
 
 	//------------------------------------------------------------------ id - primary key

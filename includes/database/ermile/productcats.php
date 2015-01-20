@@ -10,7 +10,7 @@ class productcats
 	public $attachment_id     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Attachment',    'type' => 'int@10',                            'foreign'=>'attachments@id!attachment_title');
 	public $productcat_row    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Row',           'type' => 'smallint@5',                        );
 	public $productcat_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                        );
+	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
 
 
 	//------------------------------------------------------------------ id - primary key
