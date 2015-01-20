@@ -2,14 +2,14 @@
 namespace database\ermile;
 class papers 
 {
-	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                                           );
+	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                                           );
 	public $paper_type    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Type',          'type' => 'varchar@50',                                           );
 	public $paper_number  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Number',        'type' => 'varchar@20',                                           );
 	public $paper_date    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Date',          'type' => 'datetime@',                                            );
 	public $paper_price   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Price',         'type' => 'decimal@13,4',                                         );
 	public $bank_id       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Bank',          'type' => 'smallint@5',                                           'foreign'=>'banks@id!bank_title');
 	public $paper_holder  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Holder',        'type' => 'varchar@100',                                          );
-	public $paper_desc    = array('null' =>'YES', 'show' =>'NO',  'label'=>'Description',   'type' => 'varchar@200',                                          );
+	public $paper_desc    = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',                                          );
 	public $paper_status  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Status',        'type' => 'enum@pass,recovery,fail,lost,block,delete,inprogress', );
 	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Date Modified', 'type' => 'timestamp@',                                           );
 
@@ -39,7 +39,7 @@ class papers
 	//------------------------------------------------------------------ id - foreign key
 	public function bank_id() 
 	{
-		$this->form("select")->name("bank")->min(0)->max(9999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("bank_")->min(0)->max(9999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function paper_holder() 
@@ -47,7 +47,7 @@ class papers
 		$this->form("text")->name("holder")->maxlength(100)->type('text');
 	}
 
-	//------------------------------------------------------------------ description
+	//------------------------------------------------------------------ desc
 	public function paper_desc() 
 	{
 		$this->form("#desc")->maxlength(200)->type('textarea');

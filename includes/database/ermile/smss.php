@@ -2,7 +2,7 @@
 namespace database\ermile;
 class smss 
 {
-	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',                            );
+	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                            );
 	public $sms_from           = array('null' =>'YES', 'show' =>'YES', 'label'=>'From',          'type' => 'varchar@15',                        );
 	public $sms_to             = array('null' =>'YES', 'show' =>'YES', 'label'=>'To',            'type' => 'varchar@15',                        );
 	public $sms_message        = array('null' =>'YES', 'show' =>'YES', 'label'=>'Message',       'type' => 'varchar@255',                       );

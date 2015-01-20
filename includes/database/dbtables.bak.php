@@ -39,8 +39,8 @@ function _type($type, $def)
 
 function setproperty($myparam)
 {
-	$type       = $myparam->Type;
-	$field      = $myparam->Field;
+	$type = $myparam->Type;
+	// var_dump($type);
 	// for add new HTML5 feature to forms
 	preg_match("/^([^(]*)(\((.*)\))?/", $type, $tp);
 	$_type		= $tp[1];
@@ -48,6 +48,7 @@ function setproperty($myparam)
 	$mydotpos	= strpos($_length,',');
 	$mydotpos	= $mydotpos?$mydotpos:strlen($_length);
 	$mylen 		= substr($_length, 0, $mydotpos);
+
 	$mylength	= $_length;
 	$mymax		= "->maxlength('".$_length."')";
 	$tmp		   = array();
@@ -85,17 +86,7 @@ function setproperty($myparam)
 			if($mylen>100)
 				$tmp[0] 	= "->type('textarea')";
 			else
-				if($field == 'tel')
-					$tmp[0] 	= "->type('tel')";
-				elseif($field == 'pass')
-					$tmp[0] 	= "->type('password')";
-				elseif($field == 'website')
-					$tmp[0] 	= "->type('url')";
-				elseif($field == 'email')
-					$tmp[0] 	= "->type('email')";
-				else
-					$tmp[0] 	= "->type('text')";
-
+				$tmp[0] 	= "->type('text')";
 			array_push($tmp, "->maxlength(".$mylen.")");
 			return $tmp;
 			break;
@@ -115,14 +106,14 @@ function setproperty($myparam)
 // loop until end of tables
 while ($row = $qTables->fetch_object())
 {
-	$content   = "<?php\n". "namespace database\\".db_name.";\n";
+	$content   = "<?php\n";
+	$content   .= "namespace database\\".db_name.";\n";
 	$tmp_t     = 'Tables_in_'.db_name;
 	$TABLENAME = $row->$tmp_t;
-	$content  .= "class $TABLENAME \n{\n";
+	$content   .= "class $TABLENAME \n{\n";
 	$qCOL      = $connect->query("DESCRIBE $TABLENAME");
-	$qCOL1     = $connect->query("DESCRIBE $TABLENAME");
+	$qCOL1      = $connect->query("DESCRIBE $TABLENAME");
 	$fn        ="\n";
-	echo '<h2>'.$TABLENAME.'</h2><ul>';
 
 	// Count number of char of each string ----------------------------------------------------------
 	$counter         = array();
@@ -141,13 +132,13 @@ while ($row = $qTables->fetch_object())
 	// create file of each table -------------------------------------------------------------------
 	while ($crow = $qCOL->fetch_object())
 	{
-		
+		// var_dump($crow);
 		// ========================================================================================== Edit by Javad
 		// for fields from currect table except foreign key
 		// we remove the table prefix, then show ramained text for name and for label we replace _ with space
 		// for foreign key we remove second part of text after _ and show only the name of table without last char
 		$myfield		   = $crow->Field;
-		$myfield_null	= $crow->Null;
+		$mynull			= $crow->Null;
 		$myfield_show	= 'YES';
 		$property		= "";
 		$property_type	= "";
@@ -163,7 +154,7 @@ while ($row = $qTables->fetch_object())
 				$property .= $value;
 			}
 		}
-		$required   = $myfield_null=='NO'?'->required()':null;
+		$required   = $mynull=='NO'?'->required()':null;
 		$property  .= $required;
 		$tmp_pos    = strpos($myfield, '_');
 		$prefix     = substr($myfield, 0, $tmp_pos );
@@ -171,11 +162,11 @@ while ($row = $qTables->fetch_object())
 		$myname     = substr($myfield, ($tmp_pos ? $tmp_pos+1 : 0) );
 		
 		$myname     = strtolower($myname);
-		// echo($myfield.': '.$myname.'--');
+		echo($myfield.': '.$myname.'--');
 		$mylabel    = str_replace("_", " ", $myname);
 		$mylabel    = ucwords($mylabel);
-		// echo($mylabel);
-		// echo "<br />";
+		echo($mylabel);
+		echo "<br />";
 		
 		$txtcomment = "\n\t//------------------------------------------------------------------ ";
 		$txtstart   = "\tpublic function $myfield() \n\t{\n\t\t";
@@ -215,22 +206,69 @@ while ($row = $qTables->fetch_object())
 		}
 
 
-		// --------------------------------------------------------------------------------- General & more usable fields
-		elseif ($myname=='title'	|| $myname=="slug" 	|| $myname=="desc" || $myname=="email"
-			 ||  $myname=="website"	|| $myname=="mobile" || $myname=="tel"  || $myname=="pass"
-			 || $myfield=="attachment_type")
+		// --------------------------------------------------------------------------------- General
+		elseif ($myname=='title')
 		{
-			// var_dump($property_type);
-			$property  = $property. $property_type;
-			$fn       .= $txtcomment. $myname."\n";
-			$fn       .= $txtstart. '$this->form("#'.$myname.'")'.$property.';';
+			$property  = $property.$property_type;
+			$fn       .= $txtcomment. 'title'."\n";
+			$fn       .= $txtstart. '$this->form("#title")->name("title")'.$property.';'.$txtend;
+		}
+		elseif ($myname=="slug")
+		{
+			$property  = $property.$property_type;
+			$fn       .= $txtcomment. "slug\n";
+			$fn       .= $txtstart. '$this->form("text")->name("'. $myname.'")->maxlength(40)->validate()->slugify("'.$prefix.'_title");';
+			// $fn    .= $txtstart. '$this->form("text")->name("'. $myname.'")->validate()';
+			// $fn    .= "\n\t\t->createslug(function()\t{" .'$this->value =\validator_lib::$save'."['form']['".$prefix."_title']->value;});";
 			$fn       .= $txtend;
+		}
+		elseif ($myname=="desc")
+		{
+			$property     = $property.$property_type;
+			$fn          .= $txtcomment. "description\n";
+			$fn          .= $txtstart. '$this->form("#desc")'.$property.';'.$txtend;
+			
+			$mylabel      = "Description";
+			$myfield_show = 'NO';
+		}
 
-			if ($myname=="desc" || $myname=="website" || $myname=="tel" || $myname=="pass" 
-				|| $myfield=="attachment_type")
-			{
-				$myfield_show = 'NO';
-			}
+		// --------------------------------------------------------------------------------- Email
+		elseif ($myname=="email")
+		{
+			$fn .= $txtcomment. "email\n";
+			$fn .= $txtstart. '$this->form("#email")->type("email")->required()'.$property.';'.$txtend;
+		}
+
+		// --------------------------------------------------------------------------------- Website
+		elseif ($myname=="website")
+		{
+			$fn           .= $txtcomment. "website\n";
+			$fn           .= $txtstart. '$this->form("#website")->type("url")'.$property.';'.$txtend;
+			$myfield_show = 'NO';
+		}
+
+		// --------------------------------------------------------------------------------- Website
+		elseif ($myname=="mobile")
+		{
+			$fn .= $txtcomment. "website\n";
+			$fn .= $txtstart. '$this->form()->type("tel")->name("mobile")->pl("Mobile")->pattern(".{10,}")->maxlength(17)->required();'.$txtend;
+		}
+		elseif ( $myname=="tel")
+		{
+			$fn           .= $txtcomment. "website\n";
+			$fn           .= $txtstart. '$this->form()->type("tel")->name("tel")->pattern(".{9,}")->maxlength(17);'.$txtend;
+			$myfield_show = 'NO';
+
+		}
+		// --------------------------------------------------------------------------------- Password
+		elseif ($myname=="pass")
+		{
+			$fn             .= $txtcomment. "password\n";
+			// Pattern:: (? =^.{6,20}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$
+			$fn             .= $txtstart. '$this->form()->name("pass")->pl("Password")->type("password")->required()->maxlength(20)';
+			$fn             .= "\n\t\t\t". '->pattern("^.{5,20}$")->title("between 5-20 character")->validate()->password();'.$txtend;
+			$mylabel        = "Password";
+			$myfield_show   = 'NO';
 		}
 
 		// --------------------------------------------------------------------------------- unuse
@@ -242,12 +280,17 @@ while ($row = $qTables->fetch_object())
 			$mylabel      = ucwords(strtolower($mylabel));
 			$myfield_show = 'NO';
 		}
+		elseif($myfield=="attachment_type")
+		{
+			$fn           .= $txtstart. '$this->form("text")->name("'. $myname.'")'.$property.';'.$txtend;
+			$myfield_show = 'NO';
+		}
 
 		// --------------------------------------------------------------------------------- radio
 		elseif ($myname=="active" 		|| $myname=="view"		|| $myname=="verified"
 			|| $myname=="add" 			|| $myname=="edit" 		|| $myname=="delete"
-			|| $myname=="service"		|| $myname=="gender"		|| $myname=="married"
-			|| $myname=="newsletter"	|| $myname=="credit"		|| $myfield=="permission_status"
+			|| $myname=="service"		|| $myname=="gender"	|| $myname=="married"
+			|| $myname=="newsletter"	|| $myname=="credit"	|| $myfield=="permission_status"
 			)	
 		{
 			$fn    .= $txtcomment. "radio button\n";
@@ -257,8 +300,8 @@ while ($row = $qTables->fetch_object())
 		}
 
 		// --------------------------------------------------------------------------------- select
-		elseif ($myname=="status" 	|| $myname=="model" 		|| $myname=="priority"
-			|| $myname=="sellin"		|| $myname=="priority" 	|| $myname=='method'
+		elseif ($myname=="status" 	|| $myname=="model" 	|| $myname=="priority"
+			|| $myname=="sellin"	|| $myname=="priority" 	|| $myname=='method'
 			|| $myname=="type"		|| $myname=="paperstatus"
 			)
 		{
@@ -268,31 +311,56 @@ while ($row = $qTables->fetch_object())
 			$fn    .= "\n\t\t".'$this->setChild();'.$txtend;
 		}
 
+		// --------------------------------------------------------------------------------- Other
+		elseif ($myfield=="user_extra")
+		{
+			$fn           .= $txtcomment. "Extra\n";
+			$fn           .= $txtstart. '$this->form()->type("text")->label("Extra")->pl("Extra value")->name("extra")->required()';
+			// $fn        .= "\n\t\t\t".'->maxlength(20)->title("3 to 20 characters or number");'.$txtend;
+			$fn           .= "\n\t\t\t".'->maxlength(20)->pattern("^[a-zA-Z][a-zA-Z0-9-_\.]{2,20}$")->title("start with letter. 3 to 20 characters or number");'.$txtend;
+			// ^[a-zA-Z][a-zA-Z0-9-_\.]{3,20}$
+			$myfield_show = 'NO';
+		}
 		else
 		{
 			$property = $property.$property_type;
-			$fn      .= $txtstart. '$this->form("text")->name("'. $myname.'")'.$property.';'.$txtend;
+			// $fn    .= $txtcomment. "email\n";
+			// $fn    .= $txtstart. '$this->form()->name("'. $myname.'")'."\n\t\t".'->validate();'.$txtend;
+			$fn       .= $txtstart. '$this->form("text")->name("'. $myname.'")'.$property.';'.$txtend;
+			// $fn    .= $txtstart. $txtend;
 		}
 		
 
+
 		// ****************************************************************************for show in form or not
-		if( $myfield=="user_id" || $myfield=="user_id_customer")
+		if ( $myfield=="user_id" )
 		{
 			$myfield_show	= 'NO';
 		}
+
+		elseif($myfield=="user_id_customer")
+		{
+			$myfield_show	= 'NO';
+		}
+
+
+
+		// $content .= "\tpublic \$$crow->Field = array(". _type($crow->Type, $crow->Default).", 'label' => '$mylabel');\n";
+		// 'foreign' => 'table@id!value'
+		// var_dump(strlen($crow->Field));
+		// str_repeat(' ',30-strlen($crow->Field))
 		
 		$mytype     = _type($crow->Type, $crow->Default);
-		$fields		= "public \$$crow->Field"    .str_repeat(' ',$counter['name']+1-strlen($crow->Field))
+		$fields		= "\tpublic \$$crow->Field"    .str_repeat(' ',$counter['name']+1-strlen($crow->Field))
 		             ."= array("
-		             ."'null' =>'$myfield_null',"  .str_repeat(' ',4-strlen($myfield_null))
+		             ."'null' =>'$mynull',"        .str_repeat(' ',4-strlen($mynull))
 		             ."'show' =>'$myfield_show',"  .str_repeat(' ',4-strlen($myfield_show))
 		             ."'label'=>'$mylabel',"       .str_repeat(' ',14-strlen($mylabel))
 		             .$mytype.","                  .str_repeat(' ',$counter['type']+1-strlen($mytype));
 		             // .");\n";
-		echo('<li><pre style="margin: 0;">'.$fields.'</pre></li>');
 		if($isforeign)
 		{
-			$table            = $prefix.'s';
+			$table           = $prefix.'s';
 			$fields          .= "'foreign'=>'$table@id!";
 
 			$tmp_fields_name = $prefix . "_title";
@@ -302,11 +370,17 @@ while ($row = $qTables->fetch_object())
 				$tmp_fields_name = "id";
 
 			$fields          .= $tmp_fields_name."'";
+
+
+			// $tmp_fields_start	= "\tpublic \$$crow->Field = array(". _type($crow->Type, $crow->Default).", 'null'=>'$mynull', 'show'=>'$myfield_show', 'label'=>'$mylabel', 'foreign'=>'$table@id!";
+			// $tmp_fields_end		= "');\n";
+			// $fields				= "\tpublic \$$crow->Field = array(". _type($crow->Type, $crow->Default).", 'null' =>'$mynull' ,'label' => '$mylabel', 'foreign' => '$table@id!".$prefix."_title');\n";
+			// if table has a especial record
+			// $fields				= $tmp_fields_start. $tmp_fields_name."'"; //. $tmp_fields_end;
 		}
 
-		$content .= "\t".$fields.");\n";
+		$content .= $fields.");\n";
 	}
-	echo '</ul>';
 
 	$content	.= $fn;
 	$content	.= "}\n";
@@ -317,5 +391,5 @@ while ($row = $qTables->fetch_object())
 }
 $connect->close();
 
-echo "<br/><br/><hr/><h1>Finish..!</h1>";
+echo "Finish..!";
 ?>

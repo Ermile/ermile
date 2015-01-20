@@ -2,7 +2,7 @@
 namespace database\ermile;
 class products 
 {
-	public $id                     = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                                                      );
+	public $id                     = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                                                      );
 	public $product_title          = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@100',                                                     );
 	public $product_slug           = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@50',                                                      );
 	public $productcat_id          = array('null' =>'NO',  'show' =>'YES', 'label'=>'Productcat',    'type' => 'smallint@5!1',                                                    'foreign'=>'productcats@id!productcat_title');
@@ -30,19 +30,19 @@ class products
 	//------------------------------------------------------------------ title
 	public function product_title() 
 	{
-		$this->form("text")->name("title")->maxlength(100)->required()->type('text');
+		$this->form("#title")->maxlength(100)->required()->type('text');
 	}
 
 	//------------------------------------------------------------------ slug
 	public function product_slug() 
 	{
-		$this->form("text")->name("slug")->maxlength(40)->validate()->slugify("product_title");
+		$this->form("#slug")->maxlength(50)->required()->type('text');
 	}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function productcat_id() 
 	{
-		$this->form("select")->name("productcat")->min(0)->max(9999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("productcat_")->min(0)->max(9999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function product_barcode() 
@@ -100,7 +100,7 @@ class products
 	//------------------------------------------------------------------ id - foreign key
 	public function attachment_id() 
 	{
-		$this->form("select")->name("attachment")->min(0)->max(999999999)->type("select")->validate()->id();
+		$this->form("select")->name("attachment_")->min(0)->max(999999999)->type("select")->validate()->id();
 		$this->setChild();
 	}
 

@@ -2,9 +2,9 @@
 namespace database\ermile;
 class userlogs 
 {
-	public $id               = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',                      );
+	public $id               = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                      );
 	public $userlog_title    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                  );
-	public $userlog_desc     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Description',   'type' => 'varchar@999',                 );
+	public $userlog_desc     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@999',                 );
 	public $userlog_priority = array('null' =>'NO',  'show' =>'YES', 'label'=>'Priority',      'type' => 'enum@high,medium,low!medium', );
 	public $userlog_type     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Type',          'type' => 'enum@forgetpassword',         );
 	public $user_id          = array('null' =>'YES', 'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                  'foreign'=>'users@id!user_nickname');
@@ -17,10 +17,10 @@ class userlogs
 	//------------------------------------------------------------------ title
 	public function userlog_title() 
 	{
-		$this->form("text")->name("title")->maxlength(50)->type('text');
+		$this->form("#title")->maxlength(50)->type('text');
 	}
 
-	//------------------------------------------------------------------ description
+	//------------------------------------------------------------------ desc
 	public function userlog_desc() 
 	{
 		$this->form("#desc")->maxlength(999)->type('textarea');

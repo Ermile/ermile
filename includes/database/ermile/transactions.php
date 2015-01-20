@@ -2,7 +2,7 @@
 namespace database\ermile;
 class transactions 
 {
-	public $id                   = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',                                                                                            );
+	public $id                   = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                                                                                            );
 	public $transaction_type     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@sale,purchase,customertostore,storetocompany,anbargardani,install,repair,chqeuebackfail!sale', );
 	public $user_id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                                                                        'foreign'=>'users@id!user_nickname');
 	public $user_id_customer     = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                                                                        'foreign'=>'users@id!user_nickname');
@@ -26,7 +26,7 @@ class transactions
 	//------------------------------------------------------------------ id - foreign key
 	public function user_id_customer() 
 	{
-		$this->form("select")->name("user")->min(0)->max(9999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("user_")->min(0)->max(9999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function transaction_date() 

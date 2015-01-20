@@ -2,7 +2,7 @@
 namespace database\ermile;
 class permissions 
 {
-	public $id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                        );
+	public $id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                        );
 	public $permission_title  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                        );
 	public $Permission_module = array('null' =>'NO',  'show' =>'YES', 'label'=>'Module',        'type' => 'varchar@50',                        );
 	public $permission_view   = array('null' =>'NO',  'show' =>'YES', 'label'=>'View',          'type' => 'enum@yes,no!yes',                   );
@@ -19,7 +19,7 @@ class permissions
 	//------------------------------------------------------------------ title
 	public function permission_title() 
 	{
-		$this->form("text")->name("title")->maxlength(50)->required()->type('text');
+		$this->form("#title")->maxlength(50)->required()->type('text');
 	}
 	public function Permission_module() 
 	{

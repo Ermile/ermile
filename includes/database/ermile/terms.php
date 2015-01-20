@@ -2,11 +2,11 @@
 namespace database\ermile;
 class terms 
 {
-	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                        );
+	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                        );
 	public $term_language = array('null' =>'YES', 'show' =>'YES', 'label'=>'Language',      'type' => 'char@2',                            );
 	public $term_title    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                        );
 	public $term_slug     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@50',                        );
-	public $term_desc     = array('null' =>'NO',  'show' =>'NO',  'label'=>'Description',   'type' => 'varchar@200',                       );
+	public $term_desc     = array('null' =>'NO',  'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',                       );
 	public $term_father   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Father',        'type' => 'smallint@5',                        );
 	public $term_type     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@cat,tag!cat',                  );
 	public $term_status   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
@@ -23,16 +23,16 @@ class terms
 	//------------------------------------------------------------------ title
 	public function term_title() 
 	{
-		$this->form("text")->name("title")->maxlength(50)->required()->type('text');
+		$this->form("#title")->maxlength(50)->required()->type('text');
 	}
 
 	//------------------------------------------------------------------ slug
 	public function term_slug() 
 	{
-		$this->form("text")->name("slug")->maxlength(40)->validate()->slugify("term_title");
+		$this->form("#slug")->maxlength(50)->required()->type('text');
 	}
 
-	//------------------------------------------------------------------ description
+	//------------------------------------------------------------------ desc
 	public function term_desc() 
 	{
 		$this->form("#desc")->maxlength(200)->required()->type('textarea');

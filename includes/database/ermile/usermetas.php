@@ -2,7 +2,7 @@
 namespace database\ermile;
 class usermetas 
 {
-	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@6',                        );
+	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@6',                        );
 	public $user_id         = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@6',                        'foreign'=>'users@id!user_nickname');
 	public $usermeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Cat',           'type' => 'varchar@50',                        );
 	public $usermeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@100',                       );

@@ -2,7 +2,7 @@
 namespace database\ermile;
 class notifications 
 {
-	public $id                   = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',                         );
+	public $id                   = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                         );
 	public $user_id_sender       = array('null' =>'YES', 'show' =>'YES', 'label'=>'Id Sender',     'type' => 'smallint@5',                     );
 	public $user_id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                     'foreign'=>'users@id!user_nickname');
 	public $notification_title   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                     );
@@ -23,7 +23,7 @@ class notifications
 	//------------------------------------------------------------------ title
 	public function notification_title() 
 	{
-		$this->form("text")->name("title")->maxlength(50)->required()->type('text');
+		$this->form("#title")->maxlength(50)->required()->type('text');
 	}
 	public function notification_content() 
 	{

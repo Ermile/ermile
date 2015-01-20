@@ -2,10 +2,10 @@
 namespace database\ermile;
 class costcats 
 {
-	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                        );
+	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                        );
 	public $costcat_title  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                        );
 	public $costcat_slug   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@50',                        );
-	public $costcat_desc   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Description',   'type' => 'varchar@200',                       );
+	public $costcat_desc   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',                       );
 	public $costcat_father = array('null' =>'YES', 'show' =>'YES', 'label'=>'Father',        'type' => 'smallint@5',                        );
 	public $costcat_row    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Row',           'type' => 'smallint@5',                        );
 	public $costcat_type   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Type',          'type' => 'enum@income,outcome',               );
@@ -19,16 +19,16 @@ class costcats
 	//------------------------------------------------------------------ title
 	public function costcat_title() 
 	{
-		$this->form("text")->name("title")->maxlength(50)->required()->type('text');
+		$this->form("#title")->maxlength(50)->required()->type('text');
 	}
 
 	//------------------------------------------------------------------ slug
 	public function costcat_slug() 
 	{
-		$this->form("text")->name("slug")->maxlength(40)->validate()->slugify("costcat_title");
+		$this->form("#slug")->maxlength(50)->required()->type('text');
 	}
 
-	//------------------------------------------------------------------ description
+	//------------------------------------------------------------------ desc
 	public function costcat_desc() 
 	{
 		$this->form("#desc")->maxlength(200)->type('textarea');

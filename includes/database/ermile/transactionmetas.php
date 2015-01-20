@@ -2,7 +2,7 @@
 namespace database\ermile;
 class transactionmetas 
 {
-	public $id                     = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',                            );
+	public $id                     = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                            );
 	public $transaction_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Transaction',   'type' => 'int@10',                            'foreign'=>'transactions@id!id');
 	public $transactionmeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Cat',           'type' => 'varchar@50',                        );
 	public $transactionmeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@100',                       );
@@ -17,7 +17,7 @@ class transactionmetas
 	//------------------------------------------------------------------ id - foreign key
 	public function transaction_id() 
 	{
-		$this->form("select")->name("transaction")->min(0)->max(999999999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("transaction_")->min(0)->max(999999999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function transactionmeta_cat() 

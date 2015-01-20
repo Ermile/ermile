@@ -2,14 +2,14 @@
 namespace database\ermile;
 class attachments 
 {
-	public $id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',                                                        );
+	public $id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                                                        );
 	public $attachment_title  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@100',                                                   );
 	public $attachment_model  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Model',         'type' => 'enum@productcategory,product,admin,banklogo,post,system,other', );
 	public $attachment_addr   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Addr',          'type' => 'varchar@100',                                                   );
 	public $attachment_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@50',                                                    );
 	public $attachment_type   = array('null' =>'NO',  'show' =>'NO',  'label'=>'Type',          'type' => 'varchar@10',                                                    );
 	public $attachment_size   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Size',          'type' => 'float@12,0',                                                    );
-	public $attachment_desc   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Description',   'type' => 'varchar@200',                                                   );
+	public $attachment_desc   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',                                                   );
 	public $attachment_server = array('null' =>'YES', 'show' =>'YES', 'label'=>'Server',        'type' => 'int@10',                                                        );
 	public $attachment_folder = array('null' =>'YES', 'show' =>'YES', 'label'=>'Folder',        'type' => 'int@10',                                                        );
 	public $user_id           = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                                    'foreign'=>'users@id!user_nickname');
@@ -22,7 +22,7 @@ class attachments
 	//------------------------------------------------------------------ title
 	public function attachment_title() 
 	{
-		$this->form("text")->name("title")->maxlength(100)->type('text');
+		$this->form("#title")->maxlength(100)->type('text');
 	}
 
 	//------------------------------------------------------------------ select button
@@ -39,16 +39,18 @@ class attachments
 	{
 		$this->form("text")->name("name")->maxlength(50)->required()->type('text');
 	}
+
+	//------------------------------------------------------------------ type
 	public function attachment_type() 
 	{
-		$this->form("text")->name("type")->maxlength(10)->required();
+		$this->form("#type")->maxlength(10)->required()->type('text');
 	}
 	public function attachment_size() 
 	{
 		$this->form("text")->name("size")->max(99999999999)->required()->type('number');
 	}
 
-	//------------------------------------------------------------------ description
+	//------------------------------------------------------------------ desc
 	public function attachment_desc() 
 	{
 		$this->form("#desc")->maxlength(200)->type('textarea');

@@ -2,7 +2,7 @@
 namespace database\ermile;
 class errors 
 {
-	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                           );
+	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                           );
 	public $error_title    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@100',                          );
 	public $error_solution = array('null' =>'YES', 'show' =>'YES', 'label'=>'Solution',      'type' => 'varchar@999',                          );
 	public $error_priority = array('null' =>'NO',  'show' =>'YES', 'label'=>'Priority',      'type' => 'enum@critical,high,medium,low!medium', );
@@ -15,7 +15,7 @@ class errors
 	//------------------------------------------------------------------ title
 	public function error_title() 
 	{
-		$this->form("text")->name("title")->maxlength(100)->required()->type('text');
+		$this->form("#title")->maxlength(100)->required()->type('text');
 	}
 	public function error_solution() 
 	{

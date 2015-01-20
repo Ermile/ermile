@@ -2,7 +2,7 @@
 namespace database\ermile;
 class productmetas 
 {
-	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',                            );
+	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                            );
 	public $product_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Product',       'type' => 'smallint@5',                        'foreign'=>'products@id!product_title');
 	public $productmeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Cat',           'type' => 'varchar@50',                        );
 	public $productmeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@100',                       );
@@ -17,7 +17,7 @@ class productmetas
 	//------------------------------------------------------------------ id - foreign key
 	public function product_id() 
 	{
-		$this->form("select")->name("product")->min(0)->max(9999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("product_")->min(0)->max(9999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function productmeta_cat() 

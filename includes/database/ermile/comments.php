@@ -2,7 +2,7 @@
 namespace database\ermile;
 class comments 
 {
-	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                                       );
+	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                                       );
 	public $post_id         = array('null' =>'YES', 'show' =>'YES', 'label'=>'Post',          'type' => 'smallint@5',                                       'foreign'=>'posts@id!post_title');
 	public $product_id      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Product',       'type' => 'smallint@5',                                       'foreign'=>'products@id!product_title');
 	public $comment_author  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Author',        'type' => 'varchar@50',                                       );
@@ -22,14 +22,14 @@ class comments
 	//------------------------------------------------------------------ id - foreign key
 	public function post_id() 
 	{
-		$this->form("select")->name("post")->min(0)->max(9999)->type("select")->validate()->id();
+		$this->form("select")->name("post_")->min(0)->max(9999)->type("select")->validate()->id();
 		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function product_id() 
 	{
-		$this->form("select")->name("product")->min(0)->max(9999)->type("select")->validate()->id();
+		$this->form("select")->name("product_")->min(0)->max(9999)->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function comment_author() 
@@ -40,7 +40,7 @@ class comments
 	//------------------------------------------------------------------ email
 	public function comment_email() 
 	{
-		$this->form("#email")->type("email")->required()->maxlength(100);
+		$this->form("#email")->maxlength(100)->type('text');
 	}
 	public function comment_url() 
 	{
@@ -66,7 +66,7 @@ class comments
 	//------------------------------------------------------------------ id - foreign key
 	public function Visitor_id() 
 	{
-		$this->form("select")->name("Visitor")->min(0)->max(999999999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("Visitor_")->min(0)->max(999999999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function date_modified() {}

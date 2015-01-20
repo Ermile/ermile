@@ -2,7 +2,7 @@
 namespace database\ermile;
 class posts 
 {
-	public $id               = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                                       );
+	public $id               = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                                       );
 	public $post_language    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Language',      'type' => 'char@2',                                           );
 	public $post_title       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@100',                                      );
 	public $post_cat         = array('null' =>'YES', 'show' =>'YES', 'label'=>'Cat',           'type' => 'varchar@50',                                       );
@@ -27,7 +27,7 @@ class posts
 	//------------------------------------------------------------------ title
 	public function post_title() 
 	{
-		$this->form("text")->name("title")->maxlength(100)->required()->type('text');
+		$this->form("#title")->maxlength(100)->required()->type('text');
 	}
 	public function post_cat() 
 	{
@@ -37,7 +37,7 @@ class posts
 	//------------------------------------------------------------------ slug
 	public function post_slug() 
 	{
-		$this->form("text")->name("slug")->maxlength(40)->validate()->slugify("post_title");
+		$this->form("#slug")->maxlength(100)->required()->type('text');
 	}
 	public function post_content() 
 	{
@@ -66,7 +66,7 @@ class posts
 	//------------------------------------------------------------------ id - foreign key
 	public function attachment_id() 
 	{
-		$this->form("select")->name("attachment")->min(0)->max(999999999)->type("select")->validate()->id();
+		$this->form("select")->name("attachment_")->min(0)->max(999999999)->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function post_publishdate() 

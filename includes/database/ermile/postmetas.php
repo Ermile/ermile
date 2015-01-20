@@ -2,7 +2,7 @@
 namespace database\ermile;
 class postmetas 
 {
-	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',                            );
+	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                            );
 	public $post_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Post',          'type' => 'smallint@5',                        'foreign'=>'posts@id!post_title');
 	public $postmeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Cat',           'type' => 'varchar@50',                        );
 	public $postmeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@100',                       );
@@ -17,7 +17,7 @@ class postmetas
 	//------------------------------------------------------------------ id - foreign key
 	public function post_id() 
 	{
-		$this->form("select")->name("post")->min(0)->max(9999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("post_")->min(0)->max(9999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function postmeta_cat() 

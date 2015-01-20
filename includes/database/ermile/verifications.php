@@ -2,7 +2,7 @@
 namespace database\ermile;
 class verifications 
 {
-	public $id                      = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                                                                          );
+	public $id                      = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                                                                          );
 	public $verification_type       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@emailregister,emailchange,emailforget,mobileregister,mobilechange,mobileforget', );
 	public $verification_value      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Value',         'type' => 'varchar@50',                                                                          );
 	public $verification_code       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Code',          'type' => 'varchar@32',                                                                          );

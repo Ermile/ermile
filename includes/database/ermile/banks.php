@@ -2,7 +2,7 @@
 namespace database\ermile;
 class banks 
 {
-	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'smallint@5',                        );
+	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                        );
 	public $bank_title    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                        );
 	public $bank_slug     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@50',                        );
 	public $bank_website  = array('null' =>'YES', 'show' =>'NO',  'label'=>'Website',       'type' => 'varchar@50',                        );
@@ -16,19 +16,19 @@ class banks
 	//------------------------------------------------------------------ title
 	public function bank_title() 
 	{
-		$this->form("text")->name("title")->maxlength(50)->required()->type('text');
+		$this->form("#title")->maxlength(50)->required()->type('text');
 	}
 
 	//------------------------------------------------------------------ slug
 	public function bank_slug() 
 	{
-		$this->form("text")->name("slug")->maxlength(40)->validate()->slugify("bank_title");
+		$this->form("#slug")->maxlength(50)->required()->type('text');
 	}
 
 	//------------------------------------------------------------------ website
 	public function bank_website() 
 	{
-		$this->form("#website")->type("url")->maxlength(50);
+		$this->form("#website")->maxlength(50)->type('text');
 	}
 
 	//------------------------------------------------------------------ select button

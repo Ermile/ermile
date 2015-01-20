@@ -2,7 +2,7 @@
 namespace database\ermile;
 class attachmentmetas 
 {
-	public $id                    = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',                            );
+	public $id                    = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                            );
 	public $attachment_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Attachment',    'type' => 'int@10',                            'foreign'=>'attachments@id!attachment_title');
 	public $attachmentmeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Cat',           'type' => 'varchar@50',                        );
 	public $attachmentmeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@100',                       );
@@ -17,7 +17,7 @@ class attachmentmetas
 	//------------------------------------------------------------------ id - foreign key
 	public function attachment_id() 
 	{
-		$this->form("select")->name("attachment")->min(0)->max(999999999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("attachment_")->min(0)->max(999999999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function attachmentmeta_cat() 

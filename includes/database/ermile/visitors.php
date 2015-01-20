@@ -2,7 +2,7 @@
 namespace database\ermile;
 class visitors 
 {
-	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'ID',            'type' => 'int@10',         );
+	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',         );
 	public $visitor_ip         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Ip',            'type' => 'int@10',         );
 	public $visitor_url        = array('null' =>'NO',  'show' =>'YES', 'label'=>'Url',           'type' => 'varchar@255',    );
 	public $visitor_agent      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Agent',         'type' => 'varchar@255',    );
