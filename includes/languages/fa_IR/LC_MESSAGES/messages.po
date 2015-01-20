@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-20 22:49+0330\n"
-"PO-Revision-Date: 2015-01-20 22:50+0330\n"
+"POT-Creation-Date: 2015-01-20 22:52+0330\n"
+"PO-Revision-Date: 2015-01-20 22:55+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -208,8 +208,8 @@ msgid "Enter your password"
 msgstr "کلمه عبور خود را وارد کنید"
 
 #: ../../../.././includes/cls/form/account.php:40
-#: ../../../.././includes/database/ermile/translation.php:284
-#: ../../../.././includes/database/ermile/translation.php:419
+#: ../../../.././includes/database/ermile/translation.php:307
+#: ../../../.././includes/database/ermile/translation.php:452
 msgid "Code"
 msgstr "کد"
 
@@ -239,7 +239,7 @@ msgid "Tel"
 msgstr "تلفن"
 
 #: ../../../.././includes/cls/form/symbol.php:56
-#: ../../../.././includes/database/ermile/translation.php:395
+#: ../../../.././includes/database/ermile/translation.php:427
 msgid "Mobile"
 msgstr "موبایل"
 
@@ -285,7 +285,7 @@ msgid "Go to"
 msgstr "برو به"
 
 #: ../../../.././includes/languages/trans.php:13
-#: ../../../.././includes/database/ermile/translation.php:191
+#: ../../../.././includes/database/ermile/translation.php:207
 msgid "Add"
 msgstr "افزودن"
 
@@ -294,11 +294,12 @@ msgid "Add new"
 msgstr "افزودن"
 
 #: ../../../.././includes/languages/trans.php:15
-#: ../../../.././includes/database/ermile/translation.php:192
+#: ../../../.././includes/database/ermile/translation.php:208
 msgid "Edit"
 msgstr "ویرایش"
 
 #: ../../../.././includes/languages/trans.php:16
+#: ../../../.././includes/database/ermile/translation.php:171
 msgid "Options"
 msgstr "تنظیمات"
 
@@ -311,35 +312,35 @@ msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
 #: ../../../.././includes/languages/trans.php:20
-#: ../../../.././includes/database/ermile/translation.php:9
-#: ../../../.././includes/database/ermile/translation.php:53
-#: ../../../.././includes/database/ermile/translation.php:66
-#: ../../../.././includes/database/ermile/translation.php:93
-#: ../../../.././includes/database/ermile/translation.php:104
-#: ../../../.././includes/database/ermile/translation.php:124
-#: ../../../.././includes/database/ermile/translation.php:131
-#: ../../../.././includes/database/ermile/translation.php:140
-#: ../../../.././includes/database/ermile/translation.php:151
-#: ../../../.././includes/database/ermile/translation.php:188
-#: ../../../.././includes/database/ermile/translation.php:212
-#: ../../../.././includes/database/ermile/translation.php:224
-#: ../../../.././includes/database/ermile/translation.php:263
-#: ../../../.././includes/database/ermile/translation.php:318
-#: ../../../.././includes/database/ermile/translation.php:366
+#: ../../../.././includes/database/ermile/translation.php:10
+#: ../../../.././includes/database/ermile/translation.php:57
+#: ../../../.././includes/database/ermile/translation.php:71
+#: ../../../.././includes/database/ermile/translation.php:100
+#: ../../../.././includes/database/ermile/translation.php:112
+#: ../../../.././includes/database/ermile/translation.php:134
+#: ../../../.././includes/database/ermile/translation.php:142
+#: ../../../.././includes/database/ermile/translation.php:152
+#: ../../../.././includes/database/ermile/translation.php:164
+#: ../../../.././includes/database/ermile/translation.php:204
+#: ../../../.././includes/database/ermile/translation.php:230
+#: ../../../.././includes/database/ermile/translation.php:243
+#: ../../../.././includes/database/ermile/translation.php:285
+#: ../../../.././includes/database/ermile/translation.php:343
+#: ../../../.././includes/database/ermile/translation.php:396
 msgid "Title"
 msgstr "عنوان"
 
 #: ../../../.././includes/languages/trans.php:21
-#: ../../../.././includes/database/ermile/translation.php:10
-#: ../../../.././includes/database/ermile/translation.php:28
-#: ../../../.././includes/database/ermile/translation.php:67
-#: ../../../.././includes/database/ermile/translation.php:94
-#: ../../../.././includes/database/ermile/translation.php:132
-#: ../../../.././includes/database/ermile/translation.php:141
-#: ../../../.././includes/database/ermile/translation.php:214
-#: ../../../.././includes/database/ermile/translation.php:225
-#: ../../../.././includes/database/ermile/translation.php:264
-#: ../../../.././includes/database/ermile/translation.php:319
+#: ../../../.././includes/database/ermile/translation.php:11
+#: ../../../.././includes/database/ermile/translation.php:30
+#: ../../../.././includes/database/ermile/translation.php:72
+#: ../../../.././includes/database/ermile/translation.php:101
+#: ../../../.././includes/database/ermile/translation.php:143
+#: ../../../.././includes/database/ermile/translation.php:153
+#: ../../../.././includes/database/ermile/translation.php:232
+#: ../../../.././includes/database/ermile/translation.php:244
+#: ../../../.././includes/database/ermile/translation.php:286
+#: ../../../.././includes/database/ermile/translation.php:344
 msgid "Slug"
 msgstr "نامک"
 
@@ -360,1035 +361,1167 @@ msgid "accounts"
 msgstr "اکانت ها"
 
 #: ../../../.././includes/database/ermile/translation.php:7
+msgid "Accounts"
+msgstr "اکانت ها"
+
+#: ../../../.././includes/database/ermile/translation.php:8
 msgid "account"
 msgstr "اکانت"
 
-#: ../../../.././includes/database/ermile/translation.php:8
+#: ../../../.././includes/database/ermile/translation.php:9
 msgid "Id"
 msgstr "کد"
 
-#: ../../../.././includes/database/ermile/translation.php:11
+#: ../../../.././includes/database/ermile/translation.php:12
 msgid "Bank"
 msgstr "بانک"
 
-#: ../../../.././includes/database/ermile/translation.php:12
+#: ../../../.././includes/database/ermile/translation.php:13
 msgid "Branch"
 msgstr "شعبه"
 
-#: ../../../.././includes/database/ermile/translation.php:13
-#: ../../../.././includes/database/ermile/translation.php:176
+#: ../../../.././includes/database/ermile/translation.php:14
+#: ../../../.././includes/database/ermile/translation.php:191
 msgid "Number"
 msgstr "شماره حساب"
 
-#: ../../../.././includes/database/ermile/translation.php:14
+#: ../../../.././includes/database/ermile/translation.php:15
 msgid "Card"
 msgstr "شماره کارت"
 
-#: ../../../.././includes/database/ermile/translation.php:15
+#: ../../../.././includes/database/ermile/translation.php:16
 msgid "Primarybalance"
 msgstr "موجودی اولیه"
 
-#: ../../../.././includes/database/ermile/translation.php:16
-#: ../../../.././includes/database/ermile/translation.php:29
-#: ../../../.././includes/database/ermile/translation.php:59
-#: ../../../.././includes/database/ermile/translation.php:95
-#: ../../../.././includes/database/ermile/translation.php:109
-#: ../../../.././includes/database/ermile/translation.php:135
-#: ../../../.././includes/database/ermile/translation.php:142
-#: ../../../.././includes/database/ermile/translation.php:180
-#: ../../../.././includes/database/ermile/translation.php:226
-#: ../../../.././includes/database/ermile/translation.php:291
-#: ../../../.././includes/database/ermile/translation.php:320
-#: ../../../.././includes/database/ermile/translation.php:367
+#: ../../../.././includes/database/ermile/translation.php:17
+#: ../../../.././includes/database/ermile/translation.php:31
+#: ../../../.././includes/database/ermile/translation.php:63
+#: ../../../.././includes/database/ermile/translation.php:102
+#: ../../../.././includes/database/ermile/translation.php:117
+#: ../../../.././includes/database/ermile/translation.php:146
+#: ../../../.././includes/database/ermile/translation.php:154
+#: ../../../.././includes/database/ermile/translation.php:195
+#: ../../../.././includes/database/ermile/translation.php:245
+#: ../../../.././includes/database/ermile/translation.php:314
+#: ../../../.././includes/database/ermile/translation.php:345
+#: ../../../.././includes/database/ermile/translation.php:397
 msgid "Desc"
 msgstr "توضیح"
 
-#: ../../../.././includes/database/ermile/translation.php:17
-#: ../../../.././includes/database/ermile/translation.php:294
+#: ../../../.././includes/database/ermile/translation.php:18
+#: ../../../.././includes/database/ermile/translation.php:317
 msgid "User"
 msgstr "کاربر"
 
-#: ../../../.././includes/database/ermile/translation.php:18
+#: ../../../.././includes/database/ermile/translation.php:19
 msgid "Modified"
 msgstr "آخرین زمان ویرایش"
 
-#: ../../../.././includes/database/ermile/translation.php:19
+#: ../../../.././includes/database/ermile/translation.php:20
 msgid "enable"
 msgstr "فعال"
 
-#: ../../../.././includes/database/ermile/translation.php:20
+#: ../../../.././includes/database/ermile/translation.php:21
 msgid "disable"
 msgstr "غیرفعال"
 
-#: ../../../.././includes/database/ermile/translation.php:21
+#: ../../../.././includes/database/ermile/translation.php:22
 msgid "expire"
 msgstr "منقضی شده"
 
-#: ../../../.././includes/database/ermile/translation.php:22
+#: ../../../.././includes/database/ermile/translation.php:23
 msgid "goingtoexpire"
 msgstr "در حال منقضی شدن"
 
-#: ../../../.././includes/database/ermile/translation.php:25
+#: ../../../.././includes/database/ermile/translation.php:26
 msgid "addons"
 msgstr "افزونه ها"
 
-#: ../../../.././includes/database/ermile/translation.php:26
+#: ../../../.././includes/database/ermile/translation.php:27
+msgid "Addons"
+msgstr "افزونه ها"
+
+#: ../../../.././includes/database/ermile/translation.php:28
 msgid "addon"
 msgstr "افزونه"
 
-#: ../../../.././includes/database/ermile/translation.php:27
-#: ../../../.././includes/database/ermile/translation.php:39
-#: ../../../.././includes/database/ermile/translation.php:56
-#: ../../../.././includes/database/ermile/translation.php:160
-#: ../../../.././includes/database/ermile/translation.php:200
-#: ../../../.././includes/database/ermile/translation.php:235
-#: ../../../.././includes/database/ermile/translation.php:342
-#: ../../../.././includes/database/ermile/translation.php:375
+#: ../../../.././includes/database/ermile/translation.php:29
+#: ../../../.././includes/database/ermile/translation.php:42
+#: ../../../.././includes/database/ermile/translation.php:60
+#: ../../../.././includes/database/ermile/translation.php:174
+#: ../../../.././includes/database/ermile/translation.php:217
+#: ../../../.././includes/database/ermile/translation.php:255
+#: ../../../.././includes/database/ermile/translation.php:370
+#: ../../../.././includes/database/ermile/translation.php:406
 msgid "Name"
 msgstr "نام"
 
-#: ../../../.././includes/database/ermile/translation.php:30
-#: ../../../.././includes/database/ermile/translation.php:41
-#: ../../../.././includes/database/ermile/translation.php:69
-#: ../../../.././includes/database/ermile/translation.php:84
-#: ../../../.././includes/database/ermile/translation.php:99
-#: ../../../.././includes/database/ermile/translation.php:143
-#: ../../../.././includes/database/ermile/translation.php:154
-#: ../../../.././includes/database/ermile/translation.php:163
-#: ../../../.././includes/database/ermile/translation.php:181
-#: ../../../.././includes/database/ermile/translation.php:194
-#: ../../../.././includes/database/ermile/translation.php:202
-#: ../../../.././includes/database/ermile/translation.php:217
-#: ../../../.././includes/database/ermile/translation.php:229
-#: ../../../.././includes/database/ermile/translation.php:237
-#: ../../../.././includes/database/ermile/translation.php:250
-#: ../../../.././includes/database/ermile/translation.php:274
-#: ../../../.././includes/database/ermile/translation.php:310
-#: ../../../.././includes/database/ermile/translation.php:323
-#: ../../../.././includes/database/ermile/translation.php:344
-#: ../../../.././includes/database/ermile/translation.php:377
-#: ../../../.././includes/database/ermile/translation.php:403
-#: ../../../.././includes/database/ermile/translation.php:422
+#: ../../../.././includes/database/ermile/translation.php:32
+#: ../../../.././includes/database/ermile/translation.php:44
+#: ../../../.././includes/database/ermile/translation.php:74
+#: ../../../.././includes/database/ermile/translation.php:90
+#: ../../../.././includes/database/ermile/translation.php:106
+#: ../../../.././includes/database/ermile/translation.php:155
+#: ../../../.././includes/database/ermile/translation.php:167
+#: ../../../.././includes/database/ermile/translation.php:177
+#: ../../../.././includes/database/ermile/translation.php:196
+#: ../../../.././includes/database/ermile/translation.php:210
+#: ../../../.././includes/database/ermile/translation.php:219
+#: ../../../.././includes/database/ermile/translation.php:235
+#: ../../../.././includes/database/ermile/translation.php:248
+#: ../../../.././includes/database/ermile/translation.php:257
+#: ../../../.././includes/database/ermile/translation.php:271
+#: ../../../.././includes/database/ermile/translation.php:296
+#: ../../../.././includes/database/ermile/translation.php:334
+#: ../../../.././includes/database/ermile/translation.php:348
+#: ../../../.././includes/database/ermile/translation.php:372
+#: ../../../.././includes/database/ermile/translation.php:408
+#: ../../../.././includes/database/ermile/translation.php:435
+#: ../../../.././includes/database/ermile/translation.php:455
 msgid "Status"
 msgstr "وضعیت"
 
-#: ../../../.././includes/database/ermile/translation.php:31
+#: ../../../.././includes/database/ermile/translation.php:33
 msgid "Expire"
 msgstr "منقضی شده"
 
-#: ../../../.././includes/database/ermile/translation.php:32
+#: ../../../.././includes/database/ermile/translation.php:34
 msgid "Installdate"
 msgstr "تاریخ نصب"
 
-#: ../../../.././includes/database/ermile/translation.php:35
+#: ../../../.././includes/database/ermile/translation.php:37
 msgid "attachmentmetas"
 msgstr "اطلاعات اضافی ضمیمه ها"
 
-#: ../../../.././includes/database/ermile/translation.php:36
+#: ../../../.././includes/database/ermile/translation.php:38
+msgid "Attachmentmetas"
+msgstr "اطلاعات اضافی ضمیمه ها"
+
+#: ../../../.././includes/database/ermile/translation.php:39
 msgid "attachmentmeta"
 msgstr "اطلاعات اضافی ضمیمه"
 
-#: ../../../.././includes/database/ermile/translation.php:37
+#: ../../../.././includes/database/ermile/translation.php:40
 msgid "Attachment"
 msgstr "ضمیمه"
 
-#: ../../../.././includes/database/ermile/translation.php:38
-#: ../../../.././includes/database/ermile/translation.php:159
-#: ../../../.././includes/database/ermile/translation.php:199
-#: ../../../.././includes/database/ermile/translation.php:213
-#: ../../../.././includes/database/ermile/translation.php:234
-#: ../../../.././includes/database/ermile/translation.php:243
-#: ../../../.././includes/database/ermile/translation.php:341
-#: ../../../.././includes/database/ermile/translation.php:374
+#: ../../../.././includes/database/ermile/translation.php:41
+#: ../../../.././includes/database/ermile/translation.php:173
+#: ../../../.././includes/database/ermile/translation.php:216
+#: ../../../.././includes/database/ermile/translation.php:231
+#: ../../../.././includes/database/ermile/translation.php:254
+#: ../../../.././includes/database/ermile/translation.php:264
+#: ../../../.././includes/database/ermile/translation.php:369
+#: ../../../.././includes/database/ermile/translation.php:405
 msgid "Cat"
 msgstr "دسته"
 
-#: ../../../.././includes/database/ermile/translation.php:40
-#: ../../../.././includes/database/ermile/translation.php:161
-#: ../../../.././includes/database/ermile/translation.php:201
-#: ../../../.././includes/database/ermile/translation.php:236
-#: ../../../.././includes/database/ermile/translation.php:343
-#: ../../../.././includes/database/ermile/translation.php:376
-#: ../../../.././includes/database/ermile/translation.php:418
+#: ../../../.././includes/database/ermile/translation.php:43
+#: ../../../.././includes/database/ermile/translation.php:175
+#: ../../../.././includes/database/ermile/translation.php:218
+#: ../../../.././includes/database/ermile/translation.php:256
+#: ../../../.././includes/database/ermile/translation.php:371
+#: ../../../.././includes/database/ermile/translation.php:407
+#: ../../../.././includes/database/ermile/translation.php:451
 msgid "Value"
 msgstr "مقدار"
 
-#: ../../../.././includes/database/ermile/translation.php:42
+#: ../../../.././includes/database/ermile/translation.php:45
 msgid "productcategory"
 msgstr "دسته کالا"
 
-#: ../../../.././includes/database/ermile/translation.php:43
-#: ../../../.././includes/database/ermile/translation.php:262
+#: ../../../.././includes/database/ermile/translation.php:46
+#: ../../../.././includes/database/ermile/translation.php:284
 msgid "product"
 msgstr "محصول"
 
-#: ../../../.././includes/database/ermile/translation.php:44
+#: ../../../.././includes/database/ermile/translation.php:47
 msgid "admin"
 msgstr "ادمین"
 
-#: ../../../.././includes/database/ermile/translation.php:45
+#: ../../../.././includes/database/ermile/translation.php:48
 msgid "banklogo"
 msgstr "لوگوی بانک"
 
-#: ../../../.././includes/database/ermile/translation.php:46
-#: ../../../.././includes/database/ermile/translation.php:210
+#: ../../../.././includes/database/ermile/translation.php:49
+#: ../../../.././includes/database/ermile/translation.php:228
 msgid "post"
-msgstr "پست"
+msgstr "نوشته ها"
 
-#: ../../../.././includes/database/ermile/translation.php:47
+#: ../../../.././includes/database/ermile/translation.php:50
 msgid "system"
 msgstr "سیستم"
 
-#: ../../../.././includes/database/ermile/translation.php:48
+#: ../../../.././includes/database/ermile/translation.php:51
 msgid "other"
 msgstr "سایر"
 
-#: ../../../.././includes/database/ermile/translation.php:51
+#: ../../../.././includes/database/ermile/translation.php:54
 msgid "attachments"
 msgstr "ضمیمه ها"
 
-#: ../../../.././includes/database/ermile/translation.php:52
+#: ../../../.././includes/database/ermile/translation.php:55
+msgid "Attachments"
+msgstr "ضمیمه ها"
+
+#: ../../../.././includes/database/ermile/translation.php:56
 msgid "attachment"
 msgstr "ضمیمه"
 
-#: ../../../.././includes/database/ermile/translation.php:54
+#: ../../../.././includes/database/ermile/translation.php:58
 msgid "Model"
 msgstr "مدل"
 
-#: ../../../.././includes/database/ermile/translation.php:55
+#: ../../../.././includes/database/ermile/translation.php:59
 msgid "Addr"
 msgstr "آدرس"
 
-#: ../../../.././includes/database/ermile/translation.php:57
-#: ../../../.././includes/database/ermile/translation.php:98
-#: ../../../.././includes/database/ermile/translation.php:110
-#: ../../../.././includes/database/ermile/translation.php:175
-#: ../../../.././includes/database/ermile/translation.php:216
-#: ../../../.././includes/database/ermile/translation.php:285
+#: ../../../.././includes/database/ermile/translation.php:61
+#: ../../../.././includes/database/ermile/translation.php:105
+#: ../../../.././includes/database/ermile/translation.php:118
+#: ../../../.././includes/database/ermile/translation.php:190
+#: ../../../.././includes/database/ermile/translation.php:234
 #: ../../../.././includes/database/ermile/translation.php:308
-#: ../../../.././includes/database/ermile/translation.php:322
-#: ../../../.././includes/database/ermile/translation.php:357
-#: ../../../.././includes/database/ermile/translation.php:369
-#: ../../../.././includes/database/ermile/translation.php:394
-#: ../../../.././includes/database/ermile/translation.php:417
+#: ../../../.././includes/database/ermile/translation.php:332
+#: ../../../.././includes/database/ermile/translation.php:347
+#: ../../../.././includes/database/ermile/translation.php:386
+#: ../../../.././includes/database/ermile/translation.php:399
+#: ../../../.././includes/database/ermile/translation.php:426
+#: ../../../.././includes/database/ermile/translation.php:450
 msgid "Type"
 msgstr "نوع"
 
-#: ../../../.././includes/database/ermile/translation.php:58
+#: ../../../.././includes/database/ermile/translation.php:62
 msgid "Size"
 msgstr "اندازه"
 
-#: ../../../.././includes/database/ermile/translation.php:60
+#: ../../../.././includes/database/ermile/translation.php:64
 msgid "Server"
 msgstr "سرور"
 
-#: ../../../.././includes/database/ermile/translation.php:61
+#: ../../../.././includes/database/ermile/translation.php:65
 msgid "Folder"
 msgstr "پوشه"
 
-#: ../../../.././includes/database/ermile/translation.php:64
+#: ../../../.././includes/database/ermile/translation.php:68
 msgid "banks"
 msgstr "بانک ها"
 
-#: ../../../.././includes/database/ermile/translation.php:65
+#: ../../../.././includes/database/ermile/translation.php:69
+msgid "Banks"
+msgstr "بانک ها"
+
+#: ../../../.././includes/database/ermile/translation.php:70
 msgid "bank"
 msgstr "بانک"
 
-#: ../../../.././includes/database/ermile/translation.php:68
+#: ../../../.././includes/database/ermile/translation.php:73
 msgid "Website"
 msgstr "وب سایت"
 
-#: ../../../.././includes/database/ermile/translation.php:70
+#: ../../../.././includes/database/ermile/translation.php:75
 msgid "approved"
 msgstr "تایید شده"
 
-#: ../../../.././includes/database/ermile/translation.php:71
+#: ../../../.././includes/database/ermile/translation.php:76
 msgid "unapproved"
 msgstr "تایید نشده"
 
-#: ../../../.././includes/database/ermile/translation.php:72
+#: ../../../.././includes/database/ermile/translation.php:77
 msgid "spam"
 msgstr "هرزنامه"
 
-#: ../../../.././includes/database/ermile/translation.php:73
+#: ../../../.././includes/database/ermile/translation.php:78
 msgid "deleted"
 msgstr "حذف شده"
 
-#: ../../../.././includes/database/ermile/translation.php:76
+#: ../../../.././includes/database/ermile/translation.php:81
 msgid "comments"
 msgstr "دیدگاه ها"
 
-#: ../../../.././includes/database/ermile/translation.php:77
+#: ../../../.././includes/database/ermile/translation.php:82
+msgid "Comments"
+msgstr "دیدگاه ها"
+
+#: ../../../.././includes/database/ermile/translation.php:83
 msgid "comment"
 msgstr "دیدگاه"
 
-#: ../../../.././includes/database/ermile/translation.php:78
+#: ../../../.././includes/database/ermile/translation.php:84
 msgid "Post"
 msgstr "پست"
 
-#: ../../../.././includes/database/ermile/translation.php:79
+#: ../../../.././includes/database/ermile/translation.php:85
 msgid "Product"
 msgstr "محصول"
 
-#: ../../../.././includes/database/ermile/translation.php:80
+#: ../../../.././includes/database/ermile/translation.php:86
 msgid "Author"
 msgstr "کاربر"
 
-#: ../../../.././includes/database/ermile/translation.php:81
-#: ../../../.././includes/database/ermile/translation.php:397
+#: ../../../.././includes/database/ermile/translation.php:87
+#: ../../../.././includes/database/ermile/translation.php:429
 msgid "Email"
 msgstr "رایانامه"
 
-#: ../../../.././includes/database/ermile/translation.php:82
-#: ../../../.././includes/database/ermile/translation.php:153
-#: ../../../.././includes/database/ermile/translation.php:420
-#: ../../../.././includes/database/ermile/translation.php:429
+#: ../../../.././includes/database/ermile/translation.php:88
+#: ../../../.././includes/database/ermile/translation.php:166
+#: ../../../.././includes/database/ermile/translation.php:453
+#: ../../../.././includes/database/ermile/translation.php:463
 msgid "Url"
 msgstr "آدرس"
 
-#: ../../../.././includes/database/ermile/translation.php:83
-#: ../../../.././includes/database/ermile/translation.php:152
-#: ../../../.././includes/database/ermile/translation.php:215
+#: ../../../.././includes/database/ermile/translation.php:89
+#: ../../../.././includes/database/ermile/translation.php:165
+#: ../../../.././includes/database/ermile/translation.php:233
 msgid "Content"
 msgstr "محتوا"
 
-#: ../../../.././includes/database/ermile/translation.php:85
+#: ../../../.././includes/database/ermile/translation.php:91
 msgid "Parent"
 msgstr "والد"
 
-#: ../../../.././includes/database/ermile/translation.php:86
+#: ../../../.././includes/database/ermile/translation.php:92
 msgid "Visitor"
 msgstr "بازدیدکننده"
 
-#: ../../../.././includes/database/ermile/translation.php:87
+#: ../../../.././includes/database/ermile/translation.php:93
 msgid "income"
 msgstr "ورودی"
 
-#: ../../../.././includes/database/ermile/translation.php:88
+#: ../../../.././includes/database/ermile/translation.php:94
 msgid "outcome"
 msgstr "خروجی"
 
-#: ../../../.././includes/database/ermile/translation.php:91
+#: ../../../.././includes/database/ermile/translation.php:97
 msgid "costcats"
 msgstr "دسته بندی هزینه ها"
 
-#: ../../../.././includes/database/ermile/translation.php:92
+#: ../../../.././includes/database/ermile/translation.php:98
+msgid "Costcats"
+msgstr "دسته بندی هزینه ها"
+
+#: ../../../.././includes/database/ermile/translation.php:99
 msgid "costcat"
 msgstr "دسته بندی هزینه"
 
-#: ../../../.././includes/database/ermile/translation.php:96
-#: ../../../.././includes/database/ermile/translation.php:218
-#: ../../../.././includes/database/ermile/translation.php:227
-#: ../../../.././includes/database/ermile/translation.php:321
+#: ../../../.././includes/database/ermile/translation.php:103
+#: ../../../.././includes/database/ermile/translation.php:236
+#: ../../../.././includes/database/ermile/translation.php:246
+#: ../../../.././includes/database/ermile/translation.php:346
 msgid "Father"
 msgstr "مادر"
 
-#: ../../../.././includes/database/ermile/translation.php:97
-#: ../../../.././includes/database/ermile/translation.php:228
-#: ../../../.././includes/database/ermile/translation.php:333
+#: ../../../.././includes/database/ermile/translation.php:104
+#: ../../../.././includes/database/ermile/translation.php:247
+#: ../../../.././includes/database/ermile/translation.php:360
 msgid "Row"
 msgstr "سطر"
 
-#: ../../../.././includes/database/ermile/translation.php:102
+#: ../../../.././includes/database/ermile/translation.php:109
 msgid "costs"
 msgstr "هزینه ها"
 
-#: ../../../.././includes/database/ermile/translation.php:103
+#: ../../../.././includes/database/ermile/translation.php:110
+msgid "Costs"
+msgstr "هزینه ها"
+
+#: ../../../.././includes/database/ermile/translation.php:111
 msgid "cost"
 msgstr "هزینه"
 
-#: ../../../.././includes/database/ermile/translation.php:105
-#: ../../../.././includes/database/ermile/translation.php:178
-#: ../../../.././includes/database/ermile/translation.php:247
-#: ../../../.././includes/database/ermile/translation.php:269
-#: ../../../.././includes/database/ermile/translation.php:286
-#: ../../../.././includes/database/ermile/translation.php:335
+#: ../../../.././includes/database/ermile/translation.php:113
+#: ../../../.././includes/database/ermile/translation.php:193
+#: ../../../.././includes/database/ermile/translation.php:268
+#: ../../../.././includes/database/ermile/translation.php:291
+#: ../../../.././includes/database/ermile/translation.php:309
+#: ../../../.././includes/database/ermile/translation.php:362
 msgid "Price"
 msgstr "قیمت"
 
-#: ../../../.././includes/database/ermile/translation.php:106
+#: ../../../.././includes/database/ermile/translation.php:114
 msgid "Costcat"
 msgstr "دسته"
 
-#: ../../../.././includes/database/ermile/translation.php:107
+#: ../../../.././includes/database/ermile/translation.php:115
 msgid "Account"
 msgstr "اکانت"
 
-#: ../../../.././includes/database/ermile/translation.php:108
-#: ../../../.././includes/database/ermile/translation.php:177
-#: ../../../.././includes/database/ermile/translation.php:287
-#: ../../../.././includes/database/ermile/translation.php:358
+#: ../../../.././includes/database/ermile/translation.php:116
+#: ../../../.././includes/database/ermile/translation.php:192
+#: ../../../.././includes/database/ermile/translation.php:310
+#: ../../../.././includes/database/ermile/translation.php:387
 msgid "Date"
 msgstr "تاریخ"
 
-#: ../../../.././includes/database/ermile/translation.php:113
+#: ../../../.././includes/database/ermile/translation.php:121
 msgid "errorlogs"
 msgstr "لاگ خطاها"
 
-#: ../../../.././includes/database/ermile/translation.php:114
+#: ../../../.././includes/database/ermile/translation.php:122
+msgid "Errorlogs"
+msgstr "لاگ خطاها"
+
+#: ../../../.././includes/database/ermile/translation.php:123
 msgid "errorlog"
 msgstr "لاگ خطا"
 
-#: ../../../.././includes/database/ermile/translation.php:115
+#: ../../../.././includes/database/ermile/translation.php:124
 msgid "Errorlog"
 msgstr "لاگ خطا"
 
-#: ../../../.././includes/database/ermile/translation.php:116
+#: ../../../.././includes/database/ermile/translation.php:125
 msgid "critical"
 msgstr "بحرانی"
 
-#: ../../../.././includes/database/ermile/translation.php:117
+#: ../../../.././includes/database/ermile/translation.php:126
 msgid "high"
 msgstr "بالا"
 
-#: ../../../.././includes/database/ermile/translation.php:118
+#: ../../../.././includes/database/ermile/translation.php:127
 msgid "medium"
 msgstr "متوسط"
 
-#: ../../../.././includes/database/ermile/translation.php:119
+#: ../../../.././includes/database/ermile/translation.php:128
 msgid "low"
 msgstr "کم"
 
-#: ../../../.././includes/database/ermile/translation.php:122
+#: ../../../.././includes/database/ermile/translation.php:131
 msgid "errors"
 msgstr "خطاها"
 
-#: ../../../.././includes/database/ermile/translation.php:123
+#: ../../../.././includes/database/ermile/translation.php:132
+msgid "Errors"
+msgstr "خطاها"
+
+#: ../../../.././includes/database/ermile/translation.php:133
 msgid "error"
 msgstr "خطا"
 
-#: ../../../.././includes/database/ermile/translation.php:125
+#: ../../../.././includes/database/ermile/translation.php:135
 msgid "Solution"
 msgstr "راهکار"
 
-#: ../../../.././includes/database/ermile/translation.php:126
-#: ../../../.././includes/database/ermile/translation.php:368
+#: ../../../.././includes/database/ermile/translation.php:136
+#: ../../../.././includes/database/ermile/translation.php:398
 msgid "Priority"
 msgstr "اولویت"
 
-#: ../../../.././includes/database/ermile/translation.php:129
+#: ../../../.././includes/database/ermile/translation.php:139
 msgid "funds"
 msgstr "صندوق ها"
 
-#: ../../../.././includes/database/ermile/translation.php:130
+#: ../../../.././includes/database/ermile/translation.php:140
+msgid "Funds"
+msgstr "صندوق ها"
+
+#: ../../../.././includes/database/ermile/translation.php:141
 msgid "fund"
 msgstr "صندوق"
 
-#: ../../../.././includes/database/ermile/translation.php:133
+#: ../../../.././includes/database/ermile/translation.php:144
 msgid "Location"
 msgstr "مکان"
 
-#: ../../../.././includes/database/ermile/translation.php:134
-#: ../../../.././includes/database/ermile/translation.php:272
+#: ../../../.././includes/database/ermile/translation.php:145
+#: ../../../.././includes/database/ermile/translation.php:294
 msgid "Initialbalance"
 msgstr "موجودی اولیه"
 
-#: ../../../.././includes/database/ermile/translation.php:138
+#: ../../../.././includes/database/ermile/translation.php:149
 msgid "locations"
 msgstr "مکان ها"
 
-#: ../../../.././includes/database/ermile/translation.php:139
+#: ../../../.././includes/database/ermile/translation.php:150
+msgid "Locations"
+msgstr "مکان ها"
+
+#: ../../../.././includes/database/ermile/translation.php:151
 msgid "location"
 msgstr "مکان"
 
-#: ../../../.././includes/database/ermile/translation.php:144
+#: ../../../.././includes/database/ermile/translation.php:156
 msgid "read"
 msgstr "خوانده شده"
 
-#: ../../../.././includes/database/ermile/translation.php:145
+#: ../../../.././includes/database/ermile/translation.php:157
 msgid "unread"
 msgstr "خوانده نشده"
 
-#: ../../../.././includes/database/ermile/translation.php:148
+#: ../../../.././includes/database/ermile/translation.php:160
 msgid "notifications"
 msgstr "آگاه سازی ها"
 
-#: ../../../.././includes/database/ermile/translation.php:149
+#: ../../../.././includes/database/ermile/translation.php:161
+msgid "Notifications"
+msgstr "آگاه سازی ها"
+
+#: ../../../.././includes/database/ermile/translation.php:162
 msgid "notification"
 msgstr "آگاه سازی"
 
-#: ../../../.././includes/database/ermile/translation.php:150
+#: ../../../.././includes/database/ermile/translation.php:163
 msgid "Id Sender"
 msgstr "کد فرستنده"
 
-#: ../../../.././includes/database/ermile/translation.php:157
+#: ../../../.././includes/database/ermile/translation.php:170
 msgid "options"
 msgstr "تنظیمات"
 
-#: ../../../.././includes/database/ermile/translation.php:158
+#: ../../../.././includes/database/ermile/translation.php:172
 msgid "option"
 msgstr "تنظیمات"
 
-#: ../../../.././includes/database/ermile/translation.php:162
+#: ../../../.././includes/database/ermile/translation.php:176
 msgid "Extra"
 msgstr "اضافی"
 
-#: ../../../.././includes/database/ermile/translation.php:164
+#: ../../../.././includes/database/ermile/translation.php:178
 msgid "pass"
 msgstr "کلمه عبور"
 
-#: ../../../.././includes/database/ermile/translation.php:165
+#: ../../../.././includes/database/ermile/translation.php:179
 msgid "recovery"
 msgstr "بازیابی"
 
-#: ../../../.././includes/database/ermile/translation.php:166
+#: ../../../.././includes/database/ermile/translation.php:180
 msgid "fail"
 msgstr "از دست رفته"
 
-#: ../../../.././includes/database/ermile/translation.php:167
+#: ../../../.././includes/database/ermile/translation.php:181
 msgid "lost"
 msgstr "گم شده"
 
-#: ../../../.././includes/database/ermile/translation.php:168
+#: ../../../.././includes/database/ermile/translation.php:182
 msgid "block"
 msgstr "مسدود شده"
 
-#: ../../../.././includes/database/ermile/translation.php:169
+#: ../../../.././includes/database/ermile/translation.php:183
 msgid "delete"
 msgstr "حذف"
 
-#: ../../../.././includes/database/ermile/translation.php:170
+#: ../../../.././includes/database/ermile/translation.php:184
 msgid "inprogress"
 msgstr "در حال انجام"
 
-#: ../../../.././includes/database/ermile/translation.php:173
+#: ../../../.././includes/database/ermile/translation.php:187
 msgid "papers"
 msgstr "اسناد"
 
-#: ../../../.././includes/database/ermile/translation.php:174
+#: ../../../.././includes/database/ermile/translation.php:188
+msgid "Papers"
+msgstr "اسناد"
+
+#: ../../../.././includes/database/ermile/translation.php:189
 msgid "paper"
 msgstr "سند"
 
-#: ../../../.././includes/database/ermile/translation.php:179
+#: ../../../.././includes/database/ermile/translation.php:194
 msgid "Holder"
 msgstr "نگهدارنده"
 
-#: ../../../.././includes/database/ermile/translation.php:182
+#: ../../../.././includes/database/ermile/translation.php:197
 msgid "yes"
 msgstr "بله"
 
-#: ../../../.././includes/database/ermile/translation.php:183
+#: ../../../.././includes/database/ermile/translation.php:198
 msgid "no"
 msgstr "خیر"
 
-#: ../../../.././includes/database/ermile/translation.php:186
+#: ../../../.././includes/database/ermile/translation.php:201
 msgid "permissions"
 msgstr "سطح دسترسی ها"
 
-#: ../../../.././includes/database/ermile/translation.php:187
+#: ../../../.././includes/database/ermile/translation.php:202
+msgid "Permissions"
+msgstr "سطح دسترسی ها"
+
+#: ../../../.././includes/database/ermile/translation.php:203
 msgid "permission"
 msgstr "سطح دسترسی"
 
-#: ../../../.././includes/database/ermile/translation.php:189
+#: ../../../.././includes/database/ermile/translation.php:205
 msgid "Module"
 msgstr "ماژول"
 
-#: ../../../.././includes/database/ermile/translation.php:190
+#: ../../../.././includes/database/ermile/translation.php:206
 msgid "View"
 msgstr "نمایش"
 
-#: ../../../.././includes/database/ermile/translation.php:193
+#: ../../../.././includes/database/ermile/translation.php:209
 msgid "Delete"
 msgstr "حذف"
 
-#: ../../../.././includes/database/ermile/translation.php:197
+#: ../../../.././includes/database/ermile/translation.php:213
 msgid "postmetas"
 msgstr "توضیح اضافی نوشته ها"
 
-#: ../../../.././includes/database/ermile/translation.php:198
+#: ../../../.././includes/database/ermile/translation.php:214
+msgid "Postmetas"
+msgstr "توضیح اضافی نوشته ها"
+
+#: ../../../.././includes/database/ermile/translation.php:215
 msgid "postmeta"
 msgstr "توضیح اضافی نوشته"
 
-#: ../../../.././includes/database/ermile/translation.php:203
+#: ../../../.././includes/database/ermile/translation.php:220
 msgid "page"
 msgstr "صفحه"
 
-#: ../../../.././includes/database/ermile/translation.php:204
+#: ../../../.././includes/database/ermile/translation.php:221
 msgid "publish"
 msgstr "زمان انتشار"
 
-#: ../../../.././includes/database/ermile/translation.php:205
+#: ../../../.././includes/database/ermile/translation.php:222
 msgid "draft"
 msgstr "پیش نویس"
 
-#: ../../../.././includes/database/ermile/translation.php:206
+#: ../../../.././includes/database/ermile/translation.php:223
 msgid "schedule"
 msgstr "زمان بندی شده"
 
-#: ../../../.././includes/database/ermile/translation.php:209
+#: ../../../.././includes/database/ermile/translation.php:226
 msgid "posts"
 msgstr "نوشته ها"
 
-#: ../../../.././includes/database/ermile/translation.php:211
-#: ../../../.././includes/database/ermile/translation.php:317
+#: ../../../.././includes/database/ermile/translation.php:227
+msgid "Posts"
+msgstr "نوشته ها"
+
+#: ../../../.././includes/database/ermile/translation.php:229
+#: ../../../.././includes/database/ermile/translation.php:342
 msgid "Language"
 msgstr "زبان"
 
-#: ../../../.././includes/database/ermile/translation.php:219
+#: ../../../.././includes/database/ermile/translation.php:237
 msgid "Publishdate"
 msgstr "زمان انتشار"
 
-#: ../../../.././includes/database/ermile/translation.php:222
+#: ../../../.././includes/database/ermile/translation.php:240
 msgid "productcats"
 msgstr "دسته کالاها"
 
-#: ../../../.././includes/database/ermile/translation.php:223
+#: ../../../.././includes/database/ermile/translation.php:241
+msgid "Productcats"
+msgstr "دسته بندی کالا"
+
+#: ../../../.././includes/database/ermile/translation.php:242
 msgid "productcat"
 msgstr "دسته کالا"
 
-#: ../../../.././includes/database/ermile/translation.php:232
+#: ../../../.././includes/database/ermile/translation.php:251
 msgid "productmetas"
 msgstr "اطلاعات اضافی کالاها"
 
-#: ../../../.././includes/database/ermile/translation.php:233
+#: ../../../.././includes/database/ermile/translation.php:252
+msgid "Productmetas"
+msgstr "توضیح اضافی کالاها"
+
+#: ../../../.././includes/database/ermile/translation.php:253
 msgid "productmeta"
 msgstr "اطلاعات اضافی کالا"
 
-#: ../../../.././includes/database/ermile/translation.php:240
+#: ../../../.././includes/database/ermile/translation.php:260
 msgid "productprices"
 msgstr "قیمت کالاها"
 
-#: ../../../.././includes/database/ermile/translation.php:241
+#: ../../../.././includes/database/ermile/translation.php:261
+msgid "Productprices"
+msgstr "قیمت کالاها"
+
+#: ../../../.././includes/database/ermile/translation.php:262
 msgid "productprice"
 msgstr "قیمت کالا"
 
-#: ../../../.././includes/database/ermile/translation.php:242
+#: ../../../.././includes/database/ermile/translation.php:263
 msgid "Productmeta"
 msgstr "توضیح اضافی کالا"
 
-#: ../../../.././includes/database/ermile/translation.php:244
+#: ../../../.././includes/database/ermile/translation.php:265
 msgid "Startdate"
 msgstr "تاریخ شروع"
 
-#: ../../../.././includes/database/ermile/translation.php:245
+#: ../../../.././includes/database/ermile/translation.php:266
 msgid "Enddate"
 msgstr "تاریخ پایان"
 
-#: ../../../.././includes/database/ermile/translation.php:246
-#: ../../../.././includes/database/ermile/translation.php:268
+#: ../../../.././includes/database/ermile/translation.php:267
+#: ../../../.././includes/database/ermile/translation.php:290
 msgid "Buyprice"
 msgstr "قیمت خرید"
 
-#: ../../../.././includes/database/ermile/translation.php:248
-#: ../../../.././includes/database/ermile/translation.php:270
-#: ../../../.././includes/database/ermile/translation.php:336
+#: ../../../.././includes/database/ermile/translation.php:269
+#: ../../../.././includes/database/ermile/translation.php:292
+#: ../../../.././includes/database/ermile/translation.php:363
 msgid "Discount"
 msgstr "تخفیف"
 
-#: ../../../.././includes/database/ermile/translation.php:249
-#: ../../../.././includes/database/ermile/translation.php:271
+#: ../../../.././includes/database/ermile/translation.php:270
+#: ../../../.././includes/database/ermile/translation.php:293
 msgid "Vat"
 msgstr "مالیات"
 
-#: ../../../.././includes/database/ermile/translation.php:251
+#: ../../../.././includes/database/ermile/translation.php:272
 msgid "unset"
 msgstr "حذف شده"
 
-#: ../../../.././includes/database/ermile/translation.php:252
+#: ../../../.././includes/database/ermile/translation.php:273
 msgid "available"
 msgstr "در دسترس"
 
-#: ../../../.././includes/database/ermile/translation.php:253
+#: ../../../.././includes/database/ermile/translation.php:274
 msgid "soon"
 msgstr "به زودی"
 
-#: ../../../.././includes/database/ermile/translation.php:254
+#: ../../../.././includes/database/ermile/translation.php:275
 msgid "discontinued"
 msgstr "توقف تولید"
 
-#: ../../../.././includes/database/ermile/translation.php:255
+#: ../../../.././includes/database/ermile/translation.php:276
 msgid "unavailable"
 msgstr "ناموجود"
 
-#: ../../../.././includes/database/ermile/translation.php:256
+#: ../../../.././includes/database/ermile/translation.php:277
 msgid "store"
 msgstr "فروشگاه"
 
-#: ../../../.././includes/database/ermile/translation.php:257
+#: ../../../.././includes/database/ermile/translation.php:278
 msgid "online"
 msgstr "آنلاین"
 
-#: ../../../.././includes/database/ermile/translation.php:258
+#: ../../../.././includes/database/ermile/translation.php:279
 msgid "both"
 msgstr "هر دو"
 
-#: ../../../.././includes/database/ermile/translation.php:261
+#: ../../../.././includes/database/ermile/translation.php:282
 msgid "products"
 msgstr "کالاها"
 
-#: ../../../.././includes/database/ermile/translation.php:265
+#: ../../../.././includes/database/ermile/translation.php:283
+msgid "Products"
+msgstr "کالاها"
+
+#: ../../../.././includes/database/ermile/translation.php:287
 msgid "Productcat"
 msgstr "دسته کالا"
 
-#: ../../../.././includes/database/ermile/translation.php:266
+#: ../../../.././includes/database/ermile/translation.php:288
 msgid "Barcode"
 msgstr "بارکد"
 
-#: ../../../.././includes/database/ermile/translation.php:267
+#: ../../../.././includes/database/ermile/translation.php:289
 msgid "Barcode2"
 msgstr "بارکد دوم"
 
-#: ../../../.././includes/database/ermile/translation.php:273
+#: ../../../.././includes/database/ermile/translation.php:295
 msgid "Mininventory"
 msgstr "حداقل موجودی"
 
-#: ../../../.././includes/database/ermile/translation.php:275
+#: ../../../.././includes/database/ermile/translation.php:297
 msgid "Sold"
 msgstr "فروخته شده"
 
-#: ../../../.././includes/database/ermile/translation.php:276
+#: ../../../.././includes/database/ermile/translation.php:298
 msgid "Stock"
 msgstr "موجودی انبار"
 
-#: ../../../.././includes/database/ermile/translation.php:277
+#: ../../../.././includes/database/ermile/translation.php:299
 msgid "Carton"
 msgstr "تعداد در کارتن"
 
-#: ../../../.././includes/database/ermile/translation.php:278
+#: ../../../.././includes/database/ermile/translation.php:300
 msgid "Service"
 msgstr "سرویس"
 
-#: ../../../.././includes/database/ermile/translation.php:279
+#: ../../../.././includes/database/ermile/translation.php:301
 msgid "Sellin"
 msgstr "فروش در"
 
-#: ../../../.././includes/database/ermile/translation.php:282
+#: ../../../.././includes/database/ermile/translation.php:304
 msgid "receipts"
 msgstr "رسیدها"
 
-#: ../../../.././includes/database/ermile/translation.php:283
+#: ../../../.././includes/database/ermile/translation.php:305
+msgid "Receipts"
+msgstr "رسیدها"
+
+#: ../../../.././includes/database/ermile/translation.php:306
 msgid "receipt"
 msgstr "رسید"
 
-#: ../../../.././includes/database/ermile/translation.php:288
+#: ../../../.././includes/database/ermile/translation.php:311
 msgid "Paper"
 msgstr "اسناد"
 
-#: ../../../.././includes/database/ermile/translation.php:289
+#: ../../../.././includes/database/ermile/translation.php:312
 msgid "Paperdate"
 msgstr "تاریخ سند"
 
-#: ../../../.././includes/database/ermile/translation.php:290
+#: ../../../.././includes/database/ermile/translation.php:313
 msgid "Paperstatus"
 msgstr "وضعیت سند"
 
-#: ../../../.././includes/database/ermile/translation.php:292
+#: ../../../.././includes/database/ermile/translation.php:315
 msgid "Transaction"
 msgstr "تراکنش"
 
-#: ../../../.././includes/database/ermile/translation.php:293
+#: ../../../.././includes/database/ermile/translation.php:316
 msgid "Fund"
 msgstr "صندوق"
 
-#: ../../../.././includes/database/ermile/translation.php:295
+#: ../../../.././includes/database/ermile/translation.php:318
 msgid "get"
 msgstr "گرفتن"
 
-#: ../../../.././includes/database/ermile/translation.php:296
+#: ../../../.././includes/database/ermile/translation.php:319
 msgid "receive"
 msgstr "دریافت"
 
-#: ../../../.././includes/database/ermile/translation.php:297
+#: ../../../.././includes/database/ermile/translation.php:320
 msgid "delivery"
 msgstr "تحویل"
 
-#: ../../../.././includes/database/ermile/translation.php:300
+#: ../../../.././includes/database/ermile/translation.php:323
 msgid "smss"
 msgstr "پیامک ها"
 
-#: ../../../.././includes/database/ermile/translation.php:301
+#: ../../../.././includes/database/ermile/translation.php:324
+msgid "Smss"
+msgstr "پیامک ها"
+
+#: ../../../.././includes/database/ermile/translation.php:325
 msgid "sms"
 msgstr "پیامک"
 
-#: ../../../.././includes/database/ermile/translation.php:302
+#: ../../../.././includes/database/ermile/translation.php:326
 msgid "From"
 msgstr "از"
 
-#: ../../../.././includes/database/ermile/translation.php:303
+#: ../../../.././includes/database/ermile/translation.php:327
 msgid "To"
 msgstr "به"
 
-#: ../../../.././includes/database/ermile/translation.php:304
+#: ../../../.././includes/database/ermile/translation.php:328
 msgid "Message"
 msgstr "پیغام"
 
-#: ../../../.././includes/database/ermile/translation.php:305
+#: ../../../.././includes/database/ermile/translation.php:329
 msgid "Messageid"
 msgstr "کد پیغام"
 
-#: ../../../.././includes/database/ermile/translation.php:306
+#: ../../../.././includes/database/ermile/translation.php:330
 msgid "Deliverystatus"
 msgstr "وضعیت دریافت"
 
-#: ../../../.././includes/database/ermile/translation.php:307
+#: ../../../.././includes/database/ermile/translation.php:331
 msgid "Method"
 msgstr "روش"
 
-#: ../../../.././includes/database/ermile/translation.php:309
-#: ../../../.././includes/database/ermile/translation.php:406
-#: ../../../.././includes/database/ermile/translation.php:423
-#: ../../../.././includes/database/ermile/translation.php:433
+#: ../../../.././includes/database/ermile/translation.php:333
+#: ../../../.././includes/database/ermile/translation.php:438
+#: ../../../.././includes/database/ermile/translation.php:456
+#: ../../../.././includes/database/ermile/translation.php:467
 msgid "Createdate"
 msgstr "تاریخ ایجاد"
 
-#: ../../../.././includes/database/ermile/translation.php:311
+#: ../../../.././includes/database/ermile/translation.php:335
 msgid "cat"
 msgstr "دسته"
 
-#: ../../../.././includes/database/ermile/translation.php:312
+#: ../../../.././includes/database/ermile/translation.php:336
 msgid "tag"
 msgstr "کلیدواژه"
 
-#: ../../../.././includes/database/ermile/translation.php:315
+#: ../../../.././includes/database/ermile/translation.php:339
 msgid "terms"
 msgstr "عبارت ها"
 
-#: ../../../.././includes/database/ermile/translation.php:316
+#: ../../../.././includes/database/ermile/translation.php:340
+msgid "Terms"
+msgstr "عبارات"
+
+#: ../../../.././includes/database/ermile/translation.php:341
 msgid "term"
 msgstr "عبارت"
 
-#: ../../../.././includes/database/ermile/translation.php:326
+#: ../../../.././includes/database/ermile/translation.php:351
 msgid "termusages"
 msgstr "موارد استفاده عبارت"
 
-#: ../../../.././includes/database/ermile/translation.php:327
+#: ../../../.././includes/database/ermile/translation.php:352
+msgid "Termusages"
+msgstr "موارد استفاده عبارات"
+
+#: ../../../.././includes/database/ermile/translation.php:353
 msgid "termusage"
 msgstr "محل استفاده عبارت"
 
-#: ../../../.././includes/database/ermile/translation.php:328
+#: ../../../.././includes/database/ermile/translation.php:354
 msgid "Term"
 msgstr "عبارت"
 
-#: ../../../.././includes/database/ermile/translation.php:331
+#: ../../../.././includes/database/ermile/translation.php:357
 msgid "transactiondetails"
 msgstr "جزییات تراکنش ها"
 
-#: ../../../.././includes/database/ermile/translation.php:332
+#: ../../../.././includes/database/ermile/translation.php:358
+msgid "Transactiondetails"
+msgstr "جزییات تراکنش ها"
+
+#: ../../../.././includes/database/ermile/translation.php:359
 msgid "transactiondetail"
 msgstr "جزییات تراکنش"
 
-#: ../../../.././includes/database/ermile/translation.php:334
+#: ../../../.././includes/database/ermile/translation.php:361
 msgid "Quantity"
 msgstr "تعداد"
 
-#: ../../../.././includes/database/ermile/translation.php:339
+#: ../../../.././includes/database/ermile/translation.php:366
 msgid "transactionmetas"
 msgstr "اطلاعات اضافی تراکنش ها"
 
-#: ../../../.././includes/database/ermile/translation.php:340
+#: ../../../.././includes/database/ermile/translation.php:367
+msgid "Transactionmetas"
+msgstr "اطلاعات اضافی تراکنش ها"
+
+#: ../../../.././includes/database/ermile/translation.php:368
 msgid "transactionmeta"
 msgstr "اطلاعات اضافی تراکنش"
 
-#: ../../../.././includes/database/ermile/translation.php:345
+#: ../../../.././includes/database/ermile/translation.php:373
 msgid "sale"
 msgstr "فروش"
 
-#: ../../../.././includes/database/ermile/translation.php:346
+#: ../../../.././includes/database/ermile/translation.php:374
 msgid "purchase"
 msgstr "خرید"
 
-#: ../../../.././includes/database/ermile/translation.php:347
+#: ../../../.././includes/database/ermile/translation.php:375
 msgid "customertostore"
 msgstr "از مشتری به فروشگاه"
 
-#: ../../../.././includes/database/ermile/translation.php:348
+#: ../../../.././includes/database/ermile/translation.php:376
 msgid "storetocompany"
 msgstr "از فروشگاه به شرکت"
 
-#: ../../../.././includes/database/ermile/translation.php:349
+#: ../../../.././includes/database/ermile/translation.php:377
 msgid "anbargardani"
 msgstr "انبارگردانی"
 
-#: ../../../.././includes/database/ermile/translation.php:350
+#: ../../../.././includes/database/ermile/translation.php:378
 msgid "install"
 msgstr "نصب"
 
-#: ../../../.././includes/database/ermile/translation.php:351
+#: ../../../.././includes/database/ermile/translation.php:379
 msgid "repair"
 msgstr "تعمیر"
 
-#: ../../../.././includes/database/ermile/translation.php:352
+#: ../../../.././includes/database/ermile/translation.php:380
 msgid "chqeuebackfail"
 msgstr "چک سوخته"
 
-#: ../../../.././includes/database/ermile/translation.php:355
+#: ../../../.././includes/database/ermile/translation.php:383
 msgid "transactions"
 msgstr "تراکنش ها"
 
-#: ../../../.././includes/database/ermile/translation.php:356
+#: ../../../.././includes/database/ermile/translation.php:384
+msgid "Transactions"
+msgstr "تراکنش ها"
+
+#: ../../../.././includes/database/ermile/translation.php:385
 msgid "transaction"
 msgstr "تراکنش"
 
-#: ../../../.././includes/database/ermile/translation.php:359
+#: ../../../.././includes/database/ermile/translation.php:388
 msgid "Sum"
 msgstr "جمع"
 
-#: ../../../.././includes/database/ermile/translation.php:360
+#: ../../../.././includes/database/ermile/translation.php:389
 msgid "Remained"
 msgstr "باقی مانده"
 
-#: ../../../.././includes/database/ermile/translation.php:361
+#: ../../../.././includes/database/ermile/translation.php:390
 msgid "forgetpassword"
 msgstr "فراموش کردن کلمه عبور"
 
-#: ../../../.././includes/database/ermile/translation.php:364
+#: ../../../.././includes/database/ermile/translation.php:393
 msgid "userlogs"
 msgstr "وقایع کاربران"
 
-#: ../../../.././includes/database/ermile/translation.php:365
+#: ../../../.././includes/database/ermile/translation.php:394
+msgid "Userlogs"
+msgstr "وقایع کاربران"
+
+#: ../../../.././includes/database/ermile/translation.php:395
 msgid "userlog"
 msgstr "وقایع کاربر"
 
-#: ../../../.././includes/database/ermile/translation.php:372
+#: ../../../.././includes/database/ermile/translation.php:402
 msgid "usermetas"
 msgstr "اطلاعات اضافی کاربران"
 
-#: ../../../.././includes/database/ermile/translation.php:373
+#: ../../../.././includes/database/ermile/translation.php:403
+msgid "Usermetas"
+msgstr "اطلاعات اضافی کاربران"
+
+#: ../../../.././includes/database/ermile/translation.php:404
 msgid "usermeta"
 msgstr "اطلاعات اضافی کاربر"
 
-#: ../../../.././includes/database/ermile/translation.php:378
+#: ../../../.././includes/database/ermile/translation.php:409
 msgid "storeadmin"
 msgstr "مدیر فروشگاه"
 
-#: ../../../.././includes/database/ermile/translation.php:379
+#: ../../../.././includes/database/ermile/translation.php:410
 msgid "storeemployee"
 msgstr "کارمند فروشگاه"
 
-#: ../../../.././includes/database/ermile/translation.php:380
+#: ../../../.././includes/database/ermile/translation.php:411
 msgid "storesupplier"
 msgstr "تامین کننده فروشگاه"
 
-#: ../../../.././includes/database/ermile/translation.php:381
+#: ../../../.././includes/database/ermile/translation.php:412
 msgid "storecustomer"
 msgstr "مشتری فروشگاه"
 
-#: ../../../.././includes/database/ermile/translation.php:382
-#: ../../../.././includes/database/ermile/translation.php:393
+#: ../../../.././includes/database/ermile/translation.php:413
+#: ../../../.././includes/database/ermile/translation.php:425
 msgid "user"
 msgstr "کاربر"
 
-#: ../../../.././includes/database/ermile/translation.php:383
+#: ../../../.././includes/database/ermile/translation.php:414
 msgid "male"
 msgstr "مذکر"
 
-#: ../../../.././includes/database/ermile/translation.php:384
+#: ../../../.././includes/database/ermile/translation.php:415
 msgid "female"
 msgstr "مونث"
 
-#: ../../../.././includes/database/ermile/translation.php:385
+#: ../../../.././includes/database/ermile/translation.php:416
 msgid "active"
 msgstr "فعال"
 
-#: ../../../.././includes/database/ermile/translation.php:386
+#: ../../../.././includes/database/ermile/translation.php:417
 msgid "awaiting"
 msgstr "در حال انتظار"
 
-#: ../../../.././includes/database/ermile/translation.php:387
+#: ../../../.././includes/database/ermile/translation.php:418
 msgid "deactive"
 msgstr "غیرفعال"
 
-#: ../../../.././includes/database/ermile/translation.php:388
+#: ../../../.././includes/database/ermile/translation.php:419
 msgid "removed"
 msgstr "حذف شده"
 
-#: ../../../.././includes/database/ermile/translation.php:389
+#: ../../../.././includes/database/ermile/translation.php:420
 msgid "filter"
 msgstr "فیلتر"
 
-#: ../../../.././includes/database/ermile/translation.php:392
+#: ../../../.././includes/database/ermile/translation.php:423
 msgid "users"
 msgstr "کاربران"
 
-#: ../../../.././includes/database/ermile/translation.php:396
+#: ../../../.././includes/database/ermile/translation.php:424
+msgid "Users"
+msgstr "کاربران"
+
+#: ../../../.././includes/database/ermile/translation.php:428
 msgid "Pass"
 msgstr "کلمه عبور"
 
-#: ../../../.././includes/database/ermile/translation.php:398
+#: ../../../.././includes/database/ermile/translation.php:430
 msgid "Gender"
 msgstr "جنسیت"
 
-#: ../../../.././includes/database/ermile/translation.php:399
+#: ../../../.././includes/database/ermile/translation.php:431
 msgid "Nickname"
 msgstr "لقب"
 
-#: ../../../.././includes/database/ermile/translation.php:400
+#: ../../../.././includes/database/ermile/translation.php:432
 msgid "Firstname"
 msgstr "نام"
 
-#: ../../../.././includes/database/ermile/translation.php:401
+#: ../../../.././includes/database/ermile/translation.php:433
 msgid "Lastname"
 msgstr "نام خانوادگی"
 
-#: ../../../.././includes/database/ermile/translation.php:402
+#: ../../../.././includes/database/ermile/translation.php:434
 msgid "Birthday"
 msgstr "تاریخ تولد"
 
-#: ../../../.././includes/database/ermile/translation.php:404
+#: ../../../.././includes/database/ermile/translation.php:436
 msgid "Credit"
 msgstr "اعتبار"
 
-#: ../../../.././includes/database/ermile/translation.php:405
+#: ../../../.././includes/database/ermile/translation.php:437
 msgid "Permission"
 msgstr "سطح دسترسی"
 
-#: ../../../.././includes/database/ermile/translation.php:407
+#: ../../../.././includes/database/ermile/translation.php:439
 msgid "emailregister"
 msgstr "رایانامه ثبت نام"
 
-#: ../../../.././includes/database/ermile/translation.php:408
+#: ../../../.././includes/database/ermile/translation.php:440
 msgid "emailchange"
 msgstr "تغییر رایانامه"
 
-#: ../../../.././includes/database/ermile/translation.php:409
+#: ../../../.././includes/database/ermile/translation.php:441
 msgid "emailforget"
 msgstr "رایانامه بازیابی"
 
-#: ../../../.././includes/database/ermile/translation.php:410
+#: ../../../.././includes/database/ermile/translation.php:442
 msgid "mobileregister"
 msgstr "ثبت موبایل"
 
-#: ../../../.././includes/database/ermile/translation.php:411
+#: ../../../.././includes/database/ermile/translation.php:443
 msgid "mobilechange"
 msgstr "تغییر موبایل"
 
-#: ../../../.././includes/database/ermile/translation.php:412
+#: ../../../.././includes/database/ermile/translation.php:444
 msgid "mobileforget"
 msgstr "فراموش کردن موبایل"
 
-#: ../../../.././includes/database/ermile/translation.php:415
+#: ../../../.././includes/database/ermile/translation.php:447
 msgid "verifications"
 msgstr "اعتبارسنجی ها"
 
-#: ../../../.././includes/database/ermile/translation.php:416
+#: ../../../.././includes/database/ermile/translation.php:448
+msgid "Verifications"
+msgstr "اعتبارسنجی ها"
+
+#: ../../../.././includes/database/ermile/translation.php:449
 msgid "verification"
 msgstr "اعتبارسنجی"
 
-#: ../../../.././includes/database/ermile/translation.php:421
+#: ../../../.././includes/database/ermile/translation.php:454
 msgid "Verified"
 msgstr "اعتبارسنجی شده"
 
-#: ../../../.././includes/database/ermile/translation.php:426
+#: ../../../.././includes/database/ermile/translation.php:459
 msgid "visitors"
 msgstr "بازدیدکنندگان"
 
-#: ../../../.././includes/database/ermile/translation.php:427
+#: ../../../.././includes/database/ermile/translation.php:460
+msgid "Visitors"
+msgstr "بازدیدکنندگان"
+
+#: ../../../.././includes/database/ermile/translation.php:461
 msgid "visitor"
 msgstr "بازدیدکننده"
 
-#: ../../../.././includes/database/ermile/translation.php:428
+#: ../../../.././includes/database/ermile/translation.php:462
 msgid "Ip"
 msgstr "آی پی"
 
-#: ../../../.././includes/database/ermile/translation.php:430
+#: ../../../.././includes/database/ermile/translation.php:464
 msgid "Agent"
 msgstr "عامل"
 
-#: ../../../.././includes/database/ermile/translation.php:431
+#: ../../../.././includes/database/ermile/translation.php:465
 msgid "Referer"
 msgstr "ارجاع دهنده"
 
-#: ../../../.././includes/database/ermile/translation.php:432
+#: ../../../.././includes/database/ermile/translation.php:466
 msgid "Robot"
 msgstr "ربات"
 

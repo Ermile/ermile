@@ -151,6 +151,7 @@ while ($row = $qTables->fetch_object())
 	}
 
 	$translation['Table '.$TABLENAME] = $TABLENAME;
+	$translation[ucfirst($TABLENAME)] = ucfirst($TABLENAME);
 	$translation[$TABLENAME]          = substr($TABLENAME, 0, -1);
 	// create file of each table -------------------------------------------------------------------
 	while ($crow = $qCOL->fetch_object())

@@ -4,6 +4,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table accounts
 	echo T_("accounts");            // Table accounts
+	echo T_("Accounts");            // Accounts
 	echo T_("account");             // accounts
 	echo T_("Id");                  // id
 	echo T_("Title");               // account_title
@@ -23,6 +24,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table addons
 	echo T_("addons");              // Table addons
+	echo T_("Addons");              // Addons
 	echo T_("addon");               // addons
 	echo T_("Name");                // addon_name
 	echo T_("Slug");                // addon_slug
@@ -33,6 +35,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table attachmentmetas
 	echo T_("attachmentmetas");     // Table attachmentmetas
+	echo T_("Attachmentmetas");     // Attachmentmetas
 	echo T_("attachmentmeta");      // attachmentmetas
 	echo T_("Attachment");          // attachment_id
 	echo T_("Cat");                 // attachmentmeta_cat
@@ -49,6 +52,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table attachments
 	echo T_("attachments");         // Table attachments
+	echo T_("Attachments");         // Attachments
 	echo T_("attachment");          // attachments
 	echo T_("Title");               // attachment_title
 	echo T_("Model");               // attachment_model
@@ -62,6 +66,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table banks
 	echo T_("banks");               // Table banks
+	echo T_("Banks");               // Banks
 	echo T_("bank");                // banks
 	echo T_("Title");               // bank_title
 	echo T_("Slug");                // bank_slug
@@ -74,6 +79,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table comments
 	echo T_("comments");            // Table comments
+	echo T_("Comments");            // Comments
 	echo T_("comment");             // comments
 	echo T_("Post");                // post_id
 	echo T_("Product");             // product_id
@@ -89,6 +95,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table costcats
 	echo T_("costcats");            // Table costcats
+	echo T_("Costcats");            // Costcats
 	echo T_("costcat");             // costcats
 	echo T_("Title");               // costcat_title
 	echo T_("Slug");                // costcat_slug
@@ -100,6 +107,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table costs
 	echo T_("costs");               // Table costs
+	echo T_("Costs");               // Costs
 	echo T_("cost");                // costs
 	echo T_("Title");               // cost_title
 	echo T_("Price");               // cost_price
@@ -111,6 +119,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table errorlogs
 	echo T_("errorlogs");           // Table errorlogs
+	echo T_("Errorlogs");           // Errorlogs
 	echo T_("errorlog");            // errorlogs
 	echo T_("Errorlog");            // errorlog_id
 	echo T_("critical");            // Enum critical
@@ -120,6 +129,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table errors
 	echo T_("errors");              // Table errors
+	echo T_("Errors");              // Errors
 	echo T_("error");               // errors
 	echo T_("Title");               // error_title
 	echo T_("Solution");            // error_solution
@@ -127,6 +137,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table funds
 	echo T_("funds");               // Table funds
+	echo T_("Funds");               // Funds
 	echo T_("fund");                // funds
 	echo T_("Title");               // fund_title
 	echo T_("Slug");                // fund_slug
@@ -136,6 +147,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table locations
 	echo T_("locations");           // Table locations
+	echo T_("Locations");           // Locations
 	echo T_("location");            // locations
 	echo T_("Title");               // location_title
 	echo T_("Slug");                // location_slug
@@ -146,6 +158,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table notifications
 	echo T_("notifications");       // Table notifications
+	echo T_("Notifications");       // Notifications
 	echo T_("notification");        // notifications
 	echo T_("Id Sender");           // user_id_sender
 	echo T_("Title");               // notification_title
@@ -155,6 +168,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table options
 	echo T_("options");             // Table options
+	echo T_("Options");             // Options
 	echo T_("option");              // options
 	echo T_("Cat");                 // option_cat
 	echo T_("Name");                // option_name
@@ -171,6 +185,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table papers
 	echo T_("papers");              // Table papers
+	echo T_("Papers");              // Papers
 	echo T_("paper");               // papers
 	echo T_("Type");                // paper_type
 	echo T_("Number");              // paper_number
@@ -184,6 +199,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table permissions
 	echo T_("permissions");         // Table permissions
+	echo T_("Permissions");         // Permissions
 	echo T_("permission");          // permissions
 	echo T_("Title");               // permission_title
 	echo T_("Module");              // Permission_module
@@ -195,6 +211,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table postmetas
 	echo T_("postmetas");           // Table postmetas
+	echo T_("Postmetas");           // Postmetas
 	echo T_("postmeta");            // postmetas
 	echo T_("Cat");                 // postmeta_cat
 	echo T_("Name");                // postmeta_name
@@ -207,6 +224,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table posts
 	echo T_("posts");               // Table posts
+	echo T_("Posts");               // Posts
 	echo T_("post");                // posts
 	echo T_("Language");            // post_language
 	echo T_("Title");               // post_title
@@ -220,6 +238,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table productcats
 	echo T_("productcats");         // Table productcats
+	echo T_("Productcats");         // Productcats
 	echo T_("productcat");          // productcats
 	echo T_("Title");               // productcat_title
 	echo T_("Slug");                // productcat_slug
@@ -230,6 +249,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table productmetas
 	echo T_("productmetas");        // Table productmetas
+	echo T_("Productmetas");        // Productmetas
 	echo T_("productmeta");         // productmetas
 	echo T_("Cat");                 // productmeta_cat
 	echo T_("Name");                // productmeta_name
@@ -238,6 +258,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table productprices
 	echo T_("productprices");       // Table productprices
+	echo T_("Productprices");       // Productprices
 	echo T_("productprice");        // productprices
 	echo T_("Productmeta");         // productmeta_id
 	echo T_("Cat");                 // productprice_cat
@@ -259,6 +280,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table products
 	echo T_("products");            // Table products
+	echo T_("Products");            // Products
 	echo T_("product");             // products
 	echo T_("Title");               // product_title
 	echo T_("Slug");                // product_slug
@@ -280,6 +302,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table receipts
 	echo T_("receipts");            // Table receipts
+	echo T_("Receipts");            // Receipts
 	echo T_("receipt");             // receipts
 	echo T_("Code");                // receipt_code
 	echo T_("Type");                // receipt_type
@@ -298,6 +321,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table smss
 	echo T_("smss");                // Table smss
+	echo T_("Smss");                // Smss
 	echo T_("sms");                 // smss
 	echo T_("From");                // sms_from
 	echo T_("To");                  // sms_to
@@ -313,6 +337,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table terms
 	echo T_("terms");               // Table terms
+	echo T_("Terms");               // Terms
 	echo T_("term");                // terms
 	echo T_("Language");            // term_language
 	echo T_("Title");               // term_title
@@ -324,11 +349,13 @@ function transtext
 
 	// ------------------------------------------------------------------- Table termusages
 	echo T_("termusages");          // Table termusages
+	echo T_("Termusages");          // Termusages
 	echo T_("termusage");           // termusages
 	echo T_("Term");                // term_id
 
 	// ------------------------------------------------------------------- Table transactiondetails
 	echo T_("transactiondetails");  // Table transactiondetails
+	echo T_("Transactiondetails");  // Transactiondetails
 	echo T_("transactiondetail");   // transactiondetails
 	echo T_("Row");                 // transactiondetail_row
 	echo T_("Quantity");            // transactiondetail_quantity
@@ -337,6 +364,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table transactionmetas
 	echo T_("transactionmetas");    // Table transactionmetas
+	echo T_("Transactionmetas");    // Transactionmetas
 	echo T_("transactionmeta");     // transactionmetas
 	echo T_("Cat");                 // transactionmeta_cat
 	echo T_("Name");                // transactionmeta_name
@@ -353,6 +381,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table transactions
 	echo T_("transactions");        // Table transactions
+	echo T_("Transactions");        // Transactions
 	echo T_("transaction");         // transactions
 	echo T_("Type");                // transaction_type
 	echo T_("Date");                // transaction_date
@@ -362,6 +391,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table userlogs
 	echo T_("userlogs");            // Table userlogs
+	echo T_("Userlogs");            // Userlogs
 	echo T_("userlog");             // userlogs
 	echo T_("Title");               // userlog_title
 	echo T_("Desc");                // userlog_desc
@@ -370,6 +400,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table usermetas
 	echo T_("usermetas");           // Table usermetas
+	echo T_("Usermetas");           // Usermetas
 	echo T_("usermeta");            // usermetas
 	echo T_("Cat");                 // usermeta_cat
 	echo T_("Name");                // usermeta_name
@@ -390,6 +421,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table users
 	echo T_("users");               // Table users
+	echo T_("Users");               // Users
 	echo T_("user");                // users
 	echo T_("Type");                // user_type
 	echo T_("Mobile");              // user_mobile
@@ -413,6 +445,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table verifications
 	echo T_("verifications");       // Table verifications
+	echo T_("Verifications");       // Verifications
 	echo T_("verification");        // verifications
 	echo T_("Type");                // verification_type
 	echo T_("Value");               // verification_value
@@ -424,6 +457,7 @@ function transtext
 
 	// ------------------------------------------------------------------- Table visitors
 	echo T_("visitors");            // Table visitors
+	echo T_("Visitors");            // Visitors
 	echo T_("visitor");             // visitors
 	echo T_("Ip");                  // visitor_ip
 	echo T_("Url");                 // visitor_url
