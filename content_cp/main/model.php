@@ -218,6 +218,8 @@ class model extends \mvc\model
 
 	function post_add()
 	{
+		var_dump($_POST);
+		echo "<br>";
 		$this->create_query();
 		exit();
 		// debug::warn(T_("Add Record successfully"));
