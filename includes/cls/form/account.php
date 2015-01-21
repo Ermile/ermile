@@ -35,8 +35,8 @@ class account extends \lib\form
 
 	private function verification()
 	{
-		$this->mobile	= $this->make('#mobile')->label(null)->disabled('disabled')->tabindex('-1')
-							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null))->disabled('disabled');
+		$this->mobile	= $this->make('#mobile')->label(null)->readonly('readonly')->tabindex('-1')
+							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
 		$this->code		= $this->make('code')->label(null)->pl(T_('Code'))->maxlength(4)->autofocus()->autocomplete('off')
 							->required()->pattern('[0-9]{4}')->title(T_('input 4 number'))
 							->pos('hint--bottom')->desc(T_("Check your mobile and enter the code"));

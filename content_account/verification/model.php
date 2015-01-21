@@ -10,7 +10,7 @@ class model extends \mvc\model
 		// for debug you can uncomment below line to disallow redirect
 		// $this->controller()->redirector	= false; 
 		sleep(1);
-		$mymobile			= '+'.utility::get('mobile');
+		$mymobile			= utility::post('mobile');
 		$mycode				= utility::post('code');
 		$tmp_result			=  $this->sql()->tableVerifications()
 								->whereVerification_value($mymobile)
@@ -51,6 +51,10 @@ class model extends \mvc\model
 						'&referer='.utility::get('referer') );
 					// login user to system
 					debug::true(T_("Verify successfully. Please Input your new password"));
+				}
+				else
+				{
+					debug::warn(T_("Verify successfully. You must reffer from one point!"));
 				}
 			}, $mymobile, utility::get('from'));
 
