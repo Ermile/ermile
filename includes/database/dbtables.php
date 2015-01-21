@@ -327,7 +327,7 @@ while ($row = $qTables->fetch_object())
 $connect->close();
 
 // create translation file
-$translation_output  = '<?php'."\n".'function transtext'."\n{\n";
+$translation_output  = '<?php'."\n".'function transtext()'."\n{\n";
 foreach ($translation as $key => $value)
 {
 	if(substr($key, 0, 6)=='Table ')

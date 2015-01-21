@@ -1,5 +1,5 @@
 <?php
-function transtext
+function transtext()
 {
 	// add static text for detect poedit translate
 	echo T_('Saloos');

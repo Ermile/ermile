@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-21 02:56+0330\n"
-"PO-Revision-Date: 2015-01-21 02:56+0330\n"
+"POT-Creation-Date: 2015-01-21 16:36+0330\n"
+"PO-Revision-Date: 2015-01-21 16:36+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -39,6 +39,7 @@ msgstr "یک اکانت برای همه حساب ها"
 #: ../../../.././content_account/home/view.php:22
 #: ../../../.././includes/cls/form/account.php:25
 #: ../../../.././includes/languages/trans.php:15
+#: ../../../.././includes/languages/twig_translation.php:25
 msgid "Login"
 msgstr "ورود به سیستم"
 
@@ -70,6 +71,7 @@ msgid "SMS Callback"
 msgstr "پیامک های دریافتی"
 
 #: ../../../.././content_account/home/view.php:58
+#: ../../../.././includes/languages/twig_translation.php:16
 #: ../../../.././includes/mvc/view.php:9
 msgid "Ermile"
 msgstr "ارمایل"
@@ -94,7 +96,7 @@ msgstr "این شماره موبایل اشتباه است."
 #: ../../../.././content_account/login/model.php:77
 #: ../../../.././content_account/signup/model.php:68
 #: ../../../.././content_account/recovery/model.php:70
-#: ../../../.././content_account/verification/model.php:71
+#: ../../../.././content_account/verification/model.php:75
 msgid "Please forward this message to Administrator"
 msgstr "لطفا این پیغام را برای مدیر سیستم ارسال کنید"
 
@@ -139,11 +141,15 @@ msgstr "اعتبارسنجی موفق بود. حالا می توانید از س
 msgid "Verify successfully. Please Input your new password"
 msgstr "اعتبارسنجی با موفقیت انجام شد. لطفا کلمه عبور جدید را وارد کنید"
 
-#: ../../../.././content_account/verification/model.php:60
+#: ../../../.././content_account/verification/model.php:57
+msgid "Verify successfully. You must reffer from one point!"
+msgstr "اعتبارسنجی موفق بود. ولی شما باید از جایی معرفی می شدید!"
+
+#: ../../../.././content_account/verification/model.php:64
 msgid "Verify failed!"
 msgstr "اعتبارسنجی ناموفق بود!"
 
-#: ../../../.././content_account/verification/model.php:66
+#: ../../../.././content_account/verification/model.php:70
 msgid "This data is incorrect"
 msgstr "این اطلاعات اشتباه است."
 
@@ -264,6 +270,7 @@ msgid "home"
 msgstr "خانه"
 
 #: ../../../.././includes/languages/trans.php:7
+#: ../../../.././includes/languages/twig_translation.php:18
 msgid "Home"
 msgstr "صفحه نخست"
 
@@ -272,22 +279,27 @@ msgid "Homepage"
 msgstr "صفحه نخست"
 
 #: ../../../.././includes/languages/trans.php:9
+#: ../../../.././includes/languages/twig_translation.php:22
 msgid "Home Page"
 msgstr "صفحه نخست"
 
 #: ../../../.././includes/languages/trans.php:10
+#: ../../../.././includes/languages/twig_translation.php:23
 msgid "Admin"
 msgstr "مدیریت"
 
 #: ../../../.././includes/languages/trans.php:11
+#: ../../../.././includes/languages/twig_translation.php:24
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
 #: ../../../.././includes/languages/trans.php:12
+#: ../../../.././includes/languages/twig_translation.php:11
 msgid "Sign In"
 msgstr "ورود به سیستم"
 
 #: ../../../.././includes/languages/trans.php:13
+#: ../../../.././includes/languages/twig_translation.php:6
 msgid "Sign Up"
 msgstr "ثبت نام"
 
@@ -296,11 +308,13 @@ msgid "Signup"
 msgstr "ثبت نام"
 
 #: ../../../.././includes/languages/trans.php:16
+#: ../../../.././includes/languages/twig_translation.php:17
 msgid "Logout"
 msgstr "خروج از سیستم"
 
 #: ../../../.././includes/languages/trans.php:17
 #: ../../../.././includes/languages/trans.php:25
+#: ../../../.././includes/languages/twig_translation.php:26
 msgid "Go to"
 msgstr "برو به"
 
@@ -314,11 +328,13 @@ msgid "Add new"
 msgstr "افزودن"
 
 #: ../../../.././includes/languages/trans.php:20
+#: ../../../.././includes/languages/twig_translation.php:20
 #: ../../../.././includes/database/ermile/translation.php:208
 msgid "Edit"
 msgstr "ویرایش"
 
 #: ../../../.././includes/languages/trans.php:21
+#: ../../../.././includes/languages/twig_translation.php:21
 #: ../../../.././includes/database/ermile/translation.php:209
 msgid "Delete"
 msgstr "حذف"
@@ -378,46 +394,57 @@ msgid "Add New"
 msgstr "افزودن"
 
 #: ../../../.././includes/languages/trans.php:30
+#: ../../../.././includes/languages/twig_translation.php:19
 msgid "Actions"
 msgstr "عملیات"
 
 #: ../../../.././includes/languages/trans.php:31
+#: ../../../.././includes/languages/twig_translation.php:4
 msgid "Can't access your account?"
 msgstr "نمی توانید به حساب خود وارد شوید؟"
 
 #: ../../../.././includes/languages/trans.php:32
+#: ../../../.././includes/languages/twig_translation.php:5
 msgid "Don't have an account?"
 msgstr "اکانت ندارید؟"
 
 #: ../../../.././includes/languages/trans.php:33
+#: ../../../.././includes/languages/twig_translation.php:7
 msgid "By signing up"
 msgstr "با ثبت نام"
 
 #: ../../../.././includes/languages/trans.php:34
+#: ../../../.././includes/languages/twig_translation.php:10
 msgid "Already have an account?"
 msgstr "اکانت دارید؟"
 
 #: ../../../.././includes/languages/trans.php:35
+#: ../../../.././includes/languages/twig_translation.php:9
 msgid "Terms of Service"
 msgstr "قوانین استفاده"
 
 #: ../../../.././includes/languages/trans.php:36
+#: ../../../.././includes/languages/twig_translation.php:8
 msgid "you agree to the"
 msgstr "شما موافق هستید با"
 
 #: ../../../.././includes/languages/trans.php:37
+#: ../../../.././includes/languages/twig_translation.php:13
 msgid "Are you remember your password!?"
 msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
 
 #: ../../../.././includes/languages/trans.php:38
+#: ../../../.././includes/languages/twig_translation.php:14
 msgid "Please check your mobile and enter the code"
 msgstr "پس از بررسی موبایل خود کد را وارد کنید"
 
 #: ../../../.././includes/languages/trans.php:39
+#: ../../../.././includes/languages/twig_translation.php:15
 msgid "Don't receive message?"
 msgstr "هنوز پیامک ما را دریافت نکردید؟"
 
 #: ../../../.././includes/languages/trans.php:40
+#: ../../../.././includes/languages/twig_translation.php:12
 msgid "Then wait we receive your message and verificate your account"
 msgstr "ما پیامک شما را دریافت کرده و اکانت شما را برایتان فعال کردیم"
 
@@ -1598,8 +1625,17 @@ msgstr "ارجاع دهنده"
 msgid "Robot"
 msgstr "ربات"
 
-#~ msgid "title"
+#, fuzzy
+#~ msgid "page_title"
 #~ msgstr "عنوان"
+
+#, fuzzy
+#~ msgid "module"
+#~ msgstr "ماژول"
+
+#, fuzzy
+#~ msgid "value"
+#~ msgstr "مقدار"
 
 #~ msgid "Save"
 #~ msgstr "ذخیره"

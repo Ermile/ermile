@@ -1,5 +1,5 @@
 <?php
-function transtext
+function transtext()
 {
 
 	// ------------------------------------------------------------------- Table accounts
