@@ -21,7 +21,8 @@ function transtext()
 	echo T_("Then wait we receive your message and verificate your account");         // Line 8
 
 	//-------------------------------------------content_account/recovery/display.html
-	echo T_("Are you remember your password!?");                                      // Line 5
+	echo T_("click here to login to your account");                                   // Line 6
+	echo T_("are you remember your password!?");                                      // Line 6
 
 	//---------------------------------------content_account/verification/display.html
 	echo T_("please check your mobile and enter the code");                           // Line 6
