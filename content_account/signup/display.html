@@ -1,9 +1,9 @@
 {%extends layout_account%}
+
+
 {%block content%}
-<footer>
-  <div id="desc">
-    <p>{%trans "By signing up"%}, {%trans "you agree to the"%} <a target='_blank' href='http://{{url.raw}}/terms' title='term of usage'>{%trans "Terms of Service"%}</a></p>
-    <p>{%trans "Already have an account?"%} <a href="/login" title="click here to sign in to your account">{%trans "Sign In"%}</a></p>
-  </div>
-</footer>
+   <div id="desc">
+    <p>{%trans%}by signing up, you agree to the{%endtrans%} <a target='_blank' href='http://{{url.raw}}/terms' title='{%trans "terms of service"%}'>{%trans "terms of service"%}</a></p>
+    <p>{%trans "already have an account?"%} <a href="/login" title='{%trans "click here to sign in to your account"%}'>{%trans "Sign In"%}</a></p>
+   </div>
 {%endblock%}

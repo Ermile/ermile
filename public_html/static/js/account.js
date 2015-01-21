@@ -2,10 +2,18 @@ route('verificationsms', 'account.js', function() {
   setTimeout(createdelay, 1000);
 });
 
+route('verification', 'account.js', function() {
+  setTimeout(showafterdelay, 10000);
+});
+
+function showafterdelay()
+{
+  document.getElementById("delay").className="show";
+}
 
 function createdelay()
 {
-  document.getElementById("delay").className="show";
+  // document.getElementById("delay").className="show";
 
   var requestDelay = 3000;
 

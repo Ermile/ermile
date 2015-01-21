@@ -3,16 +3,18 @@ function transtext()
 {
 
 	//----------------------------------------------content_account/login/display.html
-	echo T_("Can't access your account?");                                            // Line 5
-	echo T_("Don't have an account?");                                                // Line 6
-	echo T_("Sign Up");                                                               // Line 6
+	echo T_("Click here for recovery your password");                                 // Line 6
+	echo T_("Can't access your account?");                                            // Line 6
+	echo T_("Don't have an account?");                                                // Line 7
+	echo T_("Click here to create an account");                                       // Line 7
+	echo T_("Sign Up");                                                               // Line 7
 
 	//---------------------------------------------content_account/signup/display.html
-	echo T_("By signing up");                                                         // Line 5
-	echo T_("you agree to the");                                                      // Line 5
-	echo T_("Terms of Service");                                                      // Line 5
-	echo T_("Already have an account?");                                              // Line 6
-	echo T_("Sign In");                                                               // Line 6
+	echo T_("terms of service");                                                      // Line 6
+	echo T_("by signing up, you agree to the");                                       // Line 6 Seperate
+	echo T_("already have an account?");                                              // Line 7
+	echo T_("click here to sign in to your account");                                 // Line 7
+	echo T_("Sign In");                                                               // Line 7
 
 	//------------------------------------content_account/verificationsms/display.html
 	echo T_("Please send number <b>2015</b> to below number");                        // Line 6 Seperate
@@ -22,8 +24,8 @@ function transtext()
 	echo T_("Are you remember your password!?");                                      // Line 5
 
 	//---------------------------------------content_account/verification/display.html
-	echo T_("Please check your mobile and enter the code");                           // Line 5
-	echo T_("Don't receive message?");                                                // Line 6
+	echo T_("please check your mobile and enter the code");                           // Line 6
+	echo T_("don't receive message?");                                                // Line 7
 
 	//-------------------------------------------------------content/home/display.html
 	echo T_("Ermile");                                                                // Line 12

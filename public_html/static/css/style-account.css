@@ -26,6 +26,8 @@ h1{color: #222;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 30px;
 #desc a{color: #999;text-shadow: 0px 3px 8px #2a2a2a;text-align: center;}
 #desc a:hover{color: #aaa;}
 #desc p{margin:3px 0;}
+#desc b{color:#ccc}
+#desc .smsnumber{direction:ltr;float:left;width:100%;font-size:20px;color:#eee;}
 #delay{transition: opacity 2s ease;font-size:20px;color:#eee;}
 .hide{opacity: 0;}
 .show{opacity: 1;}
@@ -62,10 +64,9 @@ input:focus::-webkit-input-placeholder{color:#ccc;}
 input:focus::-moz-placeholder{color:#ccc;}
 input:focus:-ms-input-placeholder{color:#ccc;}
 
-input:-webkit-autofill {-webkit-box-shadow:0 0 0 50px #1c1e21 inset;-webkit-text-fill-color: #4f5561;z-index: 2;}
-input:-webkit-autofill:focus {-webkit-box-shadow: /*your box-shadow*/,0 0 0 50px #1c1e21 inset;-webkit-text-fill-color: #ccc;}
 input:invalid{box-shadow: none;}
-
+input:-webkit-autofill {-webkit-box-shadow:0 0 0 50px #1c1e21 inset;-webkit-text-fill-color: #4f5561;z-index: 2;-webkit-box-shadow: 0 0 0px 1000px #1c1e21 inset;}
+input:-webkit-autofill:focus {-webkit-box-shadow: /*your box-shadow*/,0 0 0 50px #1c1e21 inset;-webkit-text-fill-color: #ccc;}
 
 
 #footer{position: fixed;bottom: 0;width:80%;z-index:2;background-color: rgba(0, 0, 0, 0.1);padding:15px 10%;font-size: 16px;line-height: 30px;height:30px;}

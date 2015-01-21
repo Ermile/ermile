@@ -42,18 +42,18 @@ class symbol extends \lib\form
 		// if user don't set pl 	of element give it from *->label('Hi')* 		and set it as placeholder
 		//  Make -> Name -> ID     | label -> pl
 
-		$this->title   = $this->make("text");
-		$this->slug		= $this->make("text")->maxlength(40);
+		$this->title   = $this->make("text")->name('title');
+		$this->slug		= $this->make("text")->name('slug')->maxlength(40);
 								 // ->validate()->slugify("'.$prefix.'_title")
 		$this->desc 	= $this->make("textarea")->name("desc");
-		$this->email 	= $this->make("email");
+		$this->email 	= $this->make("email")->name("email");
 		$this->website = $this->make("text")->name("website");
 		$this->type 	= $this->make("text")->name("type");
 
-		$this->tel 	   = $this->make("tel")->type("tel")->label(T_("Tel"))
+		$this->tel 	   = $this->make("tel")->name('tel')->type("tel")->label(T_("Tel"))
 							->required()->maxlength(17)->pattern(".{9,}");
 
-		$this->mobile 	= $this->make("mobile")->type("tel")->label(T_("Mobile"))->pl(T_("Mobile"))
+		$this->mobile 	= $this->make("mobile")->name('mobile')->type("tel")->label(T_("Mobile"))->pl(T_("Mobile"))
 							->required()->maxlength(17)->pattern(".{10,}")->autocomplete('off')
 							->pos('hint--rounded hint--top')->desc(T_("we send a verification code to this number"));
 

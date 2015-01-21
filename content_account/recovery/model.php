@@ -26,11 +26,11 @@ class model extends \mvc\model
 			$mycode     = utility::randomCode();
 			
 			$qry        = $this->sql()->tableVerifications()
-						->setVerification_type('mobileforget')
-						->setVerification_value($mymobile)
-						->setVerification_code($mycode)
-						->setUser_id($myuserid)
-						->setVerification_verified('no');
+								->setVerification_type('mobileforget')
+								->setVerification_value($mymobile)
+								->setVerification_code($mycode)
+								->setUser_id($myuserid)
+								->setVerification_verified('no');
 			$sql        = $qry->insert();
 
 
