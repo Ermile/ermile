@@ -15,6 +15,7 @@ function transtext()
 	echo T_("Sign In");                                                               // Line 6
 
 	//------------------------------------content_account/verificationsms/display.html
+	echo T_("Please send number <b>2015</b> to below number");                        // Line 6 Seperate
 	echo T_("Then wait we receive your message and verificate your account");         // Line 8
 
 	//-------------------------------------------content_account/recovery/display.html
@@ -32,6 +33,10 @@ function transtext()
 	echo T_("Home");                                                                  // Line 47
 
 	//-------------------------------------------------content_cp/main/xhr-layout.html
+	echo T_("Options");                                                               // Line 24 Seperate
+	echo T_("Go to");                                                                 // Line 73
+	echo T_("Does not exist");                                                        // Line 41 Seperate
+	echo T_("Add New Record");                                                        // Line 46 Seperate
 	echo T_("Actions");                                                               // Line 59
 	echo T_("Edit");                                                                  // Line 73
 	echo T_("Delete");                                                                // Line 76
@@ -39,13 +44,13 @@ function transtext()
 	//-----------------------------------------------------content_cp/main/layout.html
 
 	//---------------------------------------------------includes/cls/macro/forms.html
+	echo T_("Please select one item");                                                // Line 47 Seperate
 
 	//-------------------------------------------------------includes/mvc/display.html
 	echo T_("Home Page");                                                             // Line 42
 	echo T_("Admin");                                                                 // Line 43
 	echo T_("Control Panel");                                                         // Line 44
 	echo T_("Login");                                                                 // Line 48
-	echo T_("Go to");                                                                 // Line 73
 
 }
 ?>

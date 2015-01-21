@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-21 18:31+0330\n"
-"PO-Revision-Date: 2015-01-21 18:32+0330\n"
+"POT-Creation-Date: 2015-01-21 16:36+0330\n"
+"PO-Revision-Date: 2015-01-21 16:36+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -38,7 +38,8 @@ msgstr "یک اکانت برای همه حساب ها"
 
 #: ../../../.././content_account/home/view.php:22
 #: ../../../.././includes/cls/form/account.php:25
-#: ../../../.././includes/languages/twig_translation.php:53
+#: ../../../.././includes/languages/trans.php:15
+#: ../../../.././includes/languages/twig_translation.php:25
 msgid "Login"
 msgstr "ورود به سیستم"
 
@@ -70,7 +71,7 @@ msgid "SMS Callback"
 msgstr "پیامک های دریافتی"
 
 #: ../../../.././content_account/home/view.php:58
-#: ../../../.././includes/languages/twig_translation.php:29
+#: ../../../.././includes/languages/twig_translation.php:16
 #: ../../../.././includes/mvc/view.php:9
 msgid "Ermile"
 msgstr "ارمایل"
@@ -260,148 +261,196 @@ msgstr "بین 5 تا 20 کاراکتر."
 msgid "between 5-20 character. be tricky!"
 msgstr "بین 5 تا 20 کاراکتر. در انتخاب کلمه عبور دقت به خرج دهید"
 
-#: ../../../.././includes/languages/trans.php:6
+#: ../../../.././includes/languages/trans.php:5
 msgid "Saloos"
 msgstr "سالوس"
 
-#: ../../../.././includes/languages/trans.php:7
-msgid "Another Project with Saloos"
-msgstr "یک پروژه دیگر با سالوس"
-
-#: ../../../.././includes/languages/trans.php:8
-msgid "Saloos is an artichokes for PHP programming!!"
-msgstr "سالوس یک کنگر برای برنامه نویسی با پی اچ پی!"
-
-#: ../../../.././includes/languages/trans.php:9
-msgid "Saloos is powerfull."
-msgstr "سالوس اقتدار بخش!"
-
-#: ../../../.././includes/languages/trans.php:12
+#: ../../../.././includes/languages/trans.php:6
 msgid "home"
 msgstr "خانه"
 
-#: ../../../.././includes/languages/trans.php:13
+#: ../../../.././includes/languages/trans.php:7
+#: ../../../.././includes/languages/twig_translation.php:18
+msgid "Home"
+msgstr "صفحه نخست"
+
+#: ../../../.././includes/languages/trans.php:8
 msgid "Homepage"
 msgstr "صفحه نخست"
+
+#: ../../../.././includes/languages/trans.php:9
+#: ../../../.././includes/languages/twig_translation.php:22
+msgid "Home Page"
+msgstr "صفحه نخست"
+
+#: ../../../.././includes/languages/trans.php:10
+#: ../../../.././includes/languages/twig_translation.php:23
+msgid "Admin"
+msgstr "مدیریت"
+
+#: ../../../.././includes/languages/trans.php:11
+#: ../../../.././includes/languages/twig_translation.php:24
+msgid "Control Panel"
+msgstr "کنترل پنل"
+
+#: ../../../.././includes/languages/trans.php:12
+#: ../../../.././includes/languages/twig_translation.php:11
+msgid "Sign In"
+msgstr "ورود به سیستم"
+
+#: ../../../.././includes/languages/trans.php:13
+#: ../../../.././includes/languages/twig_translation.php:6
+msgid "Sign Up"
+msgstr "ثبت نام"
 
 #: ../../../.././includes/languages/trans.php:14
 msgid "Signup"
 msgstr "ثبت نام"
 
-#: ../../../.././includes/languages/trans.php:15
-msgid "Add new"
-msgstr "افزودن"
-
 #: ../../../.././includes/languages/trans.php:16
-msgid "Add New"
-msgstr "افزودن"
-
-#: ../../../.././includes/languages/twig_translation.php:6
-msgid "Can't access your account?"
-msgstr "نمی توانید به حساب خود وارد شوید؟"
-
-#: ../../../.././includes/languages/twig_translation.php:7
-msgid "Don't have an account?"
-msgstr "اکانت ندارید؟"
-
-#: ../../../.././includes/languages/twig_translation.php:8
-msgid "Sign Up"
-msgstr "ثبت نام"
-
-#: ../../../.././includes/languages/twig_translation.php:11
-msgid "By signing up"
-msgstr "با ثبت نام"
-
-#: ../../../.././includes/languages/twig_translation.php:12
-msgid "you agree to the"
-msgstr "شما موافق هستید با"
-
-#: ../../../.././includes/languages/twig_translation.php:13
-msgid "Terms of Service"
-msgstr "قوانین استفاده"
-
-#: ../../../.././includes/languages/twig_translation.php:14
-msgid "Already have an account?"
-msgstr "اکانت دارید؟"
-
-#: ../../../.././includes/languages/twig_translation.php:15
-msgid "Sign In"
-msgstr "ورود به سیستم"
-
-#: ../../../.././includes/languages/twig_translation.php:18
-msgid "Please send number <b>2015</b> to below number"
-msgstr "لطفا عدد 2015 را به شماره زیر پیامک کنید"
-
-#: ../../../.././includes/languages/twig_translation.php:19
-msgid "Then wait we receive your message and verificate your account"
-msgstr "ما پیامک شما را دریافت کرده و اکانت شما را برایتان فعال کردیم"
-
-#: ../../../.././includes/languages/twig_translation.php:22
-msgid "Are you remember your password!?"
-msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
-
-#: ../../../.././includes/languages/twig_translation.php:25
-msgid "Please check your mobile and enter the code"
-msgstr "پس از بررسی موبایل خود کد را وارد کنید"
-
-#: ../../../.././includes/languages/twig_translation.php:26
-msgid "Don't receive message?"
-msgstr "هنوز پیامک ما را دریافت نکردید؟"
-
-#: ../../../.././includes/languages/twig_translation.php:32
+#: ../../../.././includes/languages/twig_translation.php:17
 msgid "Logout"
 msgstr "خروج از سیستم"
 
-#: ../../../.././includes/languages/twig_translation.php:33
-msgid "Home"
-msgstr "صفحه نخست"
-
-#: ../../../.././includes/languages/twig_translation.php:36
-#: ../../../.././includes/database/ermile/translation.php:171
-msgid "Options"
-msgstr "تنظیمات"
-
-#: ../../../.././includes/languages/twig_translation.php:37
+#: ../../../.././includes/languages/trans.php:17
+#: ../../../.././includes/languages/trans.php:25
+#: ../../../.././includes/languages/twig_translation.php:26
 msgid "Go to"
 msgstr "برو به"
 
-#: ../../../.././includes/languages/twig_translation.php:38
-msgid "Does not exist"
-msgstr "هیچ داده ای موجود نیست"
+#: ../../../.././includes/languages/trans.php:18
+#: ../../../.././includes/database/ermile/translation.php:207
+msgid "Add"
+msgstr "افزودن"
 
-#: ../../../.././includes/languages/twig_translation.php:39
-msgid "Add New Record"
-msgstr "افزودن رکورد جدید"
+#: ../../../.././includes/languages/trans.php:19
+msgid "Add new"
+msgstr "افزودن"
 
-#: ../../../.././includes/languages/twig_translation.php:40
-msgid "Actions"
-msgstr "عملیات"
-
-#: ../../../.././includes/languages/twig_translation.php:41
+#: ../../../.././includes/languages/trans.php:20
+#: ../../../.././includes/languages/twig_translation.php:20
 #: ../../../.././includes/database/ermile/translation.php:208
 msgid "Edit"
 msgstr "ویرایش"
 
-#: ../../../.././includes/languages/twig_translation.php:42
+#: ../../../.././includes/languages/trans.php:21
+#: ../../../.././includes/languages/twig_translation.php:21
 #: ../../../.././includes/database/ermile/translation.php:209
 msgid "Delete"
 msgstr "حذف"
 
-#: ../../../.././includes/languages/twig_translation.php:47
+#: ../../../.././includes/languages/trans.php:22
+#: ../../../.././includes/database/ermile/translation.php:171
+msgid "Options"
+msgstr "تنظیمات"
+
+#: ../../../.././includes/languages/trans.php:23
+msgid "Does not exist"
+msgstr "هیچ داده ای موجود نیست"
+
+#: ../../../.././includes/languages/trans.php:24
+msgid "Add New Record"
+msgstr "افزودن رکورد جدید"
+
+#: ../../../.././includes/languages/trans.php:26
+#: ../../../.././includes/database/ermile/translation.php:10
+#: ../../../.././includes/database/ermile/translation.php:57
+#: ../../../.././includes/database/ermile/translation.php:71
+#: ../../../.././includes/database/ermile/translation.php:100
+#: ../../../.././includes/database/ermile/translation.php:112
+#: ../../../.././includes/database/ermile/translation.php:134
+#: ../../../.././includes/database/ermile/translation.php:142
+#: ../../../.././includes/database/ermile/translation.php:152
+#: ../../../.././includes/database/ermile/translation.php:164
+#: ../../../.././includes/database/ermile/translation.php:204
+#: ../../../.././includes/database/ermile/translation.php:230
+#: ../../../.././includes/database/ermile/translation.php:243
+#: ../../../.././includes/database/ermile/translation.php:285
+#: ../../../.././includes/database/ermile/translation.php:343
+#: ../../../.././includes/database/ermile/translation.php:396
+msgid "Title"
+msgstr "عنوان"
+
+#: ../../../.././includes/languages/trans.php:27
+#: ../../../.././includes/database/ermile/translation.php:11
+#: ../../../.././includes/database/ermile/translation.php:30
+#: ../../../.././includes/database/ermile/translation.php:72
+#: ../../../.././includes/database/ermile/translation.php:101
+#: ../../../.././includes/database/ermile/translation.php:143
+#: ../../../.././includes/database/ermile/translation.php:153
+#: ../../../.././includes/database/ermile/translation.php:232
+#: ../../../.././includes/database/ermile/translation.php:244
+#: ../../../.././includes/database/ermile/translation.php:286
+#: ../../../.././includes/database/ermile/translation.php:344
+msgid "Slug"
+msgstr "نامک"
+
+#: ../../../.././includes/languages/trans.php:28
 msgid "Please select one item"
 msgstr "لطفا یک گزینه را انتخاب کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:50
-msgid "Home Page"
-msgstr "صفحه نخست"
+#: ../../../.././includes/languages/trans.php:29
+msgid "Add New"
+msgstr "افزودن"
 
-#: ../../../.././includes/languages/twig_translation.php:51
-msgid "Admin"
-msgstr "مدیریت"
+#: ../../../.././includes/languages/trans.php:30
+#: ../../../.././includes/languages/twig_translation.php:19
+msgid "Actions"
+msgstr "عملیات"
 
-#: ../../../.././includes/languages/twig_translation.php:52
-msgid "Control Panel"
-msgstr "کنترل پنل"
+#: ../../../.././includes/languages/trans.php:31
+#: ../../../.././includes/languages/twig_translation.php:4
+msgid "Can't access your account?"
+msgstr "نمی توانید به حساب خود وارد شوید؟"
+
+#: ../../../.././includes/languages/trans.php:32
+#: ../../../.././includes/languages/twig_translation.php:5
+msgid "Don't have an account?"
+msgstr "اکانت ندارید؟"
+
+#: ../../../.././includes/languages/trans.php:33
+#: ../../../.././includes/languages/twig_translation.php:7
+msgid "By signing up"
+msgstr "با ثبت نام"
+
+#: ../../../.././includes/languages/trans.php:34
+#: ../../../.././includes/languages/twig_translation.php:10
+msgid "Already have an account?"
+msgstr "اکانت دارید؟"
+
+#: ../../../.././includes/languages/trans.php:35
+#: ../../../.././includes/languages/twig_translation.php:9
+msgid "Terms of Service"
+msgstr "قوانین استفاده"
+
+#: ../../../.././includes/languages/trans.php:36
+#: ../../../.././includes/languages/twig_translation.php:8
+msgid "you agree to the"
+msgstr "شما موافق هستید با"
+
+#: ../../../.././includes/languages/trans.php:37
+#: ../../../.././includes/languages/twig_translation.php:13
+msgid "Are you remember your password!?"
+msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
+
+#: ../../../.././includes/languages/trans.php:38
+#: ../../../.././includes/languages/twig_translation.php:14
+msgid "Please check your mobile and enter the code"
+msgstr "پس از بررسی موبایل خود کد را وارد کنید"
+
+#: ../../../.././includes/languages/trans.php:39
+#: ../../../.././includes/languages/twig_translation.php:15
+msgid "Don't receive message?"
+msgstr "هنوز پیامک ما را دریافت نکردید؟"
+
+#: ../../../.././includes/languages/trans.php:40
+#: ../../../.././includes/languages/twig_translation.php:12
+msgid "Then wait we receive your message and verificate your account"
+msgstr "ما پیامک شما را دریافت کرده و اکانت شما را برایتان فعال کردیم"
+
+#: ../../../.././includes/languages/trans.php:41
+msgid "Please send number <b>2015</b> to below number"
+msgstr "لطفا عدد 2015 را به شماره زیر پیامک کنید"
 
 #: ../../../.././includes/mvc/view.php:10
 msgid "Ermile is new"
@@ -426,37 +475,6 @@ msgstr "اکانت"
 #: ../../../.././includes/database/ermile/translation.php:9
 msgid "Id"
 msgstr "کد"
-
-#: ../../../.././includes/database/ermile/translation.php:10
-#: ../../../.././includes/database/ermile/translation.php:57
-#: ../../../.././includes/database/ermile/translation.php:71
-#: ../../../.././includes/database/ermile/translation.php:100
-#: ../../../.././includes/database/ermile/translation.php:112
-#: ../../../.././includes/database/ermile/translation.php:134
-#: ../../../.././includes/database/ermile/translation.php:142
-#: ../../../.././includes/database/ermile/translation.php:152
-#: ../../../.././includes/database/ermile/translation.php:164
-#: ../../../.././includes/database/ermile/translation.php:204
-#: ../../../.././includes/database/ermile/translation.php:230
-#: ../../../.././includes/database/ermile/translation.php:243
-#: ../../../.././includes/database/ermile/translation.php:285
-#: ../../../.././includes/database/ermile/translation.php:343
-#: ../../../.././includes/database/ermile/translation.php:396
-msgid "Title"
-msgstr "عنوان"
-
-#: ../../../.././includes/database/ermile/translation.php:11
-#: ../../../.././includes/database/ermile/translation.php:30
-#: ../../../.././includes/database/ermile/translation.php:72
-#: ../../../.././includes/database/ermile/translation.php:101
-#: ../../../.././includes/database/ermile/translation.php:143
-#: ../../../.././includes/database/ermile/translation.php:153
-#: ../../../.././includes/database/ermile/translation.php:232
-#: ../../../.././includes/database/ermile/translation.php:244
-#: ../../../.././includes/database/ermile/translation.php:286
-#: ../../../.././includes/database/ermile/translation.php:344
-msgid "Slug"
-msgstr "نامک"
 
 #: ../../../.././includes/database/ermile/translation.php:12
 msgid "Bank"
@@ -1033,10 +1051,6 @@ msgstr "ماژول"
 #: ../../../.././includes/database/ermile/translation.php:206
 msgid "View"
 msgstr "نمایش"
-
-#: ../../../.././includes/database/ermile/translation.php:207
-msgid "Add"
-msgstr "افزودن"
 
 #: ../../../.././includes/database/ermile/translation.php:213
 msgid "postmetas"

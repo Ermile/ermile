@@ -29,16 +29,31 @@ foreach($files as $file)
 		if(strpos($line, $find) !== false)
 		{
 			// find all matches with my creteria
-			// preg_match_all("/\{\s*%\s*trans\s*(\"|')?([^\"'%]*)(\"|')?\s*%/", $line, $matches);
-			preg_match_all('/{%trans(.*?)%}/s', $line, $matches);
+			// preg_match_all('/{%trans(.*?)%}/s', $line, $matches);										// #1
+			// preg_match_all("/\{\s*%trans\s*(\"|')?([^\"'%]*)(\"|')?\s*%/", $line, $matches); // #2
+			// preg_match_all("/\{\s*%\s*trans\s*\"?([^\"]*)\"?\s*%\s*\}/", $line, $matches);	// #3
+			// preg_match_all("/\{\s*%trans\s*\"?([^\"]*)\"?%\s*\}/", $line, $matches);			// #3.1
+			// preg_match_all("/\{\s*%\s*trans\s*\"([^\"]+?)\"\s*%\s*\}/", $line, $matches);		// #4
+			preg_match_all('/{% ?trans\s\"(.*?)\" ?%}/s', $line, $matches);							// #5
+			// var_dump($matches);
 			$translation[$trans_key] = 'New File';
 			foreach ($matches[1] as $key => $value)
 			{
 				$value = trim($value);
-				if($value && strpos($value, '"') === 0)
+				if($value)
 				{
-					$value = str_replace('"', '', $value);
 					$translation[$value] = 'Line '.($num+1);
+					
+				}
+			}
+			preg_match_all("/\{\s*%\s*trans\s*%\s*}(.+?)\{\s*%\s*endtrans\s*%\s*}/", $line, $matches2);
+			// var_dump($matches2);
+			foreach ($matches2[1] as $key => $value)
+			{
+				$value = trim($value);
+				if($value)
+				{
+					$translation[$value] = 'Line '.($num+1).' Seperate';
 					
 				}
 			}
