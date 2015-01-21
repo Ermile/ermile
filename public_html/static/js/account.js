@@ -1,8 +1,6 @@
-route('*', 'account.js', function() {
-  if($('#delay', this).length){
-    setTimeout(createdelay, 1000);
-  }
-})
+route('verificationsms', 'account.js', function() {
+  setTimeout(createdelay, 1000);
+});
 
 
 function createdelay()
@@ -18,6 +16,7 @@ function createdelay()
     },
     event: 'send',
     link: true,
+    noLoading: true,
     success: function(response) {
       var _super = this;
       if(response.status == 1) {
