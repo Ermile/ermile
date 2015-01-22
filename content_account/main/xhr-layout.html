@@ -1,6 +1,9 @@
 {% import "includes/cls/macro/forms.html" as forms %}
 
 
+<div data-xhr="foot_js">{%block myjs%}{%endblock%}</div>
+
+
  <div data-xhr="content">
   <h1>{{page_desc}}</h1>
 {%block form_def%}
@@ -11,3 +14,4 @@
 {%block content%}{%endblock%}
   </footer>
  </div>
+

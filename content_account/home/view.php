@@ -18,9 +18,9 @@ class view extends \mvc\view
 		
 		// form variable
 		$this->data->post              = array();
-		$this->data->referer           = \lib\utility::get('referer');
-		$this->data->from              = \lib\utility::get('from');
-		$this->data->mobile            = \lib\utility::get('mobile');
+		$this->data->post['referer']   = \lib\utility::get('referer');
+		$this->data->post['from']      = \lib\utility::get('from');
+		$this->data->post['mobile']    = \lib\utility::get('mobile');
 
 
 		switch ($this->data->module)

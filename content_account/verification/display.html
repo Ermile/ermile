@@ -7,3 +7,16 @@
     <a id="delay" class="hide" href="/verificationsms?mobile={{mobile}}" target="_blank">{%trans "don't receive message?"%}</a>
    </div>
 {%endblock%}
+
+
+{%block myjs%}
+<script>
+route('/verification', function() {
+  setTimeout(showafterdelay, 5000);
+});
+
+function showafterdelay() {
+  $('#delay').addClass('visible');
+}
+</script>
+{%endblock%}

@@ -29,7 +29,7 @@ h1{color: #222;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 30px;
 #desc b{color:#ccc}
 #desc .smsnumber{direction:ltr;float:left;width:100%;font-size:20px;color:#eee;}
 #delay{transition: opacity 2s ease;font-size:20px;color:#eee;}
-.hide{opacity: 0;display:none}
+.hide{opacity: 0;}
 .show{opacity: 1;}
 
 
@@ -85,8 +85,8 @@ input:-webkit-autofill:focus {-webkit-box-shadow: /*your box-shadow*/,0 0 0 50px
 .warn li{background-color:rgba(0,0,0,.9);}
 #formError ul{margin:0;padding:0 2%}
 #formError ul li{margin-top: 10px;padding:3% 5%;border-radius: 4px;}
-.visible{visibility: visible;opacity: 1;transition: opacity 2s linear;}
-.hidden{visibility: hidden;opacity: 0;transition: visibility 0s 2s, opacity 2s linear;}
+.visible{visibility: visible;opacity: 1;transition: opacity 1s linear;}
+.hidden{visibility: hidden;opacity: 0;transition: visibility 0s 1s, opacity 1s linear;}
 
 input {transition: background-color 100ms ease-out;font-family:'Roboto Slab',serif;font-size: 18px;}
 [dir="rtl"] input {font-family:'IRANSans',serif;font-size: 16px;}
