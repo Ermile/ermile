@@ -15,6 +15,13 @@ class view extends \mvc\view
 		
 		$this->data->myform            = 'account';
 		$this->data->site_slogan       = T_("One Account for all services");		
+		
+		// form variable
+		$this->data->post              = array();
+		$this->data->referer           = \lib\utility::get('referer');
+		$this->data->from              = \lib\utility::get('from');
+		$this->data->mobile            = \lib\utility::get('mobile');
+
 
 		switch ($this->data->module)
 		{
@@ -28,7 +35,6 @@ class view extends \mvc\view
 
 			case 'verification':
 				$this->data->page_desc	= T_('Verificate');
-				$this->data->mobile			= \lib\utility::get('mobile');
 				break;
 
 			case 'verificationsms':
