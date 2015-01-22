@@ -24,7 +24,7 @@
 {%endblock%}
 {%block head%}{%endblock%}
 </head>
-{% import "includes/cls/macro/forms.html" as forms %}
+{% import macro.forms as forms %}
 {% if extendForm%}
   {% import macro.forms as forms %}
 {% endif %}
@@ -90,7 +90,7 @@
 {%endblock%}
 {%block debug%}
  {%if debug is iterable%}
-  <div id="formError" class="error_{{debug.status}}">
+  <div id="formError" class="error_{{debug.status}} unselectable">
   {%for key, mydebug in debug.messages if mydebug is iterable %}
    <ul class="{{key}}">
    {%for key, err in mydebug%}

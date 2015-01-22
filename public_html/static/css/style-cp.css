@@ -453,10 +453,10 @@ text-indent:-999999px;
 .dataTables_wrapper .edit:hover {background-position: 0 -67px;}
 .dataTables_wrapper .delete:hover {background-position: 0 -23px;}
 
-.column_row{width:5px;padding:0;text-align:center;}
-.column_slug{width:100px;direction:ltr;text-align:left}
-.column_actions{width: 80px;}
-
+.col_row{width:5px;padding:0;text-align:center;}
+.col_slug{width:100px;direction:ltr;text-align:left}
+.col_status{width:100px;text-align:center;}
+.col_actions{width: 90px;}
 
 #main{overflow:hidden;}
 

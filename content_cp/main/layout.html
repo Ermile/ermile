@@ -1,10 +1,10 @@
 {%extends mvcdisplay%}
 
 {%block head_css%}
-  <link rel="stylesheet"    href="{{url.static}}css/style-cp.css?ver=1.1.0">
+ <link rel="stylesheet"    href="{{url.static}}css/style-cp.css?ver=1.1.0">
 {%endblock%}
 {%block foot_js%}
-  <script src="{{url.static}}js/cp.js"></script>
+ <script src="{{url.static}}js/cp.js"></script>
 {%endblock%}
 
 
@@ -16,77 +16,82 @@
 
 {%if child%}
  <div id="options" class="unselectable">
-    <div id="options-meta" class="disappear">
-{% for key, value in field_list %}
-      <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{key}}" {%if value%}checked="checked"{%endif%}><span>{{key|title}}</span></label>
+  <div id="options-meta" class="disappear">
+{% for key, value in field_list %}{%set transkey = key|title%}
+   <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{key}}" {%if value%}checked="checked"{%endif%}><span>{%trans transkey%}</span></label>
 {% endfor %}
-    </div>
-    <a id="options-link" href="javascript: void(0)">{%trans%}Options{%endtrans%}</a>
+  </div>
+  <a id="options-link" href="javascript: void(0)">{%trans%}Options{%endtrans%}</a>
  </div>
 {%endif%}
  <div class="container" id="main">
-  {%if page_title%}
-  <h1>{%trans page_title %}</h1><hr />{%endif%}
-  {%if module and module!="home"%}
-   {%if child%}
-    <p class="alert alert-block alert-info">
-     <attr class="float-left">{%trans module%}</attr>|
-     <a class="float-right" href="{{store}}/{{module}}">{%trans%}Go to{%endtrans%} {%trans module%}</a>
-    </p>
-    {%if form_show %}
-     <form class="ajx" method="post" id="{{form_title}}">
-      {{forms.make(form[module])}}
-     </form>
-    {%else%}
-     <p>{%trans%}Does not exist{%endtrans%}!!!</p>
-    {%endif%}
-
-   {%else%}
-    <p class="alert alert-block alert-info">
-     <a class="float-left" href="{{store}}/{{module}}/add">{%trans%}Add New Record{%endtrans%}</a>|
-     <a class="float-right" href="/">{%trans "Home"%}</a>
-    </p>
-
-  		{%block datatable%}
-       {%if include.datatable%}
-  		  <table class="datatable display">
-  		   <thead>
-  		    <tr>
-  		     <th class="column_row">#</th>
-  							{%for value in columns if value%}
-  		     	<th>{%trans value%}</th>
-  							{%endfor%}
-  		     <th class="column_actions">{%trans "Actions"%}</th>
-  		    </tr>
-  		   </thead>
-
-  		   <tbody>
-  					{%block tbody%}
-  						{%for d in datatable%}
-  			    <tr class="{{ cycle(['odd', 'even'], loop.index0) }}">
-  			     <td class="column_row">{{loop.index}}</td>
-  								{%for col,value in columns if value%}
-  			     	<td>{{attribute(d,col)}}</td>
-  								{%endfor%}
-  			     <td>
-  			      <span class="hint--top hint--info" data-hint="Edit">
-  			       <a class="action-icons edit hint--top" href="{{store}}/{{module}}/edit={{d.id}}">{%trans "Edit"%}</a>
-  			      </span>
-  			      <span class="hint--top hint--error" data-hint="Delete">
-  			       <a class="action-icons delete hide-text" href="{{store}}/{{module}}/delete={{d.id}}" data-ajaxify>{%trans "Delete"%}</a>
-  			      </span>
-  			     </td>
-  		     </tr>
-  					 {%endfor%}
-  					{%endblock%}
-  		   </tbody>
-  		  </table>
-        {%else%}
-        Data not exist!
-       {%endif%}
-  		{%endblock%}
-   {%endif%}
+ {%if page_title%}
+ <h1>{%trans page_title %}</h1><hr />{%endif%}
+ {%if module and module!="home"%}
+  {%if child%}
+  <p class="alert alert-block alert-info">
+   <attr class="float-left">{%trans module%}</attr>|
+   <a class="float-right" href="{{store}}/{{module}}">{%trans%}Go to{%endtrans%} {%trans module%}</a>
+  </p>
+  {%if form_show %}
+   <form class="ajx" method="post" id="{{form_title}}">
+   {{forms.make(form[module])}}
+   </form>
+  {%else%}
+   <p>{%trans%}Does not exist{%endtrans%}!!!</p>
   {%endif%}
+
+  {%else%}
+  <p class="alert alert-block alert-info">
+   <a class="float-left" href="{{store}}/{{module}}/add">{%trans%}Add New Record{%endtrans%}</a>|
+   <a class="float-right" href="/">{%trans "Home"%}</a>
+  </p>
+
+   {%block datatable%}
+    {%if include.datatable%}
+    <table class="datatable display">
+     <thead>
+     <tr>
+      <th class="column_row">#</th>
+{%for value in columns if value%}
+      <th>{%trans value%}</th>
+{%endfor%}
+      <th class="column_actions">{%trans "Actions"%}</th>
+     </tr>
+     </thead>
+
+     <tbody>
+      {%block tbody%}
+{%for d in datatable%}
+      <tr class="{{ cycle(['odd', 'even'], loop.index0) }}">
+       <td class="col_row">{{loop.index}}</td>
+{%for col,value in columns if value%}
+{%set myvalue = attribute(d,col)%}
+{% if not myvalue or (value|lower) == 'slug'%}
+       <td class="col_{{value|lower}}">{{myvalue}}</td>
+{%else%}
+       <td class="col_{{value|lower}}">{%trans myvalue%}</td>
+{%endif%}
+{%endfor%}
+       <td class="col_actions">
+       <span class="hint--top hint--info" data-hint='{%trans "Edit"%}'>
+        <a class="action-icons edit hint--top" href="{{store}}/{{module}}/edit={{d.id}}">{%trans "Edit"%}</a>
+       </span>
+       <span class="hint--top hint--error" data-hint='{%trans "Delete"%}'>
+        <a class="action-icons delete hide-text" href="{{store}}/{{module}}/delete={{d.id}}" data-ajaxify>{%trans "Delete"%}</a>
+       </span>
+       </td>
+      </tr>
+{%endfor%}
+      {%endblock%}
+     </tbody>
+    </table>
+    {%else%}
+    Data not exist!
+    {%endif%}
+   {%endblock%}
+  {%endif%}
+ {%endif%}
 
  </div>
 </div>
