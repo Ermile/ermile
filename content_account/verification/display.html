@@ -1,9 +1,9 @@
 {%extends layout_account%}
+
+
 {%block content%}
-<footer>
- <div id="desc" >
-  <p>{%trans "Please check your mobile and enter the code"%}</p>
-  <a href="/verificationsms?mobile={{mobile}}" target="_blank">{%trans "Don't receive message?"%}</a>
- </div>
-</footer>
+   <div id="desc" >
+    <p>{%trans "please check your mobile and enter the code"%}</p>
+    <a id="delay" class="hide" href="/verificationsms?mobile={{mobile}}" target="_blank">{%trans "don't receive message?"%}</a>
+   </div>
 {%endblock%}

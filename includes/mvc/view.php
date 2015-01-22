@@ -6,16 +6,18 @@ class view extends \lib\view
 	function _construct()
 	{
 		// define default value for global
-		$this->data->site_title  	= T_("Ermile");
-		$this->data->site_desc   	= T_("Ermile is new");
-		$this->data->site_slogan 	= T_("Ermile is our company");
+		$this->data->site_title   = T_("Ermile");
+		$this->data->site_desc    = T_("Ermile is new");
+		$this->data->site_slogan  = T_("Ermile is our company");
+		$this->data->page_title   = T_($this->module('space',false));
+		$this->data->page_desc    = T_("Ermile is Inteligent.");
 
 		// add language list for use in display
 		$this->global->langlist		= array(
-										'fa_IR' => 'فارسی',
-										'en_US' => 'English',
-										'de_DE' => 'Deutsch'
-									);
+												'fa_IR' => 'فارسی',
+												'en_US' => 'English',
+												'de_DE' => 'Deutsch'
+												);
 		
 		// $this->data->module         = $this->module();
 		// if you need to set a class for body element in html add in this value
@@ -34,18 +36,15 @@ class view extends \lib\view
 
 
 		if (!locale_emulation()) {
-			$this->include->gettext = 'Translation use native gettext dll';
+			$this->include->gettext  = 'Translation use native gettext dll';
 		}
 		else {
-			$this->include->gettext = 'Translation use PHP gettext class';
+			$this->include->gettext  = 'Translation use PHP gettext class';
 		}
 
 		if(method_exists($this, 'options')){
 			$this->options();
 		}
-
-
-
 	}
 
 	function pushState()

@@ -7,12 +7,16 @@ function transtext()
 	echo T_('Another Project with Saloos');
 	echo T_('Saloos is an artichokes for PHP programming!!');
 	echo T_('Saloos is powerfull.');
-	
+
+	// For Datatable	
+	echo T_('Next page');
+
 	// Your new static text that does not exist on this project! Add them manually
 	echo T_('home');
 	echo T_('Homepage');
 	echo T_('Signup');
 	echo T_('Add new');
 	echo T_('Add New');
+	
 }
 ?>

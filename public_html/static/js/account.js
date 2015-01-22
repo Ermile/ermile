@@ -1,21 +1,21 @@
-route('verification', function() {
-  setTimeout(function() {
-    $('#delay').addClass('show');
-  }, 1000);
+route('/verificationsms', function() {
+  setTimeout(createdelay, 5000);
 });
 
-route('verificationsms', function() {
-  setTimeout(createdelay, 1000);
+route('/verification', function() {
+  setTimeout(showafterdelay, 5000);
 });
 
-function createdelay()
-{
-  var $delay = $('#delay');
-  $delay.addClass('show');
 
+function showafterdelay() {
+  $('#delay').addClass('show');
+}
+
+function createdelay() {
   var requestDelay = 3000;
+  var $body = $(document.body);
 
-  $('#delay').ajaxify({
+  $body.ajaxify({
     ajax: {
       type: 'post',
       url: location.href
@@ -30,7 +30,7 @@ function createdelay()
           url: '/login'
         }).done(function() {
           $.fn.ajaxify.showResults(response,
-            $delay,
+            $body,
             _super);
         });
       } else {
@@ -43,7 +43,7 @@ function createdelay()
   });
 
   function loop() {
-    $delay.trigger('send');
+    $body.trigger('send');
     requestDelay += 2000;
   }
 

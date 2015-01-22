@@ -333,7 +333,7 @@ foreach ($translation as $key => $value)
 	if(substr($key, 0, 6)=='Table ')
 		$translation_output .= "\n\t// ------------------------------------------------------------------- $key\n";
 
-	$translation_output .= "\t".'echo T_("'.$value.'");'.str_repeat(' ',20-strlen($value)).'// '.$key."\n";
+	$translation_output .= "\t".'echo T_'.'("'.$value.'");'.str_repeat(' ',20-strlen($value)).'// '.$key."\n";
 	// if(substr($key, 0, 5)=='Enum ')
 	// 	$translation_output .= "\t".str_repeat(' ',20-strlen($key))."Enum value";
 
