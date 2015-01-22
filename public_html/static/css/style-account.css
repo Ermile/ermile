@@ -20,7 +20,7 @@ ul{list-style-type:none }
 pre{direction:ltr;text-align:left;background:#eee;font-size:15px;font-size:1.5rem;line-height:1.6;margin:1em auto;padding:1.6em;overflow:auto;max-width:90%;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
 .center{position: relative;min-width:280px;max-width:350px;margin: 0 auto;margin-bottom: 80px;}
 h1{color: #222;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 30px;}
-#logo{display: block;margin:10vh auto 0px;width:120px;height:auto;border:none}
+#logo{display: block;margin:7vh auto 0px;width:120px;height:auto;border:none}
 .unselectable{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
 #desc,.desc{text-align:center;font-size:12px;color:#888; margin-top: 15px;}
 #desc a{color: #999;text-shadow: 0px 3px 8px #2a2a2a;text-align: center;}
@@ -38,8 +38,8 @@ h1{color: #222;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 30px;
 .account button:before{height: 14px;top: 19px;right: 16px;z-index: 103;-moz-transform: rotate(-137deg);-ms-transform: rotate(-137deg);-webkit-transform: rotate(-137deg);transform: rotate(-137deg);-webkit-filter: drop-shadow(0 -2px 0 rgba(0, 0, 0, 0.15));filter: drop-shadow(0 -2px 0 rgba(0, 0, 0, 0.15));}
 .account button:hover:after,.account button:hover:before,.account button:focus:after,.account button:focus:before{background:#fff;}
 #recovery .account button, #changepass .account button{top:0;}
-#verification .country-list, #verification .arrow{display:none}
-#verification .selected-flag{ cursor: default;}
+.country-list, .arrow{display:none}
+.selected-flag{ cursor: default;}
 
 .account{direction:ltr;position:relative;background-color: #1c1e21;padding:10px 20px;color: #4f5561;-webkit-border-radius: 10px;border-radius: 10px;margin-right:22px;margin-left:5px}
 .account input{background-color: transparent;padding:0px;color: #4f5561;border:none;width:100%;transition: color .3s ease;height: 40px;}

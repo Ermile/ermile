@@ -37,7 +37,7 @@ function transtext()
 
 	//-------------------------------------------------content_cp/main/xhr-layout.html
 	echo T_("Options");                                                               // Line 24 Seperate
-	echo T_("Go to");                                                                 // Line 73
+	echo T_("Go to");                                                                 // Line 71
 	echo T_("Does not exist");                                                        // Line 41 Seperate
 	echo T_("Add New Record");                                                        // Line 46 Seperate
 	echo T_("Actions");                                                               // Line 59
