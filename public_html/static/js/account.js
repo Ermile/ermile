@@ -1,11 +1,17 @@
-route('verificationsms', 'account.js', function() {
+route('verification', function() {
+  setTimeout(function() {
+    $('#delay').addClass('show');
+  }, 1000);
+});
+
+route('verificationsms', function() {
   setTimeout(createdelay, 1000);
 });
 
-
 function createdelay()
 {
-  document.getElementById("delay").className="show";
+  var $delay = $('#delay');
+  $delay.addClass('show');
 
   var requestDelay = 3000;
 
@@ -24,9 +30,9 @@ function createdelay()
           url: '/login'
         }).done(function() {
           $.fn.ajaxify.showResults(response,
-            $('#delay'),
+            $delay,
             _super);
-        })
+        });
       } else {
         setTimeout(loop, requestDelay);
       }
@@ -37,9 +43,9 @@ function createdelay()
   });
 
   function loop() {
-    $('#delay').trigger('send');
+    $delay.trigger('send');
     requestDelay += 2000;
-  };
+  }
 
   setTimeout(loop, 1000);
 }
