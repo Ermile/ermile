@@ -1,5 +1,6 @@
 {%extends mvcdisplay%}
 
+
 {%block head_css%}
  <link rel="stylesheet"    href="{{url.static}}css/style-cp.css?ver=1.1.0">
 {%endblock%}
@@ -9,16 +10,15 @@
 
 
 
-
-
 {%block content_def%}
 <div data-xhr="content_def">
 
 {%if child%}
  <div id="options" class="unselectable">
   <div id="options-meta" class="disappear">
-{% for key, value in field_list %}{%set transkey = key|title%}
-   <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{key}}" {%if value%}checked="checked"{%endif%}><span>{%trans transkey%}</span></label>
+{% for key, value in field_list if value.form%}
+
+   <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{key}}" {%if value%}checked="checked"{%endif%}><span>{{value.name}}</span></label>
 {% endfor %}
   </div>
   <a id="options-link" href="javascript: void(0)">{%trans%}Options{%endtrans%}</a>
@@ -53,8 +53,8 @@
      <thead>
      <tr>
       <th class="column_row">#</th>
-{%for value in columns if value%}
-      <th>{%trans value%}</th>
+{%for value in columns if value.table%}
+      <th>{{value.name}}</th>
 {%endfor%}
       <th class="column_actions">{%trans "Actions"%}</th>
      </tr>
@@ -65,12 +65,12 @@
 {%for d in datatable%}
       <tr class="{{ cycle(['odd', 'even'], loop.index0) }}">
        <td class="col_row">{{loop.index}}</td>
-{%for col,value in columns if value%}
+{%for col,value in columns if value.table%}
 {%set myvalue = attribute(d,col)%}
-{% if not myvalue or (value|lower) == 'slug'%}
-       <td class="col_{{value|lower}}">{{myvalue}}</td>
+{% if not myvalue or value.name == 'slug' or value.name == 'title'%}
+       <td class="col_{{value.name}}">{{myvalue}}</td>
 {%else%}
-       <td class="col_{{value|lower}}">{%trans myvalue%}</td>
+       <td class="col_{{value.name}}">{%trans myvalue%}</td>
 {%endif%}
 {%endfor%}
        <td class="col_actions">

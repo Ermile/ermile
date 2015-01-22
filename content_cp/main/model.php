@@ -72,55 +72,109 @@ class model extends \mvc\model
 	}
 
 
+	// create query string automatically form getTable class field data
 	public function create_query()
 	{
-		// for debug uncomment below line for disable redirect
-		// $this->redirect = false;
-		$qry_module        = $this->module();
-		$qry_table         = 'table'.ucfirst($qry_module);
-		$qry_where         = 'whereId';
-		$qry               = $this->sql()->$qry_table();
+		$qry_module = $this->module();
+		$qry_table  = 'table'.ucfirst($qry_module);
+		$qry_where  = 'whereId';
+		$qry        = $this->sql()->$qry_table();
 		
 		// get all fields of table and filter fields name for show in datatable
 		// access from columns variable
 		// check if datatable exist then get this data
-		$is_null           = true;
-		$is_incomplete     = true;
-		
-		$fields     = \lib\sql\getTable::get($qry_module,'post');
-		var_dump($fields);
+		$incomplete_fields = null;
+		$fields         = \lib\sql\getTable::get($qry_module);
 
 		foreach ($fields as $key => $value)
 		{
-			if($value)
-				$require = true;
-
-			$tmp_setfield = 'set'.ucfirst($key);
-			$tmp_value    = utility::post($value);
-
-			if(!empty($tmp_value))
+			// if this field can exist in query string
+			if($value['query'])
 			{
-				$qry    = $qry->$tmp_setfield($tmp_value);
-				$is_null = false;
+				$tmp_setfield = 'set'.ucfirst($key);
+				$tmp_value    = utility::post($value['value']);
+				$tmp_value    = trim($tmp_value);
+
+				// if user fill box and post data for this field add to query string
+				if($tmp_value)
+					$qry = $qry->$tmp_setfield($tmp_value);
+				// else if this table contain user_id then use logined user id
+				elseif($key=='user_id')
+					$qry = $qry->$tmp_setfield($this->login('id'));
+				// else if user must fill this field, save the name and send it as incomplete
+				elseif(!$value['null'])
+				{
+					$incomplete_fields[$value['value']] = $value['name'];
+				}
 			}
 		}
-		// var_dump($qry);
 
-		if($is_null)
+		if($incomplete_fields)
 		{
-			debug::warn(T_("All of records are null"));
-			return null;
-		}
-		if($is_incomplete)
-		{
-			debug::warn(T_("All require fields must fill"));
+			debug::error(T_("all require fields must fill"), $incomplete_fields);
 			return false;
 		}
-		// exit();
-		// var_dump($qry);
+
+		// var_dump($qry);exit();
 		return $qry;
 	}
 
+
+
+	function put_edit($_qry = null)
+	{
+		$_qry->update();
+		// ======================================================
+		// you can manage next event with one of these variables,
+		// commit for successfull and rollback for failed
+		//
+		// if query run without error means commit
+		$this->commit(function()
+		{
+			$this->redirector()->set_url($this->module());
+			debug::true(T_("Update successfully"));
+		});
+
+		// if a query has error or any error occour in any part of codes, run roolback
+		$this->rollback(function()
+		{
+			// $this->redirector()->set_url($this->module());
+			debug::error(T_("Update failed!"));
+		} );
+	}
+
+	function post_add()
+	{
+		$myqry = $this->create_query();
+		// if all require fields not filled then show error and pass invalid fileds name
+		if(!$myqry)
+			return false;
+
+		$myqry->insert();
+
+		// ======================================================
+		// you can manage next event with one of these variables,
+		// commit for successfull and rollback for failed
+		//
+		// if query run without error means commit
+		$this->commit(function()
+		{
+			// $this->redirector()->set_url($this->module());
+			debug::true(T_("insert successfully"));
+		});
+
+		// if a query has error or any error occour in any part of codes, run roolback
+		$this->rollback(function()
+		{
+			// $this->redirector()->set_url($this->module());
+			debug::error(T_("insert failed!"));
+		} );
+	}
+
+	function post_edit()
+	{
+		debug::warn(T_("Edit Record successfully"));
+	}
 
 
 
@@ -194,42 +248,5 @@ class model extends \mvc\model
 
 
 
-	function put_edit($_qry = null)
-	{
-		$_qry->update();
-		// ======================================================
-		// you can manage next event with one of these variables,
-		// commit for successfull and rollback for failed
-		//
-		// if query run without error means commit
-		$this->commit(function()
-		{
-			$this->redirector()->set_url($this->module());
-			debug::true(T_("Update successfully"));
-		});
-
-		// if a query has error or any error occour in any part of codes, run roolback
-		$this->rollback(function()
-		{
-			// $this->redirector()->set_url($this->module());
-			debug::error(T_("Update failed!"));
-		} );
-	}
-
-	function post_add()
-	{
-		var_dump($_POST);
-		echo "<br>";
-		$this->create_query();
-		exit();
-		// debug::warn(T_("Add Record successfully"));
-		// sleep(3);
-		// exit();
-	}
-
-	function post_edit()
-	{
-		debug::warn(T_("Edit Record successfully"));
-	}
 }
 ?>

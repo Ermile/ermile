@@ -87,7 +87,6 @@ class controller extends \mvc\controller
 						'transactions',
 						'userlogs',
 						'users',
-						'users',
 						'verifications',
 						'visitors'
 					);

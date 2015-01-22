@@ -2,7 +2,6 @@
 
 
 
-
 {%block content_def%}
 <div data-xhr="content_def">
 
@@ -59,7 +58,7 @@
        <td class="col_row">{{loop.index}}</td>
 {%for col,value in columns if value%}
 {%set myvalue = attribute(d,col)%}
-{% if not myvalue or (value|lower) == 'slug'%}
+{% if not myvalue or (value|lower) == 'slug' or (value|lower) == 'title'%}
        <td class="col_{{value|lower}}">{{myvalue}}</td>
 {%else%}
        <td class="col_{{value|lower}}">{%trans myvalue%}</td>

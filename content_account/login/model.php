@@ -34,11 +34,7 @@ class model extends \mvc\model
 				$this->commit(function($_parameter1)
 				{
 					// create code for pass with get to service home page
-
-					// debug::true("Register sms successfully");
-					// debug::title("Login successfully");
 					debug::true(T_("Login successfully"));
-					// debug::true("Login successfully");
 
 					if(utility::get('referer')=='jibres')
 						$this->redirector()->set_domain('jibres.dev')->set_url('?ssid='.$_parameter1);
