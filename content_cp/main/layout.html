@@ -17,7 +17,7 @@
  <div id="options" class="unselectable">
   <div id="options-meta" class="disappear">
 {% for key, value in field_list if value.form%}
-   <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{key}}" {%if value%}checked="checked"{%endif%}><span>{{value.name}}</span></label>
+   <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{value.value}}" {%if value.show%}checked="checked"{%endif%}><span>{{value.name}}</span></label>
 {% endfor %}
   </div>
   <a id="options-link" href="javascript: void(0)">{%trans%}Options{%endtrans%}</a>
