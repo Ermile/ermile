@@ -17,7 +17,6 @@
  <div id="options" class="unselectable">
   <div id="options-meta" class="disappear">
 {% for key, value in field_list if value.form%}
-
    <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{key}}" {%if value%}checked="checked"{%endif%}><span>{{value.name}}</span></label>
 {% endfor %}
   </div>
@@ -25,23 +24,22 @@
  </div>
 {%endif%}
  <div class="container" id="main">
- {%if page_title%}
- <h1>{%trans page_title %}</h1><hr />{%endif%}
- {%if module and module!="home"%}
-  {%if child%}
+{%if page.title%}  <h1>{{page.title}}</h1><hr />{%endif%}
+{%if module and module!="home"%}
+{%if child%}
   <p class="alert alert-block alert-info">
    <attr class="float-left">{%trans module%}</attr>|
    <a class="float-right" href="{{store}}/{{module}}">{%trans%}Go to{%endtrans%} {%trans module%}</a>
   </p>
    <form class="ajx" method="post">{{forms.make(form[module])}}</form>
-  {%else%}
+{%else%}
   <p class="alert alert-block alert-info">
    <a class="float-left" href="{{store}}/{{module}}/add">{%trans%}Add New Record{%endtrans%}</a>|
    <a class="float-right" href="/">{%trans "Home"%}</a>
   </p>
 
-   {%block datatable%}
-    {%if include.datatable%}
+{%block datatable%}
+{%if include.datatable%}
     <table class="datatable display">
      <thead>
      <tr>
@@ -54,7 +52,7 @@
      </thead>
 
      <tbody>
-      {%block tbody%}
+{%block tbody%}
 {%for d in datatable%}
       <tr class="{{ cycle(['odd', 'even'], loop.index0) }}">
        <td class="col_row">{{loop.index}}</td>
@@ -76,15 +74,16 @@
        </td>
       </tr>
 {%endfor%}
-      {%endblock%}
+{%endblock%}
      </tbody>
     </table>
-    {%else%}
+{%else%}
     Data not exist!
-    {%endif%}
-   {%endblock%}
-  {%endif%}
- {%endif%}
+{%endif%}
+{%endblock%}
+
+{%endif%}
+{%endif%}
 
  </div>
 </div>

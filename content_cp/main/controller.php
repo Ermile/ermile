@@ -15,8 +15,6 @@ class controller extends \mvc\controller
 			exit();
 		}
 
-		if($mymodule=='home')
-			return;
 
 		// Restrict unwanted child
 		if($mychild && !($mychild=='add' || $mychild=='edit' || $mychild=='delete' || $mychild=='options')
@@ -33,6 +31,9 @@ class controller extends \mvc\controller
 		{
 			$this->display_name	= 'content_cp\main\layout.html';
 		}
+
+		if($mymodule=='home')
+			return;
 
 		// var_dump($this->childparam($mychild));
 
