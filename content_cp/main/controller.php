@@ -5,19 +5,14 @@ class controller extends \mvc\controller
 {
 	function _route()
 	{
-		$mymodule	= $this->module();
-		$mychild	= $this->child();
-		$islogin	= $this->login();
+		$mymodule = $this->module();
+		$mychild	 = $this->child();
 
-		if($islogin)
+		if(!$this->login())
 		{
-			// var_dump("welcome to admin panel");
-		}
-		else
-		{
-			// var_dump("you must login to system");
-			// \lib\http::access(T_("You must login to access!"));
-			// redirect to login
+			\lib\debug::warn(T_("first of all, you must login to system!"));
+			$this->redirector()->set_domain($this->url('LoginService'))->set_url('login')->redirect();
+			exit();
 		}
 
 		// Restrict unwanted child
@@ -36,6 +31,7 @@ class controller extends \mvc\controller
 			$this->display_name	= 'content_cp\main\layout.html';
 		}
 
+		// var_dump($this->childparam($mychild));
 
 		if($mymodule=='home')
 			return;
@@ -46,7 +42,11 @@ class controller extends \mvc\controller
 			//all("edit=.*")
 			if($mychild == 'delete')
 			{
-				$this->get($mychild)->ALL();		// @hasan: regular?
+				$this->post($mychild)->ALL();
+				// $this->model()->get_delete();
+				// return;
+				// $this->get()->ALL();		// @hasan: regular?
+				// $this->redirector()->set_domain('cp.ermile.dev')->set_url('banks');
 			}
 			if($mychild == 'edit')
 			{

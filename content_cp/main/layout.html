@@ -60,10 +60,10 @@
        <td class="col_row">{{loop.index}}</td>
 {%for col,value in columns if value.table%}
 {%set myvalue = attribute(d,col)%}
-{% if not myvalue or value.name == 'slug' or value.name == 'title'%}
-       <td class="col_{{value.name}}">{{myvalue}}</td>
+{% if not myvalue or value.value == 'slug' or value.value == 'title'%}
+       <td class="col_{{value.value}}">{{myvalue}}</td>
 {%else%}
-       <td class="col_{{value.name}}">{%trans myvalue%}</td>
+       <td class="col_{{value.value}}">{%trans myvalue%}</td>
 {%endif%}
 {%endfor%}
        <td class="col_actions">

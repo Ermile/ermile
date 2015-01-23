@@ -30,7 +30,7 @@ class model extends \mvc\model
 
 
 
-	function get_delete($obj)
+	function post_delete($obj = null)
 	{
 		$qry_module = $this->module();
 		$qry_table  = 'table'.ucfirst($qry_module);
@@ -41,10 +41,12 @@ class model extends \mvc\model
 		if($qry->select()->num()>0)
 		{
 			$this->delete_delete($qry);
+			// debug::warn(T_("Delete successfully"));
+			// $this->redirector()->set_subdomain('cp')->set_url($qry_module);
 		}
 		else
 		{
-			$this->redirector()->set_url($qry_module);
+			// $this->redirector()->set_url($qry_module);
 			debug::warn(T_("This id does not exist!"));
 		}
 	}
@@ -59,8 +61,8 @@ class model extends \mvc\model
 		// if query run without error means commit
 		$this->commit(function()
 		{
-			$this->redirector()->set_url($this->module());
 			debug::true(T_("Delete successfully"));
+			// $this->redirector()->set_url($this->module());
 		});
 
 		// if a query has error or any error occour in any part of codes, run roolback

@@ -32,12 +32,12 @@ function transtext()
 	echo T_("Ermile");                                                                // Line 12
 
 	//----------------------------------------------------content_cp/home/display.html
-	echo T_("Logout");                                                                // Line 46
+	echo T_("Logout");                                                                // Line 43
 	echo T_("Home");                                                                  // Line 40
 
 	//-------------------------------------------------content_cp/main/xhr-layout.html
 	echo T_("Options");                                                               // Line 24 Seperate
-	echo T_("Go to");                                                                 // Line 71
+	echo T_("Go to");                                                                 // Line 68
 	echo T_("Does not exist");                                                        // Line 32 Seperate
 	echo T_("Add New Record");                                                        // Line 39 Seperate
 	echo T_("Actions");                                                               // Line 52
@@ -50,10 +50,10 @@ function transtext()
 	echo T_("Please select one item");                                                // Line 47 Seperate
 
 	//-------------------------------------------------------includes/mvc/display.html
-	echo T_("Home Page");                                                             // Line 42
-	echo T_("Admin");                                                                 // Line 43
-	echo T_("Control Panel");                                                         // Line 44
-	echo T_("Login");                                                                 // Line 48
+	echo T_("Home Page");                                                             // Line 39
+	echo T_("Admin");                                                                 // Line 40
+	echo T_("Control Panel");                                                         // Line 41
+	echo T_("Login");                                                                 // Line 45
 
 }
 ?>
