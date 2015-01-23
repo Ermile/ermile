@@ -12,7 +12,6 @@ route('*', function() {
   hideFields();
 
   $(".fields-toggle", this).change(function () {
-    console.log(this);
     var box = $("."+this.value);
     box.toggleClass('disappear');
   });
