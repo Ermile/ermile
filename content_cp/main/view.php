@@ -33,7 +33,7 @@ class view extends \mvc\view
 		$this->include->editor  = true;
 		$this->data->field_list = \lib\sql\getTable::get($this->data->module);
 		$this->global->js       = array($this->url->static.'js/medium-editor.min.js');
-		$myform                 = $this->createform('@'.db_name.'.'.$this->data->module,'edit');
+		$myform                 = $this->createform('@'.db_name.'.'.$this->data->module, $this->data->child);
 	}
 }
 ?>

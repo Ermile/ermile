@@ -47,7 +47,7 @@ class model extends \mvc\model
 				}, $mycode);
 				$this->rollback(function()
 				{
-					debug::true(T_("Login Failed!"));
+					debug::error(T_("Login Failed!"));
 				});
 
 			}
