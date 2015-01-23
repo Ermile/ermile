@@ -16,7 +16,7 @@ class view extends \mvc\view
 	{		
 		// in root page like site.com/admin/banks show datatable
 		// get data from database through model
-		$this->data->datatable = $obj->api_callback;
+		$this->data->datatable = $this->model()->datatable();
 		$this->global->js      = array($this->url->static.'js/jquery.dataTables.min.js');
 		// check if datatable exist then get this data
 		if($this->data->datatable)
@@ -29,17 +29,7 @@ class view extends \mvc\view
 		// var_dump($obj->api_callback);
 	}
 
-	function view_add($obj)
-	{
-		$this->prepareChild();
-	}
-
-	function view_edit($obj)
-	{
-		$this->prepareChild();
-	}
-
-	private function prepareChild()
+	public function view_child()
 	{
 		$this->include->editor  = true;
 		$this->data->field_list = \lib\sql\getTable::get($this->data->module);
