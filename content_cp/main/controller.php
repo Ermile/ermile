@@ -54,12 +54,12 @@ class controller extends \mvc\controller
 			if($mychild == 'edit')
 			{
 				// var_dump($this->model()->datarow());
-				$this->get($mychild, $mychild)->ALL();
+				$this->get(null, 'child')->ALL();
 				$this->post($mychild)->ALL();
 			}
 			elseif($mychild == 'add')
 			{
-				$this->get($mychild, $mychild)->ALL();
+				$this->get(null, 'child')->ALL();
 				$this->post($mychild)->ALL();
 			}
 			elseif($mychild == 'options')
@@ -70,7 +70,7 @@ class controller extends \mvc\controller
 		}
 		else
 		{
-			$this->get('datatable', 'datatable')->ALL();
+			$this->get(null, 'datatable')->ALL();
 		}
 		// $this->model_name	= 'content_cp\\'.$mymodule.'\model';
 		// $this->post($mymodule)->ALL($mymodule);
