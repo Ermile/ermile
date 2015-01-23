@@ -71,7 +71,7 @@
         <a class="action-icons edit hint--top" href="{{store}}/{{module}}/edit={{d.id}}">{%trans "Edit"%}</a>
        </span>
        <span class="hint--top hint--error" data-hint='{%trans "Delete"%}'>
-        <a class="action-icons delete hide-text" href="{{store}}/{{module}}/delete={{d.id}}" data-ajaxify>{%trans "Delete"%}</a>
+        <a class="action-icons delete hide-text" href="{{store}}/{{module}}/delete={{d.id}}" data-ajaxify data-method="post" data-data="{id:{{d.id}}}">{%trans "Delete"%}</a>
        </span>
        </td>
       </tr>

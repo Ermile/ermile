@@ -15,7 +15,18 @@ function transtext()
 	echo T_('delete failed!');
 	echo T_('id does not exist!');
 	
+	//----------------------------------------------------content_cp/home/display.html
+	echo T_("Logout");                                                                // Line 43
+	echo T_("Home");                                                                  // Line 40
 
+	//-----------------------------------------------------content_cp/main/layout.html
+	echo T_("Options");                                                               // Line 24 Seperate
+	echo T_("Go to");                                                                 // Line 68
+	echo T_("Does not exist");                                                        // Line 32 Seperate
+	echo T_("Add New Record");                                                        // Line 39 Seperate
+	echo T_("Actions");                                                               // Line 52
+	echo T_("Edit");                                                                  // Line 71
+	echo T_("Delete");                                                                // Line 74
 	
 
 

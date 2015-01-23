@@ -12,7 +12,7 @@ class view extends \mvc\view
 	}
 
 
-	function view_datatable($obj)
+	function view_datatable()
 	{		
 		// in root page like site.com/admin/banks show datatable
 		// get data from database through model
@@ -25,9 +25,8 @@ class view extends \mvc\view
 			$this->include->datatable = true;
 			$this->data->columns      = \lib\sql\getTable::get($this->data->module);
 		}
-
-		// var_dump($obj->api_callback);
 	}
+
 
 	public function view_child()
 	{

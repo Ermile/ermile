@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-23 14:42+0330\n"
-"PO-Revision-Date: 2015-01-23 14:42+0330\n"
+"POT-Creation-Date: 2015-01-23 19:22+0330\n"
+"PO-Revision-Date: 2015-01-23 19:23+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -157,45 +157,13 @@ msgstr "هیچ داده ای موجود نیست!"
 msgid "Error!"
 msgstr "خطا!"
 
-#: ../../../.././content_cp/main/controller.php:27
+#: ../../../.././content_cp/main/controller.php:13
+msgid "first of all, you must login to system!"
+msgstr "شما ابتدا باید وارد سیستم شوید!"
+
+#: ../../../.././content_cp/main/controller.php:25
 msgid "Not found!"
 msgstr "یافت نشد"
-
-#: ../../../.././content_cp/main/model.php:48
-msgid "This id does not exist!"
-msgstr "این کد در سیستم وجود ندارد!"
-
-#: ../../../.././content_cp/main/model.php:63
-msgid "Delete successfully"
-msgstr "حذف با موفقیت انجام شد."
-
-#: ../../../.././content_cp/main/model.php:70
-msgid "Delete failed!"
-msgstr "عملیات حذف ناموفق بود!"
-
-#: ../../../.././content_cp/main/model.php:114
-msgid "all require fields must fill"
-msgstr "تمام رکوردهای الزامی باید پر شوند"
-
-#: ../../../.././content_cp/main/model.php:135
-msgid "Update successfully"
-msgstr "بروزرسانی با موفقیت انجام شد."
-
-#: ../../../.././content_cp/main/model.php:142
-msgid "Update failed!"
-msgstr "بروزرسانی ناموفق بود!"
-
-#: ../../../.././content_cp/main/model.php:163
-msgid "insert successfully"
-msgstr "رکورد با موفقیت ثبت شد"
-
-#: ../../../.././content_cp/main/model.php:170
-msgid "insert failed!"
-msgstr "فراید ثبت ناموفق بود!"
-
-#: ../../../.././content_cp/main/model.php:176
-msgid "Edit Record successfully"
-msgstr "ویرایش با موفقیت انجام شد."
 
 #: ../../../.././includes/cls/database/ermile/translation.php:6
 msgid "accounts"
@@ -1491,27 +1459,55 @@ msgstr "سالوس یک کنگر برای برنامه نویسی با پی اچ
 msgid "Saloos is powerfull."
 msgstr "سالوس اقتدار بخش!"
 
+#: ../../../.././includes/languages/static_translation.php:10
+msgid "insert successfully"
+msgstr "رکورد با موفقیت ثبت شد"
+
+#: ../../../.././includes/languages/static_translation.php:11
+msgid "insert failed!"
+msgstr "فراید ثبت ناموفق بود!"
+
 #: ../../../.././includes/languages/static_translation.php:12
+msgid "update successfully"
+msgstr "بروزرسانی با موفقیت انجام شد"
+
+#: ../../../.././includes/languages/static_translation.php:13
+msgid "update failed!"
+msgstr "بروزرسانی ناموفق بود!"
+
+#: ../../../.././includes/languages/static_translation.php:14
+msgid "delete successfully"
+msgstr "حذف با موفقیت انجام شد."
+
+#: ../../../.././includes/languages/static_translation.php:15
+msgid "delete failed!"
+msgstr "عملیات حذف ناموفق بود!"
+
+#: ../../../.././includes/languages/static_translation.php:16
+msgid "id does not exist!"
+msgstr "این کد در سیستم وجود ندارد!"
+
+#: ../../../.././includes/languages/static_translation.php:23
 msgid "Next page"
 msgstr "صفحه بعد"
 
-#: ../../../.././includes/languages/static_translation.php:15
+#: ../../../.././includes/languages/static_translation.php:26
 msgid "home"
 msgstr "خانه"
 
-#: ../../../.././includes/languages/static_translation.php:16
+#: ../../../.././includes/languages/static_translation.php:27
 msgid "Homepage"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/static_translation.php:17
+#: ../../../.././includes/languages/static_translation.php:28
 msgid "Signup"
 msgstr "ثبت نام"
 
-#: ../../../.././includes/languages/static_translation.php:18
+#: ../../../.././includes/languages/static_translation.php:29
 msgid "Add new"
 msgstr "افزودن"
 
-#: ../../../.././includes/languages/static_translation.php:19
+#: ../../../.././includes/languages/static_translation.php:30
 msgid "Add New"
 msgstr "افزودن"
 
@@ -1631,6 +1627,12 @@ msgstr "ارمایل نام شرکت ماست"
 #: ../../../.././includes/mvc/view.php:14
 msgid "Ermile is Inteligent."
 msgstr "ارمایل باهوش است!"
+
+#~ msgid "all require fields must fill"
+#~ msgstr "تمام رکوردهای الزامی باید پر شوند"
+
+#~ msgid "Edit Record successfully"
+#~ msgstr "ویرایش با موفقیت انجام شد."
 
 #~ msgid "One Account for all services"
 #~ msgstr "یک اکانت برای همه حساب ها"
