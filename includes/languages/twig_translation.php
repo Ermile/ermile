@@ -33,16 +33,16 @@ function transtext()
 
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Logout");                                                                // Line 46
-	echo T_("Home");                                                                  // Line 47
+	echo T_("Home");                                                                  // Line 40
 
 	//-------------------------------------------------content_cp/main/xhr-layout.html
 	echo T_("Options");                                                               // Line 24 Seperate
 	echo T_("Go to");                                                                 // Line 71
-	echo T_("Does not exist");                                                        // Line 41 Seperate
-	echo T_("Add New Record");                                                        // Line 46 Seperate
-	echo T_("Actions");                                                               // Line 59
-	echo T_("Edit");                                                                  // Line 73
-	echo T_("Delete");                                                                // Line 76
+	echo T_("Does not exist");                                                        // Line 32 Seperate
+	echo T_("Add New Record");                                                        // Line 39 Seperate
+	echo T_("Actions");                                                               // Line 52
+	echo T_("Edit");                                                                  // Line 71
+	echo T_("Delete");                                                                // Line 74
 
 	//-----------------------------------------------------content_cp/main/layout.html
 

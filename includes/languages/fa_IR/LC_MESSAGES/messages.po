@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-22 09:35+0330\n"
-"PO-Revision-Date: 2015-01-22 09:47+0330\n"
+"POT-Creation-Date: 2015-01-23 12:03+0330\n"
+"PO-Revision-Date: 2015-01-23 12:03+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -36,63 +36,63 @@ msgstr "خروج موفقیت آمیز"
 msgid "One Account for all services"
 msgstr "یک اکانت برای همه حساب ها"
 
-#: ../../../.././content_account/home/view.php:22
+#: ../../../.././content_account/home/view.php:29
 #: ../../../.././includes/cls/form/account.php:25
 #: ../../../.././includes/languages/twig_translation.php:56
 msgid "Login"
 msgstr "ورود به سیستم"
 
-#: ../../../.././content_account/home/view.php:26
+#: ../../../.././content_account/home/view.php:33
 #: ../../../.././includes/cls/form/account.php:33
 msgid "Create an account"
 msgstr "اکانت بسازید"
 
-#: ../../../.././content_account/home/view.php:30
-#: ../../../.././content_account/home/view.php:35
+#: ../../../.././content_account/home/view.php:37
+#: ../../../.././content_account/home/view.php:41
 msgid "Verificate"
 msgstr "اعتبارسنجی"
 
-#: ../../../.././content_account/home/view.php:39
+#: ../../../.././content_account/home/view.php:45
 #: ../../../.././includes/cls/form/account.php:50
 msgid "Recovery"
 msgstr "بازیابی کلمه عبور"
 
-#: ../../../.././content_account/home/view.php:43
+#: ../../../.././content_account/home/view.php:49
 msgid "Change password"
 msgstr "کلمه عبور"
 
-#: ../../../.././content_account/home/view.php:48
+#: ../../../.././content_account/home/view.php:54
 msgid "SMS Delivery"
 msgstr "رسید دریافت پیامک"
 
-#: ../../../.././content_account/home/view.php:53
+#: ../../../.././content_account/home/view.php:59
 msgid "SMS Callback"
 msgstr "پیامک های دریافتی"
 
-#: ../../../.././content_account/home/view.php:58
+#: ../../../.././content_account/home/view.php:64
 #: ../../../.././includes/languages/twig_translation.php:32
 #: ../../../.././includes/mvc/view.php:9
 msgid "Ermile"
 msgstr "ارمایل"
 
-#: ../../../.././content_account/login/model.php:40
+#: ../../../.././content_account/login/model.php:37
 msgid "Login successfully"
 msgstr "ورود موفقیت آمیز"
 
-#: ../../../.././content_account/login/model.php:54
+#: ../../../.././content_account/login/model.php:50
 msgid "Login Failed!"
 msgstr "ثبت نام ناموفق!"
 
-#: ../../../.././content_account/login/model.php:61
+#: ../../../.././content_account/login/model.php:57
 msgid "Password is incorrect"
 msgstr "کلمه عبور اشتباه است"
 
-#: ../../../.././content_account/login/model.php:68
+#: ../../../.././content_account/login/model.php:64
 #: ../../../.././content_account/recovery/model.php:64
 msgid "Mobile number is incorrect"
 msgstr "این شماره موبایل اشتباه است."
 
-#: ../../../.././content_account/login/model.php:77
+#: ../../../.././content_account/login/model.php:73
 #: ../../../.././content_account/signup/model.php:68
 #: ../../../.././content_account/recovery/model.php:70
 #: ../../../.././content_account/verification/model.php:75
@@ -177,23 +177,28 @@ msgstr "حذف با موفقیت انجام شد."
 msgid "Delete failed!"
 msgstr "عملیات حذف ناموفق بود!"
 
-#: ../../../.././content_cp/main/model.php:111
-msgid "All of records are null"
-msgstr "تمام رکوردها بدون مقدار هستند"
-
-#: ../../../.././content_cp/main/model.php:116
-msgid "All require fields must fill"
+#: ../../../.././content_cp/main/model.php:114
+#, fuzzy
+msgid "all require fields must fill"
 msgstr "تمام رکوردهای الزامی باید پر شوند"
 
-#: ../../../.././content_cp/main/model.php:208
+#: ../../../.././content_cp/main/model.php:135
 msgid "Update successfully"
 msgstr "بروزرسانی با موفقیت انجام شد."
 
-#: ../../../.././content_cp/main/model.php:215
+#: ../../../.././content_cp/main/model.php:142
 msgid "Update failed!"
 msgstr "بروزرسانی ناموفق بود!"
 
-#: ../../../.././content_cp/main/model.php:232
+#: ../../../.././content_cp/main/model.php:163
+msgid "insert successfully"
+msgstr "رکورد با موفقیت ثبت شد"
+
+#: ../../../.././content_cp/main/model.php:170
+msgid "insert failed!"
+msgstr "فراید ثبت ناموفق بود!"
+
+#: ../../../.././content_cp/main/model.php:176
 msgid "Edit Record successfully"
 msgstr "ویرایش با موفقیت انجام شد."
 
@@ -1631,3 +1636,6 @@ msgstr "ارمایل نام شرکت ماست"
 #: ../../../.././includes/mvc/view.php:13
 msgid "Ermile is Inteligent."
 msgstr "ارمایل باهوش است!"
+
+#~ msgid "All of records are null"
+#~ msgstr "تمام رکوردها بدون مقدار هستند"

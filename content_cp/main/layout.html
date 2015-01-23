@@ -1,4 +1,4 @@
-{%extends mvcdisplay%}
+{%extends display.mvc%}
 
 
 {%block head_css%}
@@ -33,14 +33,7 @@
    <attr class="float-left">{%trans module%}</attr>|
    <a class="float-right" href="{{store}}/{{module}}">{%trans%}Go to{%endtrans%} {%trans module%}</a>
   </p>
-  {%if form_show %}
-   <form class="ajx" method="post" id="{{form_title}}">
-   {{forms.make(form[module])}}
-   </form>
-  {%else%}
-   <p>{%trans%}Does not exist{%endtrans%}!!!</p>
-  {%endif%}
-
+   <form class="ajx" method="post" action="{{module}}/{{child}}">{{forms.make(form[module])}}</form>
   {%else%}
   <p class="alert alert-block alert-info">
    <a class="float-left" href="{{store}}/{{module}}/add">{%trans%}Add New Record{%endtrans%}</a>|

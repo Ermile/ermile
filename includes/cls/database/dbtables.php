@@ -1,7 +1,7 @@
 <?php
 // require_once('../../public_html/config.php');
-if ( file_exists( __DIR__.'/../../public_html/config.php') )
-	require_once( __DIR__.'/../../public_html/config.php');
+if ( file_exists( __DIR__.'/../../../public_html/config.php') )
+	require_once( __DIR__.'/../../../public_html/config.php');
 else
 {
 	// A config file doesn't exist

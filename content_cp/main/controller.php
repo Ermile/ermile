@@ -21,7 +21,9 @@ class controller extends \mvc\controller
 		}
 
 		// Restrict unwanted child
-		if($mychild && !($mychild=='add' || $mychild=='edit' || $mychild=='delete') || !$this->cpModlueList())
+		if($mychild && !($mychild=='add' || $mychild=='edit' || $mychild=='delete' || $mychild=='options')
+			 || !$this->cpModlueList()
+			)
 			\lib\http::page(T_("Not found!"));
 
 
@@ -41,11 +43,23 @@ class controller extends \mvc\controller
 		// on module root without child like /post
 		if($mychild)
 		{
-			if($mychild=='delete')
-				$this->get($mychild)->ALL();
-			else
+			//all("edit=.*")
+			if($mychild == 'delete')
+			{
+				$this->get($mychild)->ALL();		// @hasan: regular?
+			}
+			if($mychild == 'edit')
 			{
 				$this->get($mychild, $mychild)->ALL();
+				$this->post($mychild)->ALL();
+			}
+			elseif($mychild == 'add')
+			{
+				$this->get($mychild, $mychild)->ALL();
+				$this->post($mychild)->ALL();
+			}
+			elseif($mychild == 'options')
+			{
 				$this->post($mychild)->ALL();
 			}
 

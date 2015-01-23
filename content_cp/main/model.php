@@ -238,15 +238,9 @@ class model extends \mvc\model
 
 
 
-
-
-
-
-
-
-
-
-
-
+	function post_options()
+	{
+		return 'soon';
+	}
 }
 ?>

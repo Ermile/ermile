@@ -5,10 +5,6 @@ class view extends \mvc\view
 {
 	public function options()
 	{
-		$this->data->module       = $this->module();
-		$this->data->prefix       = $this->module('prefix');
-		$this->data->child        = $this->child();
-		
 		$this->include->telinput  = false;
 		$this->include->customcss = false;
 		$this->include->customjs  = false;
@@ -45,15 +41,10 @@ class view extends \mvc\view
 
 	private function prepareChild()
 	{
-		$this->global->js       = array($this->url->static.'js/medium-editor.min.js');
-		$this->data->form_show  = true;
 		$this->include->editor  = true;
 		$this->data->field_list = \lib\sql\getTable::get($this->data->module);
-		$this->data->form_title = ucfirst($this->data->prefix);
-		$this->data->page_title = $this->child(true) . ' ' . T_($this->data->form_title);
-		$this->global->title    = $this->data->page_title;
-		
-		$myform                 = $this->createform('@'.db_name.'.'.$this->data->module);
+		$this->global->js       = array($this->url->static.'js/medium-editor.min.js');
+		$myform                 = $this->createform('@'.db_name.'.'.$this->data->module,'edit');
 	}
 }
 ?>
