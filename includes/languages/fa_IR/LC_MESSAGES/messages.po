@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-23 12:03+0330\n"
-"PO-Revision-Date: 2015-01-23 12:03+0330\n"
+"POT-Creation-Date: 2015-01-23 14:06+0330\n"
+"PO-Revision-Date: 2015-01-23 14:06+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -32,46 +32,42 @@ msgstr "شما ابتدا باید وارد سیستم شوید!"
 msgid "Logout successfully"
 msgstr "خروج موفقیت آمیز"
 
-#: ../../../.././content_account/home/view.php:17
-msgid "One Account for all services"
-msgstr "یک اکانت برای همه حساب ها"
-
-#: ../../../.././content_account/home/view.php:29
+#: ../../../.././content_account/home/view.php:28
 #: ../../../.././includes/cls/form/account.php:25
 #: ../../../.././includes/languages/twig_translation.php:56
 msgid "Login"
 msgstr "ورود به سیستم"
 
-#: ../../../.././content_account/home/view.php:33
+#: ../../../.././content_account/home/view.php:32
 #: ../../../.././includes/cls/form/account.php:33
 msgid "Create an account"
 msgstr "اکانت بسازید"
 
-#: ../../../.././content_account/home/view.php:37
-#: ../../../.././content_account/home/view.php:41
+#: ../../../.././content_account/home/view.php:36
+#: ../../../.././content_account/home/view.php:40
 msgid "Verificate"
 msgstr "اعتبارسنجی"
 
-#: ../../../.././content_account/home/view.php:45
+#: ../../../.././content_account/home/view.php:44
 #: ../../../.././includes/cls/form/account.php:50
 msgid "Recovery"
 msgstr "بازیابی کلمه عبور"
 
-#: ../../../.././content_account/home/view.php:49
+#: ../../../.././content_account/home/view.php:48
 msgid "Change password"
 msgstr "کلمه عبور"
 
-#: ../../../.././content_account/home/view.php:54
+#: ../../../.././content_account/home/view.php:53
 msgid "SMS Delivery"
 msgstr "رسید دریافت پیامک"
 
-#: ../../../.././content_account/home/view.php:59
+#: ../../../.././content_account/home/view.php:58
 msgid "SMS Callback"
 msgstr "پیامک های دریافتی"
 
-#: ../../../.././content_account/home/view.php:64
+#: ../../../.././content_account/home/view.php:63
 #: ../../../.././includes/languages/twig_translation.php:32
-#: ../../../.././includes/mvc/view.php:9
+#: ../../../.././includes/mvc/view.php:10
 msgid "Ermile"
 msgstr "ارمایل"
 
@@ -161,7 +157,7 @@ msgstr "هیچ داده ای موجود نیست!"
 msgid "Error!"
 msgstr "خطا!"
 
-#: ../../../.././content_cp/main/controller.php:25
+#: ../../../.././content_cp/main/controller.php:27
 msgid "Not found!"
 msgstr "یافت نشد"
 
@@ -178,7 +174,6 @@ msgid "Delete failed!"
 msgstr "عملیات حذف ناموفق بود!"
 
 #: ../../../.././content_cp/main/model.php:114
-#, fuzzy
 msgid "all require fields must fill"
 msgstr "تمام رکوردهای الزامی باید پر شوند"
 
@@ -1625,17 +1620,20 @@ msgstr "مدیریت"
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
-#: ../../../.././includes/mvc/view.php:10
+#: ../../../.././includes/mvc/view.php:11
 msgid "Ermile is new"
 msgstr "ارمایل جدید است!"
 
-#: ../../../.././includes/mvc/view.php:11
+#: ../../../.././includes/mvc/view.php:12
 msgid "Ermile is our company"
 msgstr "ارمایل نام شرکت ماست"
 
-#: ../../../.././includes/mvc/view.php:13
+#: ../../../.././includes/mvc/view.php:14
 msgid "Ermile is Inteligent."
 msgstr "ارمایل باهوش است!"
+
+#~ msgid "One Account for all services"
+#~ msgstr "یک اکانت برای همه حساب ها"
 
 #~ msgid "All of records are null"
 #~ msgstr "تمام رکوردها بدون مقدار هستند"

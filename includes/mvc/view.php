@@ -6,11 +6,12 @@ class view extends \lib\view
 	function _construct()
 	{
 		// define default value for global
-		$this->data->site_title   = T_("Ermile");
-		$this->data->site_desc    = T_("Ermile is new");
-		$this->data->site_slogan  = T_("Ermile is our company");
-		$this->data->page_title   = T_($this->module('space',false));
-		$this->data->page_desc    = T_("Ermile is Inteligent.");
+
+		$this->data->site['title']   = T_("Ermile");
+		$this->data->site['desc']    = T_("Ermile is new");
+		$this->data->site['slogan']  = T_("Ermile is our company");
+
+		$this->data->page['desc']    = T_("Ermile is Inteligent.");
 
 		// add language list for use in display
 		$this->global->langlist		= array(
@@ -18,8 +19,7 @@ class view extends \lib\view
 												'en_US' => 'English',
 												'de_DE' => 'Deutsch'
 												);
-		
-		// $this->data->module         = $this->module();
+
 		// if you need to set a class for body element in html add in this value
 		// $this->data->bodyclass      = null;
 		
@@ -32,9 +32,7 @@ class view extends \lib\view
 		
 		$this->data->display['account'] = "content_account/main/layout.html";
 		$this->data->display['cp']      = "content_cp/main/layout.html";
-		// $this->data->layout_account = "content_account/main/layout.html";
-		// $this->data->layout_cp      = "content_cp/main/layout.html";
-		// var_dump($this->global->site_slogan);
+
 
 
 		if (!locale_emulation()) {
@@ -53,10 +51,6 @@ class view extends \lib\view
 	{
 		$this->data->display['account'] = "content_account/main/xhr-layout.html";
 		$this->data->display['cp']      = "content_cp/main/xhr-layout.html";
-
-		// $this->data->layout_mvc     = "includes/mvc/xhr-pushState.html";
-		// $this->data->layout_account = "content_account/main/xhr-layout.html";
-		// $this->data->layout_cp      = "content_cp/main/xhr-layout.html";
 	}
 }
 ?>
