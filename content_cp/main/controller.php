@@ -15,6 +15,9 @@ class controller extends \mvc\controller
 			exit();
 		}
 
+		if($mymodule=='home')
+			return;
+
 		// Restrict unwanted child
 		if($mychild && !($mychild=='add' || $mychild=='edit' || $mychild=='delete' || $mychild=='options')
 			 || !$this->cpModlueList()
@@ -33,8 +36,6 @@ class controller extends \mvc\controller
 
 		// var_dump($this->childparam($mychild));
 
-		if($mymodule=='home')
-			return;
 
 		// on module root without child like /post
 		if($mychild)
@@ -42,14 +43,17 @@ class controller extends \mvc\controller
 			//all("edit=.*")
 			if($mychild == 'delete')
 			{
+				// $this->model()->delete();
+				// $controller->route_check_true = true;
+				// $this->redirector()->set_url($mymodule); //->redirect();
+				$this->get($mychild)->ALL();		// @hasan: regular?
 				$this->post($mychild)->ALL();
-				// $this->model()->get_delete();
 				// return;
-				// $this->get()->ALL();		// @hasan: regular?
 				// $this->redirector()->set_domain('cp.ermile.dev')->set_url('banks');
 			}
 			if($mychild == 'edit')
 			{
+				// var_dump($this->model()->datarow());
 				$this->get($mychild, $mychild)->ALL();
 				$this->post($mychild)->ALL();
 			}

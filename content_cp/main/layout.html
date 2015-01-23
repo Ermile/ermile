@@ -33,7 +33,7 @@
    <attr class="float-left">{%trans module%}</attr>|
    <a class="float-right" href="{{store}}/{{module}}">{%trans%}Go to{%endtrans%} {%trans module%}</a>
   </p>
-   <form class="ajx" method="post" action="{{module}}/{{child}}">{{forms.make(form[module])}}</form>
+   <form class="ajx" method="post">{{forms.make(form[module])}}</form>
   {%else%}
   <p class="alert alert-block alert-info">
    <a class="float-left" href="{{store}}/{{module}}/add">{%trans%}Add New Record{%endtrans%}</a>|
