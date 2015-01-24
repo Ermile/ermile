@@ -65,16 +65,27 @@ $conn->close();
 
 
 // check wois status
-function checkwhois($_conn, $_res, $_start = null, $_period = null)
+function checkwhois($_conn, $_datatable, $_start = null, $_period = null)
 {
 	$mylist = array();
 	if( Status == 'auto')
-		$mylist = showtable($_conn, false, false);
+	{
+		$mylist_raw = showtable($_conn, false, false);
+		if($_start && $_period)
+		{
+			for ($i=$_start; $i < $_start + $_period; $i++)
+			{
+				if( isset($mylist_raw[$i]) )
+					$mylist[$i] = $mylist_raw[$i];
+			}
+		}
+	}
 
 	else
 		// create a new little list for check
 		for ($i=$_start; $i < $_start + $_period; $i++)
-			$mylist[$_res[$i]] = null;
+			$mylist[$i] = $_datatable[$i];
+
 
 
 	if(Status == 'check_whois' || Status == 'auto')
@@ -83,22 +94,22 @@ function checkwhois($_conn, $_res, $_start = null, $_period = null)
 		foreach ($mylist as $key => $value)
 		{
 			$mydomain = null;
-			$mydomain = new Whois($key.'.ir');
+			$mydomain = new Whois($value.'.ir');
 			$myresult = array();
 			echo '<tr>';
 			echo '<td> </td>';
-			echo '<td>'.$key.'</td>';
+			echo '<td>'.$value.'</td>';
 
 			if ($mydomain && $mydomain->isAvailable())
-				$myresult[$key] = 'available' ;
+				$myresult[$value] = 'available' ;
 			else
-				$myresult[$key] = 'taken' ;
+				$myresult[$value] = 'taken' ;
 
-			echo '<td>'.$myresult[$key].'</td>';
+			echo '<td>'.$myresult[$value].'</td>';
 			echo '</tr>';
 
 			// add in db
-			$sql = "UPDATE ir SET status='".$myresult[$key]."' where name = '$key';";
+			$sql = "UPDATE ir SET status='".$myresult[$value]."' where name = '$value';";
 
 			if ($_conn->query($sql) !== TRUE)
 				echo "Error: " . $sql . "<br>" . $_conn->error;
@@ -166,10 +177,12 @@ function showtable($_conn, $_show = true, $_notnull = true)
 	$mycount_taken     = 0;
 	while($row = $myresult->fetch_array())
 	{
-		$mydata[$row['name']] = $row['status'];
-		$mycount           += 1;
-		$mycount_available += $row['status']=='available'? 1: 0;
-		$mycount_taken     += $row['status']=='taken'?     1: 0;
+		// $mydata[$row['name']] = $row['status'];
+		// array_push($mydata, $row['name'])
+		$mydata[$row['rowid']]  = $row['name'];
+		$mycount               += 1;
+		$mycount_available     += $row['status']=='available'? 1: 0;
+		$mycount_taken         += $row['status']=='taken'?     1: 0;
 
 		if($_show)
 		{
