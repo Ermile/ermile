@@ -2,15 +2,19 @@
 ini_set('display_errors',1);ini_set('display_startup_errors',1);error_reporting(-1);
 require_once('whois/whois.php');
 
+
+if(isset($_GET['type']))
+	define('Status', $_GET['type']);
+else
+{
+	echo "I am so sorry!";
+	exit();
+}
+
 // define('Status', 'show');
 // define('Status', 'add_to_db');
-define('Status', 'check_whois');
+// define('Status', 'check_whois');
 
-// fix for local and web
-// $host = parse_url($_SERVER['SERVER_NAME']);
-// preg_match('/(.*?)((\.co)?.[a-z]{2,4})$/i', $host['path'], $m);
-// $tld = isset($m[2]) ? $m[2]: '';
-// $tld = substr($tld, 1);
 
 // serever db data
 $servername = "localhost";
@@ -27,15 +31,27 @@ if ($conn->connect_error) {
 
 
 echo '<html><body>';
-echo "<style>table, th, td {margin: 0 auto;border: 1px solid black;border-collapse: collapse;}th, td {padding: 15px;}</style>";
+echo "<style>table, th, td {margin: 0 auto;border: 1px solid black;border-collapse: collapse;}th, td {padding:2px 15px;}</style>";
 echo '<table>';
 echo '<tr>';
 echo '<th>Domain</th>';
 echo '<th>Status</th>';
 echo '</tr>';
 
-$res = getnames($conn);
-$res2 = checkwhois($conn, $res, 0 , 100);
+if(Status == 'show')
+{
+	showtable($conn);
+}
+else
+{
+	$res  = getnames($conn);
+	if(isset($_GET['count']))
+		$mycount = $_GET['count'] == 'all'? count($res)-1: $_GET['count'];
+	else
+		$mycount = 10;
+
+	$res2 = checkwhois($conn, $res, 0 , $mycount);
+}
 
 echo '</table>';
 echo '</body></html>';
@@ -54,7 +70,7 @@ function checkwhois($_conn, $_res, $_start, $_period)
 	for ($i=$_start; $i < $_period; $i++)
 		$mylist[$i] = $_res[$i];
 
-	var_dump($mylist);
+	// var_dump($mylist);
 
 	if(Status == 'check_whois')
 	{
@@ -122,5 +138,21 @@ function getnames($_conn)
 	}
 
 	return $myresult;
+}
+
+
+// show result for viewer
+function showtable($_conn)
+{
+	$sql      = "Select * from ir where status is not NULL";
+	$myresult = $_conn->query($sql);
+
+	while($row = $myresult->fetch_array())
+	{
+		echo '<tr>';
+		echo '<td>'.$row['name'].'</td>';
+		echo '<td>'.$row['status'].'</td>';
+		echo '</tr>';
+	}
 }
 ?>
