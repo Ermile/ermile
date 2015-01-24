@@ -2,6 +2,8 @@
 function transtext()
 {
 
+	//--------------------------------public_html/static/js/datatable-langs/index.html
+
 	//----------------------------------------------content_account/login/display.html
 	echo T_("Click here for recovery your password");                                 // Line 6
 	echo T_("Can't access your account?");                                            // Line 6
@@ -33,16 +35,15 @@ function transtext()
 
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Logout");                                                                // Line 43
-	echo T_("Home");                                                                  // Line 40
+	echo T_("Home");                                                                  // Line 38
 
 	//-------------------------------------------------content_cp/main/xhr-layout.html
-	echo T_("Options");                                                               // Line 24 Seperate
+	echo T_("Options");                                                               // Line 23 Seperate
 	echo T_("Go to");                                                                 // Line 68
-	echo T_("Does not exist");                                                        // Line 32 Seperate
-	echo T_("Add New Record");                                                        // Line 39 Seperate
-	echo T_("Actions");                                                               // Line 52
-	echo T_("Edit");                                                                  // Line 71
-	echo T_("Delete");                                                                // Line 74
+	echo T_("Add New Record");                                                        // Line 37 Seperate
+	echo T_("Actions");                                                               // Line 50
+	echo T_("Edit");                                                                  // Line 69
+	echo T_("Delete");                                                                // Line 72
 
 	//-----------------------------------------------------content_cp/main/layout.html
 

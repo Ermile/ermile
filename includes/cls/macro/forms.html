@@ -1,22 +1,24 @@
 {% macro make(array) %}
 {% spaceless %}
 {% import _self as form%}
+
  {% for input in array%}
-   <div class="form-element {{input.attr.id}}">
-    {% if input.attr.pos %}{% set tippos=input.attr.pos %}{%else%}{% set tippos='hint--top' %}{% endif %}
-    {% if input.attr.desc %}<span class="hint--info {{tippos}}" data-hint="{{input.attr.desc}}">{% endif %}
+ <div class="form-element {{input.attr.id}}">
+  {% if input.attr.pos %}{% set tippos=input.attr.pos %}{%else%}{% set tippos='hint--top' %}{% endif %}
+  {% if input.attr.desc %}<span class="hint--info {{tippos}}" data-hint="{{input.attr.desc}}">{% endif %}
 
-    {% if input.attr.type     == 'radio'%}                                 {{ form.radio(input) }}
-    {% elseif input.attr.type == 'checkbox'%}                              {{ form.checkbox(input) }}
-    {% elseif input.attr.type == 'select'%}                                {{ form.select(input) }}
-    {% elseif input.attr.type == 'textarea'%}                              {{ form.textarea(input) }}
-    {% elseif input.attr.type == 'submit' or input.attr.type == 'button'%} {{ form.submit(input) }}
-    {% else %}                                                             {{ form.input(input) }}
-    {% endif %}
+  {% if input.attr.type     == 'radio'%}                                 {{ form.radio(input)    }}
+  {% elseif input.attr.type == 'checkbox'%}                              {{ form.checkbox(input) }}
+  {% elseif input.attr.type == 'select'%}                                {{ form.select(input)   }}
+  {% elseif input.attr.type == 'textarea'%}                              {{ form.textarea(input) }}
+  {% elseif input.attr.type == 'submit' or input.attr.type == 'button'%} {{ form.submit(input)   }}
+  {% else %}                                                             {{ form.input(input)    }}
+  {% endif %}
 
-    {% if input.attr.desc %}</span>{% endif %}
-   </div>
+  {% if input.attr.desc %}</span>{% endif %}
+ </div>
  {% endfor %}
+
 {% endspaceless %}
 {% endmacro %}
 
@@ -44,7 +46,7 @@
 {% macro select(array) %}
  {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
  <select {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
-  <option value="" disabled="disabled" selected="selected">{%trans%}Please select one item{%endtrans%}</option>
+  <option value="" disabled="disabled">{%trans%}Please select one item{%endtrans%}</option>
   {% for child in array.child%}
   <option {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
   {% endfor %}

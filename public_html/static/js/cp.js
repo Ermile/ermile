@@ -57,7 +57,7 @@ route('*', function() {
 
 function hideFields()
 {
-  $("input:checkbox", this).each(function()
+  $("input:checkbox", document).each(function()
   {
     if( !$(this).is(":checked") )
     {

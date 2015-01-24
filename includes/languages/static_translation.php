@@ -14,6 +14,9 @@ function transtext()
 	echo T_('delete successfully');
 	echo T_('delete failed!');
 	echo T_('id does not exist!');
+	echo T_('all require fields must fill');
+	echo T_('some fields must be change for update!');
+	
 	
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Logout");                                                                // Line 43
