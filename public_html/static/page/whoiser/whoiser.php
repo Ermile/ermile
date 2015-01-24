@@ -69,7 +69,7 @@ function checkwhois($_conn, $_res, $_start, $_period)
 {
 	// create a new little list for check
 	$mylist = array();
-	for ($i=$_start; $i < $_period; $i++)
+	for ($i=$_start; $i < $_start+$_period; $i++)
 		$mylist[$i] = $_res[$i];
 
 	// var_dump($mylist);
@@ -147,19 +147,29 @@ function getnames($_conn)
 // show result for viewer
 function showtable($_conn)
 {
-	$sql      = "Select * from ir where status ";
-	$mycond   = isset($_GET['status'])? "='".$_GET['status']."'": 'is not NULL';
-	$sql      = $sql. $mycond;
+	$sql               = "Select * from ir where status ";
+	$mycond            = isset($_GET['status'])? "='".$_GET['status']."'": 'is not NULL';
+	$sql               = $sql. $mycond;
+	
+	$myresult          = $_conn->query($sql);
 
-	$myresult = $_conn->query($sql);
-
+	$mycount           = 0;
+	$mycount_available = 0;
+	$mycount_taken     = 0;
 	while($row = $myresult->fetch_array())
 	{
+		$mycount = $mycount +1;
+		$mycount_available += $row['status']=='available'? 1: 0;
+
 		echo '<tr>';
 		echo '<td>'.$row['rowid'].'</td>';
 		echo '<td>'.$row['name'].'</td>';
 		echo '<td>'.$row['status'].'</td>';
 		echo '</tr>';
 	}
+
+	echo 'No of Doamins: <b>'.$mycount.'</b><br/>';
+	echo 'Available: <b>'.$mycount_available.'</b><br/>';
+	echo 'Taken: <b>'.$mycount_taken.'</b><br/>';
 }
 ?>
