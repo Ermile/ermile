@@ -2,9 +2,9 @@
 ini_set('display_errors',1);ini_set('display_startup_errors',1);error_reporting(-1);
 require_once('whois/whois.php');
 
-define('Status', 'show');
+// define('Status', 'show');
 // define('Status', 'add_to_db');
-// define('Status', 'check_whois');
+define('Status', 'check_whois');
 
 // fix for local and web
 // $host = parse_url($_SERVER['SERVER_NAME']);
