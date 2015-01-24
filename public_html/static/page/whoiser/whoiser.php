@@ -34,6 +34,7 @@ echo '<html><body>';
 echo "<style>table, th, td {margin: 0 auto;border: 1px solid black;border-collapse: collapse;}th, td {padding:2px 15px;}</style>";
 echo '<table>';
 echo '<tr>';
+echo '<th>Row id</th>';
 echo '<th>Domain</th>';
 echo '<th>Status</th>';
 echo '</tr>';
@@ -78,10 +79,11 @@ function checkwhois($_conn, $_res, $_start, $_period)
 		// create a loop for whois domains
 		foreach ($mylist as $key => $value)
 		{
-			$mydomain    = null;
+			$mydomain = null;
 			$mydomain = new Whois($value.'.ir');
 			$myresult = array();
 			echo '<tr>';
+			echo '<td> </td>';
 			echo '<td>'.$value.'</td>';
 
 			if ($mydomain && $mydomain->isAvailable())
@@ -151,6 +153,7 @@ function showtable($_conn)
 	while($row = $myresult->fetch_array())
 	{
 		echo '<tr>';
+		echo '<td>'.$row['rowid'].'</td>';
 		echo '<td>'.$row['name'].'</td>';
 		echo '<td>'.$row['status'].'</td>';
 		echo '</tr>';
