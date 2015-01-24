@@ -49,8 +49,9 @@ else
 		$mycount = $_GET['count'] == 'all'? count($res)-1: $_GET['count'];
 	else
 		$mycount = 10;
+	$mystart = isset($_GET['start'])? $_GET['start']: 0;
 
-	$res2 = checkwhois($conn, $res, 0 , $mycount);
+	$res2 = checkwhois($conn, $res, $mystart , $mycount);
 }
 
 echo '</table>';
