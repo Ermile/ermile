@@ -1,0 +1,14 @@
+var fs = require('fs');
+
+var files = fs.readdirSync(process.cwd());
+files.forEach(function(f) {
+  if(f.indexOf('.lang') === -1) return;
+  var content = fs.readFileSync(process.cwd() + '/' + f) + '';
+  var ind = 0;
+  for(var i = 0; i < 6; i++) {
+    ind = content.indexOf('\n', ind + 1);
+  }
+  console.log(ind);
+  content = content.slice(ind+2);
+  fs.writeFileSync(process.cwd() + '/' + f.replace('lang', 'json'), content);
+});
