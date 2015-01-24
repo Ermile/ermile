@@ -35,7 +35,7 @@ echo '<th>Status</th>';
 echo '</tr>';
 
 $res = getnames($conn);
-$res2 = checkwhois($conn, $res, 0 , 1);
+$res2 = checkwhois($conn, $res, 0 , 100);
 
 echo '</table>';
 echo '</body></html>';
