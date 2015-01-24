@@ -3,7 +3,7 @@ namespace content\home;
 
 class view extends \content\main\view{
 	public function config(){
-		$formEdit = $this->createform(".custom", "edit");
+		$formEdit = $this->createform(".custom");
 		// $this->twigextract();
 	}
 

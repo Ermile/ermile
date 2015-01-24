@@ -21,7 +21,7 @@ class account extends \lib\form
 	{
 		$this->mobile	 = $this->make('#mobile')->label(null)->desc(T_("Enter your registered mobile"))
 							 ->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
-		$this->password = $this->make('#password')->label(null)->pl(T_('Password'))->desc(T_("Enter your password"));
+		$this->password = $this->make('#password')->name('password')->label(null)->pl(T_('Password'))->desc(T_("Enter your password"));
 		$this->submit	 = $this->make('submit')->title(T_('Login'));
 	}
 
@@ -29,7 +29,7 @@ class account extends \lib\form
 	{
 		$this->mobile	 = $this->make('#mobile')->label(null)
 							 ->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
-		$this->password = $this->make('#password')->label(null)->pl(T_('Password'));
+		$this->password = $this->make('#password')->name('password')->label(null)->pl(T_('Password'));
 		$this->submit	 = $this->make('submit')->title(T_('Create an account'));
 	}
 
@@ -52,7 +52,7 @@ class account extends \lib\form
 
 	private function changepass()
 	{
-		$this->password = $this->make('#password')->label(null)->pl(T_('Password'));
+		$this->password = $this->make('#password')->name('password')->label(null)->pl(T_('Password'));
 		$this->submit	 = $this->make('submit')->title(T_('Change my password'));
 	}
 

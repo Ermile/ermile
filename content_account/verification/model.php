@@ -17,6 +17,7 @@ class model extends \mvc\model
 								->andVerification_code($mycode)
 								->andVerification_status('enable')
 								->select();
+		var_dump($tmp_result);
 
 		if($tmp_result->num() == 1)
 		{
