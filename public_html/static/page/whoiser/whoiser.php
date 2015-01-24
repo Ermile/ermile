@@ -147,7 +147,10 @@ function getnames($_conn)
 // show result for viewer
 function showtable($_conn)
 {
-	$sql      = "Select * from ir where status is not NULL";
+	$sql      = "Select * from ir where status ";
+	$mycond   = isset($_GET['status'])? "='".$_GET['status']."'": 'is not NULL';
+	$sql      = $sql. $mycond;
+
 	$myresult = $_conn->query($sql);
 
 	while($row = $myresult->fetch_array())
