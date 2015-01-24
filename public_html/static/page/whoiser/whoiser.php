@@ -77,7 +77,7 @@ function checkwhois($_conn, $_res, $_start = null, $_period = null)
 			$mylist[$_res[$i]] = null;
 
 
-	if(Status == 'check_whois')
+	if(Status == 'check_whois' || Status == 'auto')
 	{
 		// create a loop for whois domains
 		foreach ($mylist as $key => $value)
@@ -150,12 +150,12 @@ function getnames($_conn)
 // show result for viewer
 function showtable($_conn, $_show = true, $_notnull = true)
 {
-	$sql               = "Select * from ir where status ";
 	if($_notnull)
-		$mycond            = isset($_GET['status'])? "='".$_GET['status']."'": 'is not NULL';
+		$mycond = isset($_GET['status'])? "='".$_GET['status']."'": 'is not NULL';
 	else
-		$mycond            = isset($_GET['status'])? "='".$_GET['status']."'": 'is NULL';
+		$mycond = isset($_GET['status'])? "='".$_GET['status']."'": 'is NULL';
 
+	$sql               = "Select * from ir where status ";
 	$sql               = $sql. $mycond;
 	
 	$myresult          = $_conn->query($sql);
