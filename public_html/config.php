@@ -55,4 +55,12 @@ define('MultiLanguage', true);
  */
 define('SaveAsCookie', true);
 
+/**
+ * LogVisitors
+ * Default: false
+ *
+ * if table exist add to it, else create a table and add a visitor details to it
+ */
+define('LogVisitors', true);
+
 ?>

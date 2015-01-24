@@ -64,8 +64,8 @@ class view extends \mvc\view
 				break;
 		}
 
-		$this->global->title		= $this->data->page['desc'].' | '.$this->data->site['title'];
-		$form = $this->createform('.'.$this->data->myform, $this->data->module);
+		$this->global->title = $this->data->page['desc'].' | '.$this->data->site['title'];
+		$form                = $this->createform('.'.$this->data->myform, $this->data->module);
 	}
 }
 ?>

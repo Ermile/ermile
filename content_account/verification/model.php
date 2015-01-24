@@ -10,7 +10,9 @@ class model extends \mvc\model
 		// for debug you can uncomment below line to disallow redirect
 		// $this->controller()->redirector	= false; 
 		sleep(1);
-		// $mytype     = var_dump(utility\cookie::read('from') );
+		$mytype     = utility\mail::send();
+		exit();
+		// $mytype     = var_dump(utility\Cookie::read('from') );
 		$mymobile   = str_replace(' ', '', utility::post('mobile'));
 		$mycode     = utility::post('code');
 		$tmp_result	= $this->sql()->tableVerifications  ()
