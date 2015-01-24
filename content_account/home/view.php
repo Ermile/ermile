@@ -12,15 +12,12 @@ class view extends \mvc\view
 		$this->include->customcss      = false;
 		$this->include->customjs       = false;
 		$this->data->bodyclass         = 'unselectable';
-		
 		$this->data->myform            = 'account';
-		
-		// form variable
-		$this->data->post              = array();
-		$this->data->post['referer']   = \lib\utility::get('referer');
-		$this->data->post['from']      = \lib\utility::get('from');
-		$this->data->post['mobile']    = \lib\utility::get('mobile');
 
+		$this->global->cookier         = array( 'domain' => '.'.$this->url->raw,
+															 'path'   => '/',
+															 'age'    => 'temporary'
+															);
 
 		switch ($this->data->module)
 		{
@@ -47,16 +44,19 @@ class view extends \mvc\view
 			case 'changepass':
 				$this->data->page['desc']	= T_('Change password');
 				$this->include->telinput	= false;
+				$this->global->cookier     = null;
 				break;
 
 			case 'smsdelivery':
 				$this->data->page['desc']	= T_('SMS Delivery');
 				$this->include->telinput	= false;
+				$this->global->cookier     = null;
 				break;
 
 			case 'smscallback':
 				$this->data->page['desc']	= T_('SMS Callback');
 				$this->include->telinput	= false;
+				$this->global->cookier     = null;
 				break;
 
 			default:

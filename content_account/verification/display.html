@@ -4,7 +4,7 @@
 {%block content%}
    <div id="desc" >
     <p>{%trans "please check your mobile and enter the code"%}</p>
-    <a id="delay" class="hide" href="/verificationsms?mobile={{mobile}}" target="_blank">{%trans "don't receive message?"%}</a>
+    <a id="delay" class="hide" href="/verificationsms{{url.param}}" target="_blank">{%trans "don't receive message?"%}</a>
    </div>
 {%endblock%}
 

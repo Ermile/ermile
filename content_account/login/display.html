@@ -3,7 +3,7 @@
 
 {%block content%}
    <div id="desc">
-    <p><a href="/recovery" title='{%trans "Click here for recovery your password"%}' tabindex="-1">{%trans "Can't access your account?"%}</a></p>
-    <p>{%trans "Don't have an account?"%} <a href="/signup" title='{%trans "Click here to create an account"%}' tabindex="-1">{%trans "Sign Up"%}</a></p>
+    <p><a href="/recovery{{url.param}}" title='{%trans "Click here for recovery your password"%}' tabindex="-1">{%trans "Can't access your account?"%}</a></p>
+    <p>{%trans "Don't have an account?"%} <a href="/signup{{url.param}}" title='{%trans "Click here to create an account"%}' tabindex="-1">{%trans "Sign Up"%}</a></p>
    </div>
 {%endblock%}

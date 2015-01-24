@@ -16,6 +16,8 @@ function transtext()
 	echo T_('id does not exist!');
 	echo T_('all require fields must fill');
 	echo T_('some fields must be change for update!');
+	echo T_('Ermile');
+	echo T_('ermile');
 	
 	
 	//----------------------------------------------------content_cp/home/display.html

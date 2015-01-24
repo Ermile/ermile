@@ -10,22 +10,25 @@ class model extends \mvc\model
 		// for debug you can uncomment below line to disallow redirect
 		// $this->controller()->redirector	= false; 
 		sleep(1);
-		$mymobile      = str_replace(' ', '', utility::post('mobile'));
-		$mycode			= utility::post('code');
-		$tmp_result		=  $this->sql()->tableVerifications()
-								->whereVerification_value($mymobile)
-								->andVerification_code($mycode)
-								->andVerification_status('enable')
+		// $mytype     = var_dump(utility\cookie::read('from') );
+		$mymobile   = str_replace(' ', '', utility::post('mobile'));
+		$mycode     = utility::post('code');
+		$tmp_result	= $this->sql()->tableVerifications  ()
+								->whereVerification_value     ($mymobile)
+								->andVerification_code        ($mycode)
+								->andVerification_type        ($mytype)
+								->andVerification_status      ('enable')
 								->select();
 
-		if($tmp_result->num() == 1)
+		if($tmp_result->num())
 		{
 			// mobile and code exist update the record and verify
-			$qry		= $this->sql()->tableVerifications()
-							->setVerification_status('expire')
-							->whereVerification_value($mymobile)
-							->andVerification_code($mycode)
-							->andVerification_status('enable');
+			$qry		= $this->sql()->tableVerifications ()
+							->setVerification_status        ('expire')
+							->whereVerification_value       ($mymobile)
+							->andVerification_code          ($mycode)
+							->andVerification_type          ($mytype)
+							->andVerification_status        ('enable');
 			$sql		= $qry->update();
 
 
@@ -72,7 +75,7 @@ class model extends \mvc\model
 		else
 		{
 			// mobile exist more than 2 times!
-			debug::error(T_("Please forward this message to Administrator"));
+			debug::error(T_("Please forward this message to Administrator").$tmp_result->string());
 		}
 	}
 }
