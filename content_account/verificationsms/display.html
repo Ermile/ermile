@@ -13,11 +13,11 @@
 {%block myjs%}
 <script>
 route('/verificationsms', function() {
-  setTimeout(createdelay, 5000);
+  setTimeout(createdelay, 20000);
 });
 
 function createdelay() {
-  var requestDelay = 3000;
+  var requestDelay = 10000;
   var $body = $(document.body);
 
   $body.ajaxify({
