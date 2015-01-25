@@ -6,6 +6,7 @@ class view extends \mvc\view
 	public function options()
 	{
 		$this->data->bodyclass    = 'fixed';
+		$this->include->js        = false;
 	}
 
 

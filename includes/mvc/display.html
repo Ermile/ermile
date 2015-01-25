@@ -14,8 +14,10 @@
  <!-- [if lte IE 8]><script>document.location = 'http://www.whatbrowser.org/intl/fa/';</script><![endif] -->
  <link rel="author"        href="{{url.static}}humans.txt"/>
  <link rel="shortcut icon" href="{{url.static}}images/favicon.png"/>
-{%if include.css%}
- <link rel="stylesheet"    href="{{url.MainStatic}}css/style.css?ver=0.0.1"/>{{include.newline}}{%endif%}
+{%if include.css_main%}
+ <link rel="stylesheet"    href="{{url.MainStatic}}css/style.css"/>{{include.newline}}{%endif%}
+{%if include.css     %}
+ <link rel="stylesheet"    href="{{url.static}}css/style.css"/>{{include.newline}}{%endif%}
 {%if include.fontawesome %}
  <link rel="stylesheet"    href="{{url.MainStatic}}css/font-awesome.min.css"/>{{include.newline}}{%endif%}
 {%block head_css         %}{%endblock%}
@@ -106,10 +108,12 @@
 {%endblock%}
 {%block foot_css%}{%endblock%}
 
-{%if include.js        %} <script src="{{url.MainStatic}}js/common.js"></script>{{include.newline}}{%endif%}
+{%if include.js_main   %} <script src="{{url.MainStatic}}js/common.js"></script>{{include.newline}}{%endif%}
+{%if include.js        %} <script src="{{url.static}}js/script.js"></script>{{include.newline}}{%endif%}
 {%if include.datatable %} <script src="{{url.MainStatic}}js/jquery.dataTables.min.js"></script>{{include.newline}}{%endif%}
 {%if include.editor    %} <script src="{{url.MainStatic}}js/medium-editor.min.js"></script>{{include.newline}}{%endif%}
 {%if include.telinput  %} <script src="{{url.MainStatic}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
 {%block foot_js        %}{%endblock%}
+
 </body>
 </html>

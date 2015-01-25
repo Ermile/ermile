@@ -5,7 +5,9 @@ class view extends \mvc\view
 {
 	public function config()
 	{
+		$this->include->css_main       = false;
 		$this->include->css            = false;
+		$this->include->js             = false;
 		$this->include->telinput       = true;
 		$this->data->bodyclass         = 'unselectable';
 		$this->data->myform            = 'account';
