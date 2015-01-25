@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Valid</title>
+
+  <style>
+    .results {
+      float: right;
+      direction: rtl;
+    }
+    .results .success {
+      color: #2CBC55;
+    }
+    .results .error {
+      color: #E32C2C;
+    }
+    .results .warn {
+      color: #EE851A;
+    }
+    .results .head {
+      font-size: 20px;
+      font-weight: bold;
+      font-family: 'B Titr';
+    }
+
+    .group {
+      font-family: 'B Yekan';
+    }
+
+    .group-head {
+      border-right: 2px solid;
+      padding-right: 5px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .group-head.error {
+      border-color: #E32C2C;
+    }
+
+    .group-head.warn {
+      border-color: #EE851A;
+    }    
+
+    .group-member {
+      padding-right: 15px;
+    }
+
+    input.error {
+      box-shadow: 0 0 2px red;
+    }
+    input.warn {
+      box-shadow: 0 0 2px orange;
+    }
+  </style>
+</head>
+<body>
+
+  <form action='http://localhost:8000/form-validate' method='post'>
+    <label>Username</label>
+    <input type='text' name='username'>
+
+    <label>Password</label>
+    <input type='password' name='password'>
+
+    <button>ثبت</button>
+
+    <div class='results'></div>
+  </form>
+  
+  <script src='js/main.js'></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+node_modules
+js/main.js
+js/main.js.map
+tests/libs.js
+tests/libs.js.map
+*.sublime-project
+*.sublime-workspace
