@@ -23,13 +23,6 @@ class view extends \lib\view
 		// if you need to set a class for body element in html add in this value
 		// $this->data->bodyclass      = null;
 		
-		// define default value for include
-		$this->include->datatable   = false;
-		$this->include->fontawesome = false;
-		$this->include->telinput    = false;
-		$this->include->customcss   = true;
-		$this->include->customjs    = true;
-		
 		$this->data->display['account'] = "content_account/main/layout.html";
 		$this->data->display['cp']      = "content_cp/main/layout.html";
 

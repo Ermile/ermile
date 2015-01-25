@@ -5,9 +5,6 @@ class view extends \mvc\view
 {
 	public function options()
 	{
-		$this->include->telinput  = false;
-		$this->include->customcss = false;
-		$this->include->customjs  = false;
 		$this->data->bodyclass    = 'fixed';
 	}
 
