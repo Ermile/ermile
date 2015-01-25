@@ -37,15 +37,15 @@ class model extends \mvc\model
 
 		$this->commit(function()
 		{
-			$this->redirector()->set_url();
-			debug::true("register sms successfully");
+			debug::true(T_("register sms successfully"));
+			// $this->redirector()->set_url();
 		});
 
 		// if a query has error or any error occour in any part of codes, run roolback
 		$this->rollback(function()
 		{
-			$this->redirector()->set_url('smsdelivery?uid=201500001');
-			debug::error("register sms failed!");
+			debug::error(T_("register sms failed!"));
+			// $this->redirector()->set_url('smsdelivery?uid=201500001');
 		} );
 
 		// delete soon
@@ -89,6 +89,11 @@ class model extends \mvc\model
 
 	private function smscallback($_from, $_to, $_message, $_messageID, $_method)
 	{
+		if(substr($_from, 0, 1) !== '+')
+			$_from = substr($_from, 1);
+		elseif(substr($_from, 0, 1) !== '0')
+			$_from = '98'.substr($_from, 1);
+
 		$qry		= $this->sql()->tableSmss()
 						->setSms_from($_from)
 						->setSms_to($_to)
@@ -101,15 +106,15 @@ class model extends \mvc\model
 
 		$this->commit(function()
 		{
-			debug::true("register sms successfully");
-			$this->redirector()->set_url();
+			debug::true(T_("register sms successfully"));
+			// $this->redirector()->set_url();
 		} );
 
 		// if a query has error or any error occour in any part of codes, run roolback
 		$this->rollback(function()
 		{
-			debug::error("register sms failed!");
-			$this->redirector()->set_url('smscallback?uid=201500001');
+			debug::error(T_("register sms failed!"));
+			// $this->redirector()->set_url('smscallback?uid=201500001');
 		} );
 
 		// delete soon

@@ -44,7 +44,7 @@ class controller extends \mvc\controller
 				}
 				else
 				{
-					\lib\debug::true(T_("You are logined to system!"));
+					\lib\debug::true(T_("you are logined to system!"));
 					$this->redirector()->set_domain()->set_url()->redirect();
 					// \lib\http::access(T_("you are logined to system!"));
 				}
@@ -54,7 +54,7 @@ class controller extends \mvc\controller
 			case 'changepass':
 				if(!$islogin)
 				{
-					\lib\http::access(T_("You can't access to this page!"));
+					\lib\http::access(T_("you can't access to this page!"));
 				}
 			case 'verification':
 				$this->model_name	= 'content_account\\'.$mymodule.'\model';
@@ -68,7 +68,9 @@ class controller extends \mvc\controller
 			case 'logout':
 				if(!$islogin)
 				{
-					\lib\http::access(T_("You must first logined to system!"));
+					\lib\debug::true(T_("you must first logined to system!"));
+					$this->redirector()->set_domain()->set_url()->redirect();
+					// \lib\http::access(T_("you must first logined to system!"));
 				}
 				else
 				{

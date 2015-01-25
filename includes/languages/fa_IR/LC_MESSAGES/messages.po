@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-25 06:15+0330\n"
-"PO-Revision-Date: 2015-01-25 06:15+0330\n"
+"POT-Creation-Date: 2015-01-25 06:38+0330\n"
+"PO-Revision-Date: 2015-01-25 06:38+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -94,6 +94,16 @@ msgstr "این شماره موبایل اشتباه است"
 #: ../../../.././content_account/verification/model.php:73
 msgid "please forward this message to administrator"
 msgstr "لطفا این پیغام را برای مدیر سیستم ارسال کنید"
+
+#: ../../../.././content_account/sms/model.php:40
+#: ../../../.././content_account/sms/model.php:109
+msgid "register sms successfully"
+msgstr "ثبت پیامک با موفقیت انجام شد"
+
+#: ../../../.././content_account/sms/model.php:47
+#: ../../../.././content_account/sms/model.php:116
+msgid "register sms failed!"
+msgstr "ثبت پیامک ناموفق بود!"
 
 #: ../../../.././content_account/signup/model.php:19
 msgid "mobile number exist!"

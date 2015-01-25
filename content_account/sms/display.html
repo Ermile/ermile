@@ -1,8 +1,14 @@
 {%extends display.account%}
+
+
 {%block content%}
 <footer>
   <div id="desc">
     <p>{%trans "receive message callback!"%}</p>
   </div>
 </footer>
+{%endblock%}
+
+{%block form_def%}
+   <form class="ajx account" method="post" action="{{module}}?uid=201500001">{{forms.make(form[myform])}}</form>
 {%endblock%}
