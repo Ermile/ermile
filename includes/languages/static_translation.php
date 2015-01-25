@@ -18,6 +18,15 @@ function transtext()
 	echo T_('some fields must be change for update!');
 	echo T_('Ermile');
 	echo T_('ermile');
+	echo T_('now we only support Iran!');
+	echo T_('your verification code is');
+	echo T_('your recovery code is');
+	echo T_('you account is verified successfully');
+	echo T_('thanks for using our service');
+	echo T_('made in iran');
+	
+	
+
 	
 	
 	//----------------------------------------------------content_cp/home/display.html

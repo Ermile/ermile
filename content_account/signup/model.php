@@ -7,39 +7,37 @@ class model extends \mvc\model
 {
 	public function post_signup()
 	{
-		// for debug you can uncomment below line to disallow redirect
-		// $this->controller()->redirector	= false; 
-
+		// set variable
 		$mymobile   = str_replace(' ', '', utility::post('mobile'));
-		$mypass     = utility::post('password');
-		$tmp_result =  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
+		$mymobile   = substr($mymobile, 1);
+		$mypass     = utility::post('password', true);
+		// check for mobile exist
+		$tmp_result = $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
 
-
+		// if exist
 		if($tmp_result->num() == 1)
-		{
-			// mobile exist
-			debug::error(T_("Mobile number exist!"));
-		}
+			debug::error(T_("mobile number exist!"));
+
+		// if new mobile number
 		elseif($tmp_result->num() == 0 )
 		{
-			// mobile does not exits
-			$qry		= $this->sql()->tableUsers()
-							->setUser_type('storeadmin')
-							->setUser_mobile($mymobile)
-							->setUser_pass($mypass)
-							->setUser_createdate(date('Y-m-d H:i:s'));
-			$sql		= $qry->insert();
-
-			$myuserid	= $sql->LAST_INSERT_ID();
-			$mycode		= utility::randomCode();
-			$qry		= $this->sql()->tableVerifications()
-							->setVerification_type('mobileregister')
-							->setVerification_value($mymobile)
-							->setVerification_code($mycode)
-							->setUser_id($myuserid)
-							->setVerification_status('enable')
-							->setVerification_createdate(date('Y-m-d H:i:s'));
-			$sql		= $qry->insert();
+			$qry      = $this->sql()->tableUsers ()
+							->setUser_type           ('storeadmin')
+							->setUser_mobile         ($mymobile)
+							->setUser_pass           ($mypass)
+							->setUser_createdate     (date('Y-m-d H:i:s'));
+			$sql      = $qry->insert();
+			
+			$myuserid = $sql->LAST_INSERT_ID();
+			$mycode   = utility::randomCode();
+			$qry      = $this->sql()->tableVerifications()
+							->setVerification_type             ('mobilesignup')
+							->setVerification_value            ($mymobile)
+							->setVerification_code             ($mycode)
+							->setUser_id                       ($myuserid)
+							->setVerification_status           ('enable')
+							->setVerification_createdate       (date('Y-m-d H:i:s'));
+			$sql      = $qry->insert();
 
 
 			// ======================================================
@@ -49,24 +47,23 @@ class model extends \mvc\model
 			$this->commit(function($_parameter, $_parameter2)
 			{
 				//Send SMS
-				\lib\utility::send_sms($_parameter, $_parameter2);
+				\lib\utility\Sms::send($_parameter, $_parameter2);
+				debug::true(T_("register successfully").T_('we send a verification code for you'));
 
-				$this->redirector()->set_url('verification?from=signup&mobile='.(substr($_parameter,1)).
-					'&referer='.utility::get('referer') );
-				debug::true(T_("Register successfully"));
+				$this->redirector()->set_url('verification?from=signup&mobile='.$_parameter.
+														'&referer='.utility\Cookie::read('referer'));
 			}, $mymobile, $mycode);
 
 			// if a query has error or any error occour in any part of codes, run roolback
 			$this->rollback(function()
 			{
-				debug::error(T_("Register failed!"));
+				debug::error(T_("register failed!"));
 			} );
 		}
+
+		// if mobile exist more than 2 times!
 		else
-		{
-			// mobile exist more than 2 times!
-			debug::error(T_("Please forward this message to Administrator"));
-		}
+			debug::error(T_("please forward this message to administrator"));
 	}
 }
 ?>

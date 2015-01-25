@@ -42,7 +42,7 @@ class model extends \mvc\model
 			$this->commit(function($_parameter, $_parameter2)
 			{
 				//Send SMS
-				\lib\utility::send_sms($_parameter, $_parameter2);
+				\lib\utility\Sms::send($_parameter, $_parameter2);
 
 				debug::true(T_("Step 1 of 2 is complete. Please check your mobile to continue"));
 				$this->redirector()->set_url('verification?from=recovery&mobile='.(substr($_parameter,1)).

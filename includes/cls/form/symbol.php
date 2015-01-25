@@ -59,11 +59,10 @@ class symbol extends \lib\form
 
 		$this->pass =
 		$this->password = $this->make("password")->name("pass")->label(T_("Password"))->autocomplete('off')
-							->required()->maxlength(20)->pattern("^.{5,20}$")->title(T_("between 5-20 character"))
-							->pos('hint--rounded hint--bottom')->desc(T_("between 5-20 character. be tricky!"));
-							// ->validate()->password();
+							->required()->maxlength(40)->pattern("^.{5,40}$")->title(T_("between 5-40 character"))
+							->pos('hint--rounded hint--bottom')->desc(T_("between 5-40 character. be tricky!"));
 
-
+		// $this->password->validate()->password();
 	}
 }
 ?>

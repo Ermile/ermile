@@ -5,22 +5,22 @@ use \lib\debug;
 
 class model extends \mvc\model
 {
-	function put_verification()
+	public function put_verification()
 	{
 		// for debug you can uncomment below line to disallow redirect
 		// $this->controller()->redirector	= false; 
 		sleep(1);
-		$mytype     = utility\mail::send();
-		exit();
-		// $mytype     = var_dump(utility\Cookie::read('from') );
+		$mytype     = utility\Cookie::read('from');
 		$mymobile   = str_replace(' ', '', utility::post('mobile'));
 		$mycode     = utility::post('code');
 		$tmp_result	= $this->sql()->tableVerifications  ()
-								->whereVerification_value     ($mymobile)
-								->andVerification_code        ($mycode)
-								->andVerification_type        ($mytype)
-								->andVerification_status      ('enable')
-								->select();
+							->whereVerification_value        ($mymobile)
+							->andVerification_code           ($mycode)
+							->andVerification_type           ('mobile'.$mytype)
+							->andVerification_status         ('enable')
+							->select();
+		var_dump($tmp_result->num());
+		exit();
 
 		if($tmp_result->num())
 		{
@@ -29,7 +29,7 @@ class model extends \mvc\model
 							->setVerification_status        ('expire')
 							->whereVerification_value       ($mymobile)
 							->andVerification_code          ($mycode)
-							->andVerification_type          ($mytype)
+							->andVerification_type          ('mobile'.$mytype)
 							->andVerification_status        ('enable');
 			$sql		= $qry->update();
 
