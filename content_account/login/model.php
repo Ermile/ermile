@@ -58,11 +58,11 @@ class model extends \mvc\model
 			}
 				// password is incorrect:(
 			else
-				debug::error(T_("password is incorrect"));
+				debug::error(T_("mobile or password is incorrect"));
 		}
 		// mobile does not exits
 		elseif($tmp_result->num() == 0 )
-			debug::error(T_("mobile number is incorrect"));
+			debug::error(T_("mobile or password is incorrect"));
 
 		// mobile exist more than 2 times!
 		else

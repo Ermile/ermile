@@ -1,12 +1,17 @@
 <?php
 namespace cls\validate;
 
-return function(){
+return function()
+{
+	// $this->value = utility::hasher($this->value)
 	var_dump("password validate");
 	exit();
-	if(!preg_match("/^\d+$/", $this->value)){
+	if(!preg_match("/^\d+$/", $this->value))
+	{
 		return false;
-	}else{
+	}
+	else
+	{
 		return true;
 	}
 }

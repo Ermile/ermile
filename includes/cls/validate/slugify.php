@@ -1,7 +1,8 @@
 <?php
 namespace cls\validate;
 
-return function(){
+return function()
+{
 	return true;
 }
 ?>
