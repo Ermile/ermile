@@ -12,7 +12,7 @@ class model extends \mvc\model
 		$mymobile   = substr($mymobile, 1);
 		$mypass     = utility::post('password');
 		// check for mobile exist
-		$tmp_result =  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->andUser_pass(md5(utility::post('password')))->select();
+		$tmp_result =  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
 
 		// if exist
 		if($tmp_result->num() == 1)
@@ -58,11 +58,11 @@ class model extends \mvc\model
 			}
 				// password is incorrect:(
 			else
-				debug::error(T_("password is incorrect"));
+				debug::error(T_("mobile or password is incorrect"));
 		}
 		// mobile does not exits
 		elseif($tmp_result->num() == 0 )
-			debug::error(T_("mobile number is incorrect"));
+			debug::error(T_("mobile or password is incorrect"));
 
 		// mobile exist more than 2 times!
 		else

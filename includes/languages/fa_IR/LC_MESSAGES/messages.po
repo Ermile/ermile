@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-25 06:38+0330\n"
-"PO-Revision-Date: 2015-01-25 06:38+0330\n"
+"POT-Creation-Date: 2015-01-25 15:33+0330\n"
+"PO-Revision-Date: 2015-01-25 15:34+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -17,18 +17,18 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../../../../.\n"
 
 #: ../../../.././content_account/home/controller.php:47
-msgid "You are logined to system!"
-msgstr "شما قبلا به سیستم وارد شده اید!"
+msgid "you are logined to system!"
+msgstr "شما قبلا یک بار وارد سیستم شده اید!"
 
 #: ../../../.././content_account/home/controller.php:57
-msgid "You can't access to this page!"
+msgid "you can't access to this page!"
 msgstr "شما اجازه دسترسی به این صفحه را ندارید!"
 
 #: ../../../.././content_account/home/controller.php:71
-msgid "You must first logined to system!"
-msgstr "شما ابتدا باید وارد سیستم شوید!"
+msgid "you must first logined to system!"
+msgstr "قبل از هرکاری شما ابتدا باید وارد سیستم شوید!"
 
-#: ../../../.././content_account/home/controller.php:78
+#: ../../../.././content_account/home/controller.php:80
 msgid "logout successfully"
 msgstr "خروج موفقیت آمیز"
 
@@ -81,12 +81,9 @@ msgid "login failed!"
 msgstr "ثبت نام ناموفق!"
 
 #: ../../../.././content_account/login/model.php:61
-msgid "password is incorrect"
-msgstr "کلمه عبور اشتباه است"
-
 #: ../../../.././content_account/login/model.php:65
-msgid "mobile number is incorrect"
-msgstr "این شماره موبایل اشتباه است"
+msgid "mobile or password is incorrect"
+msgstr "شماره موبایل یا کلمه عبور اشتباه است"
 
 #: ../../../.././content_account/login/model.php:69
 #: ../../../.././content_account/signup/model.php:63
@@ -1696,6 +1693,9 @@ msgstr "ارمایل نام شرکت ماست"
 #: ../../../.././includes/mvc/view.php:14
 msgid "Ermile is Inteligent."
 msgstr "ارمایل باهوش است!"
+
+#~ msgid "mobile number is incorrect"
+#~ msgstr "این شماره موبایل اشتباه است"
 
 #~ msgid "Please forward this message to Administrator"
 #~ msgstr "لطفا این پیغام را برای مدیر سیستم ارسال کنید"

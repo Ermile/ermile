@@ -196,14 +196,16 @@ optgroup{font-weight:bold;}
 
 /* Form Error Box  || error_0: failed | error_1: successful | error_2: warning;*/
 #formError{position: fixed;z-index:100;bottom:70px;right:0px;margin:0 2%;min-width:30%;max-width:100%;width:400px;color:#fff;font-size:1.5em;cursor:pointer;}
-.error_false{color:#3a87ad;background-color:#d9edf7;}
-.error li{background-color:rgba(254,26,0,.9);}
-.true li{background-color:rgba(92,184,17,.9);}
-.warn li{background-color:rgba(0,0,0,.9);}
+#formError .error_false{background-color:#d9edf7;color:#3a87ad;}
+#formError .error li{background-color:rgba(254,26,0,.9);}
+#formError .true li{background-color:rgba(92,184,17,.9);}
+#formError .warn li{background-color:rgba(0,0,0,.9);}
 #formError ul{margin:0;padding:0 2%}
 #formError ul li{margin-top: 10px;padding:3% 5%;border-radius: 4px;}
 .visible{visibility: visible;opacity: 1;transition: opacity 1s linear;}
 .hidden{visibility: hidden;opacity: 0;transition: visibility 0s 1s, opacity 1s linear;}
+
+form .error{background: #fff0f0;border-color: #dbb1b1;color: #d95c5c;border-radius: 0 .2857rem .2857rem 0;box-shadow: 2px 0 0 0 #d95c5c inset;}
 
 /* Base Elements */
 .container{position:relative;margin:0 auto;padding:0;max-width:1024px;min-width:959px;width:90%;/*Animation Property*/animation-property:width;animation-property:height;transition-duration:1s;-webkit-animation-property:width;-webkit-animation-property:height;-webkit-transition-duration:2s;-moz-animation-property:width;-moz-animation-property:height;-moz-transition-duration:2s;-o-animation-property:width;-o-animation-property:height;-o-transition-duration:2s;}
@@ -220,7 +222,7 @@ max-width: 1600px;margin: 0 auto;background-position: center top;background-repe
 .topic4{background-color: #16acaa;}
 .topic .body{width:99.5%;margin:0 auto;max-width:998px;}
 .topic h2{font-size: 60px;line-height: 70px; margin-bottom: 40px;}
-.topic .Slogan h2{font-size: 30px;line-height: 70px; margin:0 auto;color: #0084C9;text-align: center; background-color: #fff}
+.topic .Slogan h2{font-size: 30px;line-height: 70px; margin-bottom:0px;color: #0084C9;text-align: center; background-color: #fff}
 .desc{font-size:20px;}
 .cover ul{font-size: 14px;}
 .cover li{padding:2px 10px}
@@ -459,9 +461,10 @@ text-indent:-999999px;
 .dataTables_wrapper .edit:hover {background-position: 0 -67px;}
 .dataTables_wrapper .delete:hover {background-position: 0 -23px;}
 
-.column_row{width:5px;padding:0;text-align:center;}
-.column_slug{width:100px;direction:ltr;text-align:left}
-.column_actions{width: 80px;}
+.col_row{width:5px;padding:0;text-align:center;}
+.col_slug{width:100px;direction:ltr;text-align:left}
+.col_status{width:100px;text-align:center;}
+.col_actions{width: 90px;}
 
 
 #main{overflow:hidden;}
@@ -474,13 +477,12 @@ text-indent:-999999px;
   padding: 2px 5px;
 
 }
-
-#main form label{
-  display: block;
-  float: left;
-  min-width: 150px;
-
+.rtl #main form label{
+  float:right;
 }
+
+#main form .label-textarea{width: 100%;float:none}
+.rtl #main form .label-textarea{width: 100%;float:none}
 
 form label.label-radio{
   min-width:50px;
@@ -493,6 +495,26 @@ form input, form select{
   padding: 5px;
 
 }
+
+#main form label{
+  display: block;
+  float: left;
+  min-width: 150px;
+
+}
+
+.rtl #main form label{
+  float:right;
+}
+
+#main form .label-textarea{width: 100%;float:none}
+.rtl #main form .label-textarea{width: 100%;float:none}
+
+form label.label-radio{
+  min-width:50px;
+  margin-right: 10px;
+}
+
 
 form button{
 padding: 4px 12px;
@@ -631,3 +653,5 @@ cursor: pointer;
 
 #footer select{direction:ltr; padding:5px;font-size:1em;border:0;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
 #footer select:hover{opacity:0.8;}
+
+
