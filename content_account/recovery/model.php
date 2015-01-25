@@ -5,33 +5,26 @@ use \lib\debug;
 
 class model extends \mvc\model
 {
-	function post_recovery()
+	public function post_recovery()
 	{
-		// for debug you can uncomment below line to disallow redirect
-		// $this->controller()->redirector	= false; 
-
-		sleep(2);
+		// get parameters and set to local variables
 		$mymobile   = str_replace(' ', '', utility::post('mobile'));
+		$mymobile   = substr($mymobile, 1);
+		// check for mobile exist
 		$tmp_result =  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
 
 		if($tmp_result->num() == 1)
 		{
-			// mobile exist
-			// login: check password then user can login
-			// register: show error
-			// recovery: let's go
+			$myuserid = $tmp_result->assoc('id');
+			$mycode   = utility::randomCode();
 			
-			$tmp_result = $tmp_result->assoc();
-			$myuserid   = $tmp_result['id'];
-			$mycode     = utility::randomCode();
-			
-			$qry        = $this->sql()->tableVerifications()
-								->setVerification_type('mobileforget')
-								->setVerification_value($mymobile)
-								->setVerification_code($mycode)
-								->setUser_id($myuserid)
-								->setVerification_verified('no');
-			$sql        = $qry->insert();
+			$qry      = $this->sql()->tableVerifications ()
+							->setVerification_type           ('mobilerecovery')
+							->setVerification_value          ($mymobile)
+							->setVerification_code           ($mycode)
+							->setUser_id                     ($myuserid)
+							->setVerification_verified       ('no');
+			$sql      = $qry->insert();
 
 
 			// ======================================================
@@ -39,36 +32,27 @@ class model extends \mvc\model
 			// commit for successfull and rollback for failed
 			//
 			// if query run without error means commit
-			$this->commit(function($_parameter, $_parameter2)
+			$this->commit(function($_mobile, $_code)
 			{
+				$myreferer = utility\Cookie::read('referer');
 				//Send SMS
-				\lib\utility\Sms::send($_parameter, $_parameter2);
+				\lib\utility\Sms::send($_mobile, 'recovery', $_code);
+				debug::true(T_("we send a verification code for you"));
 
-				debug::true(T_("Step 1 of 2 is complete. Please check your mobile to continue"));
-				$this->redirector()->set_url('verification?from=recovery&mobile='.(substr($_parameter,1)).
-					'&referer='.utility::get('referer') );
+				$this->redirector()->set_url('verification?from=recovery&mobile='.$_mobile.'&referer='.$myreferer );
 			}, $mymobile, $mycode);
 
 			// if a query has error or any error occour in any part of codes, run roolback
-			$this->rollback(function()
-			{
-				debug::error(T_("Recovery failed!"));
-			} );
+			$this->rollback(function() { debug::error(T_("recovery failed!")); } );
 		}
 
+		// mobile does not exits
 		elseif($tmp_result->num() == 0 )
-		{
-			// mobile does not exits
-			// login: show mobile does not exist
-			// register: ok, can register
 			debug::error(T_("Mobile number is incorrect"));
-		}
 
+		// mobile exist more than 2 times!
 		else
-		{
-			// mobile exist more than 2 times!
-			debug::error(T_("Please forward this message to Administrator"));
-		}
+			debug::error(T_("please forward this message to administrator"));
 	}
 }
 ?>

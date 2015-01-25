@@ -44,7 +44,9 @@ class controller extends \mvc\controller
 				}
 				else
 				{
-					\lib\http::access(T_("You are logined to system!"));
+					\lib\debug::true(T_("You are logined to system!"));
+					$this->redirector()->set_domain()->set_url()->redirect();
+					// \lib\http::access(T_("you are logined to system!"));
 				}
 				break;
 
@@ -73,7 +75,7 @@ class controller extends \mvc\controller
 						// redirect to ermile
 					session_unset();
 					session_destroy();
-					\lib\debug::true(T_("Logout successfully"));
+					\lib\debug::true(T_("logout successfully"));
 					$this->redirector()->set_domain('ermile.dev')->set_url()->redirect();
 					$this->get()->ALL($mymodule);
 				}

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 04, 2015 at 12:13 AM
--- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- Host: localhost
+-- Generation Time: Jan 25, 2015 at 12:01 AM
+-- Server version: 5.5.41-0ubuntu0.14.04.1
+-- PHP Version: 5.6.4-1+deb.sury.org~trusty+1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `accounts` (
-`id` smallint(5) unsigned NOT NULL COMMENT 'test comment',
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'test comment',
   `account_title` varchar(50) NOT NULL,
   `account_slug` varchar(50) NOT NULL,
   `bank_id` smallint(5) unsigned NOT NULL,
@@ -37,16 +37,22 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `account_primarybalance` decimal(14,4) NOT NULL DEFAULT '0.0000',
   `account_desc` varchar(200) DEFAULT NULL,
   `user_id` smallint(5) unsigned NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `slug_unique` (`account_slug`),
+  UNIQUE KEY `cardnumber_unique` (`account_card`),
+  UNIQUE KEY `accountnumber_unique` (`account_number`),
+  KEY `bank_id` (`bank_id`),
+  KEY `accounts_users_id` (`user_id`) USING BTREE
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `accounts`
 --
 
 INSERT INTO `accounts` (`id`, `account_title`, `account_slug`, `bank_id`, `account_branch`, `account_number`, `account_card`, `account_primarybalance`, `account_desc`, `user_id`, `date_modified`) VALUES
-(10, 'test2', 'test2', 1, 'test', '123', '456', '0.0000', NULL, 15, '2014-11-07 22:52:43'),
-(22, 'aaaa', 'sss', 50, 'www', NULL, NULL, '12.0000', 'asda', 16, '2014-11-10 18:47:57');
+(10, 'test2', 'test2', 1, 'test', '123', '456', 0.0000, NULL, 15, '2014-11-07 22:52:43'),
+(11, 'a1', 'a1', 100, NULL, '23', NULL, 500.0000, NULL, 150, NULL);
 
 -- --------------------------------------------------------
 
@@ -55,15 +61,17 @@ INSERT INTO `accounts` (`id`, `account_title`, `account_slug`, `bank_id`, `accou
 --
 
 CREATE TABLE IF NOT EXISTS `addons` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `addon_name` varchar(50) NOT NULL,
   `addon_slug` varchar(50) NOT NULL,
   `addon_desc` varchar(999) DEFAULT NULL,
   `addon_status` enum('enable','disable','expire','goingtoexpire') NOT NULL DEFAULT 'enable',
   `addon_expire` datetime DEFAULT NULL,
   `addon_installdate` datetime DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `slug_unique` (`addon_slug`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -72,14 +80,16 @@ CREATE TABLE IF NOT EXISTS `addons` (
 --
 
 CREATE TABLE IF NOT EXISTS `attachmentmetas` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `attachment_id` int(10) unsigned NOT NULL,
   `attachmentmeta_cat` varchar(50) CHARACTER SET utf8 NOT NULL,
   `attachmentmeta_name` varchar(100) CHARACTER SET utf8 NOT NULL,
   `attachmentmeta_value` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
   `attachmentmeta_status` enum('enable','disable','expire') CHARACTER SET utf8 NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `attachmentmetas_attachments_id` (`attachment_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -88,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `attachmentmetas` (
 --
 
 CREATE TABLE IF NOT EXISTS `attachments` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `attachment_title` varchar(100) DEFAULT NULL,
   `attachment_model` enum('productcategory','product','admin','banklogo','post','system','other') CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `attachment_addr` varchar(100) NOT NULL,
@@ -99,8 +109,11 @@ CREATE TABLE IF NOT EXISTS `attachments` (
   `attachment_server` int(10) unsigned DEFAULT NULL,
   `attachment_folder` int(10) unsigned DEFAULT NULL,
   `user_id` smallint(5) unsigned NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name+type_unique` (`attachment_name`,`attachment_type`),
+  KEY `attachments_users_id` (`user_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -109,43 +122,31 @@ CREATE TABLE IF NOT EXISTS `attachments` (
 --
 
 CREATE TABLE IF NOT EXISTS `banks` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `bank_title` varchar(50) NOT NULL,
   `bank_slug` varchar(50) NOT NULL,
   `bank_website` varchar(50) DEFAULT NULL,
   `bank_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `slug_unique` (`bank_slug`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=160 ;
 
 --
 -- Dumping data for table `banks`
 --
 
 INSERT INTO `banks` (`id`, `bank_title`, `bank_slug`, `bank_website`, `bank_status`, `date_modified`) VALUES
-(1, 'پارسیان', 'parsian', 'http://parsian-bank.com', '', '2014-11-24 12:43:55'),
-(2, 'ملی', 'melli', NULL, '', '2014-11-07 17:37:14'),
-(3, 'ملت', 'mellat', NULL, '', '0000-00-00 00:00:00'),
-(4, 'پاسارگاد', 'pasargad', NULL, '', '0000-00-00 00:00:00'),
-(5, 'تجارت', 'tejarat', NULL, '', '0000-00-00 00:00:00'),
-(6, 'انصار', 'ansar', NULL, '', '0000-00-00 00:00:00'),
-(7, 'آینده', 'ayandeh', NULL, '', '0000-00-00 00:00:00'),
+(1, 'پارسیان', 'parsian', 'http://parsian-bank.com', 'enable', '2015-01-22 13:31:40'),
+(2, 'ملی', 'melli', NULL, 'enable', '2015-01-22 13:31:44'),
+(3, 'ملت', 'mellat', NULL, 'disable', '2015-01-23 21:23:09'),
+(4, 'پاسارگاد', 'pasargad', NULL, 'enable', '2015-01-23 23:03:52'),
+(5, 'پاسارگاد', 'pasargad2', '22', 'enable', '2015-01-23 21:46:28'),
+(6, 'انصار2w', 'ansar2', 'ww2', 'expire', '2015-01-23 22:19:19'),
+(7, 'آینده', 'ayandeh', NULL, 'enable', '2015-01-23 23:09:37'),
 (8, 'صادرات', 'saderat', NULL, '', '0000-00-00 00:00:00'),
 (9, 'سینا', 'sina', NULL, '', '0000-00-00 00:00:00'),
 (10, 'اقتصاد نوین', 'eghtesad', NULL, '', '0000-00-00 00:00:00'),
-(50, 'test', 'tt', '3', '', '0000-00-00 00:00:00'),
-(55, 'test2', 't2', 'www', '', '0000-00-00 00:00:00'),
-(56, 'test312', 't3', 'wwwwwwwq', '', '2014-11-10 17:36:12'),
-(57, '', '', NULL, '', '0000-00-00 00:00:00'),
-(60, 'fsadfsda', 'fwefwqe', NULL, '', '0000-00-00 00:00:00'),
-(61, 'retew', 'tewtewt', NULL, '', '0000-00-00 00:00:00'),
-(64, 'wrr325', '34tweate', NULL, '', '0000-00-00 00:00:00'),
-(65, 'rewqr', 'rwerq', NULL, '', '0000-00-00 00:00:00'),
-(66, 'reqare', 'rwqrw', NULL, '', '0000-00-00 00:00:00'),
-(68, 'rwer', 'wqerqer', NULL, '', '0000-00-00 00:00:00'),
-(70, 'test', 'test2', NULL, '', '0000-00-00 00:00:00'),
-(71, 'wrqwrqwr', 'rwerwe', NULL, '', '0000-00-00 00:00:00'),
-(72, 'fsfewf', 'ewrweq', NULL, '', '0000-00-00 00:00:00'),
-(91, 'salam khobi', 'bale', NULL, '', '2014-11-24 08:02:51'),
 (100, 'reba', 'reba', NULL, '', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
@@ -155,7 +156,7 @@ INSERT INTO `banks` (`id`, `bank_title`, `bank_slug`, `bank_website`, `bank_stat
 --
 
 CREATE TABLE IF NOT EXISTS `comments` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `post_id` smallint(5) unsigned DEFAULT NULL COMMENT 'if comment for post',
   `product_id` smallint(5) unsigned DEFAULT NULL COMMENT 'if comment for product',
   `comment_author` varchar(50) DEFAULT NULL,
@@ -166,8 +167,13 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `comment_parent` int(10) unsigned DEFAULT NULL,
   `user_id` smallint(5) unsigned DEFAULT NULL,
   `Visitor_id` int(10) unsigned NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `comments_posts_id` (`post_id`) USING BTREE,
+  KEY `comments_users_id` (`user_id`) USING BTREE,
+  KEY `comments_products_id` (`product_id`) USING BTREE,
+  KEY `comments_visitors_id` (`Visitor_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -176,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
 --
 
 CREATE TABLE IF NOT EXISTS `costcats` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `costcat_title` varchar(50) NOT NULL,
   `costcat_slug` varchar(50) NOT NULL,
   `costcat_desc` varchar(200) DEFAULT NULL,
@@ -184,8 +190,11 @@ CREATE TABLE IF NOT EXISTS `costcats` (
   `costcat_row` smallint(5) DEFAULT NULL,
   `costcat_type` enum('income','outcome') DEFAULT NULL,
   `costcat_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `slug_unique` (`costcat_slug`),
+  KEY `type` (`costcat_type`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `costcats`
@@ -203,7 +212,7 @@ INSERT INTO `costcats` (`id`, `costcat_title`, `costcat_slug`, `costcat_desc`, `
 --
 
 CREATE TABLE IF NOT EXISTS `costs` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `cost_title` varchar(50) NOT NULL,
   `cost_price` decimal(13,4) NOT NULL,
   `costcat_id` smallint(5) unsigned NOT NULL,
@@ -211,8 +220,12 @@ CREATE TABLE IF NOT EXISTS `costs` (
   `cost_date` datetime NOT NULL,
   `cost_desc` varchar(200) DEFAULT NULL,
   `cost_type` enum('income','outcome') NOT NULL DEFAULT 'outcome',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `type_index` (`cost_type`) USING BTREE,
+  KEY `costs_costcats_id` (`costcat_id`) USING BTREE,
+  KEY `costs_accounts_id` (`account_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -221,11 +234,14 @@ CREATE TABLE IF NOT EXISTS `costs` (
 --
 
 CREATE TABLE IF NOT EXISTS `errorlogs` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` smallint(5) unsigned DEFAULT NULL,
   `errorlog_id` smallint(5) unsigned NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `errorlogs_users_id` (`user_id`) USING BTREE,
+  KEY `errorlogs_errors_id` (`errorlog_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -238,7 +254,9 @@ CREATE TABLE IF NOT EXISTS `errors` (
   `error_title` varchar(100) NOT NULL,
   `error_solution` varchar(999) DEFAULT NULL,
   `error_priority` enum('critical','high','medium','low') NOT NULL DEFAULT 'medium',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `priotity_index` (`error_priority`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -248,26 +266,30 @@ CREATE TABLE IF NOT EXISTS `errors` (
 --
 
 CREATE TABLE IF NOT EXISTS `funds` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `fund_title` varchar(100) NOT NULL,
   `fund_slug` varchar(100) NOT NULL,
   `location_id` smallint(5) unsigned NOT NULL,
   `fund_initialbalance` decimal(14,4) NOT NULL DEFAULT '0.0000',
   `fund_desc` varchar(200) DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `slug_unique` (`fund_slug`),
+  KEY `funds_locations_id` (`location_id`) USING BTREE
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `funds`
 --
 
 INSERT INTO `funds` (`id`, `fund_title`, `fund_slug`, `location_id`, `fund_initialbalance`, `fund_desc`, `date_modified`) VALUES
-(2, 'Main', 'main', 1, '0.0000', NULL, '0000-00-00 00:00:00'),
-(3, 'werew', 'wqrwer', 1, '9999999999.9999', NULL, '0000-00-00 00:00:00');
+(2, 'Main', 'main', 1, 0.0000, NULL, '0000-00-00 00:00:00'),
+(3, 'werew', 'wqrwer', 1, 9999999999.9999, NULL, '0000-00-00 00:00:00');
 
 --
 -- Triggers `funds`
 --
+DROP TRIGGER IF EXISTS `funds_BD_inline_block`;
 DELIMITER //
 CREATE TRIGGER `funds_BD_inline_block` BEFORE DELETE ON `funds`
  FOR EACH ROW IF old.id = 1 THEN
@@ -283,13 +305,15 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `locations` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `location_title` varchar(100) NOT NULL,
   `location_slug` varchar(100) NOT NULL,
   `location_desc` varchar(200) DEFAULT NULL,
   `location_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `slug_unique` (`location_slug`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `locations`
@@ -302,6 +326,7 @@ INSERT INTO `locations` (`id`, `location_title`, `location_slug`, `location_desc
 --
 -- Triggers `locations`
 --
+DROP TRIGGER IF EXISTS `locations_BD_inline_block`;
 DELIMITER //
 CREATE TRIGGER `locations_BD_inline_block` BEFORE DELETE ON `locations`
  FOR EACH ROW IF old.id = 1 THEN
@@ -317,15 +342,19 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `notifications` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id_sender` smallint(5) unsigned DEFAULT NULL,
   `user_id` smallint(5) unsigned NOT NULL,
   `notification_title` varchar(50) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `notification_content` varchar(200) CHARACTER SET utf8 COLLATE utf8_persian_ci DEFAULT NULL,
   `notification_url` varchar(100) CHARACTER SET utf8 COLLATE utf8_persian_ci DEFAULT NULL,
   `notification_status` enum('read','unread','expire') CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL DEFAULT 'unread',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `status_index` (`notification_status`),
+  KEY `notifications_users_idsender` (`user_id_sender`) USING BTREE,
+  KEY `notifications_users_id` (`user_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -334,14 +363,16 @@ CREATE TABLE IF NOT EXISTS `notifications` (
 --
 
 CREATE TABLE IF NOT EXISTS `options` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `option_cat` varchar(50) NOT NULL,
   `option_name` varchar(50) NOT NULL,
   `option_value` varchar(200) DEFAULT NULL,
   `option_extra` varchar(400) DEFAULT NULL,
   `option_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `cat+name+value` (`option_cat`,`option_name`,`option_value`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 
 --
 -- Dumping data for table `options`
@@ -385,7 +416,7 @@ INSERT INTO `options` (`id`, `option_cat`, `option_name`, `option_value`, `optio
 --
 
 CREATE TABLE IF NOT EXISTS `papers` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `paper_type` varchar(50) DEFAULT NULL,
   `paper_number` varchar(20) DEFAULT NULL,
   `paper_date` datetime DEFAULT NULL,
@@ -394,19 +425,23 @@ CREATE TABLE IF NOT EXISTS `papers` (
   `paper_holder` varchar(100) DEFAULT NULL,
   `paper_desc` varchar(200) DEFAULT NULL,
   `paper_status` enum('pass','recovery','fail','lost','block','delete','inprogress') DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id+bankid_unique` (`id`,`bank_id`) USING BTREE,
+  KEY `bank_id` (`bank_id`) USING BTREE
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `papers`
 --
 
 INSERT INTO `papers` (`id`, `paper_type`, `paper_number`, `paper_date`, `paper_price`, `bank_id`, `paper_holder`, `paper_desc`, `paper_status`, `date_modified`) VALUES
-(1, NULL, '123', NULL, '500.0000', 1, NULL, NULL, NULL, '0000-00-00 00:00:00');
+(1, NULL, '123', NULL, 500.0000, 1, NULL, NULL, NULL, '0000-00-00 00:00:00');
 
 --
 -- Triggers `papers`
 --
+DROP TRIGGER IF EXISTS `cheques_AU_outline_copy`;
 DELIMITER //
 CREATE TRIGGER `cheques_AU_outline_copy` BEFORE UPDATE ON `papers`
  FOR EACH ROW IF coalesce(OLD.paper_date , '') <> coalesce(NEW.paper_date , '') or
@@ -428,7 +463,7 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `permissions` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `permission_title` varchar(50) NOT NULL,
   `Permission_module` varchar(50) NOT NULL,
   `permission_view` enum('yes','no') NOT NULL DEFAULT 'yes',
@@ -436,8 +471,10 @@ CREATE TABLE IF NOT EXISTS `permissions` (
   `permission_edit` enum('yes','no') NOT NULL DEFAULT 'no',
   `permission_delete` enum('yes','no') NOT NULL DEFAULT 'no',
   `permission_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name+module_unique` (`permission_title`,`Permission_module`) USING BTREE
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `permissions`
@@ -461,7 +498,9 @@ CREATE TABLE IF NOT EXISTS `postmetas` (
   `postmeta_name` varchar(100) NOT NULL,
   `postmeta_value` varchar(999) DEFAULT NULL,
   `postmeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `postmeta_posts_id` (`post_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -471,7 +510,7 @@ CREATE TABLE IF NOT EXISTS `postmetas` (
 --
 
 CREATE TABLE IF NOT EXISTS `posts` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `post_language` char(2) CHARACTER SET utf8 COLLATE utf8_persian_ci DEFAULT NULL,
   `post_title` varchar(100) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `post_cat` varchar(50) CHARACTER SET utf8 COLLATE utf8_persian_ci DEFAULT NULL,
@@ -479,11 +518,24 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `post_content` text CHARACTER SET utf8 COLLATE utf8_persian_ci,
   `post_type` enum('post','page') CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL DEFAULT 'post',
   `post_status` enum('publish','draft','schedule','deleted','expire') CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL DEFAULT 'draft',
+  `post_father` smallint(5) unsigned DEFAULT NULL,
   `user_id` smallint(5) unsigned NOT NULL,
   `attachment_id` int(10) unsigned DEFAULT NULL,
   `post_publishdate` datetime DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `slug+catslug_unique` (`post_cat`,`post_slug`),
+  KEY `posts_users_id` (`user_id`) USING BTREE,
+  KEY `posts_attachments_id` (`attachment_id`) USING BTREE
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`id`, `post_language`, `post_title`, `post_cat`, `post_slug`, `post_content`, `post_type`, `post_status`, `post_father`, `user_id`, `attachment_id`, `post_publishdate`, `date_modified`) VALUES
+(1, 'fa', 'test1', NULL, 'page1', 'salam. in test 1 ast', 'page', 'publish', NULL, 14, NULL, NULL, '2015-01-19 07:19:51'),
+(2, 'en', 'post1', 'test', 'post1', 'salam. post1 ast', 'post', 'publish', NULL, 14, NULL, NULL, '2015-01-18 15:36:01');
 
 -- --------------------------------------------------------
 
@@ -492,7 +544,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
 --
 
 CREATE TABLE IF NOT EXISTS `productcats` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `productcat_title` varchar(50) NOT NULL,
   `productcat_slug` varchar(50) NOT NULL,
   `productcat_desc` varchar(200) DEFAULT NULL,
@@ -500,8 +552,11 @@ CREATE TABLE IF NOT EXISTS `productcats` (
   `attachment_id` int(10) unsigned DEFAULT NULL,
   `productcat_row` smallint(5) unsigned DEFAULT '0',
   `productcat_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `slug_unique` (`productcat_slug`) USING BTREE,
+  KEY `productcats_attachments_id` (`attachment_id`) USING BTREE
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `productcats`
@@ -513,6 +568,7 @@ INSERT INTO `productcats` (`id`, `productcat_title`, `productcat_slug`, `product
 --
 -- Triggers `productcats`
 --
+DROP TRIGGER IF EXISTS `productcats_BD_inline_block`;
 DELIMITER //
 CREATE TRIGGER `productcats_BD_inline_block` BEFORE DELETE ON `productcats`
  FOR EACH ROW IF old.id = 1 THEN
@@ -528,14 +584,16 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `productmetas` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `product_id` smallint(5) unsigned NOT NULL,
   `productmeta_cat` varchar(50) NOT NULL,
   `productmeta_name` varchar(100) NOT NULL,
   `productmeta_value` varchar(999) DEFAULT NULL,
   `productmeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `product+cat+name_unique` (`product_id`,`productmeta_cat`,`productmeta_name`) USING BTREE
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=74 ;
 
 --
 -- Dumping data for table `productmetas`
@@ -550,6 +608,7 @@ INSERT INTO `productmetas` (`id`, `product_id`, `productmeta_cat`, `productmeta_
 --
 -- Triggers `productmetas`
 --
+DROP TRIGGER IF EXISTS `ProductMeta_AI_outline_copy`;
 DELIMITER //
 CREATE TRIGGER `ProductMeta_AI_outline_copy` AFTER INSERT ON `productmetas`
  FOR EACH ROW IF New.productmeta_cat like 'price%'
@@ -606,6 +665,7 @@ Then
 End if
 //
 DELIMITER ;
+DROP TRIGGER IF EXISTS `ProductMeta_AU_outline_copy2`;
 DELIMITER //
 CREATE TRIGGER `ProductMeta_AU_outline_copy2` AFTER UPDATE ON `productmetas`
  FOR EACH ROW IF New.productmeta_cat like 'price%'
@@ -670,7 +730,7 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `productprices` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `product_id` smallint(5) unsigned NOT NULL,
   `productmeta_id` int(10) unsigned DEFAULT NULL,
   `productprice_cat` varchar(50) DEFAULT NULL,
@@ -681,8 +741,13 @@ CREATE TABLE IF NOT EXISTS `productprices` (
   `productprice_discount` decimal(13,4) DEFAULT NULL,
   `productprice_vat` decimal(6,4) DEFAULT NULL,
   `productprice_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `startdate` (`productprice_startdate`),
+  KEY `enddate` (`productprice_enddate`),
+  KEY `productprices_products_id` (`product_id`) USING BTREE,
+  KEY `productprices_productmetas_id` (`productmeta_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -691,7 +756,7 @@ CREATE TABLE IF NOT EXISTS `productprices` (
 --
 
 CREATE TABLE IF NOT EXISTS `products` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `product_title` varchar(100) NOT NULL,
   `product_slug` varchar(50) NOT NULL,
   `productcat_id` smallint(5) unsigned NOT NULL DEFAULT '1',
@@ -710,23 +775,30 @@ CREATE TABLE IF NOT EXISTS `products` (
   `attachment_id` int(10) unsigned DEFAULT NULL,
   `product_service` enum('yes','no') NOT NULL DEFAULT 'no',
   `product_sellin` enum('store','online','both') NOT NULL DEFAULT 'both',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `slug_unique` (`product_slug`) USING BTREE,
+  UNIQUE KEY `barcode_unique` (`product_barcode`) USING BTREE,
+  UNIQUE KEY `barcode2_unique` (`product_barcode2`) USING BTREE,
+  KEY `products_attachments_id` (`attachment_id`) USING BTREE,
+  KEY `products_productcats_id` (`productcat_id`) USING BTREE
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`id`, `product_title`, `product_slug`, `productcat_id`, `product_barcode`, `product_barcode2`, `product_buyprice`, `product_price`, `product_discount`, `product_vat`, `product_initialbalance`, `product_mininventory`, `product_status`, `product_sold`, `product_stock`, `product_carton`, `attachment_id`, `product_service`, `product_sellin`, `date_modified`) VALUES
-(1, 'aa', 'aa', 1, NULL, NULL, '890.0000', '960.0000', '10.0000', '2.0000', 0, NULL, 'unset', 5, NULL, NULL, NULL, 'yes', 'both', '2014-11-07 14:42:53'),
-(2, 'bb', 'bb', 1, NULL, NULL, NULL, '400.0000', '0.0000', NULL, 0, NULL, 'unset', 0, 20, NULL, NULL, 'yes', 'both', '2014-11-07 14:43:31'),
-(3, 'cc', 'cc', 1, NULL, NULL, NULL, '0.0000', '0.0000', '1.0000', 0, NULL, 'unset', 90, 40, NULL, NULL, 'yes', 'both', '2014-06-12 08:56:25'),
-(4, 'dd', 'dd', 1, NULL, NULL, '90.0000', '200.0000', '10.0000', NULL, 0, NULL, 'unset', 8, 42, NULL, NULL, 'yes', 'both', '2014-05-30 22:01:45'),
-(5, 'ee', 'ee', 1, NULL, NULL, '100.0000', '120.0000', '5.0000', NULL, 0, NULL, 'unset', 0, 50, NULL, NULL, 'yes', 'both', '2014-05-30 21:42:55');
+(1, 'aa', 'aa', 1, NULL, NULL, 890.0000, 960.0000, 10.0000, 2.0000, 0, NULL, 'unset', 5, NULL, NULL, NULL, 'yes', 'both', '2014-11-07 14:42:53'),
+(2, 'bb', 'bb', 1, NULL, NULL, NULL, 400.0000, 0.0000, NULL, 0, NULL, 'unset', 0, 20, NULL, NULL, 'yes', 'both', '2014-11-07 14:43:31'),
+(3, 'cc', 'cc', 1, NULL, NULL, NULL, 0.0000, 0.0000, 1.0000, 0, NULL, 'unset', 90, 40, NULL, NULL, 'yes', 'both', '2014-06-12 08:56:25'),
+(4, 'dd', 'dd', 1, NULL, NULL, 90.0000, 200.0000, 10.0000, NULL, 0, NULL, 'unset', 8, 42, NULL, NULL, 'yes', 'both', '2014-05-30 22:01:45'),
+(5, 'ee', 'ee', 1, NULL, NULL, 100.0000, 120.0000, 5.0000, NULL, 0, NULL, 'unset', 0, 50, NULL, NULL, 'yes', 'both', '2014-05-30 21:42:55');
 
 --
 -- Triggers `products`
 --
+DROP TRIGGER IF EXISTS `products_AI_outline_copy`;
 DELIMITER //
 CREATE TRIGGER `products_AI_outline_copy` AFTER INSERT ON `products`
  FOR EACH ROW INSERT INTO productprices
@@ -735,6 +807,7 @@ CREATE TRIGGER `products_AI_outline_copy` AFTER INSERT ON `products`
     VALUES(NEW.id,  NOW(), NEW.product_buyprice, new.product_price, new.product_discount, new.product_vat)
 //
 DELIMITER ;
+DROP TRIGGER IF EXISTS `products_AU_copy2`;
 DELIMITER //
 CREATE TRIGGER `products_AU_copy2` AFTER UPDATE ON `products`
  FOR EACH ROW IF coalesce(OLD.product_buyprice , '')   <> coalesce(NEW.product_buyprice , '')   or
@@ -779,7 +852,7 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `receipts` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `receipt_code` varchar(30) DEFAULT NULL,
   `receipt_type` enum('income','outcome') DEFAULT 'income',
   `receipt_price` decimal(13,4) NOT NULL DEFAULT '0.0000',
@@ -792,15 +865,21 @@ CREATE TABLE IF NOT EXISTS `receipts` (
   `fund_id` smallint(5) unsigned NOT NULL,
   `user_id` smallint(5) unsigned NOT NULL,
   `user_id_customer` smallint(5) unsigned NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `receipts_papers_id` (`paper_id`) USING BTREE,
+  KEY `receipts_transactions_id` (`transaction_id`) USING BTREE,
+  KEY `receipts_funds_id` (`fund_id`) USING BTREE,
+  KEY `receipts_users_id` (`user_id`),
+  KEY `receipts_users_idcustomer` (`user_id_customer`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `receipts`
 --
 
 INSERT INTO `receipts` (`id`, `receipt_code`, `receipt_type`, `receipt_price`, `receipt_date`, `paper_id`, `receipt_paperdate`, `receipt_paperstatus`, `receipt_desc`, `transaction_id`, `fund_id`, `user_id`, `user_id_customer`, `date_modified`) VALUES
-(6, '123', 'income', '0.0000', '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, 2, 14, 15, '0000-00-00 00:00:00');
+(6, '123', 'income', 0.0000, '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, 2, 14, 15, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -809,7 +888,7 @@ INSERT INTO `receipts` (`id`, `receipt_code`, `receipt_type`, `receipt_price`, `
 --
 
 CREATE TABLE IF NOT EXISTS `smss` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `sms_from` varchar(15) DEFAULT NULL,
   `sms_to` varchar(15) DEFAULT NULL,
   `sms_message` varchar(255) DEFAULT NULL,
@@ -819,8 +898,9 @@ CREATE TABLE IF NOT EXISTS `smss` (
   `sms_type` enum('receive','delivery') NOT NULL DEFAULT 'delivery',
   `sms_createdate` datetime NOT NULL,
   `sms_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=74 ;
 
 --
 -- Dumping data for table `smss`
@@ -839,23 +919,28 @@ INSERT INTO `smss` (`id`, `sms_from`, `sms_to`, `sms_message`, `sms_messageid`, 
 --
 
 CREATE TABLE IF NOT EXISTS `terms` (
-`id` smallint(5) unsigned NOT NULL,
-  `term_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `term_language` char(2) DEFAULT NULL,
+  `term_title` varchar(50) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `term_slug` varchar(50) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `term_desc` varchar(200) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `term_father` smallint(5) unsigned DEFAULT NULL,
   `term_type` enum('cat','tag') CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL DEFAULT 'cat',
   `term_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `slug_unique` (`term_slug`) USING BTREE
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `terms`
 --
 
-INSERT INTO `terms` (`id`, `term_name`, `term_slug`, `term_desc`, `term_father`, `term_type`, `term_status`, `date_modified`) VALUES
-(1, 'news', 'news', '', NULL, 'cat', 'enable', '0000-00-00 00:00:00'),
-(5, 'test', 't', 't', 1, 'tag', 'enable', '0000-00-00 00:00:00');
+INSERT INTO `terms` (`id`, `term_language`, `term_title`, `term_slug`, `term_desc`, `term_father`, `term_type`, `term_status`, `date_modified`) VALUES
+(1, NULL, 'news', 'news', '', NULL, 'cat', 'enable', '0000-00-00 00:00:00'),
+(5, NULL, 'test', 'test', 't', NULL, 'cat', 'enable', '2015-01-18 13:33:13'),
+(6, NULL, 'news2', 'news2', 'news 2', 1, 'cat', 'enable', '2015-01-18 15:45:20'),
+(7, NULL, 'tag1', 'tag1', '', NULL, 'tag', 'enable', NULL);
 
 -- --------------------------------------------------------
 
@@ -864,11 +949,14 @@ INSERT INTO `terms` (`id`, `term_name`, `term_slug`, `term_desc`, `term_father`,
 --
 
 CREATE TABLE IF NOT EXISTS `termusages` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `term_id` smallint(5) unsigned NOT NULL,
   `post_id` smallint(5) unsigned NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `term+post_unique` (`term_id`,`post_id`) USING BTREE,
+  KEY `termusages_posts_id` (`post_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -882,7 +970,9 @@ CREATE TABLE IF NOT EXISTS `transactiondetails` (
   `product_id` smallint(5) unsigned NOT NULL,
   `transactiondetail_quantity` int(10) NOT NULL DEFAULT '0',
   `transactiondetail_price` decimal(13,4) NOT NULL,
-  `transactiondetail_discount` decimal(13,4) DEFAULT NULL
+  `transactiondetail_discount` decimal(13,4) DEFAULT NULL,
+  UNIQUE KEY `sale+product_unique` (`transaction_id`,`product_id`),
+  KEY `transactiondetails_products_id` (`product_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -890,14 +980,15 @@ CREATE TABLE IF NOT EXISTS `transactiondetails` (
 --
 
 INSERT INTO `transactiondetails` (`transactiondetail_row`, `transaction_id`, `product_id`, `transactiondetail_quantity`, `transactiondetail_price`, `transactiondetail_discount`) VALUES
-(NULL, 2, 1, 20, '0.0000', NULL),
-(NULL, 2, 2, 20, '0.0000', NULL),
-(NULL, 2, 5, 1, '50.0000', NULL),
-(NULL, 3, 2, 1, '100.0000', NULL);
+(NULL, 2, 1, 20, 0.0000, NULL),
+(NULL, 2, 2, 20, 0.0000, NULL),
+(NULL, 2, 5, 1, 50.0000, NULL),
+(NULL, 3, 2, 1, 100.0000, NULL);
 
 --
 -- Triggers `transactiondetails`
 --
+DROP TRIGGER IF EXISTS `TransactionDetails_AI_outline_update`;
 DELIMITER //
 CREATE TRIGGER `TransactionDetails_AI_outline_update` AFTER INSERT ON `transactiondetails`
  FOR EACH ROW IF TRUE THEN
@@ -920,6 +1011,7 @@ Where
 End if
 //
 DELIMITER ;
+DROP TRIGGER IF EXISTS `TransactionDetails_AU_outline_update`;
 DELIMITER //
 CREATE TRIGGER `TransactionDetails_AU_outline_update` AFTER UPDATE ON `transactiondetails`
  FOR EACH ROW IF TRUE THEN
@@ -942,6 +1034,7 @@ Where
 End if
 //
 DELIMITER ;
+DROP TRIGGER IF EXISTS `TransactionDetails_BD_outline_update`;
 DELIMITER //
 CREATE TRIGGER `TransactionDetails_BD_outline_update` BEFORE DELETE ON `transactiondetails`
  FOR EACH ROW IF TRUE THEN
@@ -972,14 +1065,16 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `transactionmetas` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `transaction_id` int(10) unsigned NOT NULL,
   `transactionmeta_cat` varchar(50) CHARACTER SET utf8 NOT NULL,
   `transactionmeta_name` varchar(100) CHARACTER SET utf8 NOT NULL,
   `transactionmeta_value` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
   `transactionmeta_status` enum('enable','disable','expire') CHARACTER SET utf8 NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `transactionmetas_transactions_id` (`transaction_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -988,24 +1083,27 @@ CREATE TABLE IF NOT EXISTS `transactionmetas` (
 --
 
 CREATE TABLE IF NOT EXISTS `transactions` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `transaction_type` enum('sale','purchase','customertostore','storetocompany','anbargardani','install','repair','chqeuebackfail') NOT NULL DEFAULT 'sale',
   `user_id` smallint(5) unsigned NOT NULL,
   `user_id_customer` smallint(5) unsigned NOT NULL,
   `transaction_date` datetime NOT NULL,
   `transaction_sum` decimal(13,4) NOT NULL,
   `transaction_remained` decimal(13,4) DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `transactions_users_id` (`user_id`) USING BTREE,
+  KEY `transactions_users_idcustomer` (`user_id_customer`) USING BTREE
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `transactions`
 --
 
 INSERT INTO `transactions` (`id`, `transaction_type`, `user_id`, `user_id_customer`, `transaction_date`, `transaction_sum`, `transaction_remained`, `date_modified`) VALUES
-(2, 'sale', 15, 15, '0000-00-00 00:00:00', '50.0000', NULL, '2014-05-30 21:42:55'),
-(3, 'sale', 15, 16, '0000-00-00 00:00:00', '240.0000', NULL, '2014-05-30 21:41:20'),
-(5, 'sale', 15, 14, '0000-00-00 00:00:00', '10000.0000', NULL, '0000-00-00 00:00:00');
+(2, 'sale', 15, 15, '0000-00-00 00:00:00', 50.0000, NULL, '2014-05-30 21:42:55'),
+(3, 'sale', 15, 16, '0000-00-00 00:00:00', 240.0000, NULL, '2014-05-30 21:41:20'),
+(5, 'sale', 15, 14, '0000-00-00 00:00:00', 10000.0000, NULL, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1014,32 +1112,18 @@ INSERT INTO `transactions` (`id`, `transaction_type`, `user_id`, `user_id_custom
 --
 
 CREATE TABLE IF NOT EXISTS `userlogs` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `userlog_title` varchar(50) DEFAULT NULL,
   `userlog_desc` varchar(999) DEFAULT NULL,
   `userlog_priority` enum('high','medium','low') NOT NULL DEFAULT 'medium',
   `userlog_type` enum('forgetpassword') DEFAULT NULL,
   `user_id` smallint(5) unsigned DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `userlogs`
---
-
-INSERT INTO `userlogs` (`id`, `userlog_title`, `userlog_desc`, `userlog_priority`, `userlog_type`, `user_id`, `date_modified`) VALUES
-(1, NULL, ' |status:قصضقصثق', 'medium', NULL, NULL, NULL),
-(2, '235235', ' |status:wq4wrqw', 'low', NULL, NULL, NULL),
-(5, NULL, ' |status:', 'low', NULL, NULL, NULL),
-(6, NULL, ' |status:', 'low', NULL, NULL, NULL),
-(7, NULL, ' |status:', 'low', NULL, NULL, NULL),
-(8, NULL, ' |status:', 'low', NULL, NULL, NULL),
-(9, NULL, ' |status:', 'low', NULL, NULL, NULL),
-(10, 'from: 123 | to: 456', ' |message:test-javad |msgid: 678', 'medium', NULL, NULL, NULL),
-(11, '364264', ' |status:364264', 'low', NULL, NULL, NULL),
-(12, NULL, ' |status:', 'low', NULL, NULL, NULL),
-(13, NULL, ' |status:', 'low', NULL, NULL, NULL),
-(14, '343215132', 'msgid: 343215132 |status:ثصضقثص', 'low', NULL, NULL, NULL);
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `priority_index` (`userlog_priority`),
+  KEY `type_index` (`userlog_type`),
+  KEY `userlogs_users_id` (`user_id`) USING BTREE
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 -- --------------------------------------------------------
 
@@ -1048,106 +1132,16 @@ INSERT INTO `userlogs` (`id`, `userlog_title`, `userlog_desc`, `userlog_priority
 --
 
 CREATE TABLE IF NOT EXISTS `usermetas` (
-`id` smallint(6) unsigned NOT NULL,
+  `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` smallint(6) unsigned NOT NULL,
   `usermeta_cat` varchar(50) NOT NULL,
   `usermeta_name` varchar(100) NOT NULL,
   `usermeta_value` varchar(500) DEFAULT NULL,
   `usermeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=117 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `usermetas`
---
-
-INSERT INTO `usermetas` (`id`, `user_id`, `usermeta_cat`, `usermeta_name`, `usermeta_value`, `usermeta_status`, `date_modified`) VALUES
-(31, 150, 'cookie_token', '2130706433', '07f4a241bc9c3c25955a1ed796827fc9', 'enable', NULL),
-(32, 150, 'cookie_token', '2130706433', 'ab162ad38c17141ebadaf9e2cb190273', 'enable', NULL),
-(33, 150, 'cookie_token', '2130706433', '3843139503ac43f815d4b70239fa2694', 'enable', NULL),
-(34, 150, 'cookie_token', '2130706433', '2a8aeca238758bd424c08ab88854d249', 'enable', NULL),
-(35, 150, 'cookie_token', '2130706433', 'aaea2fd8cc85bd5102fe45831b9a6e81', 'enable', NULL),
-(36, 150, 'cookie_token', '2130706433', 'a68a533c1418574799db31a75b2b321c', 'enable', NULL),
-(37, 150, 'cookie_token', '2130706433', '287b82ca4d1b6f6679a2a0572450ea55', 'enable', NULL),
-(38, 150, 'cookie_token', '2130706433', '3b2347e9047e7ceb57538861db18ef63', 'enable', NULL),
-(39, 150, 'cookie_token', '2130706433', '3b2347e9047e7ceb57538861db18ef63', 'enable', NULL),
-(40, 150, 'cookie_token', '2130706433', '284ba2885b59046ace111cfec76a6d2d', 'enable', NULL),
-(41, 150, 'cookie_token', '2130706433', 'afa9c75f345d3aca5f0d6147d7f45d89', 'enable', NULL),
-(42, 150, 'cookie_token', '2130706433', 'df35951bc73c5cbd243e6af82abb68c1', 'enable', NULL),
-(43, 150, 'cookie_token', '2130706433', '82cac66da7ec3a9ac125783440c5af75', 'enable', NULL),
-(44, 150, 'cookie_token', '2130706433', 'f0b94e00f177234025f99867b1ccb88f', 'enable', NULL),
-(45, 150, 'cookie_token', '2130706433', 'c7d7e2e344f4a63bad77058d2db989e1', 'enable', NULL),
-(46, 150, 'cookie_token', '2130706433', 'c04d6cef0ce35e482250f98deb556b9b', 'enable', NULL),
-(47, 151, 'cookie_token', '2130706433', '164cd8b90bab3d62dce1c923940b66af', 'enable', NULL),
-(48, 150, 'cookie_token', '2130706433', '221ca26fff92c6ec7864f81301b07ddc', 'enable', NULL),
-(49, 150, 'cookie_token', '2130706433', '402aeab1f0c95b927fec2f1d4e663faa', 'enable', NULL),
-(50, 150, 'cookie_token', '2130706433', '628759f5cb6987e092be3753e4bfac9b', 'enable', NULL),
-(51, 150, 'cookie_token', '2130706433', '0fd7bde34a0cd3750ef203de1f028674', 'enable', NULL),
-(52, 150, 'cookie_token', '2130706433', '7449486bf997b1dc3a6ef16467c11b31', 'enable', NULL),
-(53, 150, 'cookie_token', '2130706433', '1f93d269bb76577ab295ff9f3f5cb2f7', 'enable', NULL),
-(54, 150, 'cookie_token', '2130706433', 'b8eb402c60deeb80ff00faa77e123af6', 'enable', NULL),
-(55, 150, 'cookie_token', '2130706433', 'b8eb402c60deeb80ff00faa77e123af6', 'enable', NULL),
-(56, 150, 'cookie_token', '2130706433', 'b8eb402c60deeb80ff00faa77e123af6', 'enable', NULL),
-(57, 150, 'cookie_token', '2130706433', 'b8eb402c60deeb80ff00faa77e123af6', 'enable', NULL),
-(58, 150, 'cookie_token', '2130706433', '4cc5f286ef48a7aa88974706db769705', 'enable', NULL),
-(59, 150, 'cookie_token', '2130706433', '4cc5f286ef48a7aa88974706db769705', 'enable', NULL),
-(60, 150, 'cookie_token', '2130706433', '4cc5f286ef48a7aa88974706db769705', 'enable', NULL),
-(61, 150, 'cookie_token', '2130706433', '4cc5f286ef48a7aa88974706db769705', 'enable', NULL),
-(62, 150, 'cookie_token', '2130706433', 'fd9435a319cedbac7b6989ed2f88d650', 'enable', NULL),
-(63, 150, 'cookie_token', '2130706433', 'dc50b53a346c18dd042a315021bf2535', 'enable', NULL),
-(64, 150, 'cookie_token', '2130706433', 'dc50b53a346c18dd042a315021bf2535', 'enable', NULL),
-(65, 150, 'cookie_token', '2130706433', 'dc50b53a346c18dd042a315021bf2535', 'enable', NULL),
-(66, 150, 'cookie_token', '2130706433', 'dc50b53a346c18dd042a315021bf2535', 'enable', NULL),
-(67, 150, 'cookie_token', '2130706433', '456d1d59babbb823ae54bae104fb360c', 'enable', NULL),
-(68, 150, 'cookie_token', '2130706433', 'a25f678e5aed1d13a9c6aac02eb42de2', 'enable', NULL),
-(69, 150, 'cookie_token', '2130706433', '97babeff1675f673bec457378934ccad', 'enable', NULL),
-(70, 150, 'cookie_token', '2130706433', '4f28ace7cb1a6f0e769045e5320aabd0', 'enable', NULL),
-(71, 150, 'cookie_token', '2130706433', 'f1572e4922aece9f2c7f945f0137e46b', 'enable', NULL),
-(72, 150, 'cookie_token', '2130706433', '2e510eb2325e4cdbf415b572f8f0767f', 'enable', NULL),
-(73, 150, 'cookie_token', '2130706433', '33d20fe1bc9435e89b64fc6a99db4606', 'enable', NULL),
-(74, 150, 'cookie_token', '2130706433', '461abc03b115fdc5d620146cf58aff4d', 'enable', NULL),
-(75, 150, 'cookie_token', '2130706433', '4efbda84ef22532f8978f84186b4c4aa', 'enable', NULL),
-(76, 150, 'cookie_token', '2130706433', '7da1a75a2b3c121a031ae00300b9b69e', 'enable', NULL),
-(77, 150, 'cookie_token', '2130706433', '5b39d013db8f971c61722f4464051adf', 'enable', NULL),
-(78, 150, 'cookie_token', '2130706433', '89ef2fd993444fb11a3888dc26e82fea', 'enable', NULL),
-(79, 150, 'cookie_token', '2130706433', 'afaee8de9cc208366391c3abaf2a860c', 'enable', NULL),
-(80, 150, 'cookie_token', '2130706433', 'afaee8de9cc208366391c3abaf2a860c', 'enable', NULL),
-(81, 150, 'cookie_token', '2130706433', '4b5c3b63692e32cb22b88b396a0e93bf', 'enable', NULL),
-(82, 150, 'cookie_token', '2130706433', '4b5c3b63692e32cb22b88b396a0e93bf', 'enable', NULL),
-(83, 150, 'cookie_token', '2130706433', '73b2af51de9fa90a00b994460922155a', 'enable', NULL),
-(84, 150, 'cookie_token', '2130706433', '595303de6c029da83b527b3181c2023f', 'enable', NULL),
-(85, 150, 'cookie_token', '2130706433', 'a131fc4c317f17de3e168e8de29d954d', 'enable', NULL),
-(86, 150, 'cookie_token', '2130706433', 'a9ba26d3eb8725457361003d2d28ffc3', 'enable', NULL),
-(87, 150, 'cookie_token', '2130706433', '04d122c514d040a01335da2397366f82', 'enable', NULL),
-(88, 150, 'cookie_token', '2130706433', 'a015d9974d91a2e554687ee1f57b0fc6', 'enable', NULL),
-(89, 150, 'cookie_token', '2130706433', 'a015d9974d91a2e554687ee1f57b0fc6', 'enable', NULL),
-(90, 150, 'cookie_token', '2130706433', '63ef43d2c33d04ba0d84a2cb734ac615', 'enable', NULL),
-(91, 150, 'cookie_token', '2130706433', '0f1877f94aeb9ebc7211ed1547c5f024', 'enable', NULL),
-(92, 150, 'cookie_token', '2130706433', '8dee8a476c07762fc6db1f7c3d967ef6', 'enable', NULL),
-(93, 150, 'cookie_token', '2130706433', '154e2e44a6f50c689ba4be88ff5893e1', 'enable', NULL),
-(94, 150, 'cookie_token', '2130706433', '154e2e44a6f50c689ba4be88ff5893e1', 'enable', NULL),
-(95, 150, 'cookie_token', '2130706433', '24d744bb74026c32705209998a5d7cbb', 'enable', NULL),
-(96, 150, 'cookie_token', '2130706433', 'b6ed42d59156395cf8cdd32049c4c92f', 'enable', NULL),
-(97, 150, 'cookie_token', '2130706433', '5fd29daf7d8197c83a508a7c4fd95a56', 'enable', NULL),
-(98, 150, 'cookie_token', '2130706433', '983e67a94750c08e9d2a55fb496aada5', 'enable', NULL),
-(99, 150, 'cookie_token', '2130706433', 'cf133888e93008e37596635335459377', 'enable', NULL),
-(100, 150, 'cookie_token', '2130706433', '883f04d59972682d5fa94d98983082aa', 'enable', NULL),
-(101, 150, 'cookie_token', '2130706433', '9797bb9d78e4e5ef31f0951ce1595dcd', 'enable', NULL),
-(102, 150, 'cookie_token', '2130706433', '608b7c30a135637b0341260b28becf38', 'enable', NULL),
-(103, 150, 'cookie_token', '2130706433', 'ddca28f00e25a5430b96e860a7f57425', 'enable', NULL),
-(104, 150, 'cookie_token', '2130706433', 'c46828560d324c00e3c3e133fffb37ce', 'enable', NULL),
-(105, 150, 'cookie_token', '2130706433', '088ac4df21c65e08aa975d1308537cdd', 'enable', NULL),
-(106, 150, 'cookie_token', '2130706433', '8d6fd7a2c8203b0bf4a1984053334a4e', 'enable', NULL),
-(107, 150, 'cookie_token', '2130706433', 'c2c47f851e496baeee54c4013e1bc9b3', 'enable', NULL),
-(108, 150, 'cookie_token', '2130706433', '49b481aa8747184481263e5eb29c08e9', 'enable', NULL),
-(109, 150, 'cookie_token', '2130706433', 'e728c44aed7148220ffd45925cb2f58f', 'enable', NULL),
-(110, 150, 'cookie_token', '2130706433', '86e726d07575e06309572c73d4e18e02', 'enable', NULL),
-(111, 150, 'cookie_token', '2130706433', '49820ebe8583bfa043ea079a77f669c9', 'enable', NULL),
-(112, 150, 'cookie_token', '2130706433', '2b8b99856ff4dea68fc8e23ebfbaa2eb', 'enable', NULL),
-(113, 150, 'cookie_token', '2130706433', '2bd71dfd3aab61ac98c7708e68e58204', 'enable', NULL),
-(114, 150, 'cookie_token', '2130706433', '41932c357280245542e4e5c9791e4cf6', 'enable', NULL),
-(115, 150, 'cookie_token', '2130706433', '4386a08a9d35403556ddcbc54a38d693', 'enable', NULL),
-(116, 150, 'cookie_token', '2130706433', 'f364460945a59d7f9179e4e8c80cdf60', 'expire', '2015-01-01 13:40:51');
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `usermeta_users_id` (`user_id`) USING BTREE
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=133 ;
 
 -- --------------------------------------------------------
 
@@ -1156,7 +1150,7 @@ INSERT INTO `usermetas` (`id`, `user_id`, `usermeta_cat`, `usermeta_name`, `user
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
-`id` smallint(5) unsigned NOT NULL COMMENT 'use char(36) if i want use uuid',
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'use char(36) if i want use uuid',
   `user_type` enum('storeadmin','storeemployee','storesupplier','storecustomer','admin','user') DEFAULT 'user',
   `user_mobile` varchar(15) NOT NULL COMMENT 'Mobile',
   `user_pass` char(32) NOT NULL COMMENT 'Password',
@@ -1170,23 +1164,24 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_credit` enum('yes','no') DEFAULT 'no',
   `permission_id` smallint(5) unsigned DEFAULT NULL,
   `user_createdate` datetime NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=154 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `mobile_unique` (`user_mobile`) USING BTREE,
+  UNIQUE KEY `email_unique` (`user_email`) USING BTREE,
+  KEY `users_permissions_id` (`permission_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=176 ;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `user_type`, `user_mobile`, `user_pass`, `user_email`, `user_gender`, `user_nickname`, `user_firstname`, `user_lastname`, `user_birthday`, `user_status`, `user_credit`, `permission_id`, `user_createdate`, `date_modified`) VALUES
-(14, 'storeadmin', '+989357269758', '96e79218965eb72c92a549dd5a330112', 'eee2', 'male', 'J.Evazzadeh', 'Javad', 'Evazzadeh', NULL, 'active', 'no', 1, '0000-00-00 00:00:00', '2014-12-30 12:45:59'),
+(14, 'user', '+989357269758', '12312321', 'eee2', 'male', 'J.Evazzadeh', 'Javad', 'Evazzadeh', NULL, 'active', 'no', 1, '0000-00-00 00:00:00', '2015-01-23 22:01:56'),
 (15, 'storeadmin', '+989113334444', '96e79218965eb72c92a549dd5a330112', NULL, NULL, 'Test1', 'Test', NULL, NULL, 'awaiting', 'no', 1, '0000-00-00 00:00:00', '2014-12-30 12:46:00'),
 (16, 'storeadmin', '+989357269750', '96e79218965eb72c92a549dd5a330112', 'aaa2', NULL, 'Test3', NULL, 'Test last', NULL, 'active', 'no', 1, '0000-00-00 00:00:00', '2014-12-30 12:46:01'),
 (28, 'storeadmin', '+989363334444', '96e79218965eb72c92a549dd5a330112', 'aaa', NULL, 'Javad', 'Javad', 'Evazzadeh', NULL, 'active', 'yes', NULL, '0000-00-00 00:00:00', '2014-12-30 12:46:01'),
-(74, 'storeadmin', '+989389105350', '96e79218965eb72c92a549dd5a330112', NULL, NULL, NULL, NULL, NULL, NULL, 'active', 'no', NULL, '0000-00-00 00:00:00', '2014-12-30 12:46:01'),
-(150, 'storeadmin', '+989357269759', '111111', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', '2014-12-30 12:46:02'),
-(151, 'storeadmin', '+989357269475', '111111', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', '2014-12-30 12:46:02'),
-(152, 'storeadmin', '+989357269752', '111111', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '2014-12-30 13:24:11', '2014-12-30 12:46:02'),
-(153, 'storeadmin', '+989357269742', '111111', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '2014-12-30 13:58:16', NULL);
+(74, 'storeadmin', '+989389105351', '96e79218965eb72c92a549dd5a330112', NULL, NULL, NULL, NULL, NULL, NULL, 'active', 'no', NULL, '0000-00-00 00:00:00', '2015-01-21 18:59:58'),
+(150, 'storeadmin', '+989357269790', '96e79218965eb72c92a549dd5a330112', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', '2015-01-24 08:19:28');
 
 -- --------------------------------------------------------
 
@@ -1195,7 +1190,7 @@ INSERT INTO `users` (`id`, `user_type`, `user_mobile`, `user_pass`, `user_email`
 --
 
 CREATE TABLE IF NOT EXISTS `verifications` (
-`id` smallint(5) unsigned NOT NULL,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `verification_type` enum('emailregister','emailchange','emailforget','mobileregister','mobilechange','mobileforget') CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `verification_value` varchar(50) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `verification_code` varchar(32) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
@@ -1204,103 +1199,16 @@ CREATE TABLE IF NOT EXISTS `verifications` (
   `verification_verified` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL DEFAULT 'no',
   `verification_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `verification_createdate` datetime DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=371 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `verifications`
---
-
-INSERT INTO `verifications` (`id`, `verification_type`, `verification_value`, `verification_code`, `verification_url`, `user_id`, `verification_verified`, `verification_status`, `verification_createdate`, `date_modified`) VALUES
-(27, 'mobileforget', '+989357269759', '4543', NULL, 16, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(28, 'mobileregister', '+9811112222', '2625', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(29, 'mobileregister', '+989112225555', '8785', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(30, 'mobileregister', '+989123124112', '4338', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(31, 'mobileregister', '+989111941061', '8686', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(32, 'mobileregister', '+98124124124', '2423', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(33, 'mobileregister', '+9812412412', '6454', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(34, 'mobileregister', '+98214124124', '8765', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(35, 'mobileregister', '+98235352135', '3233', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(36, 'mobileregister', '+98432432423', '5483', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(37, 'mobileregister', '+98253253215', '3857', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(38, 'mobileregister', '+983535315', '9456', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(39, 'mobileregister', '+984325235', '6674', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(42, 'mobileforget', '+989113334444', '8484', NULL, 14, 'yes', 'enable', NULL, '2014-11-22 23:54:38'),
-(43, 'mobileforget', '+989113334444', '4893', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(44, 'mobileforget', '+989113334444', '3483', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(45, 'mobileforget', '+989113334444', '9468', NULL, 14, 'yes', 'enable', NULL, '2014-11-22 23:53:33'),
-(46, 'mobileforget', '+989113334444', '4388', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(62, 'mobileforget', '+989357269759', '8249', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(65, 'mobileforget', '+989357269759', '5768', NULL, 14, 'no', 'enable', '2014-12-28 21:47:42', '2014-12-28 18:17:44'),
-(66, 'mobileforget', '+989357269759', '4526', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(82, 'mobileforget', '+989357269759', '3536', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(103, 'mobileforget', '+989357269759', '7737', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(104, 'mobileforget', '+989357269759', '3795', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(105, 'mobileforget', '+989357269759', '2253', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(106, 'mobileforget', '+989357269759', '2997', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(107, 'mobileforget', '+989357269759', '9269', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(108, 'mobileforget', '+989357269759', '8682', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(111, 'mobileforget', '+989357269759', '8796', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(112, 'mobileforget', '+989357269759', '6325', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(115, 'mobileforget', '+989357269759', '5526', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(116, 'mobileforget', '+989357269759', '2592', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(117, 'mobileforget', '+989357269759', '2595', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(118, 'mobileforget', '+989357269759', '9994', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(119, 'mobileforget', '+989357269759', '3274', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(120, 'mobileforget', '+989357269759', '9553', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(121, 'mobileforget', '+989357269759', '9954', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(122, 'mobileforget', '+989357269759', '2665', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(123, 'mobileforget', '+989357269759', '9242', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(124, 'mobileforget', '+989357269759', '6634', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(125, 'mobileforget', '+989357269759', '2296', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(126, 'mobileforget', '+989357269759', '4834', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(127, 'mobileforget', '+989357269759', '5676', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(128, 'mobileforget', '+989357269759', '9882', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(129, 'mobileforget', '+989357269759', '7849', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(131, 'mobileforget', '+989357269759', '2947', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(132, 'mobileforget', '+989357269759', '5467', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(133, 'mobileforget', '+989357269759', '7548', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(134, 'mobileforget', '+989357269759', '6982', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(135, 'mobileforget', '+989357269759', '7258', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(136, 'mobileforget', '+989357269759', '7554', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(137, 'mobileforget', '+989357269759', '9349', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(138, 'mobileforget', '+989357269759', '9453', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(139, 'mobileforget', '+989357269759', '8252', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(140, 'mobileforget', '+989357269759', '8437', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(141, 'mobileforget', '+989357269759', '7279', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(142, 'mobileforget', '+989357269759', '3739', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(143, 'mobileforget', '+989357269759', '6467', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(144, 'mobileforget', '+989357269759', '8467', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(145, 'mobileforget', '+989357269759', '5247', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(146, 'mobileforget', '+989357269759', '4955', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(147, 'mobileforget', '+989113334444', '3298', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(149, 'mobileforget', '+989357269759', '3653', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(150, 'mobileforget', '+989357269759', '4652', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(151, 'mobileforget', '+989357269759', '5379', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(155, 'mobileforget', '+989113334444', '3575', NULL, 15, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(156, 'mobileforget', '+989357269759', '2539', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(161, 'mobileforget', '+989357269759', '6575', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(225, 'mobileforget', '+989357269759', '5284', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(226, 'mobileforget', '+989357269759', '9544', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(227, 'mobileforget', '+989357269759', '9758', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(228, 'mobileforget', '+989357269759', '8763', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(261, 'mobileforget', '+989357269759', '2879', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(262, 'mobileforget', '+989357269759', '6733', NULL, 14, 'yes', 'enable', NULL, '2014-11-26 15:35:18'),
-(266, 'mobileregister', '+989389105350', '5457', NULL, 74, 'yes', 'enable', NULL, '2014-11-26 15:46:37'),
-(267, 'mobileforget', '+989389105350', '5282', NULL, 74, 'yes', 'enable', NULL, '2014-11-26 15:48:00'),
-(274, 'mobileforget', '+989357269759', '6635', NULL, 14, 'no', 'enable', NULL, '0000-00-00 00:00:00'),
-(275, 'mobileforget', '+989357269759', '6276', NULL, 14, 'yes', 'enable', NULL, '2014-12-28 13:49:21'),
-(276, 'mobileforget', '+989357269759', '2945', NULL, 14, 'yes', 'enable', NULL, '2014-12-28 13:49:50'),
-(365, 'mobileregister', '+989357269759', '9285', NULL, 150, 'no', 'enable', '2014-12-30 12:17:28', NULL),
-(366, 'mobileregister', '+989357269475', '8335', NULL, 151, 'no', 'enable', '2014-12-30 12:26:49', NULL),
-(367, 'mobileregister', '+989357269752', '5355', NULL, 152, 'no', 'enable', '2014-12-30 13:24:12', NULL),
-(368, 'mobileregister', '+989357269742', '9928', NULL, 153, 'no', 'enable', '2014-12-30 13:58:16', NULL),
-(369, 'mobileforget', '+989357269759', '5453', NULL, 150, 'no', 'enable', NULL, NULL),
-(370, 'mobileforget', '+989357269759', '5433', NULL, 150, 'no', 'enable', NULL, NULL);
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `code_unique` (`verification_url`,`verification_value`) USING BTREE,
+  KEY `verifications_users_id` (`user_id`) USING BTREE
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=449 ;
 
 --
 -- Triggers `verifications`
 --
+DROP TRIGGER IF EXISTS `verification_AU_outline_update`;
 DELIMITER //
 CREATE TRIGGER `verification_AU_outline_update` AFTER UPDATE ON `verifications`
  FOR EACH ROW IF NEW.verification_verified <> OLD.verification_verified THEN
@@ -1318,7 +1226,7 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `visitors` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `visitor_ip` int(10) unsigned NOT NULL COMMENT 'use the INET_ATON() and INET_NTOA() functions to return the IP address from its numeric value, and vice versa.',
   `visitor_url` varchar(255) NOT NULL,
   `visitor_agent` varchar(255) NOT NULL,
@@ -1326,376 +1234,11 @@ CREATE TABLE IF NOT EXISTS `visitors` (
   `visitor_robot` enum('yes','no') NOT NULL DEFAULT 'no',
   `user_id` smallint(5) unsigned DEFAULT NULL,
   `visitor_createdate` datetime DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=2484 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `visitors_users_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `accounts`
---
-ALTER TABLE `accounts`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`account_slug`), ADD UNIQUE KEY `cardnumber_unique` (`account_card`), ADD UNIQUE KEY `accountnumber_unique` (`account_number`), ADD KEY `bank_id` (`bank_id`), ADD KEY `accounts_users_id` (`user_id`) USING BTREE;
-
---
--- Indexes for table `addons`
---
-ALTER TABLE `addons`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`addon_slug`) USING BTREE;
-
---
--- Indexes for table `attachmentmetas`
---
-ALTER TABLE `attachmentmetas`
- ADD PRIMARY KEY (`id`), ADD KEY `attachmentmetas_attachments_id` (`attachment_id`);
-
---
--- Indexes for table `attachments`
---
-ALTER TABLE `attachments`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `name+type_unique` (`attachment_name`,`attachment_type`), ADD KEY `attachments_users_id` (`user_id`) USING BTREE;
-
---
--- Indexes for table `banks`
---
-ALTER TABLE `banks`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`bank_slug`);
-
---
--- Indexes for table `comments`
---
-ALTER TABLE `comments`
- ADD PRIMARY KEY (`id`), ADD KEY `comments_posts_id` (`post_id`) USING BTREE, ADD KEY `comments_users_id` (`user_id`) USING BTREE, ADD KEY `comments_products_id` (`product_id`) USING BTREE, ADD KEY `comments_visitors_id` (`Visitor_id`);
-
---
--- Indexes for table `costcats`
---
-ALTER TABLE `costcats`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`costcat_slug`), ADD KEY `type` (`costcat_type`);
-
---
--- Indexes for table `costs`
---
-ALTER TABLE `costs`
- ADD PRIMARY KEY (`id`), ADD KEY `type_index` (`cost_type`) USING BTREE, ADD KEY `costs_costcats_id` (`costcat_id`) USING BTREE, ADD KEY `costs_accounts_id` (`account_id`) USING BTREE;
-
---
--- Indexes for table `errorlogs`
---
-ALTER TABLE `errorlogs`
- ADD PRIMARY KEY (`id`), ADD KEY `errorlogs_users_id` (`user_id`) USING BTREE, ADD KEY `errorlogs_errors_id` (`errorlog_id`) USING BTREE;
-
---
--- Indexes for table `errors`
---
-ALTER TABLE `errors`
- ADD PRIMARY KEY (`id`), ADD KEY `priotity_index` (`error_priority`);
-
---
--- Indexes for table `funds`
---
-ALTER TABLE `funds`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`fund_slug`), ADD KEY `funds_locations_id` (`location_id`) USING BTREE;
-
---
--- Indexes for table `locations`
---
-ALTER TABLE `locations`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`location_slug`);
-
---
--- Indexes for table `notifications`
---
-ALTER TABLE `notifications`
- ADD PRIMARY KEY (`id`), ADD KEY `status_index` (`notification_status`), ADD KEY `notifications_users_idsender` (`user_id_sender`) USING BTREE, ADD KEY `notifications_users_id` (`user_id`) USING BTREE;
-
---
--- Indexes for table `options`
---
-ALTER TABLE `options`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `cat+name+value` (`option_cat`,`option_name`,`option_value`);
-
---
--- Indexes for table `papers`
---
-ALTER TABLE `papers`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id+bankid_unique` (`id`,`bank_id`) USING BTREE, ADD KEY `bank_id` (`bank_id`) USING BTREE;
-
---
--- Indexes for table `permissions`
---
-ALTER TABLE `permissions`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `name+module_unique` (`permission_title`,`Permission_module`) USING BTREE;
-
---
--- Indexes for table `postmetas`
---
-ALTER TABLE `postmetas`
- ADD PRIMARY KEY (`id`), ADD KEY `postmeta_posts_id` (`post_id`) USING BTREE;
-
---
--- Indexes for table `posts`
---
-ALTER TABLE `posts`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug+catslug_unique` (`post_cat`,`post_slug`), ADD KEY `posts_users_id` (`user_id`) USING BTREE, ADD KEY `posts_attachments_id` (`attachment_id`) USING BTREE;
-
---
--- Indexes for table `productcats`
---
-ALTER TABLE `productcats`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`productcat_slug`) USING BTREE, ADD KEY `productcats_attachments_id` (`attachment_id`) USING BTREE;
-
---
--- Indexes for table `productmetas`
---
-ALTER TABLE `productmetas`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `product+cat+name_unique` (`product_id`,`productmeta_cat`,`productmeta_name`) USING BTREE;
-
---
--- Indexes for table `productprices`
---
-ALTER TABLE `productprices`
- ADD PRIMARY KEY (`id`), ADD KEY `startdate` (`productprice_startdate`), ADD KEY `enddate` (`productprice_enddate`), ADD KEY `productprices_products_id` (`product_id`) USING BTREE, ADD KEY `productprices_productmetas_id` (`productmeta_id`);
-
---
--- Indexes for table `products`
---
-ALTER TABLE `products`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`product_slug`) USING BTREE, ADD UNIQUE KEY `barcode_unique` (`product_barcode`) USING BTREE, ADD UNIQUE KEY `barcode2_unique` (`product_barcode2`) USING BTREE, ADD KEY `products_attachments_id` (`attachment_id`) USING BTREE, ADD KEY `products_productcats_id` (`productcat_id`) USING BTREE;
-
---
--- Indexes for table `receipts`
---
-ALTER TABLE `receipts`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `receipts_papers_id` (`paper_id`) USING BTREE, ADD KEY `receipts_transactions_id` (`transaction_id`) USING BTREE, ADD KEY `receipts_funds_id` (`fund_id`) USING BTREE, ADD KEY `receipts_users_id` (`user_id`), ADD KEY `receipts_users_idcustomer` (`user_id_customer`);
-
---
--- Indexes for table `smss`
---
-ALTER TABLE `smss`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `terms`
---
-ALTER TABLE `terms`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`term_slug`) USING BTREE;
-
---
--- Indexes for table `termusages`
---
-ALTER TABLE `termusages`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `term+post_unique` (`term_id`,`post_id`) USING BTREE, ADD KEY `termusages_posts_id` (`post_id`) USING BTREE;
-
---
--- Indexes for table `transactiondetails`
---
-ALTER TABLE `transactiondetails`
- ADD UNIQUE KEY `sale+product_unique` (`transaction_id`,`product_id`), ADD KEY `transactiondetails_products_id` (`product_id`) USING BTREE;
-
---
--- Indexes for table `transactionmetas`
---
-ALTER TABLE `transactionmetas`
- ADD PRIMARY KEY (`id`), ADD KEY `transactionmetas_transactions_id` (`transaction_id`);
-
---
--- Indexes for table `transactions`
---
-ALTER TABLE `transactions`
- ADD PRIMARY KEY (`id`), ADD KEY `transactions_users_id` (`user_id`) USING BTREE, ADD KEY `transactions_users_idcustomer` (`user_id_customer`) USING BTREE;
-
---
--- Indexes for table `userlogs`
---
-ALTER TABLE `userlogs`
- ADD PRIMARY KEY (`id`), ADD KEY `priority_index` (`userlog_priority`), ADD KEY `type_index` (`userlog_type`), ADD KEY `userlogs_users_id` (`user_id`) USING BTREE;
-
---
--- Indexes for table `usermetas`
---
-ALTER TABLE `usermetas`
- ADD PRIMARY KEY (`id`), ADD KEY `usermeta_users_id` (`user_id`) USING BTREE;
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `mobile_unique` (`user_mobile`) USING BTREE, ADD UNIQUE KEY `email_unique` (`user_email`) USING BTREE, ADD KEY `users_permissions_id` (`permission_id`);
-
---
--- Indexes for table `verifications`
---
-ALTER TABLE `verifications`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `code_unique` (`verification_url`,`verification_value`) USING BTREE, ADD KEY `verifications_users_id` (`user_id`) USING BTREE;
-
---
--- Indexes for table `visitors`
---
-ALTER TABLE `visitors`
- ADD PRIMARY KEY (`id`), ADD KEY `visitors_users_id` (`user_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `accounts`
---
-ALTER TABLE `accounts`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'test comment',AUTO_INCREMENT=23;
---
--- AUTO_INCREMENT for table `addons`
---
-ALTER TABLE `addons`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `attachmentmetas`
---
-ALTER TABLE `attachmentmetas`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `attachments`
---
-ALTER TABLE `attachments`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `banks`
---
-ALTER TABLE `banks`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=101;
---
--- AUTO_INCREMENT for table `comments`
---
-ALTER TABLE `comments`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `costcats`
---
-ALTER TABLE `costcats`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `costs`
---
-ALTER TABLE `costs`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `errorlogs`
---
-ALTER TABLE `errorlogs`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `funds`
---
-ALTER TABLE `funds`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `locations`
---
-ALTER TABLE `locations`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `notifications`
---
-ALTER TABLE `notifications`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `options`
---
-ALTER TABLE `options`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
---
--- AUTO_INCREMENT for table `papers`
---
-ALTER TABLE `papers`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `permissions`
---
-ALTER TABLE `permissions`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT for table `posts`
---
-ALTER TABLE `posts`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `productcats`
---
-ALTER TABLE `productcats`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `productmetas`
---
-ALTER TABLE `productmetas`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=74;
---
--- AUTO_INCREMENT for table `productprices`
---
-ALTER TABLE `productprices`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `products`
---
-ALTER TABLE `products`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `receipts`
---
-ALTER TABLE `receipts`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT for table `smss`
---
-ALTER TABLE `smss`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=74;
---
--- AUTO_INCREMENT for table `terms`
---
-ALTER TABLE `terms`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `termusages`
---
-ALTER TABLE `termusages`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `transactionmetas`
---
-ALTER TABLE `transactionmetas`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `transactions`
---
-ALTER TABLE `transactions`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `userlogs`
---
-ALTER TABLE `userlogs`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
---
--- AUTO_INCREMENT for table `usermetas`
---
-ALTER TABLE `usermetas`
-MODIFY `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=117;
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'use char(36) if i want use uuid',AUTO_INCREMENT=154;
---
--- AUTO_INCREMENT for table `verifications`
---
-ALTER TABLE `verifications`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=371;
---
--- AUTO_INCREMENT for table `visitors`
---
-ALTER TABLE `visitors`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2484;
 --
 -- Constraints for dumped tables
 --
@@ -1704,168 +1247,168 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2484;
 -- Constraints for table `accounts`
 --
 ALTER TABLE `accounts`
-ADD CONSTRAINT `accounts_banks_id` FOREIGN KEY (`bank_id`) REFERENCES `banks` (`id`),
-ADD CONSTRAINT `accounts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `accounts_banks_id` FOREIGN KEY (`bank_id`) REFERENCES `banks` (`id`),
+  ADD CONSTRAINT `accounts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `attachmentmetas`
 --
 ALTER TABLE `attachmentmetas`
-ADD CONSTRAINT `attachmentmetas_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`);
+  ADD CONSTRAINT `attachmentmetas_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`);
 
 --
 -- Constraints for table `attachments`
 --
 ALTER TABLE `attachments`
-ADD CONSTRAINT `attachments_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `attachments_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `comments`
 --
 ALTER TABLE `comments`
-ADD CONSTRAINT `comments_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE,
-ADD CONSTRAINT `comments_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
-ADD CONSTRAINT `comments_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL,
-ADD CONSTRAINT `comments_visitors_id` FOREIGN KEY (`Visitor_id`) REFERENCES `visitors` (`id`);
+  ADD CONSTRAINT `comments_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `comments_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `comments_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `comments_visitors_id` FOREIGN KEY (`Visitor_id`) REFERENCES `visitors` (`id`);
 
 --
 -- Constraints for table `costs`
 --
 ALTER TABLE `costs`
-ADD CONSTRAINT `costs_accounts_id` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE,
-ADD CONSTRAINT `costs_costcats_id` FOREIGN KEY (`costcat_id`) REFERENCES `costcats` (`id`);
+  ADD CONSTRAINT `costs_accounts_id` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `costs_costcats_id` FOREIGN KEY (`costcat_id`) REFERENCES `costcats` (`id`);
 
 --
 -- Constraints for table `errorlogs`
 --
 ALTER TABLE `errorlogs`
-ADD CONSTRAINT `errorlogs_errors_id` FOREIGN KEY (`errorlog_id`) REFERENCES `errors` (`id`) ON UPDATE CASCADE,
-ADD CONSTRAINT `errorlogs_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+  ADD CONSTRAINT `errorlogs_errors_id` FOREIGN KEY (`errorlog_id`) REFERENCES `errors` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `errorlogs_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
 
 --
 -- Constraints for table `funds`
 --
 ALTER TABLE `funds`
-ADD CONSTRAINT `funds_locations_id` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `funds_locations_id` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `notifications`
 --
 ALTER TABLE `notifications`
-ADD CONSTRAINT `notifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
-ADD CONSTRAINT `notifications_users_idsender` FOREIGN KEY (`user_id_sender`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+  ADD CONSTRAINT `notifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `notifications_users_idsender` FOREIGN KEY (`user_id_sender`) REFERENCES `users` (`id`) ON DELETE SET NULL;
 
 --
 -- Constraints for table `papers`
 --
 ALTER TABLE `papers`
-ADD CONSTRAINT `papers_banks_id` FOREIGN KEY (`bank_id`) REFERENCES `banks` (`id`);
+  ADD CONSTRAINT `papers_banks_id` FOREIGN KEY (`bank_id`) REFERENCES `banks` (`id`);
 
 --
 -- Constraints for table `postmetas`
 --
 ALTER TABLE `postmetas`
-ADD CONSTRAINT `postmeta_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `postmeta_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `posts`
 --
 ALTER TABLE `posts`
-ADD CONSTRAINT `posts_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`) ON DELETE SET NULL,
-ADD CONSTRAINT `posts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `posts_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `posts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `productcats`
 --
 ALTER TABLE `productcats`
-ADD CONSTRAINT `productcats_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`) ON DELETE SET NULL;
+  ADD CONSTRAINT `productcats_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`) ON DELETE SET NULL;
 
 --
 -- Constraints for table `productmetas`
 --
 ALTER TABLE `productmetas`
-ADD CONSTRAINT `productmetas_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+  ADD CONSTRAINT `productmetas_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 
 --
 -- Constraints for table `productprices`
 --
 ALTER TABLE `productprices`
-ADD CONSTRAINT `productprices_productmetas_id` FOREIGN KEY (`productmeta_id`) REFERENCES `productmetas` (`id`) ON DELETE CASCADE,
-ADD CONSTRAINT `productprices_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `productprices_productmetas_id` FOREIGN KEY (`productmeta_id`) REFERENCES `productmetas` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `productprices_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `products`
 --
 ALTER TABLE `products`
-ADD CONSTRAINT `products_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`) ON DELETE SET NULL,
-ADD CONSTRAINT `products_productcats_id` FOREIGN KEY (`productcat_id`) REFERENCES `productcats` (`id`);
+  ADD CONSTRAINT `products_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `products_productcats_id` FOREIGN KEY (`productcat_id`) REFERENCES `productcats` (`id`);
 
 --
 -- Constraints for table `receipts`
 --
 ALTER TABLE `receipts`
-ADD CONSTRAINT `receipts_funds_id` FOREIGN KEY (`fund_id`) REFERENCES `funds` (`id`),
-ADD CONSTRAINT `receipts_papers_id` FOREIGN KEY (`paper_id`) REFERENCES `papers` (`id`),
-ADD CONSTRAINT `receipts_transactions_id` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`),
-ADD CONSTRAINT `receipts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
-ADD CONSTRAINT `receipts_users_idcustomer` FOREIGN KEY (`user_id_customer`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `receipts_funds_id` FOREIGN KEY (`fund_id`) REFERENCES `funds` (`id`),
+  ADD CONSTRAINT `receipts_papers_id` FOREIGN KEY (`paper_id`) REFERENCES `papers` (`id`),
+  ADD CONSTRAINT `receipts_transactions_id` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`),
+  ADD CONSTRAINT `receipts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `receipts_users_idcustomer` FOREIGN KEY (`user_id_customer`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `termusages`
 --
 ALTER TABLE `termusages`
-ADD CONSTRAINT `termusages_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE,
-ADD CONSTRAINT `termusages_terms_id` FOREIGN KEY (`term_id`) REFERENCES `terms` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `termusages_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `termusages_terms_id` FOREIGN KEY (`term_id`) REFERENCES `terms` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `transactiondetails`
 --
 ALTER TABLE `transactiondetails`
-ADD CONSTRAINT `transactiondetails_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
-ADD CONSTRAINT `transactiondetails_transactions_id` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `transactiondetails_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
+  ADD CONSTRAINT `transactiondetails_transactions_id` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `transactionmetas`
 --
 ALTER TABLE `transactionmetas`
-ADD CONSTRAINT `transactionmetas_transactions_id` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `transactionmetas_transactions_id` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `transactions`
 --
 ALTER TABLE `transactions`
-ADD CONSTRAINT `transactions_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
-ADD CONSTRAINT `transactions_users_idcustomer` FOREIGN KEY (`user_id_customer`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `transactions_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `transactions_users_idcustomer` FOREIGN KEY (`user_id_customer`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `userlogs`
 --
 ALTER TABLE `userlogs`
-ADD CONSTRAINT `userlogs_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION;
+  ADD CONSTRAINT `userlogs_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION;
 
 --
 -- Constraints for table `usermetas`
 --
 ALTER TABLE `usermetas`
-ADD CONSTRAINT `usermetas_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `usermetas_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `users`
 --
 ALTER TABLE `users`
-ADD CONSTRAINT `users_permissions_id` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`);
+  ADD CONSTRAINT `users_permissions_id` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`);
 
 --
 -- Constraints for table `verifications`
 --
 ALTER TABLE `verifications`
-ADD CONSTRAINT `verifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `verifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `visitors`
 --
 ALTER TABLE `visitors`
-ADD CONSTRAINT `visitors_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+  ADD CONSTRAINT `visitors_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

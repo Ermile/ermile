@@ -7,20 +7,19 @@ class model extends \mvc\model
 {
 	public function put_verification()
 	{
-		// for debug you can uncomment below line to disallow redirect
-		// $this->controller()->redirector	= false; 
-		sleep(1);
-		$mytype     = utility\Cookie::read('from');
+		// get parameters and set to local variables
 		$mymobile   = str_replace(' ', '', utility::post('mobile'));
+		$mymobile   = substr($mymobile, 1);
 		$mycode     = utility::post('code');
+		$myfrom     = utility\Cookie::read('from');
+
+		// check for mobile exist
 		$tmp_result	= $this->sql()->tableVerifications  ()
 							->whereVerification_value        ($mymobile)
 							->andVerification_code           ($mycode)
-							->andVerification_type           ('mobile'.$mytype)
+							->andVerification_type           ('mobile'.$myfrom)
 							->andVerification_status         ('enable')
 							->select();
-		var_dump($tmp_result->num());
-		exit();
 
 		if($tmp_result->num())
 		{
@@ -29,7 +28,7 @@ class model extends \mvc\model
 							->setVerification_status        ('expire')
 							->whereVerification_value       ($mymobile)
 							->andVerification_code          ($mycode)
-							->andVerification_type          ('mobile'.$mytype)
+							->andVerification_type          ('mobile'.$myfrom)
 							->andVerification_status        ('enable');
 			$sql		= $qry->update();
 
@@ -39,46 +38,39 @@ class model extends \mvc\model
 			// commit for successfull and rollback for failed
 			//
 			// if query run without error means commit
-			$this->commit(function($_parameter, $_parameter2)
+			$this->commit(function($_mobile, $_from)
 			{
-				if($_parameter2=='signup')
+				$myreferer = utility\Cookie::read('referer');
+				if($_from == 'signup')
 				{
 					//Send SMS
-					// \lib\utility::send_sms($_parameter);
+					\lib\utility\Sms::send($_mobile, 'verification');
+					debug::true(T_("verify successfully.").' '.T_("now you can login and enjoy!"));
 
-					$this->redirector()->set_url('login?from=verification&mobile='.(substr($_parameter,1)).
-						'&referer='.utility::get('referer') );
-					debug::true(T_("Verify successfully. Now you can login and enjoy!"));
+					$this->redirector()->set_url('login?from=verification&mobile='.$_mobile.'&referer='.$myreferer );
 				}
-				elseif($_parameter2=='recovery')
+				elseif($_from=='recovery')
 				{
-					$this->redirector()->set_url('changepass?from=verification&mobile='.(substr($_parameter,1)).
-						'&referer='.utility::get('referer') );
+					debug::true(T_("verify successfully.").' '.T_("please Input your new password"));
+
 					// login user to system
-					debug::true(T_("Verify successfully. Please Input your new password"));
+					$this->redirector()->set_url('changepass?from=verification&mobile='.$_mobile.'&referer='.$myreferer );
 				}
 				else
-				{
-					debug::warn(T_("Verify successfully. You must reffer from one point!"));
-				}
-			}, $mymobile, utility::get('from'));
+					debug::warn(T_("verify successfully.").' '.T_("but you must reffer from one point!"));
+			}, $mymobile, $myfrom);
 
 			// if a query has error or any error occour in any part of codes, run roolback
-			$this->rollback(function()
-			{
-				debug::error(T_("Verify failed!"));
-			} );
+			$this->rollback(function() { debug::error(T_("verify failed!")); } );
 		}
+
+		// mobile does not exits
 		elseif($tmp_result->num() == 0 )
-		{
-			// mobile does not exits
-			debug::error(T_("This data is incorrect"));
-		}
+			debug::error(T_("this data is incorrect"));
+
+		// mobile exist more than 2 times!
 		else
-		{
-			// mobile exist more than 2 times!
-			debug::error(T_("Please forward this message to Administrator").$tmp_result->string());
-		}
+			debug::error(T_("please forward this message to administrator"));
 	}
 }
 ?>

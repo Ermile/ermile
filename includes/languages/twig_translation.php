@@ -11,6 +11,9 @@ function transtext()
 	echo T_("Click here to create an account");                                       // Line 7
 	echo T_("Sign Up");                                                               // Line 7
 
+	//------------------------------------------------content_account/sms/display.html
+	echo T_("receive message callback!");                                             // Line 5
+
 	//---------------------------------------------content_account/signup/display.html
 	echo T_("terms of service");                                                      // Line 6
 	echo T_("by signing up, you agree to the");                                       // Line 6 Seperate
@@ -27,8 +30,9 @@ function transtext()
 	echo T_("are you remember your password!?");                                      // Line 6
 
 	//---------------------------------------content_account/verification/display.html
-	echo T_("please check your mobile and enter the code");                           // Line 6
-	echo T_("don't receive message?");                                                // Line 7
+	echo T_("we send a verification code for you");                                   // Line 6
+	echo T_("please check your mobile and enter the code");                           // Line 7
+	echo T_("don't receive message?");                                                // Line 8
 
 	//-------------------------------------------------------content/home/display.html
 	echo T_("Ermile");                                                                // Line 12
@@ -48,7 +52,7 @@ function transtext()
 	//-----------------------------------------------------content_cp/main/layout.html
 
 	//---------------------------------------------------includes/cls/macro/forms.html
-	echo T_("Please select one item");                                                // Line 47 Seperate
+	echo T_("Please select one item");                                                // Line 49 Seperate
 
 	//-------------------------------------------------------includes/mvc/display.html
 	echo T_("Home Page");                                                             // Line 39

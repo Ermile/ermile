@@ -7,71 +7,66 @@ class model extends \mvc\model
 {
 	public function post_login()
 	{
-		// for debug you can uncomment below line to disallow redirect
-		// $this->controller()->redirector	= false; 
-
+		// get parameters and set to local variables
 		$mymobile   = str_replace(' ', '', utility::post('mobile'));
+		$mymobile   = substr($mymobile, 1);
 		$mypass     = utility::post('password');
+		// check for mobile exist
 		$tmp_result =  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
+
+		// if exist
 		if($tmp_result->num() == 1)
 		{
-			// mobile exist
-			$tmp_result = $tmp_result->assoc();
-			if (isset($tmp_result['user_pass']) && $tmp_result['user_pass'] == $mypass)
+			$tmp_result       = $tmp_result->assoc();
+			$myhashedPassword = $tmp_result['user_pass'];
+			// if password is correct. go for login:)
+			if (isset($myhashedPassword) && utility::hasher($mypass, $myhashedPassword))
 			{
-				// password is correct. go for login:)
 				$this->setLoginSession($tmp_result);
 
 				// Create Token and add to db for cross login ****************************************************
-				$mycode	= md5($tmp_result['id'].'_Ermile_'.date('Y-m-d H:i:s'));
-				$qry		= $this->sql()->tableUsermetas()
-							->setUser_id($tmp_result['id'])
-							->setUsermeta_cat('cookie_token')
-							->setUsermeta_name(ip2long($_SERVER['REMOTE_ADDR']))
-							->setUsermeta_value($mycode);
+				$mycode	= md5('^_^'.$tmp_result['id'].'_*Ermile*_'.date('Y-m-d H:i:s').'^_^');
+				$qry		= $this->sql()->tableUsermetas ()
+								->setUser_id                ($tmp_result['id'])
+								->setUsermeta_cat           ('cookie_token')
+								->setUsermeta_name          (ip2long($_SERVER['REMOTE_ADDR']))
+								->setUsermeta_value         ($mycode);
 				$sql		= $qry->insert();
 
-				$this->commit(function($_parameter1)
+
+				// ======================================================
+				// you can manage next event with one of these variables,
+				// commit for successfull and rollback for failed
+				// if query run without error means commit
+				$this->commit(function($_code)
 				{
+					$myreferer = utility\Cookie::read('referer');
 					// create code for pass with get to service home page
-					debug::true(T_("Login successfully"));
+					debug::true(T_("login successfully"));
 
-					if(utility::get('referer')=='jibres')
-						$this->redirector()->set_domain('jibres.dev')->set_url('?ssid='.$_parameter1);
+					if($myreferer=='jibres')
+						$this->redirector()->set_domain('jibres.'.$this->url('tld'))->set_url('?from=ermile&ssid='.$_code);
 
-					elseif(utility::get('referer')=='station')
-						$this->redirector()->set_domain('station.dev')->set_url('?ssid='.$_parameter1);
+					elseif($myreferer=='station')
+						$this->redirector()->set_domain('station.'.$this->url('tld'))->set_url('?from=ermile&ssid='.$_code);
 
 					else
-						$this->redirector()->set_domain()->set_url('?ssid='.$_parameter1);
+						$this->redirector()->set_domain()->set_url('?from=ermile&ssid='.$_code);
 				}, $mycode);
-				$this->rollback(function()
-				{
-					debug::error(T_("Login Failed!"));
-				});
+				$this->rollback(function() { debug::error(T_("login failed!")); });
 
 			}
-			else
-			{
 				// password is incorrect:(
-				debug::error(T_("Password is incorrect", "mobile", "password"));
-			}
+			else
+				debug::error(T_("password is incorrect"));
 		}
+		// mobile does not exits
 		elseif($tmp_result->num() == 0 )
-		{
-			debug::title("Login Failed!");
-			// mobile does not exits
-			debug::error(T_("Mobile number is incorrect", "mobile", "form"));
-			// $this->controller()->redirector = false;
-					// var_dump(\saloos::is_ajax());
-					// var_dump($this->controller());
-		}
+			debug::error(T_("mobile number is incorrect"));
+
+		// mobile exist more than 2 times!
 		else
-		{
-			// mobile exist more than 2 times!
-			debug::title("Login Failed!");
-			debug::error(T_("Please forward this message to Administrator"));
-		}
+			debug::error(T_("please forward this message to administrator"));
 	}
 }
 ?>

@@ -9,8 +9,8 @@ class model extends \mvc\model
 	public function get_smsdelivery()
 	{
 		$_messageid = utility::get('messageid');
-		$_status 	= utility::get('status');
-		$_method	= 'get';
+		$_status    = utility::get('status');
+		$_method    = 'get';
 
 		if($_messageid || $_status)
 			$this->smsdelivery($_messageid, $_status, $_method);
@@ -18,12 +18,9 @@ class model extends \mvc\model
 
 	public function post_smsdelivery()
 	{
-		// for debug you can uncomment below line to disallow redirect
-		// $this->controller()->redirector	= false;
-
-		$_messageid	= utility::post('messageid');
-		$_status	= utility::post('status');
-		$_method 	= 'post';
+		$_messageid = utility::post('messageid');
+		$_status    = utility::post('status');
+		$_method    = 'post';
 		if($_messageid || $_status)
 			$this->smsdelivery($_messageid, $_status, $_method);
 	}
@@ -41,14 +38,14 @@ class model extends \mvc\model
 		$this->commit(function()
 		{
 			$this->redirector()->set_url();
-			debug::true("Register sms successfully");
+			debug::true("register sms successfully");
 		});
 
 		// if a query has error or any error occour in any part of codes, run roolback
 		$this->rollback(function()
 		{
 			$this->redirector()->set_url('smsdelivery?uid=201500001');
-			debug::error("Register sms failed!");
+			debug::error("register sms failed!");
 		} );
 
 		// delete soon
@@ -68,11 +65,11 @@ class model extends \mvc\model
 	// ********************************************************************************* SMS Receive
 	public function get_smscallback()
 	{
-		$_from		= utility::get('from');
-		$_to		= utility::get('to');
-		$_message	= utility::get('message');
-		$_messageID	= utility::get('messageID');
-		$_method 	= 'get';
+		$_from      = utility::get('from');
+		$_to        = utility::get('to');
+		$_message   = utility::get('message');
+		$_messageID = utility::get('messageID');
+		$_method    = 'get';
 		
 		if($_from && $_to && $_message)
 			$this->smscallback($_from, $_to, $_message, $_messageID, $_method);
@@ -80,14 +77,11 @@ class model extends \mvc\model
 
 	public function post_smscallback()
 	{
-		// for debug you can uncomment below line to disallow redirect
-		// $this->controller()->redirector	= false; 
-
-		$_from		= utility::post('from');
-		$_to		= utility::post('to');
-		$_message	= utility::post('message');
-		$_messageID	= utility::post('messageID');
-		$_method 	= 'post';
+		$_from      = utility::post('from');
+		$_to        = utility::post('to');
+		$_message   = utility::post('message');
+		$_messageID = utility::post('messageID');
+		$_method    = 'post';
 
 		if($_from && $_to && $_message)
 			$this->smscallback($_from, $_to, $_message, $_messageID, $_method);
@@ -107,14 +101,14 @@ class model extends \mvc\model
 
 		$this->commit(function()
 		{
-			debug::true("Register sms successfully");
+			debug::true("register sms successfully");
 			$this->redirector()->set_url();
 		} );
 
 		// if a query has error or any error occour in any part of codes, run roolback
 		$this->rollback(function()
 		{
-			debug::error("Register sms failed!");
+			debug::error("register sms failed!");
 			$this->redirector()->set_url('smscallback?uid=201500001');
 		} );
 

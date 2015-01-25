@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-24 18:04+0330\n"
-"PO-Revision-Date: 2015-01-24 18:04+0330\n"
+"POT-Creation-Date: 2015-01-25 06:15+0330\n"
+"PO-Revision-Date: 2015-01-25 06:15+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -20,134 +20,144 @@ msgstr ""
 msgid "You are logined to system!"
 msgstr "شما قبلا به سیستم وارد شده اید!"
 
-#: ../../../.././content_account/home/controller.php:55
+#: ../../../.././content_account/home/controller.php:57
 msgid "You can't access to this page!"
 msgstr "شما اجازه دسترسی به این صفحه را ندارید!"
 
-#: ../../../.././content_account/home/controller.php:69
+#: ../../../.././content_account/home/controller.php:71
 msgid "You must first logined to system!"
 msgstr "شما ابتدا باید وارد سیستم شوید!"
 
-#: ../../../.././content_account/home/controller.php:76
-msgid "Logout successfully"
+#: ../../../.././content_account/home/controller.php:78
+msgid "logout successfully"
 msgstr "خروج موفقیت آمیز"
 
-#: ../../../.././content_account/home/view.php:26
+#: ../../../.././content_account/home/view.php:25
 #: ../../../.././includes/cls/form/account.php:25
-#: ../../../.././includes/languages/twig_translation.php:57
+#: ../../../.././includes/languages/twig_translation.php:61
 msgid "Login"
 msgstr "ورود به سیستم"
 
-#: ../../../.././content_account/home/view.php:30
+#: ../../../.././content_account/home/view.php:29
 #: ../../../.././includes/cls/form/account.php:33
 msgid "Create an account"
 msgstr "اکانت بسازید"
 
-#: ../../../.././content_account/home/view.php:34
-#: ../../../.././content_account/home/view.php:38
+#: ../../../.././content_account/home/view.php:33
+#: ../../../.././content_account/home/view.php:37
 msgid "Verificate"
 msgstr "اعتبارسنجی"
 
-#: ../../../.././content_account/home/view.php:42
+#: ../../../.././content_account/home/view.php:41
 #: ../../../.././includes/cls/form/account.php:50
 msgid "Recovery"
 msgstr "بازیابی کلمه عبور"
 
-#: ../../../.././content_account/home/view.php:46
+#: ../../../.././content_account/home/view.php:45
 msgid "Change password"
 msgstr "کلمه عبور"
 
-#: ../../../.././content_account/home/view.php:52
+#: ../../../.././content_account/home/view.php:51
 msgid "SMS Delivery"
 msgstr "رسید دریافت پیامک"
 
-#: ../../../.././content_account/home/view.php:58
+#: ../../../.././content_account/home/view.php:57
 msgid "SMS Callback"
 msgstr "پیامک های دریافتی"
 
-#: ../../../.././content_account/home/view.php:64
+#: ../../../.././content_account/home/view.php:63
 #: ../../../.././includes/languages/static_translation.php:19
-#: ../../../.././includes/languages/twig_translation.php:34
+#: ../../../.././includes/languages/twig_translation.php:38
 #: ../../../.././includes/mvc/view.php:10
 msgid "Ermile"
 msgstr "ارمایل"
 
-#: ../../../.././content_account/login/model.php:37
-msgid "Login successfully"
+#: ../../../.././content_account/login/model.php:45
+msgid "login successfully"
 msgstr "ورود موفقیت آمیز"
 
-#: ../../../.././content_account/login/model.php:50
-msgid "Login Failed!"
+#: ../../../.././content_account/login/model.php:56
+msgid "login failed!"
 msgstr "ثبت نام ناموفق!"
 
-#: ../../../.././content_account/login/model.php:57
-msgid "Password is incorrect"
+#: ../../../.././content_account/login/model.php:61
+msgid "password is incorrect"
 msgstr "کلمه عبور اشتباه است"
 
-#: ../../../.././content_account/login/model.php:64
-#: ../../../.././content_account/recovery/model.php:64
+#: ../../../.././content_account/login/model.php:65
+msgid "mobile number is incorrect"
+msgstr "این شماره موبایل اشتباه است"
+
+#: ../../../.././content_account/login/model.php:69
+#: ../../../.././content_account/signup/model.php:63
+#: ../../../.././content_account/recovery/model.php:55
+#: ../../../.././content_account/verification/model.php:73
+msgid "please forward this message to administrator"
+msgstr "لطفا این پیغام را برای مدیر سیستم ارسال کنید"
+
+#: ../../../.././content_account/signup/model.php:19
+msgid "mobile number exist!"
+msgstr "این شماره موبایل قبلا در سیستم ثبت شده است!"
+
+#: ../../../.././content_account/signup/model.php:52
+msgid "register successfully"
+msgstr "ثبت نام با موفقیت انجام شد"
+
+#: ../../../.././content_account/signup/model.php:52
+#: ../../../.././content_account/recovery/model.php:40
+#: ../../../.././includes/languages/twig_translation.php:33
+msgid "we send a verification code for you"
+msgstr "ما کد اعتبارسنجی را برای شما ارسال خواهیم کرد"
+
+#: ../../../.././content_account/signup/model.php:58
+msgid "register failed!"
+msgstr "ثبت نام ناموفق بود!"
+
+#: ../../../.././content_account/verificationsms/model.php:22
+msgid "we are waiting for your message!"
+msgstr "ما در انتظار دریافت پیامک شما هستیم!"
+
+#: ../../../.././content_account/verificationsms/model.php:42
+msgid "we receive your message and your account is now verifited."
+msgstr "ما پیامک شما را دریافت کرده و اکانت شما را برایتان فعال کردیم"
+
+#: ../../../.././content_account/verificationsms/model.php:48
+msgid "error on verify your code!"
+msgstr "خطا در تایید اعتبار کد!"
+
+#: ../../../.././content_account/recovery/model.php:46
+msgid "recovery failed!"
+msgstr "بازیابی ناموفق بود!"
+
+#: ../../../.././content_account/recovery/model.php:51
 msgid "Mobile number is incorrect"
 msgstr "این شماره موبایل اشتباه است."
 
-#: ../../../.././content_account/login/model.php:73
-#: ../../../.././content_account/signup/model.php:68
-#: ../../../.././content_account/recovery/model.php:70
-#: ../../../.././content_account/verification/model.php:75
-msgid "Please forward this message to Administrator"
-msgstr "لطفا این پیغام را برای مدیر سیستم ارسال کنید"
+#: ../../../.././content_account/verification/model.php:48
+#: ../../../.././content_account/verification/model.php:54
+#: ../../../.././content_account/verification/model.php:60
+msgid "verify successfully."
+msgstr "اعتبارسنجی موفقیت آمیز بود."
 
-#: ../../../.././content_account/signup/model.php:21
-msgid "Mobile number exist!"
-msgstr "این شماره موبایل قبلا در سیستم ثبت شده است."
+#: ../../../.././content_account/verification/model.php:48
+msgid "now you can login and enjoy!"
+msgstr "حالا می توانید وارد سامانه شده و از آن استفاده کنید!"
 
-#: ../../../.././content_account/signup/model.php:56
-msgid "Register successfully"
-msgstr "ثبت نام با موفقیت انجام شد."
+#: ../../../.././content_account/verification/model.php:54
+msgid "please Input your new password"
+msgstr "لطفا کلمه عبور جدید را وارد کنید"
 
-#: ../../../.././content_account/signup/model.php:62
-msgid "Register failed!"
-msgstr "ثبت نام ناموفق بود!"
-
-#: ../../../.././content_account/verificationsms/model.php:39
-#: ../../../.././content_account/verificationsms/model.php:44
-msgid "We are waiting for your message!"
-msgstr "ما در انتظار دریافت پیامک شما هستیم!"
-
-#: ../../../.././content_account/verificationsms/model.php:65
-msgid "We receive your message and your account is now verifited."
-msgstr "ما پیامک شما را دریافت کرده و اکانت شما را برایتان فعال کردیم"
-
-#: ../../../.././content_account/verificationsms/model.php:71
-msgid "Error on verify your code!"
-msgstr "خطا در تایید اعتبار کد!"
-
-#: ../../../.././content_account/recovery/model.php:47
-msgid "Step 1 of 2 is complete. Please check your mobile to continue"
-msgstr "مرحله ۱ از ۲ کامل شد. لطفا تلفن همراه خود را چک کنید"
-
-#: ../../../.././content_account/recovery/model.php:55
-msgid "Recovery failed!"
-msgstr "بازیابی ناموفق بود!"
-
-#: ../../../.././content_account/verification/model.php:46
-msgid "Verify successfully. Now you can login and enjoy!"
-msgstr "اعتبارسنجی موفق بود. حالا می توانید از سامانه استفاده کنید"
-
-#: ../../../.././content_account/verification/model.php:53
-msgid "Verify successfully. Please Input your new password"
-msgstr "اعتبارسنجی با موفقیت انجام شد. لطفا کلمه عبور جدید را وارد کنید"
-
-#: ../../../.././content_account/verification/model.php:57
-msgid "Verify successfully. You must reffer from one point!"
-msgstr "اعتبارسنجی موفق بود. ولی شما باید از جایی معرفی می شدید!"
+#: ../../../.././content_account/verification/model.php:60
+msgid "but you must reffer from one point!"
+msgstr "ولی شما باید از جایی معرفی می شدید!"
 
 #: ../../../.././content_account/verification/model.php:64
-msgid "Verify failed!"
+msgid "verify failed!"
 msgstr "اعتبارسنجی ناموفق بود!"
 
-#: ../../../.././content_account/verification/model.php:70
-msgid "This data is incorrect"
-msgstr "این اطلاعات اشتباه است."
+#: ../../../.././content_account/verification/model.php:69
+msgid "this data is incorrect"
+msgstr "این اطلاعات اشتباه است"
 
 #: ../../../.././content/main/controller.php:21
 msgid "Does not exist!"
@@ -710,8 +720,8 @@ msgid "options"
 msgstr "تنظیمات"
 
 #: ../../../.././includes/cls/database/ermile/translation.php:171
-#: ../../../.././includes/languages/static_translation.php:28
-#: ../../../.././includes/languages/twig_translation.php:41
+#: ../../../.././includes/languages/static_translation.php:37
+#: ../../../.././includes/languages/twig_translation.php:45
 msgid "Options"
 msgstr "تنظیمات"
 
@@ -800,14 +810,14 @@ msgid "Add"
 msgstr "افزودن"
 
 #: ../../../.././includes/cls/database/ermile/translation.php:208
-#: ../../../.././includes/languages/static_translation.php:33
-#: ../../../.././includes/languages/twig_translation.php:45
+#: ../../../.././includes/languages/static_translation.php:42
+#: ../../../.././includes/languages/twig_translation.php:49
 msgid "Edit"
 msgstr "ویرایش"
 
 #: ../../../.././includes/cls/database/ermile/translation.php:209
-#: ../../../.././includes/languages/static_translation.php:34
-#: ../../../.././includes/languages/twig_translation.php:46
+#: ../../../.././includes/languages/static_translation.php:43
+#: ../../../.././includes/languages/twig_translation.php:50
 msgid "Delete"
 msgstr "حذف"
 
@@ -1440,12 +1450,12 @@ msgid "we send a verification code to this number"
 msgstr "کد اعتبارسنجی به این شماره ارسال خواهد شد"
 
 #: ../../../.././includes/cls/form/symbol.php:62
-msgid "between 5-20 character"
-msgstr "بین 5 تا 20 کاراکتر."
+msgid "between 5-40 character"
+msgstr "بین ۵ تا ۴۰ کاراکتر."
 
 #: ../../../.././includes/cls/form/symbol.php:63
-msgid "between 5-20 character. be tricky!"
-msgstr "بین 5 تا 20 کاراکتر. در انتخاب کلمه عبور دقت به خرج دهید"
+msgid "between 5-40 character. be tricky!"
+msgstr "بین ۵ تا ۴۰ کاراکتر. در انتخاب کلمه عبور دقت به خرج دهید"
 
 #: ../../../.././includes/languages/static_translation.php:6
 msgid "Saloos"
@@ -1503,56 +1513,80 @@ msgstr "برای بروزرسانی باید حداقل یک فیلد را تغ�
 msgid "ermile"
 msgstr "ارمایل"
 
+#: ../../../.././includes/languages/static_translation.php:21
+msgid "now we only support Iran!"
+msgstr "در حال حاضر ما فقط به شماره های ایران سرویس می دهیم!"
+
+#: ../../../.././includes/languages/static_translation.php:22
+msgid "your verification code is"
+msgstr "کد اعتبارسنجی شما"
+
+#: ../../../.././includes/languages/static_translation.php:23
+msgid "your recovery code is"
+msgstr "کد بازیابی کلمه عبور شما"
+
 #: ../../../.././includes/languages/static_translation.php:24
-#: ../../../.././includes/languages/twig_translation.php:37
+msgid "you account is verified successfully"
+msgstr "اعتبارسنجی اکانت شما با موفقیت به انجام رسید"
+
+#: ../../../.././includes/languages/static_translation.php:25
+msgid "thanks for using our service"
+msgstr "متشکریم که از سرویس ما استفاده می کنید"
+
+#: ../../../.././includes/languages/static_translation.php:26
+msgid "made in iran"
+msgstr "ساخت ایران"
+
+#: ../../../.././includes/languages/static_translation.php:33
+#: ../../../.././includes/languages/twig_translation.php:41
 msgid "Logout"
 msgstr "خروج از سیستم"
 
-#: ../../../.././includes/languages/static_translation.php:25
-#: ../../../.././includes/languages/twig_translation.php:38
+#: ../../../.././includes/languages/static_translation.php:34
+#: ../../../.././includes/languages/twig_translation.php:42
 msgid "Home"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/static_translation.php:29
-#: ../../../.././includes/languages/twig_translation.php:42
+#: ../../../.././includes/languages/static_translation.php:38
+#: ../../../.././includes/languages/twig_translation.php:46
 msgid "Go to"
 msgstr "برو به"
 
-#: ../../../.././includes/languages/static_translation.php:30
+#: ../../../.././includes/languages/static_translation.php:39
 msgid "Does not exist"
 msgstr "هیچ داده ای موجود نیست"
 
-#: ../../../.././includes/languages/static_translation.php:31
-#: ../../../.././includes/languages/twig_translation.php:43
+#: ../../../.././includes/languages/static_translation.php:40
+#: ../../../.././includes/languages/twig_translation.php:47
 msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
-#: ../../../.././includes/languages/static_translation.php:32
-#: ../../../.././includes/languages/twig_translation.php:44
+#: ../../../.././includes/languages/static_translation.php:41
+#: ../../../.././includes/languages/twig_translation.php:48
 msgid "Actions"
 msgstr "عملیات"
 
-#: ../../../.././includes/languages/static_translation.php:39
+#: ../../../.././includes/languages/static_translation.php:48
 msgid "Next page"
 msgstr "صفحه بعد"
 
-#: ../../../.././includes/languages/static_translation.php:42
+#: ../../../.././includes/languages/static_translation.php:51
 msgid "home"
 msgstr "خانه"
 
-#: ../../../.././includes/languages/static_translation.php:43
+#: ../../../.././includes/languages/static_translation.php:52
 msgid "Homepage"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/static_translation.php:44
+#: ../../../.././includes/languages/static_translation.php:53
 msgid "Signup"
 msgstr "ثبت نام"
 
-#: ../../../.././includes/languages/static_translation.php:45
+#: ../../../.././includes/languages/static_translation.php:54
 msgid "Add new"
 msgstr "افزودن"
 
-#: ../../../.././includes/languages/static_translation.php:46
+#: ../../../.././includes/languages/static_translation.php:55
 msgid "Add New"
 msgstr "افزودن"
 
@@ -1577,63 +1611,67 @@ msgid "Sign Up"
 msgstr "ثبت نام"
 
 #: ../../../.././includes/languages/twig_translation.php:15
+msgid "receive message callback!"
+msgstr "دریافت پیامک"
+
+#: ../../../.././includes/languages/twig_translation.php:18
 msgid "terms of service"
 msgstr "قوانین استفاده"
 
-#: ../../../.././includes/languages/twig_translation.php:16
+#: ../../../.././includes/languages/twig_translation.php:19
 msgid "by signing up, you agree to the"
 msgstr "با ثبت نام شما موافق هستید با"
 
-#: ../../../.././includes/languages/twig_translation.php:17
+#: ../../../.././includes/languages/twig_translation.php:20
 msgid "already have an account?"
 msgstr "اکانت دارید؟"
 
-#: ../../../.././includes/languages/twig_translation.php:18
+#: ../../../.././includes/languages/twig_translation.php:21
 msgid "click here to sign in to your account"
 msgstr "برای ورود به اکانت خود کلیک کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:19
+#: ../../../.././includes/languages/twig_translation.php:22
 msgid "Sign In"
 msgstr "ورود به سیستم"
 
-#: ../../../.././includes/languages/twig_translation.php:22
+#: ../../../.././includes/languages/twig_translation.php:25
 msgid "Please send number <b>2015</b> to below number"
 msgstr "لطفا عدد <b>2015</b> را به شماره زیر پیامک کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:23
+#: ../../../.././includes/languages/twig_translation.php:26
 msgid "Then wait we receive your message and verificate your account"
 msgstr ""
 "ما در انتظار پیامک شما بوده و پس از دریافت اکانت را برایتان فعال خواهیم کردیم"
 
-#: ../../../.././includes/languages/twig_translation.php:26
+#: ../../../.././includes/languages/twig_translation.php:29
 msgid "click here to login to your account"
 msgstr "برای ورود به اکانت خود کلیک کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:27
+#: ../../../.././includes/languages/twig_translation.php:30
 msgid "are you remember your password!?"
 msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
 
-#: ../../../.././includes/languages/twig_translation.php:30
+#: ../../../.././includes/languages/twig_translation.php:34
 msgid "please check your mobile and enter the code"
 msgstr "پس از بررسی موبایل خود کد را وارد کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:31
+#: ../../../.././includes/languages/twig_translation.php:35
 msgid "don't receive message?"
 msgstr "هنوز پیامک ما را دریافت نکردید؟"
 
-#: ../../../.././includes/languages/twig_translation.php:51
+#: ../../../.././includes/languages/twig_translation.php:55
 msgid "Please select one item"
 msgstr "لطفا یک گزینه را انتخاب کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:54
+#: ../../../.././includes/languages/twig_translation.php:58
 msgid "Home Page"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/twig_translation.php:55
+#: ../../../.././includes/languages/twig_translation.php:59
 msgid "Admin"
 msgstr "مدیریت"
 
-#: ../../../.././includes/languages/twig_translation.php:56
+#: ../../../.././includes/languages/twig_translation.php:60
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
@@ -1648,6 +1686,12 @@ msgstr "ارمایل نام شرکت ماست"
 #: ../../../.././includes/mvc/view.php:14
 msgid "Ermile is Inteligent."
 msgstr "ارمایل باهوش است!"
+
+#~ msgid "Please forward this message to Administrator"
+#~ msgstr "لطفا این پیغام را برای مدیر سیستم ارسال کنید"
+
+#~ msgid "Step 1 of 2 is complete. Please check your mobile to continue"
+#~ msgstr "مرحله ۱ از ۲ کامل شد. لطفا تلفن همراه خود را چک کنید"
 
 #~ msgid "Edit Record successfully"
 #~ msgstr "ویرایش با موفقیت انجام شد."
