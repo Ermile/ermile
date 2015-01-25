@@ -12,7 +12,7 @@ class model extends \mvc\model
 		$mymobile   = substr($mymobile, 1);
 		$mypass     = utility::post('password');
 		// check for mobile exist
-		$tmp_result =  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
+		$tmp_result =  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->andUser_pass(md5(utility::post('password')))->select();
 
 		// if exist
 		if($tmp_result->num() == 1)

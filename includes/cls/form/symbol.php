@@ -62,7 +62,7 @@ class symbol extends \lib\form
 							->required()->maxlength(40)->pattern("^.{5,40}$")->title(T_("between 5-40 character"))
 							->pos('hint--rounded hint--bottom')->desc(T_("between 5-40 character. be tricky!"));
 
-		// $this->password->validate()->password();
+		$this->password->validate()->password();
 	}
 }
 ?>
