@@ -69,7 +69,7 @@
         <a class="action-icons edit hint--top" href="{{store}}/{{module}}/edit={{d.id}}">{%trans "Edit"%}</a>
        </span>
        <span class="hint--top hint--error" data-hint='{%trans "Delete"%}'>
-        <a class="action-icons delete hide-text" href="{{store}}/{{module}}/delete={{d.id}}" data-ajaxify data-method="post" data-data="{id:{{d.id}}}">{%trans "Delete"%}</a>
+        <a class="action-icons delete hide-text" href="{{store}}/{{module}}/delete={{d.id}}" data-modal="delete-confirm">{%trans "Delete"%}</a>
        </span>
        </td>
       </tr>
@@ -81,6 +81,10 @@
     Data not exist!
 {%endif%}
 {%endblock%}
+
+<div data-modal class="modal modal-delete-confirm hidden">
+  SALAM CHETORI DAYI TAQI :D
+</div>
 
 {%endif%}
 {%endif%}
