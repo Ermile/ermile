@@ -45,10 +45,10 @@ class model extends \mvc\model
 					debug::true(T_("login successfully"));
 
 					if($myreferer=='jibres')
-						$this->redirector()->set_domain('jibres.'.$this->url('tld'))->set_url('?from=ermile&ssid='.$_code);
+						$this->redirector()->set_domain('jibres.'.$this->url('tld'))->set_url('?dev=y&from=ermile&ssid='.$_code);
 
-					elseif($myreferer=='station')
-						$this->redirector()->set_domain('station.'.$this->url('tld'))->set_url('?from=ermile&ssid='.$_code);
+					elseif($myreferer=='talambar')
+						$this->redirector()->set_domain('talambar.'.$this->url('tld'))->set_url('?dev=y&from=ermile&ssid='.$_code);
 
 					else
 						$this->redirector()->set_domain()->set_url('?from=ermile&ssid='.$_code);
