@@ -9,7 +9,8 @@ function slugify(text) {
 }
 
 $(function() {
-  $('.modal-delete-confirm').on('open', function() {
+  var $deleteConfirm = $('.modal-delete-confirm');
+  $deleteConfirm.on('open', function() {
     var $send = $('a[data-ajaxify]', this);
 
     $.each($send.data(), function(key) {
@@ -18,15 +19,11 @@ $(function() {
       $send.removeAttr(key);
     });
 
-    $.each($(this).data(), function(key, val) {
-      if(key === 'modal') return;
-
-      $send.attr('data-' + key, val);
-    });
+    $send.copyData(this, ['modal']);
   });
-  $('.modal-delete-confirm .delete-cancel').click(function() {
-    $(this.parentNode).trigger('close');
-  })
+  $deleteConfirm.find('.delete-cancel').click(function() {
+    $deleteConfirm.trigger('close');
+  });
 });
 
 route('*', function() {
