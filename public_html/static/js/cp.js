@@ -8,6 +8,27 @@ function slugify(text) {
     .replace(/=.*/, '');            
 }
 
+$(function() {
+  $('.modal-delete-confirm').on('open', function() {
+    var $send = $('a[data-ajaxify]', this);
+
+    $.each($send.data(), function(key) {
+      if(key === 'modal') return;
+
+      $send.removeAttr(key);
+    });
+
+    $.each($(this).data(), function(key, val) {
+      if(key === 'modal') return;
+
+      $send.attr('data-' + key, val);
+    });
+  });
+  $('.modal-delete-confirm .delete-cancel').click(function() {
+    $(this.parentNode).trigger('close');
+  })
+});
+
 route('*', function() {
   hideFields();
 
