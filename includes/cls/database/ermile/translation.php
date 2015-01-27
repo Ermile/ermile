@@ -155,7 +155,6 @@ function transtext()
 	echo T_("Status");              // filepart_status
 	echo T_("init");                // Enum init
 	echo T_("ready");               // Enum ready
-	echo T_("");                    // Enum 
 
 	// ------------------------------------------------------------------- Table files
 	echo T_("files");               // Table files
