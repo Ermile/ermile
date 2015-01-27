@@ -11,7 +11,7 @@ class controller extends \mvc\controller
 		if(!$this->login())
 		{
 			\lib\debug::warn(T_("first of all, you must login to system!"));
-			$this->redirector()->set_domain($this->url('LoginService'))->set_url('login?dev=y&referer='.$this->url('raw'))->redirect();
+			$this->redirector()->set_domain($this->url('AccountService'))->set_url('login?dev=y&referer='.$this->url('raw'))->redirect();
 			exit();
 		}
 
