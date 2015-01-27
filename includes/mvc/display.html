@@ -44,9 +44,9 @@
       <a href="http://admin.{{url.raw}}/none">{%trans "Admin"%}</a>
       <a href="http://cp.{{url.raw}}">{%trans "Control Panel"%}</a>
 {%if global.login%}
-      <a href="http://account.{{url.raw}}/logout">{%trans "Logout"%}</a>
+      <a href="{{url.LoginService}}/logout">{%trans "Logout"%}</a>
 {%else%}
-      <a href="http://account.{{url.raw}}/login">{%trans "Login"%}</a>
+      <a href="{{url.LoginService}}/login">{%trans "Login"%}</a>
 {%endif%}
      </div>
     </nav>
