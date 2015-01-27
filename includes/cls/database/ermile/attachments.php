@@ -3,13 +3,13 @@ namespace database\ermile;
 class attachments 
 {
 	public $id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                                                                    );
-	public $file_id           = array('null' =>'NO',  'show' =>'YES', 'label'=>'File',          'type' => 'int@10',                                                                    'foreign'=>'files@id!file_title');
+	public $file_id           = array('null' =>'YES', 'show' =>'YES', 'label'=>'File',          'type' => 'int@10',                                                                    'foreign'=>'files@id!id');
 	public $attachment_title  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@100',                                                               );
 	public $attachment_model  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Model',         'type' => 'enum@productcategory,product,admin,banklogo,post,system,other,file,folder', );
-	public $attachment_addr   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Addr',          'type' => 'varchar@100',                                                               );
-	public $attachment_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@50',                                                                );
-	public $attachment_type   = array('null' =>'NO',  'show' =>'NO',  'label'=>'Type',          'type' => 'varchar@10',                                                                );
-	public $attachment_size   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Size',          'type' => 'float@12,0',                                                                );
+	public $attachment_addr   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Addr',          'type' => 'varchar@100',                                                               );
+	public $attachment_name   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@50',                                                                );
+	public $attachment_type   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Type',          'type' => 'varchar@10',                                                                );
+	public $attachment_size   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Size',          'type' => 'float@12,0',                                                                );
 	public $attachment_desc   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',                                                               );
 	public $attachment_parent = array('null' =>'YES', 'show' =>'YES', 'label'=>'Parent',        'type' => 'int@10',                                                                    );
 	public $attachment_depth  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Depth',         'type' => 'smallint@5',                                                                );
@@ -25,7 +25,7 @@ class attachments
 	//------------------------------------------------------------------ id - foreign key
 	public function file_id() 
 	{
-		$this->form("select")->name("file_")->min(0)->max(999999999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("file_")->min(0)->max(999999999)->type("select")->validate()->id();
 		$this->setChild();
 	}
 
@@ -43,21 +43,21 @@ class attachments
 	}
 	public function attachment_addr() 
 	{
-		$this->form("text")->name("addr")->maxlength(100)->required()->type('text');
+		$this->form("text")->name("addr")->maxlength(100)->type('text');
 	}
 	public function attachment_name() 
 	{
-		$this->form("text")->name("name")->maxlength(50)->required()->type('text');
+		$this->form("text")->name("name")->maxlength(50)->type('text');
 	}
 
 	//------------------------------------------------------------------ type
 	public function attachment_type() 
 	{
-		$this->form("#type")->maxlength(10)->required()->type('text');
+		$this->form("#type")->maxlength(10)->type('text');
 	}
 	public function attachment_size() 
 	{
-		$this->form("text")->name("size")->max(99999999999)->required()->type('number');
+		$this->form("text")->name("size")->max(99999999999)->type('number');
 	}
 
 	//------------------------------------------------------------------ desc

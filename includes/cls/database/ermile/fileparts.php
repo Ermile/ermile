@@ -3,7 +3,7 @@ namespace database\ermile;
 class fileparts 
 {
 	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                                                  );
-	public $file_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'File',          'type' => 'int@10',                                                  'foreign'=>'files@id!file_title');
+	public $file_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'File',          'type' => 'int@10',                                                  'foreign'=>'files@id!id');
 	public $filepart_part   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Part',          'type' => 'smallint@5',                                              );
 	public $filepart_code   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Code',          'type' => 'varchar@64',                                              );
 	public $filepart_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@awaiting,start,inprogress,appended,failed,finished', );

@@ -313,7 +313,7 @@ while ($row = $qTables->fetch_object())
 			$tmp_fields_name = $prefix . "_title";
 			if($table=="users")
 				$tmp_fields_name = $prefix."_nickname";
-			if($table=="receipts" || $table=="transactions" || $table=="papers")
+			if($table=="receipts" || $table=="transactions" || $table=="papers" || $table=="files")
 				$tmp_fields_name = "id";
 
 			$fields          .= $tmp_fields_name."'";
