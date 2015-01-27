@@ -6,8 +6,8 @@ class costcats
 	public $costcat_title  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                        );
 	public $costcat_slug   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@50',                        );
 	public $costcat_desc   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',                       );
-	public $costcat_father = array('null' =>'YES', 'show' =>'YES', 'label'=>'Father',        'type' => 'smallint@5',                        );
-	public $costcat_row    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Row',           'type' => 'smallint@5',                        );
+	public $costcat_parent = array('null' =>'YES', 'show' =>'YES', 'label'=>'Parent',        'type' => 'smallint@5',                        );
+	public $costcat_order  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Order',         'type' => 'smallint@5',                        );
 	public $costcat_type   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Type',          'type' => 'enum@income,outcome',               );
 	public $costcat_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
 	public $date_modified  = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
@@ -33,13 +33,13 @@ class costcats
 	{
 		$this->form("#desc")->maxlength(200)->type('textarea');
 	}
-	public function costcat_father() 
+	public function costcat_parent() 
 	{
-		$this->form("text")->name("father")->max(9999)->type('number');
+		$this->form("text")->name("parent")->max(9999)->type('number');
 	}
-	public function costcat_row() 
+	public function costcat_order() 
 	{
-		$this->form("text")->name("row")->max(9999)->type('number');
+		$this->form("text")->name("order")->max(9999)->type('number');
 	}
 
 	//------------------------------------------------------------------ select button

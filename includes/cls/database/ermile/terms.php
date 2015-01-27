@@ -7,9 +7,11 @@ class terms
 	public $term_title    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                        );
 	public $term_slug     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@50',                        );
 	public $term_desc     = array('null' =>'NO',  'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',                       );
-	public $term_father   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Father',        'type' => 'smallint@5',                        );
+	public $term_parent   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Parent',        'type' => 'smallint@5',                        );
 	public $term_type     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@cat,tag!cat',                  );
 	public $term_status   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
+	public $term_count    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Count',         'type' => 'smallint@5',                        );
+	public $term_order    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Order',         'type' => 'smallint@5',                        );
 	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
 
 
@@ -37,9 +39,9 @@ class terms
 	{
 		$this->form("#desc")->maxlength(200)->required()->type('textarea');
 	}
-	public function term_father() 
+	public function term_parent() 
 	{
-		$this->form("text")->name("father")->min(0)->max(9999)->type('number');
+		$this->form("text")->name("parent")->min(0)->max(9999)->type('number');
 	}
 
 	//------------------------------------------------------------------ select button
@@ -54,6 +56,14 @@ class terms
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
 		$this->setChild();
+	}
+	public function term_count() 
+	{
+		$this->form("text")->name("count")->min(0)->max(9999)->type('number');
+	}
+	public function term_order() 
+	{
+		$this->form("text")->name("order")->min(0)->max(9999)->type('number');
 	}
 	public function date_modified() {}
 }

@@ -6,10 +6,11 @@ class productcats
 	public $productcat_title  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                        );
 	public $productcat_slug   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@50',                        );
 	public $productcat_desc   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',                       );
-	public $productcat_father = array('null' =>'YES', 'show' =>'YES', 'label'=>'Father',        'type' => 'smallint@5',                        );
+	public $productcat_parent = array('null' =>'YES', 'show' =>'YES', 'label'=>'Parent',        'type' => 'smallint@5',                        );
 	public $attachment_id     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Attachment',    'type' => 'int@10',                            'foreign'=>'attachments@id!attachment_title');
-	public $productcat_row    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Row',           'type' => 'smallint@5',                        );
+	public $productcat_order  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Order',         'type' => 'smallint@5',                        );
 	public $productcat_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
+	public $productcat_count  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Count',         'type' => 'smallint@5',                        );
 	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
 
 
@@ -33,9 +34,9 @@ class productcats
 	{
 		$this->form("#desc")->maxlength(200)->type('textarea');
 	}
-	public function productcat_father() 
+	public function productcat_parent() 
 	{
-		$this->form("text")->name("father")->min(0)->max(9999)->type('number');
+		$this->form("text")->name("parent")->min(0)->max(9999)->type('number');
 	}
 
 	//------------------------------------------------------------------ id - foreign key
@@ -44,9 +45,9 @@ class productcats
 		$this->form("select")->name("attachment_")->min(0)->max(999999999)->type("select")->validate()->id();
 		$this->setChild();
 	}
-	public function productcat_row() 
+	public function productcat_order() 
 	{
-		$this->form("text")->name("row")->min(0)->max(9999)->type('number');
+		$this->form("text")->name("order")->min(0)->max(9999)->type('number');
 	}
 
 	//------------------------------------------------------------------ select button
@@ -54,6 +55,10 @@ class productcats
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
 		$this->setChild();
+	}
+	public function productcat_count() 
+	{
+		$this->form("text")->name("count")->min(0)->max(9999)->type('number');
 	}
 	public function date_modified() {}
 }

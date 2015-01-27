@@ -10,7 +10,7 @@ class comments
 	public $comment_url     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Url',           'type' => 'varchar@100',                                      );
 	public $comment_content = array('null' =>'NO',  'show' =>'YES', 'label'=>'Content',       'type' => 'varchar@999',                                      );
 	public $comment_status  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@approved,unapproved,spam,deleted!unapproved', );
-	public $comment_parent  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Parent',        'type' => 'int@10',                                           );
+	public $comment_parent  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Parent',        'type' => 'smallint@5',                                       );
 	public $user_id         = array('null' =>'YES', 'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                       'foreign'=>'users@id!user_nickname');
 	public $Visitor_id      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Visitor',       'type' => 'int@10',                                           'foreign'=>'Visitors@id!Visitor_title');
 	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                       );
@@ -59,7 +59,7 @@ class comments
 	}
 	public function comment_parent() 
 	{
-		$this->form("text")->name("parent")->min(0)->max(999999999)->type('number');
+		$this->form("text")->name("parent")->min(0)->max(9999)->type('number');
 	}
 	public function user_id() {$this->validate()->id();}
 

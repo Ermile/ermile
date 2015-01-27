@@ -5,7 +5,7 @@ class users
 	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                                                                );
 	public $user_type       = array('null' =>'YES', 'show' =>'YES', 'label'=>'Type',          'type' => 'enum@storeadmin,storeemployee,storesupplier,storecustomer,admin,user!user', );
 	public $user_mobile     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Mobile',        'type' => 'varchar@15',                                                                );
-	public $user_pass       = array('null' =>'NO',  'show' =>'NO',  'label'=>'Pass',          'type' => 'char@32',                                                                   );
+	public $user_pass       = array('null' =>'NO',  'show' =>'NO',  'label'=>'Pass',          'type' => 'varchar@64',                                                                );
 	public $user_email      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Email',         'type' => 'varchar@50',                                                                );
 	public $user_gender     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Gender',        'type' => 'enum@male,female',                                                          );
 	public $user_nickname   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Nickname',      'type' => 'varchar@50',                                                                );
@@ -38,7 +38,7 @@ class users
 	//------------------------------------------------------------------ pass
 	public function user_pass() 
 	{
-		$this->form("#pass")->maxlength(32)->required()->type('text');
+		$this->form("#pass")->maxlength(64)->required()->type('text');
 	}
 
 	//------------------------------------------------------------------ email
