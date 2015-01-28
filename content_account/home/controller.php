@@ -21,8 +21,8 @@ class controller extends \mvc\controller
 		// a one module can only one from: post, put, delete
 		// all of module can get method
 
-		$mymodule	= $this->module();
-		$islogin	= $this->login();
+		$mymodule = $this->module();
+		$islogin	 = $this->login();
 		switch ($mymodule) 
 		{
 			case 'home':

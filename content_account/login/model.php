@@ -41,6 +41,9 @@ class model extends \mvc\model
 				$this->commit(function($_code)
 				{
 					$myreferer = utility\Cookie::read('referer');
+					$myreferer = isset($myreferer)? $myreferer : utility::get('referer');
+
+
 					// create code for pass with get to service home page
 					debug::true(T_("login successfully"));
 

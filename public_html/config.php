@@ -46,6 +46,14 @@ define('CommingSoon', true);
 define('MultiLanguage', true);
 
 /**
+ * MainAccount
+ * Default: true
+ *
+ * all service is managed via main account service.
+ */
+define('MainAccount', true);
+
+/**
  * SaveAsCookie
  * Default: true
  *
