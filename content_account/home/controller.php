@@ -66,21 +66,22 @@ class controller extends \mvc\controller
 
 			// logout user from system then redirect to ermile
 			case 'logout':
-				if(!$islogin)
-				{
-					\lib\debug::true(T_("you must first logined to system!"));
-					$this->redirector()->set_domain()->set_url()->redirect();
-					// \lib\http::access(T_("you must first logined to system!"));
-				}
-				else
-				{
-						// redirect to ermile
-					session_unset();
-					session_destroy();
-					\lib\debug::true(T_("logout successfully"));
-					$this->redirector()->set_domain('ermile.dev')->set_url()->redirect();
-					$this->get()->ALL($mymodule);
-				}
+				$this->logout();
+				// if(!$islogin)
+				// {
+				// 	\lib\debug::true(T_("you must first logined to system!"));
+				// 	$this->redirector()->set_domain()->set_url()->redirect();
+				// 	// \lib\http::access(T_("you must first logined to system!"));
+				// }
+				// else
+				// {
+				// 		// redirect to ermile
+				// 	session_unset();
+				// 	session_destroy();
+				// 	\lib\debug::true(T_("logout successfully"));
+				$this->redirector()->set_domain('ermile.dev')->set_url()->redirect();
+				$this->get()->ALL($mymodule);
+				// }
 				break;
 
 
