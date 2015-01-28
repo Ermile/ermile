@@ -8,12 +8,12 @@ class controller extends \mvc\controller
 		$mymodule = $this->module();
 		$mychild	 = $this->child();
 
-		if(!$this->login())
-		{
-			\lib\debug::warn(T_("first of all, you must login to system!"));
-			$this->redirector()->set_domain($this->url('AccountService'))->set_url('login?dev=y&referer='.$this->url('raw'))->redirect();
-			exit();
-		}
+		// if(!$this->login())
+		// {
+		// 	\lib\debug::warn(T_("first of all, you must login to system!"));
+		// 	$this->redirector()->set_domain($this->url('AccountService'))->set_url('login?dev=y&referer='.$this->url('raw'))->redirect();
+		// 	exit();
+		// }
 
 
 		// Restrict unwanted child
