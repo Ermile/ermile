@@ -1,7 +1,7 @@
 <?php
 namespace mvc;
 
-class view extends \lib\view
+class view extends \lib\mvc\view
 {
 	function _construct()
 	{
