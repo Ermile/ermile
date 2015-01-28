@@ -57,7 +57,7 @@ class controller extends \mvc\controller
 					\lib\http::access(T_("you can't access to this page!"));
 				}
 			case 'verification':
-				$this->model_name	= 'content_account\\'.$mymodule.'\model';
+				$this->cmodel_name	= 'content_account\\'.$mymodule.'\model';
 				$this->display_name	= 'content_account\\'.$mymodule.'\display.html';
 				$this->put($mymodule)->ALL($mymodule);
 				$this->get()->ALL($mymodule);
@@ -66,6 +66,7 @@ class controller extends \mvc\controller
 
 			// logout user from system then redirect to ermile
 			case 'logout':
+				$this->model_name	= 'mvc\model';
 				$this->logout();
 				// if(!$islogin)
 				// {
