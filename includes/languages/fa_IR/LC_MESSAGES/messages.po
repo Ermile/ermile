@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-27 18:12+0330\n"
-"PO-Revision-Date: 2015-01-27 18:16+0330\n"
+"POT-Creation-Date: 2015-01-29 22:09+0330\n"
+"PO-Revision-Date: 2015-01-29 22:10+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -24,17 +24,9 @@ msgstr "شما قبلا یک بار وارد سیستم شده اید!"
 msgid "you can't access to this page!"
 msgstr "شما اجازه دسترسی به این صفحه را ندارید!"
 
-#: ../../../.././content_account/home/controller.php:71
-msgid "you must first logined to system!"
-msgstr "قبل از هرکاری شما ابتدا باید وارد سیستم شوید!"
-
-#: ../../../.././content_account/home/controller.php:80
-msgid "logout successfully"
-msgstr "خروج موفقیت آمیز"
-
 #: ../../../.././content_account/home/view.php:23
 #: ../../../.././includes/cls/form/account.php:25
-#: ../../../.././includes/languages/twig_translation.php:61
+#: ../../../.././includes/languages/twig_translation.php:65
 msgid "Login"
 msgstr "ورود به سیستم"
 
@@ -72,20 +64,20 @@ msgstr "پیامک های دریافتی"
 msgid "Ermile"
 msgstr "ارمایل"
 
-#: ../../../.././content_account/login/model.php:45
+#: ../../../.././content_account/login/model.php:48
 msgid "login successfully"
 msgstr "ورود موفقیت آمیز"
 
-#: ../../../.././content_account/login/model.php:56
+#: ../../../.././content_account/login/model.php:59
 msgid "login failed!"
 msgstr "ثبت نام ناموفق!"
 
-#: ../../../.././content_account/login/model.php:61
-#: ../../../.././content_account/login/model.php:65
+#: ../../../.././content_account/login/model.php:64
+#: ../../../.././content_account/login/model.php:68
 msgid "mobile or password is incorrect"
 msgstr "شماره موبایل یا کلمه عبور اشتباه است"
 
-#: ../../../.././content_account/login/model.php:69
+#: ../../../.././content_account/login/model.php:72
 #: ../../../.././content_account/signup/model.php:63
 #: ../../../.././content_account/recovery/model.php:55
 #: ../../../.././content_account/verification/model.php:73
@@ -174,10 +166,6 @@ msgstr "هیچ داده ای موجود نیست!"
 #: ../../../.././content/main/view.php:62
 msgid "Error!"
 msgstr "خطا!"
-
-#: ../../../.././content_cp/main/controller.php:13
-msgid "first of all, you must login to system!"
-msgstr "شما ابتدا باید وارد سیستم شوید!"
 
 #: ../../../.././content_cp/main/controller.php:23
 msgid "Not found!"
@@ -1759,19 +1747,35 @@ msgstr "پس از بررسی موبایل خود کد را وارد کنید"
 msgid "don't receive message?"
 msgstr "هنوز پیامک ما را دریافت نکردید؟"
 
+#: ../../../.././includes/languages/twig_translation.php:53
+msgid "delete record"
+msgstr "حذف رکورد"
+
+#: ../../../.././includes/languages/twig_translation.php:54
+msgid "seriously, are you sure? There's no coming back."
+msgstr "مطمئنید؟ بعد از حذف امکان  بازگشت وجود ندارد."
+
 #: ../../../.././includes/languages/twig_translation.php:55
+msgid "Cancel"
+msgstr "انصراف"
+
+#: ../../../.././includes/languages/twig_translation.php:56
+msgid "or"
+msgstr "یا"
+
+#: ../../../.././includes/languages/twig_translation.php:59
 msgid "Please select one item"
 msgstr "لطفا یک گزینه را انتخاب کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:58
+#: ../../../.././includes/languages/twig_translation.php:62
 msgid "Home Page"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/twig_translation.php:59
+#: ../../../.././includes/languages/twig_translation.php:63
 msgid "Admin"
 msgstr "مدیریت"
 
-#: ../../../.././includes/languages/twig_translation.php:60
+#: ../../../.././includes/languages/twig_translation.php:64
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
@@ -1786,6 +1790,15 @@ msgstr "ارمایل نام شرکت ماست"
 #: ../../../.././includes/mvc/view.php:14
 msgid "Ermile is Inteligent."
 msgstr "ارمایل باهوش است!"
+
+#~ msgid "you must first logined to system!"
+#~ msgstr "قبل از هرکاری شما ابتدا باید وارد سیستم شوید!"
+
+#~ msgid "logout successfully"
+#~ msgstr "خروج موفقیت آمیز"
+
+#~ msgid "first of all, you must login to system!"
+#~ msgstr "شما ابتدا باید وارد سیستم شوید!"
 
 #~ msgid "Father"
 #~ msgstr "مادر"

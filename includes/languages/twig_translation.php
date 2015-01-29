@@ -47,9 +47,13 @@ function transtext()
 	echo T_("Add New Record");                                                        // Line 37 Seperate
 	echo T_("Actions");                                                               // Line 50
 	echo T_("Edit");                                                                  // Line 69
-	echo T_("Delete");                                                                // Line 72
+	echo T_("Delete");                                                                // Line 93
 
 	//-----------------------------------------------------content_cp/main/layout.html
+	echo T_("delete record");                                                         // Line 86 Seperate
+	echo T_("seriously, are you sure? There's no coming back.");                      // Line 88 Seperate
+	echo T_("Cancel");                                                                // Line 91
+	echo T_("or");                                                                    // Line 92
 
 	//---------------------------------------------------includes/cls/macro/forms.html
 	echo T_("Please select one item");                                                // Line 49 Seperate
