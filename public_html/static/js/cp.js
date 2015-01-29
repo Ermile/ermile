@@ -38,6 +38,14 @@ route('*', function() {
     $("#options-meta").toggleClass('disappear');
   });
 
+  $('.modal-delete-confirm').on('open', function(e, link) {
+    var $this = $(this),
+        $link = $(link);
+
+    $this.find('a[data-ajaxify]').attr('href', $link.attr('href'))
+         .copyData($this);
+  });
+
   var $slug = $('#slug'),
       slug = $slug.get(0),
       handEdited = false;
