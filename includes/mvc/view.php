@@ -1,7 +1,7 @@
 <?php
 namespace mvc;
 
-class view extends \lib\view
+class view extends \lib\mvc\view
 {
 	function _construct()
 	{
@@ -33,10 +33,6 @@ class view extends \lib\view
 		}
 		else {
 			$this->include->gettext  = 'Translation use PHP gettext class';
-		}
-
-		if(method_exists($this, 'options')){
-			$this->options();
 		}
 	}
 
