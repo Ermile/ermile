@@ -34,10 +34,6 @@ class view extends \lib\mvc\view
 		else {
 			$this->include->gettext  = 'Translation use PHP gettext class';
 		}
-
-		if(method_exists($this, 'options')){
-			$this->options();
-		}
 	}
 
 	function pushState()
