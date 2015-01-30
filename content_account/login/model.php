@@ -40,21 +40,21 @@ class model extends \mvc\model
 				// if query run without error means commit
 				$this->commit(function($_code)
 				{
-					$myreferer = utility\Cookie::read('referer');
-					$myreferer = isset($myreferer)? $myreferer : utility::get('referer');
+					$myreferer = isset($_SERVER['HTTP_REFERER'])? $_SERVER['HTTP_REFERER']: null;
+					$myreferer = \lib\router::urlParser($myreferer, 'host');
 
 
 					// create code for pass with get to service home page
 					debug::true(T_("login successfully"));
 
 					if($myreferer=='jibres')
-						$this->redirector()->set_domain('jibres.'.$this->url('tld'))->set_url('?dev=y&from=ermile&ssid='.$_code);
+						$this->redirector()->set_domain('jibres.'.$this->url('tld'))->set_url('?dev=y&ssid='.$_code);
 
 					elseif($myreferer=='talambar')
-						$this->redirector()->set_domain('talambar.'.$this->url('tld'))->set_url('?dev=y&from=ermile&ssid='.$_code);
+						$this->redirector()->set_domain('talambar.'.$this->url('tld'))->set_url('?dev=y&ssid='.$_code);
 
 					else
-						$this->redirector()->set_domain()->set_url('?from=ermile&ssid='.$_code);
+						$this->redirector()->set_domain()->set_url('?dev=y&ssid='.$_code);
 				}, $mycode);
 				$this->rollback(function() { debug::error(T_("login failed!")); });
 

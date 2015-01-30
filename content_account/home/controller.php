@@ -12,6 +12,11 @@ class controller extends \mvc\controller
 		// $this->route(array("url|=> "hasan/you/any/time")
 
 		// $referer = isset($_SERVER['HTTP_REFERER'])? $_SERVER['HTTP_REFERER']: null;
+		// $referer = \lib\router::urlParser($referer, 'host');
+
+
+		// var_dump($referer);
+
 		// if(!$referer)
 		// {
 		// 	// check if referer is our service
