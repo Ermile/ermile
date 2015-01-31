@@ -40,12 +40,12 @@ class model extends \mvc\model
 				// if query run without error means commit
 				$this->commit(function($_code)
 				{
-					$myreferer = isset($_SERVER['HTTP_REFERER'])? $_SERVER['HTTP_REFERER']: null;
-					$myreferer = \lib\router::urlParser($myreferer, 'host');
+					$myreferer = utility\Cookie::read('referer');
+					utility\Cookie::delete('referer');
 
 
 					// create code for pass with get to service home page
-					debug::true(T_("login successfully"));
+					debug::true(T_("login successfully").$myreferer);
 
 					if($myreferer=='jibres')
 						$this->redirector()->set_domain('jibres.'.$this->url('tld'))->set_url('?dev=y&ssid='.$_code);
@@ -56,8 +56,8 @@ class model extends \mvc\model
 					else
 						$this->redirector()->set_domain()->set_url('?dev=y&ssid='.$_code);
 				}, $mycode);
-				$this->rollback(function() { debug::error(T_("login failed!")); });
 
+				$this->rollback(function() { debug::error(T_("login failed!")); });
 			}
 				// password is incorrect:(
 			else
