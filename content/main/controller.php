@@ -5,8 +5,9 @@ class controller extends \mvc\controller
 {
 	public function config()
 	{
-		if($this->login())
-			var_dump($this->login('all'));
+		// var_dump($_COOKIE); exit();
+		// if($this->login())
+		// 	var_dump($this->login('all'));
 	}
 
 	function _route()
@@ -15,7 +16,8 @@ class controller extends \mvc\controller
 		if($mymodule=='home')
 			return;
 	
-		$url_type = $this->model()->url_checker($mymodule);
+		// $url_type = $this->model()->url_checker($mymodule);
+		$url_type = null;
 		if($url_type == 'invalid')
 		{
 			\lib\http::page(T_("Does not exist!"));

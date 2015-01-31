@@ -18,7 +18,8 @@ class controller extends \mvc\controller
 		// var_dump( \lib\utility\Cookie::read('referer') );
 
 
-
+		// "/^logout$/"
+		// 
 		// var_dump($referer);
 
 		// if(!$referer)
@@ -74,25 +75,27 @@ class controller extends \mvc\controller
 
 
 			// logout user from system then redirect to ermile
-			case 'logout':
-				$this->model_name	= 'mvc\model';
-				$this->logout();
-				// if(!$islogin)
-				// {
-				// 	\lib\debug::true(T_("you must first logined to system!"));
-				// 	$this->redirector()->set_domain()->set_url()->redirect();
-				// 	// \lib\http::access(T_("you must first logined to system!"));
-				// }
-				// else
-				// {
-				// 		// redirect to ermile
-				// 	session_unset();
-				// 	session_destroy();
-				// 	\lib\debug::true(T_("logout successfully"));
-				$this->redirector()->set_domain('ermile.dev')->set_url()->redirect();
-				$this->get()->ALL($mymodule);
-				// }
-				break;
+			// case 'logout':
+			// 	$this->redirector()->set_domain()->set_url('logout')->redirect();
+
+			// 	$this->model_name	= 'mvc\model';
+			// 	$this->model()->logout();
+			// 	// if(!$islogin)
+			// 	// {
+			// 	// 	\lib\debug::true(T_("you must first logined to system!"));
+			// 	// 	$this->redirector()->set_domain()->set_url()->redirect();
+			// 	// 	// \lib\http::access(T_("you must first logined to system!"));
+			// 	// }
+			// 	// else
+			// 	// {
+			// 	// 		// redirect to ermile
+			// 	// 	session_unset();
+			// 	// 	session_destroy();
+			// 	// 	\lib\debug::true(T_("logout successfully"));
+			// 	$this->redirector()->set_domain('ermile.dev')->set_url()->redirect();
+			// 	$this->get()->ALL($mymodule);
+			// 	// }
+			// 	break;
 
 
 			// manage sms inputs and filter addresses without uid

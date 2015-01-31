@@ -34,6 +34,9 @@ class view extends \lib\mvc\view
 		else {
 			$this->include->gettext  = 'Translation use PHP gettext class';
 		}
+
+		if($this->login())
+			var_dump($this->login('all'));
 	}
 
 	function pushState()

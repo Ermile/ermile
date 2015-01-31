@@ -22,8 +22,6 @@ class model extends \mvc\model
 			// if password is correct. go for login:)
 			if (isset($myhashedPassword) && utility::hasher($mypass, $myhashedPassword))
 			{
-				$this->setLoginSession($tmp_result);
-
 				// Create Token and add to db for cross login ****************************************************
 				$mycode	= md5('^_^'.$tmp_result['id'].'_*Ermile*_'.date('Y-m-d H:i:s').'^_^');
 				$qry		= $this->sql()->tableUsermetas ()
@@ -55,6 +53,7 @@ class model extends \mvc\model
 
 					else
 						$this->redirector()->set_domain()->set_url('?dev=y&ssid='.$_code);
+
 				}, $mycode);
 
 				$this->rollback(function() { debug::error(T_("login failed!")); });
