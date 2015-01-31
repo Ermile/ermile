@@ -11,7 +11,7 @@ function slugify(text) {
 $(function() {
   var $deleteConfirm = $('.modal-delete-confirm');
   $deleteConfirm.on('open', function() {
-    var $send = $('a[data-ajaxify]', this);
+    var $send = $('[data-ajaxify]', this);
 
     $.each($send.data(), function(key) {
       if(key === 'modal') return;
