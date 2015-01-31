@@ -8,24 +8,6 @@ function slugify(text) {
     .replace(/=.*/, '');            
 }
 
-$(function() {
-  var $deleteConfirm = $('.modal-delete-confirm');
-  $deleteConfirm.on('open', function() {
-    var $send = $('[data-ajaxify]', this);
-
-    $.each($send.data(), function(key) {
-      if(key === 'modal') return;
-
-      $send.removeAttr(key);
-    });
-
-    $send.copyData(this, ['modal']);
-  });
-  $deleteConfirm.find('.delete-cancel').click(function() {
-    $deleteConfirm.trigger('close');
-  });
-});
-
 route('*', function() {
   hideFields();
 
