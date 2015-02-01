@@ -11,12 +11,13 @@ class controller extends \mvc\controller
 		// $this->route("hasan/you/any/time")
 		// $this->route(array("url|=> "hasan/you/any/time")
 
-		$referer = \lib\router::urlParser('referer', 'host');
+		$referer = \lib\router::urlParser('referer', 'domain');
 
 		if($referer !== Domain)
 			\lib\utility\Cookie::write('referer', $referer, 60*15);
 		// var_dump( \lib\utility\Cookie::read('referer') );
 
+		// var_dump(\lib\router::urlParser('referer', 'host'));
 
 		// "/^logout$/"
 		// 
@@ -55,7 +56,18 @@ class controller extends \mvc\controller
 				else
 				{
 					\lib\debug::true(T_("you are logined to system!"));
-					$this->redirector()->set_domain()->set_url()->redirect();
+
+					$myreferer = \lib\router::urlParser('referer', 'host');
+					$myssid    = isset($_SESSION['ssid'])? '?ssid='.$_SESSION['ssid'].'&from=login': null;
+
+					var_dump(1);
+					var_dump($myssid);
+					// var_dump($_SERVER['HTTP_REFERER']);
+					// var_dump($myreferer);
+					// exit();
+					// $this->get()->ALL($mymodule);
+					$this->redirector()->set_domain($myreferer)->set_url($myssid)->redirect();
+
 					// \lib\http::access(T_("you are logined to system!"));
 				}
 				break;

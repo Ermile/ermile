@@ -37,6 +37,8 @@ class view extends \lib\mvc\view
 
 		if($this->login())
 			var_dump($this->login('all'));
+
+		// var_dump($_SESSION['ssid']);
 	}
 
 	function pushState()
