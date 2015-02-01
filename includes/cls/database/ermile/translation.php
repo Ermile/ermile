@@ -443,6 +443,7 @@ function transtext()
 	echo T_("Cat");                 // usermeta_cat
 	echo T_("Name");                // usermeta_name
 	echo T_("Value");               // usermeta_value
+	echo T_("Extra");               // usermeta_extra
 	echo T_("Status");              // usermeta_status
 	echo T_("storeadmin");          // Enum storeadmin
 	echo T_("storeemployee");       // Enum storeemployee

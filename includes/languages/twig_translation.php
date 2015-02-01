@@ -38,31 +38,30 @@ function transtext()
 	echo T_("Ermile");                                                                // Line 12
 
 	//----------------------------------------------------content_cp/home/display.html
-	echo T_("Logout");                                                                // Line 47
+	echo T_("Logout");                                                                // Line 46
 	echo T_("Home");                                                                  // Line 38
 
 	//-------------------------------------------------content_cp/main/xhr-layout.html
 	echo T_("Options");                                                               // Line 23 Seperate
-	echo T_("Go to");                                                                 // Line 72
+	echo T_("Go to");                                                                 // Line 71
 	echo T_("Add New Record");                                                        // Line 37 Seperate
 	echo T_("Actions");                                                               // Line 50
 	echo T_("Edit");                                                                  // Line 69
-	echo T_("Delete");                                                                // Line 93
+	echo T_("Delete");                                                                // Line 91
 
 	//-----------------------------------------------------content_cp/main/layout.html
 	echo T_("delete record");                                                         // Line 86 Seperate
-	echo T_("seriously, are you sure? There's no coming back.");                      // Line 88 Seperate
-	echo T_("Cancel");                                                                // Line 91
-	echo T_("or");                                                                    // Line 92
+	echo T_("seriously, are you sure? There's no coming back.");                      // Line 87 Seperate
+	echo T_("Cancel");                                                                // Line 89
+	echo T_("or");                                                                    // Line 90
 
 	//---------------------------------------------------includes/cls/macro/forms.html
 	echo T_("Please select one item");                                                // Line 49 Seperate
 
 	//-------------------------------------------------------includes/mvc/display.html
 	echo T_("Home Page");                                                             // Line 43
-	echo T_("Admin");                                                                 // Line 44
-	echo T_("Control Panel");                                                         // Line 45
-	echo T_("Login");                                                                 // Line 49
+	echo T_("Control Panel");                                                         // Line 44
+	echo T_("Login");                                                                 // Line 48
 
 }
 ?>

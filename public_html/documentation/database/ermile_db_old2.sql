@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 01, 2015 at 02:15 PM
+-- Generation Time: Jan 27, 2015 at 11:58 PM
 -- Server version: 5.5.41-0ubuntu0.14.04.1
 -- PHP Version: 5.6.5-1+deb.sury.org~trusty+1
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `ermile`
+-- Database: `talambar`
 --
 
 -- --------------------------------------------------------
@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `attachments` (
   `file_id` int(10) unsigned DEFAULT NULL,
   `attachment_title` varchar(100) DEFAULT NULL,
   `attachment_model` enum('productcategory','product','admin','banklogo','post','system','other','file','folder') NOT NULL,
-  `attachment_addr` varchar(1000) DEFAULT NULL,
+  `attachment_addr` varchar(100) DEFAULT NULL,
   `attachment_name` varchar(50) DEFAULT NULL,
   `attachment_type` varchar(10) DEFAULT NULL,
   `attachment_size` float(12,0) DEFAULT NULL,
@@ -117,21 +117,17 @@ CREATE TABLE IF NOT EXISTS `attachments` (
   UNIQUE KEY `attachments_files_id` (`file_id`),
   UNIQUE KEY `name+type_unique` (`attachment_name`,`attachment_type`),
   KEY `attachments_users_id` (`user_id`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `attachments`
 --
 
 INSERT INTO `attachments` (`id`, `file_id`, `attachment_title`, `attachment_model`, `attachment_addr`, `attachment_name`, `attachment_type`, `attachment_size`, `attachment_desc`, `attachment_parent`, `attachment_depth`, `attachment_count`, `attachment_order`, `user_id`, `date_modified`) VALUES
-(4, NULL, 'folder1', 'folder', NULL, NULL, NULL, NULL, NULL, 8, 1, NULL, 1, 190, '2015-01-29 21:06:30'),
-(6, NULL, 'Folder2', 'folder', NULL, NULL, NULL, NULL, NULL, 190, 0, NULL, 3, 190, '2015-01-29 21:06:11'),
-(7, NULL, 'File1', 'file', NULL, NULL, 'jpeg', NULL, NULL, 8, 1, NULL, 0, 190, '2015-01-29 20:56:47'),
-(8, NULL, 'Folder4', 'folder', NULL, NULL, NULL, NULL, NULL, 190, 0, NULL, 2, 190, '2015-01-29 21:06:16'),
-(9, NULL, '123', 'folder', '/', NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, 190, NULL),
-(10, NULL, '1233', 'folder', '/123', NULL, NULL, NULL, NULL, 9, 1, NULL, NULL, 190, NULL),
-(11, NULL, 'qqqq', 'folder', '/123/1233', NULL, NULL, NULL, NULL, 10, 2, NULL, NULL, 190, NULL),
-(12, NULL, 'rrrrr', 'folder', '/123/1233/qqqq', NULL, NULL, NULL, NULL, 11, 3, NULL, NULL, 190, NULL);
+(4, NULL, 'folder1', 'folder', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 190, NULL),
+(6, NULL, 'Folder2', 'folder', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 190, NULL),
+(7, NULL, 'Folder3', 'folder', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 190, NULL),
+(8, NULL, 'Folder4', 'folder', NULL, NULL, NULL, NULL, NULL, 4, NULL, NULL, NULL, 190, NULL);
 
 -- --------------------------------------------------------
 
@@ -148,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `banks` (
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `slug_unique` (`bank_slug`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=177 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=168 ;
 
 --
 -- Dumping data for table `banks`
@@ -955,7 +951,7 @@ CREATE TABLE IF NOT EXISTS `smss` (
   `sms_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=88 ;
 
 -- --------------------------------------------------------
 
@@ -1170,7 +1166,7 @@ CREATE TABLE IF NOT EXISTS `userlogs` (
   KEY `priority_index` (`userlog_priority`),
   KEY `type_index` (`userlog_type`),
   KEY `userlogs_users_id` (`user_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 -- --------------------------------------------------------
 
@@ -1184,12 +1180,21 @@ CREATE TABLE IF NOT EXISTS `usermetas` (
   `usermeta_cat` varchar(50) NOT NULL,
   `usermeta_name` varchar(100) NOT NULL,
   `usermeta_value` varchar(500) DEFAULT NULL,
-  `usermeta_extra` varchar(500) DEFAULT NULL,
   `usermeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `usermeta_users_id` (`user_id`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=280 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=137 ;
+
+--
+-- Dumping data for table `usermetas`
+--
+
+INSERT INTO `usermetas` (`id`, `user_id`, `usermeta_cat`, `usermeta_name`, `usermeta_value`, `usermeta_status`, `date_modified`) VALUES
+(133, 190, 'cookie_token', '2130706433', 'e1eda5e4f32e0ba1b859ff5f81e6a8cb', 'enable', NULL),
+(134, 190, 'cookie_token', '2130706433', '42f674b45bd4f1874e630569a2c38314', 'enable', NULL),
+(135, 190, 'cookie_token', '2130706433', '84481bcdbf6947e1015bab9fd5be2f14', 'enable', NULL),
+(136, 190, 'cookie_token', '2130706433', '6c77e7e25b7d0c738b88f258becf7ce0', 'enable', NULL);
 
 -- --------------------------------------------------------
 
@@ -1217,7 +1222,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `mobile_unique` (`user_mobile`) USING BTREE,
   UNIQUE KEY `email_unique` (`user_email`) USING BTREE,
   KEY `users_permissions_id` (`permission_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=194 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=191 ;
 
 --
 -- Dumping data for table `users`
@@ -1228,10 +1233,7 @@ INSERT INTO `users` (`id`, `user_type`, `user_mobile`, `user_pass`, `user_email`
 (15, 'storeadmin', '+989113334444', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', NULL, NULL, 'Test1', 'Test', NULL, NULL, 'awaiting', 'no', 1, '0000-00-00 00:00:00', '2015-01-27 09:46:52'),
 (16, 'storeadmin', '+989357269750', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', 'aaa2', NULL, 'Test3', NULL, 'Test last', NULL, 'active', 'no', 1, '0000-00-00 00:00:00', '2015-01-27 09:46:50'),
 (150, 'storeadmin', '+989357269790', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', '2015-01-27 09:46:49'),
-(190, 'storeadmin', '989357269759', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '2015-01-25 04:52:07', NULL),
-(191, 'storeadmin', '1234-238-9685', '$2y$07$943YcByRoEuIv730KaGvpetc.CYT2qoTANZrUFFwV0kpAbaCSkcIu', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '2015-01-28 21:50:33', NULL),
-(192, 'storeadmin', '1564-865-7965', '$2y$07$YhzlYzn3waKtDzwmml6G/OdRDDEbe4wraw3yoXPbLwQTbhZbreyAa', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '2015-01-28 23:08:42', NULL),
-(193, 'storeadmin', '143298935726975', '$2y$07$ghmWnyyCTbApe/B4edRhO.VKK.0OAv0jUl7S3xGJXO8TnChFGKeGO', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '2015-01-29 04:18:06', NULL);
+(190, 'storeadmin', '989357269759', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '2015-01-25 04:52:07', NULL);
 
 -- --------------------------------------------------------
 
@@ -1253,7 +1255,7 @@ CREATE TABLE IF NOT EXISTS `verifications` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `code_unique` (`verification_url`,`verification_value`) USING BTREE,
   KEY `verifications_users_id` (`user_id`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=468 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=465 ;
 
 --
 -- Dumping data for table `verifications`
@@ -1261,10 +1263,7 @@ CREATE TABLE IF NOT EXISTS `verifications` (
 
 INSERT INTO `verifications` (`id`, `verification_type`, `verification_value`, `verification_code`, `verification_url`, `user_id`, `verification_verified`, `verification_status`, `verification_createdate`, `date_modified`) VALUES
 (463, 'mobilesignup', '989357269759', '2255', NULL, 190, 'no', 'enable', '2015-01-25 04:52:07', '2015-01-25 01:48:46'),
-(464, 'mobilerecovery', '989357269759', '6282', NULL, 190, 'no', 'expire', NULL, '2015-01-25 01:56:55'),
-(465, 'mobilesignup', '1234-238-9685', '4293', NULL, 191, 'no', 'enable', '2015-01-28 21:50:33', NULL),
-(466, 'mobilesignup', '1564-865-7965', '5947', NULL, 192, 'no', 'enable', '2015-01-28 23:08:42', NULL),
-(467, 'mobilesignup', '1432989357269759', '7944', NULL, 193, 'no', 'enable', '2015-01-29 04:18:06', NULL);
+(464, 'mobilerecovery', '989357269759', '6282', NULL, 190, 'no', 'expire', NULL, '2015-01-25 01:56:55');
 
 --
 -- Triggers `verifications`

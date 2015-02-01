@@ -7,6 +7,7 @@ class usermetas
 	public $usermeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Cat',           'type' => 'varchar@50',                        );
 	public $usermeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@100',                       );
 	public $usermeta_value  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Value',         'type' => 'varchar@500',                       );
+	public $usermeta_extra  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Extra',         'type' => 'varchar@500',                       );
 	public $usermeta_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
 	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
 
@@ -25,6 +26,10 @@ class usermetas
 	public function usermeta_value() 
 	{
 		$this->form("text")->name("value")->maxlength(500)->type('textarea');
+	}
+	public function usermeta_extra() 
+	{
+		$this->form("text")->name("extra")->maxlength(500)->type('textarea');
 	}
 
 	//------------------------------------------------------------------ select button

@@ -6,7 +6,7 @@ class attachments
 	public $file_id           = array('null' =>'YES', 'show' =>'YES', 'label'=>'File',          'type' => 'int@10',                                                                    'foreign'=>'files@id!id');
 	public $attachment_title  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@100',                                                               );
 	public $attachment_model  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Model',         'type' => 'enum@productcategory,product,admin,banklogo,post,system,other,file,folder', );
-	public $attachment_addr   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Addr',          'type' => 'varchar@100',                                                               );
+	public $attachment_addr   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Addr',          'type' => 'varchar@1000',                                                              );
 	public $attachment_name   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@50',                                                                );
 	public $attachment_type   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Type',          'type' => 'varchar@10',                                                                );
 	public $attachment_size   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Size',          'type' => 'float@12,0',                                                                );
@@ -43,7 +43,7 @@ class attachments
 	}
 	public function attachment_addr() 
 	{
-		$this->form("text")->name("addr")->maxlength(100)->type('text');
+		$this->form("text")->name("addr")->maxlength(1000)->type('textarea');
 	}
 	public function attachment_name() 
 	{
