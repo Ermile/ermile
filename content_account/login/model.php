@@ -23,6 +23,7 @@ class model extends \mvc\model
 			if (isset($myhashedPassword) && utility::hasher($mypass, $myhashedPassword))
 			{
 				// Create Token and add to db for cross login ****************************************************
+				// you can change the code way easily at any time!
 				$mycode	= md5('^_^'.$tmp_result['id'].'_*Ermile*_'.date('Y-m-d H:i:s').'^_^');
 				$qry		= $this->sql()->tableUsermetas ()
 								->setUser_id                ($tmp_result['id'])
@@ -31,6 +32,7 @@ class model extends \mvc\model
 								->setUsermeta_value         ($mycode);
 				$sql		= $qry->insert();
 
+				$_SESSION['ssid'] = $mycode;
 
 				// ======================================================
 				// you can manage next event with one of these variables,
