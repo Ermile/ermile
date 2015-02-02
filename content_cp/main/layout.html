@@ -82,14 +82,16 @@
 {%endif%}
 {%endblock%}
 
-<div class="modal modal-dialog--animate modal-delete-confirm hidden unselectable" data-modal>
- <h3 class="modal-title">{%trans%}delete record{%endtrans%}</h3>
-  <div class="modal-content">{%trans%}seriously, are you sure? There's no coming back.{%endtrans%}</div>
-  <div class="modal-actions buttons">
-   <a class="button delete-cancel" data-action data-close>{%trans "Cancel"%}</a>
-   <div class="or" data-text='{%trans "or"%}'></div>
-   <a class="button negative" data-ajaxify data-close>{%trans "Delete"%}</a>
+<div class='modal hidden modal-delete-confirm' id='delete-confirm' data-modal>
+ <div class='modal-dialog'>
+  <h3 class='modal-title'>{%trans%}delete record{%endtrans%}</h3>
+  <div class='modal-body'>{%trans%}seriously, are you sure? There's no coming back.{%endtrans%}</div>
+  <div class='modal-footer buttons'>
+   <a class='button delete-cancel' data-action data-close>{%trans "Cancel"%}</a>
+   <div class='or' data-text='{%trans "or"%}'></div>
+   <a class='button negative' data-ajaxify data-close>{%trans "Delete"%}</a>
   </div>
+ </div>
 </div>
 
 {%endif%}

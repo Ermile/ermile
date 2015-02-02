@@ -35,8 +35,8 @@ class view extends \lib\mvc\view
 			$this->include->gettext  = 'Translation use PHP gettext class';
 		}
 
-		if($this->login())
-			var_dump($this->login('all'));
+		// if($this->login())
+		// 	var_dump($this->login('all'));
 
 		// var_dump($_SESSION['ssid']);
 	}

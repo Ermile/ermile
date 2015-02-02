@@ -9,31 +9,29 @@
  <div id="options" class="unselectable">
   <div id="options-meta" class="disappear">
 {% for key, value in field_list if value.form%}
-
-   <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{key}}" {%if value%}checked="checked"{%endif%}><span>{{value.name}}</span></label>
+   <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{value.value}}" {%if value.show%}checked="checked"{%endif%}><span>{{value.name}}</span></label>
 {% endfor %}
   </div>
   <a id="options-link" href="javascript: void(0)">{%trans%}Options{%endtrans%}</a>
  </div>
 {%endif%}
  <div class="container" id="main">
- {%if page_title%}
- <h1>{%trans page_title %}</h1><hr />{%endif%}
- {%if module and module!="home"%}
-  {%if child%}
+{%if page.title%}  <h1>{{page.title}}</h1><hr />{%endif%}
+{%if module and module!="home"%}
+{%if child%}
   <p class="alert alert-block alert-info">
-   <attr class="float-left">{%trans module%}</attr>|
+   <b class="float-left">{%trans module%}</b>|
    <a class="float-right" href="{{store}}/{{module}}">{%trans%}Go to{%endtrans%} {%trans module%}</a>
   </p>
    <form class="ajx" method="post">{{forms.make(form[module])}}</form>
-  {%else%}
+{%else%}
   <p class="alert alert-block alert-info">
    <a class="float-left" href="{{store}}/{{module}}/add">{%trans%}Add New Record{%endtrans%}</a>|
    <a class="float-right" href="/">{%trans "Home"%}</a>
   </p>
 
-   {%block datatable%}
-    {%if include.datatable%}
+{%block datatable%}
+{%if include.datatable%}
     <table class="datatable display">
      <thead>
      <tr>
@@ -46,7 +44,7 @@
      </thead>
 
      <tbody>
-      {%block tbody%}
+{%block tbody%}
 {%for d in datatable%}
       <tr class="{{ cycle(['odd', 'even'], loop.index0) }}">
        <td class="col_row">{{loop.index}}</td>
@@ -63,20 +61,33 @@
         <a class="action-icons edit hint--top" href="{{store}}/{{module}}/edit={{d.id}}">{%trans "Edit"%}</a>
        </span>
        <span class="hint--top hint--error" data-hint='{%trans "Delete"%}'>
-        <a class="action-icons delete hide-text" href="{{store}}/{{module}}/delete={{d.id}}" data-ajaxify data-method="post" data-data="{id:{{d.id}}}">{%trans "Delete"%}</a>
+        <a class="action-icons delete hide-text" href="{{store}}/{{module}}/delete={{d.id}}" data-data='{"id": {{d.id}}}' data-method="post" data-modal="delete-confirm">{%trans "Delete"%}</a>
        </span>
        </td>
       </tr>
 {%endfor%}
-      {%endblock%}
+{%endblock%}
      </tbody>
     </table>
-    {%else%}
+{%else%}
     Data not exist!
-    {%endif%}
-   {%endblock%}
-  {%endif%}
- {%endif%}
+{%endif%}
+{%endblock%}
+
+<div class='modal hidden modal-delete-confirm' id='delete-confirm' data-modal>
+ <div class='modal-dialog'>
+  <h3 class='modal-title'>{%trans%}delete record{%endtrans%}</h3>
+  <div class='modal-body'>{%trans%}seriously, are you sure? There's no coming back.{%endtrans%}</div>
+  <div class='modal-footer buttons'>
+   <a class='button delete-cancel' data-action data-close>{%trans "Cancel"%}</a>
+   <div class='or' data-text='{%trans "or"%}'></div>
+   <a class='button negative' data-ajaxify data-close>{%trans "Delete"%}</a>
+  </div>
+ </div>
+</div>
+
+{%endif%}
+{%endif%}
 
  </div>
 </div>
