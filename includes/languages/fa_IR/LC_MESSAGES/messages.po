@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-02-03 11:48+0330\n"
-"PO-Revision-Date: 2015-02-03 11:48+0330\n"
+"POT-Creation-Date: 2015-02-03 14:19+0330\n"
+"PO-Revision-Date: 2015-02-03 14:19+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -26,7 +26,7 @@ msgstr "شما اجازه دسترسی به این صفحه را ندارید!"
 
 #: ../../../.././content_account/home/view.php:23
 #: ../../../.././includes/cls/form/account.php:25
-#: ../../../.././includes/languages/twig_translation.php:66
+#: ../../../.././includes/languages/twig_translation.php:73
 msgid "Login"
 msgstr "ورود به سیستم"
 
@@ -806,7 +806,7 @@ msgstr "تنظیمات"
 
 #: ../../../.././includes/cls/database/ermile/translation.php:203
 #: ../../../.././includes/languages/static_translation.php:37
-#: ../../../.././includes/languages/twig_translation.php:47
+#: ../../../.././includes/languages/twig_translation.php:54
 msgid "Options"
 msgstr "تنظیمات"
 
@@ -893,13 +893,13 @@ msgstr "افزودن"
 
 #: ../../../.././includes/cls/database/ermile/translation.php:239
 #: ../../../.././includes/languages/static_translation.php:42
-#: ../../../.././includes/languages/twig_translation.php:51
+#: ../../../.././includes/languages/twig_translation.php:58
 msgid "Edit"
 msgstr "ویرایش"
 
 #: ../../../.././includes/cls/database/ermile/translation.php:240
 #: ../../../.././includes/languages/static_translation.php:43
-#: ../../../.././includes/languages/twig_translation.php:52
+#: ../../../.././includes/languages/twig_translation.php:59
 msgid "Delete"
 msgstr "حذف"
 
@@ -1626,17 +1626,17 @@ msgid "made in iran"
 msgstr "ساخت ایران"
 
 #: ../../../.././includes/languages/static_translation.php:33
-#: ../../../.././includes/languages/twig_translation.php:43
+#: ../../../.././includes/languages/twig_translation.php:50
 msgid "Logout"
 msgstr "خروج از سیستم"
 
 #: ../../../.././includes/languages/static_translation.php:34
-#: ../../../.././includes/languages/twig_translation.php:44
+#: ../../../.././includes/languages/twig_translation.php:51
 msgid "Home"
 msgstr "صفحه نخست"
 
 #: ../../../.././includes/languages/static_translation.php:38
-#: ../../../.././includes/languages/twig_translation.php:48
+#: ../../../.././includes/languages/twig_translation.php:55
 msgid "Go to"
 msgstr "برو به"
 
@@ -1645,12 +1645,12 @@ msgid "Does not exist"
 msgstr "هیچ داده ای موجود نیست"
 
 #: ../../../.././includes/languages/static_translation.php:40
-#: ../../../.././includes/languages/twig_translation.php:49
+#: ../../../.././includes/languages/twig_translation.php:56
 msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
 #: ../../../.././includes/languages/static_translation.php:41
-#: ../../../.././includes/languages/twig_translation.php:50
+#: ../../../.././includes/languages/twig_translation.php:57
 msgid "Actions"
 msgstr "عملیات"
 
@@ -1748,48 +1748,76 @@ msgid "don't receive message?"
 msgstr "هنوز پیامک ما را دریافت نکردید؟"
 
 #: ../../../.././includes/languages/twig_translation.php:38
+msgid "logout form all service"
+msgstr "خروج از همه حساب ها"
+
+#: ../../../.././includes/languages/twig_translation.php:39
+msgid "login to all service"
+msgstr "ورود به سرویس ها"
+
+#: ../../../.././includes/languages/twig_translation.php:40
 msgid "One account for all service"
 msgstr "یک اکانت برای همه سرویس ها"
 
-#: ../../../.././includes/languages/twig_translation.php:39
+#: ../../../.././includes/languages/twig_translation.php:41
+msgid "now only"
+msgstr "در حالا حاضر تنها"
+
+#: ../../../.././includes/languages/twig_translation.php:42
+msgid "secure online storage"
+msgstr "فضایی مطمئن برای ذخیره سازی آنلاین"
+
+#: ../../../.././includes/languages/twig_translation.php:43
+msgid "Talambar"
+msgstr "تلمبار"
+
+#: ../../../.././includes/languages/twig_translation.php:44
+msgid "is ready to use at alfa version."
+msgstr "آماده استفاده در نسخه آلفا است"
+
+#: ../../../.././includes/languages/twig_translation.php:45
+msgid "our new service is comming soon."
+msgstr "سرویس های جدید ما به زودی رونمایی می شوند"
+
+#: ../../../.././includes/languages/twig_translation.php:46
 msgid "Ermile is our brand"
 msgstr "ارمایل نام برند ماست"
 
-#: ../../../.././includes/languages/twig_translation.php:40
+#: ../../../.././includes/languages/twig_translation.php:47
 msgid "Experience our service in your language"
 msgstr "سرویس های ما را با زبان اصلی خودتان تجربه کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:53
+#: ../../../.././includes/languages/twig_translation.php:60
 msgid "delete record"
 msgstr "حذف رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:54
+#: ../../../.././includes/languages/twig_translation.php:61
 msgid "seriously, are you sure? There's no coming back."
 msgstr "مطمئنید؟ بعد از حذف امکان  بازگشت وجود ندارد."
 
-#: ../../../.././includes/languages/twig_translation.php:55
+#: ../../../.././includes/languages/twig_translation.php:62
 msgid "Cancel"
 msgstr "انصراف"
 
-#: ../../../.././includes/languages/twig_translation.php:56
+#: ../../../.././includes/languages/twig_translation.php:63
 msgid "or"
 msgstr "یا"
 
-#: ../../../.././includes/languages/twig_translation.php:61
+#: ../../../.././includes/languages/twig_translation.php:68
 msgid "Please select one item"
 msgstr "لطفا یک گزینه را انتخاب کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:64
+#: ../../../.././includes/languages/twig_translation.php:71
 msgid "Home Page"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/twig_translation.php:65
+#: ../../../.././includes/languages/twig_translation.php:72
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
 #: ../../../.././includes/mvc/view.php:11
-msgid "Ermile is new"
-msgstr "ارمایل جدید است!"
+msgid "Ermile contain a new tools for each one"
+msgstr "ارمایل دارای ابزارهایی برای خود شماست"
 
 #: ../../../.././includes/mvc/view.php:12
 msgid "One account to access all service"
@@ -1798,6 +1826,9 @@ msgstr "یک اکانت برای دسترسی به همه سرویس ها"
 #: ../../../.././includes/mvc/view.php:14
 msgid "Ermile is Inteligent."
 msgstr "ارمایل باهوش است!"
+
+#~ msgid "Ermile is new"
+#~ msgstr "ارمایل جدید است!"
 
 #~ msgid "Admin"
 #~ msgstr "مدیریت"

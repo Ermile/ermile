@@ -35,9 +35,16 @@ function transtext()
 	echo T_("don't receive message?");                                                // Line 8
 
 	//-------------------------------------------------------content/home/display.html
-	echo T_("One account for all service");                                           // Line 6
-	echo T_("Ermile is our brand");                                                   // Line 43
-	echo T_("Experience our service in your language");                               // Line 48
+	echo T_("logout form all service");                                               // Line 19
+	echo T_("login to all service");                                                  // Line 21
+	echo T_("One account for all service");                                           // Line 35
+	echo T_("now only");                                                              // Line 37
+	echo T_("secure online storage");                                                 // Line 37
+	echo T_("Talambar");                                                              // Line 37
+	echo T_("is ready to use at alfa version.");                                      // Line 37
+	echo T_("our new service is comming soon.");                                      // Line 38 Seperate
+	echo T_("Ermile is our brand");                                                   // Line 48
+	echo T_("Experience our service in your language");                               // Line 53
 
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Logout");                                                                // Line 46

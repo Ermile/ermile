@@ -7,6 +7,9 @@ class view extends \content\main\view
 	{
 		$this->include->css_main    = null;
 		$this->include->fontawesome = true;
+
+		$this->data->bodyclass  = 'unselectable';
+		
 	}
 }
 ?>

@@ -15,10 +15,10 @@
    </svg>
 
   <div id="button">
-{%if global.login%}  
-   <a href="logout" id="btn" class="on"><i class="fa fa-power-off"></i></a>
+{%if global.login%}
+   <a href="logout" id="btn" class="on" title='{%trans "logout form all service"%}'><i class="fa fa-power-off"></i></a>
 {%else%}
-   <a href="{{url.LoginService}}/login" id="btn"><i class="fa fa-power-off"></i></a>
+   <a href="{{url.LoginService}}/login" id="btn" title='{%trans "login to all service"%}'><i class="fa fa-power-off"></i></a>
 {%endif%}
    <span></span>
   </div>
@@ -33,6 +33,10 @@
 
 
   <h1>{%trans "One account for all service"%}</h1>
+  <div id='desc'>
+   <p>{%trans "now only"%} <a href="http://talambar.{{url.tld}}" title='{%trans "secure online storage"%}'>{%trans "Talambar"%} </a>{%trans "is ready to use at alfa version."%}</p>
+   <p>{%trans%}our new service is comming soon.{%endtrans%}</p>
+  </div>
  </section>
 
 
