@@ -35,7 +35,9 @@ function transtext()
 	echo T_("don't receive message?");                                                // Line 8
 
 	//-------------------------------------------------------content/home/display.html
-	echo T_("Ermile");                                                                // Line 12
+	echo T_("One account for all service");                                           // Line 6
+	echo T_("Ermile is our brand");                                                   // Line 43
+	echo T_("Experience our service in your language");                               // Line 48
 
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Logout");                                                                // Line 46
@@ -47,13 +49,13 @@ function transtext()
 	echo T_("Add New Record");                                                        // Line 37 Seperate
 	echo T_("Actions");                                                               // Line 50
 	echo T_("Edit");                                                                  // Line 69
-	echo T_("Delete");                                                                // Line 91
+	echo T_("Delete");                                                                // Line 92
+	echo T_("delete record");                                                         // Line 87 Seperate
+	echo T_("seriously, are you sure? There's no coming back.");                      // Line 88 Seperate
+	echo T_("Cancel");                                                                // Line 90
+	echo T_("or");                                                                    // Line 91
 
 	//-----------------------------------------------------content_cp/main/layout.html
-	echo T_("delete record");                                                         // Line 86 Seperate
-	echo T_("seriously, are you sure? There's no coming back.");                      // Line 87 Seperate
-	echo T_("Cancel");                                                                // Line 89
-	echo T_("or");                                                                    // Line 90
 
 	//---------------------------------------------------includes/cls/macro/forms.html
 	echo T_("Please select one item");                                                // Line 49 Seperate

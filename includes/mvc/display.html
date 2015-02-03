@@ -14,12 +14,12 @@
  <!-- [if lte IE 8]><script>document.location = 'http://deadbrowser.com/?lang={{global.lang}}';</script><![endif] -->
  <link rel="author"        href="{{url.static}}humans.txt"/>
  <link rel="shortcut icon" href="{{url.static}}images/favicon.png"/>
+{%if include.fontawesome %}
+ <link rel="stylesheet"    href="{{url.MainStatic}}css/font-awesome.min.css"/>{{include.newline}}{%endif%}
 {%if include.css_main%}
  <link rel="stylesheet"    href="{{url.MainStatic}}css/main.css"/>{{include.newline}}{%endif%}
 {%if include.css     %}
  <link rel="stylesheet"    href="{{url.static}}css/style.css"/>{{include.newline}}{%endif%}
-{%if include.fontawesome %}
- <link rel="stylesheet"    href="{{url.MainStatic}}css/font-awesome.min.css"/>{{include.newline}}{%endif%}
 {%block head_css         %}{%endblock%}
 {%block head_js          %}{%endblock%}
 {%endblock%}
