@@ -530,7 +530,6 @@ input, select, textarea {
   -webkit-box-sizing: border-box;
 
 	padding: 8px;
-	color: rgba(0,0,0,0.6);
 	border: none;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 	border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -634,8 +633,15 @@ cursor: pointer;
 
 
 
-#footer select{direction:ltr; padding:5px;font-size:1em;border:0;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
-#footer select:hover{opacity:0.8;}
+
+
+
+#footer{position: fixed;bottom: 0;width:80%;z-index:2;background-color: rgba(0, 0, 0, 0.1);padding:15px 10%;font-size: 16px;line-height: 30px;height:30px;}
+#footer #languages{float: right;color:#888;}
+#footer #langlist{opacity:0.7;width:100px;font-family:sans-serif;height:30px;padding:0 10px;direction:ltr;padding:3px 5px;font-size:1em;border:0;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
+.rtl #footer #languages{float: left;}
+#footer #langlist:hover{opacity:1;}
+
 
 
 
