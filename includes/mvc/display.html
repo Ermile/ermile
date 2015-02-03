@@ -64,12 +64,12 @@
 {%block footer_def%}
 <footer id="footer">
   <div id="copyright">
-   <div class='hint--rounded hint--top' data-hint='{%trans "Ermile is our brand"%}'>
+   <div class='hint--right' data-hint='{%trans "Ermile is our brand"%}'>
     <span>&copy; {{'now'|date('Y')}}</span>
     <a href="{{url.root}}" title="{{site.desc}}" tabindex="-1">{{site.title}}</a>
    </div>
 
-   <div id='languages' class='hint--rounded hint--top' data-hint='{%trans "Experience our service in your language"%}'>
+   <div id='languages' class='hint--left' data-hint='{%trans "Experience our service in your language"%}'>
     <select id="langlist">
    {{global.lang}}
 {%for key, value in global.langlist%}{%if key == global.lang%}
