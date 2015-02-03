@@ -20,7 +20,18 @@ route('*', function() {
     $("#options-meta").toggleClass('disappear');
   });
 
-  $('.modal-delete-confirm').on('open', function(e, link) {
+  $(document).bind('ajaxSuccess', function(e, promise, xhr) {
+    if(xhr.url === $('#delete-confirm [data-ajaxify]').prop('href')) {
+      setTimeout(function() {
+        Navigate({
+          url: location.href,
+          replace: true
+        });
+      }, 500);
+    }
+  });
+
+  $('#delete-confirm').on('open', function(e, link) {
     var $this = $(this),
         $link = $(link);
 
