@@ -62,29 +62,25 @@
  <p class='def-msg'>Let start using Saloos! start edit twig block for show your content. for replace this text use <b>block content</b>.</p>
 {%endblock%}
 {%block footer_def%}
- <footer>
-  <div id="footer">
-  <div class="light1 row-padding-medium">
-   <div class="container">
-   <div class="row">
-    <div class="span12">
-    <p>{%trans "Go to"%} <a href="{{url.root}}" title="{{site.desc}}" class="roller cursor-help"><span data-title="{{site.title}}">{{site.title}}</span></a>.</p>
-    <p>
-     <select id="langlist">
+<footer id="footer">
+  <div id="copyright">
+   <div class='hint--rounded hint--top' data-hint='{%trans "Ermile is our brand"%}'>
+    <span>&copy; {{'now'|date('Y')}}</span>
+    <a href="{{url.root}}" title="{{site.desc}}" tabindex="-1">{{site.title}}</a>
+   </div>
+
+   <div id='languages' class='hint--rounded hint--top' data-hint='{%trans "Experience our service in your language"%}'>
+    <select id="langlist">
+   {{global.lang}}
 {%for key, value in global.langlist%}{%if key == global.lang%}
-      <option class="{{key}}" value="{{key}}" selected="selected">{{value}}</option>
+     <option value="{{key}}" selected="selected">{{value}}</option>
 {%else%}
-      <option value="{{key}}">{{value}}</option>
+     <option value="{{key}}">{{value}}</option>
 {%endif%}{% endfor %}
-     </select>
-     {{include.gettext}}
-    </p>
-    </div>
-   </div>
+    </select>
    </div>
   </div>
-  </div>
- </footer>
+</footer>
 {%endblock%}
 {%block footer%}{%endblock%}
 {%endblock%}

@@ -7,6 +7,7 @@ class view extends \mvc\view
 	{
 		$this->data->list 	     = $this->cpModlueList('all');
 		$this->data->bodyclass    = 'fixed';
+		$this->include->css       = false;
 		$this->include->js        = false;
 	}
 
