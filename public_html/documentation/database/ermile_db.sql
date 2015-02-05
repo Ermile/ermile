@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 01, 2015 at 02:15 PM
+-- Generation Time: Feb 05, 2015 at 03:26 PM
 -- Server version: 5.5.41-0ubuntu0.14.04.1
 -- PHP Version: 5.6.5-1+deb.sury.org~trusty+1
 
@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `attachments` (
   UNIQUE KEY `attachments_files_id` (`file_id`),
   UNIQUE KEY `name+type_unique` (`attachment_name`,`attachment_type`),
   KEY `attachments_users_id` (`user_id`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `attachments`
@@ -125,13 +125,17 @@ CREATE TABLE IF NOT EXISTS `attachments` (
 
 INSERT INTO `attachments` (`id`, `file_id`, `attachment_title`, `attachment_model`, `attachment_addr`, `attachment_name`, `attachment_type`, `attachment_size`, `attachment_desc`, `attachment_parent`, `attachment_depth`, `attachment_count`, `attachment_order`, `user_id`, `date_modified`) VALUES
 (4, NULL, 'folder1', 'folder', NULL, NULL, NULL, NULL, NULL, 8, 1, NULL, 1, 190, '2015-01-29 21:06:30'),
-(6, NULL, 'Folder2', 'folder', NULL, NULL, NULL, NULL, NULL, 190, 0, NULL, 3, 190, '2015-01-29 21:06:11'),
+(6, NULL, 'Folder2', 'folder', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 3, 190, '2015-02-01 15:39:53'),
 (7, NULL, 'File1', 'file', NULL, NULL, 'jpeg', NULL, NULL, 8, 1, NULL, 0, 190, '2015-01-29 20:56:47'),
-(8, NULL, 'Folder4', 'folder', NULL, NULL, NULL, NULL, NULL, 190, 0, NULL, 2, 190, '2015-01-29 21:06:16'),
+(8, NULL, 'Folder4', 'folder', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 2, 190, '2015-02-01 15:39:55'),
 (9, NULL, '123', 'folder', '/', NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, 190, NULL),
 (10, NULL, '1233', 'folder', '/123', NULL, NULL, NULL, NULL, 9, 1, NULL, NULL, 190, NULL),
 (11, NULL, 'qqqq', 'folder', '/123/1233', NULL, NULL, NULL, NULL, 10, 2, NULL, NULL, 190, NULL),
-(12, NULL, 'rrrrr', 'folder', '/123/1233/qqqq', NULL, NULL, NULL, NULL, 11, 3, NULL, NULL, 190, NULL);
+(12, NULL, 'rrrrr', 'folder', '/123/1233/qqqq', NULL, NULL, NULL, NULL, 11, 3, NULL, NULL, 190, NULL),
+(13, NULL, '123', 'folder', '/123', NULL, NULL, NULL, NULL, 9, 1, NULL, NULL, 190, NULL),
+(14, NULL, 'فففف', 'folder', '/', NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, 190, NULL),
+(15, NULL, 'ssss', 'folder', '/', NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, 190, NULL),
+(16, NULL, 'adasd', 'folder', '/', NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, 190, NULL);
 
 -- --------------------------------------------------------
 
@@ -148,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `banks` (
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `slug_unique` (`bank_slug`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=177 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=101 ;
 
 --
 -- Dumping data for table `banks`
@@ -159,10 +163,6 @@ INSERT INTO `banks` (`id`, `bank_title`, `bank_slug`, `bank_website`, `bank_stat
 (2, 'ملی', 'melli', NULL, 'enable', '2015-01-22 13:31:44'),
 (3, 'ملت', 'mellat', NULL, 'disable', '2015-01-23 21:23:09'),
 (4, 'پاسارگاد', 'pasargad', NULL, 'enable', '2015-01-23 23:03:52'),
-(6, 'انصار', 'ansar', NULL, 'expire', '2015-01-25 01:05:02'),
-(7, 'آینده', 'ayandeh', NULL, 'enable', '2015-01-23 23:09:37'),
-(8, 'صادرات', 'saderat', NULL, 'enable', '2015-01-25 01:04:44'),
-(9, 'سینا', 'sina', NULL, 'enable', '2015-01-25 01:04:47'),
 (10, 'اقتصاد نوین', 'eghtesad', NULL, 'disable', '2015-01-25 01:04:51'),
 (100, 'reba', 'reba', NULL, 'expire', '2015-01-25 01:04:55');
 
@@ -1189,7 +1189,14 @@ CREATE TABLE IF NOT EXISTS `usermetas` (
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `usermeta_users_id` (`user_id`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=280 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=70 ;
+
+--
+-- Dumping data for table `usermetas`
+--
+
+INSERT INTO `usermetas` (`id`, `user_id`, `usermeta_cat`, `usermeta_name`, `usermeta_value`, `usermeta_extra`, `usermeta_status`, `date_modified`) VALUES
+(69, 190, 'cookie_token', '2130706433', '93a191d36751746592672a5578955f0a', NULL, 'expire', '2015-02-04 13:09:30');
 
 -- --------------------------------------------------------
 
