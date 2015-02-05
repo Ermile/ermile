@@ -58,10 +58,10 @@ function transtext()
 	echo T_("attachment");          // attachments
 	echo T_("File");                // file_id
 	echo T_("Title");               // attachment_title
-	echo T_("Model");               // attachment_model
+	echo T_("Type");                // attachment_type
 	echo T_("Addr");                // attachment_addr
 	echo T_("Name");                // attachment_name
-	echo T_("Type");                // attachment_type
+	echo T_("Ext");                 // attachment_ext
 	echo T_("Size");                // attachment_size
 	echo T_("Desc");                // attachment_desc
 	echo T_("Parent");              // attachment_parent

@@ -5,10 +5,10 @@ class attachments
 	public $id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                                                                    );
 	public $file_id           = array('null' =>'YES', 'show' =>'YES', 'label'=>'File',          'type' => 'int@10',                                                                    'foreign'=>'files@id!id');
 	public $attachment_title  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@100',                                                               );
-	public $attachment_model  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Model',         'type' => 'enum@productcategory,product,admin,banklogo,post,system,other,file,folder', );
+	public $attachment_type   = array('null' =>'NO',  'show' =>'NO',  'label'=>'Type',          'type' => 'enum@productcategory,product,admin,banklogo,post,system,other,file,folder', );
 	public $attachment_addr   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Addr',          'type' => 'varchar@1000',                                                              );
 	public $attachment_name   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@50',                                                                );
-	public $attachment_type   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Type',          'type' => 'varchar@10',                                                                );
+	public $attachment_ext    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Ext',           'type' => 'varchar@10',                                                                );
 	public $attachment_size   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Size',          'type' => 'float@12,0',                                                                );
 	public $attachment_desc   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',                                                               );
 	public $attachment_parent = array('null' =>'YES', 'show' =>'YES', 'label'=>'Parent',        'type' => 'int@10',                                                                    );
@@ -35,11 +35,10 @@ class attachments
 		$this->form("#title")->maxlength(100)->type('text');
 	}
 
-	//------------------------------------------------------------------ select button
-	public function attachment_model() 
+	//------------------------------------------------------------------ type
+	public function attachment_type() 
 	{
-		$this->form("select")->name("model")->type("select")->required()->validate();
-		$this->setChild();
+		$this->form("#type")->required()->type('select');
 	}
 	public function attachment_addr() 
 	{
@@ -49,11 +48,9 @@ class attachments
 	{
 		$this->form("text")->name("name")->maxlength(50)->type('text');
 	}
-
-	//------------------------------------------------------------------ type
-	public function attachment_type() 
+	public function attachment_ext() 
 	{
-		$this->form("#type")->maxlength(10)->type('text');
+		$this->form("text")->name("ext")->maxlength(10)->type('text');
 	}
 	public function attachment_size() 
 	{
