@@ -71,7 +71,6 @@
 
    <div id='languages' class='hint--left' data-hint='{%trans "Experience our service in your language"%}'>
     <select id="langlist">
-   {{global.lang}}
 {%for key, value in global.langlist%}{%if key == global.lang%}
      <option value="{{key}}" selected="selected">{{value}}</option>
 {%else%}
