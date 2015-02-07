@@ -12,6 +12,7 @@ class controller extends \mvc\controller
 		// $this->route(array("url|=> "hasan/you/any/time")
 
 		$referer = \lib\router::urlParser('referer', 'domain');
+		// var_dump($referer);exit();
 
 		if($referer !== Domain)
 			\lib\utility\Cookie::write('referer', $referer, 60*15);
