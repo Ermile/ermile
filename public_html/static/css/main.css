@@ -153,6 +153,16 @@ optgroup{font-weight:bold;}
 .row-clear:before,.row-clear:after{display:table;content:""}
 .row-clear:after{clear:both}
 
+
+
+.rtl .row [class*=span]{float:left;margin-left:20px;margin-right:0}
+.rtl .row [class*=span]:first-child{margin-left:0;margin-right:0;}
+.rtl .row [class*="span"]{margin-left: 2.127659%;margin-right: 0;}
+.rtl .row [class*="span"]:first-child{margin-left: 0;margin-right: 0;}
+
+
+
+
 /* Utility
    ========================================================================== */
 /* Twitter Bootstrap ALert Box */
@@ -216,7 +226,7 @@ form .error{background: #fff0f0;border-color: #dbb1b1;color: #d95c5c;border-radi
 .cover li{padding:2px 10px}
 
 /* Headings */
-h1,h2,h3,h4,h5,h6{clear:both;margin-bottom:1.0em;font-weight:400;color:#2f1515}
+h1,h2,h3,h4,h5,h6{clear:both;margin-bottom:0.1em;font-weight:400;color:#2f1515}
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {font-weight:700;}
 h1{font-size:3.2em;line-height:1.8em}
 h2{font-size:2.8em;line-height:1.4em}
@@ -313,8 +323,7 @@ p{margin-bottom:1.5em;font-size:1.3em;line-height:1.5em;}
 
 
 
-img{border:0.2em solid #000;margin:0;-webkit-transition: all .4s ease 0s;-moz-transition: all .4s ease 0s;-o-transition: all .4s ease 0s;transition: all .4s ease 0s;}
-img:hover{border-color:#FFCC33;}
+img{margin:0;border:none;}
 
 
 blockquote{color:#59666f;font-style:italic;padding:10px}
