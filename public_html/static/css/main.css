@@ -1,4 +1,4 @@
-@font-face {
+a@font-face {
   font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 300;
@@ -34,9 +34,9 @@ audio:not([controls]){display: none;height: 0;}
    ========================================================================== */
 a{background:transparent;text-decoration:none;
   transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;
-  color:#37abf1;
+  color:#54B4EF;
 }
-a:active,a:hover{outline:0;}
+a:active,a:hover{outline:0; color:#0E97EA;}
 
 a.note{border-bottom:3px solid #323232;padding:0px 4px 1px 4px;}
 a.note:hover{color:#FFFFFF;border-bottom:3px solid #A11E22;background-color:#262626;}
@@ -436,24 +436,6 @@ ul.list li a{padding:0.3em 0.5em;}
 
 
 /*--Action */
-.action-icons {
-background-image: url('../images/table-actions.png');
-background-repeat: no-repeat;
-background-position: 0 -46px;
-display: -moz-inline-box;
-display: inline-block;
-line-height: 14px;
-font-size: 14px;
-height: 14px;
-padding: 3px 0 3px 25px;
-text-decoration: none;
-margin-left: 15px;
-text-indent:-999999px;
-}
-.dataTables_wrapper .edit {background-position: 0 -46px;}
-.dataTables_wrapper .delete {background-position: 0 0;}
-.dataTables_wrapper .edit:hover {background-position: 0 -67px;}
-.dataTables_wrapper .delete:hover {background-position: 0 -23px;}
 
 .col_row{width:5px;padding:0;text-align:center;}
 .col_slug{width:100px;direction:ltr;text-align:left}

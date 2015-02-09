@@ -43,7 +43,7 @@
     <table class="datatable display">
      <thead>
      <tr>
-      <th class="column_row">#</th>
+      <th class="column_row"></th>
 {%for value in columns if value.table%}
       <th>{{value.name}}</th>
 {%endfor%}
@@ -65,11 +65,11 @@
 {%endif%}
 {%endfor%}
        <td class="col_actions">
-       <span class="hint--top hint--info" data-hint='{%trans "Edit"%}'>
-        <a class="action-icons edit hint--top" href="{{store}}/{{module}}/edit={{d.id}}">{%trans "Edit"%}</a>
+       <span class="hint--left hint--info" data-hint='{%trans "Edit this record"%}'>
+        <a class="fa fa-pencil" href="{{store}}/{{module}}/edit={{d.id}}">{%trans "Edit"%}</a>
        </span>
-       <span class="hint--top hint--error" data-hint='{%trans "Delete"%}'>
-        <a class="action-icons delete hide-text" href="{{store}}/{{module}}/delete={{d.id}}" data-data='{"id": {{d.id}}}' data-method="post" data-modal="delete-confirm">{%trans "Delete"%}</a>
+       <span class="hint--left hint--error" data-hint='{%trans "Delete this record"%}'>
+        <a class="fa fa-times" href="{{store}}/{{module}}/delete={{d.id}}" data-data='{"id": {{d.id}}}' data-method="post" data-modal="delete-confirm">{%trans "Delete"%}</a>
        </span>
        </td>
       </tr>
