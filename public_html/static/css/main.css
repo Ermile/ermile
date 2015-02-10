@@ -504,19 +504,7 @@ background-color: #60a917;
 color: #ffffff;
 }
 
-form button:focus{
-background-color: #56901C;
-}
-form button:active{
-background-color: #1d1d1d;
-color: #ffffff;
-border-color: transparent;
-}
 
-
-form select{
-  
-}
 input, select, textarea {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
