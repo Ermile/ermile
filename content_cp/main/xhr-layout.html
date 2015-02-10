@@ -5,7 +5,9 @@
 {%block content_def%}
 <div data-xhr="content_def">
 
-{%if child%}
+{% set fieldcounter = 0%}
+{% for key, value in field_list if value.form%}{% set fieldcounter = (fieldcounter+1) %}{% endfor %}
+{%if child and fieldcounter >0%}
  <div id="options" class="unselectable">
   <div id="options-meta" class="disappear">
 {% for key, value in field_list if value.form%}

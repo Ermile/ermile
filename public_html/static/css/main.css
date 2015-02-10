@@ -1,4 +1,4 @@
-a@font-face {
+@font-face {
   font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 300;
@@ -479,10 +479,6 @@ form input, form select{
 
 }
 
-.rtl #main form label{
-  float:right;
-}
-
 #main form .label-textarea{width: 100%;float:none}
 .rtl #main form .label-textarea{width: 100%;float:none}
 
@@ -500,27 +496,33 @@ display: inline-block;
 outline: none;
 margin:auto;
 border: 1px transparent solid;
-background-color: #60a917;
 color: #ffffff;
+}
+form button:active{
+color: #ffffff;
+border-color: transparent;
 }
 
 
+form select{
+  
+}
 input, select, textarea {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 
-	padding: 8px;
-	border: none;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-	border-right: 1px solid rgba(255, 255, 255, 0.2);
-	background: rgba(0, 0, 0, 0.07);
-	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
-	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
-	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
-	transition: background-color 0.2s ease;
-	-webkit-transition: background-color 0.2s ease;
-	-moz-transition: background-color 0.2s ease;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.07);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
 
 }
 
@@ -564,9 +566,13 @@ cursor: pointer;
 
 
 
+.rtl .radio label{padding-right: 20px;}
+.rtl .radio input[type=radio],.rtl .radio-inline input[type=radio],.rtl .checkbox input[type=checkbox],.rtl .checkbox-inline input[type=checkbox] {margin-right: -20px;}
+
+
 
 .tmp_userstatus{
-	font-size: 16px; margin-top: 50px;
+  font-size: 16px; margin-top: 50px;
 }
 
 

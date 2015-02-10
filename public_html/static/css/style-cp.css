@@ -7,12 +7,13 @@
 
 .cover{padding-top: 80px;margin-top:-45px;}
 #header-back {height: 45px;}
-.rtl #main form label{
-  float:right;
-}
+
+
+
 
 #main form .label-textarea{width: 100%;float:none}
 .rtl #main form .label-textarea{width: 100%;float:none}
+.medium-editor-placeholder{background-color: #eee;min-height: 100px;}
 
 
 
@@ -40,6 +41,5 @@ transition: all .2s ease;-webkit-transition: all .2s ease;-o-transition: all .2s
 .form-element.visuallyhidden {opacity: 0;}
 
 #footer{margin-top:100px;}
-
 
 
