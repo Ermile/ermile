@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 11, 2015 at 06:30 PM
+-- Generation Time: Feb 11, 2015 at 06:14 PM
 -- Server version: 5.5.41-0ubuntu0.14.04.1
 -- PHP Version: 5.6.5-1+deb.sury.org~trusty+1
 
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `account_title`, `account_slug`, `bank_id`, `account_branch`, `account_number`, `account_card`, `account_primarybalance`, `account_desc`, `user_id`, `date_modified`) VALUES
-(10, 'test2', 'test2', 1, 'test', '123', '456', 0.0000, NULL, 150, '2015-02-11 14:46:12'),
+(10, 'test2', 'test2', 1, 'test', '123', '456', 0.0000, NULL, 15, '2014-11-07 22:52:43'),
 (11, 'a1', 'a1', 100, NULL, '23', NULL, 500.0000, NULL, 150, NULL);
 
 -- --------------------------------------------------------
@@ -592,8 +592,8 @@ CREATE TABLE IF NOT EXISTS `posts` (
 --
 
 INSERT INTO `posts` (`id`, `post_language`, `post_cat`, `post_title`, `post_slug`, `post_content`, `post_type`, `post_comment`, `post_count`, `post_status`, `post_parent`, `user_id`, `attachment_id`, `post_publishdate`, `date_modified`) VALUES
-(1, 'fa', NULL, 'test1', 'page1', 'salam. in test 1 ast', 'page', 'open', NULL, 'publish', NULL, 150, NULL, NULL, '2015-02-11 14:46:49'),
-(2, 'en', 'test', 'post1', 'post1', 'salam. post1 ast', 'post', 'open', NULL, 'publish', NULL, 150, NULL, NULL, '2015-02-11 14:46:52');
+(1, 'fa', NULL, 'test1', 'page1', 'salam. in test 1 ast', 'page', 'open', NULL, 'publish', NULL, 14, NULL, NULL, '2015-01-19 07:19:51'),
+(2, 'en', 'test', 'post1', 'post1', 'salam. post1 ast', 'post', 'open', NULL, 'publish', NULL, 14, NULL, NULL, '2015-01-18 15:36:01');
 
 -- --------------------------------------------------------
 
@@ -938,7 +938,7 @@ CREATE TABLE IF NOT EXISTS `receipts` (
 --
 
 INSERT INTO `receipts` (`id`, `receipt_code`, `receipt_type`, `receipt_price`, `receipt_date`, `paper_id`, `receipt_paperdate`, `receipt_paperstatus`, `receipt_desc`, `transaction_id`, `fund_id`, `user_id`, `user_id_customer`, `date_modified`) VALUES
-(6, '123', 'income', 0.0000, '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, 2, 150, 150, '2015-02-11 14:47:59');
+(6, '123', 'income', 0.0000, '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, 2, 14, 15, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1152,9 +1152,9 @@ CREATE TABLE IF NOT EXISTS `transactions` (
 --
 
 INSERT INTO `transactions` (`id`, `transaction_type`, `user_id`, `user_id_customer`, `transaction_date`, `transaction_sum`, `transaction_remained`, `date_modified`) VALUES
-(2, 'sale', 15, 150, '0000-00-00 00:00:00', 50.0000, NULL, '2015-02-11 14:48:20'),
-(3, 'sale', 15, 150, '0000-00-00 00:00:00', 240.0000, NULL, '2015-02-11 14:48:24'),
-(5, 'sale', 15, 150, '0000-00-00 00:00:00', 10000.0000, NULL, '2015-02-11 14:48:27');
+(2, 'sale', 15, 15, '0000-00-00 00:00:00', 50.0000, NULL, '2014-05-30 21:42:55'),
+(3, 'sale', 15, 16, '0000-00-00 00:00:00', 240.0000, NULL, '2014-05-30 21:41:20'),
+(5, 'sale', 15, 14, '0000-00-00 00:00:00', 10000.0000, NULL, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1193,7 +1193,7 @@ CREATE TABLE IF NOT EXISTS `usermetas` (
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `usermeta_users_id` (`user_id`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1228,9 +1228,14 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `user_type`, `user_mobile`, `user_pass`, `user_email`, `user_gender`, `user_nickname`, `user_firstname`, `user_lastname`, `user_birthday`, `user_status`, `user_credit`, `permission_id`, `user_createdate`, `date_modified`) VALUES
-(15, 'admin', '989356032043', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', NULL, 'male', 'Hasan', 'Hasan', 'Salehi', NULL, 'active', 'no', 1, '0000-00-00 00:00:00', NULL),
-(150, 'admin', '989199840989', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', NULL, 'male', 'Mahdi', 'Mahdi', 'Dibaee', NULL, 'active', 'no', 1, '0000-00-00 00:00:00', NULL),
-(190, 'admin', '989357269759', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', NULL, 'male', 'javad', 'Javad', 'Evazzadeh', NULL, 'active', 'no', 1, '2015-01-25 04:52:07', NULL);
+(14, 'user', '+989357269758', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', 'eee2', 'male', 'J.Evazzadeh', 'Javad', 'Evazzadeh', NULL, 'active', 'no', 1, '0000-00-00 00:00:00', '2015-01-27 09:46:54'),
+(15, 'storeadmin', '+989113334444', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', NULL, NULL, 'Test1', 'Test', NULL, NULL, 'awaiting', 'no', 1, '0000-00-00 00:00:00', '2015-01-27 09:46:52'),
+(16, 'storeadmin', '+989357269750', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', 'aaa2', NULL, 'Test3', NULL, 'Test last', NULL, 'active', 'no', 1, '0000-00-00 00:00:00', '2015-01-27 09:46:50'),
+(150, 'storeadmin', '+989357269790', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '0000-00-00 00:00:00', '2015-01-27 09:46:49'),
+(190, 'storeadmin', '989357269759', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '2015-01-25 04:52:07', NULL),
+(191, 'storeadmin', '1234-238-9685', '$2y$07$943YcByRoEuIv730KaGvpetc.CYT2qoTANZrUFFwV0kpAbaCSkcIu', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '2015-01-28 21:50:33', NULL),
+(192, 'storeadmin', '1564-865-7965', '$2y$07$YhzlYzn3waKtDzwmml6G/OdRDDEbe4wraw3yoXPbLwQTbhZbreyAa', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '2015-01-28 23:08:42', NULL),
+(193, 'storeadmin', '143298935726975', '$2y$07$ghmWnyyCTbApe/B4edRhO.VKK.0OAv0jUl7S3xGJXO8TnChFGKeGO', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '2015-01-29 04:18:06', NULL);
 
 -- --------------------------------------------------------
 
@@ -1253,6 +1258,17 @@ CREATE TABLE IF NOT EXISTS `verifications` (
   UNIQUE KEY `code_unique` (`verification_url`,`verification_value`) USING BTREE,
   KEY `verifications_users_id` (`user_id`) USING BTREE
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=468 ;
+
+--
+-- Dumping data for table `verifications`
+--
+
+INSERT INTO `verifications` (`id`, `verification_type`, `verification_value`, `verification_code`, `verification_url`, `user_id`, `verification_verified`, `verification_status`, `verification_createdate`, `date_modified`) VALUES
+(463, 'mobilesignup', '989357269759', '2255', NULL, 190, 'no', 'enable', '2015-01-25 04:52:07', '2015-01-25 01:48:46'),
+(464, 'mobilerecovery', '989357269759', '6282', NULL, 190, 'no', 'expire', NULL, '2015-01-25 01:56:55'),
+(465, 'mobilesignup', '1234-238-9685', '4293', NULL, 191, 'no', 'enable', '2015-01-28 21:50:33', NULL),
+(466, 'mobilesignup', '1564-865-7965', '5947', NULL, 192, 'no', 'enable', '2015-01-28 23:08:42', NULL),
+(467, 'mobilesignup', '1432989357269759', '7944', NULL, 193, 'no', 'enable', '2015-01-29 04:18:06', NULL);
 
 --
 -- Triggers `verifications`
