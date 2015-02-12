@@ -498,15 +498,8 @@ margin:auto;
 border: 1px transparent solid;
 color: #ffffff;
 }
-form button:active{
-color: #ffffff;
-border-color: transparent;
-}
 
 
-form select{
-  
-}
 input, select, textarea {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
