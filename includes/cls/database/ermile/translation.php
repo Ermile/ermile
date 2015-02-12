@@ -51,6 +51,9 @@ function transtext()
 	echo T_("other");               // Enum other
 	echo T_("file");                // Enum file
 	echo T_("folder");              // Enum folder
+	echo T_("normal");              // Enum normal
+	echo T_("trash");               // Enum trash
+	echo T_("deleted");             // Enum deleted
 
 	// ------------------------------------------------------------------- Table attachments
 	echo T_("attachments");         // Table attachments
@@ -68,6 +71,7 @@ function transtext()
 	echo T_("Depth");               // attachment_depth
 	echo T_("Count");               // attachment_count
 	echo T_("Order");               // attachment_order
+	echo T_("Status");              // attachment_status
 
 	// ------------------------------------------------------------------- Table banks
 	echo T_("banks");               // Table banks
@@ -80,7 +84,6 @@ function transtext()
 	echo T_("approved");            // Enum approved
 	echo T_("unapproved");          // Enum unapproved
 	echo T_("spam");                // Enum spam
-	echo T_("deleted");             // Enum deleted
 
 	// ------------------------------------------------------------------- Table comments
 	echo T_("comments");            // Table comments
@@ -153,8 +156,8 @@ function transtext()
 	echo T_("Part");                // filepart_part
 	echo T_("Code");                // filepart_code
 	echo T_("Status");              // filepart_status
-	echo T_("init");                // Enum init
 	echo T_("ready");               // Enum ready
+	echo T_("temp");                // Enum temp
 
 	// ------------------------------------------------------------------- Table files
 	echo T_("files");               // Table files
@@ -162,7 +165,6 @@ function transtext()
 	echo T_("file");                // files
 	echo T_("Server");              // file_server
 	echo T_("Folder");              // file_folder
-	echo T_("Name");                // file_name
 	echo T_("Code");                // file_code
 	echo T_("Size");                // file_size
 	echo T_("Status");              // file_status

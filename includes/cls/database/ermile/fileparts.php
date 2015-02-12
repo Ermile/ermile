@@ -7,6 +7,7 @@ class fileparts
 	public $filepart_part   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Part',          'type' => 'smallint@5',                                              );
 	public $filepart_code   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Code',          'type' => 'varchar@64',                                              );
 	public $filepart_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@awaiting,start,inprogress,appended,failed,finished', );
+	public $user_id         = array('null' =>'YES', 'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                              'foreign'=>'users@id!user_nickname');
 	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                              );
 
 
@@ -34,6 +35,7 @@ class fileparts
 		$this->form("select")->name("status")->type("select")->required()->validate();
 		$this->setChild();
 	}
+	public function user_id() {$this->validate()->id();}
 	public function date_modified() {}
 }
 ?>

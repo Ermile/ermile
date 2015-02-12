@@ -8,13 +8,14 @@ class attachments
 	public $attachment_type   = array('null' =>'NO',  'show' =>'NO',  'label'=>'Type',          'type' => 'enum@productcategory,product,admin,banklogo,post,system,other,file,folder', );
 	public $attachment_addr   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Addr',          'type' => 'varchar@1000',                                                              );
 	public $attachment_name   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@50',                                                                );
-	public $attachment_ext    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Ext',           'type' => 'varchar@10',                                                                );
+	public $attachment_ext    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Ext',           'type' => 'varchar@255',                                                               );
 	public $attachment_size   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Size',          'type' => 'float@12,0',                                                                );
 	public $attachment_desc   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',                                                               );
 	public $attachment_parent = array('null' =>'YES', 'show' =>'YES', 'label'=>'Parent',        'type' => 'int@10',                                                                    );
 	public $attachment_depth  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Depth',         'type' => 'smallint@5',                                                                );
 	public $attachment_count  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Count',         'type' => 'smallint@5',                                                                );
 	public $attachment_order  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Order',         'type' => 'smallint@5',                                                                );
+	public $attachment_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@normal,trash,deleted!normal',                                          );
 	public $user_id           = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                                                'foreign'=>'users@id!user_nickname');
 	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                                                );
 
@@ -50,7 +51,7 @@ class attachments
 	}
 	public function attachment_ext() 
 	{
-		$this->form("text")->name("ext")->maxlength(10)->type('text');
+		$this->form("text")->name("ext")->maxlength(255)->type('textarea');
 	}
 	public function attachment_size() 
 	{
@@ -77,6 +78,13 @@ class attachments
 	public function attachment_order() 
 	{
 		$this->form("text")->name("order")->max(9999)->type('number');
+	}
+
+	//------------------------------------------------------------------ select button
+	public function attachment_status() 
+	{
+		$this->form("select")->name("status")->type("select")->required()->validate();
+		$this->setChild();
 	}
 	public function user_id() {$this->validate()->id();}
 	public function date_modified() {}
