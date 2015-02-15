@@ -19,7 +19,7 @@ $translation = array();
 foreach($files as $file)
 {
 	// create an record for array name
-	$trans_key = substr($file, strpos($file, db_name)+7 );
+	$trans_key = substr($file, strpos($file, db_name)+strlen(db_name)+1 );
 	$file_name = basename($file,'.html');
 	$lines     = file($file);
 	$find      = "trans";
