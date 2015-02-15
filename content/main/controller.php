@@ -20,7 +20,7 @@ class controller extends \mvc\controller
 		$url_type = null;
 		if($url_type == 'invalid')
 		{
-			\lib\http::page(T_("Does not exist!"));
+			\lib\error::page(T_("Does not exist!"));
 		}
 		else
 		{

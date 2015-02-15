@@ -18,7 +18,7 @@ class model extends \content\main\model
 	// }
 
 	// public function get_query($object){
-	// 	// \lib\http::access("login");
+	// 	// \lib\error::access("login");
 	// 	// \lib\dbconnection::$db_user = "hi";
 	// 	$query = $this->sql('banks')->tableAccounts()->limit(10);
 	// 	$result = $query->select()->allObject();

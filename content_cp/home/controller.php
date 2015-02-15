@@ -19,7 +19,7 @@ class controller extends \mvc\controller
 		if($mychild && !($mychild=='add' || $mychild=='edit' || $mychild=='delete' || $mychild=='options')
 			 || !$this->cpModlueList()
 			)
-			\lib\http::page(T_("Not found!"));
+			\lib\error::page(T_("Not found!"));
 
 
 		if( is_file(root.'content_cp/'.$mymodule.'/display.html') )

@@ -31,7 +31,7 @@ class view extends \mvc\view
 		}
 		else
 		{
-			\lib\http::error(T_("Error!"));
+			\lib\error::error(T_("Error!"));
 		}
 	}
 
@@ -59,7 +59,7 @@ class view extends \mvc\view
 		}
 		else
 		{
-			\lib\http::error(T_("Error!"));
+			\lib\error::error(T_("Error!"));
 		}
 	}
 

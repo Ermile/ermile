@@ -27,7 +27,7 @@ class controller extends \mvc\controller
 		// if(!$referer)
 		// {
 		// 	// check if referer is our service
-		// 	\lib\http::access("You must refer from one of our service!");
+		// 	\lib\error::access("You must refer from one of our service!");
 		// }
 		// 
 		// a one module can only one from: post, put, delete
@@ -69,7 +69,7 @@ class controller extends \mvc\controller
 					// $this->get()->ALL($mymodule);
 					$this->redirector()->set_domain($myreferer)->set_url($myssid)->redirect();
 
-					// \lib\http::access(T_("you are logined to system!"));
+					// \lib\error::access(T_("you are logined to system!"));
 				}
 				break;
 
@@ -77,7 +77,7 @@ class controller extends \mvc\controller
 			case 'changepass':
 				if(!$islogin)
 				{
-					\lib\http::access(T_("you can't access to this page!"));
+					\lib\error::access(T_("you can't access to this page!"));
 				}
 			case 'verification':
 				$this->model_name	= 'content_account\\'.$mymodule.'\model';
@@ -97,7 +97,7 @@ class controller extends \mvc\controller
 			// 	// {
 			// 	// 	\lib\debug::true(T_("you must first logined to system!"));
 			// 	// 	$this->redirector()->set_domain()->set_url()->redirect();
-			// 	// 	// \lib\http::access(T_("you must first logined to system!"));
+			// 	// 	// \lib\error::access(T_("you must first logined to system!"));
 			// 	// }
 			// 	// else
 			// 	// {
@@ -123,14 +123,14 @@ class controller extends \mvc\controller
 				}
 				else
 				{
-					\lib\http::access("SMS");
+					\lib\error::access("SMS");
 				}
 				break;
 
 
 			// if user add another address show 404
 			default:
-				\lib\http::page();
+				\lib\error::page();
 				break;
 		}
 	}
