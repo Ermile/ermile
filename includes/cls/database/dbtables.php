@@ -58,6 +58,9 @@ function setproperty($myparam)
 {
 	$type       = $myparam->Type;
 	$field      = $myparam->Field;
+	$tmp_pos    = strpos($field, '_');
+	$fieldname  = substr($field, ($tmp_pos ? $tmp_pos+1 : 0) );
+
 	// for add new HTML5 feature to forms
 	preg_match("/^([^(]*)(\((.*)\))?/", $type, $tp);
 	$_type		= $tp[1];
@@ -102,16 +105,13 @@ function setproperty($myparam)
 			if($mylen>100)
 				$tmp[0] 	= "->type('textarea')";
 			else
-				if($field == 'tel')
-					$tmp[0] 	= "->type('tel')";
-				elseif($field == 'pass')
-					$tmp[0] 	= "->type('password')";
-				elseif($field == 'website')
-					$tmp[0] 	= "->type('url')";
-				elseif($field == 'email')
-					$tmp[0] 	= "->type('email')";
-				else
-					$tmp[0] 	= "->type('text')";
+				if($fieldname     == 'tel')					$tmp[0] 	= "->type('tel')";
+				elseif($fieldname == 'pass')					$tmp[0] 	= "->type('password')";
+				elseif($fieldname == 'password')				$tmp[0] 	= "->type('password')";
+				elseif($fieldname == 'website')				$tmp[0] 	= "->type('url')";
+				elseif($fieldname == 'email')					$tmp[0] 	= "->type('email')";
+				elseif($fieldname == 'province')				$tmp[0] 	= "->type('select')";
+				else													$tmp[0] = "->type('text')";
 
 			array_push($tmp, "->maxlength(".$mylen.")");
 			return $tmp;
@@ -174,13 +174,9 @@ while ($row = $qTables->fetch_object())
 		foreach ($tmp_result as $key => $value) 
 		{
 			if( substr($value, 0, 6)=='->type' )
-			{
 				$property_type = $value;
-			}
 			else
-			{
 				$property .= $value;
-			}
 		}
 		$required   = $myfield_null=='NO'?'->required()':null;
 		$property  .= $required;
@@ -195,7 +191,7 @@ while ($row = $qTables->fetch_object())
 		
 		$txtcomment = "\n\t//------------------------------------------------------------------ ";
 		$txtstart   = "\tpublic function $myfield() \n\t{\n\t\t";
-		$txtend     ="\n\t}\n";
+		$txtend     = true;
 
 		// --------------------------------------------------------------------------------- ID
 		if($myfield=="id")
@@ -203,6 +199,7 @@ while ($row = $qTables->fetch_object())
 			$fn           .= $txtcomment. "id - primary key\n";
 			$fn           .= "\tpublic function $myfield() {" . '$this->validate()->id();' ."}\n";
 			$myfield_show  = 'NO';
+			$txtend        = false;
 
 		}
 
@@ -215,6 +212,7 @@ while ($row = $qTables->fetch_object())
 			$isforeign    = true;
 			$mylabel      = ucwords(strtolower($prefix));
 			$myfield_show = 'NO';
+			$txtend       = false;
 		}
 
 		// --------------------------------------------------------------------------------- Foreign Key
@@ -223,7 +221,7 @@ while ($row = $qTables->fetch_object())
 			// for foreign key we use prefix that means we use (table name-last char)
 			$fn .= $txtcomment. "id - foreign key\n";
 			$fn .= $txtstart. '$this->form("select")->name("'. $prefix.'_")'.$property.'->type("select")->validate()->id();';
-			$fn .= "\n\t\t".'$this->setChild();'.$txtend;
+			$fn .= "\n\t\t".'$this->setChild();';
 
 			$isforeign = true;
 			$mylabel   = ucwords(strtolower($prefix));
@@ -239,7 +237,6 @@ while ($row = $qTables->fetch_object())
 			$property  = $property. $property_type;
 			$fn       .= $txtcomment. $myname."\n";
 			$fn       .= $txtstart. '$this->form("#'.$myname.'")'.$property.';';
-			$fn       .= $txtend;
 
 			if ($myname=="desc" || $myname=="website" || $myname=="tel" || $myname=="pass" 
 				|| $myfield=="attachment_type")
@@ -256,6 +253,7 @@ while ($row = $qTables->fetch_object())
 			// $mylabel      = str_replace("_", " ", $myfield);
 			$mylabel      = ucwords(strtolower($mylabel));
 			$myfield_show = 'NO';
+			$txtend       = false;
 		}
 
 		// --------------------------------------------------------------------------------- radio
@@ -267,8 +265,8 @@ while ($row = $qTables->fetch_object())
 		{
 			$fn    .= $txtcomment. "radio button\n";
 			$fn    .= $txtstart. '$this->form("radio")->name("'. $myname.'")->type("radio")'.$property.';';
-			// $fn .= "\n\t\t".'$this->setChild($this->form);'.$txtend;
-			$fn    .= "\n\t\t".'$this->setChild();'.$txtend;
+			// $fn .= "\n\t\t".'$this->setChild($this->form);';
+			$fn    .= "\n\t\t".'$this->setChild();';
 		}
 
 		// --------------------------------------------------------------------------------- select
@@ -279,15 +277,19 @@ while ($row = $qTables->fetch_object())
 		{
 			$fn    .= $txtcomment. "select button\n";
 			$fn    .= $txtstart. '$this->form("select")->name("'. $myname.'")->type("select")'.$property.'->validate();';
-			// $fn .= "\n\t\t".'$this->setChild($this->form);'.$txtend;
-			$fn    .= "\n\t\t".'$this->setChild();'.$txtend;
+			// $fn .= "\n\t\t".'$this->setChild($this->form);';
+			$fn    .= "\n\t\t".'$this->setChild();';
 		}
 
 		else
 		{
 			$property = $property.$property_type;
-			$fn      .= $txtstart. '$this->form("text")->name("'. $myname.'")'.$property.';'.$txtend;
+			$fn      .= $txtstart. '$this->form("text")->name("'. $myname.'")'.$property.';';
 		}
+
+		// if want to add txt end then end it
+		if($txtend)
+			$fn      .= "\n\t}\n";
 		
 
 		// ****************************************************************************for show in form or not
@@ -313,7 +315,9 @@ while ($row = $qTables->fetch_object())
 			$tmp_fields_name = $prefix . "_title";
 			if($table=="users")
 				$tmp_fields_name = $prefix."_nickname";
-			if($table=="receipts" || $table=="transactions" || $table=="papers" || $table=="files")
+			elseif($table=="countrys" || $table=="provinces" || $table=="citys")
+				$tmp_fields_name = $prefix."_name";
+			elseif($table=="receipts" || $table=="transactions" || $table=="papers" || $table=="files")
 				$tmp_fields_name = "id";
 
 			$fields          .= $tmp_fields_name."'";
