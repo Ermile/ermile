@@ -8,8 +8,7 @@ class model extends \mvc\model
 	public function put_verification()
 	{
 		// get parameters and set to local variables
-		$mymobile   = str_replace(' ', '', utility::post('mobile'));
-		$mymobile   = substr($mymobile, 1);
+		$mymobile   = utility::post('mobile', 'filter');
 		$mycode     = utility::post('code');
 		$myfrom     = utility\Cookie::read('from');
 

@@ -8,8 +8,7 @@ class model extends \mvc\model
 	public function post_recovery()
 	{
 		// get parameters and set to local variables
-		$mymobile   = str_replace(' ', '', utility::post('mobile'));
-		$mymobile   = substr($mymobile, 1);
+		$mymobile   = utility::post('mobile', 'filter');
 		// check for mobile exist
 		$tmp_result =  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
 
