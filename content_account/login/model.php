@@ -44,16 +44,16 @@ class model extends \mvc\model
 
 
 					// create code for pass with get to service home page
-					debug::true(T_("login successfully").$myreferer);
+					debug::true(T_("login successfully"));
 
 					if($myreferer=='jibres')
-						$this->redirector()->set_domain('jibres.'.$this->url('tld'))->set_url('?dev=y&ssid='.$_code);
+						$this->redirector()->set_domain('jibres.'.$this->url('tld'))->set_url('?ssid='.$_code);
 
 					elseif($myreferer=='talambar')
-						$this->redirector()->set_domain('talambar.'.$this->url('tld'))->set_url('?dev=y&ssid='.$_code);
+						$this->redirector()->set_domain('talambar.'.$this->url('tld'))->set_url('?ssid='.$_code);
 
 					else
-						$this->redirector()->set_domain()->set_url('?dev=y&ssid='.$_code);
+						$this->redirector()->set_domain()->set_url('?ssid='.$_code);
 
 				}, $mycode);
 
@@ -61,11 +61,11 @@ class model extends \mvc\model
 			}
 				// password is incorrect:(
 			else
-				debug::error(T_("mobile or password is incorrect"));
+				debug::error(T_("mobile or password is incorrect").' pass');
 		}
 		// mobile does not exits
 		elseif($tmp_result->num() == 0 )
-			debug::error(T_("mobile or password is incorrect"));
+			debug::error(T_("mobile or password is incorrect"). 'user');
 
 		// mobile exist more than 2 times!
 		else

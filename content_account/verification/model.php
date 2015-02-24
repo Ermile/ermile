@@ -5,6 +5,11 @@ use \lib\debug;
 
 class model extends \mvc\model
 {
+	public function post_verification()
+	{
+		put_verification();
+	}
+
 	public function put_verification()
 	{
 		// get parameters and set to local variables

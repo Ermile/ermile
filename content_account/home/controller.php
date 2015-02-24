@@ -61,8 +61,8 @@ class controller extends \mvc\controller
 					$myreferer = \lib\router::urlParser('referer', 'host');
 					$myssid    = isset($_SESSION['ssid'])? '?ssid='.$_SESSION['ssid'].'&from=login': null;
 
-					var_dump(1);
-					var_dump($myssid);
+					// var_dump(1);
+					// var_dump($myssid);
 					// var_dump($_SERVER['HTTP_REFERER']);
 					// var_dump($myreferer);
 					// exit();

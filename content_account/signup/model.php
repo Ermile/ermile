@@ -50,7 +50,10 @@ class model extends \mvc\model
 				\lib\utility\Sms::send($_mobile, 'signup', $_code);
 				debug::true(T_("register successfully").'. '.T_('we send a verification code for you'));
 
-				$this->redirector()->set_url('verification?from=signup&mobile='.$_mobile.'&referer='.$myreferer);
+				$myreferer = utility\Cookie::write('mobile', $_mobile, 60*5);
+				$myreferer = utility\Cookie::write('from', 'signup', 60*5);
+
+				$this->redirector()->set_url('verification');
 			}, $mymobile, $mycode);
 
 			// if a query has error or any error occour in any part of codes, run roolback

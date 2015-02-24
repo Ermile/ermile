@@ -20,7 +20,7 @@ class account extends \lib\form
 	private function login()
 	{
 		$this->mobile	 = $this->make('#mobile')->label(null)->desc(T_("Enter your registered mobile"))
-							 ->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
+							 ->value(((isset($_COOKIE["mobile"]))?htmlspecialchars('+'.$_COOKIE["mobile"]):null));
 		$this->password = $this->make('#password')->name('password')->label(null)->pl(T_('Password'))->desc(T_("Enter your password"));
 		$this->submit	 = $this->make('submit')->title(T_('Login'));
 	}
@@ -28,7 +28,7 @@ class account extends \lib\form
 	private function signup()
 	{
 		$this->mobile	 = $this->make('#mobile')->label(null)
-							 ->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
+							 ->value(((isset($_COOKIE["mobile"]))?htmlspecialchars('+'.$_COOKIE["mobile"]):null));
 		$this->password = $this->make('#password')->name('password')->label(null)->pl(T_('Password'));
 		$this->submit	 = $this->make('submit')->title(T_('Create an account'));
 	}
@@ -36,7 +36,7 @@ class account extends \lib\form
 	private function verification()
 	{
 		$this->mobile	= $this->make('#mobile')->label(null)->readonly('readonly')->tabindex('-1')
-							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
+							->value(((isset($_COOKIE["mobile"]))?htmlspecialchars('+'.$_COOKIE["mobile"]):null));
 		$this->code		= $this->make('code')->label(null)->pl(T_('Code'))->maxlength(4)->autofocus()->autocomplete('off')
 							->required()->pattern('[0-9]{4}')->title(T_('input 4 number'))
 							->pos('hint--bottom')->desc(T_("Check your mobile and enter the code"));
@@ -46,7 +46,7 @@ class account extends \lib\form
 	private function recovery()
 	{
 		$this->mobile	= $this->make('#mobile')->label(null)
-							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
+							->value(((isset($_COOKIE["mobile"]))?htmlspecialchars('+'.$_COOKIE["mobile"]):null));
 		$this->submit	= $this->make('submit')->title(T_('Recovery'));
 	}
 

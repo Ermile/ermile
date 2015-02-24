@@ -29,7 +29,6 @@ class model extends \mvc\model
 			// ======================================================
 			// you can manage next event with one of these variables,
 			// commit for successfull and rollback for failed
-			//
 			// if query run without error means commit
 			$this->commit(function($_mobile, $_code)
 			{
@@ -38,7 +37,10 @@ class model extends \mvc\model
 				\lib\utility\Sms::send($_mobile, 'recovery', $_code);
 				debug::true(T_("we send a verification code for you"));
 
-				$this->redirector()->set_url('verification?from=recovery&mobile='.$_mobile.'&referer='.$myreferer );
+				$myreferer = utility\Cookie::write('mobile', $_mobile, 60*5);
+				$myreferer = utility\Cookie::write('from', 'recovery', 60*5);
+
+				$this->redirector()->set_url('verification');
 			}, $mymobile, $mycode);
 
 			// if a query has error or any error occour in any part of codes, run roolback
