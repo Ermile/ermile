@@ -9,7 +9,7 @@ class model extends \mvc\model
 	{
 		// get parameters and set to local variables
 		$mymobile   = utility::post('mobile', 'filter');
-		$mypass     = utility::post('password');
+		$mypass     = utility::post('password','hash');
 		// check for mobile exist
 		$tmp_result =  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
 
