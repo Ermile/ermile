@@ -13,7 +13,7 @@ class controller extends \mvc\controller
 		if($referer !== Domain)
 			\lib\utility\Cookie::write('referer', $referer, 60*15);
 		// check permission for changepass
-		if($mymodule === 'changepass' && $from === 'verification' && !$islogin)
+		if($mymodule === 'changepass' && $from !== 'verification' && !$islogin)
 			\lib\error::access(T_("you can't access to this page!"));
 
 		switch ($mymodule)
