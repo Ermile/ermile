@@ -15,7 +15,7 @@ class attachments
 	public $attachment_depth  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Depth',         'type' => 'smallint@5',                                                                );
 	public $attachment_count  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Count',         'type' => 'smallint@5',                                                                );
 	public $attachment_order  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Order',         'type' => 'smallint@5',                                                                );
-	public $attachment_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@normal,trash,deleted!normal',                                          );
+	public $attachment_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@normal,trash,deleted,inprogress!normal',                               );
 	public $user_id           = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                                                'foreign'=>'users@id!user_nickname');
 	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                                                );
 

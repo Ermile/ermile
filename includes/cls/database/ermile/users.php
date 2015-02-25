@@ -38,13 +38,13 @@ class users
 	//------------------------------------------------------------------ pass
 	public function user_pass() 
 	{
-		$this->form("#pass")->maxlength(64)->required()->type('text');
+		$this->form("#pass")->maxlength(64)->required()->type('password');
 	}
 
 	//------------------------------------------------------------------ email
 	public function user_email() 
 	{
-		$this->form("#email")->maxlength(50)->type('text');
+		$this->form("#email")->maxlength(50)->type('email');
 	}
 
 	//------------------------------------------------------------------ radio button

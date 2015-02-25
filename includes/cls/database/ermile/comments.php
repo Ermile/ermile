@@ -40,7 +40,7 @@ class comments
 	//------------------------------------------------------------------ email
 	public function comment_email() 
 	{
-		$this->form("#email")->maxlength(100)->type('text');
+		$this->form("#email")->maxlength(100)->type('email');
 	}
 	public function comment_url() 
 	{

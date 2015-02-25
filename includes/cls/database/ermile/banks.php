@@ -28,7 +28,7 @@ class banks
 	//------------------------------------------------------------------ website
 	public function bank_website() 
 	{
-		$this->form("#website")->maxlength(50)->type('text');
+		$this->form("#website")->maxlength(50)->type('url');
 	}
 
 	//------------------------------------------------------------------ select button

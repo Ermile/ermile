@@ -54,6 +54,7 @@ function transtext()
 	echo T_("normal");              // Enum normal
 	echo T_("trash");               // Enum trash
 	echo T_("deleted");             // Enum deleted
+	echo T_("inprogress");          // Enum inprogress
 
 	// ------------------------------------------------------------------- Table attachments
 	echo T_("attachments");         // Table attachments
@@ -144,7 +145,6 @@ function transtext()
 	echo T_("Priority");            // error_priority
 	echo T_("awaiting");            // Enum awaiting
 	echo T_("start");               // Enum start
-	echo T_("inprogress");          // Enum inprogress
 	echo T_("appended");            // Enum appended
 	echo T_("failed");              // Enum failed
 	echo T_("finished");            // Enum finished
