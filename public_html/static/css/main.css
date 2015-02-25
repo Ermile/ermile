@@ -136,8 +136,10 @@ code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em;margin: 10px 5%;
 
 
 
-.rtl .row > [class*=span]{float:right;margin-left:2.127659%;margin-right:0}
-.rtl .row > [class*=span]:last-child, .rtl .row .endline{margin-left:0}
+.rtl .row.auto [class*=span]{float:left;margin-left:20px;margin-right:0}
+.rtl .row.auto [class*=span]:first-child{margin-left:0;margin-right:0;}
+.rtl .row.auto [class*="span"]{margin-left: 2.127659%;margin-right: 0;}
+.rtl .row.auto [class*="span"]:first-child{margin-left: 0;margin-right: 0;}
 
 
 .row-padding-small{padding:5px 0;}
