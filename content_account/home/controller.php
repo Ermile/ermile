@@ -61,6 +61,14 @@ class controller extends \mvc\controller
 				break;
 
 
+			// logout user from system then redirect to ermile
+			case 'logout':
+				$this->model_name	= 'mvc\model';
+				$this->model()->put_logout();
+				$this->redirector()->set_domain()->set_url()->redirect();
+				break;
+
+
 			default:
 				\lib\error::page();
 				break;
