@@ -10,6 +10,15 @@ class controller extends \mvc\controller
 
 	public function _route()
 	{
+
+		// route sample
+		// $this->route("/^hasan\/you\/any\/time$/")
+		// $this->route(array("url|=>array("hasan", "you", "any", "time"))
+		// $this->route("hasan/you/any/time")
+		// $this->route(array("url|=> "hasan/you/any/time")
+
+
+		
 		//return all array
 		// var_dump(\lib\router::get_url(-1));
 		// //return index array

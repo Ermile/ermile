@@ -35,18 +35,33 @@ class model extends \mvc\model
 		// ======================================================
 		// you can manage next event with one of these variables,
 		// commit for successfull and rollback for failed
-		//
 		// if query run without error means commit
-		$this->commit(function()
+		$this->commit(function($_mobile)
 		{
-			debug::true(T_('we receive your message and your account is now verifited.'));
-		});
+			$myfrom     = utility\Cookie::read('from');
+			$myid = $this->sql()->tableUsers()->whereUser_mobile($_mobile)->select()->assoc('id');
+			if($myfrom == 'signup')
+			{
+				// login user to system
+				$this->model()->setLogin($myid);
+				//Send SMS
+				\lib\utility\Sms::send($_mobile, 'verification');
+				debug::true(T_('we receive your message and your account is now verifited.'));
+			}
+			else
+			{
+				// login user to system
+				$this->model()->setLogin($myid, false);
+				$this->redirector()->set_url('changepass');
+
+				$myreferer = utility\Cookie::write('mobile', $_mobile, 60*5);
+				$myreferer = utility\Cookie::write('from', 'verification', 60*5);
+				debug::true(T_("verify successfully.").' '.T_("please Input your new password"));
+			}
+		}, $mymobile);
 
 		// if a query has error or any error occour in any part of codes, run roolback
-		$this->rollback(function()
-		{
-			debug::error(T_('error on verify your code!'));
-		} );
+		$this->rollback(function() { debug::error(T_('error on verify your code!')); } );
 	}
 }
 ?>

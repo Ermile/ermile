@@ -7,7 +7,7 @@ class model extends \mvc\model
 {
 	public function post_verification()
 	{
-		put_verification();
+		$this->put_verification();
 	}
 
 	public function put_verification()
@@ -40,28 +40,28 @@ class model extends \mvc\model
 			// ======================================================
 			// you can manage next event with one of these variables,
 			// commit for successfull and rollback for failed
-			//
 			// if query run without error means commit
 			$this->commit(function($_mobile, $_from)
 			{
-				$myreferer = utility\Cookie::read('referer');
+				$myid = $this->sql()->tableUsers()->whereUser_mobile($_mobile)->select()->assoc('id');
 				if($_from == 'signup')
 				{
+					// login user to system
+					$this->model()->setLogin($myid);
 					//Send SMS
 					\lib\utility\Sms::send($_mobile, 'verification');
-					debug::true(T_("verify successfully.").' '.T_("now you can login and enjoy!"));
-
-					$this->redirector()->set_url('login?from=verification&mobile='.$_mobile.'&referer='.$myreferer );
-				}
-				elseif($_from=='recovery')
-				{
-					debug::true(T_("verify successfully.").' '.T_("please Input your new password"));
-
-					// login user to system
-					$this->redirector()->set_url('changepass?from=verification&mobile='.$_mobile.'&referer='.$myreferer );
+					debug::true(T_("verify successfully."));
 				}
 				else
-					debug::warn(T_("verify successfully.").' '.T_("but you must reffer from one point!"));
+				{
+					// login user to system
+					$this->model()->setLogin($myid, false);
+					$this->redirector()->set_url('changepass');
+
+					$myreferer = utility\Cookie::write('mobile', $_mobile, 60*5);
+					$myreferer = utility\Cookie::write('from', 'verification', 60*5);
+					debug::true(T_("verify successfully.").' '.T_("please Input your new password"));
+				}
 			}, $mymobile, $myfrom);
 
 			// if a query has error or any error occour in any part of codes, run roolback

@@ -5,7 +5,7 @@ use \lib\debug;
 
 class model extends \mvc\model
 {
-	function put_changepass()
+	function post_changepass()
 	{
 		// for debug you can uncomment below line to disallow redirect
 		// $this->controller()->redirector	= false; 

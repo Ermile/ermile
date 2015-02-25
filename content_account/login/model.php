@@ -21,43 +21,8 @@ class model extends \mvc\model
 			// if password is correct. go for login:)
 			if (isset($myhashedPassword) && utility::hasher($mypass, $myhashedPassword))
 			{
-				// Create Token and add to db for cross login ****************************************************
-				// you can change the code way easily at any time!
-				$mycode	= md5('^_^'.$tmp_result['id'].'_*Ermile*_'.date('Y-m-d H:i:s').'^_^');
-				$qry		= $this->sql()->tableUsermetas ()
-								->setUser_id                ($tmp_result['id'])
-								->setUsermeta_cat           ('cookie_token')
-								->setUsermeta_name          (ip2long($_SERVER['REMOTE_ADDR']))
-								->setUsermeta_value         ($mycode);
-				$sql		= $qry->insert();
-
-				$_SESSION['ssid'] = $mycode;
-
-				// ======================================================
-				// you can manage next event with one of these variables,
-				// commit for successfull and rollback for failed
-				// if query run without error means commit
-				$this->commit(function($_code)
-				{
-					$myreferer = utility\Cookie::read('referer');
-					utility\Cookie::delete('referer');
-
-
-					// create code for pass with get to service home page
-					debug::true(T_("login successfully"));
-
-					if($myreferer=='jibres')
-						$this->redirector()->set_domain('jibres.'.$this->url('tld'))->set_url('?ssid='.$_code);
-
-					elseif($myreferer=='talambar')
-						$this->redirector()->set_domain('talambar.'.$this->url('tld'))->set_url('?ssid='.$_code);
-
-					else
-						$this->redirector()->set_domain()->set_url('?ssid='.$_code);
-
-				}, $mycode);
-
-				$this->rollback(function() { debug::error(T_("login failed!")); });
+				$this->model()->setLogin($tmp_result['id']);
+				debug::true(T_("login successfully"));
 			}
 				// password is incorrect:(
 			else
@@ -65,7 +30,7 @@ class model extends \mvc\model
 		}
 		// mobile does not exits
 		elseif($tmp_result->num() == 0 )
-			debug::error(T_("mobile or password is incorrect"). 'user');
+			debug::error(T_("mobile or password is incorrect"). ' user');
 
 		// mobile exist more than 2 times!
 		else
