@@ -16,7 +16,7 @@ class view extends \mvc\view
 		// in root page like site.com/admin/banks show datatable
 		// get data from database through model
 		$this->data->datatable = $this->model()->datatable();
-		$this->global->js      = array($this->url->MainStatic.'js/datatable/jquery.dataTables.min.js');
+		$this->global->js      = array($this->url->myStatic.'js/datatable/jquery.dataTables.min.js');
 		// check if datatable exist then get this data
 		if($this->data->datatable)
 		{
@@ -31,7 +31,7 @@ class view extends \mvc\view
 	{
 		$this->include->editor  = true;
 		$this->data->field_list = \lib\sql\getTable::get($this->data->module);
-		$this->global->js       = array($this->url->MainStatic.'js/cp/medium-editor.min.js');
+		$this->global->js       = array($this->url->myStatic.'js/cp/medium-editor.min.js');
 		$myform                 = $this->createform('@'.db_name.'.'.$this->data->module, $this->data->child);
 	}
 }

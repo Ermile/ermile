@@ -34,9 +34,9 @@ h1{color: #222;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 .account input{background-color: transparent;padding:0px;color: #4f5561;border:none;width:100%;transition: color .3s ease;height: 40px;}
 .account input:focus,.account input:active{color:#eee}
 .account input::selection{color:#4f5561;}
-.form-element{border-bottom:3px solid #34383d;}
-.form-element:last-child,.center .form-element:nth-last-child(2){border:none;}
-.form-element span{width:100%;}
+.field{border-bottom:3px solid #34383d;}
+.field:last-child,.center .field:nth-last-child(2){border:none;}
+.field span{width:100%;}
 
 .intl-tel-input {width:96%;margin-right:4%;z-index:10;}
 .intl-tel-input input, .intl-tel-input input[type=text], .intl-tel-input input[type=tel] {padding-left: 0px;padding-right: 50px;margin-right: 0;}

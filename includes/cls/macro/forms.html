@@ -5,9 +5,9 @@
  {% for input in array%}
 
 {%if input.attr.required is not null%}
- <div class="field {{input.attr.id}} {{input.attr.class}} required">
+ <div class="field {{input.attr.id}} required">
 {%else%}
- <div class="field {{input.attr.id}} {{input.attr.class}}">
+ <div class="field {{input.attr.id}}">
 {%endif%}
 
   {% if input.attr.pos %}{% set tippos=input.attr.pos %}{%else%}{% set tippos='hint--right' %}{% endif %}
@@ -80,7 +80,7 @@
 
 
 {% macro submit(array) %}
- <button class="button primary row-clear" {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>{{array.attr.value}}</button>
+ <button {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>{{array.attr.value}}</button>
 {% endmacro %}
 
 

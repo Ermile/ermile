@@ -5,7 +5,7 @@
  <meta charset="UTF-8"/>
  <base href="{{url.base}}"/>
  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><![endif]-->
- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui"/>
  <title>{{global.title}}</title>
  <meta name    ="description"    content="{{page.desc}}"/>
  <meta property="og:url"         content="{{url.root}}"/>
@@ -15,9 +15,9 @@
  <link rel="author"        href="{{url.static}}humans.txt"/>
  <link rel="shortcut icon" href="{{url.static}}images/favicon.png"/>
 {%if include.fontawesome %}
- <link rel="stylesheet"    href="{{url.MainStatic}}css/font-awesome.min.css"/>{{include.newline}}{%endif%}
+ <link rel="stylesheet"    href="{{url.myStatic}}css/font-awesome.min.css"/>{{include.newline}}{%endif%}
 {%if include.css_main%}
- <link rel="stylesheet"    href="{{url.MainStatic}}css/main.css"/>{{include.newline}}{%endif%}
+ <link rel="stylesheet"    href="{{url.myStatic}}css/main.css"/>{{include.newline}}{%endif%}
 {%if include.css     %}
  <link rel="stylesheet"    href="{{url.static}}css/style.css"/>{{include.newline}}{%endif%}
 {%block head_css         %}{%endblock%}
@@ -64,13 +64,13 @@
 {%block footer_def%}
 <footer id="footer">
   <div id="copyright">
-   <div class='hint--right' data-hint='{%trans "Ermile is our brand"%}'>
+   <div class='hint--right' data-hint='{{site.desc}}'>
     <span>&copy; {{'now'|date('Y')}}</span>
-    <a href="{{url.root}}" title="{{site.desc}}" tabindex="-1">{{site.title}}</a>
+    <a href="{{url.root}}" tabindex='-1'>{{site.title}}</a>
    </div>
 
    <div id='languages' class='hint--left' data-hint='{%trans "Experience our service in your language"%}'>
-    <select id="langlist">
+    <select id="langlist" tabindex='-1'>
 {%for key, value in global.langlist%}{%if key == global.lang%}
      <option value="{{key}}" selected="selected">{{value}}</option>
 {%else%}
@@ -102,12 +102,16 @@
 {%endblock%}
 {%block foot_css%}{%endblock%}
 
-{%if include.js_main   %} <script src="{{url.MainStatic}}js/common.js"></script>{{include.newline}}{%endif%}
+{%if include.js_main   %} <script src="{{url.myStatic}}js/common.js"></script>{{include.newline}}{%endif%}
+{%if include.datatable %} <script src="{{url.myStatic}}js/datatable/jquery.dataTables.min.js"></script>{{include.newline}}{%endif%}
+{%if include.editor    %} <script src="{{url.myStatic}}js/cp/medium-editor.min.js"></script>{{include.newline}}{%endif%}
+{%if include.telinput  %} <script src="{{url.myStatic}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
+{%if include.chart     %} <script src="{{url.myStatic}}js/highcharts/highcharts.js"></script>{{include.newline}}{%endif%}
+{%if include.chartexp  %} <script src="{{url.myStatic}}js/highcharts/modules/exporting.js"></script>{{include.newline}}{%endif%}
 {%if include.js        %} <script src="{{url.static}}js/script.js"></script>{{include.newline}}{%endif%}
-{%if include.datatable %} <script src="{{url.MainStatic}}js/datatable/jquery.dataTables.min.js"></script>{{include.newline}}{%endif%}
-{%if include.editor    %} <script src="{{url.MainStatic}}js/cp/medium-editor.min.js"></script>{{include.newline}}{%endif%}
-{%if include.telinput  %} <script src="{{url.MainStatic}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
-{%block foot_js        %}{%endblock%}
 
+<div data-xhr='foot_js' class="foot_js">
+{%block foot_js        %}{%endblock%}
+</div>
 </body>
 </html>
