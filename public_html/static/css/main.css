@@ -1026,7 +1026,7 @@ label, input, select, textarea, button {font-family:'Roboto Slab',serif;box-sizi
 .rtl label, .rtl input, .rtl select, .rtl textarea, .rtl button {font-family:'IRANSans',serif;}
 input:focus,select:focus,textarea:focus,button:focus{outline:none;}
 
-.form {position: relative;max-width: 98%;padding: 1em 1%;font-size:12px;font-size:1.2rem;color:#000;}
+.form {position: relative;max-width: 98%;padding: 1em 1%;font-size:12px;font-size:1.2rem;color:#000;margin:0 auto;}
 .rtl .form {font-size:16px;font-size:1.6rem;}
 .form.black{color:#fff;}
 .rtl .form {font-size:12px;font-size: 1.2rem;}
@@ -1392,8 +1392,8 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
 .form.inline input, .form.inline select, .form.inline .radio, .form.inline .editor{display: inline-block;width:75%;margin-right:5%;font-size: 0.9em;padding-top:0.4em;padding-bottom:0.4em;}
 .rtl .form.inline input,.rtl .form.inline select,.rtl .form.inline .radio, .rtl .form.inline .editor{width:70%;margin-right:0;margin-left:10%;}
 
-.form .button{width:75%;margin-left:20%;margin-right:5%;}
-.rtl .form .button{width:70%;margin-left:10%;margin-right:20%;}
+.form.autostyle .button{width:75%;margin-left:20%;margin-right:5%;}
+.rtl .form.autostyle .button{width:70%;margin-left:10%;margin-right:20%;}
 /*--------------------
         Sizes
 ---------------------*/
