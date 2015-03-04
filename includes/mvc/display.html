@@ -104,8 +104,8 @@
 
 {%if include.js_main   %} <script src="{{url.MainStatic}}js/common.js"></script>{{include.newline}}{%endif%}
 {%if include.js        %} <script src="{{url.static}}js/script.js"></script>{{include.newline}}{%endif%}
-{%if include.datatable %} <script src="{{url.MainStatic}}js/jquery.dataTables.min.js"></script>{{include.newline}}{%endif%}
-{%if include.editor    %} <script src="{{url.MainStatic}}js/medium-editor.min.js"></script>{{include.newline}}{%endif%}
+{%if include.datatable %} <script src="{{url.MainStatic}}js/datatable/jquery.dataTables.min.js"></script>{{include.newline}}{%endif%}
+{%if include.editor    %} <script src="{{url.MainStatic}}js/cp/medium-editor.min.js"></script>{{include.newline}}{%endif%}
 {%if include.telinput  %} <script src="{{url.MainStatic}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
 {%block foot_js        %}{%endblock%}
 
