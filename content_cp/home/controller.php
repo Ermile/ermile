@@ -8,7 +8,7 @@ class controller extends \mvc\controller
 		if(!$this->login())
 		{
 			\lib\debug::warn(T_("first of all, you must login to system!"));
-			$this->redirector()->set_domain($this->url('AccountService'))->set_url('login?dev=y')->redirect();
+			$this->redirector(null, false)->set_domain($this->url('AccountService'))->set_url('login?dev=y')->redirect();
 			exit();
 		}
 
