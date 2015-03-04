@@ -5,7 +5,7 @@
  <link rel="stylesheet"    href="{{url.MainStatic}}css/style-cp.css?ver=1.1.0">
 {%endblock%}
 {%block foot_js%}
- <script src="{{url.MainStatic}}js/cp.js"></script>
+ <script src="{{url.MainStatic}}js/cp/cp.js"></script>
 {%endblock%}
 
 
@@ -42,7 +42,7 @@
 
 {%block datatable%}
 {%if include.datatable%}
-    <table class="datatable display">
+    <table class="datatable display responsive nowrap" cellspacing="0" width="100%">
      <thead>
      <tr>
       <th class="column_row"></th>
