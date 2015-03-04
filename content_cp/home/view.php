@@ -5,10 +5,10 @@ class view extends \mvc\view
 {
 	public function config()
 	{
-		$this->data->list 	     = $this->cpModlueList('all');
-		$this->data->bodyclass    = 'fixed';
-		$this->include->css       = false;
-		$this->include->js        = false;
+		$this->data->list      = $this->cpModlueList('all');
+		$this->data->bodyclass = 'fixed';
+		$this->include->css    = false;
+		$this->include->js     = false;
 	}
 
 	function view_datatable()
