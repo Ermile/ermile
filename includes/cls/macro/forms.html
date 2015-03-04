@@ -5,9 +5,9 @@
  {% for input in array%}
 
 {%if input.attr.required is not null%}
- <div class="field {{input.attr.id}} required">
+ <div class="field {{input.attr.id}} {{input.attr.parent}} required">
 {%else%}
- <div class="field {{input.attr.id}}">
+ <div class="field {{input.attr.id}} {{input.attr.parent}}">
 {%endif%}
 
   {% if input.attr.pos %}{% set tippos=input.attr.pos %}{%else%}{% set tippos='hint--right' %}{% endif %}
@@ -86,5 +86,5 @@
 
 {% macro input(array) %}
  {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
-  <input {% for attr,value in array.attr if attr != 'desc' and attr != 'pos'%}{{attr}}="{{value}}" {% endfor %}>
+  <input {% for attr,value in array.attr if attr != 'desc' and attr != 'pos' and attr != 'parent'%}{{attr}}="{{value}}" {% endfor %}>
 {% endmacro %}
