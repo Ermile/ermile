@@ -80,7 +80,7 @@ foreach ($translation as $key => $value)
 	}
 	else
 	{
-		$translation_output .= "\t".'echo T_("'.$key.'");'.str_repeat(' ',70-strlen($key)).'// '.$value."\n";
+		@$translation_output .= "\t".'echo T_("'.$key.'");'.str_repeat(' ',70-strlen($key)).'// '.$value."\n";
 		echo('<li>'.$key.'</li>');
 	}
 }
