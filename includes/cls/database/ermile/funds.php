@@ -2,16 +2,16 @@
 namespace database\ermile;
 class funds 
 {
-	public $id                  = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',          );
-	public $fund_title          = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@100',         );
-	public $fund_slug           = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@100',         );
-	public $location_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Location',      'type' => 'smallint@5',          'foreign'=>'locations@id!location_title');
-	public $fund_initialbalance = array('null' =>'NO',  'show' =>'YES', 'label'=>'Initialbalance','type' => 'decimal@14,4!0.0000', );
-	public $fund_desc           = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',         );
-	public $date_modified       = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',          );
+	public $id                  = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',          );
+	public $fund_title          = array('null' =>'NO',  'show' =>'YES', 'label'=>'title',         'type' => 'varchar@100',         );
+	public $fund_slug           = array('null' =>'NO',  'show' =>'YES', 'label'=>'slug',          'type' => 'varchar@100',         );
+	public $location_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'location',      'type' => 'smallint@5',          'foreign'=>'locations@id!location_title');
+	public $fund_initialbalance = array('null' =>'NO',  'show' =>'YES', 'label'=>'initialbalance','type' => 'decimal@14,4!0.0000', );
+	public $fund_desc           = array('null' =>'YES', 'show' =>'NO',  'label'=>'desc',          'type' => 'varchar@200',         );
+	public $date_modified       = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',          );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ title
@@ -29,12 +29,12 @@ class funds
 	//------------------------------------------------------------------ id - foreign key
 	public function location_id() 
 	{
-		$this->form("select")->name("location_")->min(0)->max(9999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("location_")->min(0)->max(99999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function fund_initialbalance() 
 	{
-		$this->form("text")->name("initialbalance")->max(9999999999999)->required()->type('number');
+		$this->form("text")->name("initialbalance")->max(99999999999999)->required()->type('number');
 	}
 
 	//------------------------------------------------------------------ desc

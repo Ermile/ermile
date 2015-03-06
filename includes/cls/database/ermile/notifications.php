@@ -2,22 +2,27 @@
 namespace database\ermile;
 class notifications 
 {
-	public $id                   = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                         );
-	public $user_id_sender       = array('null' =>'YES', 'show' =>'YES', 'label'=>'Id Sender',     'type' => 'smallint@5',                     );
-	public $user_id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                     'foreign'=>'users@id!user_nickname');
-	public $notification_title   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                     );
-	public $notification_content = array('null' =>'YES', 'show' =>'YES', 'label'=>'Content',       'type' => 'varchar@200',                    );
-	public $notification_url     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Url',           'type' => 'varchar@100',                    );
-	public $notification_status  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@read,unread,expire!unread', );
-	public $date_modified        = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                     );
+	public $id                   = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                         );
+	public $user_id_sender       = array('null' =>'YES', 'show' =>'YES', 'label'=>'user sender',   'type' => 'smallint@5',                     'foreign'=>'users@id!user_nickname');
+	public $user_id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'user',          'type' => 'smallint@5',                     'foreign'=>'users@id!user_nickname');
+	public $notification_title   = array('null' =>'NO',  'show' =>'YES', 'label'=>'title',         'type' => 'varchar@50',                     );
+	public $notification_content = array('null' =>'YES', 'show' =>'YES', 'label'=>'content',       'type' => 'varchar@200',                    );
+	public $notification_url     = array('null' =>'YES', 'show' =>'YES', 'label'=>'url',           'type' => 'varchar@100',                    );
+	public $notification_status  = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@read,unread,expire!unread', );
+	public $date_modified        = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                     );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
+
+	//------------------------------------------------------------------ id - foreign key
 	public function user_id_sender() 
 	{
-		$this->form("text")->name("id_sender")->min(0)->max(9999)->type('number');
+		$this->form("select")->name("user_sender")->min(0)->max(99999)->type("select")->validate()->id();
+		$this->setChild();
 	}
+
+	//------------------------------------------------------------------ user_id
 	public function user_id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ title

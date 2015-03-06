@@ -2,16 +2,16 @@
 namespace database\ermile;
 class userlogs 
 {
-	public $id               = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                      );
-	public $userlog_title    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                  );
-	public $userlog_desc     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@999',                 );
-	public $userlog_priority = array('null' =>'NO',  'show' =>'YES', 'label'=>'Priority',      'type' => 'enum@high,medium,low!medium', );
-	public $userlog_type     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Type',          'type' => 'enum@forgetpassword',         );
-	public $user_id          = array('null' =>'YES', 'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                  'foreign'=>'users@id!user_nickname');
-	public $date_modified    = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                  );
+	public $id               = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                      );
+	public $userlog_title    = array('null' =>'YES', 'show' =>'YES', 'label'=>'title',         'type' => 'varchar@50',                  );
+	public $userlog_desc     = array('null' =>'YES', 'show' =>'NO',  'label'=>'desc',          'type' => 'varchar@999',                 );
+	public $userlog_priority = array('null' =>'NO',  'show' =>'YES', 'label'=>'priority',      'type' => 'enum@high,medium,low!medium', );
+	public $userlog_type     = array('null' =>'YES', 'show' =>'YES', 'label'=>'type',          'type' => 'enum@forgetpassword',         );
+	public $user_id          = array('null' =>'YES', 'show' =>'NO',  'label'=>'user',          'type' => 'smallint@5',                  'foreign'=>'users@id!user_nickname');
+	public $date_modified    = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                  );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ title
@@ -39,6 +39,8 @@ class userlogs
 		$this->form("select")->name("type")->type("select")->validate();
 		$this->setChild();
 	}
+
+	//------------------------------------------------------------------ user_id
 	public function user_id() {$this->validate()->id();}
 	public function date_modified() {}
 }

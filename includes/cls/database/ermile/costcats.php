@@ -2,18 +2,18 @@
 namespace database\ermile;
 class costcats 
 {
-	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                        );
-	public $costcat_title  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                        );
-	public $costcat_slug   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@50',                        );
-	public $costcat_desc   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',                       );
-	public $costcat_parent = array('null' =>'YES', 'show' =>'YES', 'label'=>'Parent',        'type' => 'smallint@5',                        );
-	public $costcat_order  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Order',         'type' => 'smallint@5',                        );
-	public $costcat_type   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Type',          'type' => 'enum@income,outcome',               );
-	public $costcat_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified  = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
+	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',                        );
+	public $costcat_title  = array('null' =>'NO',  'show' =>'YES', 'label'=>'title',         'type' => 'varchar@50',                        );
+	public $costcat_slug   = array('null' =>'NO',  'show' =>'YES', 'label'=>'slug',          'type' => 'varchar@50',                        );
+	public $costcat_desc   = array('null' =>'YES', 'show' =>'NO',  'label'=>'desc',          'type' => 'varchar@200',                       );
+	public $costcat_parent = array('null' =>'YES', 'show' =>'YES', 'label'=>'parent',        'type' => 'smallint@5',                        );
+	public $costcat_order  = array('null' =>'YES', 'show' =>'YES', 'label'=>'order',         'type' => 'smallint@5',                        );
+	public $costcat_type   = array('null' =>'YES', 'show' =>'YES', 'label'=>'type',          'type' => 'enum@income,outcome',               );
+	public $costcat_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable', );
+	public $date_modified  = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                        );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ title
@@ -35,11 +35,11 @@ class costcats
 	}
 	public function costcat_parent() 
 	{
-		$this->form("text")->name("parent")->max(9999)->type('number');
+		$this->form("text")->name("parent")->max(99999)->type('number');
 	}
 	public function costcat_order() 
 	{
-		$this->form("text")->name("order")->max(9999)->type('number');
+		$this->form("text")->name("order")->max(99999)->type('number');
 	}
 
 	//------------------------------------------------------------------ select button

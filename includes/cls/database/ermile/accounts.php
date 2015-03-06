@@ -2,20 +2,20 @@
 namespace database\ermile;
 class accounts 
 {
-	public $id                     = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',          );
-	public $account_title          = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',          );
-	public $account_slug           = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@50',          );
-	public $bank_id                = array('null' =>'NO',  'show' =>'YES', 'label'=>'Bank',          'type' => 'smallint@5',          'foreign'=>'banks@id!bank_title');
-	public $account_branch         = array('null' =>'YES', 'show' =>'YES', 'label'=>'Branch',        'type' => 'varchar@50',          );
-	public $account_number         = array('null' =>'YES', 'show' =>'YES', 'label'=>'Number',        'type' => 'varchar@50',          );
-	public $account_card           = array('null' =>'YES', 'show' =>'YES', 'label'=>'Card',          'type' => 'varchar@30',          );
-	public $account_primarybalance = array('null' =>'NO',  'show' =>'YES', 'label'=>'Primarybalance','type' => 'decimal@14,4!0.0000', );
-	public $account_desc           = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',         );
-	public $user_id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',          'foreign'=>'users@id!user_nickname');
-	public $date_modified          = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',          );
+	public $id                     = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',          );
+	public $account_title          = array('null' =>'NO',  'show' =>'YES', 'label'=>'title',         'type' => 'varchar@50',          );
+	public $account_slug           = array('null' =>'NO',  'show' =>'YES', 'label'=>'slug',          'type' => 'varchar@50',          );
+	public $bank_id                = array('null' =>'NO',  'show' =>'YES', 'label'=>'bank',          'type' => 'smallint@5',          'foreign'=>'banks@id!bank_title');
+	public $account_branch         = array('null' =>'YES', 'show' =>'YES', 'label'=>'branch',        'type' => 'varchar@50',          );
+	public $account_number         = array('null' =>'YES', 'show' =>'YES', 'label'=>'number',        'type' => 'varchar@50',          );
+	public $account_card           = array('null' =>'YES', 'show' =>'YES', 'label'=>'card',          'type' => 'varchar@30',          );
+	public $account_primarybalance = array('null' =>'NO',  'show' =>'YES', 'label'=>'primarybalance','type' => 'decimal@14,4!0.0000', );
+	public $account_desc           = array('null' =>'YES', 'show' =>'NO',  'label'=>'desc',          'type' => 'varchar@200',         );
+	public $user_id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'user',          'type' => 'smallint@5',          'foreign'=>'users@id!user_nickname');
+	public $date_modified          = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',          );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ title
@@ -33,7 +33,7 @@ class accounts
 	//------------------------------------------------------------------ id - foreign key
 	public function bank_id() 
 	{
-		$this->form("select")->name("bank_")->min(0)->max(9999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("bank_")->min(0)->max(99999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function account_branch() 
@@ -50,7 +50,7 @@ class accounts
 	}
 	public function account_primarybalance() 
 	{
-		$this->form("text")->name("primarybalance")->max(9999999999999)->required()->type('number');
+		$this->form("text")->name("primarybalance")->max(99999999999999)->required()->type('number');
 	}
 
 	//------------------------------------------------------------------ desc
@@ -58,6 +58,8 @@ class accounts
 	{
 		$this->form("#desc")->maxlength(200)->type('textarea');
 	}
+
+	//------------------------------------------------------------------ user_id
 	public function user_id() {$this->validate()->id();}
 	public function date_modified() {}
 }

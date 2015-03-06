@@ -2,22 +2,22 @@
 namespace database\ermile;
 class transactionmetas 
 {
-	public $id                     = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                            );
-	public $transaction_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Transaction',   'type' => 'int@10',                            'foreign'=>'transactions@id!id');
-	public $transactionmeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Cat',           'type' => 'varchar@50',                        );
-	public $transactionmeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@100',                       );
-	public $transactionmeta_value  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Value',         'type' => 'varchar@200',                       );
-	public $transactionmeta_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified          = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
+	public $id                     = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                            );
+	public $transaction_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'transaction',   'type' => 'int@10',                            'foreign'=>'transactions@id!id');
+	public $transactionmeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'cat',           'type' => 'varchar@50',                        );
+	public $transactionmeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'name',          'type' => 'varchar@100',                       );
+	public $transactionmeta_value  = array('null' =>'YES', 'show' =>'YES', 'label'=>'value',         'type' => 'varchar@200',                       );
+	public $transactionmeta_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable', );
+	public $date_modified          = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                        );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function transaction_id() 
 	{
-		$this->form("select")->name("transaction_")->min(0)->max(999999999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("transaction_")->min(0)->max(9999999999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function transactionmeta_cat() 

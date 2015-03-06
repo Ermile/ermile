@@ -2,18 +2,18 @@
 namespace database\ermile;
 class permissions 
 {
-	public $id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                        );
-	public $permission_title  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                        );
-	public $Permission_module = array('null' =>'NO',  'show' =>'YES', 'label'=>'Module',        'type' => 'varchar@50',                        );
-	public $permission_view   = array('null' =>'NO',  'show' =>'YES', 'label'=>'View',          'type' => 'enum@yes,no!yes',                   );
-	public $permission_add    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Add',           'type' => 'enum@yes,no!no',                    );
-	public $permission_edit   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Edit',          'type' => 'enum@yes,no!no',                    );
-	public $permission_delete = array('null' =>'NO',  'show' =>'YES', 'label'=>'Delete',        'type' => 'enum@yes,no!no',                    );
-	public $permission_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
+	public $id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',                        );
+	public $permission_title  = array('null' =>'NO',  'show' =>'YES', 'label'=>'title',         'type' => 'varchar@50',                        );
+	public $Permission_module = array('null' =>'NO',  'show' =>'YES', 'label'=>'module',        'type' => 'varchar@50',                        );
+	public $permission_view   = array('null' =>'NO',  'show' =>'YES', 'label'=>'view',          'type' => 'enum@yes,no!yes',                   );
+	public $permission_add    = array('null' =>'NO',  'show' =>'YES', 'label'=>'add',           'type' => 'enum@yes,no!no',                    );
+	public $permission_edit   = array('null' =>'NO',  'show' =>'YES', 'label'=>'edit',          'type' => 'enum@yes,no!no',                    );
+	public $permission_delete = array('null' =>'NO',  'show' =>'YES', 'label'=>'delete',        'type' => 'enum@yes,no!no',                    );
+	public $permission_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable', );
+	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                        );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ title

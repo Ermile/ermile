@@ -2,18 +2,18 @@
 namespace database\ermile;
 class costs 
 {
-	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                  );
-	public $cost_title    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@50',                  );
-	public $cost_price    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Price',         'type' => 'decimal@13,4',                );
-	public $costcat_id    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Costcat',       'type' => 'smallint@5',                  'foreign'=>'costcats@id!costcat_title');
-	public $account_id    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Account',       'type' => 'smallint@5',                  'foreign'=>'accounts@id!account_title');
-	public $cost_date     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Date',          'type' => 'datetime@',                   );
-	public $cost_desc     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@200',                 );
-	public $cost_type     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@income,outcome!outcome', );
-	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                  );
+	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',                  );
+	public $cost_title    = array('null' =>'NO',  'show' =>'YES', 'label'=>'title',         'type' => 'varchar@50',                  );
+	public $cost_price    = array('null' =>'NO',  'show' =>'YES', 'label'=>'price',         'type' => 'decimal@13,4',                );
+	public $costcat_id    = array('null' =>'NO',  'show' =>'YES', 'label'=>'costcat',       'type' => 'smallint@5',                  'foreign'=>'costcats@id!costcat_title');
+	public $account_id    = array('null' =>'NO',  'show' =>'YES', 'label'=>'account',       'type' => 'smallint@5',                  'foreign'=>'accounts@id!account_title');
+	public $cost_date     = array('null' =>'NO',  'show' =>'YES', 'label'=>'date',          'type' => 'datetime@',                   );
+	public $cost_desc     = array('null' =>'YES', 'show' =>'NO',  'label'=>'desc',          'type' => 'varchar@200',                 );
+	public $cost_type     = array('null' =>'NO',  'show' =>'YES', 'label'=>'type',          'type' => 'enum@income,outcome!outcome', );
+	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                  );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ title
@@ -23,20 +23,20 @@ class costs
 	}
 	public function cost_price() 
 	{
-		$this->form("text")->name("price")->max(999999999999)->required()->type('number');
+		$this->form("text")->name("price")->max(9999999999999)->required()->type('number');
 	}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function costcat_id() 
 	{
-		$this->form("select")->name("costcat_")->min(0)->max(9999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("costcat_")->min(0)->max(99999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function account_id() 
 	{
-		$this->form("select")->name("account_")->min(0)->max(9999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("account_")->min(0)->max(99999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function cost_date() 

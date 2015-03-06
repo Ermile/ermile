@@ -2,22 +2,22 @@
 namespace database\ermile;
 class productmetas 
 {
-	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                            );
-	public $product_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Product',       'type' => 'smallint@5',                        'foreign'=>'products@id!product_title');
-	public $productmeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Cat',           'type' => 'varchar@50',                        );
-	public $productmeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@100',                       );
-	public $productmeta_value  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Value',         'type' => 'varchar@999',                       );
-	public $productmeta_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
+	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                            );
+	public $product_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'product',       'type' => 'smallint@5',                        'foreign'=>'products@id!product_title');
+	public $productmeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'cat',           'type' => 'varchar@50',                        );
+	public $productmeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'name',          'type' => 'varchar@100',                       );
+	public $productmeta_value  = array('null' =>'YES', 'show' =>'YES', 'label'=>'value',         'type' => 'varchar@999',                       );
+	public $productmeta_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable', );
+	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                        );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function product_id() 
 	{
-		$this->form("select")->name("product_")->min(0)->max(9999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("product_")->min(0)->max(99999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function productmeta_cat() 

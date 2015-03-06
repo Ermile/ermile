@@ -2,17 +2,17 @@
 namespace database\ermile;
 class addons 
 {
-	public $id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                                      );
-	public $addon_name        = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@50',                                      );
-	public $addon_slug        = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@50',                                      );
-	public $addon_desc        = array('null' =>'YES', 'show' =>'NO',  'label'=>'Desc',          'type' => 'varchar@999',                                     );
-	public $addon_status      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire,goingtoexpire!enable', );
-	public $addon_expire      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Expire',        'type' => 'datetime@',                                       );
-	public $addon_installdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'Installdate',   'type' => 'datetime@',                                       );
-	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                      );
+	public $id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',                                      );
+	public $addon_name        = array('null' =>'NO',  'show' =>'YES', 'label'=>'name',          'type' => 'varchar@50',                                      );
+	public $addon_slug        = array('null' =>'NO',  'show' =>'YES', 'label'=>'slug',          'type' => 'varchar@50',                                      );
+	public $addon_desc        = array('null' =>'YES', 'show' =>'NO',  'label'=>'desc',          'type' => 'varchar@999',                                     );
+	public $addon_status      = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire,goingtoexpire!enable', );
+	public $addon_expire      = array('null' =>'YES', 'show' =>'YES', 'label'=>'expire',        'type' => 'datetime@',                                       );
+	public $addon_installdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'installdate',   'type' => 'datetime@',                                       );
+	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                                      );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 	public function addon_name() 
 	{

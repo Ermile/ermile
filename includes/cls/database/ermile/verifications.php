@@ -2,19 +2,19 @@
 namespace database\ermile;
 class verifications 
 {
-	public $id                      = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                                                                                  );
-	public $verification_type       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@emailsignup,emailchangepass,emailrecovery,mobilesignup,mobilechangepass,mobilerecovery', );
-	public $verification_value      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Value',         'type' => 'varchar@50',                                                                                  );
-	public $verification_code       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Code',          'type' => 'varchar@32',                                                                                  );
-	public $verification_url        = array('null' =>'YES', 'show' =>'YES', 'label'=>'Url',           'type' => 'varchar@100',                                                                                 );
-	public $user_id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                                                                  'foreign'=>'users@id!user_nickname');
-	public $verification_verified   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Verified',      'type' => 'enum@yes,no!no',                                                                              );
-	public $verification_status     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable',                                                           );
-	public $verification_createdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'Createdate',    'type' => 'datetime@',                                                                                   );
-	public $date_modified           = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                                                                  );
+	public $id                      = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',                                                                                  );
+	public $verification_type       = array('null' =>'NO',  'show' =>'YES', 'label'=>'type',          'type' => 'enum@emailsignup,emailchangepass,emailrecovery,mobilesignup,mobilechangepass,mobilerecovery', );
+	public $verification_value      = array('null' =>'NO',  'show' =>'YES', 'label'=>'value',         'type' => 'varchar@50',                                                                                  );
+	public $verification_code       = array('null' =>'NO',  'show' =>'YES', 'label'=>'code',          'type' => 'varchar@32',                                                                                  );
+	public $verification_url        = array('null' =>'YES', 'show' =>'YES', 'label'=>'url',           'type' => 'varchar@100',                                                                                 );
+	public $user_id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'user',          'type' => 'smallint@5',                                                                                  'foreign'=>'users@id!user_nickname');
+	public $verification_verified   = array('null' =>'NO',  'show' =>'YES', 'label'=>'verified',      'type' => 'enum@yes,no!no',                                                                              );
+	public $verification_status     = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable',                                                           );
+	public $verification_createdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'createdate',    'type' => 'datetime@',                                                                                   );
+	public $date_modified           = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                                                                                  );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ select button
@@ -35,6 +35,8 @@ class verifications
 	{
 		$this->form("text")->name("url")->maxlength(100)->type('text');
 	}
+
+	//------------------------------------------------------------------ user_id
 	public function user_id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ radio button

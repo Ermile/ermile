@@ -2,18 +2,20 @@
 namespace database\ermile;
 class usermetas 
 {
-	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@6',                        );
-	public $user_id         = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@6',                        'foreign'=>'users@id!user_nickname');
-	public $usermeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Cat',           'type' => 'varchar@50',                        );
-	public $usermeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@100',                       );
-	public $usermeta_value  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Value',         'type' => 'varchar@500',                       );
-	public $usermeta_extra  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Extra',         'type' => 'varchar@500',                       );
-	public $usermeta_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
+	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@6',                        );
+	public $user_id         = array('null' =>'NO',  'show' =>'NO',  'label'=>'user',          'type' => 'smallint@6',                        'foreign'=>'users@id!user_nickname');
+	public $usermeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'cat',           'type' => 'varchar@50',                        );
+	public $usermeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'name',          'type' => 'varchar@100',                       );
+	public $usermeta_value  = array('null' =>'YES', 'show' =>'YES', 'label'=>'value',         'type' => 'varchar@500',                       );
+	public $usermeta_extra  = array('null' =>'YES', 'show' =>'YES', 'label'=>'extra',         'type' => 'varchar@500',                       );
+	public $usermeta_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable', );
+	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                        );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
+
+	//------------------------------------------------------------------ user_id
 	public function user_id() {$this->validate()->id();}
 	public function usermeta_cat() 
 	{

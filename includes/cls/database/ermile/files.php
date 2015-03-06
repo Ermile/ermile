@@ -2,24 +2,24 @@
 namespace database\ermile;
 class files 
 {
-	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                     );
-	public $file_server   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Server',        'type' => 'smallint@5',                 );
-	public $file_folder   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Folder',        'type' => 'smallint@5',                 );
-	public $file_code     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Code',          'type' => 'varchar@64',                 );
-	public $file_size     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Size',          'type' => 'float@12,0',                 );
-	public $file_status   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@inprogress,ready,temp', );
-	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                 );
+	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                     );
+	public $file_server   = array('null' =>'NO',  'show' =>'YES', 'label'=>'server',        'type' => 'smallint@5',                 );
+	public $file_folder   = array('null' =>'NO',  'show' =>'YES', 'label'=>'folder',        'type' => 'smallint@5',                 );
+	public $file_code     = array('null' =>'YES', 'show' =>'YES', 'label'=>'code',          'type' => 'varchar@64',                 );
+	public $file_size     = array('null' =>'NO',  'show' =>'YES', 'label'=>'size',          'type' => 'float@12,0',                 );
+	public $file_status   = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@inprogress,ready,temp', );
+	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                 );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 	public function file_server() 
 	{
-		$this->form("text")->name("server")->min(0)->max(9999)->required()->type('number');
+		$this->form("text")->name("server")->min(0)->max(99999)->required()->type('number');
 	}
 	public function file_folder() 
 	{
-		$this->form("text")->name("folder")->min(0)->max(9999)->required()->type('number');
+		$this->form("text")->name("folder")->min(0)->max(99999)->required()->type('number');
 	}
 	public function file_code() 
 	{
@@ -27,7 +27,7 @@ class files
 	}
 	public function file_size() 
 	{
-		$this->form("text")->name("size")->max(99999999999)->required()->type('number');
+		$this->form("text")->name("size")->max(999999999999)->required()->type('number');
 	}
 
 	//------------------------------------------------------------------ select button

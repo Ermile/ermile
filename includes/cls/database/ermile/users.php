@@ -2,24 +2,24 @@
 namespace database\ermile;
 class users 
 {
-	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                                                                );
-	public $user_type       = array('null' =>'YES', 'show' =>'YES', 'label'=>'Type',          'type' => 'enum@storeadmin,storeemployee,storesupplier,storecustomer,admin,user!user', );
-	public $user_mobile     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Mobile',        'type' => 'varchar@15',                                                                );
-	public $user_pass       = array('null' =>'NO',  'show' =>'NO',  'label'=>'Pass',          'type' => 'varchar@64',                                                                );
-	public $user_email      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Email',         'type' => 'varchar@50',                                                                );
-	public $user_gender     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Gender',        'type' => 'enum@male,female',                                                          );
-	public $user_nickname   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Nickname',      'type' => 'varchar@50',                                                                );
-	public $user_firstname  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Firstname',     'type' => 'varchar@50',                                                                );
-	public $user_lastname   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Lastname',      'type' => 'varchar@50',                                                                );
-	public $user_birthday   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Birthday',      'type' => 'datetime@',                                                                 );
-	public $user_status     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Status',        'type' => 'enum@active,awaiting,deactive,removed,filter!awaiting',                     );
-	public $user_credit     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Credit',        'type' => 'enum@yes,no!no',                                                            );
-	public $permission_id   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Permission',    'type' => 'smallint@5',                                                                'foreign'=>'permissions@id!permission_title');
-	public $user_createdate = array('null' =>'NO',  'show' =>'YES', 'label'=>'Createdate',    'type' => 'datetime@',                                                                 );
-	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                                                );
+	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',                                                                );
+	public $user_type       = array('null' =>'YES', 'show' =>'YES', 'label'=>'type',          'type' => 'enum@storeadmin,storeemployee,storesupplier,storecustomer,admin,user!user', );
+	public $user_mobile     = array('null' =>'NO',  'show' =>'YES', 'label'=>'mobile',        'type' => 'varchar@15',                                                                );
+	public $user_pass       = array('null' =>'NO',  'show' =>'NO',  'label'=>'pass',          'type' => 'varchar@64',                                                                );
+	public $user_email      = array('null' =>'YES', 'show' =>'YES', 'label'=>'email',         'type' => 'varchar@50',                                                                );
+	public $user_gender     = array('null' =>'YES', 'show' =>'YES', 'label'=>'gender',        'type' => 'enum@male,female',                                                          );
+	public $user_nickname   = array('null' =>'YES', 'show' =>'YES', 'label'=>'nickname',      'type' => 'varchar@50',                                                                );
+	public $user_firstname  = array('null' =>'YES', 'show' =>'YES', 'label'=>'firstname',     'type' => 'varchar@50',                                                                );
+	public $user_lastname   = array('null' =>'YES', 'show' =>'YES', 'label'=>'lastname',      'type' => 'varchar@50',                                                                );
+	public $user_birthday   = array('null' =>'YES', 'show' =>'YES', 'label'=>'birthday',      'type' => 'datetime@',                                                                 );
+	public $user_status     = array('null' =>'YES', 'show' =>'YES', 'label'=>'status',        'type' => 'enum@active,awaiting,deactive,removed,filter!awaiting',                     );
+	public $user_credit     = array('null' =>'YES', 'show' =>'YES', 'label'=>'credit',        'type' => 'enum@yes,no!no',                                                            );
+	public $permission_id   = array('null' =>'YES', 'show' =>'YES', 'label'=>'permission',    'type' => 'smallint@5',                                                                'foreign'=>'permissions@id!permission_title');
+	public $user_createdate = array('null' =>'NO',  'show' =>'YES', 'label'=>'createdate',    'type' => 'datetime@',                                                                 );
+	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                                                                );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ select button
@@ -87,7 +87,7 @@ class users
 	//------------------------------------------------------------------ id - foreign key
 	public function permission_id() 
 	{
-		$this->form("select")->name("permission_")->min(0)->max(9999)->type("select")->validate()->id();
+		$this->form("select")->name("permission_")->min(0)->max(99999)->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function user_createdate() 

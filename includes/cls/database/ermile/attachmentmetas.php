@@ -2,22 +2,22 @@
 namespace database\ermile;
 class attachmentmetas 
 {
-	public $id                    = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                            );
-	public $attachment_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Attachment',    'type' => 'int@10',                            'foreign'=>'attachments@id!attachment_title');
-	public $attachmentmeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Cat',           'type' => 'varchar@50',                        );
-	public $attachmentmeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@100',                       );
-	public $attachmentmeta_value  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Value',         'type' => 'varchar@200',                       );
-	public $attachmentmeta_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified         = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
+	public $id                    = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                            );
+	public $attachment_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'attachment',    'type' => 'int@10',                            'foreign'=>'attachments@id!attachment_title');
+	public $attachmentmeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'cat',           'type' => 'varchar@50',                        );
+	public $attachmentmeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'name',          'type' => 'varchar@100',                       );
+	public $attachmentmeta_value  = array('null' =>'YES', 'show' =>'YES', 'label'=>'value',         'type' => 'varchar@200',                       );
+	public $attachmentmeta_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable', );
+	public $date_modified         = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                        );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function attachment_id() 
 	{
-		$this->form("select")->name("attachment_")->min(0)->max(999999999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("attachment_")->min(0)->max(9999999999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function attachmentmeta_cat() 

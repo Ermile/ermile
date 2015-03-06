@@ -2,22 +2,22 @@
 namespace database\ermile;
 class visitors 
 {
-	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',         );
-	public $visitor_ip         = array('null' =>'NO',  'show' =>'YES', 'label'=>'Ip',            'type' => 'int@10',         );
-	public $visitor_url        = array('null' =>'NO',  'show' =>'YES', 'label'=>'Url',           'type' => 'varchar@255',    );
-	public $visitor_agent      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Agent',         'type' => 'varchar@255',    );
-	public $visitor_referer    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Referer',       'type' => 'varchar@255',    );
-	public $visitor_robot      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Robot',         'type' => 'enum@yes,no!no', );
-	public $user_id            = array('null' =>'YES', 'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',     'foreign'=>'users@id!user_nickname');
-	public $visitor_createdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'Createdate',    'type' => 'datetime@',      );
-	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',     );
+	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',         );
+	public $visitor_ip         = array('null' =>'NO',  'show' =>'YES', 'label'=>'ip',            'type' => 'int@10',         );
+	public $visitor_url        = array('null' =>'NO',  'show' =>'YES', 'label'=>'url',           'type' => 'varchar@255',    );
+	public $visitor_agent      = array('null' =>'NO',  'show' =>'YES', 'label'=>'agent',         'type' => 'varchar@255',    );
+	public $visitor_referer    = array('null' =>'YES', 'show' =>'YES', 'label'=>'referer',       'type' => 'varchar@255',    );
+	public $visitor_robot      = array('null' =>'NO',  'show' =>'YES', 'label'=>'robot',         'type' => 'enum@yes,no!no', );
+	public $user_id            = array('null' =>'YES', 'show' =>'NO',  'label'=>'user',          'type' => 'smallint@5',     'foreign'=>'users@id!user_nickname');
+	public $visitor_createdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'createdate',    'type' => 'datetime@',      );
+	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',     );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 	public function visitor_ip() 
 	{
-		$this->form("text")->name("ip")->min(0)->max(999999999)->required()->type('number');
+		$this->form("text")->name("ip")->min(0)->max(9999999999)->required()->type('number');
 	}
 	public function visitor_url() 
 	{
@@ -33,8 +33,10 @@ class visitors
 	}
 	public function visitor_robot() 
 	{
-		$this->form("text")->name("robot")->required()->type('select');
+		$this->form("text")->name("robot")->required()->type('radio');
 	}
+
+	//------------------------------------------------------------------ user_id
 	public function user_id() {$this->validate()->id();}
 	public function visitor_createdate() 
 	{

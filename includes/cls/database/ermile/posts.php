@@ -2,24 +2,24 @@
 namespace database\ermile;
 class posts 
 {
-	public $id               = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5',                                       );
-	public $post_language    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Language',      'type' => 'char@2',                                           );
-	public $post_cat         = array('null' =>'YES', 'show' =>'YES', 'label'=>'Cat',           'type' => 'varchar@50',                                       );
-	public $post_title       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Title',         'type' => 'varchar@100',                                      );
-	public $post_slug        = array('null' =>'NO',  'show' =>'YES', 'label'=>'Slug',          'type' => 'varchar@100',                                      );
-	public $post_content     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Content',       'type' => 'text@',                                            );
-	public $post_type        = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@post,page!post',                              );
-	public $post_comment     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Comment',       'type' => 'enum@open,closed,,!open',                          );
-	public $post_count       = array('null' =>'YES', 'show' =>'YES', 'label'=>'Count',         'type' => 'smallint@5',                                       );
-	public $post_status      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@publish,draft,schedule,deleted,expire!draft', );
-	public $post_parent      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Parent',        'type' => 'smallint@5',                                       );
-	public $user_id          = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'smallint@5',                                       'foreign'=>'users@id!user_nickname');
-	public $attachment_id    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Attachment',    'type' => 'int@10',                                           'foreign'=>'attachments@id!attachment_title');
-	public $post_publishdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'Publishdate',   'type' => 'datetime@',                                        );
-	public $date_modified    = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                       );
+	public $id               = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',                                       );
+	public $post_language    = array('null' =>'YES', 'show' =>'YES', 'label'=>'language',      'type' => 'char@2',                                           );
+	public $post_cat         = array('null' =>'YES', 'show' =>'YES', 'label'=>'cat',           'type' => 'varchar@50',                                       );
+	public $post_title       = array('null' =>'NO',  'show' =>'YES', 'label'=>'title',         'type' => 'varchar@100',                                      );
+	public $post_slug        = array('null' =>'NO',  'show' =>'YES', 'label'=>'slug',          'type' => 'varchar@100',                                      );
+	public $post_content     = array('null' =>'YES', 'show' =>'YES', 'label'=>'content',       'type' => 'text@',                                            );
+	public $post_type        = array('null' =>'NO',  'show' =>'YES', 'label'=>'type',          'type' => 'enum@post,page!post',                              );
+	public $post_comment     = array('null' =>'NO',  'show' =>'YES', 'label'=>'comment',       'type' => 'enum@open,closed,,!open',                          );
+	public $post_count       = array('null' =>'YES', 'show' =>'YES', 'label'=>'count',         'type' => 'smallint@5',                                       );
+	public $post_status      = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@publish,draft,schedule,deleted,expire!draft', );
+	public $post_parent      = array('null' =>'YES', 'show' =>'YES', 'label'=>'parent',        'type' => 'smallint@5',                                       );
+	public $user_id          = array('null' =>'NO',  'show' =>'NO',  'label'=>'user',          'type' => 'smallint@5',                                       'foreign'=>'users@id!user_nickname');
+	public $attachment_id    = array('null' =>'YES', 'show' =>'YES', 'label'=>'attachment',    'type' => 'int@10',                                           'foreign'=>'attachments@id!attachment_title');
+	public $post_publishdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'publishdate',   'type' => 'datetime@',                                        );
+	public $date_modified    = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                                       );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 	public function post_language() 
 	{
@@ -54,11 +54,11 @@ class posts
 	}
 	public function post_comment() 
 	{
-		$this->form("text")->name("comment")->required()->type('select');
+		$this->form("text")->name("comment")->required()->type('radio');
 	}
 	public function post_count() 
 	{
-		$this->form("text")->name("count")->min(0)->max(9999)->type('number');
+		$this->form("text")->name("count")->min(0)->max(99999)->type('number');
 	}
 
 	//------------------------------------------------------------------ select button
@@ -69,14 +69,16 @@ class posts
 	}
 	public function post_parent() 
 	{
-		$this->form("text")->name("parent")->min(0)->max(9999)->type('number');
+		$this->form("text")->name("parent")->min(0)->max(99999)->type('number');
 	}
+
+	//------------------------------------------------------------------ user_id
 	public function user_id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function attachment_id() 
 	{
-		$this->form("select")->name("attachment_")->min(0)->max(999999999)->type("select")->validate()->id();
+		$this->form("select")->name("attachment_")->min(0)->max(9999999999)->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function post_publishdate() 
