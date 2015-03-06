@@ -220,7 +220,6 @@ while ($row = $qTables->fetch_object())
 	while ($mycrow1 = $qCOL1->fetch_object())
 	{
 		$tmp_type = _type($mycrow1->Type, $mycrow1->Default, $TABLENAME);
-		var_dump($tmp_type);
 		if(strlen($tmp_type) > $counter['type'])
 			$counter['type'] = strlen($tmp_type);
 
