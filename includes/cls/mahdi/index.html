@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Station</title>
+  <link rel='stylesheet' href='css/main.css' />
+</head>
+<body>
+
+  <label for='a'>File</label>
+  <input type='file' id='a'>
+  <button id='upload'>Upload</button>
+  <button id='pause'>Pause</button>
+  <button id='resume'>Resume</button>
+  <br>
+  <div id='progress' style='width: 0%; background-color: #419ACE'>0%</div>
+  <br />
+
+  <form action='/test' method='post'>
+    <label for='time'>Time</label>
+    <input id='time' name='time'>
+    <label for='date'>Date</label>
+    <input id='date' name='date'>
+
+    <input type='radio' name='salam' value='1'>
+    <input type='radio' name='salam' value='2'>
+
+    <input type='checkbox' name='arr' value='1'>
+    <input type='checkbox' name='arr' value='2'>
+    <button id='schedule'>Schedule</button>
+  </form>
+
+  <a class='ajaxified' href="salam">Ajaxified Link</a>
+
+  <a class='pushState' href='file.html'>Files Demo</a>
+
+  <br>
+
+ <script src='js/common.js'></script>
+ <script src='socket-upload/binary.min.js'></script>
+ <script src='js/filemanager.js'></script>
+ <script src='socket-upload/client.js'></script>
+</body>
+</html>
