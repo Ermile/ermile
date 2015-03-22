@@ -26,23 +26,19 @@
     }
 
     if(options.sticky) {
-      console.log('sticky');
       $notif.prop('sticky', true);
       return;
     }
-    $notif.prop('sticky', false);
 
     timeout = setTimeout(function() {
       $notif.fadeOutAndRemove();
-      // $notif.removeClass('visible').addClass('hidden');
     }, options.delay || 7000);
   }
 
   $(document).on('click', '#formError li', function() {
-    console.log(this.parentNode.parentNode);
-    if (this.parentNode.parentNode.sticky) return;
-    $(this).fadeOutAndRemove();
-    // $(this).removeClass('visible').addClass('hidden');
+    var $this = $(this);
+    if($this.parents('#formError').prop('sticky')) return;
+    $this.fadeOutAndRemove();
   });
 
   root.notify = Notification;

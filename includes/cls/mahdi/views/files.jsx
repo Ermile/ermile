@@ -3,7 +3,7 @@ var FileView = React.createClass({
     var mime = this.props.ext.split('/');
     return <li className={this.props.disabled ? 'file disabled' : 'file'}>
       <span className="file-ext">{mime[1]}</span>
-      <span><a href={this.props.disabled ? '#' : this.props.href}>{this.props.name}</a></span>
+      <span><a data-fake href={this.props.disabled ? '#' : this.props.href}>{this.props.name}</a></span>
       <span className="file-type">{mime[0]}</span>
       <span className="file-size">{this.props.size}</span>
     </li>;
@@ -14,7 +14,7 @@ var FolderView = React.createClass({
   render: function() {
     return <li className={this.props.disabled ? 'folder disabled' : 'folder'}>
       <span>Folder</span>
-      <span><a href={this.props.disabled ? '#' : this.props.href}>{this.props.name}</a></span>
+      <span><a data-fake href={this.props.disabled ? '#' : this.props.href}>{this.props.name}</a></span>
       <span className="folder-children">{this.props.children}</span>
     </li>;
   }
@@ -39,7 +39,9 @@ var FileList = React.createClass({
 
     var _self = this;
 
-    var items = _.filter(this.props.items, parent).map(function(item,i) {
+    var items = _.filter(this.props.items, parent).sort(function(a, b) {
+      return (+a.order||0) - (+b.order||0);
+    }).map(function(item,i) {
       if(item.type === 'folder')
         return <FolderView {...item} href={_self.pathFor(item)} />;
       else

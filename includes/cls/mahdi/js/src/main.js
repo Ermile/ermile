@@ -25,8 +25,11 @@ $(document).ready(function() {
   });
 
   $(document).on('click', '[data-modal]', function(e) {
-    e.preventDefault();
     var $this = $(this);
+
+    if($this.hasClass('modal') || $this.parents('.modal').length > 0) return;
+
+    e.preventDefault();
     var $modal = $('#' + $this.attr('data-modal'));
     $modal.copyData($this, ['modal']);
 
@@ -102,7 +105,8 @@ $(document).ready(function() {
     if(href.indexOf('lang=') > -1) return location.replace(href);
 
     Navigate({
-      url: href
+      url: href,
+      fake: !!$this.attr('data-fake')
     });
   });
 });

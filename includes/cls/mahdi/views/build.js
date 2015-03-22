@@ -2,7 +2,7 @@ var BreadcrumbView = React.createClass({displayName: "BreadcrumbView",
   createItem: function(object) {
     return React.createElement("li", null, 
       React.createElement("i", {className: "fa fa-arrow-right"}), 
-      React.createElement("a", {href: object.url}, object.name)
+      React.createElement("a", {"data-fake": true, href: object.url}, object.name)
     );
   },
   render: function() {
@@ -18,7 +18,7 @@ var BreadcrumbView = React.createClass({displayName: "BreadcrumbView",
     });
 
     var home = React.createElement("li", null, 
-      React.createElement("a", {href: "/"}, "Home")
+      React.createElement("a", {"data-fake": true, href: "/"}, "Home")
     );
 
     els.unshift(home);
@@ -31,7 +31,7 @@ var FileView = React.createClass({displayName: "FileView",
     var mime = this.props.ext.split('/');
     return React.createElement("li", {className: this.props.disabled ? 'file disabled' : 'file'}, 
       React.createElement("span", {className: "file-ext"}, mime[1]), 
-      React.createElement("span", null, React.createElement("a", {href: this.props.disabled ? '#' : this.props.href}, this.props.name)), 
+      React.createElement("span", null, React.createElement("a", {"data-fake": true, href: this.props.disabled ? '#' : this.props.href}, this.props.name)), 
       React.createElement("span", {className: "file-type"}, mime[0]), 
       React.createElement("span", {className: "file-size"}, this.props.size)
     );
@@ -42,7 +42,7 @@ var FolderView = React.createClass({displayName: "FolderView",
   render: function() {
     return React.createElement("li", {className: this.props.disabled ? 'folder disabled' : 'folder'}, 
       React.createElement("span", null, "Folder"), 
-      React.createElement("span", null, React.createElement("a", {href: this.props.disabled ? '#' : this.props.href}, this.props.name)), 
+      React.createElement("span", null, React.createElement("a", {"data-fake": true, href: this.props.disabled ? '#' : this.props.href}, this.props.name)), 
       React.createElement("span", {className: "folder-children"}, this.props.children)
     );
   }
@@ -67,7 +67,9 @@ var FileList = React.createClass({displayName: "FileList",
 
     var _self = this;
 
-    var items = _.filter(this.props.items, parent).map(function(item,i) {
+    var items = _.filter(this.props.items, parent).sort(function(a, b) {
+      return (+a.order||0) - (+b.order||0);
+    }).map(function(item,i) {
       if(item.type === 'folder')
         return React.createElement(FolderView, React.__spread({},  item, {href: _self.pathFor(item)}));
       else
@@ -95,7 +97,7 @@ var TreeView = React.createClass({displayName: "TreeView",
   createItem: function(object) {
     return React.createElement("li", null, 
       React.createElement("i", null), 
-      React.createElement("a", {href: object.url}, object.name), 
+      React.createElement("a", {"data-fake": true, href: object.url}, object.name), 
       React.createElement("ul", null, 
         this.createItems(object.children)
       )
@@ -116,7 +118,7 @@ var TreeView = React.createClass({displayName: "TreeView",
     return React.createElement("ul", null, 
       React.createElement("li", null, 
         React.createElement("i", null), 
-        React.createElement("a", {href: "/"}, "Home"), 
+        React.createElement("a", {"data-fake": true, href: "/"}, "Home"), 
         React.createElement("ul", null, 
           els
         )

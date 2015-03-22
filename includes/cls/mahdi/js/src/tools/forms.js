@@ -25,7 +25,6 @@
 
     var _super = this;
 
-
     function send($this) {
       $form.trigger('ajaxify:before', _super);
 
@@ -80,9 +79,9 @@
           if(a.isAbsoluteURL()) {
             location.replace(data.msg.redirect);
           } else {
-            // Navigate({
-            //   url: data.msg.redirect
-            // });
+            Navigate({
+              url: data.msg.redirect
+            });
           }
         }
 
@@ -91,10 +90,6 @@
             url: location.href,
             replace: true
           });
-        }
-
-        if (!$form.find('.invalid').length && $form.attr('data-clear') !== undefined) {
-          $form.find('*').not('[data-unclear]').val('');
         }
 
         $form.trigger('ajaxify:success', data, status, xhr);
@@ -158,19 +153,24 @@
           });
         }
       }
-
-      $form.find('input:first-of-type').get(0).focus();
-
       $div.append($ul);
     }
-    var opts = {
+
+    if (!$form.find('.invalid').length && $form.attr('data-clear') !== undefined) {
+      $form.find('input, select, textarea').not('[data-unclear]').val('');
+    }
+
+    if(!$form.find('.invalid').length) {
+      setTimeout(function() {
+        $form.find('input').get(0).select();
+      }, 100);
+    }
+
+    notify({
       html: $div,
       delay: parseInt($form.attr('data-delay'), 10),
       sticky: data.msg && data.msg.redirect
-    };
-    
-    $form.trigger('ajaxify:shownResults', opts);
-    notify(opts);
+    });
   };
 })(jQuery);
 

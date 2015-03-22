@@ -2,7 +2,7 @@ var BreadcrumbView = React.createClass({
   createItem: function(object) {
     return <li>
       <i className="fa fa-arrow-right"></i>
-      <a href={object.url}>{object.name}</a>
+      <a data-fake href={object.url}>{object.name}</a>
     </li>;
   },
   render: function() {
@@ -18,7 +18,7 @@ var BreadcrumbView = React.createClass({
     });
 
     var home = <li>
-      <a href="/">Home</a>
+      <a data-fake href="/">Home</a>
     </li>;
 
     els.unshift(home);

@@ -69,8 +69,6 @@
         _super.panic = true;
         _super.stream = null;
         _super.paused = true;
-
-        _super.$.trigger('upload:disconnect');
       });
     },
     createStream: function() {
@@ -91,7 +89,6 @@
         deferred.resolve(id);
       });
 
-      _super.$.trigger('upload:createStream');
       return deferred.promise();
     },
     send: function() {
@@ -101,7 +98,6 @@
 
       socket.on('data-answer', deferred.resolve);
 
-      _super.$.trigger('upload:send');
       return deferred.promise();
     },
     upload: function(start, end, options) {
@@ -112,7 +108,6 @@
 
       if(!socket.connected) {
         socket.on('connect', function() {
-          _super.$.trigger('upload:connect');
           _super.upload(start, end, options);
         });
         return;
@@ -195,7 +190,7 @@
       var _super = this;
       socket.emit('resume-status', this.data);
       socket.on('resume-status', function(from) {
-        _super.$.trigger('upload:resume', from);
+        _super.$.trigger('upload:resume');
         _super.stop = false;
         _super.paused = false;
         _super.upload(from);
@@ -205,8 +200,11 @@
       this.$.on.apply(this.$, arguments);
     },
     destroy: function() {
-      this.originalFile = this.fileReader =
-      this.file = this.data = this.$ = null;
+      this.$ = null;
+      this.originalFile = this.file = null;
+      this.range = null;
+      this.data = null;
+      this.result = null;
     }
   };
 

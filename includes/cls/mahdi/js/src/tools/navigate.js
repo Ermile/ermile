@@ -1,8 +1,6 @@
 (function(root) {
   "use strict";
 
-  var $window = $window;
-
   var defaults = {
     html: '',
     title: null,
@@ -22,8 +20,6 @@
   function updateDocument(obj) {
     var html = obj.html,
         $html = $(html);
-
-    $window.trigger('navigate:render:before', obj);
 
     if(obj.id) $('body').attr('id', obj.id);
 
@@ -66,7 +62,6 @@
     $html.sroute();
 
     if(obj.title) document.title = obj.title;
-    $window.trigger('navigate:render:after');
   }
 
   function fetch(props, md5) {
@@ -78,8 +73,6 @@
         'Cached-MD5': props.md5
       }
     });
-
-    $window.trigger('navigate:fetch:before', options);
 
     var deferred = new jQuery.Deferred();
 
@@ -112,7 +105,6 @@
       }
 
       deferred.resolve(json);
-      $window.trigger('navigate:json', json).trigger('navigate:fetch:after');
       $(document.body).removeClass('loading-page');
     });
 
@@ -121,14 +113,14 @@
 
   function Navigate(obj) {
     var deferred = new jQuery.Deferred();
-    var props = $.extend(true, {}, defaults, obj);
 
-    $window.trigger('navigate:start', props);
+    var props = $.extend(true, {}, defaults, obj);
 
     if(obj.fake) {
       deferred.resolve();
       root.history[props.replace ? 'replaceState' : 'pushState'](props, props.title, props.url);
-      $window.trigger('statechange').trigger('navigate:done', props);
+      $(window).trigger('statechange');
+
       return deferred.promise();
     }
 
@@ -136,7 +128,8 @@
       updateDocument(props);
       deferred.resolve();
       root.history[props.replace ? 'replaceState' : 'pushState'](props, props.title, props.url);
-      $window.trigger('statechange').trigger('navigate:done', props);
+      $(window).trigger('statechange');
+
       return deferred.promise();
     }
 
@@ -152,7 +145,7 @@
         updateDocument(_.extend({}, props, {html: data.html}));
       }
 
-      $window.trigger('statechange').trigger('navigate:done', props);
+      $(window).trigger('statechange');
       $('body').removeClass('loading-page');
 
       deferred.resolve(props);
@@ -173,11 +166,11 @@
 
         updateDocument(_.extend({}, props, {html: data.html}));
 
-        $window.trigger('statechange');
+        $(window).trigger('statechange');
       });
     } else {
       updateDocument(state);
-      $window.trigger('statechange');
+      $(window).trigger('statechange');
     }
 
     return false;

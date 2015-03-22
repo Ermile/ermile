@@ -10,16 +10,11 @@
     this.init(options);
   };
 
-  $(document.body).on('keydown', function(e) {
-    if(e.which == 27) $('.ctx-menu').hide();
-  });
-
   ContextMenu.prototype = {
     init: function(options) {
       options = options || {};
       if(this.$wrapper) {
         this.$wrapper.remove();
-        delete this.$wrapper;
 
         this.$elements.off('contextmenu');
       }
@@ -61,23 +56,33 @@
         $wrapper.css('visibility', 'visible').show();
       });
 
-      $wrapper.on(events, function(e) {
-        var $target = $(e.target);
-
-        if($target.tagName() != 'li') {
-          $target = $target.parent('li');
-          if(!$target.length) return;
-        }
-
-        var id = parseInt($target.attr('data-id'), 10);
-
-        var fn = (_super.items[id].events || {})[e.type];
-
-        if(typeof fn == 'function') fn(e);
-      });
-
       $wrapper.on('close', function() {
         $wrapper.hide();
+      });
+
+      $(window).on('keydown', function(e) {
+        var $li = $wrapper.find('li');
+        var active = $li.index('.active');
+
+        if (e.which === 38) {
+          $li.removeClass('active')
+             .eq(active-1)
+             .addClass('active');
+        } else if (e.which === 40) {
+          $li.removeClass('active')
+             .eq(active+1)
+             .addClass('active');
+        } else if (e.which === 13) {
+          var $target = 
+               $li.removeClass('active')
+               .eq(active)
+               .get(0);
+          $target.click();
+
+          _.each($target.children, function(child) {
+            child.click();
+          });
+        }
       });
 
       $(document).ready(function() {
@@ -101,7 +106,7 @@
 
       return this.items.length;
     },
-    _createItems: function() {
+    createItems: function() {
       var $stack = $('<ul></ul>');
       for(var i = 0, len = this.items.length; i < len; i++) {
         var item = _.extend(defaults.item, this.items[i]);
@@ -112,11 +117,8 @@
       this.$wrapper.empty().append($stack);
       return $stack;
     },
-    createItems: function() {
-      return this._createItems();
-    },
-    _createWrapper: function() {
-      var $wrapper = $('<div class="ctx-menu" id="ctx-' + (id++) + '" data-modal></div>');
+    createWrapper: function() {
+      var $wrapper = $('<div class="ctx-menu modal" id="ctx-' + (id++) + '" data-modal></div>');
       $wrapper.css({
         display: 'none',
         position: 'absolute'
@@ -129,15 +131,15 @@
 
       return $wrapper;
     },
-    createWrapper: function() {
-      return this._createWrapper();
+    on: function() {
+      this.$wrapper.on.apply(this.$wrapper, arguments);
     }
   };
 
   ContextMenu.extend = extend;
 
   $.fn.ctxMenu = function(options) {
-    return new ContextMenu(_.extend(options, {jquery: this}));
+    return new ContextMenu(_.extend({}, options, {jquery: this}));
   };
 
   var defaults = $.fn.ctxMenu.defaults = {

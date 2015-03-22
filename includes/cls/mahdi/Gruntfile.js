@@ -138,7 +138,7 @@ module.exports = function(grunt) {
         files: ['js/src/libs/jquery.js', 'js/src/libs/localstorage.js',
             'js/src/libs/modal.js', 'js/src/tools/router.js',
             'js/src/libs/underscore.js', 'js/src/libs/utils.js',
-            'js/src/tools/navigate.js', 'js/src/tools/contextmenu.js',
+            'js/src/tools/navigate.js',
             'js/src/tools/notification.js',
             'js/src/tools/forms.js', 'js/src/main.js'],
         tasks: ['uglify:common']
@@ -152,7 +152,7 @@ module.exports = function(grunt) {
         tasks: ['uglify:datepicker']
       },
       filemanager: {
-        files: ['js/src/tools/filemanager.js'],
+        files: ['js/src/tools/filemanager.js', 'js/src/tools/contextmenu.js'],
         tasks: ['uglify:filemanager']
       },
       mv: {

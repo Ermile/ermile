@@ -2,7 +2,7 @@ var TreeView = React.createClass({
   createItem: function(object) {
     return <li>
       <i></i>
-      <a href={object.url}>{object.name}</a>
+      <a data-fake href={object.url}>{object.name}</a>
       <ul>
         {this.createItems(object.children)}
       </ul>
@@ -23,7 +23,7 @@ var TreeView = React.createClass({
     return <ul>
       <li>
         <i></i>
-        <a href="/">Home</a>
+        <a data-fake href="/">Home</a>
         <ul>
           {els}
         </ul>

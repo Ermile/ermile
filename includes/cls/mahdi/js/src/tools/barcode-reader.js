@@ -16,9 +16,10 @@
     timeout = setTimeout(function() {
       var elapsed = Date.now() - time;
       var len = keys.length - 5;
-      if (len/elapsed < barcodeOptions.timeout &&
+      if(len/elapsed < barcodeOptions.timeout &&
          len > barcodeOptions.min &&
-         len < barcodeOptions.max) {
+         len < barcodeOptions.max &&
+         keys.slice(-5) === 'Enter') {
 
         $focused = $(':focus');
         ($focused.attr('id').indexOf('barcode') > -1 ?
@@ -30,10 +31,6 @@
       timeout = 0;
       keys = 0;
     }, 500);
-    if ($(e.target).attr('id').indexOf('barcode') > -1 && e.which === 13)
-      e.preventDefault();
-      return false;
-    }
     keys += e.key;
   });
 })(window, jQuery);
