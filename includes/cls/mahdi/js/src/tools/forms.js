@@ -23,10 +23,12 @@
 
     $.extend(true, this, defaults, options);
 
+    $form.trigger('ajaxify:init', this);
+
     var _super = this;
 
     function send($this) {
-      $form.trigger('ajaxify:before', _super);
+      $form.trigger('ajaxify:send:before', _super);
 
       var elementOptions = {
         type: _super.link ? $this.attr('data-method') || 'get' : $this.prop('method'),
@@ -67,6 +69,8 @@
       if(!_super.noLoading) $('body').addClass('loading-form');
 
       var callbacks = $this.get(0).callbacks || {};
+
+      $form.trigger('ajaxify:send:ajax:start', ajaxOptions);
 
       $.ajax(ajaxOptions)
       .done(function(data, status, xhr) {
@@ -109,6 +113,8 @@
   };
 
   $.fn.ajaxify.showResults = function(data, $form, _super) {
+    $form.trigger('ajaxify:render:start', data, $form, _super);
+
     $form.find('input').removeClass('error warn');
 
     var $div = $('<div></div>');
@@ -156,9 +162,13 @@
       $div.append($ul);
     }
 
+    $form.trigger('ajaxify:render:done', data, $form, _super);
+
     if (!$form.find('.invalid').length && $form.attr('data-clear') !== undefined) {
       $form.find('input, select, textarea').not('[data-unclear]').val('');
     }
+
+    $form.trigger('ajaxify:render:clear', data, $form, _super);
 
     if(!$form.find('.invalid').length) {
       setTimeout(function() {
@@ -166,11 +176,15 @@
       }, 100);
     }
 
+    $form.trigger('ajaxify:render:focus', data, $form, _super);
+
     notify({
       html: $div,
       delay: parseInt($form.attr('data-delay'), 10),
       sticky: data.msg && data.msg.redirect
     });
+
+    $form.trigger('ajaxify:notify', data, $form, _super);
   };
 })(jQuery);
 

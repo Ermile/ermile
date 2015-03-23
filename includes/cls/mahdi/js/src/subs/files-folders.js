@@ -39,8 +39,10 @@
     data: true
   }).done(function() {
     var obj = JSON.parse(history.state.tree);
-    fileList.set(obj);
+    if(!obj) obj = LS.get("files");
 
+    fileList.set(obj);
+    LS.set("files", obj);
     var parent = filterByURL(fileList);
 
     setChildren(fileList, parent);
@@ -119,6 +121,16 @@
         disabled: true
       });
     });
+  });
+
+
+  $body = $(document.body);
+
+  $body.on('dragover', function() {
+    $body.addClass('dragover');
+  });
+  $body.on('dragend', function() {
+    $body.addClass('dragover');
   });
 })();
 

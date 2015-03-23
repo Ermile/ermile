@@ -21,6 +21,7 @@
          len < barcodeOptions.max &&
          keys.slice(-5) === 'Enter') {
 
+        e.preventDefault();
         $focused = $(':focus');
         ($focused.attr('id').indexOf('barcode') > -1 ?
          $focused :

@@ -12,6 +12,8 @@
 
   ContextMenu.prototype = {
     init: function(options) {
+      this.$wrapper.trigger('contextmenu:init');
+
       options = options || {};
       if(this.$wrapper) {
         this.$wrapper.remove();
@@ -54,10 +56,12 @@
         }
 
         $wrapper.css('visibility', 'visible').show();
+        $wrapper.trigger('contextmenu:shown');
       });
 
       $wrapper.on('close', function() {
         $wrapper.hide();
+        $wrapper.trigger('contextmenu:close');
       });
 
       $(window).on('keydown', function(e) {
@@ -68,10 +72,14 @@
           $li.removeClass('active')
              .eq(active-1)
              .addClass('active');
+
+          $wrapper.trigger('contextmenu:selection:change');
         } else if (e.which === 40) {
           $li.removeClass('active')
              .eq(active+1)
              .addClass('active');
+
+          $wrapper.trigger('contextmenu:selection:change');
         } else if (e.which === 13) {
           var $target = 
                $li.removeClass('active')
@@ -82,18 +90,24 @@
           _.each($target.children, function(child) {
             child.click();
           });
+
+          $wrapper.trigger('contextmenu:selection:trigger');
         }
+
       });
 
       $(document).ready(function() {
         $(document.body).append($wrapper);
         _super.createItems();
+
+        $wrapper.trigger('contextmenu:appended');
       });
     },
     add: function(item) {
       var index = this.items.push(item);
       this.createItems();
 
+      this.$wrapper.trigger('contextmenu:update');
       return index-1;
     },
     remove: function(item) {
@@ -104,6 +118,7 @@
       }
       this.createItems();
 
+      this.$wrapper.trigger('contextmenu:update');
       return this.items.length;
     },
     createItems: function() {

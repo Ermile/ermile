@@ -36,8 +36,12 @@ $(document).ready(function() {
     $modal.trigger('open', $this);
   });
 
-  $(document).on('click','[data-close]', function(e) {
-    $('.modal').trigger('close');
+  $(document).on('click','[data-cancel]', function(e) {
+    $('.modal').trigger('close').trigger('cancel');
+  });
+
+  $(document).on('click', '[data-ok]', function(e) {
+    $('.modal').trigger('close').trigger('ok');
   });
 
   $(document).on('change', '#langlist', function() {

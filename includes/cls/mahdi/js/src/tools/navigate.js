@@ -1,6 +1,8 @@
 (function(root) {
   "use strict";
 
+  var $window = $(window);
+
   var defaults = {
     html: '',
     title: null,
@@ -17,15 +19,21 @@
     $(document).sroute(r);
   }
 
-  function updateDocument(obj) {
+  function render(obj) {
+    $window.trigger('navigate:render:start', obj);
+
     var html = obj.html,
         $html = $(html);
 
     if(obj.id) $('body').attr('id', obj.id);
 
+    $window.trigger('navigate:render:filter:before', obj.filter);
+
     var filter = _.isArray(obj.filter) ? 
         '[data-xhr="' + obj.filter.join('"], [data-xhr="') + '"]'
       : obj.filter ? '[data-xhr="' + obj.filter + '"]' : null;
+
+    $window.trigger('navigate:render:filter:processed', filter);
 
     (filter ? $html.filter(filter).add($html.find(filter)) : $html).each(function() {
       var target = $(this).attr('data-xhr');
@@ -45,6 +53,7 @@
 
     if(obj.js) {
       var scripts = obj.js;
+      $window.trigger('navigate:render:scripts:before', obj.js);
 
       scripts.forEach(function(src) {
         var $script = $('script[src="' + src + '"]');
@@ -53,18 +62,25 @@
           $script = $('<script></script>');
           $script.prop('async', true);
           $script.prop('src', src);
+          $window.trigger('navigate:render:script:created', $script);
 
           $(document.body).append($script);
+
+          $window.trigger('navigate:render:script:appended', $script);
         }
       });
+      $window.trigger('navigate:render:scripts:done');
     }
 
     $html.sroute();
 
     if(obj.title) document.title = obj.title;
+    $window.trigger('navigate:render:done');
   }
 
   function fetch(props, md5) {
+    $window.trigger('navigate:fetch:start', props, md5);
+
     $(document.body).addClass('loading-page');
 
     var options = $.extend(true, {}, props.ajax, {
@@ -77,6 +93,8 @@
     var deferred = new jQuery.Deferred();
 
     $.ajax(options).done(function(res) {
+      $window.trigger('navigate:fetch:ajax:start', options);
+
       var json,
           html;
 
@@ -104,6 +122,8 @@
         return location.replace(props.url);
       }
 
+      $window.trigger('navigate:fetch:ajax:done', json)
+             .trigger('navigate:fetch:done', json);
       deferred.resolve(json);
       $(document.body).removeClass('loading-page');
     });
@@ -116,19 +136,21 @@
 
     var props = $.extend(true, {}, defaults, obj);
 
+    $window.trigger('navigate:start', props);
+
     if(obj.fake) {
       deferred.resolve();
       root.history[props.replace ? 'replaceState' : 'pushState'](props, props.title, props.url);
-      $(window).trigger('statechange');
+      $window.trigger('statechange');
 
       return deferred.promise();
     }
 
     if(obj.html) {
-      updateDocument(props);
+      render(props);
       deferred.resolve();
       root.history[props.replace ? 'replaceState' : 'pushState'](props, props.title, props.url);
-      $(window).trigger('statechange');
+      $window.trigger('statechange');
 
       return deferred.promise();
     }
@@ -142,10 +164,10 @@
       root.history[props.replace ? 'replaceState' : 'pushState'](props, props.title, props.url);
 
       if(!props.data) {
-        updateDocument(_.extend({}, props, {html: data.html}));
+        render(_.extend({}, props, {html: data.html}));
       }
 
-      $(window).trigger('statechange');
+      $window.trigger('statechange');
       $('body').removeClass('loading-page');
 
       deferred.resolve(props);
@@ -164,13 +186,13 @@
       fetch(state).then(function(data) {
         var props = _.extend(true, {}, state, data.json);
 
-        updateDocument(_.extend({}, props, {html: data.html}));
+        render(_.extend({}, props, {html: data.html}));
 
-        $(window).trigger('statechange');
+        $window.trigger('statechange');
       });
     } else {
-      updateDocument(state);
-      $(window).trigger('statechange');
+      render(state);
+      $window.trigger('statechange');
     }
 
     return false;
