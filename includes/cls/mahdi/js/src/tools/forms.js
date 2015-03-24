@@ -76,7 +76,7 @@
       .done(function(data, status, xhr) {
         _super.results = data;
 
-       $.fn.ajaxify.showResults(data, $this, _super); 
+       $.fn.ajaxify.showResults(data, $this, _super);
 
         if(data.msg && data.msg.redirect) {
           var a = $('<a href="' + data.msg.redirect + '"></a>');
@@ -87,6 +87,7 @@
               url: data.msg.redirect
             });
           }
+          return;
         }
 
         if(refresh) {
@@ -102,8 +103,8 @@
       }).always(function(a1, a2, a3) {
         $form.trigger('ajaxify:complete', a1, a2, a3);
 
-        if(_super.noLoading || (a1.msg && a1.msg.redirect)) return;
-        
+        if(_super.noLoading) return;
+
         $('input, [data-ajaxify]').removeAttr('disabled');
         $('body').removeClass('loading-form');
       });
@@ -119,6 +120,8 @@
 
     var $div = $('<div></div>');
 
+    var hasError = false;
+
     for(var i in data.messages) {
       var grp = data.messages[i];
 
@@ -133,6 +136,7 @@
           break;
         case 'error':
           type = 'error';
+          hasError = true;
           break;
         default:
           type = 'info';
@@ -164,13 +168,13 @@
 
     $form.trigger('ajaxify:render:done', data, $form, _super);
 
-    if (!$form.find('.invalid').length && $form.attr('data-clear') !== undefined) {
+    if (!hasError && $form.attr('data-clear') !== undefined) {
       $form.find('input, select, textarea').not('[data-unclear]').val('');
     }
 
     $form.trigger('ajaxify:render:clear', data, $form, _super);
 
-    if(!$form.find('.invalid').length) {
+    if(!hasError) {
       setTimeout(function() {
         $form.find('input').get(0).select();
       }, 100);
