@@ -1,27 +1,52 @@
 /** in The name of Allah **/
 Proudly made in IRAN, powered by Saloos.
 
-/* MAIN */
-Back-End Programmer:
-	Mohammad Hasan Salehi HajiAbadi	| itb.baravak@gmail.com
-	Reza Mohiti						| rm.biqarar@gmail.com
+/** TEAM */
+	Javad Evazzadeh Kakroudi
+	Site: http://evazzadeh.com
+	Contact: J.Evazzadeh [at] live.com
+	Twitter: @evazzadeh
+	Location: Iran
 
-Front-End Programmer:
-	Javad Evazzadeh Kakroudi		| Javad@Evazzadeh.com
-	Saman Soltani					| Sam.Soltani@gmail.com
-	Ahmad Karimi 					| ahmadkarimi1991@gmail.com
+	Mohammad Hasan Salehi HajiAbadi
+	Contact: itb.Baravak [at] gmail.com
+	Twitter: @baravak
+	Location: Qom, Iran
 
-Javascript:
-	Mahdi Dibaiee					| mdibaiee@aol.com
+	Mohammad Sadegh Salehi HajiAbadi
+	Contact: sahelekaj@ [at] gmail.com
+	Location: Qom, Iran
 
-Designer:
-	Sadegh Salehi HajiAbadi 		| sahelekaj@gmail.com
+	Meysam Babaei
+	contanct: meysam.babaei [at] gmail.com
+	Location: Noshahr, Iran
 
-Usability: Samac Business Solutions
-website: http://Ermile.com
+
+/* THANKS */
+	Mahdi Dibaiee
+	Site: http://dibaiee.ir
+	Contact: mdibaiee [at] aol.com
+	Twitter: @mdibaiee
+	Location: Qom, Iran
+
+	Ahmad Karimi
+	Contact: ahmadkarimi1991 [at] gmail.com
+	Location: Qom, Iran
+
+	Saman Soltani
+	Site: http://samansoltani.com
+	Contact: Sam.Soltani [at] gmail.com
+	Twitter: @saman_soltani
+	Location: Iran
+
+	Reza Mohiti
+	Contact: rm.biqarar [at] gmail.com
+	Location: Qom, Iran
+
 
 /* SITE */
-Last update: 23/12/2014
-Version: 2.0.0
-Doctype: HTML5
-IDE: Sublime!
+	Last update: 24/3/2015
+	Version: 0.0.1
+	Language: Farsi / English
+	Doctype: HTML5
+	IDE: Sublime!
