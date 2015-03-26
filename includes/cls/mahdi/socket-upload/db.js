@@ -17,6 +17,7 @@ var File = db.define('files', {
   file_code: Sequelize.STRING(64),
   file_size: Sequelize.FLOAT(12, 0),
   file_status: Sequelize.ENUM('init', 'inprogress', 'ready', ''),
+  file_server: Sequelize.INTEGER(5),
   date_modified: Sequelize.TIME
 }, {
   timestamps: false

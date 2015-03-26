@@ -131,7 +131,11 @@ route('*', function() {
   });
 
   $('.modal', this).on('open', function() {
+    $(this).removeClass('hidden').addClass('visible');
+
     var $send = $('[data-ajaxify]', this);
+
+    if (!$send.length) return;
 
     $.each($send.data(), function(key) {
       if(key === 'modal') return;
@@ -140,9 +144,5 @@ route('*', function() {
     });
 
     $send.copyData(this, ['modal']);
-  });
-
-  $('.modal', this).on('open', function() {
-    $(this).removeClass('hidden').addClass('visible');
   });
 });

@@ -37,7 +37,8 @@ function addFile(meta, clientId, cb) {
         file_folder: meta.parent,
         file_code: clientId,
         file_size: meta.size,
-        file_status: 'inprogress'
+        file_status: 'inprogress',
+        file_server: 1
       }).then(function(file) {
         next(null, file);
       }, next);

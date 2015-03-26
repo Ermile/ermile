@@ -16,7 +16,7 @@
     stop: false,
     panic: false,
     ready: false,
-    data: {},
+    data: null // {}
   };
 
   var FileManager = function FileManager(options) {
@@ -26,6 +26,7 @@
     this.size = this.originalFile.size;
     this.fileType = this.originalFile.type;
     this.range = [0, this.size];
+    this.data = {};
 
     this.$ = $(this);
 
@@ -59,7 +60,7 @@
     },
     full: function() {
       this.slice(0, this.size);
-      return this;      
+      return this;
     },
     _connect: function() {
       var _super = this;
@@ -69,9 +70,15 @@
         _super.panic = true;
         _super.stream = null;
         _super.paused = true;
+        _super.$.trigger('socket:disconnect');
+
+        socket.once('connect', function() {
+          _super.panic = false;
+        })
       });
     },
     createStream: function() {
+      console.log('createStream()');
       var deferred = new jQuery.Deferred();
       var _super = this;
 
@@ -82,7 +89,8 @@
 
       socket.emit('meta', meta);
 
-      socket.on('ready', function(id) {
+      socket.once('ready', function(id) {
+        console.log('ready['+id+']');
         _super.fileID = id;
         _super.data.fileID = id;
         _super.ready = true;
@@ -92,22 +100,25 @@
       return deferred.promise();
     },
     send: function() {
+      console.log('salam');
       var deferred = new jQuery.Deferred();
 
       socket.emit('data', this.file);
-
-      socket.on('data-answer', deferred.resolve);
+      socket.once('data-answer', function() {
+        deferred.resolve();
+      });
 
       return deferred.promise();
     },
     upload: function(start, end, options) {
+      console.log('upload('+[start,end,options]+')');
       var deferred = new jQuery.Deferred();
-      this.$.trigger('upload:start');
 
       var _super = this;
 
       if(!socket.connected) {
-        socket.on('connect', function() {
+        socket.once('connect', function() {
+          _super.$.trigger('socket:connect');
           _super.upload(start, end, options);
         });
         return;
@@ -120,9 +131,11 @@
         return;
       }
 
+      this.$.trigger('upload:start');
+
       var from = _.isNumber(start) ? start : 0,
           to = _.isNumber(end) ? end : this.size,
-          iteration = skip || 0,
+          iteration = 0,
           chunkSize = this.parts*1000,
           rest = 0;
 
@@ -145,9 +158,6 @@
           deferred.resolve();
         }
 
-
-        // console.log('sent', iteration);
-
         _super.slice(chunk[0], chunk[1]);
         _super.send(options).then(function() {
           iteration++;
@@ -162,8 +172,8 @@
           });
 
           if(_super.stop) {
-            console.log('stop');
             _super.stop = false;
+            if (_super.paused) _super.$.trigger('upload:pause');
             return;
           }
 
@@ -182,17 +192,17 @@
     pause: function() {
       this.stop = true;
       this.paused = true;
-      this.$.trigger('upload:pause');
     },
     resume: function() {
       if(!this.paused || !socket.connected) return;
+      console.log('resume');
 
       var _super = this;
       socket.emit('resume-status', this.data);
-      socket.on('resume-status', function(from) {
-        _super.$.trigger('upload:resume');
+      socket.once('resume-status', function(from) {
         _super.stop = false;
         _super.paused = false;
+        _super.$.trigger('upload:resume');
         _super.upload(from);
       });
     },
@@ -200,6 +210,7 @@
       this.$.on.apply(this.$, arguments);
     },
     destroy: function() {
+      this.$.off();
       this.$ = null;
       this.originalFile = this.file = null;
       this.range = null;

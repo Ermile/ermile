@@ -1,4 +1,5 @@
 (function() {
+
   var fileList = new Cortex([]);
   var filesTree = new Cortex({});
 
@@ -72,25 +73,51 @@
 
     var fm;
 
+    var $pause = $('#pause'),
+        $resume = $('#resume'),
+        $upload = $('#upload'),
+        $finput = $('#file_input'),
+        $progress = $('#progress');
+
+    $('#upload_modal').on('open', function() {
+      $pause.hide();
+      $resume.hide();
+      $finput.val('');
+      $progress.css('width', '0');
+    })
+
     $('#upload_form').submit(function(e) {
       e.preventDefault();
     });
 
-    var $socket = $('#socket').get(0);
-
-    $('#upload').click(function(e) {
+    $upload.click(function(e) {
       e.preventDefault();
+      // if (fm) fm.destroy();
       fm = new FileManager({
-        file: $('#file_input').get(0).files[0],
+        file: $finput.get(0).files[0],
       });
 
-      fm.upload();
+      console.log(fm);
 
-      var $progress = $('#progress');
+      fm.on('upload:start', function() {
+        $pause.show();
+      });
+
+      fm.on('upload:pause socket:disconnect', function() {
+        $pause.hide()
+        $resume.show();
+      })
+
+      fm.on('upload:resume', function() {
+        $pause.show();
+        $resume.hide()
+      })
 
       fm.on('upload:progress', function(e, data) {
         $progress.css('width', data.percentage + '%').text(Math.floor(data.percentage) + '%');
       });
+
+      fm.upload();
     });
 
     $('#resume').click(function(e) {
