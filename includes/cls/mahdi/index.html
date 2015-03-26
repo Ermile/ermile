@@ -4,37 +4,28 @@
   <meta charset="UTF-8">
   <title>Station</title>
   <link rel='stylesheet' href='css/main.css' />
+  <style>
+    body, html {
+      width: 100%;
+      height: 100%;
+    }
+    header {
+      width: 100%;
+      height: 50%;
+      background: #8AD1FD;
+    }
+    footer {
+      width: 100%;
+      height: 100%;
+      background: #FF9324;
+    }
+  </style>
 </head>
 <body>
 
-  <label for='a'>File</label>
-  <input type='file' id='a'>
-  <button id='upload'>Upload</button>
-  <button id='pause'>Pause</button>
-  <button id='resume'>Resume</button>
-  <br>
-  <div id='progress' style='width: 0%; background-color: #419ACE'>0%</div>
-  <br />
+  <header></header>
 
-  <form action='/test' method='post'>
-    <label for='time'>Time</label>
-    <input id='time' name='time'>
-    <label for='date'>Date</label>
-    <input id='date' name='date'>
-
-    <input type='radio' name='salam' value='1'>
-    <input type='radio' name='salam' value='2'>
-
-    <input type='checkbox' name='arr' value='1'>
-    <input type='checkbox' name='arr' value='2'>
-    <button id='schedule'>Schedule</button>
-  </form>
-
-  <a class='ajaxified' href="salam">Ajaxified Link</a>
-
-  <a class='pushState' href='file.html'>Files Demo</a>
-
-  <br>
+  <footer></footer>
 
  <script src='js/common.js'></script>
  <script src='socket-upload/binary.min.js'></script>
@@ -42,11 +33,27 @@
  <script src='socket-upload/client.js'></script>
 
  <script>
-    var myCtx = $(document.body).ctxMenu({
+    var header = $('header').ctxMenu({
       items: [
-        {text: 'Salam'},
-        {text: 'Test', link: 'http://mozilla.org'}
+        {text: 'Salam', hotkey: 's'},
+        {text: 'Test', link: 'http://mozilla.org', hotkey: 't'},
+        {text: 'Option 1', hotkey: '1'}
       ]
+    });
+
+    header.on('contextmenu:selection:trigger:2', function(e) {
+      alert('Option 1 chosen');
+    });
+
+    var footer = header.extend('footer');
+
+    footer.add({
+      text: 'Footer\'s special item',
+      hotkey: 'f'
+    });
+
+    footer.on('contextmenu:selection:trigger:3', function() {
+      alert('Footer!');
     })
  </script>
 </body>
