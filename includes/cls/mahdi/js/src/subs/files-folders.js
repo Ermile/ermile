@@ -146,6 +146,7 @@
     $body.on('drop', function(e) {
       e.preventDefault();
       var files = e.originalEvent.dataTransfer.files;
+      if (!files.length) return;
 
       $umodal.trigger('open');
       $finput.hide();
