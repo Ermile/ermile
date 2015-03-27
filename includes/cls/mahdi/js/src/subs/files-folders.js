@@ -73,51 +73,36 @@
 
     var fm;
 
-    var $pause = $('#pause'),
+    var $umodal = $('#upload_modal'),
+        $pause = $('#pause'),
         $resume = $('#resume'),
         $upload = $('#upload'),
+        $flabel = $umodal.find('label'),
+        $fpreview = $('#file_preview'),
         $finput = $('#file_input'),
         $progress = $('#progress');
 
-    $('#upload_modal').on('open', function() {
+    $umodal.on('open', function() {
       $pause.hide();
       $resume.hide();
-      $finput.val('');
-      $progress.css('width', '0');
+      $finput.val('').show();
+      $progress.css('width', '0').text('');
+      $flabel.text('Select your file');
+      $fpreview.addClass('hidden').prop('src', '');
     })
+
+    $finput.on('change', function() {
+      showPreview($finput.get(0).files[0]);
+    });
 
     $('#upload_form').submit(function(e) {
       e.preventDefault();
-    });
 
-    $upload.click(function(e) {
-      e.preventDefault();
-      // if (fm) fm.destroy();
-      fm = new FileManager({
-        file: $finput.get(0).files[0],
-      });
-
-      console.log(fm);
-
-      fm.on('upload:start', function() {
-        $pause.show();
-      });
-
-      fm.on('upload:pause socket:disconnect', function() {
-        $pause.hide()
-        $resume.show();
-      })
-
-      fm.on('upload:resume', function() {
-        $pause.show();
-        $resume.hide()
-      })
-
-      fm.on('upload:progress', function(e, data) {
-        $progress.css('width', data.percentage + '%').text(Math.floor(data.percentage) + '%');
-      });
-
-      fm.upload();
+      if ($finput.prop('dropfiles')) {
+        startUpload($finput.prop('dropfiles')[0]);
+      } else {
+        startUpload($finput.get(0).files[0])
+      }
     });
 
     $('#resume').click(function(e) {
@@ -148,16 +133,70 @@
         disabled: true
       });
     });
-  });
 
+    $body = $(document.body);
 
-  $body = $(document.body);
+    $body.on('dragover', function(e) {
+      e.preventDefault();
+      $body.addClass('dragover');
+    });
+    $body.on('dragend dragleave drop', function() {
+      $body.removeClass('dragover');
+    });
+    $body.on('drop', function(e) {
+      e.preventDefault();
+      var files = e.originalEvent.dataTransfer.files;
 
-  $body.on('dragover', function() {
-    $body.addClass('dragover');
-  });
-  $body.on('dragend', function() {
-    $body.addClass('dragover');
+      $umodal.trigger('open');
+      $finput.hide();
+      $flabel.text(files[0].name)
+
+      $finput.prop('dropfiles', files);
+      showPreview(files[0]);
+    })
+
+    function startUpload(file) {
+      if (fm) fm.destroy();
+
+      fm = new FileManager({
+        file: file,
+      });
+
+      fm.on('upload:start', function() {
+        $pause.show();
+      });
+
+      fm.on('upload:pause socket:disconnect', function() {
+        $pause.hide()
+        $resume.show();
+      })
+
+      fm.on('upload:resume', function() {
+        $pause.show();
+        $resume.hide()
+      })
+
+      fm.on('upload:progress', function(e, data) {
+        $progress.css('width', data.percentage + '%').text(Math.floor(data.percentage) + '%');
+      });
+
+      fm.upload();
+    }
+
+    function showPreview(file) {
+      var type = file.type.split('/')[0];
+      if (type === "image") {
+        var preview = new FileManager({
+          type: 'DataURL',
+          file: file
+        });
+        preview.load().then(function(e) {
+          $fpreview.prop('src', e.target.result).removeClass('hidden');
+        });
+      } else {
+        $fpreview.addClass('hidden').prop('src', '');
+      }
+    }
   });
 })();
 

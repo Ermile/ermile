@@ -62,20 +62,21 @@
       this.slice(0, this.size);
       return this;
     },
+    _disconnect: function() {
+      _super.ready = false;
+      _super.panic = true;
+      _super.stream = null;
+      _super.paused = true;
+      _super.$.trigger('socket:disconnect');
+
+      socket.once('connect', function() {
+        _super.panic = false;
+      })
+    },
     _connect: function() {
       var _super = this;
 
-      socket.on('disconnect', function() {
-        _super.ready = false;
-        _super.panic = true;
-        _super.stream = null;
-        _super.paused = true;
-        _super.$.trigger('socket:disconnect');
-
-        socket.once('connect', function() {
-          _super.panic = false;
-        })
-      });
+      socket.on('disconnect', this._disconnect);
     },
     createStream: function() {
       console.log('createStream()');
@@ -210,6 +211,7 @@
       this.$.on.apply(this.$, arguments);
     },
     destroy: function() {
+      socket.off('disconnect', this._disconnect);
       this.$.off();
       this.$ = null;
       this.originalFile = this.file = null;
