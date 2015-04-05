@@ -2,11 +2,24 @@ var TreeView = React.createClass({
   createItem: function(object) {
     return <li>
       <i></i>
-      <a data-fake href={object.url}>{object.name}</a>
+      <a data-fake href={object.url}
+         onDrop={this.drop.bind(this, object)}
+         onDragStart={this.dragStart.bind(this, object)}>{object.name}</a>
       <ul>
         {this.createItems(object.children)}
       </ul>
     </li>;
+  },
+  drop: function(object, e) {
+    if (object.type !== 'folder') return;
+    var id = e.dataTransfer.getData('text/plain');
+
+    var dragged = fileList.filterObject({id: id})[0];
+
+    dragged.parent.set(object.id.toString());
+  },
+  dragStart: function(object, e) {
+    e.dataTransfer.setData('text/plain', object.id);
   },
   createItems: function(list) {
     var _self = this;

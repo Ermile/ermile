@@ -29,7 +29,7 @@
 
     $window.trigger('navigate:render:filter:before', obj.filter);
 
-    var filter = _.isArray(obj.filter) ? 
+    var filter = _.isArray(obj.filter) ?
         '[data-xhr="' + obj.filter.join('"], [data-xhr="') + '"]'
       : obj.filter ? '[data-xhr="' + obj.filter + '"]' : null;
 
@@ -98,6 +98,7 @@
       var json,
           html;
 
+      var jsonExpected = res[0] === '{';
       try {
         var n = res.indexOf('\n');
         n = n === -1 ? undefined : n;
@@ -118,6 +119,13 @@
           $options.putData(json.options);
         }
       } catch(e) {
+        if (jsonExpected) {
+          notify({
+            html: '<ul class="error unselectable">'
+                 +'<li class="notify-json">There was an error in parsing JSON</li>'
+                 +'</ul>'
+          });
+        }
         deferred.reject();
         return location.replace(props.url);
       }
