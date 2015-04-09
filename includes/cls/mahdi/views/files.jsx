@@ -53,9 +53,10 @@ var FileView = React.createClass({
     return <li className={this.props.disabled ? 'file disabled' : 'file'} draggable={true}
             onDragStart={this.dragStart}
             onMouseUp={this.mouseUp}
+            onDoubleClick={this.dbl}
             ref='li' data-id={+this.props.id}>
       <span className={typeClass}></span>
-      <span><a data-fake href={this.props.disabled ? '#' : this.props.href}>{this.props.name}</a></span>
+      <span><a data-fake href={this.props.disabled ? '#' : this.props.href} ref='a'>{this.props.name}</a></span>
       <span className="file-type">{mime[0]}</span>
       <span className="file-size">{this.props.size}</span>
     </li>;
@@ -95,6 +96,9 @@ var FileView = React.createClass({
         selected = [this.props.id];
       }.bind(this), 1);
     }
+  },
+  dbl: function(e) {
+    this.refs.a.getDOMNode().click();
   }
 });
 
@@ -104,9 +108,10 @@ var FolderView = React.createClass({
             onDragStart={this.dragStart}
             onDrop={this.drop}
             onMouseUp={this.mouseUp}
+            onDoubleClick={this.dbl}
             ref='li' data-id={this.props.id}>
       <span className='fa fa-folder-o'></span>
-      <span><a data-fake href={this.props.disabled ? '#' : this.props.href}>{this.props.name}</a></span>
+      <span><a data-fake href={this.props.disabled ? '#' : this.props.href} ref='a'>{this.props.name}</a></span>
       <span className="folder-type">Folder</span>
       <span className="folder-children">{this.props.children}</span>
     </li>;
@@ -139,6 +144,9 @@ var FolderView = React.createClass({
         selected = [this.props.id];
       }.bind(this), 1);
     }
+  },
+  dbl: function(e) {
+    this.refs.a.getDOMNode().click();
   }
 })
 
@@ -175,6 +183,13 @@ var FileList = React.createClass({
 
     this.props.currentItems = itemsList;
     return items;
+  },
+  selectAll: function() {
+    selected = this.props.items.map(function(a) {
+      return a.id;
+    });
+
+    $('.file, .folder').addClass('selected');
   },
   render: function() {
     return <ul>

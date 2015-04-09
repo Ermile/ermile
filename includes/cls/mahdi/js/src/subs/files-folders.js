@@ -30,9 +30,9 @@ filesTree.on('update', function(d) {
 
 var component = React.render(FileList({items: []}), $files.get(0));
 
+var userVisited = location.href;
 Navigate({
-  url: location.pathname,
-  replace: true,
+  url: 'files/list', // files/list
   data: true
 }).done(function() {
   var obj = JSON.parse(history.state.tree);
@@ -46,6 +46,12 @@ Navigate({
 
   component.setProps({
     parent: parent
+  });
+
+  // files/list
+  Navigate({
+    url: userVisited,
+    fake: true
   });
 });
 
@@ -118,6 +124,12 @@ $(document).ready(function() {
   $('#newfolder').click(function(e) {
     e.preventDefault();
     $('#newform').removeClass('hidden');
+  });
+
+  $('#select_all').click(function(e) {
+    e.preventDefault();
+
+    component.selectAll();
   });
 
   $body = $(document.body);

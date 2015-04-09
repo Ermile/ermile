@@ -170,7 +170,6 @@
       _.extend(props, data);
 
       root.history[props.replace ? 'replaceState' : 'pushState'](props, props.title, props.url);
-
       if(!props.data) {
         render(_.extend({}, props, {html: data.html}));
       }

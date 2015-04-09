@@ -81,9 +81,10 @@ var FileView = React.createClass({displayName: "FileView",
     return React.createElement("li", {className: this.props.disabled ? 'file disabled' : 'file', draggable: true, 
             onDragStart: this.dragStart, 
             onMouseUp: this.mouseUp, 
+            onDoubleClick: this.dbl, 
             ref: "li", "data-id": +this.props.id}, 
       React.createElement("span", {className: typeClass}), 
-      React.createElement("span", null, React.createElement("a", {"data-fake": true, href: this.props.disabled ? '#' : this.props.href}, this.props.name)), 
+      React.createElement("span", null, React.createElement("a", {"data-fake": true, href: this.props.disabled ? '#' : this.props.href, ref: "a"}, this.props.name)), 
       React.createElement("span", {className: "file-type"}, mime[0]), 
       React.createElement("span", {className: "file-size"}, this.props.size)
     );
@@ -123,6 +124,9 @@ var FileView = React.createClass({displayName: "FileView",
         selected = [this.props.id];
       }.bind(this), 1);
     }
+  },
+  dbl: function(e) {
+    this.refs.a.getDOMNode().click();
   }
 });
 
@@ -132,9 +136,10 @@ var FolderView = React.createClass({displayName: "FolderView",
             onDragStart: this.dragStart, 
             onDrop: this.drop, 
             onMouseUp: this.mouseUp, 
+            onDoubleClick: this.dbl, 
             ref: "li", "data-id": this.props.id}, 
       React.createElement("span", {className: "fa fa-folder-o"}), 
-      React.createElement("span", null, React.createElement("a", {"data-fake": true, href: this.props.disabled ? '#' : this.props.href}, this.props.name)), 
+      React.createElement("span", null, React.createElement("a", {"data-fake": true, href: this.props.disabled ? '#' : this.props.href, ref: "a"}, this.props.name)), 
       React.createElement("span", {className: "folder-type"}, "Folder"), 
       React.createElement("span", {className: "folder-children"}, this.props.children)
     );
@@ -167,6 +172,9 @@ var FolderView = React.createClass({displayName: "FolderView",
         selected = [this.props.id];
       }.bind(this), 1);
     }
+  },
+  dbl: function(e) {
+    this.refs.a.getDOMNode().click();
   }
 })
 
@@ -203,6 +211,13 @@ var FileList = React.createClass({displayName: "FileList",
 
     this.props.currentItems = itemsList;
     return items;
+  },
+  selectAll: function() {
+    selected = this.props.items.map(function(a) {
+      return a.id;
+    });
+
+    $('.file, .folder').addClass('selected');
   },
   render: function() {
     return React.createElement("ul", null, 

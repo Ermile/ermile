@@ -31,20 +31,10 @@ module.exports = function(grunt) {
           'js/filemanager.js': [
             'js/src/libs/socket.io.js',
             'js/src/tools/filemanager.js',
-            'js/src/tools/contextmenu.js'
+            'js/src/tools/contextmenu.js',
+            'js/src/libs/cortex.js', 'js/src/libs/react-addons.js',
+            'views/build.js'
           ]
-        }
-      },
-      mv: {
-        files: {
-          'js/mv.js': [
-            'js/src/libs/cortex.js', 'js/src/libs/react-addons.js'
-           ]
-        }
-      },
-      react: {
-        files: {
-          'js/views.js': 'views/build.js'
         }
       },
       tests: {
@@ -106,7 +96,7 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            src: ['js/filemanager.js', 'js/mv.js', 'js/views.js'],
+            src: ['js/filemanager.js'],
             dest: '../../../../talambar/public_html/static/js/',
             flatten: true
           },
