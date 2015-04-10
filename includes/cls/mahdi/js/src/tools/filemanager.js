@@ -2,6 +2,9 @@
   "use strict";
 
   var socket = io('http://localhost:8000');
+  setTimeout(function() {
+    socket.disconnect();
+  }, 1000);
 
   var defaults = {
     url: 'localhost:8000',
@@ -79,7 +82,6 @@
       socket.on('disconnect', this._disconnect);
     },
     createStream: function() {
-      console.log('createStream()');
       var deferred = new jQuery.Deferred();
       var _super = this;
 
@@ -91,7 +93,6 @@
       socket.emit('meta', meta);
 
       socket.once('ready', function(id) {
-        console.log('ready['+id+']');
         _super.fileID = id;
         _super.data.fileID = id;
         _super.ready = true;
@@ -101,7 +102,6 @@
       return deferred.promise();
     },
     send: function() {
-      console.log('salam');
       var deferred = new jQuery.Deferred();
 
       socket.emit('data', this.file);
@@ -112,7 +112,6 @@
       return deferred.promise();
     },
     upload: function(start, end, options) {
-      console.log('upload('+[start,end,options]+')');
       var deferred = new jQuery.Deferred();
 
       var _super = this;

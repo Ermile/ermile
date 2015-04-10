@@ -138,16 +138,23 @@ $(document).ready(function() {
     if (e.which === 27) {
       $('#newform').addClass('hidden').find('[name="name"]').val('');
       selected = [];
-      $('.selected').removeClass('.selected');
+      $('.selected').removeClass('selected');
     }
-  })
+
+    if (e.which === 65 && (e.ctrlKey || e.metaKey)) {
+      component.selectAll();
+    }
+  });
 
   $body.on('dragover', function(e) {
     e.preventDefault();
-    $body.addClass('dragover');
+    if (!selected.length)
+      $body.addClass('dragover');
+    else
+      $body.removeClass('dragover').addClass('filedrag');
   });
   $body.on('dragend dragleave drop', function() {
-    $body.removeClass('dragover');
+    $body.removeClass('dragover filedrag');
   });
   $body.on('drop', function(e) {
     e.preventDefault();

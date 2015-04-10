@@ -122,7 +122,7 @@ module.exports = function(grunt) {
     watch: {
       views: {
         files: ['views/*'],
-        tasks: ['react', 'uglify:react']
+        tasks: ['react', 'uglify:filemanager']
       },
       common: {
         files: ['js/src/libs/jquery.js', 'js/src/libs/localstorage.js',

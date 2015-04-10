@@ -82,16 +82,15 @@ var FileView = React.createClass({displayName: "FileView",
             onDragStart: this.dragStart, 
             onMouseUp: this.mouseUp, 
             onDoubleClick: this.dbl, 
-            ref: "li", "data-id": +this.props.id}, 
+            ref: "li", "data-id": +this.props.id, draggable: "true"}, 
       React.createElement("span", {className: typeClass}), 
-      React.createElement("span", null, React.createElement("a", {"data-fake": true, href: this.props.disabled ? '#' : this.props.href, ref: "a"}, this.props.name)), 
+      React.createElement("span", null, this.props.name), 
       React.createElement("span", {className: "file-type"}, mime[0]), 
       React.createElement("span", {className: "file-size"}, this.props.size)
     );
   },
 
   mouseUp: function(e) {
-    console.log('mouseUp');
     var li = this.refs.li.getDOMNode();
     if (e.ctrlKey || e.metaKey) {
       var index = selected.indexOf(this.props.id);
@@ -108,10 +107,15 @@ var FileView = React.createClass({displayName: "FileView",
           lastIndex = lastLi.index(),
           current = $(li).index();
 
+      if (current < lastIndex) {
+        var tmp = current;
+        current = lastIndex;
+        lastIndex = tmp - 1;
+      }
+
       var between = this._owner.props.currentItems.slice(lastIndex, current),
           els = lastLi.parent().children().slice(lastIndex + 1, current + 1);
 
-          console.log(this._owner.props.currentItems);
       var _ = this;
       selected = selected.concat(between.map(function(a) {
         return a.id;
@@ -126,7 +130,13 @@ var FileView = React.createClass({displayName: "FileView",
     }
   },
   dbl: function(e) {
-    this.refs.a.getDOMNode().click();
+    Navigate({
+      url: this.props.href,
+      fake: true
+    });
+  },
+  dragStart: function(e) {
+    e.dataTransfer.setData('text/plain', this.props.id);
   }
 });
 
@@ -137,9 +147,9 @@ var FolderView = React.createClass({displayName: "FolderView",
             onDrop: this.drop, 
             onMouseUp: this.mouseUp, 
             onDoubleClick: this.dbl, 
-            ref: "li", "data-id": this.props.id}, 
+            ref: "li", "data-id": this.props.id, draggable: "true"}, 
       React.createElement("span", {className: "fa fa-folder-o"}), 
-      React.createElement("span", null, React.createElement("a", {"data-fake": true, href: this.props.disabled ? '#' : this.props.href, ref: "a"}, this.props.name)), 
+      React.createElement("span", null, this.props.name), 
       React.createElement("span", {className: "folder-type"}, "Folder"), 
       React.createElement("span", {className: "folder-children"}, this.props.children)
     );
@@ -165,6 +175,26 @@ var FolderView = React.createClass({displayName: "FolderView",
         selected.push(this.props.id);
         li.className += ' selected';
       }
+    } else if (e.shiftKey) {
+      var last = selected[selected.length-1],
+          lastLi = $('[data-id="'+last+'"]'),
+          lastIndex = lastLi.index(),
+          current = $(li).index();
+
+      if (current < lastIndex) {
+        var tmp = current;
+        current = lastIndex;
+        lastIndex = tmp - 1;
+      }
+
+      var between = this._owner.props.currentItems.slice(lastIndex, current),
+          els = lastLi.parent().children().slice(lastIndex + 1, current + 1);
+
+      var _ = this;
+      selected = selected.concat(between.map(function(a) {
+        return a.id;
+      }));
+      els.addClass('selected');
     } else {
       setTimeout(function() {
         $('.selected').removeClass('selected');
@@ -174,7 +204,13 @@ var FolderView = React.createClass({displayName: "FolderView",
     }
   },
   dbl: function(e) {
-    this.refs.a.getDOMNode().click();
+    Navigate({
+      url: this.props.href,
+      fake: true
+    });
+  },
+  dragStart: function(e) {
+    e.dataTransfer.setData('text/plain', this.props.id);
   }
 })
 
@@ -217,7 +253,7 @@ var FileList = React.createClass({displayName: "FileList",
       return a.id;
     });
 
-    $('.file, .folder').addClass('selected');
+    $('.file, .folder').not('#newform').addClass('selected');
   },
   render: function() {
     return React.createElement("ul", null, 
@@ -227,8 +263,8 @@ var FileList = React.createClass({displayName: "FileList",
           React.createElement("span", null, React.createElement("input", {type: "text", name: "address", type: "hidden"})), 
           React.createElement("span", null, React.createElement("input", {type: "text", name: "name"})), 
           React.createElement("span", {className: "folder-type"}, "Folder"), 
-          React.createElement("span", null, React.createElement("button", null, "Create")), 
-          React.createElement("span", null, React.createElement("button", {type: "button", ref: "cancel"}, "Cancel"))
+          React.createElement("span", {id: "createFolder"}, React.createElement("button", null, "Create")), 
+          React.createElement("span", {id: "cancelCreateFolder"}, React.createElement("button", {type: "button", ref: "cancel"}, "Cancel"))
         )
       ), 
 
@@ -252,7 +288,6 @@ var FileList = React.createClass({displayName: "FileList",
     });
 
     $(this.refs.cancel.getDOMNode()).click(function(e) {
-      console.log('a');
       $newfolder.addClass('hidden').find('[name="name"]').val('');
     });
   }

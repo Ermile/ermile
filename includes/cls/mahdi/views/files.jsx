@@ -54,16 +54,15 @@ var FileView = React.createClass({
             onDragStart={this.dragStart}
             onMouseUp={this.mouseUp}
             onDoubleClick={this.dbl}
-            ref='li' data-id={+this.props.id}>
+            ref='li' data-id={+this.props.id} draggable='true'>
       <span className={typeClass}></span>
-      <span><a data-fake href={this.props.disabled ? '#' : this.props.href} ref='a'>{this.props.name}</a></span>
+      <span>{this.props.name}</span>
       <span className="file-type">{mime[0]}</span>
       <span className="file-size">{this.props.size}</span>
     </li>;
   },
 
   mouseUp: function(e) {
-    console.log('mouseUp');
     var li = this.refs.li.getDOMNode();
     if (e.ctrlKey || e.metaKey) {
       var index = selected.indexOf(this.props.id);
@@ -80,10 +79,15 @@ var FileView = React.createClass({
           lastIndex = lastLi.index(),
           current = $(li).index();
 
+      if (current < lastIndex) {
+        var tmp = current;
+        current = lastIndex;
+        lastIndex = tmp - 1;
+      }
+
       var between = this._owner.props.currentItems.slice(lastIndex, current),
           els = lastLi.parent().children().slice(lastIndex + 1, current + 1);
 
-          console.log(this._owner.props.currentItems);
       var _ = this;
       selected = selected.concat(between.map(function(a) {
         return a.id;
@@ -98,7 +102,13 @@ var FileView = React.createClass({
     }
   },
   dbl: function(e) {
-    this.refs.a.getDOMNode().click();
+    Navigate({
+      url: this.props.href,
+      fake: true
+    });
+  },
+  dragStart: function(e) {
+    e.dataTransfer.setData('text/plain', this.props.id);
   }
 });
 
@@ -109,9 +119,9 @@ var FolderView = React.createClass({
             onDrop={this.drop}
             onMouseUp={this.mouseUp}
             onDoubleClick={this.dbl}
-            ref='li' data-id={this.props.id}>
+            ref='li' data-id={this.props.id} draggable='true'>
       <span className='fa fa-folder-o'></span>
-      <span><a data-fake href={this.props.disabled ? '#' : this.props.href} ref='a'>{this.props.name}</a></span>
+      <span>{this.props.name}</span>
       <span className="folder-type">Folder</span>
       <span className="folder-children">{this.props.children}</span>
     </li>;
@@ -137,6 +147,26 @@ var FolderView = React.createClass({
         selected.push(this.props.id);
         li.className += ' selected';
       }
+    } else if (e.shiftKey) {
+      var last = selected[selected.length-1],
+          lastLi = $('[data-id="'+last+'"]'),
+          lastIndex = lastLi.index(),
+          current = $(li).index();
+
+      if (current < lastIndex) {
+        var tmp = current;
+        current = lastIndex;
+        lastIndex = tmp - 1;
+      }
+
+      var between = this._owner.props.currentItems.slice(lastIndex, current),
+          els = lastLi.parent().children().slice(lastIndex + 1, current + 1);
+
+      var _ = this;
+      selected = selected.concat(between.map(function(a) {
+        return a.id;
+      }));
+      els.addClass('selected');
     } else {
       setTimeout(function() {
         $('.selected').removeClass('selected');
@@ -146,7 +176,13 @@ var FolderView = React.createClass({
     }
   },
   dbl: function(e) {
-    this.refs.a.getDOMNode().click();
+    Navigate({
+      url: this.props.href,
+      fake: true
+    });
+  },
+  dragStart: function(e) {
+    e.dataTransfer.setData('text/plain', this.props.id);
   }
 })
 
@@ -189,7 +225,7 @@ var FileList = React.createClass({
       return a.id;
     });
 
-    $('.file, .folder').addClass('selected');
+    $('.file, .folder').not('#newform').addClass('selected');
   },
   render: function() {
     return <ul>
@@ -199,8 +235,8 @@ var FileList = React.createClass({
           <span><input type='text' name='address' type='hidden' /></span>
           <span><input type='text' name='name' /></span>
           <span className="folder-type">Folder</span>
-          <span><button>Create</button></span>
-          <span><button type='button' ref='cancel'>Cancel</button></span>
+          <span id='createFolder'><button>Create</button></span>
+          <span id='cancelCreateFolder'><button type='button' ref='cancel'>Cancel</button></span>
         </form>
       </li>
 
@@ -224,7 +260,6 @@ var FileList = React.createClass({
     });
 
     $(this.refs.cancel.getDOMNode()).click(function(e) {
-      console.log('a');
       $newfolder.addClass('hidden').find('[name="name"]').val('');
     });
   }
