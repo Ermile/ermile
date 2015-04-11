@@ -1,3 +1,5 @@
+// Barcode khan
+
 (function(root, $) {
   root.barcodeOptions = {
     min: 5,

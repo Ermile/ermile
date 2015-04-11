@@ -1,3 +1,4 @@
+// Code haye marboot be bakhshe files.talambar.dev
 var fileList = new Cortex([]);
 var filesTree = new Cortex({});
 

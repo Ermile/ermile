@@ -1,3 +1,8 @@
+// In male vaqtie ke gofte boodid beshe beine File ha ba
+// kelid haye keyboard jabeja shod, tu demoye avvalie
+// Alan dg nabayad be karetun biad va qaedatan bayad code haye marboot ro
+// be views bebarid
+
 (function(root) {
   root.focusedFile = false;
 

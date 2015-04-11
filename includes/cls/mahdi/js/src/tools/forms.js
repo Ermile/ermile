@@ -1,3 +1,5 @@
+// Ajaxify: Ersale Form va Link ha ba estefade az AJAX
+
 (function($) {
   'use strict';
 

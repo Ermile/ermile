@@ -1,5 +1,7 @@
+// Morede estefade baraye namayesh Notification ha
+
 (function(root) {
-  
+
   var timeout = 0;
 
   var $window = $(window);

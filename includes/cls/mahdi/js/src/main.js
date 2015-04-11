@@ -1,3 +1,7 @@
+// Code haye moshtarak beine tamame safahat
+// Az jomle meqdar dehi haye avvalie
+// va etesale roydad haye mokhtalef
+
 $(document).ready(function() {
   var regex = /(?:\?|&)?lang=\w*/g;
   if(regex.test(location.search)) {

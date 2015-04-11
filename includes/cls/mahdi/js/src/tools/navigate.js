@@ -1,3 +1,5 @@
+// Morede estefade baraye kar ba HTML5 History
+
 (function(root) {
   "use strict";
 

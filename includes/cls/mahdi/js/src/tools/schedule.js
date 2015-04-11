@@ -1,3 +1,5 @@
+// Morede estefade baraye zaman bandi
+
 (function(root) {
   "use strict";
 

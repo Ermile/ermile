@@ -26,6 +26,9 @@ var BreadcrumbView = React.createClass({displayName: "BreadcrumbView",
     return React.createElement("ul", {className: "fbreadcrumb"}, els);
   }
 });
+// React Views
+// Marboot be bakhshe files.talambar.dev
+
 var EXT_MAP = {
   text: {
     plain: 'text',

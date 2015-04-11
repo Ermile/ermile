@@ -1,7 +1,7 @@
+// Sakhte Menu haye click rast
+
 (function($) {
   "use strict";
-
-  var events = 'click mouseover mousemove mouseup mouseenter mouseleave keydown keyup keypress dblclick';
 
   var id = 1;
 

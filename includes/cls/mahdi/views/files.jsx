@@ -1,3 +1,6 @@
+// React Views
+// Marboot be bakhshe files.talambar.dev
+
 var EXT_MAP = {
   text: {
     plain: 'text',
