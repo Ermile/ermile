@@ -10,29 +10,29 @@
       0.2.3
           Fix Paste An cntl+v Event
       0.2.2
-          Fix Ie8 
+          Fix Ie8
       0.2.1
             Fix manual entry
        0.2.0
             Add jquery manifest some version
        0.0.6
             Add manual entry
-            rename $.tmpl 
- 
+            rename $.tmpl
+
       0.0.5
             Fix Datepicker position on window.resize
-            Add manual text change 
- 
+            Add manual text change
+
       0.0.4
             Implement Jquery plugin manifest
             Add Observer Option
-            Add : format,formatter, altField,altFormat,altFieldFormatter 
-                        show(),hide(),destroy()
+            Add : format,formatter, altField,altFormat,altFieldFormatter
+                        fadeIn(),hide(),destroy()
             deprecate: viewFormat ,mask,maskFormatter,viewFormatter
      0.0.3 remove jquery tmpl
 */
 (function ($) {
-          
+
 Object.keys = Object.keys || (function() {
           var hasOwnProperty = Object.prototype.hasOwnProperty, hasDontEnumBug = ! {
                     toString : null
@@ -630,9 +630,9 @@ var delay = function(callback,ms){
                           } else {
                               self.container.toolbox.remove();
                           }
-                          // SHow Hide Picker ------------------------
+                          // fadeIn Hide Picker ------------------------
                           self.inputElem.focus(function () {
-                              self.show();
+                              self.fadeIn();
                           });
                           self.inputElem.click(function (e) {
                               e.stopPropagation();
@@ -867,19 +867,19 @@ var delay = function(callback,ms){
                                   self.container.yearView.hide();
                                   self.container.dayView.hide();
                                   self.monthPickerView.updateView();
-                                  self.container.monthView.show();
+                                  self.container.monthView.fadeIn();
                                   break;
                               case ('year'):
                                   self.container.dayView.hide();
                                   self.container.monthView.hide();
                                   self.yearPickerView.updateView()
-                                  self.container.yearView.show();
+                                  self.container.yearView.fadeIn();
                                   break;
                               case ('day'):
                                   self.container.yearView.hide();
                                   self.container.monthView.hide();
                                   self.dayPickerView.updateView();
-                                  self.container.dayView.show();
+                                  self.container.dayView.fadeIn();
                                   break;
                           }
                           return this;
@@ -990,13 +990,13 @@ var delay = function(callback,ms){
               position: "auto", // [x,y]
               autoClose: false,
               toolbox: true,
-              // 0.0.4      
+              // 0.0.4
               format: false,
               observer: false,
               altField: false,
               altFormat: "unix",
-              
-              
+
+
               inputDelay: 800,
               // Deprecated In 0.0.4
               mask: false, //unix,Gregorian
@@ -1044,14 +1044,14 @@ var delay = function(callback,ms){
               events: {},
               _viewed: false,
               // ------------------------------------------------------------------------ Public Methud
-              show: function () {
+              fadeIn: function () {
                   this.view.fixPosition(this);
-                  this.element.main.show();
-                  this.onShow(this);
+                  this.element.main.fadeIn();
+                  this.onfadeIn(this);
                   this._viewed = true;
                   return this;
               },
-             
+
             hide: function () {
                   if (this._viewed) {
                         this.element.main.hide();
@@ -1101,7 +1101,7 @@ var delay = function(callback,ms){
                   } else {
                         return this[key];
                   }
-            }, onShow: function (self) { }, onHide: function (self) { }, onSelect: function (unixDate) {
+            }, onfadeIn: function (self) { }, onHide: function (self) { }, onSelect: function (unixDate) {
             }, updateStaff: function () {
                   this._syncViewWidthSelected()
                   this.dayPickerView.updateView()
@@ -1290,7 +1290,7 @@ var delay = function(callback,ms){
                   this.view.render(this);
                   this.inputElem.data("datepicker", this);
                   return this;
-            }; 
+            };
 
       (function($) {
             $.fn.persianDatepicker = $.fn.pDatepicker = function(options) {
