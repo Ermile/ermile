@@ -55,6 +55,7 @@ var FileView = React.createClass({
 
     return <li className={this.props.disabled ? 'file disabled' : 'file'} draggable={true}
             onDragStart={this.dragStart}
+            onDragEnd={this.dragEnd}
             onMouseUp={this.mouseUp}
             onDoubleClick={this.dbl}
             ref='li' data-id={+this.props.id} draggable='true'>
@@ -112,6 +113,11 @@ var FileView = React.createClass({
   },
   dragStart: function(e) {
     e.dataTransfer.setData('text/plain', this.props.id);
+    selected.dragging = true;
+    console.log('true');
+  },
+  dragEnd: function(e) {
+    selected.dragging = false;
   }
 });
 
@@ -119,6 +125,7 @@ var FolderView = React.createClass({
   render: function() {
     return <li className={this.props.disabled ? 'folder disabled' : 'folder'} draggable={true} droppable={true}
             onDragStart={this.dragStart}
+            onDragEnd={this.dragEnd}
             onDrop={this.drop}
             onMouseUp={this.mouseUp}
             onDoubleClick={this.dbl}
@@ -137,6 +144,7 @@ var FolderView = React.createClass({
       target.parent.set(this.props.id.toString());
     }
     selected = [];
+    selected.dragging = false;
   },
 
   mouseUp: function(e) {
@@ -186,6 +194,10 @@ var FolderView = React.createClass({
   },
   dragStart: function(e) {
     e.dataTransfer.setData('text/plain', this.props.id);
+    selected.dragging = true;
+  },
+  dragEnd: function(e) {
+    selected.dragging = false;
   }
 })
 

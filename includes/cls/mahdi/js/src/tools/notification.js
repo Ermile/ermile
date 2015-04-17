@@ -13,11 +13,11 @@
     var $notif = $f.length ? $f : $('<div id="formError"></div>');
     $(document.body).append($notif);
 
-    if(timeout) {
+    if (timeout) {
       clearTimeout(timeout);
     }
 
-    if(options === false) {
+    if (options === false) {
       $notif.fadeOutAndRemove();
       $window.trigger('notify:close:force')
              .trigger('notify:done');
@@ -27,7 +27,7 @@
       $window.trigger('notify:shown');
     }
 
-    if(options.html) {
+    if (options.html) {
       $notif.html(options.html);
     } else {
       $notif.html('<p>' + options.text + '</p>').addClass(options.type);
@@ -35,7 +35,10 @@
 
     $window.trigger('notify:html', $notif);
 
-    if(options.sticky) {
+    if (!options.sticky) {
+      $notif.prop('sticky', false);
+    }
+    if (options.sticky) {
       $notif.prop('sticky', true);
       return;
     }
@@ -48,7 +51,7 @@
 
   $(document).on('click', '#formError li', function() {
     var $this = $(this);
-    if($this.parents('#formError').prop('sticky')) return;
+    if ($this.parents('#formError').prop('sticky')) return;
 
     $this.fadeOutAndRemove();
     $window.trigger('notify:close:click');

@@ -11,6 +11,8 @@
     url: '/',
     replace: false,
     filter: null,
+    fake: false,
+    data: false,
     ajax: {
       type: 'get'
     }
@@ -35,8 +37,6 @@
         '[data-xhr="' + obj.filter.join('"], [data-xhr="') + '"]'
       : obj.filter ? '[data-xhr="' + obj.filter + '"]' : null;
 
-    $window.trigger('navigate:render:filter:processed', filter);
-
     (filter ? $html.filter(filter).add($html.find(filter)) : $html).each(function() {
       var target = $(this).attr('data-xhr');
 
@@ -46,6 +46,8 @@
 
       $target.remove();
     });
+
+    $window.trigger('navigate:render:filter:done', filter);
 
     var $title = $html.find('title');
 

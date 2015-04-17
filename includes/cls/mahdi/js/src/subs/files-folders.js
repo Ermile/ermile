@@ -149,7 +149,7 @@ $(document).ready(function() {
 
   $body.on('dragover', function(e) {
     e.preventDefault();
-    if (!selected.length)
+    if (!selected.dragging)
       $body.addClass('dragover');
     else
       $body.removeClass('dragover').addClass('filedrag');

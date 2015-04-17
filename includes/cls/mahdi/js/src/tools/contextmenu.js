@@ -9,12 +9,13 @@
 
   var ContextMenu = function ContextMenu(options) {
     _.extend(this, _.omit(defaults, 'item'), _.omit(options, 'item'));
+    this.status = 0;
     this.init(options);
     list.push(this);
   };
 
   ContextMenu.prototype = {
-    extend: function(element) {
+    clone: function(element) {
       var ops = {items: this.items, jquery: $(element)};
       return new ContextMenu(ops);
     },
@@ -44,6 +45,7 @@
       $wrapper.on('close', this.close.bind(this));
 
       $(window).on('keydown', function(e) {
+        if (!_super.status) return;
         var $li = $wrapper.find('li');
         var active = $li.filter('.active').index();
 
@@ -143,11 +145,12 @@
           top: e.pageY - height - 5
         });
       }
-
+      this.status = 1;
       $wrapper.css('visibility', 'visible').show();
       $wrapper.trigger('contextmenu:open');
     },
     close: function() {
+      this.status = 0;
       this.$wrapper.find('li.active').removeClass('active');
       this.$wrapper.css('visibility', 'hidden').hide();
       this.$wrapper.trigger('contextmenu:close');

@@ -12,12 +12,7 @@
       dataType: 'json',
       cache: false
     },
-    event: false,
-    immediate: false,
-    noLoading: false,
-
-    // Events
-    createElement: _.noop
+    noLoading: false
   };
 
   $.fn.ajaxify = function Ajaxify(options) {
@@ -51,7 +46,7 @@
         ajaxOptions = _.extend(ajax, {
           data: fd
         });
-        $('input').attr('disabled', '');
+        $this.find('input, [contenteditable]').attr('disabled', '');
       } else {
         try {
           var data = JSON.parse($this.attr('data-data'));
@@ -69,8 +64,6 @@
       var refresh = ajaxOptions.refresh || $this.attr('data-refresh') !== undefined;
 
       if(!_super.noLoading) $('body').addClass('loading-form');
-
-      var callbacks = $this.get(0).callbacks || {};
 
       $form.trigger('ajaxify:send:ajax:start', ajaxOptions);
 
@@ -107,7 +100,7 @@
 
         if(_super.noLoading) return;
 
-        $('input, [data-ajaxify]').removeAttr('disabled');
+        $('input, [contenteditable], [data-ajaxify]').removeAttr('disabled');
         $('body').removeClass('loading-form');
       });
     }
@@ -171,7 +164,7 @@
     $form.trigger('ajaxify:render:done', data, $form, _super);
 
     if (!hasError && $form.attr('data-clear') !== undefined) {
-      $form.find('input, select, textarea').not('[data-unclear]').val('');
+      $form.find('input, select, textarea, [contenteditable]').not('[data-unclear]').val('');
     }
 
     $form.trigger('ajaxify:render:clear', data, $form, _super);
