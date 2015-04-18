@@ -66,6 +66,76 @@ var EXT_MAP = {
 };
 
 var selected = [];
+var selection = {
+  startingPoint: 0,
+  lastPoint: 0
+}
+
+function mouseUp(e) {
+    var li = this.refs.li.getDOMNode();
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey) {
+      var lastLi = $('[data-id="'+selection.lastPoint+'"]'),
+          lastIndex = lastLi.index(),
+          current = $(li).index();
+
+      if (current < lastIndex) {
+        var tmp = current;
+        current = lastIndex;
+        lastIndex = tmp;
+      }
+
+      lastIndex--;
+
+      var between = this._owner.props.currentItems.slice(lastIndex, current),
+          els = lastLi.parent().children().slice(lastIndex + 1, current + 1);
+
+      var _ = this;
+      selected = selected.concat(between.map(function(a) {
+        return a.id;
+      }));
+      els.addClass('selected');
+    }
+    else if (e.ctrlKey || e.metaKey) {
+      var index = selected.indexOf(this.props.id);
+      if (index > -1) {
+        selected.splice(index, 1);
+        $(li).removeClass('selected');
+      } else {
+        selected.push(this.props.id);
+        li.className += ' selected';
+      }
+      selection.lastPoint = this.props.id;
+    } else if (e.shiftKey) {
+      var lastLi = $('[data-id="'+selection.lastPoint+'"]'),
+          lastIndex = lastLi.index(),
+          current = $(li).index();
+
+      if (current < lastIndex) {
+        var tmp = current;
+        current = lastIndex;
+        lastIndex = tmp;
+      }
+
+      lastIndex--;
+
+      var between = this._owner.props.currentItems.slice(lastIndex, current),
+          els = lastLi.parent().children().slice(lastIndex + 1, current + 1);
+
+      var _ = this;
+      selected = between.map(function(a) {
+        return a.id;
+      });
+      $('.selected').removeClass('selected');
+      els.addClass('selected');
+    } else {
+      setTimeout(function() {
+        $('.selected').removeClass('selected');
+        li.className += ' selected';
+        selected = [this.props.id];
+        selection.lastPoint = this.props.id;
+      }.bind(this), 1);
+    }
+}
 
 var FileView = React.createClass({displayName: "FileView",
   render: function() {
@@ -94,45 +164,7 @@ var FileView = React.createClass({displayName: "FileView",
     );
   },
 
-  mouseUp: function(e) {
-    var li = this.refs.li.getDOMNode();
-    if (e.ctrlKey || e.metaKey) {
-      var index = selected.indexOf(this.props.id);
-      if (index > -1) {
-        selected.splice(index, 1);
-        $(li).removeClass('selected');
-      } else {
-        selected.push(this.props.id);
-        li.className += ' selected';
-      }
-    } else if (e.shiftKey) {
-      var last = selected[selected.length-1],
-          lastLi = $('[data-id="'+last+'"]'),
-          lastIndex = lastLi.index(),
-          current = $(li).index();
-
-      if (current < lastIndex) {
-        var tmp = current;
-        current = lastIndex;
-        lastIndex = tmp - 1;
-      }
-
-      var between = this._owner.props.currentItems.slice(lastIndex, current),
-          els = lastLi.parent().children().slice(lastIndex + 1, current + 1);
-
-      var _ = this;
-      selected = selected.concat(between.map(function(a) {
-        return a.id;
-      }));
-      els.addClass('selected');
-    } else {
-      setTimeout(function() {
-        $('.selected').removeClass('selected');
-        li.className += ' selected';
-        selected = [this.props.id];
-      }.bind(this), 1);
-    }
-  },
+  mouseUp: mouseUp,
   dbl: function(e) {
     Navigate({
       url: this.props.href,
@@ -175,45 +207,7 @@ var FolderView = React.createClass({displayName: "FolderView",
     selected.dragging = false;
   },
 
-  mouseUp: function(e) {
-    var li = this.refs.li.getDOMNode();
-    if (e.ctrlKey || e.metaKey) {
-      var index = selected.indexOf(this.props.id);
-      if (index > -1) {
-        selected.splice(index, 1);
-        $(li).removeClass('selected');
-      } else {
-        selected.push(this.props.id);
-        li.className += ' selected';
-      }
-    } else if (e.shiftKey) {
-      var last = selected[selected.length-1],
-          lastLi = $('[data-id="'+last+'"]'),
-          lastIndex = lastLi.index(),
-          current = $(li).index();
-
-      if (current < lastIndex) {
-        var tmp = current;
-        current = lastIndex;
-        lastIndex = tmp - 1;
-      }
-
-      var between = this._owner.props.currentItems.slice(lastIndex, current),
-          els = lastLi.parent().children().slice(lastIndex + 1, current + 1);
-
-      var _ = this;
-      selected = selected.concat(between.map(function(a) {
-        return a.id;
-      }));
-      els.addClass('selected');
-    } else {
-      setTimeout(function() {
-        $('.selected').removeClass('selected');
-        li.className += ' selected';
-        selected = [this.props.id];
-      }.bind(this), 1);
-    }
-  },
+  mouseUp: mouseUp,
   dbl: function(e) {
     Navigate({
       url: this.props.href,
