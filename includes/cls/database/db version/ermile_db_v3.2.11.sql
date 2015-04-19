@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2015 at 09:28 PM
+-- Generation Time: Apr 19, 2015 at 05:30 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -51,6 +51,66 @@ INSERT INTO `accounts` (`id`, `account_title`, `account_slug`, `bank_id`, `accou
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `attachmentmetas`
+--
+
+CREATE TABLE IF NOT EXISTS `attachmentmetas` (
+`id` int(10) unsigned NOT NULL,
+  `attachment_id` int(10) unsigned NOT NULL,
+  `attachmentmeta_cat` varchar(50) NOT NULL,
+  `attachmentmeta_key` varchar(100) NOT NULL,
+  `attachmentmeta_value` varchar(200) DEFAULT NULL,
+  `attachmentmeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `attachments`
+--
+
+CREATE TABLE IF NOT EXISTS `attachments` (
+`id` int(10) unsigned NOT NULL,
+  `file_id` int(10) unsigned DEFAULT NULL,
+  `attachment_title` varchar(100) DEFAULT NULL,
+  `attachment_type` enum('productcategory','product','admin','banklogo','post','system','other','file','folder') NOT NULL,
+  `attachment_addr` varchar(1000) DEFAULT NULL,
+  `attachment_name` varchar(50) DEFAULT NULL,
+  `attachment_ext` varchar(255) DEFAULT NULL,
+  `attachment_size` float(12,0) DEFAULT NULL,
+  `attachment_desc` varchar(200) DEFAULT NULL,
+  `attachment_parent` int(10) unsigned DEFAULT NULL,
+  `attachment_depth` smallint(5) unsigned DEFAULT NULL,
+  `attachment_count` smallint(5) unsigned DEFAULT NULL,
+  `attachment_order` smallint(5) DEFAULT NULL,
+  `attachment_status` enum('normal','trash','deleted','inprogress') NOT NULL DEFAULT 'normal',
+  `attachment_date` datetime DEFAULT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `attachments`
+--
+
+INSERT INTO `attachments` (`id`, `file_id`, `attachment_title`, `attachment_type`, `attachment_addr`, `attachment_name`, `attachment_ext`, `attachment_size`, `attachment_desc`, `attachment_parent`, `attachment_depth`, `attachment_count`, `attachment_order`, `attachment_status`, `attachment_date`, `user_id`, `date_modified`) VALUES
+(4, NULL, 'folder1', 'folder', NULL, NULL, NULL, NULL, NULL, 8, 1, NULL, 1, 'normal', NULL, 190, '2015-01-29 21:06:30'),
+(6, NULL, 'Folder2', 'folder', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 3, 'normal', NULL, 190, '2015-02-01 15:39:53'),
+(7, NULL, 'File1', 'file', NULL, NULL, 'jpeg', NULL, NULL, 8, 1, NULL, 0, 'normal', NULL, 190, '2015-01-29 20:56:47'),
+(8, NULL, 'Folder4', 'folder', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 2, 'normal', NULL, 190, '2015-02-01 15:39:55'),
+(9, NULL, '123', 'folder', '/', NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, 'normal', NULL, 190, NULL),
+(10, NULL, '1233', 'folder', '/123', NULL, NULL, NULL, NULL, 9, 1, NULL, NULL, 'normal', NULL, 190, NULL),
+(11, NULL, 'qqqq', 'folder', '/123/1233', NULL, NULL, NULL, NULL, 10, 2, NULL, NULL, 'normal', NULL, 190, NULL),
+(12, NULL, 'rrrrr', 'folder', '/123/1233/qqqq', NULL, NULL, NULL, NULL, 11, 3, NULL, NULL, 'normal', NULL, 190, NULL),
+(13, NULL, '123', 'folder', '/123', NULL, NULL, NULL, NULL, 9, 1, NULL, NULL, 'normal', NULL, 190, NULL),
+(14, NULL, 'فففف', 'folder', '/', NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, 'normal', NULL, 190, NULL),
+(15, NULL, 'ssss', 'file', '/', NULL, 'image/jpeg', NULL, NULL, NULL, 1, NULL, NULL, 'normal', NULL, 190, '2015-02-12 16:58:59'),
+(16, NULL, 'adasd', 'folder', '/', NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, 'normal', NULL, 190, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `banks`
 --
 
@@ -87,9 +147,9 @@ INSERT INTO `banks` (`id`, `bank_title`, `bank_slug`, `bank_website`, `bank_stat
 --
 
 CREATE TABLE IF NOT EXISTS `comments` (
-`id` int(10) unsigned NOT NULL,
-  `post_id` bigint(20) unsigned DEFAULT NULL,
-  `product_id` int(10) unsigned DEFAULT NULL,
+`id` smallint(5) unsigned NOT NULL,
+  `post_id` smallint(5) unsigned DEFAULT NULL,
+  `product_id` smallint(5) unsigned DEFAULT NULL,
   `comment_author` varchar(50) DEFAULT NULL,
   `comment_email` varchar(100) DEFAULT NULL,
   `comment_url` varchar(100) DEFAULT NULL,
@@ -348,7 +408,7 @@ INSERT INTO `options` (`id`, `option_cat`, `option_key`, `option_value`, `option
 --
 
 CREATE TABLE IF NOT EXISTS `papers` (
-`id` int(10) unsigned NOT NULL,
+`id` smallint(5) unsigned NOT NULL,
   `paper_type` varchar(50) DEFAULT NULL,
   `paper_number` varchar(20) DEFAULT NULL,
   `paper_date` datetime DEFAULT NULL,
@@ -392,7 +452,7 @@ DELIMITER ;
 
 CREATE TABLE IF NOT EXISTS `postmetas` (
   `id` int(10) NOT NULL,
-  `post_id` bigint(20) unsigned NOT NULL,
+  `post_id` smallint(5) unsigned NOT NULL,
   `postmeta_cat` varchar(50) NOT NULL,
   `postmeta_key` varchar(100) NOT NULL,
   `postmeta_value` varchar(999) DEFAULT NULL,
@@ -407,19 +467,19 @@ CREATE TABLE IF NOT EXISTS `postmetas` (
 --
 
 CREATE TABLE IF NOT EXISTS `posts` (
-`id` bigint(20) unsigned NOT NULL,
+`id` smallint(5) unsigned NOT NULL,
   `post_language` char(2) DEFAULT NULL,
   `post_cat` varchar(50) DEFAULT NULL,
   `post_title` varchar(100) NOT NULL,
   `post_slug` varchar(100) NOT NULL,
   `post_content` text,
-  `post_type` varchar(50) NOT NULL DEFAULT 'post',
-  `post_url` text,
+  `post_type` enum('post','page') NOT NULL DEFAULT 'post',
   `post_comment` enum('open','closed','','') NOT NULL DEFAULT 'open',
   `post_count` smallint(5) unsigned DEFAULT NULL,
   `post_status` enum('publish','draft','schedule','deleted','expire') NOT NULL DEFAULT 'draft',
   `post_parent` smallint(5) unsigned DEFAULT NULL,
   `user_id` int(10) unsigned NOT NULL,
+  `attachment_id` int(10) unsigned DEFAULT NULL,
   `post_publishdate` datetime DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -428,9 +488,9 @@ CREATE TABLE IF NOT EXISTS `posts` (
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`id`, `post_language`, `post_cat`, `post_title`, `post_slug`, `post_content`, `post_type`, `post_url`, `post_comment`, `post_count`, `post_status`, `post_parent`, `user_id`, `post_publishdate`, `date_modified`) VALUES
-(1, 'fa', NULL, 'test1', 'page1', 'salam. in test 1 ast', 'page', NULL, 'open', NULL, 'publish', NULL, 150, NULL, '2015-02-11 14:46:49'),
-(2, 'en', 'test', 'post1', 'post1', 'salam. post1 ast', 'post', NULL, 'open', NULL, 'publish', NULL, 150, NULL, '2015-02-11 14:46:52');
+INSERT INTO `posts` (`id`, `post_language`, `post_cat`, `post_title`, `post_slug`, `post_content`, `post_type`, `post_comment`, `post_count`, `post_status`, `post_parent`, `user_id`, `attachment_id`, `post_publishdate`, `date_modified`) VALUES
+(1, 'fa', NULL, 'test1', 'page1', 'salam. in test 1 ast', 'page', 'open', NULL, 'publish', NULL, 150, NULL, NULL, '2015-02-11 14:46:49'),
+(2, 'en', 'test', 'post1', 'post1', 'salam. post1 ast', 'post', 'open', NULL, 'publish', NULL, 150, NULL, NULL, '2015-02-11 14:46:52');
 
 -- --------------------------------------------------------
 
@@ -440,7 +500,7 @@ INSERT INTO `posts` (`id`, `post_language`, `post_cat`, `post_title`, `post_slug
 
 CREATE TABLE IF NOT EXISTS `productmetas` (
 `id` int(10) unsigned NOT NULL,
-  `product_id` int(10) unsigned NOT NULL,
+  `product_id` smallint(5) unsigned NOT NULL,
   `productmeta_cat` varchar(50) NOT NULL,
   `productmeta_key` varchar(100) NOT NULL,
   `productmeta_value` varchar(999) DEFAULT NULL,
@@ -582,7 +642,7 @@ DELIMITER ;
 
 CREATE TABLE IF NOT EXISTS `productprices` (
 `id` int(10) unsigned NOT NULL,
-  `product_id` int(10) unsigned NOT NULL,
+  `product_id` smallint(5) unsigned NOT NULL,
   `productmeta_id` int(10) unsigned DEFAULT NULL,
   `productprice_cat` varchar(50) DEFAULT NULL,
   `productprice_startdate` datetime NOT NULL,
@@ -602,7 +662,7 @@ CREATE TABLE IF NOT EXISTS `productprices` (
 --
 
 CREATE TABLE IF NOT EXISTS `products` (
-`id` int(10) unsigned NOT NULL,
+`id` smallint(5) unsigned NOT NULL,
   `product_title` varchar(100) NOT NULL,
   `product_slug` varchar(50) NOT NULL,
   `product_barcode` varchar(20) DEFAULT NULL,
@@ -617,6 +677,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `product_sold` int(10) DEFAULT '0',
   `product_stock` int(10) DEFAULT '0',
   `product_carton` int(10) DEFAULT NULL,
+  `attachment_id` int(10) unsigned DEFAULT NULL,
   `product_service` enum('yes','no') NOT NULL DEFAULT 'no',
   `product_sellin` enum('store','online','both') NOT NULL DEFAULT 'both',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
@@ -626,12 +687,12 @@ CREATE TABLE IF NOT EXISTS `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `product_title`, `product_slug`, `product_barcode`, `product_barcode2`, `product_buyprice`, `product_price`, `product_discount`, `product_vat`, `product_initialbalance`, `product_mininventory`, `product_status`, `product_sold`, `product_stock`, `product_carton`, `product_service`, `product_sellin`, `date_modified`) VALUES
-(1, 'aa', 'aa', NULL, NULL, '890.0000', '960.0000', '10.0000', '2.0000', 0, NULL, 'unset', 5, NULL, NULL, 'yes', 'both', '2014-11-07 14:42:53'),
-(2, 'bb', 'bb', NULL, NULL, NULL, '400.0000', '0.0000', NULL, 0, NULL, 'unset', 0, 20, NULL, 'yes', 'both', '2014-11-07 14:43:31'),
-(3, 'cc', 'cc', NULL, NULL, NULL, '0.0000', '0.0000', '1.0000', 0, NULL, 'unset', 90, 40, NULL, 'yes', 'both', '2014-06-12 08:56:25'),
-(4, 'dd', 'dd', NULL, NULL, '90.0000', '200.0000', '10.0000', NULL, 0, NULL, 'unset', 8, 42, NULL, 'yes', 'both', '2014-05-30 22:01:45'),
-(5, 'ee', 'ee', NULL, NULL, '100.0000', '120.0000', '5.0000', NULL, 0, NULL, 'unset', 0, 50, NULL, 'yes', 'both', '2014-05-30 21:42:55');
+INSERT INTO `products` (`id`, `product_title`, `product_slug`, `product_barcode`, `product_barcode2`, `product_buyprice`, `product_price`, `product_discount`, `product_vat`, `product_initialbalance`, `product_mininventory`, `product_status`, `product_sold`, `product_stock`, `product_carton`, `attachment_id`, `product_service`, `product_sellin`, `date_modified`) VALUES
+(1, 'aa', 'aa', NULL, NULL, '890.0000', '960.0000', '10.0000', '2.0000', 0, NULL, 'unset', 5, NULL, NULL, NULL, 'yes', 'both', '2014-11-07 14:42:53'),
+(2, 'bb', 'bb', NULL, NULL, NULL, '400.0000', '0.0000', NULL, 0, NULL, 'unset', 0, 20, NULL, NULL, 'yes', 'both', '2014-11-07 14:43:31'),
+(3, 'cc', 'cc', NULL, NULL, NULL, '0.0000', '0.0000', '1.0000', 0, NULL, 'unset', 90, 40, NULL, NULL, 'yes', 'both', '2014-06-12 08:56:25'),
+(4, 'dd', 'dd', NULL, NULL, '90.0000', '200.0000', '10.0000', NULL, 0, NULL, 'unset', 8, 42, NULL, NULL, 'yes', 'both', '2014-05-30 22:01:45'),
+(5, 'ee', 'ee', NULL, NULL, '100.0000', '120.0000', '5.0000', NULL, 0, NULL, 'unset', 0, 50, NULL, NULL, 'yes', 'both', '2014-05-30 21:42:55');
 
 --
 -- Triggers `products`
@@ -693,7 +754,7 @@ CREATE TABLE IF NOT EXISTS `receipts` (
   `receipt_type` enum('income','outcome') DEFAULT 'income',
   `receipt_price` decimal(13,4) NOT NULL DEFAULT '0.0000',
   `receipt_date` datetime NOT NULL,
-  `paper_id` int(10) unsigned DEFAULT NULL,
+  `paper_id` smallint(5) unsigned DEFAULT NULL,
   `receipt_paperdate` datetime DEFAULT NULL,
   `receipt_paperstatus` enum('pass','recovery','fail','lost','block','delete','inprogress') DEFAULT NULL,
   `receipt_desc` varchar(200) DEFAULT NULL,
@@ -782,7 +843,7 @@ CREATE TABLE IF NOT EXISTS `termusages` (
 CREATE TABLE IF NOT EXISTS `transactiondetails` (
   `transactiondetail_row` smallint(5) unsigned DEFAULT NULL,
   `transaction_id` int(10) unsigned NOT NULL,
-  `product_id` int(10) unsigned NOT NULL,
+  `product_id` smallint(5) unsigned NOT NULL,
   `transactiondetail_quantity` int(10) NOT NULL DEFAULT '0',
   `transactiondetail_price` decimal(13,4) NOT NULL,
   `transactiondetail_discount` decimal(13,4) DEFAULT NULL
@@ -1033,6 +1094,18 @@ ALTER TABLE `accounts`
  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`account_slug`), ADD UNIQUE KEY `cardnumber_unique` (`account_card`), ADD UNIQUE KEY `accountnumber_unique` (`account_number`), ADD KEY `bank_id` (`bank_id`), ADD KEY `accounts_users_id` (`user_id`) USING BTREE;
 
 --
+-- Indexes for table `attachmentmetas`
+--
+ALTER TABLE `attachmentmetas`
+ ADD PRIMARY KEY (`id`), ADD KEY `attachmentmetas_attachments_id` (`attachment_id`);
+
+--
+-- Indexes for table `attachments`
+--
+ALTER TABLE `attachments`
+ ADD PRIMARY KEY (`id`), ADD KEY `attachments_users_id` (`user_id`) USING BTREE, ADD KEY `attachments_files_id` (`file_id`);
+
+--
 -- Indexes for table `banks`
 --
 ALTER TABLE `banks`
@@ -1120,7 +1193,7 @@ ALTER TABLE `postmetas`
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug+catslug_unique` (`post_cat`,`post_slug`), ADD KEY `posts_users_id` (`user_id`) USING BTREE;
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug+catslug_unique` (`post_cat`,`post_slug`), ADD KEY `posts_users_id` (`user_id`) USING BTREE, ADD KEY `posts_attachments_id` (`attachment_id`) USING BTREE;
 
 --
 -- Indexes for table `productmetas`
@@ -1138,7 +1211,7 @@ ALTER TABLE `productprices`
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`product_slug`) USING BTREE, ADD UNIQUE KEY `barcode_unique` (`product_barcode`) USING BTREE, ADD UNIQUE KEY `barcode2_unique` (`product_barcode2`) USING BTREE;
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`product_slug`) USING BTREE, ADD UNIQUE KEY `barcode_unique` (`product_barcode`) USING BTREE, ADD UNIQUE KEY `barcode2_unique` (`product_barcode2`) USING BTREE, ADD KEY `products_attachments_id` (`attachment_id`) USING BTREE;
 
 --
 -- Indexes for table `receipts`
@@ -1222,6 +1295,16 @@ ALTER TABLE `visitors`
 ALTER TABLE `accounts`
 MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
+-- AUTO_INCREMENT for table `attachmentmetas`
+--
+ALTER TABLE `attachmentmetas`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `attachments`
+--
+ALTER TABLE `attachments`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+--
 -- AUTO_INCREMENT for table `banks`
 --
 ALTER TABLE `banks`
@@ -1230,7 +1313,7 @@ MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=107;
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `costcats`
 --
@@ -1280,12 +1363,12 @@ MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
 -- AUTO_INCREMENT for table `papers`
 --
 ALTER TABLE `papers`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `productmetas`
 --
@@ -1300,7 +1383,7 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `receipts`
 --
@@ -1363,6 +1446,19 @@ ADD CONSTRAINT `accounts_banks_id` FOREIGN KEY (`bank_id`) REFERENCES `banks` (`
 ADD CONSTRAINT `accounts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
+-- Constraints for table `attachmentmetas`
+--
+ALTER TABLE `attachmentmetas`
+ADD CONSTRAINT `attachmentmetas_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`);
+
+--
+-- Constraints for table `attachments`
+--
+ALTER TABLE `attachments`
+ADD CONSTRAINT `attachments_files_id` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`),
+ADD CONSTRAINT `attachments_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
 -- Constraints for table `comments`
 --
 ALTER TABLE `comments`
@@ -1419,6 +1515,7 @@ ADD CONSTRAINT `postmeta_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`
 -- Constraints for table `posts`
 --
 ALTER TABLE `posts`
+ADD CONSTRAINT `posts_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`) ON DELETE SET NULL,
 ADD CONSTRAINT `posts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
@@ -1433,6 +1530,12 @@ ADD CONSTRAINT `productmetas_products_id` FOREIGN KEY (`product_id`) REFERENCES 
 ALTER TABLE `productprices`
 ADD CONSTRAINT `productprices_productmetas_id` FOREIGN KEY (`productmeta_id`) REFERENCES `productmetas` (`id`) ON DELETE CASCADE,
 ADD CONSTRAINT `productprices_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `products`
+--
+ALTER TABLE `products`
+ADD CONSTRAINT `products_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`) ON DELETE SET NULL;
 
 --
 -- Constraints for table `receipts`

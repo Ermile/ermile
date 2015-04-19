@@ -87,9 +87,9 @@ INSERT INTO `banks` (`id`, `bank_title`, `bank_slug`, `bank_website`, `bank_stat
 --
 
 CREATE TABLE IF NOT EXISTS `comments` (
-`id` int(10) unsigned NOT NULL,
-  `post_id` bigint(20) unsigned DEFAULT NULL,
-  `product_id` int(10) unsigned DEFAULT NULL,
+`id` smallint(5) unsigned NOT NULL,
+  `post_id` smallint(5) unsigned DEFAULT NULL,
+  `product_id` smallint(5) unsigned DEFAULT NULL,
   `comment_author` varchar(50) DEFAULT NULL,
   `comment_email` varchar(100) DEFAULT NULL,
   `comment_url` varchar(100) DEFAULT NULL,
@@ -348,7 +348,7 @@ INSERT INTO `options` (`id`, `option_cat`, `option_key`, `option_value`, `option
 --
 
 CREATE TABLE IF NOT EXISTS `papers` (
-`id` int(10) unsigned NOT NULL,
+`id` smallint(5) unsigned NOT NULL,
   `paper_type` varchar(50) DEFAULT NULL,
   `paper_number` varchar(20) DEFAULT NULL,
   `paper_date` datetime DEFAULT NULL,
@@ -392,7 +392,7 @@ DELIMITER ;
 
 CREATE TABLE IF NOT EXISTS `postmetas` (
   `id` int(10) NOT NULL,
-  `post_id` bigint(20) unsigned NOT NULL,
+  `post_id` smallint(5) unsigned NOT NULL,
   `postmeta_cat` varchar(50) NOT NULL,
   `postmeta_key` varchar(100) NOT NULL,
   `postmeta_value` varchar(999) DEFAULT NULL,
@@ -407,7 +407,7 @@ CREATE TABLE IF NOT EXISTS `postmetas` (
 --
 
 CREATE TABLE IF NOT EXISTS `posts` (
-`id` bigint(20) unsigned NOT NULL,
+`id` smallint(5) unsigned NOT NULL,
   `post_language` char(2) DEFAULT NULL,
   `post_cat` varchar(50) DEFAULT NULL,
   `post_title` varchar(100) NOT NULL,
@@ -440,7 +440,7 @@ INSERT INTO `posts` (`id`, `post_language`, `post_cat`, `post_title`, `post_slug
 
 CREATE TABLE IF NOT EXISTS `productmetas` (
 `id` int(10) unsigned NOT NULL,
-  `product_id` int(10) unsigned NOT NULL,
+  `product_id` smallint(5) unsigned NOT NULL,
   `productmeta_cat` varchar(50) NOT NULL,
   `productmeta_key` varchar(100) NOT NULL,
   `productmeta_value` varchar(999) DEFAULT NULL,
@@ -582,7 +582,7 @@ DELIMITER ;
 
 CREATE TABLE IF NOT EXISTS `productprices` (
 `id` int(10) unsigned NOT NULL,
-  `product_id` int(10) unsigned NOT NULL,
+  `product_id` smallint(5) unsigned NOT NULL,
   `productmeta_id` int(10) unsigned DEFAULT NULL,
   `productprice_cat` varchar(50) DEFAULT NULL,
   `productprice_startdate` datetime NOT NULL,
@@ -602,7 +602,7 @@ CREATE TABLE IF NOT EXISTS `productprices` (
 --
 
 CREATE TABLE IF NOT EXISTS `products` (
-`id` int(10) unsigned NOT NULL,
+`id` smallint(5) unsigned NOT NULL,
   `product_title` varchar(100) NOT NULL,
   `product_slug` varchar(50) NOT NULL,
   `product_barcode` varchar(20) DEFAULT NULL,
@@ -693,7 +693,7 @@ CREATE TABLE IF NOT EXISTS `receipts` (
   `receipt_type` enum('income','outcome') DEFAULT 'income',
   `receipt_price` decimal(13,4) NOT NULL DEFAULT '0.0000',
   `receipt_date` datetime NOT NULL,
-  `paper_id` int(10) unsigned DEFAULT NULL,
+  `paper_id` smallint(5) unsigned DEFAULT NULL,
   `receipt_paperdate` datetime DEFAULT NULL,
   `receipt_paperstatus` enum('pass','recovery','fail','lost','block','delete','inprogress') DEFAULT NULL,
   `receipt_desc` varchar(200) DEFAULT NULL,
@@ -782,7 +782,7 @@ CREATE TABLE IF NOT EXISTS `termusages` (
 CREATE TABLE IF NOT EXISTS `transactiondetails` (
   `transactiondetail_row` smallint(5) unsigned DEFAULT NULL,
   `transaction_id` int(10) unsigned NOT NULL,
-  `product_id` int(10) unsigned NOT NULL,
+  `product_id` smallint(5) unsigned NOT NULL,
   `transactiondetail_quantity` int(10) NOT NULL DEFAULT '0',
   `transactiondetail_price` decimal(13,4) NOT NULL,
   `transactiondetail_discount` decimal(13,4) DEFAULT NULL
@@ -1230,7 +1230,7 @@ MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=107;
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `costcats`
 --
@@ -1280,12 +1280,12 @@ MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
 -- AUTO_INCREMENT for table `papers`
 --
 ALTER TABLE `papers`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `productmetas`
 --
@@ -1300,7 +1300,7 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `receipts`
 --
