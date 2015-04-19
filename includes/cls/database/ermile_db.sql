@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10deb1
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Feb 26, 2015 at 12:56 AM
--- Server version: 5.5.41-0ubuntu0.14.04.1
--- PHP Version: 5.6.6-1+deb.sury.org~trusty+1
+-- Host: 127.0.0.1
+-- Generation Time: Apr 19, 2015 at 08:57 AM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `ermile`
 --
-CREATE DATABASE IF NOT EXISTS `ermile` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `ermile`;
 
 -- --------------------------------------------------------
 
@@ -28,9 +26,8 @@ USE `ermile`;
 -- Table structure for table `accounts`
 --
 
-DROP TABLE IF EXISTS `accounts`;
 CREATE TABLE IF NOT EXISTS `accounts` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'test comment',
+`id` smallint(5) unsigned NOT NULL COMMENT 'test comment',
   `account_title` varchar(50) NOT NULL,
   `account_slug` varchar(50) NOT NULL,
   `bank_id` smallint(5) unsigned NOT NULL,
@@ -40,22 +37,16 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `account_primarybalance` decimal(14,4) NOT NULL DEFAULT '0.0000',
   `account_desc` varchar(200) DEFAULT NULL,
   `user_id` smallint(5) unsigned NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `slug_unique` (`account_slug`),
-  UNIQUE KEY `cardnumber_unique` (`account_card`),
-  UNIQUE KEY `accountnumber_unique` (`account_number`),
-  KEY `bank_id` (`bank_id`),
-  KEY `accounts_users_id` (`user_id`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `accounts`
 --
 
 INSERT INTO `accounts` (`id`, `account_title`, `account_slug`, `bank_id`, `account_branch`, `account_number`, `account_card`, `account_primarybalance`, `account_desc`, `user_id`, `date_modified`) VALUES
-(10, 'test2', 'test2', 1, 'test', '123', '456', 0.0000, NULL, 150, '2015-02-11 14:46:12'),
-(11, 'a1', 'a1', 100, NULL, '23', NULL, 500.0000, NULL, 150, NULL);
+(10, 'test2', 'test2', 1, 'test', '123', '456', '0.0000', NULL, 150, '2015-02-11 14:46:12'),
+(11, 'a1', 'a1', 100, NULL, '23', NULL, '500.0000', NULL, 150, NULL);
 
 -- --------------------------------------------------------
 
@@ -63,19 +54,16 @@ INSERT INTO `accounts` (`id`, `account_title`, `account_slug`, `bank_id`, `accou
 -- Table structure for table `addons`
 --
 
-DROP TABLE IF EXISTS `addons`;
 CREATE TABLE IF NOT EXISTS `addons` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `addon_name` varchar(50) NOT NULL,
   `addon_slug` varchar(50) NOT NULL,
   `addon_desc` varchar(999) DEFAULT NULL,
   `addon_status` enum('enable','disable','expire','goingtoexpire') NOT NULL DEFAULT 'enable',
   `addon_expire` datetime DEFAULT NULL,
   `addon_installdate` datetime DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `slug_unique` (`addon_slug`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -83,18 +71,15 @@ CREATE TABLE IF NOT EXISTS `addons` (
 -- Table structure for table `attachmentmetas`
 --
 
-DROP TABLE IF EXISTS `attachmentmetas`;
 CREATE TABLE IF NOT EXISTS `attachmentmetas` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL,
   `attachment_id` int(10) unsigned NOT NULL,
   `attachmentmeta_cat` varchar(50) NOT NULL,
   `attachmentmeta_name` varchar(100) NOT NULL,
   `attachmentmeta_value` varchar(200) DEFAULT NULL,
   `attachmentmeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `attachmentmetas_attachments_id` (`attachment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -102,9 +87,8 @@ CREATE TABLE IF NOT EXISTS `attachmentmetas` (
 -- Table structure for table `attachments`
 --
 
-DROP TABLE IF EXISTS `attachments`;
 CREATE TABLE IF NOT EXISTS `attachments` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL,
   `file_id` int(10) unsigned DEFAULT NULL,
   `attachment_title` varchar(100) DEFAULT NULL,
   `attachment_type` enum('productcategory','product','admin','banklogo','post','system','other','file','folder') NOT NULL,
@@ -119,11 +103,8 @@ CREATE TABLE IF NOT EXISTS `attachments` (
   `attachment_order` smallint(5) DEFAULT NULL,
   `attachment_status` enum('normal','trash','deleted','inprogress') NOT NULL DEFAULT 'normal',
   `user_id` smallint(5) unsigned NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `attachments_users_id` (`user_id`) USING BTREE,
-  KEY `attachments_files_id` (`file_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `attachments`
@@ -149,17 +130,14 @@ INSERT INTO `attachments` (`id`, `file_id`, `attachment_title`, `attachment_type
 -- Table structure for table `banks`
 --
 
-DROP TABLE IF EXISTS `banks`;
 CREATE TABLE IF NOT EXISTS `banks` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `bank_title` varchar(50) NOT NULL,
   `bank_slug` varchar(50) NOT NULL,
   `bank_website` varchar(50) DEFAULT NULL,
   `bank_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `slug_unique` (`bank_slug`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=107 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=107 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `banks`
@@ -184,9 +162,8 @@ INSERT INTO `banks` (`id`, `bank_title`, `bank_slug`, `bank_website`, `bank_stat
 -- Table structure for table `comments`
 --
 
-DROP TABLE IF EXISTS `comments`;
 CREATE TABLE IF NOT EXISTS `comments` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `post_id` smallint(5) unsigned DEFAULT NULL COMMENT 'if comment for post',
   `product_id` smallint(5) unsigned DEFAULT NULL COMMENT 'if comment for product',
   `comment_author` varchar(50) DEFAULT NULL,
@@ -197,13 +174,8 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `comment_parent` smallint(5) unsigned DEFAULT NULL,
   `user_id` smallint(5) unsigned DEFAULT NULL,
   `Visitor_id` int(10) unsigned NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `comments_posts_id` (`post_id`) USING BTREE,
-  KEY `comments_users_id` (`user_id`) USING BTREE,
-  KEY `comments_products_id` (`product_id`) USING BTREE,
-  KEY `comments_visitors_id` (`Visitor_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -211,9 +183,8 @@ CREATE TABLE IF NOT EXISTS `comments` (
 -- Table structure for table `costcats`
 --
 
-DROP TABLE IF EXISTS `costcats`;
 CREATE TABLE IF NOT EXISTS `costcats` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `costcat_title` varchar(50) NOT NULL,
   `costcat_slug` varchar(50) NOT NULL,
   `costcat_desc` varchar(200) DEFAULT NULL,
@@ -221,11 +192,8 @@ CREATE TABLE IF NOT EXISTS `costcats` (
   `costcat_order` smallint(5) DEFAULT NULL,
   `costcat_type` enum('income','outcome') DEFAULT NULL,
   `costcat_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `slug_unique` (`costcat_slug`),
-  KEY `type` (`costcat_type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `costcats`
@@ -242,9 +210,8 @@ INSERT INTO `costcats` (`id`, `costcat_title`, `costcat_slug`, `costcat_desc`, `
 -- Table structure for table `costs`
 --
 
-DROP TABLE IF EXISTS `costs`;
 CREATE TABLE IF NOT EXISTS `costs` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `cost_title` varchar(50) NOT NULL,
   `cost_price` decimal(13,4) NOT NULL,
   `costcat_id` smallint(5) unsigned NOT NULL,
@@ -252,12 +219,8 @@ CREATE TABLE IF NOT EXISTS `costs` (
   `cost_date` datetime NOT NULL,
   `cost_desc` varchar(200) DEFAULT NULL,
   `cost_type` enum('income','outcome') NOT NULL DEFAULT 'outcome',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `type_index` (`cost_type`) USING BTREE,
-  KEY `costs_costcats_id` (`costcat_id`) USING BTREE,
-  KEY `costs_accounts_id` (`account_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -265,16 +228,12 @@ CREATE TABLE IF NOT EXISTS `costs` (
 -- Table structure for table `errorlogs`
 --
 
-DROP TABLE IF EXISTS `errorlogs`;
 CREATE TABLE IF NOT EXISTS `errorlogs` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL,
   `user_id` smallint(5) unsigned DEFAULT NULL,
   `errorlog_id` smallint(5) unsigned NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `errorlogs_users_id` (`user_id`) USING BTREE,
-  KEY `errorlogs_errors_id` (`errorlog_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -282,15 +241,12 @@ CREATE TABLE IF NOT EXISTS `errorlogs` (
 -- Table structure for table `errors`
 --
 
-DROP TABLE IF EXISTS `errors`;
 CREATE TABLE IF NOT EXISTS `errors` (
   `id` smallint(5) unsigned NOT NULL,
   `error_title` varchar(100) NOT NULL,
   `error_solution` varchar(999) DEFAULT NULL,
   `error_priority` enum('critical','high','medium','low') NOT NULL DEFAULT 'medium',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `priotity_index` (`error_priority`)
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -299,18 +255,15 @@ CREATE TABLE IF NOT EXISTS `errors` (
 -- Table structure for table `fileparts`
 --
 
-DROP TABLE IF EXISTS `fileparts`;
 CREATE TABLE IF NOT EXISTS `fileparts` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL,
   `file_id` int(10) unsigned NOT NULL,
   `filepart_part` smallint(5) unsigned NOT NULL,
   `filepart_code` varchar(64) DEFAULT NULL,
   `filepart_status` enum('awaiting','start','inprogress','appended','failed','finished') NOT NULL,
   `user_id` smallint(5) DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `fileparts_files_id` (`file_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -318,17 +271,15 @@ CREATE TABLE IF NOT EXISTS `fileparts` (
 -- Table structure for table `files`
 --
 
-DROP TABLE IF EXISTS `files`;
 CREATE TABLE IF NOT EXISTS `files` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL,
   `file_server` smallint(5) unsigned NOT NULL,
   `file_folder` smallint(5) unsigned NOT NULL,
   `file_code` varchar(64) DEFAULT NULL,
   `file_size` float(12,0) NOT NULL,
   `file_status` enum('inprogress','ready','temp') NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -336,32 +287,27 @@ CREATE TABLE IF NOT EXISTS `files` (
 -- Table structure for table `funds`
 --
 
-DROP TABLE IF EXISTS `funds`;
 CREATE TABLE IF NOT EXISTS `funds` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `fund_title` varchar(100) NOT NULL,
   `fund_slug` varchar(100) NOT NULL,
   `location_id` smallint(5) unsigned NOT NULL,
   `fund_initialbalance` decimal(14,4) NOT NULL DEFAULT '0.0000',
   `fund_desc` varchar(200) DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `slug_unique` (`fund_slug`),
-  KEY `funds_locations_id` (`location_id`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `funds`
 --
 
 INSERT INTO `funds` (`id`, `fund_title`, `fund_slug`, `location_id`, `fund_initialbalance`, `fund_desc`, `date_modified`) VALUES
-(2, 'Main', 'main', 1, 0.0000, NULL, '0000-00-00 00:00:00'),
-(3, 'werew', 'wqrwer', 1, 9999999999.9999, NULL, '0000-00-00 00:00:00');
+(2, 'Main', 'main', 1, '0.0000', NULL, '0000-00-00 00:00:00'),
+(3, 'werew', 'wqrwer', 1, '9999999999.9999', NULL, '0000-00-00 00:00:00');
 
 --
 -- Triggers `funds`
 --
-DROP TRIGGER IF EXISTS `funds_BD_inline_block`;
 DELIMITER //
 CREATE TRIGGER `funds_BD_inline_block` BEFORE DELETE ON `funds`
  FOR EACH ROW IF old.id = 1 THEN
@@ -376,17 +322,14 @@ DELIMITER ;
 -- Table structure for table `locations`
 --
 
-DROP TABLE IF EXISTS `locations`;
 CREATE TABLE IF NOT EXISTS `locations` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `location_title` varchar(100) NOT NULL,
   `location_slug` varchar(100) NOT NULL,
   `location_desc` varchar(200) DEFAULT NULL,
   `location_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `slug_unique` (`location_slug`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `locations`
@@ -399,7 +342,6 @@ INSERT INTO `locations` (`id`, `location_title`, `location_slug`, `location_desc
 --
 -- Triggers `locations`
 --
-DROP TRIGGER IF EXISTS `locations_BD_inline_block`;
 DELIMITER //
 CREATE TRIGGER `locations_BD_inline_block` BEFORE DELETE ON `locations`
  FOR EACH ROW IF old.id = 1 THEN
@@ -414,21 +356,16 @@ DELIMITER ;
 -- Table structure for table `notifications`
 --
 
-DROP TABLE IF EXISTS `notifications`;
 CREATE TABLE IF NOT EXISTS `notifications` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL,
   `user_id_sender` smallint(5) unsigned DEFAULT NULL,
   `user_id` smallint(5) unsigned NOT NULL,
   `notification_title` varchar(50) NOT NULL,
   `notification_content` varchar(200) DEFAULT NULL,
   `notification_url` varchar(100) DEFAULT NULL,
   `notification_status` enum('read','unread','expire') NOT NULL DEFAULT 'unread',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `status_index` (`notification_status`),
-  KEY `notifications_users_idsender` (`user_id_sender`) USING BTREE,
-  KEY `notifications_users_id` (`user_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -436,18 +373,15 @@ CREATE TABLE IF NOT EXISTS `notifications` (
 -- Table structure for table `options`
 --
 
-DROP TABLE IF EXISTS `options`;
 CREATE TABLE IF NOT EXISTS `options` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `option_cat` varchar(50) NOT NULL,
   `option_name` varchar(50) NOT NULL,
   `option_value` varchar(200) DEFAULT NULL,
   `option_extra` varchar(400) DEFAULT NULL,
   `option_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `cat+name+value` (`option_cat`,`option_name`,`option_value`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `options`
@@ -490,9 +424,8 @@ INSERT INTO `options` (`id`, `option_cat`, `option_name`, `option_value`, `optio
 -- Table structure for table `papers`
 --
 
-DROP TABLE IF EXISTS `papers`;
 CREATE TABLE IF NOT EXISTS `papers` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `paper_type` varchar(50) DEFAULT NULL,
   `paper_number` varchar(20) DEFAULT NULL,
   `paper_date` datetime DEFAULT NULL,
@@ -501,23 +434,19 @@ CREATE TABLE IF NOT EXISTS `papers` (
   `paper_holder` varchar(100) DEFAULT NULL,
   `paper_desc` varchar(200) DEFAULT NULL,
   `paper_status` enum('pass','recovery','fail','lost','block','delete','inprogress') DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id+bankid_unique` (`id`,`bank_id`) USING BTREE,
-  KEY `bank_id` (`bank_id`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `papers`
 --
 
 INSERT INTO `papers` (`id`, `paper_type`, `paper_number`, `paper_date`, `paper_price`, `bank_id`, `paper_holder`, `paper_desc`, `paper_status`, `date_modified`) VALUES
-(1, NULL, '123', NULL, 500.0000, 1, NULL, NULL, NULL, '0000-00-00 00:00:00');
+(1, NULL, '123', NULL, '500.0000', 1, NULL, NULL, NULL, '0000-00-00 00:00:00');
 
 --
 -- Triggers `papers`
 --
-DROP TRIGGER IF EXISTS `cheques_AU_outline_copy`;
 DELIMITER //
 CREATE TRIGGER `cheques_AU_outline_copy` BEFORE UPDATE ON `papers`
  FOR EACH ROW IF coalesce(OLD.paper_date , '') <> coalesce(NEW.paper_date , '') or
@@ -538,9 +467,8 @@ DELIMITER ;
 -- Table structure for table `permissions`
 --
 
-DROP TABLE IF EXISTS `permissions`;
 CREATE TABLE IF NOT EXISTS `permissions` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `permission_title` varchar(50) NOT NULL,
   `Permission_module` varchar(50) NOT NULL,
   `permission_view` enum('yes','no') NOT NULL DEFAULT 'yes',
@@ -548,10 +476,8 @@ CREATE TABLE IF NOT EXISTS `permissions` (
   `permission_edit` enum('yes','no') NOT NULL DEFAULT 'no',
   `permission_delete` enum('yes','no') NOT NULL DEFAULT 'no',
   `permission_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `name+module_unique` (`permission_title`,`Permission_module`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `permissions`
@@ -568,7 +494,6 @@ INSERT INTO `permissions` (`id`, `permission_title`, `Permission_module`, `permi
 -- Table structure for table `postmetas`
 --
 
-DROP TABLE IF EXISTS `postmetas`;
 CREATE TABLE IF NOT EXISTS `postmetas` (
   `id` int(10) NOT NULL,
   `post_id` smallint(5) unsigned NOT NULL,
@@ -576,9 +501,7 @@ CREATE TABLE IF NOT EXISTS `postmetas` (
   `postmeta_name` varchar(100) NOT NULL,
   `postmeta_value` varchar(999) DEFAULT NULL,
   `postmeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `postmeta_posts_id` (`post_id`) USING BTREE
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -587,9 +510,8 @@ CREATE TABLE IF NOT EXISTS `postmetas` (
 -- Table structure for table `posts`
 --
 
-DROP TABLE IF EXISTS `posts`;
 CREATE TABLE IF NOT EXISTS `posts` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `post_language` char(2) DEFAULT NULL,
   `post_cat` varchar(50) DEFAULT NULL,
   `post_title` varchar(100) NOT NULL,
@@ -603,12 +525,8 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `user_id` smallint(5) unsigned NOT NULL,
   `attachment_id` int(10) unsigned DEFAULT NULL,
   `post_publishdate` datetime DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `slug+catslug_unique` (`post_cat`,`post_slug`),
-  KEY `posts_users_id` (`user_id`) USING BTREE,
-  KEY `posts_attachments_id` (`attachment_id`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `posts`
@@ -624,9 +542,8 @@ INSERT INTO `posts` (`id`, `post_language`, `post_cat`, `post_title`, `post_slug
 -- Table structure for table `productcats`
 --
 
-DROP TABLE IF EXISTS `productcats`;
 CREATE TABLE IF NOT EXISTS `productcats` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `productcat_title` varchar(50) NOT NULL,
   `productcat_slug` varchar(50) NOT NULL,
   `productcat_desc` varchar(200) DEFAULT NULL,
@@ -635,11 +552,8 @@ CREATE TABLE IF NOT EXISTS `productcats` (
   `productcat_order` smallint(5) unsigned DEFAULT NULL,
   `productcat_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `productcat_count` smallint(5) unsigned DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `slug_unique` (`productcat_slug`) USING BTREE,
-  KEY `productcats_attachments_id` (`attachment_id`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `productcats`
@@ -651,7 +565,6 @@ INSERT INTO `productcats` (`id`, `productcat_title`, `productcat_slug`, `product
 --
 -- Triggers `productcats`
 --
-DROP TRIGGER IF EXISTS `productcats_BD_inline_block`;
 DELIMITER //
 CREATE TRIGGER `productcats_BD_inline_block` BEFORE DELETE ON `productcats`
  FOR EACH ROW IF old.id = 1 THEN
@@ -666,18 +579,15 @@ DELIMITER ;
 -- Table structure for table `productmetas`
 --
 
-DROP TABLE IF EXISTS `productmetas`;
 CREATE TABLE IF NOT EXISTS `productmetas` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL,
   `product_id` smallint(5) unsigned NOT NULL,
   `productmeta_cat` varchar(50) NOT NULL,
   `productmeta_name` varchar(100) NOT NULL,
   `productmeta_value` varchar(999) DEFAULT NULL,
   `productmeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `product+cat+name_unique` (`product_id`,`productmeta_cat`,`productmeta_name`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=74 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `productmetas`
@@ -692,7 +602,6 @@ INSERT INTO `productmetas` (`id`, `product_id`, `productmeta_cat`, `productmeta_
 --
 -- Triggers `productmetas`
 --
-DROP TRIGGER IF EXISTS `ProductMeta_AI_outline_copy`;
 DELIMITER //
 CREATE TRIGGER `ProductMeta_AI_outline_copy` AFTER INSERT ON `productmetas`
  FOR EACH ROW IF New.productmeta_cat like 'price%'
@@ -749,7 +658,6 @@ Then
 End if
 //
 DELIMITER ;
-DROP TRIGGER IF EXISTS `ProductMeta_AU_outline_copy2`;
 DELIMITER //
 CREATE TRIGGER `ProductMeta_AU_outline_copy2` AFTER UPDATE ON `productmetas`
  FOR EACH ROW IF New.productmeta_cat like 'price%'
@@ -813,9 +721,8 @@ DELIMITER ;
 -- Table structure for table `productprices`
 --
 
-DROP TABLE IF EXISTS `productprices`;
 CREATE TABLE IF NOT EXISTS `productprices` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL,
   `product_id` smallint(5) unsigned NOT NULL,
   `productmeta_id` int(10) unsigned DEFAULT NULL,
   `productprice_cat` varchar(50) DEFAULT NULL,
@@ -826,13 +733,8 @@ CREATE TABLE IF NOT EXISTS `productprices` (
   `productprice_discount` decimal(13,4) DEFAULT NULL,
   `productprice_vat` decimal(6,4) DEFAULT NULL,
   `productprice_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `startdate` (`productprice_startdate`),
-  KEY `enddate` (`productprice_enddate`),
-  KEY `productprices_products_id` (`product_id`) USING BTREE,
-  KEY `productprices_productmetas_id` (`productmeta_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -840,9 +742,8 @@ CREATE TABLE IF NOT EXISTS `productprices` (
 -- Table structure for table `products`
 --
 
-DROP TABLE IF EXISTS `products`;
 CREATE TABLE IF NOT EXISTS `products` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `product_title` varchar(100) NOT NULL,
   `product_slug` varchar(50) NOT NULL,
   `productcat_id` smallint(5) unsigned NOT NULL DEFAULT '1',
@@ -861,30 +762,23 @@ CREATE TABLE IF NOT EXISTS `products` (
   `attachment_id` int(10) unsigned DEFAULT NULL,
   `product_service` enum('yes','no') NOT NULL DEFAULT 'no',
   `product_sellin` enum('store','online','both') NOT NULL DEFAULT 'both',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `slug_unique` (`product_slug`) USING BTREE,
-  UNIQUE KEY `barcode_unique` (`product_barcode`) USING BTREE,
-  UNIQUE KEY `barcode2_unique` (`product_barcode2`) USING BTREE,
-  KEY `products_attachments_id` (`attachment_id`) USING BTREE,
-  KEY `products_productcats_id` (`productcat_id`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`id`, `product_title`, `product_slug`, `productcat_id`, `product_barcode`, `product_barcode2`, `product_buyprice`, `product_price`, `product_discount`, `product_vat`, `product_initialbalance`, `product_mininventory`, `product_status`, `product_sold`, `product_stock`, `product_carton`, `attachment_id`, `product_service`, `product_sellin`, `date_modified`) VALUES
-(1, 'aa', 'aa', 1, NULL, NULL, 890.0000, 960.0000, 10.0000, 2.0000, 0, NULL, 'unset', 5, NULL, NULL, NULL, 'yes', 'both', '2014-11-07 14:42:53'),
-(2, 'bb', 'bb', 1, NULL, NULL, NULL, 400.0000, 0.0000, NULL, 0, NULL, 'unset', 0, 20, NULL, NULL, 'yes', 'both', '2014-11-07 14:43:31'),
-(3, 'cc', 'cc', 1, NULL, NULL, NULL, 0.0000, 0.0000, 1.0000, 0, NULL, 'unset', 90, 40, NULL, NULL, 'yes', 'both', '2014-06-12 08:56:25'),
-(4, 'dd', 'dd', 1, NULL, NULL, 90.0000, 200.0000, 10.0000, NULL, 0, NULL, 'unset', 8, 42, NULL, NULL, 'yes', 'both', '2014-05-30 22:01:45'),
-(5, 'ee', 'ee', 1, NULL, NULL, 100.0000, 120.0000, 5.0000, NULL, 0, NULL, 'unset', 0, 50, NULL, NULL, 'yes', 'both', '2014-05-30 21:42:55');
+(1, 'aa', 'aa', 1, NULL, NULL, '890.0000', '960.0000', '10.0000', '2.0000', 0, NULL, 'unset', 5, NULL, NULL, NULL, 'yes', 'both', '2014-11-07 14:42:53'),
+(2, 'bb', 'bb', 1, NULL, NULL, NULL, '400.0000', '0.0000', NULL, 0, NULL, 'unset', 0, 20, NULL, NULL, 'yes', 'both', '2014-11-07 14:43:31'),
+(3, 'cc', 'cc', 1, NULL, NULL, NULL, '0.0000', '0.0000', '1.0000', 0, NULL, 'unset', 90, 40, NULL, NULL, 'yes', 'both', '2014-06-12 08:56:25'),
+(4, 'dd', 'dd', 1, NULL, NULL, '90.0000', '200.0000', '10.0000', NULL, 0, NULL, 'unset', 8, 42, NULL, NULL, 'yes', 'both', '2014-05-30 22:01:45'),
+(5, 'ee', 'ee', 1, NULL, NULL, '100.0000', '120.0000', '5.0000', NULL, 0, NULL, 'unset', 0, 50, NULL, NULL, 'yes', 'both', '2014-05-30 21:42:55');
 
 --
 -- Triggers `products`
 --
-DROP TRIGGER IF EXISTS `products_AI_outline_copy`;
 DELIMITER //
 CREATE TRIGGER `products_AI_outline_copy` AFTER INSERT ON `products`
  FOR EACH ROW INSERT INTO productprices
@@ -893,7 +787,6 @@ CREATE TRIGGER `products_AI_outline_copy` AFTER INSERT ON `products`
     VALUES(NEW.id,  NOW(), NEW.product_buyprice, new.product_price, new.product_discount, new.product_vat)
 //
 DELIMITER ;
-DROP TRIGGER IF EXISTS `products_AU_copy2`;
 DELIMITER //
 CREATE TRIGGER `products_AU_copy2` AFTER UPDATE ON `products`
  FOR EACH ROW IF coalesce(OLD.product_buyprice , '')   <> coalesce(NEW.product_buyprice , '')   or
@@ -937,9 +830,8 @@ DELIMITER ;
 -- Table structure for table `receipts`
 --
 
-DROP TABLE IF EXISTS `receipts`;
 CREATE TABLE IF NOT EXISTS `receipts` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL,
   `receipt_code` varchar(30) DEFAULT NULL,
   `receipt_type` enum('income','outcome') DEFAULT 'income',
   `receipt_price` decimal(13,4) NOT NULL DEFAULT '0.0000',
@@ -952,21 +844,15 @@ CREATE TABLE IF NOT EXISTS `receipts` (
   `fund_id` smallint(5) unsigned NOT NULL,
   `user_id` smallint(5) unsigned NOT NULL,
   `user_id_customer` smallint(5) unsigned NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `receipts_papers_id` (`paper_id`) USING BTREE,
-  KEY `receipts_transactions_id` (`transaction_id`) USING BTREE,
-  KEY `receipts_funds_id` (`fund_id`) USING BTREE,
-  KEY `receipts_users_id` (`user_id`),
-  KEY `receipts_users_idcustomer` (`user_id_customer`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `receipts`
 --
 
 INSERT INTO `receipts` (`id`, `receipt_code`, `receipt_type`, `receipt_price`, `receipt_date`, `paper_id`, `receipt_paperdate`, `receipt_paperstatus`, `receipt_desc`, `transaction_id`, `fund_id`, `user_id`, `user_id_customer`, `date_modified`) VALUES
-(6, '123', 'income', 0.0000, '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, 2, 150, 150, '2015-02-11 14:47:59');
+(6, '123', 'income', '0.0000', '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, 2, 150, 150, '2015-02-11 14:47:59');
 
 -- --------------------------------------------------------
 
@@ -974,9 +860,8 @@ INSERT INTO `receipts` (`id`, `receipt_code`, `receipt_type`, `receipt_price`, `
 -- Table structure for table `smss`
 --
 
-DROP TABLE IF EXISTS `smss`;
 CREATE TABLE IF NOT EXISTS `smss` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL,
   `sms_from` varchar(15) DEFAULT NULL,
   `sms_to` varchar(15) DEFAULT NULL,
   `sms_message` varchar(255) DEFAULT NULL,
@@ -986,9 +871,8 @@ CREATE TABLE IF NOT EXISTS `smss` (
   `sms_type` enum('receive','delivery') NOT NULL DEFAULT 'delivery',
   `sms_createdate` datetime NOT NULL,
   `sms_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -996,9 +880,8 @@ CREATE TABLE IF NOT EXISTS `smss` (
 -- Table structure for table `terms`
 --
 
-DROP TABLE IF EXISTS `terms`;
 CREATE TABLE IF NOT EXISTS `terms` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `term_language` char(2) DEFAULT NULL,
   `term_title` varchar(50) NOT NULL,
   `term_slug` varchar(50) NOT NULL,
@@ -1008,10 +891,8 @@ CREATE TABLE IF NOT EXISTS `terms` (
   `term_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `term_count` smallint(5) unsigned DEFAULT NULL,
   `term_order` smallint(5) unsigned DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `slug_unique` (`term_slug`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `terms`
@@ -1029,16 +910,12 @@ INSERT INTO `terms` (`id`, `term_language`, `term_title`, `term_slug`, `term_des
 -- Table structure for table `termusages`
 --
 
-DROP TABLE IF EXISTS `termusages`;
 CREATE TABLE IF NOT EXISTS `termusages` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `term_id` smallint(5) unsigned NOT NULL,
   `post_id` smallint(5) unsigned NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `term+post_unique` (`term_id`,`post_id`) USING BTREE,
-  KEY `termusages_posts_id` (`post_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1046,16 +923,13 @@ CREATE TABLE IF NOT EXISTS `termusages` (
 -- Table structure for table `transactiondetails`
 --
 
-DROP TABLE IF EXISTS `transactiondetails`;
 CREATE TABLE IF NOT EXISTS `transactiondetails` (
   `transactiondetail_row` smallint(5) unsigned DEFAULT NULL,
   `transaction_id` int(10) unsigned NOT NULL,
   `product_id` smallint(5) unsigned NOT NULL,
   `transactiondetail_quantity` int(10) NOT NULL DEFAULT '0',
   `transactiondetail_price` decimal(13,4) NOT NULL,
-  `transactiondetail_discount` decimal(13,4) DEFAULT NULL,
-  UNIQUE KEY `sale+product_unique` (`transaction_id`,`product_id`),
-  KEY `transactiondetails_products_id` (`product_id`) USING BTREE
+  `transactiondetail_discount` decimal(13,4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -1063,15 +937,14 @@ CREATE TABLE IF NOT EXISTS `transactiondetails` (
 --
 
 INSERT INTO `transactiondetails` (`transactiondetail_row`, `transaction_id`, `product_id`, `transactiondetail_quantity`, `transactiondetail_price`, `transactiondetail_discount`) VALUES
-(NULL, 2, 1, 20, 0.0000, NULL),
-(NULL, 2, 2, 20, 0.0000, NULL),
-(NULL, 2, 5, 1, 50.0000, NULL),
-(NULL, 3, 2, 1, 100.0000, NULL);
+(NULL, 2, 1, 20, '0.0000', NULL),
+(NULL, 2, 2, 20, '0.0000', NULL),
+(NULL, 2, 5, 1, '50.0000', NULL),
+(NULL, 3, 2, 1, '100.0000', NULL);
 
 --
 -- Triggers `transactiondetails`
 --
-DROP TRIGGER IF EXISTS `TransactionDetails_AI_outline_update`;
 DELIMITER //
 CREATE TRIGGER `TransactionDetails_AI_outline_update` AFTER INSERT ON `transactiondetails`
  FOR EACH ROW IF TRUE THEN
@@ -1094,7 +967,6 @@ Where
 End if
 //
 DELIMITER ;
-DROP TRIGGER IF EXISTS `TransactionDetails_AU_outline_update`;
 DELIMITER //
 CREATE TRIGGER `TransactionDetails_AU_outline_update` AFTER UPDATE ON `transactiondetails`
  FOR EACH ROW IF TRUE THEN
@@ -1117,7 +989,6 @@ Where
 End if
 //
 DELIMITER ;
-DROP TRIGGER IF EXISTS `TransactionDetails_BD_outline_update`;
 DELIMITER //
 CREATE TRIGGER `TransactionDetails_BD_outline_update` BEFORE DELETE ON `transactiondetails`
  FOR EACH ROW IF TRUE THEN
@@ -1147,18 +1018,15 @@ DELIMITER ;
 -- Table structure for table `transactionmetas`
 --
 
-DROP TABLE IF EXISTS `transactionmetas`;
 CREATE TABLE IF NOT EXISTS `transactionmetas` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL,
   `transaction_id` int(10) unsigned NOT NULL,
   `transactionmeta_cat` varchar(50) NOT NULL,
   `transactionmeta_name` varchar(100) NOT NULL,
   `transactionmeta_value` varchar(200) DEFAULT NULL,
   `transactionmeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `transactionmetas_transactions_id` (`transaction_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1166,29 +1034,25 @@ CREATE TABLE IF NOT EXISTS `transactionmetas` (
 -- Table structure for table `transactions`
 --
 
-DROP TABLE IF EXISTS `transactions`;
 CREATE TABLE IF NOT EXISTS `transactions` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL,
   `transaction_type` enum('sale','purchase','customertostore','storetocompany','anbargardani','install','repair','chqeuebackfail') NOT NULL DEFAULT 'sale',
   `user_id` smallint(5) unsigned NOT NULL,
   `user_id_customer` smallint(5) unsigned NOT NULL,
   `transaction_date` datetime NOT NULL,
   `transaction_sum` decimal(13,4) NOT NULL,
   `transaction_remained` decimal(13,4) DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `transactions_users_id` (`user_id`) USING BTREE,
-  KEY `transactions_users_idcustomer` (`user_id_customer`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `transactions`
 --
 
 INSERT INTO `transactions` (`id`, `transaction_type`, `user_id`, `user_id_customer`, `transaction_date`, `transaction_sum`, `transaction_remained`, `date_modified`) VALUES
-(2, 'sale', 15, 150, '0000-00-00 00:00:00', 50.0000, NULL, '2015-02-11 14:48:20'),
-(3, 'sale', 15, 150, '0000-00-00 00:00:00', 240.0000, NULL, '2015-02-11 14:48:24'),
-(5, 'sale', 15, 150, '0000-00-00 00:00:00', 10000.0000, NULL, '2015-02-11 14:48:27');
+(2, 'sale', 15, 150, '0000-00-00 00:00:00', '50.0000', NULL, '2015-02-11 14:48:20'),
+(3, 'sale', 15, 150, '0000-00-00 00:00:00', '240.0000', NULL, '2015-02-11 14:48:24'),
+(5, 'sale', 15, 150, '0000-00-00 00:00:00', '10000.0000', NULL, '2015-02-11 14:48:27');
 
 -- --------------------------------------------------------
 
@@ -1196,20 +1060,15 @@ INSERT INTO `transactions` (`id`, `transaction_type`, `user_id`, `user_id_custom
 -- Table structure for table `userlogs`
 --
 
-DROP TABLE IF EXISTS `userlogs`;
 CREATE TABLE IF NOT EXISTS `userlogs` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL,
   `userlog_title` varchar(50) DEFAULT NULL,
   `userlog_desc` varchar(999) DEFAULT NULL,
   `userlog_priority` enum('high','medium','low') NOT NULL DEFAULT 'medium',
   `userlog_type` enum('forgetpassword') DEFAULT NULL,
   `user_id` smallint(5) unsigned DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `priority_index` (`userlog_priority`),
-  KEY `type_index` (`userlog_type`),
-  KEY `userlogs_users_id` (`user_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1217,19 +1076,16 @@ CREATE TABLE IF NOT EXISTS `userlogs` (
 -- Table structure for table `usermetas`
 --
 
-DROP TABLE IF EXISTS `usermetas`;
 CREATE TABLE IF NOT EXISTS `usermetas` (
-  `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(6) unsigned NOT NULL,
   `user_id` smallint(6) unsigned NOT NULL,
   `usermeta_cat` varchar(50) NOT NULL,
   `usermeta_name` varchar(100) NOT NULL,
   `usermeta_value` varchar(500) DEFAULT NULL,
   `usermeta_extra` varchar(500) DEFAULT NULL,
   `usermeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `usermeta_users_id` (`user_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1237,9 +1093,8 @@ CREATE TABLE IF NOT EXISTS `usermetas` (
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'use char(36) if i want use uuid',
+`id` smallint(5) unsigned NOT NULL COMMENT 'use char(36) if i want use uuid',
   `user_type` enum('storeadmin','storeemployee','storesupplier','storecustomer','admin','user') DEFAULT 'user',
   `user_mobile` varchar(15) NOT NULL COMMENT 'Mobile',
   `user_pass` varchar(64) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT 'Password',
@@ -1253,12 +1108,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_credit` enum('yes','no') DEFAULT 'no',
   `permission_id` smallint(5) unsigned DEFAULT NULL,
   `user_createdate` datetime NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `mobile_unique` (`user_mobile`) USING BTREE,
-  UNIQUE KEY `email_unique` (`user_email`) USING BTREE,
-  KEY `users_permissions_id` (`permission_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=199 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=199 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
@@ -1278,9 +1129,8 @@ INSERT INTO `users` (`id`, `user_type`, `user_mobile`, `user_pass`, `user_email`
 -- Table structure for table `verifications`
 --
 
-DROP TABLE IF EXISTS `verifications`;
 CREATE TABLE IF NOT EXISTS `verifications` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`id` smallint(5) unsigned NOT NULL,
   `verification_type` enum('emailsignup','emailchangepass','emailrecovery','mobilesignup','mobilechangepass','mobilerecovery') NOT NULL,
   `verification_value` varchar(50) NOT NULL,
   `verification_code` varchar(32) NOT NULL,
@@ -1289,16 +1139,12 @@ CREATE TABLE IF NOT EXISTS `verifications` (
   `verification_verified` enum('yes','no') NOT NULL DEFAULT 'no',
   `verification_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `verification_createdate` datetime DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `code_unique` (`verification_url`,`verification_value`) USING BTREE,
-  KEY `verifications_users_id` (`user_id`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Triggers `verifications`
 --
-DROP TRIGGER IF EXISTS `verification_AU_outline_update`;
 DELIMITER //
 CREATE TRIGGER `verification_AU_outline_update` AFTER UPDATE ON `verifications`
  FOR EACH ROW IF NEW.verification_verified <> OLD.verification_verified THEN
@@ -1315,9 +1161,8 @@ DELIMITER ;
 -- Table structure for table `visitors`
 --
 
-DROP TABLE IF EXISTS `visitors`;
 CREATE TABLE IF NOT EXISTS `visitors` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL,
   `visitor_ip` int(10) unsigned NOT NULL COMMENT 'use the INET_ATON() and INET_NTOA() functions to return the IP address from its numeric value, and vice versa.',
   `visitor_url` varchar(255) NOT NULL,
   `visitor_agent` varchar(255) NOT NULL,
@@ -1325,11 +1170,398 @@ CREATE TABLE IF NOT EXISTS `visitors` (
   `visitor_robot` enum('yes','no') NOT NULL DEFAULT 'no',
   `user_id` smallint(5) unsigned DEFAULT NULL,
   `visitor_createdate` datetime DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `visitors_users_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `accounts`
+--
+ALTER TABLE `accounts`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`account_slug`), ADD UNIQUE KEY `cardnumber_unique` (`account_card`), ADD UNIQUE KEY `accountnumber_unique` (`account_number`), ADD KEY `bank_id` (`bank_id`), ADD KEY `accounts_users_id` (`user_id`) USING BTREE;
+
+--
+-- Indexes for table `addons`
+--
+ALTER TABLE `addons`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`addon_slug`) USING BTREE;
+
+--
+-- Indexes for table `attachmentmetas`
+--
+ALTER TABLE `attachmentmetas`
+ ADD PRIMARY KEY (`id`), ADD KEY `attachmentmetas_attachments_id` (`attachment_id`);
+
+--
+-- Indexes for table `attachments`
+--
+ALTER TABLE `attachments`
+ ADD PRIMARY KEY (`id`), ADD KEY `attachments_users_id` (`user_id`) USING BTREE, ADD KEY `attachments_files_id` (`file_id`);
+
+--
+-- Indexes for table `banks`
+--
+ALTER TABLE `banks`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`bank_slug`);
+
+--
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+ ADD PRIMARY KEY (`id`), ADD KEY `comments_posts_id` (`post_id`) USING BTREE, ADD KEY `comments_users_id` (`user_id`) USING BTREE, ADD KEY `comments_products_id` (`product_id`) USING BTREE, ADD KEY `comments_visitors_id` (`Visitor_id`);
+
+--
+-- Indexes for table `costcats`
+--
+ALTER TABLE `costcats`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`costcat_slug`), ADD KEY `type` (`costcat_type`);
+
+--
+-- Indexes for table `costs`
+--
+ALTER TABLE `costs`
+ ADD PRIMARY KEY (`id`), ADD KEY `type_index` (`cost_type`) USING BTREE, ADD KEY `costs_costcats_id` (`costcat_id`) USING BTREE, ADD KEY `costs_accounts_id` (`account_id`) USING BTREE;
+
+--
+-- Indexes for table `errorlogs`
+--
+ALTER TABLE `errorlogs`
+ ADD PRIMARY KEY (`id`), ADD KEY `errorlogs_users_id` (`user_id`) USING BTREE, ADD KEY `errorlogs_errors_id` (`errorlog_id`) USING BTREE;
+
+--
+-- Indexes for table `errors`
+--
+ALTER TABLE `errors`
+ ADD PRIMARY KEY (`id`), ADD KEY `priotity_index` (`error_priority`);
+
+--
+-- Indexes for table `fileparts`
+--
+ALTER TABLE `fileparts`
+ ADD PRIMARY KEY (`id`), ADD KEY `fileparts_files_id` (`file_id`);
+
+--
+-- Indexes for table `files`
+--
+ALTER TABLE `files`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `funds`
+--
+ALTER TABLE `funds`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`fund_slug`), ADD KEY `funds_locations_id` (`location_id`) USING BTREE;
+
+--
+-- Indexes for table `locations`
+--
+ALTER TABLE `locations`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`location_slug`);
+
+--
+-- Indexes for table `notifications`
+--
+ALTER TABLE `notifications`
+ ADD PRIMARY KEY (`id`), ADD KEY `status_index` (`notification_status`), ADD KEY `notifications_users_idsender` (`user_id_sender`) USING BTREE, ADD KEY `notifications_users_id` (`user_id`) USING BTREE;
+
+--
+-- Indexes for table `options`
+--
+ALTER TABLE `options`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `cat+name+value` (`option_cat`,`option_name`,`option_value`);
+
+--
+-- Indexes for table `papers`
+--
+ALTER TABLE `papers`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id+bankid_unique` (`id`,`bank_id`) USING BTREE, ADD KEY `bank_id` (`bank_id`) USING BTREE;
+
+--
+-- Indexes for table `permissions`
+--
+ALTER TABLE `permissions`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `name+module_unique` (`permission_title`,`Permission_module`) USING BTREE;
+
+--
+-- Indexes for table `postmetas`
+--
+ALTER TABLE `postmetas`
+ ADD PRIMARY KEY (`id`), ADD KEY `postmeta_posts_id` (`post_id`) USING BTREE;
+
+--
+-- Indexes for table `posts`
+--
+ALTER TABLE `posts`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug+catslug_unique` (`post_cat`,`post_slug`), ADD KEY `posts_users_id` (`user_id`) USING BTREE, ADD KEY `posts_attachments_id` (`attachment_id`) USING BTREE;
+
+--
+-- Indexes for table `productcats`
+--
+ALTER TABLE `productcats`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`productcat_slug`) USING BTREE, ADD KEY `productcats_attachments_id` (`attachment_id`) USING BTREE;
+
+--
+-- Indexes for table `productmetas`
+--
+ALTER TABLE `productmetas`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `product+cat+name_unique` (`product_id`,`productmeta_cat`,`productmeta_name`) USING BTREE;
+
+--
+-- Indexes for table `productprices`
+--
+ALTER TABLE `productprices`
+ ADD PRIMARY KEY (`id`), ADD KEY `startdate` (`productprice_startdate`), ADD KEY `enddate` (`productprice_enddate`), ADD KEY `productprices_products_id` (`product_id`) USING BTREE, ADD KEY `productprices_productmetas_id` (`productmeta_id`);
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`product_slug`) USING BTREE, ADD UNIQUE KEY `barcode_unique` (`product_barcode`) USING BTREE, ADD UNIQUE KEY `barcode2_unique` (`product_barcode2`) USING BTREE, ADD KEY `products_attachments_id` (`attachment_id`) USING BTREE, ADD KEY `products_productcats_id` (`productcat_id`) USING BTREE;
+
+--
+-- Indexes for table `receipts`
+--
+ALTER TABLE `receipts`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `receipts_papers_id` (`paper_id`) USING BTREE, ADD KEY `receipts_transactions_id` (`transaction_id`) USING BTREE, ADD KEY `receipts_funds_id` (`fund_id`) USING BTREE, ADD KEY `receipts_users_id` (`user_id`), ADD KEY `receipts_users_idcustomer` (`user_id_customer`);
+
+--
+-- Indexes for table `smss`
+--
+ALTER TABLE `smss`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `terms`
+--
+ALTER TABLE `terms`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`term_slug`) USING BTREE;
+
+--
+-- Indexes for table `termusages`
+--
+ALTER TABLE `termusages`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `term+post_unique` (`term_id`,`post_id`) USING BTREE, ADD KEY `termusages_posts_id` (`post_id`) USING BTREE;
+
+--
+-- Indexes for table `transactiondetails`
+--
+ALTER TABLE `transactiondetails`
+ ADD UNIQUE KEY `sale+product_unique` (`transaction_id`,`product_id`), ADD KEY `transactiondetails_products_id` (`product_id`) USING BTREE;
+
+--
+-- Indexes for table `transactionmetas`
+--
+ALTER TABLE `transactionmetas`
+ ADD PRIMARY KEY (`id`), ADD KEY `transactionmetas_transactions_id` (`transaction_id`);
+
+--
+-- Indexes for table `transactions`
+--
+ALTER TABLE `transactions`
+ ADD PRIMARY KEY (`id`), ADD KEY `transactions_users_id` (`user_id`) USING BTREE, ADD KEY `transactions_users_idcustomer` (`user_id_customer`) USING BTREE;
+
+--
+-- Indexes for table `userlogs`
+--
+ALTER TABLE `userlogs`
+ ADD PRIMARY KEY (`id`), ADD KEY `priority_index` (`userlog_priority`), ADD KEY `type_index` (`userlog_type`), ADD KEY `userlogs_users_id` (`user_id`) USING BTREE;
+
+--
+-- Indexes for table `usermetas`
+--
+ALTER TABLE `usermetas`
+ ADD PRIMARY KEY (`id`), ADD KEY `usermeta_users_id` (`user_id`) USING BTREE;
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `mobile_unique` (`user_mobile`) USING BTREE, ADD UNIQUE KEY `email_unique` (`user_email`) USING BTREE, ADD KEY `users_permissions_id` (`permission_id`);
+
+--
+-- Indexes for table `verifications`
+--
+ALTER TABLE `verifications`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `code_unique` (`verification_url`,`verification_value`) USING BTREE, ADD KEY `verifications_users_id` (`user_id`) USING BTREE;
+
+--
+-- Indexes for table `visitors`
+--
+ALTER TABLE `visitors`
+ ADD PRIMARY KEY (`id`), ADD KEY `visitors_users_id` (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `accounts`
+--
+ALTER TABLE `accounts`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'test comment',AUTO_INCREMENT=12;
+--
+-- AUTO_INCREMENT for table `addons`
+--
+ALTER TABLE `addons`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `attachmentmetas`
+--
+ALTER TABLE `attachmentmetas`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `attachments`
+--
+ALTER TABLE `attachments`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT for table `banks`
+--
+ALTER TABLE `banks`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=107;
+--
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `costcats`
+--
+ALTER TABLE `costcats`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `costs`
+--
+ALTER TABLE `costs`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `errorlogs`
+--
+ALTER TABLE `errorlogs`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `fileparts`
+--
+ALTER TABLE `fileparts`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `files`
+--
+ALTER TABLE `files`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `funds`
+--
+ALTER TABLE `funds`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `locations`
+--
+ALTER TABLE `locations`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `notifications`
+--
+ALTER TABLE `notifications`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `options`
+--
+ALTER TABLE `options`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
+--
+-- AUTO_INCREMENT for table `papers`
+--
+ALTER TABLE `papers`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `permissions`
+--
+ALTER TABLE `permissions`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `posts`
+--
+ALTER TABLE `posts`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `productcats`
+--
+ALTER TABLE `productcats`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `productmetas`
+--
+ALTER TABLE `productmetas`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=74;
+--
+-- AUTO_INCREMENT for table `productprices`
+--
+ALTER TABLE `productprices`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `receipts`
+--
+ALTER TABLE `receipts`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `smss`
+--
+ALTER TABLE `smss`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `terms`
+--
+ALTER TABLE `terms`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `termusages`
+--
+ALTER TABLE `termusages`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `transactionmetas`
+--
+ALTER TABLE `transactionmetas`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `transactions`
+--
+ALTER TABLE `transactions`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `userlogs`
+--
+ALTER TABLE `userlogs`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `usermetas`
+--
+ALTER TABLE `usermetas`
+MODIFY `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'use char(36) if i want use uuid',AUTO_INCREMENT=199;
+--
+-- AUTO_INCREMENT for table `verifications`
+--
+ALTER TABLE `verifications`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT for table `visitors`
+--
+ALTER TABLE `visitors`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
@@ -1338,175 +1570,175 @@ CREATE TABLE IF NOT EXISTS `visitors` (
 -- Constraints for table `accounts`
 --
 ALTER TABLE `accounts`
-  ADD CONSTRAINT `accounts_banks_id` FOREIGN KEY (`bank_id`) REFERENCES `banks` (`id`),
-  ADD CONSTRAINT `accounts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+ADD CONSTRAINT `accounts_banks_id` FOREIGN KEY (`bank_id`) REFERENCES `banks` (`id`),
+ADD CONSTRAINT `accounts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `attachmentmetas`
 --
 ALTER TABLE `attachmentmetas`
-  ADD CONSTRAINT `attachmentmetas_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`);
+ADD CONSTRAINT `attachmentmetas_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`);
 
 --
 -- Constraints for table `attachments`
 --
 ALTER TABLE `attachments`
-  ADD CONSTRAINT `attachments_files_id` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`),
-  ADD CONSTRAINT `attachments_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+ADD CONSTRAINT `attachments_files_id` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`),
+ADD CONSTRAINT `attachments_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `comments`
 --
 ALTER TABLE `comments`
-  ADD CONSTRAINT `comments_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `comments_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `comments_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL,
-  ADD CONSTRAINT `comments_visitors_id` FOREIGN KEY (`Visitor_id`) REFERENCES `visitors` (`id`);
+ADD CONSTRAINT `comments_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE,
+ADD CONSTRAINT `comments_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
+ADD CONSTRAINT `comments_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+ADD CONSTRAINT `comments_visitors_id` FOREIGN KEY (`Visitor_id`) REFERENCES `visitors` (`id`);
 
 --
 -- Constraints for table `costs`
 --
 ALTER TABLE `costs`
-  ADD CONSTRAINT `costs_accounts_id` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `costs_costcats_id` FOREIGN KEY (`costcat_id`) REFERENCES `costcats` (`id`);
+ADD CONSTRAINT `costs_accounts_id` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE,
+ADD CONSTRAINT `costs_costcats_id` FOREIGN KEY (`costcat_id`) REFERENCES `costcats` (`id`);
 
 --
 -- Constraints for table `errorlogs`
 --
 ALTER TABLE `errorlogs`
-  ADD CONSTRAINT `errorlogs_errors_id` FOREIGN KEY (`errorlog_id`) REFERENCES `errors` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `errorlogs_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+ADD CONSTRAINT `errorlogs_errors_id` FOREIGN KEY (`errorlog_id`) REFERENCES `errors` (`id`) ON UPDATE CASCADE,
+ADD CONSTRAINT `errorlogs_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
 
 --
 -- Constraints for table `fileparts`
 --
 ALTER TABLE `fileparts`
-  ADD CONSTRAINT `fileparts_files_id` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `fileparts_files_id` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `funds`
 --
 ALTER TABLE `funds`
-  ADD CONSTRAINT `funds_locations_id` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `funds_locations_id` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `notifications`
 --
 ALTER TABLE `notifications`
-  ADD CONSTRAINT `notifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `notifications_users_idsender` FOREIGN KEY (`user_id_sender`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+ADD CONSTRAINT `notifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+ADD CONSTRAINT `notifications_users_idsender` FOREIGN KEY (`user_id_sender`) REFERENCES `users` (`id`) ON DELETE SET NULL;
 
 --
 -- Constraints for table `papers`
 --
 ALTER TABLE `papers`
-  ADD CONSTRAINT `papers_banks_id` FOREIGN KEY (`bank_id`) REFERENCES `banks` (`id`);
+ADD CONSTRAINT `papers_banks_id` FOREIGN KEY (`bank_id`) REFERENCES `banks` (`id`);
 
 --
 -- Constraints for table `postmetas`
 --
 ALTER TABLE `postmetas`
-  ADD CONSTRAINT `postmeta_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `postmeta_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `posts`
 --
 ALTER TABLE `posts`
-  ADD CONSTRAINT `posts_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`) ON DELETE SET NULL,
-  ADD CONSTRAINT `posts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+ADD CONSTRAINT `posts_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`) ON DELETE SET NULL,
+ADD CONSTRAINT `posts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `productcats`
 --
 ALTER TABLE `productcats`
-  ADD CONSTRAINT `productcats_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`) ON DELETE SET NULL;
+ADD CONSTRAINT `productcats_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`) ON DELETE SET NULL;
 
 --
 -- Constraints for table `productmetas`
 --
 ALTER TABLE `productmetas`
-  ADD CONSTRAINT `productmetas_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+ADD CONSTRAINT `productmetas_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 
 --
 -- Constraints for table `productprices`
 --
 ALTER TABLE `productprices`
-  ADD CONSTRAINT `productprices_productmetas_id` FOREIGN KEY (`productmeta_id`) REFERENCES `productmetas` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `productprices_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `productprices_productmetas_id` FOREIGN KEY (`productmeta_id`) REFERENCES `productmetas` (`id`) ON DELETE CASCADE,
+ADD CONSTRAINT `productprices_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `products_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`) ON DELETE SET NULL,
-  ADD CONSTRAINT `products_productcats_id` FOREIGN KEY (`productcat_id`) REFERENCES `productcats` (`id`);
+ADD CONSTRAINT `products_attachments_id` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`) ON DELETE SET NULL,
+ADD CONSTRAINT `products_productcats_id` FOREIGN KEY (`productcat_id`) REFERENCES `productcats` (`id`);
 
 --
 -- Constraints for table `receipts`
 --
 ALTER TABLE `receipts`
-  ADD CONSTRAINT `receipts_funds_id` FOREIGN KEY (`fund_id`) REFERENCES `funds` (`id`),
-  ADD CONSTRAINT `receipts_papers_id` FOREIGN KEY (`paper_id`) REFERENCES `papers` (`id`),
-  ADD CONSTRAINT `receipts_transactions_id` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`),
-  ADD CONSTRAINT `receipts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `receipts_users_idcustomer` FOREIGN KEY (`user_id_customer`) REFERENCES `users` (`id`);
+ADD CONSTRAINT `receipts_funds_id` FOREIGN KEY (`fund_id`) REFERENCES `funds` (`id`),
+ADD CONSTRAINT `receipts_papers_id` FOREIGN KEY (`paper_id`) REFERENCES `papers` (`id`),
+ADD CONSTRAINT `receipts_transactions_id` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`),
+ADD CONSTRAINT `receipts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+ADD CONSTRAINT `receipts_users_idcustomer` FOREIGN KEY (`user_id_customer`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `termusages`
 --
 ALTER TABLE `termusages`
-  ADD CONSTRAINT `termusages_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `termusages_terms_id` FOREIGN KEY (`term_id`) REFERENCES `terms` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `termusages_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE,
+ADD CONSTRAINT `termusages_terms_id` FOREIGN KEY (`term_id`) REFERENCES `terms` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `transactiondetails`
 --
 ALTER TABLE `transactiondetails`
-  ADD CONSTRAINT `transactiondetails_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
-  ADD CONSTRAINT `transactiondetails_transactions_id` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `transactiondetails_products_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
+ADD CONSTRAINT `transactiondetails_transactions_id` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `transactionmetas`
 --
 ALTER TABLE `transactionmetas`
-  ADD CONSTRAINT `transactionmetas_transactions_id` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `transactionmetas_transactions_id` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `transactions`
 --
 ALTER TABLE `transactions`
-  ADD CONSTRAINT `transactions_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `transactions_users_idcustomer` FOREIGN KEY (`user_id_customer`) REFERENCES `users` (`id`);
+ADD CONSTRAINT `transactions_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+ADD CONSTRAINT `transactions_users_idcustomer` FOREIGN KEY (`user_id_customer`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `userlogs`
 --
 ALTER TABLE `userlogs`
-  ADD CONSTRAINT `userlogs_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION;
+ADD CONSTRAINT `userlogs_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION;
 
 --
 -- Constraints for table `usermetas`
 --
 ALTER TABLE `usermetas`
-  ADD CONSTRAINT `usermetas_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `usermetas_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `users`
 --
 ALTER TABLE `users`
-  ADD CONSTRAINT `users_permissions_id` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`);
+ADD CONSTRAINT `users_permissions_id` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`);
 
 --
 -- Constraints for table `verifications`
 --
 ALTER TABLE `verifications`
-  ADD CONSTRAINT `verifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `verifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `visitors`
 --
 ALTER TABLE `visitors`
-  ADD CONSTRAINT `visitors_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+ADD CONSTRAINT `visitors_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
