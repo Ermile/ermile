@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2015 at 03:58 PM
+-- Generation Time: Apr 19, 2015 at 08:57 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `accounts` (
-`id` smallint(5) unsigned NOT NULL,
+`id` smallint(5) unsigned NOT NULL COMMENT 'test comment',
   `account_title` varchar(50) NOT NULL,
   `account_slug` varchar(50) NOT NULL,
   `bank_id` smallint(5) unsigned NOT NULL,
@@ -51,6 +51,23 @@ INSERT INTO `accounts` (`id`, `account_title`, `account_slug`, `bank_id`, `accou
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `addons`
+--
+
+CREATE TABLE IF NOT EXISTS `addons` (
+`id` smallint(5) unsigned NOT NULL,
+  `addon_name` varchar(50) NOT NULL,
+  `addon_slug` varchar(50) NOT NULL,
+  `addon_desc` varchar(999) DEFAULT NULL,
+  `addon_status` enum('enable','disable','expire','goingtoexpire') NOT NULL DEFAULT 'enable',
+  `addon_expire` datetime DEFAULT NULL,
+  `addon_installdate` datetime DEFAULT NULL,
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `attachmentmetas`
 --
 
@@ -58,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `attachmentmetas` (
 `id` int(10) unsigned NOT NULL,
   `attachment_id` int(10) unsigned NOT NULL,
   `attachmentmeta_cat` varchar(50) NOT NULL,
-  `attachmentmeta_key` varchar(100) NOT NULL,
+  `attachmentmeta_name` varchar(100) NOT NULL,
   `attachmentmeta_value` varchar(200) DEFAULT NULL,
   `attachmentmeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
@@ -147,8 +164,8 @@ INSERT INTO `banks` (`id`, `bank_title`, `bank_slug`, `bank_website`, `bank_stat
 
 CREATE TABLE IF NOT EXISTS `comments` (
 `id` smallint(5) unsigned NOT NULL,
-  `post_id` smallint(5) unsigned DEFAULT NULL,
-  `product_id` smallint(5) unsigned DEFAULT NULL,
+  `post_id` smallint(5) unsigned DEFAULT NULL COMMENT 'if comment for post',
+  `product_id` smallint(5) unsigned DEFAULT NULL COMMENT 'if comment for product',
   `comment_author` varchar(50) DEFAULT NULL,
   `comment_email` varchar(100) DEFAULT NULL,
   `comment_url` varchar(100) DEFAULT NULL,
@@ -244,6 +261,7 @@ CREATE TABLE IF NOT EXISTS `fileparts` (
   `filepart_part` smallint(5) unsigned NOT NULL,
   `filepart_code` varchar(64) DEFAULT NULL,
   `filepart_status` enum('awaiting','start','inprogress','appended','failed','finished') NOT NULL,
+  `user_id` int(10) unsigned DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -339,8 +357,8 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `notifications` (
-`id` bigint(20) unsigned NOT NULL,
-  `user_idsender` int(10) unsigned DEFAULT NULL,
+`id` int(10) unsigned NOT NULL,
+  `user_id_sender` int(10) unsigned DEFAULT NULL,
   `user_id` int(10) unsigned NOT NULL,
   `notification_title` varchar(50) NOT NULL,
   `notification_content` varchar(200) DEFAULT NULL,
@@ -358,7 +376,7 @@ CREATE TABLE IF NOT EXISTS `notifications` (
 CREATE TABLE IF NOT EXISTS `options` (
 `id` smallint(5) unsigned NOT NULL,
   `option_cat` varchar(50) NOT NULL,
-  `option_key` varchar(50) NOT NULL,
+  `option_name` varchar(50) NOT NULL,
   `option_value` varchar(200) DEFAULT NULL,
   `option_extra` varchar(400) DEFAULT NULL,
   `option_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
@@ -369,7 +387,7 @@ CREATE TABLE IF NOT EXISTS `options` (
 -- Dumping data for table `options`
 --
 
-INSERT INTO `options` (`id`, `option_cat`, `option_key`, `option_value`, `option_extra`, `option_status`, `date_modified`) VALUES
+INSERT INTO `options` (`id`, `option_cat`, `option_name`, `option_value`, `option_extra`, `option_status`, `date_modified`) VALUES
 (1, 'global', 'language', 'fa', NULL, '', '2014-05-01 08:18:41'),
 (2, 'global', 'language', 'en', NULL, '', '2014-05-01 08:18:42'),
 (3, 'global', 'title', 'Jibres', NULL, '', '2014-11-07 17:29:37'),
@@ -446,6 +464,33 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `permissions`
+--
+
+CREATE TABLE IF NOT EXISTS `permissions` (
+`id` smallint(5) unsigned NOT NULL,
+  `permission_title` varchar(50) NOT NULL,
+  `Permission_module` varchar(50) NOT NULL,
+  `permission_view` enum('yes','no') NOT NULL DEFAULT 'yes',
+  `permission_add` enum('yes','no') NOT NULL DEFAULT 'no',
+  `permission_edit` enum('yes','no') NOT NULL DEFAULT 'no',
+  `permission_delete` enum('yes','no') NOT NULL DEFAULT 'no',
+  `permission_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `permissions`
+--
+
+INSERT INTO `permissions` (`id`, `permission_title`, `Permission_module`, `permission_view`, `permission_add`, `permission_edit`, `permission_delete`, `permission_status`, `date_modified`) VALUES
+(1, 'admin', 'banks', 'yes', 'yes', 'yes', 'yes', '', '2014-11-08 14:08:16'),
+(2, 'reseller', '', '', '', '', '', '', '0000-00-00 00:00:00'),
+(4, 'admin2', '', 'yes', 'no', 'no', 'no', '', '2014-11-08 09:29:25');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `postmetas`
 --
 
@@ -453,7 +498,7 @@ CREATE TABLE IF NOT EXISTS `postmetas` (
   `id` int(10) NOT NULL,
   `post_id` smallint(5) unsigned NOT NULL,
   `postmeta_cat` varchar(50) NOT NULL,
-  `postmeta_key` varchar(100) NOT NULL,
+  `postmeta_name` varchar(100) NOT NULL,
   `postmeta_value` varchar(999) DEFAULT NULL,
   `postmeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
@@ -538,7 +583,7 @@ CREATE TABLE IF NOT EXISTS `productmetas` (
 `id` int(10) unsigned NOT NULL,
   `product_id` smallint(5) unsigned NOT NULL,
   `productmeta_cat` varchar(50) NOT NULL,
-  `productmeta_key` varchar(100) NOT NULL,
+  `productmeta_name` varchar(100) NOT NULL,
   `productmeta_value` varchar(999) DEFAULT NULL,
   `productmeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
@@ -548,7 +593,7 @@ CREATE TABLE IF NOT EXISTS `productmetas` (
 -- Dumping data for table `productmetas`
 --
 
-INSERT INTO `productmetas` (`id`, `product_id`, `productmeta_cat`, `productmeta_key`, `productmeta_value`, `productmeta_status`, `date_modified`) VALUES
+INSERT INTO `productmetas` (`id`, `product_id`, `productmeta_cat`, `productmeta_name`, `productmeta_value`, `productmeta_status`, `date_modified`) VALUES
 (21, 1, 'price_white', 'product_price', '600', 'enable', '2014-11-07 16:49:50'),
 (22, 1, 'price_white', 'product_buy_price', '5000', 'enable', '2014-11-07 16:49:51'),
 (39, 1, 'price1', 'product_vat', '11', 'enable', '2014-11-07 16:33:34'),
@@ -563,10 +608,10 @@ CREATE TRIGGER `ProductMeta_AI_outline_copy` AFTER INSERT ON `productmetas`
 Then
   # if price cat like price1 or price2 or ...
 
-  IF New.productmeta_key = "product_buyprice" or
-      New.productmeta_key = "product_price"         or
-      New.productmeta_key = "product_discount"  or
-      New.productmeta_key = "product_vat"
+  IF New.productmeta_name = "product_buyprice" or
+      New.productmeta_name = "product_price"         or
+      New.productmeta_name = "product_discount"  or
+      New.productmeta_name = "product_vat"
   THEN
     # if our valid price data inserted
 
@@ -585,25 +630,25 @@ Then
     # now record is exit this is the time of update price_archive table with valid data
 
 
-    IF New.productmeta_key = "product_buyprice"
+    IF New.productmeta_name = "product_buyprice"
     THEN
       UPDATE productprices SET productprice_buyprice = NEW.productmeta_value 
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
     End if;
 
-    IF New.productmeta_key = "product_price"
+    IF New.productmeta_name = "product_price"
     THEN
       UPDATE productprices SET productprice_price = NEW.productmeta_value
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
     End if;
 
-    IF New.productmeta_key = "product_discount"
+    IF New.productmeta_name = "product_discount"
     THEN
       UPDATE productprices SET productprice_discount = NEW.productmeta_value
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
     End if;
 
-    IF New.productmeta_key = "product_vat"
+    IF New.productmeta_name = "product_vat"
     THEN
       UPDATE productprices SET productprice_vat = NEW.productmeta_value
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
@@ -619,10 +664,10 @@ CREATE TRIGGER `ProductMeta_AU_outline_copy2` AFTER UPDATE ON `productmetas`
 Then
   # if price cat like price1 or price2 or ...
 
-  IF New.productmeta_key = "product_buyprice" or
-      New.productmeta_key = "product_price"         or
-      New.productmeta_key = "product_discount"  or
-      New.productmeta_key = "product_vat"
+  IF New.productmeta_name = "product_buyprice" or
+      New.productmeta_name = "product_price"         or
+      New.productmeta_name = "product_discount"  or
+      New.productmeta_name = "product_vat"
   THEN
     # if our valid price data inserted
 
@@ -641,25 +686,25 @@ Then
     # now record is exit this is the time of update price_archive table with valid data
 
 
-    IF New.productmeta_key = "product_buyprice"
+    IF New.productmeta_name = "product_buyprice"
     THEN
       UPDATE productprices SET productprice_buyprice = NEW.productmeta_value 
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
     End if;
 
-    IF New.productmeta_key = "product_price"
+    IF New.productmeta_name = "product_price"
     THEN
       UPDATE productprices SET productprice_price = NEW.productmeta_value
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
     End if;
 
-    IF New.productmeta_key = "product_discount"
+    IF New.productmeta_name = "product_discount"
     THEN
       UPDATE productprices SET productprice_discount = NEW.productmeta_value
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
     End if;
 
-    IF New.productmeta_key = "product_vat"
+    IF New.productmeta_name = "product_vat"
     THEN
       UPDATE productprices SET productprice_vat = NEW.productmeta_value
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
@@ -798,7 +843,7 @@ CREATE TABLE IF NOT EXISTS `receipts` (
   `transaction_id` int(10) unsigned DEFAULT NULL,
   `fund_id` smallint(5) unsigned NOT NULL,
   `user_id` int(10) unsigned NOT NULL,
-  `user_idcustomer` int(10) unsigned NOT NULL,
+  `user_id_customer` int(10) unsigned NOT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
@@ -806,7 +851,7 @@ CREATE TABLE IF NOT EXISTS `receipts` (
 -- Dumping data for table `receipts`
 --
 
-INSERT INTO `receipts` (`id`, `receipt_code`, `receipt_type`, `receipt_price`, `receipt_date`, `paper_id`, `receipt_paperdate`, `receipt_paperstatus`, `receipt_desc`, `transaction_id`, `fund_id`, `user_id`, `user_idcustomer`, `date_modified`) VALUES
+INSERT INTO `receipts` (`id`, `receipt_code`, `receipt_type`, `receipt_price`, `receipt_date`, `paper_id`, `receipt_paperdate`, `receipt_paperstatus`, `receipt_desc`, `transaction_id`, `fund_id`, `user_id`, `user_id_customer`, `date_modified`) VALUES
 (6, '123', 'income', '0.0000', '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, 2, 150, 150, '2015-02-11 14:47:59');
 
 -- --------------------------------------------------------
@@ -836,15 +881,16 @@ CREATE TABLE IF NOT EXISTS `smss` (
 --
 
 CREATE TABLE IF NOT EXISTS `terms` (
-`id` int(10) unsigned NOT NULL,
+`id` smallint(5) unsigned NOT NULL,
   `term_language` char(2) DEFAULT NULL,
   `term_title` varchar(50) NOT NULL,
   `term_slug` varchar(50) NOT NULL,
-  `term_desc` text NOT NULL,
-  `term_parent` int(10) unsigned DEFAULT NULL,
-  `term_type` enum('cat','tag','ref','media','pcat') NOT NULL DEFAULT 'cat',
-  `term_count` smallint(5) unsigned DEFAULT NULL,
+  `term_desc` varchar(200) NOT NULL,
+  `term_parent` smallint(5) unsigned DEFAULT NULL,
+  `term_type` enum('cat','tag') NOT NULL DEFAULT 'cat',
   `term_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
+  `term_count` smallint(5) unsigned DEFAULT NULL,
+  `term_order` smallint(5) unsigned DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
@@ -852,11 +898,11 @@ CREATE TABLE IF NOT EXISTS `terms` (
 -- Dumping data for table `terms`
 --
 
-INSERT INTO `terms` (`id`, `term_language`, `term_title`, `term_slug`, `term_desc`, `term_parent`, `term_type`, `term_count`, `term_status`, `date_modified`) VALUES
-(1, NULL, 'news', 'news', '', NULL, 'cat', NULL, 'enable', '0000-00-00 00:00:00'),
-(5, NULL, 'test', 'test', 't', NULL, 'cat', NULL, 'enable', '2015-01-18 13:33:13'),
-(6, NULL, 'news2', 'news2', 'news 2', 1, 'cat', NULL, 'enable', '2015-01-18 15:45:20'),
-(7, NULL, 'tag1', 'tag1', '', NULL, 'tag', NULL, 'enable', NULL);
+INSERT INTO `terms` (`id`, `term_language`, `term_title`, `term_slug`, `term_desc`, `term_parent`, `term_type`, `term_status`, `term_count`, `term_order`, `date_modified`) VALUES
+(1, NULL, 'news', 'news', '', NULL, 'cat', 'enable', NULL, NULL, '0000-00-00 00:00:00'),
+(5, NULL, 'test', 'test', 't', NULL, 'cat', 'enable', NULL, NULL, '2015-01-18 13:33:13'),
+(6, NULL, 'news2', 'news2', 'news 2', 1, 'cat', 'enable', NULL, NULL, '2015-01-18 15:45:20'),
+(7, NULL, 'tag1', 'tag1', '', NULL, 'tag', 'enable', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -865,9 +911,9 @@ INSERT INTO `terms` (`id`, `term_language`, `term_title`, `term_slug`, `term_des
 --
 
 CREATE TABLE IF NOT EXISTS `termusages` (
-  `term_id` int(10) unsigned NOT NULL,
+`id` smallint(5) unsigned NOT NULL,
+  `term_id` smallint(5) unsigned NOT NULL,
   `post_id` smallint(5) unsigned NOT NULL,
-  `termusage_order` smallint(5) unsigned DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -976,7 +1022,7 @@ CREATE TABLE IF NOT EXISTS `transactionmetas` (
 `id` int(10) unsigned NOT NULL,
   `transaction_id` int(10) unsigned NOT NULL,
   `transactionmeta_cat` varchar(50) NOT NULL,
-  `transactionmeta_key` varchar(100) NOT NULL,
+  `transactionmeta_name` varchar(100) NOT NULL,
   `transactionmeta_value` varchar(200) DEFAULT NULL,
   `transactionmeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
@@ -992,7 +1038,7 @@ CREATE TABLE IF NOT EXISTS `transactions` (
 `id` int(10) unsigned NOT NULL,
   `transaction_type` enum('sale','purchase','customertostore','storetocompany','anbargardani','install','repair','chqeuebackfail') NOT NULL DEFAULT 'sale',
   `user_id` int(10) unsigned NOT NULL,
-  `user_idcustomer` int(10) unsigned NOT NULL,
+  `user_id_customer` int(10) unsigned NOT NULL,
   `transaction_date` datetime NOT NULL,
   `transaction_sum` decimal(13,4) NOT NULL,
   `transaction_remained` decimal(13,4) DEFAULT NULL,
@@ -1003,7 +1049,7 @@ CREATE TABLE IF NOT EXISTS `transactions` (
 -- Dumping data for table `transactions`
 --
 
-INSERT INTO `transactions` (`id`, `transaction_type`, `user_id`, `user_idcustomer`, `transaction_date`, `transaction_sum`, `transaction_remained`, `date_modified`) VALUES
+INSERT INTO `transactions` (`id`, `transaction_type`, `user_id`, `user_id_customer`, `transaction_date`, `transaction_sum`, `transaction_remained`, `date_modified`) VALUES
 (2, 'sale', 15, 150, '0000-00-00 00:00:00', '50.0000', NULL, '2015-02-11 14:48:20'),
 (3, 'sale', 15, 150, '0000-00-00 00:00:00', '240.0000', NULL, '2015-02-11 14:48:24'),
 (5, 'sale', 15, 150, '0000-00-00 00:00:00', '10000.0000', NULL, '2015-02-11 14:48:27');
@@ -1015,7 +1061,7 @@ INSERT INTO `transactions` (`id`, `transaction_type`, `user_id`, `user_idcustome
 --
 
 CREATE TABLE IF NOT EXISTS `userlogs` (
-`id` bigint(20) unsigned NOT NULL,
+`id` int(10) unsigned NOT NULL,
   `userlog_title` varchar(50) DEFAULT NULL,
   `userlog_desc` varchar(999) DEFAULT NULL,
   `userlog_priority` enum('high','medium','low') NOT NULL DEFAULT 'medium',
@@ -1031,11 +1077,12 @@ CREATE TABLE IF NOT EXISTS `userlogs` (
 --
 
 CREATE TABLE IF NOT EXISTS `usermetas` (
-`id` bigint(20) unsigned NOT NULL,
+`id` smallint(6) unsigned NOT NULL,
   `user_id` int(10) unsigned NOT NULL,
   `usermeta_cat` varchar(50) NOT NULL,
-  `usermeta_key` varchar(100) NOT NULL,
+  `usermeta_name` varchar(100) NOT NULL,
   `usermeta_value` varchar(500) DEFAULT NULL,
+  `usermeta_extra` varchar(500) DEFAULT NULL,
   `usermeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -1047,28 +1094,34 @@ CREATE TABLE IF NOT EXISTS `usermetas` (
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
-`id` int(10) unsigned NOT NULL,
-  `user_mobile` varchar(15) NOT NULL,
+`id` int(10) unsigned NOT NULL COMMENT 'use char(36) if i want use uuid',
+  `user_type` enum('storeadmin','storeemployee','storesupplier','storecustomer','admin','user') DEFAULT 'user',
+  `user_mobile` varchar(15) NOT NULL COMMENT 'Mobile',
+  `user_pass` varchar(64) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT 'Password',
   `user_email` varchar(50) DEFAULT NULL,
-  `user_pass` varchar(64) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `user_displayname` varchar(50) DEFAULT NULL,
-  `user_status` enum('active','awaiting','deactive','removed','filter') DEFAULT 'awaiting',
+  `user_gender` enum('male','female') DEFAULT NULL COMMENT 'Gender',
+  `user_nickname` varchar(50) DEFAULT NULL,
+  `user_firstname` varchar(50) DEFAULT NULL COMMENT 'First Name',
+  `user_lastname` varchar(50) DEFAULT NULL COMMENT 'Last Name',
+  `user_birthday` datetime DEFAULT NULL,
+  `user_status` enum('active','awaiting','deactive','removed','filter') DEFAULT 'awaiting' COMMENT 'Status',
+  `user_credit` enum('yes','no') DEFAULT 'no',
   `permission_id` smallint(5) unsigned DEFAULT NULL,
   `user_createdate` datetime NOT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=194 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=199 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `user_mobile`, `user_email`, `user_pass`, `user_displayname`, `user_status`, `permission_id`, `user_createdate`, `date_modified`) VALUES
-(15, '989356032043', NULL, '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', 'Hasan', 'active', 1, '0000-00-00 00:00:00', NULL),
-(150, '989199840989', NULL, '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', 'Mahdi', 'active', 1, '0000-00-00 00:00:00', NULL),
-(190, '989357269759', NULL, '$2y$07$9wj8/jDeQKyY0t0IcUf.xOEy98uf6BaSS7Tg28swrKUDxdKzUVfsy', 'javad', 'active', 1, '2015-01-25 04:52:07', '2015-02-25 01:19:43'),
-(191, '989357269242', NULL, '$2y$07$csWDOaZJcBVPaTilCz/LbutO5HqBV72YW3HBAbxlvMm50SlzRtQ0W', NULL, 'awaiting', NULL, '2015-02-24 11:59:03', NULL),
-(192, '989120001111', NULL, '$2y$07$QUTZcP7LhWtVfHGINrwSy.VjV2WQN518Z.v16cRb7xEX.kwKj0l06', NULL, 'awaiting', 1, '2015-02-25 02:08:40', '2015-02-25 21:24:06'),
-(193, '989120002222', NULL, '$2y$07$QT5xKQWR8LxTSgDSmK2Wg.b7pK/6slmmFTTqTPq3GGKlj1OpY4gOC', NULL, 'awaiting', 2, '2015-02-25 02:13:26', '2015-02-25 21:24:09');
+INSERT INTO `users` (`id`, `user_type`, `user_mobile`, `user_pass`, `user_email`, `user_gender`, `user_nickname`, `user_firstname`, `user_lastname`, `user_birthday`, `user_status`, `user_credit`, `permission_id`, `user_createdate`, `date_modified`) VALUES
+(15, 'admin', '989356032043', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', NULL, 'male', 'Hasan', 'Hasan', 'Salehi', NULL, 'active', 'no', 1, '0000-00-00 00:00:00', NULL),
+(150, 'admin', '989199840989', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', NULL, 'male', 'Mahdi', 'Mahdi', 'Dibaee', NULL, 'active', 'no', 1, '0000-00-00 00:00:00', NULL),
+(190, 'admin', '989357269759', '$2y$07$9wj8/jDeQKyY0t0IcUf.xOEy98uf6BaSS7Tg28swrKUDxdKzUVfsy', NULL, 'male', 'javad', 'Javad', 'Evazzadeh', NULL, 'active', 'no', 1, '2015-01-25 04:52:07', '2015-02-25 01:19:43'),
+(191, 'storeadmin', '989357269242', '$2y$07$csWDOaZJcBVPaTilCz/LbutO5HqBV72YW3HBAbxlvMm50SlzRtQ0W', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', NULL, '2015-02-24 11:59:03', NULL),
+(192, 'storeadmin', '989120001111', '$2y$07$QUTZcP7LhWtVfHGINrwSy.VjV2WQN518Z.v16cRb7xEX.kwKj0l06', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', 1, '2015-02-25 02:08:40', '2015-02-25 21:24:06'),
+(193, 'storeadmin', '989120002222', '$2y$07$QT5xKQWR8LxTSgDSmK2Wg.b7pK/6slmmFTTqTPq3GGKlj1OpY4gOC', NULL, NULL, NULL, NULL, NULL, NULL, 'awaiting', 'no', 2, '2015-02-25 02:13:26', '2015-02-25 21:24:09');
 
 -- --------------------------------------------------------
 
@@ -1087,7 +1140,7 @@ CREATE TABLE IF NOT EXISTS `verifications` (
   `verification_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `verification_createdate` datetime DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Triggers `verifications`
@@ -1110,7 +1163,7 @@ DELIMITER ;
 
 CREATE TABLE IF NOT EXISTS `visitors` (
 `id` int(10) unsigned NOT NULL,
-  `visitor_ip` int(10) unsigned NOT NULL,
+  `visitor_ip` int(10) unsigned NOT NULL COMMENT 'use the INET_ATON() and INET_NTOA() functions to return the IP address from its numeric value, and vice versa.',
   `visitor_url` varchar(255) NOT NULL,
   `visitor_agent` varchar(255) NOT NULL,
   `visitor_referer` varchar(255) DEFAULT NULL,
@@ -1129,6 +1182,12 @@ CREATE TABLE IF NOT EXISTS `visitors` (
 --
 ALTER TABLE `accounts`
  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`account_slug`), ADD UNIQUE KEY `cardnumber_unique` (`account_card`), ADD UNIQUE KEY `accountnumber_unique` (`account_number`), ADD KEY `bank_id` (`bank_id`), ADD KEY `accounts_users_id` (`user_id`) USING BTREE;
+
+--
+-- Indexes for table `addons`
+--
+ALTER TABLE `addons`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`addon_slug`) USING BTREE;
 
 --
 -- Indexes for table `attachmentmetas`
@@ -1206,19 +1265,25 @@ ALTER TABLE `locations`
 -- Indexes for table `notifications`
 --
 ALTER TABLE `notifications`
- ADD PRIMARY KEY (`id`), ADD KEY `status_index` (`notification_status`), ADD KEY `notifications_users_idsender` (`user_idsender`) USING BTREE, ADD KEY `notifications_users_id` (`user_id`) USING BTREE;
+ ADD PRIMARY KEY (`id`), ADD KEY `status_index` (`notification_status`), ADD KEY `notifications_users_idsender` (`user_id_sender`) USING BTREE, ADD KEY `notifications_users_id` (`user_id`) USING BTREE;
 
 --
 -- Indexes for table `options`
 --
 ALTER TABLE `options`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `cat+name+value` (`option_cat`,`option_key`,`option_value`);
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `cat+name+value` (`option_cat`,`option_name`,`option_value`);
 
 --
 -- Indexes for table `papers`
 --
 ALTER TABLE `papers`
  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id+bankid_unique` (`id`,`bank_id`) USING BTREE, ADD KEY `bank_id` (`bank_id`) USING BTREE;
+
+--
+-- Indexes for table `permissions`
+--
+ALTER TABLE `permissions`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `name+module_unique` (`permission_title`,`Permission_module`) USING BTREE;
 
 --
 -- Indexes for table `postmetas`
@@ -1242,7 +1307,7 @@ ALTER TABLE `productcats`
 -- Indexes for table `productmetas`
 --
 ALTER TABLE `productmetas`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `product+cat+name_unique` (`product_id`,`productmeta_cat`,`productmeta_key`) USING BTREE;
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `product+cat+name_unique` (`product_id`,`productmeta_cat`,`productmeta_name`) USING BTREE;
 
 --
 -- Indexes for table `productprices`
@@ -1260,7 +1325,7 @@ ALTER TABLE `products`
 -- Indexes for table `receipts`
 --
 ALTER TABLE `receipts`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `receipts_papers_id` (`paper_id`) USING BTREE, ADD KEY `receipts_transactions_id` (`transaction_id`) USING BTREE, ADD KEY `receipts_funds_id` (`fund_id`) USING BTREE, ADD KEY `receipts_users_id` (`user_id`), ADD KEY `receipts_users_idcustomer` (`user_idcustomer`);
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `receipts_papers_id` (`paper_id`) USING BTREE, ADD KEY `receipts_transactions_id` (`transaction_id`) USING BTREE, ADD KEY `receipts_funds_id` (`fund_id`) USING BTREE, ADD KEY `receipts_users_id` (`user_id`), ADD KEY `receipts_users_idcustomer` (`user_id_customer`);
 
 --
 -- Indexes for table `smss`
@@ -1278,7 +1343,7 @@ ALTER TABLE `terms`
 -- Indexes for table `termusages`
 --
 ALTER TABLE `termusages`
- ADD UNIQUE KEY `term+post_unique` (`term_id`,`post_id`) USING BTREE, ADD KEY `termusages_posts_id` (`post_id`) USING BTREE;
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `term+post_unique` (`term_id`,`post_id`) USING BTREE, ADD KEY `termusages_posts_id` (`post_id`) USING BTREE;
 
 --
 -- Indexes for table `transactiondetails`
@@ -1296,7 +1361,7 @@ ALTER TABLE `transactionmetas`
 -- Indexes for table `transactions`
 --
 ALTER TABLE `transactions`
- ADD PRIMARY KEY (`id`), ADD KEY `transactions_users_id` (`user_id`) USING BTREE, ADD KEY `transactions_users_idcustomer` (`user_idcustomer`) USING BTREE;
+ ADD PRIMARY KEY (`id`), ADD KEY `transactions_users_id` (`user_id`) USING BTREE, ADD KEY `transactions_users_idcustomer` (`user_id_customer`) USING BTREE;
 
 --
 -- Indexes for table `userlogs`
@@ -1336,7 +1401,12 @@ ALTER TABLE `visitors`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'test comment',AUTO_INCREMENT=12;
+--
+-- AUTO_INCREMENT for table `addons`
+--
+ALTER TABLE `addons`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `attachmentmetas`
 --
@@ -1396,7 +1466,7 @@ MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `options`
 --
@@ -1407,6 +1477,11 @@ MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
 --
 ALTER TABLE `papers`
 MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `permissions`
+--
+ALTER TABLE `permissions`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `posts`
 --
@@ -1446,7 +1521,12 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `terms`
 --
 ALTER TABLE `terms`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `termusages`
+--
+ALTER TABLE `termusages`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `transactionmetas`
 --
@@ -1461,22 +1541,22 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 -- AUTO_INCREMENT for table `userlogs`
 --
 ALTER TABLE `userlogs`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `usermetas`
 --
 ALTER TABLE `usermetas`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=194;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'use char(36) if i want use uuid',AUTO_INCREMENT=199;
 --
 -- AUTO_INCREMENT for table `verifications`
 --
 ALTER TABLE `verifications`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `visitors`
 --
@@ -1545,7 +1625,8 @@ ADD CONSTRAINT `funds_locations_id` FOREIGN KEY (`location_id`) REFERENCES `loca
 -- Constraints for table `notifications`
 --
 ALTER TABLE `notifications`
-ADD CONSTRAINT `notifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `notifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+ADD CONSTRAINT `notifications_users_idsender` FOREIGN KEY (`user_id_sender`) REFERENCES `users` (`id`) ON DELETE SET NULL;
 
 --
 -- Constraints for table `papers`
@@ -1599,7 +1680,8 @@ ALTER TABLE `receipts`
 ADD CONSTRAINT `receipts_funds_id` FOREIGN KEY (`fund_id`) REFERENCES `funds` (`id`),
 ADD CONSTRAINT `receipts_papers_id` FOREIGN KEY (`paper_id`) REFERENCES `papers` (`id`),
 ADD CONSTRAINT `receipts_transactions_id` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`),
-ADD CONSTRAINT `receipts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+ADD CONSTRAINT `receipts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+ADD CONSTRAINT `receipts_users_idcustomer` FOREIGN KEY (`user_id_customer`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `termusages`
@@ -1625,7 +1707,8 @@ ADD CONSTRAINT `transactionmetas_transactions_id` FOREIGN KEY (`transaction_id`)
 -- Constraints for table `transactions`
 --
 ALTER TABLE `transactions`
-ADD CONSTRAINT `transactions_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+ADD CONSTRAINT `transactions_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+ADD CONSTRAINT `transactions_users_idcustomer` FOREIGN KEY (`user_id_customer`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `userlogs`
@@ -1638,6 +1721,12 @@ ADD CONSTRAINT `userlogs_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`
 --
 ALTER TABLE `usermetas`
 ADD CONSTRAINT `usermetas_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `users`
+--
+ALTER TABLE `users`
+ADD CONSTRAINT `users_permissions_id` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`);
 
 --
 -- Constraints for table `verifications`

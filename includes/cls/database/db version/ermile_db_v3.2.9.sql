@@ -563,10 +563,10 @@ CREATE TRIGGER `ProductMeta_AI_outline_copy` AFTER INSERT ON `productmetas`
 Then
   # if price cat like price1 or price2 or ...
 
-  IF New.productmeta_key = "product_buyprice" or
-      New.productmeta_key = "product_price"         or
-      New.productmeta_key = "product_discount"  or
-      New.productmeta_key = "product_vat"
+  IF New.productmeta_name = "product_buyprice" or
+      New.productmeta_name = "product_price"         or
+      New.productmeta_name = "product_discount"  or
+      New.productmeta_name = "product_vat"
   THEN
     # if our valid price data inserted
 
@@ -585,25 +585,25 @@ Then
     # now record is exit this is the time of update price_archive table with valid data
 
 
-    IF New.productmeta_key = "product_buyprice"
+    IF New.productmeta_name = "product_buyprice"
     THEN
       UPDATE productprices SET productprice_buyprice = NEW.productmeta_value 
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
     End if;
 
-    IF New.productmeta_key = "product_price"
+    IF New.productmeta_name = "product_price"
     THEN
       UPDATE productprices SET productprice_price = NEW.productmeta_value
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
     End if;
 
-    IF New.productmeta_key = "product_discount"
+    IF New.productmeta_name = "product_discount"
     THEN
       UPDATE productprices SET productprice_discount = NEW.productmeta_value
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
     End if;
 
-    IF New.productmeta_key = "product_vat"
+    IF New.productmeta_name = "product_vat"
     THEN
       UPDATE productprices SET productprice_vat = NEW.productmeta_value
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
@@ -619,10 +619,10 @@ CREATE TRIGGER `ProductMeta_AU_outline_copy2` AFTER UPDATE ON `productmetas`
 Then
   # if price cat like price1 or price2 or ...
 
-  IF New.productmeta_key = "product_buyprice" or
-      New.productmeta_key = "product_price"         or
-      New.productmeta_key = "product_discount"  or
-      New.productmeta_key = "product_vat"
+  IF New.productmeta_name = "product_buyprice" or
+      New.productmeta_name = "product_price"         or
+      New.productmeta_name = "product_discount"  or
+      New.productmeta_name = "product_vat"
   THEN
     # if our valid price data inserted
 
@@ -641,25 +641,25 @@ Then
     # now record is exit this is the time of update price_archive table with valid data
 
 
-    IF New.productmeta_key = "product_buyprice"
+    IF New.productmeta_name = "product_buyprice"
     THEN
       UPDATE productprices SET productprice_buyprice = NEW.productmeta_value 
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
     End if;
 
-    IF New.productmeta_key = "product_price"
+    IF New.productmeta_name = "product_price"
     THEN
       UPDATE productprices SET productprice_price = NEW.productmeta_value
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
     End if;
 
-    IF New.productmeta_key = "product_discount"
+    IF New.productmeta_name = "product_discount"
     THEN
       UPDATE productprices SET productprice_discount = NEW.productmeta_value
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
     End if;
 
-    IF New.productmeta_key = "product_vat"
+    IF New.productmeta_name = "product_vat"
     THEN
       UPDATE productprices SET productprice_vat = NEW.productmeta_value
         WHERE  product_id = NEW.product_id and productprice_cat = New.productmeta_cat and productprice_enddate is null;
