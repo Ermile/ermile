@@ -3,7 +3,7 @@ namespace database\ermile;
 class errorlogs 
 {
 	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',     );
-	public $user_id       = array('null' =>'YES', 'show' =>'NO',  'label'=>'user',          'type' => 'smallint@5', 'foreign'=>'users@id!user_nickname');
+	public $user_id       = array('null' =>'YES', 'show' =>'NO',  'label'=>'user',          'type' => 'int@10',     'foreign'=>'users@id!user_nickname');
 	public $errorlog_id   = array('null' =>'NO',  'show' =>'YES', 'label'=>'errorlog',      'type' => 'smallint@5', 'foreign'=>'errorlogs@id!errorlog_title');
 	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@', );
 

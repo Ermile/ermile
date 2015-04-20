@@ -2,13 +2,13 @@
 namespace database\ermile;
 class visitors 
 {
-	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',         );
+	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'bigint@20',      );
 	public $visitor_ip         = array('null' =>'NO',  'show' =>'YES', 'label'=>'ip',            'type' => 'int@10',         );
 	public $visitor_url        = array('null' =>'NO',  'show' =>'YES', 'label'=>'url',           'type' => 'varchar@255',    );
 	public $visitor_agent      = array('null' =>'NO',  'show' =>'YES', 'label'=>'agent',         'type' => 'varchar@255',    );
 	public $visitor_referer    = array('null' =>'YES', 'show' =>'YES', 'label'=>'referer',       'type' => 'varchar@255',    );
 	public $visitor_robot      = array('null' =>'NO',  'show' =>'YES', 'label'=>'robot',         'type' => 'enum@yes,no!no', );
-	public $user_id            = array('null' =>'YES', 'show' =>'NO',  'label'=>'user',          'type' => 'smallint@5',     'foreign'=>'users@id!user_nickname');
+	public $user_id            = array('null' =>'YES', 'show' =>'NO',  'label'=>'user',          'type' => 'int@10',         'foreign'=>'users@id!user_nickname');
 	public $visitor_createdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'createdate',    'type' => 'datetime@',      );
 	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',     );
 

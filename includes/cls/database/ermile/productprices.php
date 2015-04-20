@@ -2,8 +2,8 @@
 namespace database\ermile;
 class productprices 
 {
-	public $id                     = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                            );
-	public $product_id             = array('null' =>'NO',  'show' =>'YES', 'label'=>'product',       'type' => 'smallint@5',                        'foreign'=>'products@id!product_title');
+	public $id                     = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'bigint@20',                         );
+	public $product_id             = array('null' =>'NO',  'show' =>'YES', 'label'=>'product',       'type' => 'int@10',                            'foreign'=>'products@id!product_title');
 	public $productmeta_id         = array('null' =>'YES', 'show' =>'YES', 'label'=>'productmeta',   'type' => 'int@10',                            'foreign'=>'productmetas@id!productmeta_title');
 	public $productprice_cat       = array('null' =>'YES', 'show' =>'YES', 'label'=>'cat',           'type' => 'varchar@50',                        );
 	public $productprice_startdate = array('null' =>'NO',  'show' =>'YES', 'label'=>'startdate',     'type' => 'datetime@',                         );
@@ -22,7 +22,7 @@ class productprices
 	//------------------------------------------------------------------ id - foreign key
 	public function product_id() 
 	{
-		$this->form("select")->name("product_")->min(0)->max(99999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("product_")->min(0)->max(9999999999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 

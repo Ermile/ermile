@@ -4,7 +4,7 @@ class options
 {
 	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',                        );
 	public $option_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'cat',           'type' => 'varchar@50',                        );
-	public $option_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'name',          'type' => 'varchar@50',                        );
+	public $option_key    = array('null' =>'NO',  'show' =>'YES', 'label'=>'key',           'type' => 'varchar@50',                        );
 	public $option_value  = array('null' =>'YES', 'show' =>'YES', 'label'=>'value',         'type' => 'varchar@200',                       );
 	public $option_extra  = array('null' =>'YES', 'show' =>'YES', 'label'=>'extra',         'type' => 'varchar@400',                       );
 	public $option_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable', );
@@ -17,9 +17,9 @@ class options
 	{
 		$this->form("text")->name("cat")->maxlength(50)->required()->type('text');
 	}
-	public function option_name() 
+	public function option_key() 
 	{
-		$this->form("text")->name("name")->maxlength(50)->required()->type('text');
+		$this->form("text")->name("key")->maxlength(50)->required()->type('text');
 	}
 	public function option_value() 
 	{

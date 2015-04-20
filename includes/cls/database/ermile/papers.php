@@ -2,7 +2,7 @@
 namespace database\ermile;
 class papers 
 {
-	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',                                           );
+	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                                               );
 	public $paper_type    = array('null' =>'YES', 'show' =>'YES', 'label'=>'type',          'type' => 'varchar@50',                                           );
 	public $paper_number  = array('null' =>'YES', 'show' =>'YES', 'label'=>'number',        'type' => 'varchar@20',                                           );
 	public $paper_date    = array('null' =>'YES', 'show' =>'YES', 'label'=>'date',          'type' => 'datetime@',                                            );

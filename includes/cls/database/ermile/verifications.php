@@ -7,7 +7,7 @@ class verifications
 	public $verification_value      = array('null' =>'NO',  'show' =>'YES', 'label'=>'value',         'type' => 'varchar@50',                                                                                  );
 	public $verification_code       = array('null' =>'NO',  'show' =>'YES', 'label'=>'code',          'type' => 'varchar@32',                                                                                  );
 	public $verification_url        = array('null' =>'YES', 'show' =>'YES', 'label'=>'url',           'type' => 'varchar@100',                                                                                 );
-	public $user_id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'user',          'type' => 'smallint@5',                                                                                  'foreign'=>'users@id!user_nickname');
+	public $user_id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'user',          'type' => 'int@10',                                                                                      'foreign'=>'users@id!user_nickname');
 	public $verification_verified   = array('null' =>'NO',  'show' =>'YES', 'label'=>'verified',      'type' => 'enum@yes,no!no',                                                                              );
 	public $verification_status     = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable',                                                           );
 	public $verification_createdate = array('null' =>'YES', 'show' =>'YES', 'label'=>'createdate',    'type' => 'datetime@',                                                                                   );

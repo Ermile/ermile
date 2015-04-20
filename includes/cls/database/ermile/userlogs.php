@@ -2,12 +2,12 @@
 namespace database\ermile;
 class userlogs 
 {
-	public $id               = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                      );
+	public $id               = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'bigint@20',                   );
 	public $userlog_title    = array('null' =>'YES', 'show' =>'YES', 'label'=>'title',         'type' => 'varchar@50',                  );
 	public $userlog_desc     = array('null' =>'YES', 'show' =>'NO',  'label'=>'desc',          'type' => 'varchar@999',                 );
 	public $userlog_priority = array('null' =>'NO',  'show' =>'YES', 'label'=>'priority',      'type' => 'enum@high,medium,low!medium', );
 	public $userlog_type     = array('null' =>'YES', 'show' =>'YES', 'label'=>'type',          'type' => 'enum@forgetpassword',         );
-	public $user_id          = array('null' =>'YES', 'show' =>'NO',  'label'=>'user',          'type' => 'smallint@5',                  'foreign'=>'users@id!user_nickname');
+	public $user_id          = array('null' =>'YES', 'show' =>'NO',  'label'=>'user',          'type' => 'int@10',                      'foreign'=>'users@id!user_nickname');
 	public $date_modified    = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                  );
 
 

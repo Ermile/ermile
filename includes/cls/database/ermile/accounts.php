@@ -11,7 +11,7 @@ class accounts
 	public $account_card           = array('null' =>'YES', 'show' =>'YES', 'label'=>'card',          'type' => 'varchar@30',          );
 	public $account_primarybalance = array('null' =>'NO',  'show' =>'YES', 'label'=>'primarybalance','type' => 'decimal@14,4!0.0000', );
 	public $account_desc           = array('null' =>'YES', 'show' =>'NO',  'label'=>'desc',          'type' => 'varchar@200',         );
-	public $user_id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'user',          'type' => 'smallint@5',          'foreign'=>'users@id!user_nickname');
+	public $user_id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'user',          'type' => 'int@10',              'foreign'=>'users@id!user_nickname');
 	public $date_modified          = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',          );
 
 

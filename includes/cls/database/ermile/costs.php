@@ -2,7 +2,7 @@
 namespace database\ermile;
 class costs 
 {
-	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',                  );
+	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                      );
 	public $cost_title    = array('null' =>'NO',  'show' =>'YES', 'label'=>'title',         'type' => 'varchar@50',                  );
 	public $cost_price    = array('null' =>'NO',  'show' =>'YES', 'label'=>'price',         'type' => 'decimal@13,4',                );
 	public $costcat_id    = array('null' =>'NO',  'show' =>'YES', 'label'=>'costcat',       'type' => 'smallint@5',                  'foreign'=>'costcats@id!costcat_title');
@@ -10,6 +10,7 @@ class costs
 	public $cost_date     = array('null' =>'NO',  'show' =>'YES', 'label'=>'date',          'type' => 'datetime@',                   );
 	public $cost_desc     = array('null' =>'YES', 'show' =>'NO',  'label'=>'desc',          'type' => 'varchar@200',                 );
 	public $cost_type     = array('null' =>'NO',  'show' =>'YES', 'label'=>'type',          'type' => 'enum@income,outcome!outcome', );
+	public $paper_id      = array('null' =>'YES', 'show' =>'YES', 'label'=>'paper',         'type' => 'int@10',                      'foreign'=>'papers@id!id');
 	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                  );
 
 
@@ -54,6 +55,13 @@ class costs
 	public function cost_type() 
 	{
 		$this->form("select")->name("type")->type("select")->required()->validate();
+		$this->setChild();
+	}
+
+	//------------------------------------------------------------------ id - foreign key
+	public function paper_id() 
+	{
+		$this->form("select")->name("paper_")->min(0)->max(9999999999)->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function date_modified() {}

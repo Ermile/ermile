@@ -16,70 +16,10 @@ function transtext()
 	echo T_("desc");                // account_desc
 	echo T_("user");                // user_id
 	echo T_("modified");            // date_modified
-	echo T_("enable");              // Enum enable
-	echo T_("disable");             // Enum disable
-	echo T_("expire");              // Enum expire
-	echo T_("goingtoexpire");       // Enum goingtoexpire
-
-	// ------------------------------------------------------------------- Table addons
-	echo T_("addons");              // Table addons
-	echo T_("addon");               // addon
-	echo T_("name");                // addon_name
-	echo T_("slug");                // addon_slug
-	echo T_("desc");                // addon_desc
-	echo T_("status");              // addon_status
-	echo T_("expire");              // addon_expire
-	echo T_("installdate");         // addon_installdate
-
-	// ------------------------------------------------------------------- Table attachmentmetas
-	echo T_("attachmentmetas");     // Table attachmentmetas
-	echo T_("attachmentmeta");      // attachmentmeta
-	echo T_("attachment");          // attachment_id
-	echo T_("cat");                 // attachmentmeta_cat
-	echo T_("name");                // attachmentmeta_name
-	echo T_("value");               // attachmentmeta_value
-	echo T_("status");              // attachmentmeta_status
-	echo T_("productcategory");     // Enum productcategory
-	echo T_("product");             // Enum product
-	echo T_("admin");               // Enum admin
-	echo T_("banklogo");            // Enum banklogo
-	echo T_("post");                // Enum post
-	echo T_("system");              // Enum system
-	echo T_("other");               // Enum other
-	echo T_("file");                // Enum file
-	echo T_("folder");              // Enum folder
-	echo T_("normal");              // Enum normal
-	echo T_("trash");               // Enum trash
-	echo T_("deleted");             // Enum deleted
-	echo T_("inprogress");          // Enum inprogress
-
-	// ------------------------------------------------------------------- Table attachments
-	echo T_("attachments");         // Table attachments
-	echo T_("attachment");          // attachment
-	echo T_("file");                // file_id
-	echo T_("title");               // attachment_title
-	echo T_("type");                // attachment_type
-	echo T_("addr");                // attachment_addr
-	echo T_("name");                // attachment_name
-	echo T_("ext");                 // attachment_ext
-	echo T_("size");                // attachment_size
-	echo T_("desc");                // attachment_desc
-	echo T_("parent");              // attachment_parent
-	echo T_("depth");               // attachment_depth
-	echo T_("count");               // attachment_count
-	echo T_("order");               // attachment_order
-	echo T_("status");              // attachment_status
-
-	// ------------------------------------------------------------------- Table banks
-	echo T_("banks");               // Table banks
-	echo T_("bank");                // bank
-	echo T_("title");               // bank_title
-	echo T_("slug");                // bank_slug
-	echo T_("website");             // bank_website
-	echo T_("status");              // bank_status
 	echo T_("approved");            // Enum approved
 	echo T_("unapproved");          // Enum unapproved
 	echo T_("spam");                // Enum spam
+	echo T_("deleted");             // Enum deleted
 
 	// ------------------------------------------------------------------- Table comments
 	echo T_("comments");            // Table comments
@@ -95,6 +35,9 @@ function transtext()
 	echo T_("visitor");             // Visitor_id
 	echo T_("income");              // Enum income
 	echo T_("outcome");             // Enum outcome
+	echo T_("enable");              // Enum enable
+	echo T_("disable");             // Enum disable
+	echo T_("expire");              // Enum expire
 
 	// ------------------------------------------------------------------- Table costcats
 	echo T_("costcats");            // Table costcats
@@ -117,6 +60,7 @@ function transtext()
 	echo T_("date");                // cost_date
 	echo T_("desc");                // cost_desc
 	echo T_("type");                // cost_type
+	echo T_("paper");               // paper_id
 
 	// ------------------------------------------------------------------- Table errorlogs
 	echo T_("errorlogs");           // Table errorlogs
@@ -135,6 +79,7 @@ function transtext()
 	echo T_("priority");            // error_priority
 	echo T_("awaiting");            // Enum awaiting
 	echo T_("start");               // Enum start
+	echo T_("inprogress");          // Enum inprogress
 	echo T_("appended");            // Enum appended
 	echo T_("failed");              // Enum failed
 	echo T_("finished");            // Enum finished
@@ -142,6 +87,7 @@ function transtext()
 	// ------------------------------------------------------------------- Table fileparts
 	echo T_("fileparts");           // Table fileparts
 	echo T_("filepart");            // filepart
+	echo T_("file");                // file_id
 	echo T_("part");                // filepart_part
 	echo T_("code");                // filepart_code
 	echo T_("status");              // filepart_status
@@ -156,30 +102,13 @@ function transtext()
 	echo T_("code");                // file_code
 	echo T_("size");                // file_size
 	echo T_("status");              // file_status
-
-	// ------------------------------------------------------------------- Table funds
-	echo T_("funds");               // Table funds
-	echo T_("fund");                // fund
-	echo T_("title");               // fund_title
-	echo T_("slug");                // fund_slug
-	echo T_("location");            // location_id
-	echo T_("initialbalance");      // fund_initialbalance
-	echo T_("desc");                // fund_desc
-
-	// ------------------------------------------------------------------- Table locations
-	echo T_("locations");           // Table locations
-	echo T_("location");            // location
-	echo T_("title");               // location_title
-	echo T_("slug");                // location_slug
-	echo T_("desc");                // location_desc
-	echo T_("status");              // location_status
 	echo T_("read");                // Enum read
 	echo T_("unread");              // Enum unread
 
 	// ------------------------------------------------------------------- Table notifications
 	echo T_("notifications");       // Table notifications
 	echo T_("notification");        // notification
-	echo T_("user sender");         // user_id_sender
+	echo T_("idsender");            // user_idsender
 	echo T_("title");               // notification_title
 	echo T_("content");             // notification_content
 	echo T_("url");                 // notification_url
@@ -189,7 +118,7 @@ function transtext()
 	echo T_("options");             // Table options
 	echo T_("option");              // option
 	echo T_("cat");                 // option_cat
-	echo T_("name");                // option_name
+	echo T_("key");                 // option_key
 	echo T_("value");               // option_value
 	echo T_("extra");               // option_extra
 	echo T_("status");              // option_status
@@ -210,28 +139,14 @@ function transtext()
 	echo T_("holder");              // paper_holder
 	echo T_("desc");                // paper_desc
 	echo T_("status");              // paper_status
-	echo T_("yes");                 // Enum yes
-	echo T_("no");                  // Enum no
-
-	// ------------------------------------------------------------------- Table permissions
-	echo T_("permissions");         // Table permissions
-	echo T_("permission");          // permission
-	echo T_("title");               // permission_title
-	echo T_("module");              // Permission_module
-	echo T_("view");                // permission_view
-	echo T_("add");                 // permission_add
-	echo T_("edit");                // permission_edit
-	echo T_("delete");              // permission_delete
-	echo T_("status");              // permission_status
 
 	// ------------------------------------------------------------------- Table postmetas
 	echo T_("postmetas");           // Table postmetas
 	echo T_("postmeta");            // postmeta
 	echo T_("cat");                 // postmeta_cat
-	echo T_("name");                // postmeta_name
+	echo T_("key");                 // postmeta_key
 	echo T_("value");               // postmeta_value
 	echo T_("status");              // postmeta_status
-	echo T_("page");                // Enum page
 	echo T_("open");                // Enum open
 	echo T_("closed");              // Enum closed
 	echo T_("publish");             // Enum publish
@@ -247,28 +162,18 @@ function transtext()
 	echo T_("slug");                // post_slug
 	echo T_("content");             // post_content
 	echo T_("type");                // post_type
+	echo T_("url");                 // post_url
 	echo T_("comment");             // post_comment
 	echo T_("count");               // post_count
 	echo T_("status");              // post_status
 	echo T_("parent");              // post_parent
 	echo T_("publishdate");         // post_publishdate
 
-	// ------------------------------------------------------------------- Table productcats
-	echo T_("productcats");         // Table productcats
-	echo T_("productcat");          // productcat
-	echo T_("title");               // productcat_title
-	echo T_("slug");                // productcat_slug
-	echo T_("desc");                // productcat_desc
-	echo T_("parent");              // productcat_parent
-	echo T_("order");               // productcat_order
-	echo T_("status");              // productcat_status
-	echo T_("count");               // productcat_count
-
 	// ------------------------------------------------------------------- Table productmetas
 	echo T_("productmetas");        // Table productmetas
 	echo T_("productmeta");         // productmeta
 	echo T_("cat");                 // productmeta_cat
-	echo T_("name");                // productmeta_name
+	echo T_("key");                 // productmeta_key
 	echo T_("value");               // productmeta_value
 	echo T_("status");              // productmeta_status
 
@@ -289,6 +194,8 @@ function transtext()
 	echo T_("soon");                // Enum soon
 	echo T_("discontinued");        // Enum discontinued
 	echo T_("unavailable");         // Enum unavailable
+	echo T_("yes");                 // Enum yes
+	echo T_("no");                  // Enum no
 	echo T_("store");               // Enum store
 	echo T_("online");              // Enum online
 	echo T_("both");                // Enum both
@@ -298,7 +205,6 @@ function transtext()
 	echo T_("product");             // product
 	echo T_("title");               // product_title
 	echo T_("slug");                // product_slug
-	echo T_("productcat");          // productcat_id
 	echo T_("barcode");             // product_barcode
 	echo T_("barcode2");            // product_barcode2
 	echo T_("buyprice");            // product_buyprice
@@ -321,13 +227,13 @@ function transtext()
 	echo T_("type");                // receipt_type
 	echo T_("price");               // receipt_price
 	echo T_("date");                // receipt_date
-	echo T_("paper");               // paper_id
 	echo T_("paperdate");           // receipt_paperdate
 	echo T_("paperstatus");         // receipt_paperstatus
 	echo T_("desc");                // receipt_desc
 	echo T_("transaction");         // transaction_id
 	echo T_("fund");                // fund_id
-	echo T_("user customer");       // user_id_customer
+	echo T_("idcustomer");          // user_idcustomer
+	echo T_("post");                // Enum post
 	echo T_("get");                 // Enum get
 	echo T_("receive");             // Enum receive
 	echo T_("delivery");            // Enum delivery
@@ -344,26 +250,30 @@ function transtext()
 	echo T_("type");                // sms_type
 	echo T_("createdate");          // sms_createdate
 	echo T_("status");              // sms_status
-	echo T_("cat");                 // Enum cat
-	echo T_("tag");                 // Enum tag
 
 	// ------------------------------------------------------------------- Table terms
 	echo T_("terms");               // Table terms
 	echo T_("term");                // term
 	echo T_("language");            // term_language
+	echo T_("cat");                 // term_cat
 	echo T_("title");               // term_title
 	echo T_("slug");                // term_slug
 	echo T_("desc");                // term_desc
 	echo T_("parent");              // term_parent
-	echo T_("type");                // term_type
-	echo T_("status");              // term_status
 	echo T_("count");               // term_count
-	echo T_("order");               // term_order
+	echo T_("status");              // term_status
+	echo T_("posts");               // Enum posts
+	echo T_("products");            // Enum products
+	echo T_("attachments");         // Enum attachments
+	echo T_("comments");            // Enum comments
 
 	// ------------------------------------------------------------------- Table termusages
 	echo T_("termusages");          // Table termusages
 	echo T_("termusage");           // termusage
 	echo T_("term");                // term_id
+	echo T_("object");              // object_id
+	echo T_("type");                // termusage_type
+	echo T_("order");               // termusage_order
 
 	// ------------------------------------------------------------------- Table transactiondetails
 	echo T_("transactiondetails");  // Table transactiondetails
@@ -377,7 +287,7 @@ function transtext()
 	echo T_("transactionmetas");    // Table transactionmetas
 	echo T_("transactionmeta");     // transactionmeta
 	echo T_("cat");                 // transactionmeta_cat
-	echo T_("name");                // transactionmeta_name
+	echo T_("key");                 // transactionmeta_key
 	echo T_("value");               // transactionmeta_value
 	echo T_("status");              // transactionmeta_status
 	echo T_("sale");                // Enum sale
@@ -410,17 +320,9 @@ function transtext()
 	echo T_("usermetas");           // Table usermetas
 	echo T_("usermeta");            // usermeta
 	echo T_("cat");                 // usermeta_cat
-	echo T_("name");                // usermeta_name
+	echo T_("key");                 // usermeta_key
 	echo T_("value");               // usermeta_value
-	echo T_("extra");               // usermeta_extra
 	echo T_("status");              // usermeta_status
-	echo T_("storeadmin");          // Enum storeadmin
-	echo T_("storeemployee");       // Enum storeemployee
-	echo T_("storesupplier");       // Enum storesupplier
-	echo T_("storecustomer");       // Enum storecustomer
-	echo T_("user");                // Enum user
-	echo T_("male");                // Enum male
-	echo T_("female");              // Enum female
 	echo T_("active");              // Enum active
 	echo T_("deactive");            // Enum deactive
 	echo T_("removed");             // Enum removed
@@ -429,17 +331,11 @@ function transtext()
 	// ------------------------------------------------------------------- Table users
 	echo T_("users");               // Table users
 	echo T_("user");                // user
-	echo T_("type");                // user_type
 	echo T_("mobile");              // user_mobile
-	echo T_("pass");                // user_pass
 	echo T_("email");               // user_email
-	echo T_("gender");              // user_gender
-	echo T_("nickname");            // user_nickname
-	echo T_("firstname");           // user_firstname
-	echo T_("lastname");            // user_lastname
-	echo T_("birthday");            // user_birthday
+	echo T_("pass");                // user_pass
+	echo T_("displayname");         // user_displayname
 	echo T_("status");              // user_status
-	echo T_("credit");              // user_credit
 	echo T_("permission");          // permission_id
 	echo T_("createdate");          // user_createdate
 	echo T_("emailsignup");         // Enum emailsignup
