@@ -1,18 +1,68 @@
 {%extends display.cp%}
 
-{%block content_def%}
+
+{%block body_def%}
+ <aside id="page-sidebar">
+  <h1 id="page-logo"><a href="{{url.root}}" title="{{site.desc}}">{{site.title}}</a></h1>
+  <nav class="sidebar-items">
+   <a href="#"><i class="fa fa-desktop"></i> Dashboard</a>
+{% for i in list %}
+   <a href="{{store}}/{{i}}">{% trans i %}</a>
+{% endfor %}
+  </nav>
+ </aside>
+ 
+ <section id="page-content">
+  <header id="header">
+   <nav id="header-nav">
+    <a href="{{url.root}}"><i class="fa fa-home"></i></a>
+    <a href="{{url.root}}"><i class="fa fa-language"></i></a>
+   </nav>
+
+   <div id="profile">
+    <span>Javad Evazzadeh<i class="fa fa-power-off"></i></span>
+    <nav class="vertical-menu">
+     <a href="/profile"><i class="fa fa-user"></i> {%trans "My Profile"%}</a>
+     <a href="/lock"><i class="fa fa-lock"></i> {%trans "Lock Screen"%}</a>
+     <a href="/logout"><i class="fa fa-sign-out"></i> {%trans "Logout"%}</a>
+    </nav>
+   </div>
+  </header>
+
+
+
+
+
+
+
+
+<ul class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Page 1</a></li>
+  <li><a href="#">Page 2</a></li>
+</ul>
+
+
 <div data-xhr="content_def" class="container content_def" id="main">
   {%if global.page_title%}
   <h1>{{global.page_title}}</h1><hr />{%endif%}
-	<p class="alert alert-block alert-success">
-	<a class="float-left" href="{{url.root}}logout">{%trans "Logout"%}</a>|
-	<a class="float-right" href="{{url.root}}" target="_blank">{%trans "Home"%}</a></p>
-	<ul>
-		{% for i in list %}
-			<li>
-				<a href="{{store}}/{{i}}">{% trans i %}</a>
-			</li>
-	    {% endfor %}
-	</ul>
+  <p class="alert alert-block alert-success">
+  <a class="float-left" href="{{url.root}}logout">{%trans "Logout"%}</a>|
+  <a class="float-right" href="{{url.root}}" target="_blank">{%trans "Home"%}</a></p>
+  <ul>
+{% for i in list %}
+      <li>
+        <a href="{{store}}/{{i}}">{% trans i %}</a>
+      </li>
+{% endfor %}
+  </ul>
 </div>
+
+
+
+
+
+
+ </section>
 {%endblock%}
+

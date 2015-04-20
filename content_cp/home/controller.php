@@ -8,8 +8,8 @@ class controller extends \mvc\controller
 		if(!$this->login())
 		{
 			\lib\debug::warn(T_("first of all, you must login to system!"));
-			$this->redirector(null, false)->set_domain($this->url('AccountService'))->set_url('login?dev=y')->redirect();
-			exit();
+			// $this->redirector(null, false)->set_domain($this->url('AccountService'))->set_url('login?dev=y')->redirect();
+			// exit();
 		}
 
 		$mymodule = $this->module();
@@ -82,31 +82,15 @@ class controller extends \mvc\controller
 	{
 		$mylist		= array(
 						'accounts',
-						'addons',
-						'attachments',
-						'banks',
 						'comments',
 						'costs',
-						'errorlogs',
-						'errors',
-						'funds',
-						'locations',
-						'notifications',
-						'options',
 						'papers',
-						'permissions',
 						'posts',
 						'productcats',
-						'productprices',
 						'products',
-						'receipts',
-						'smss',
 						'terms',
 						'transactions',
-						'userlogs',
 						'users',
-						'verifications',
-						'visitors'
 					);
 		if($_module == 'all')
 			return $mylist;

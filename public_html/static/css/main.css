@@ -11,21 +11,16 @@
 }
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+*, *:before, *:after{margin:0;padding:0;outline:none !important;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 html{
   font-size:62.5%;
   font-family:serif;
   -ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;-webkit-font-smoothing: antialiased;
-  height:100%;
+  min-height: 100%;
 }
-body.ltr{font-family:'Roboto Slab',serif;direction:ltr;}
+body {overflow-x: hidden;position: relative;margin: 0;font-family:'Roboto Slab',serif;direction:ltr;}
 body.rtl{font-family:'IRANSans',serif;direction:rtl;}
-body {
-  overflow-x: hidden;
-  margin: 0;
-}
-*{outline:0}
-*, *:before, *:after { box-sizing: border-box; }
 /* HTML5 display definitions
    ========================================================================== */
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
@@ -88,7 +83,7 @@ code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em;margin: 10px 5%;
 
 /* Grid Element Sizing
    ========================================================================== */
-.row{display:block;padding:10px 0;margin:0;width:100%}
+.row{display:block;padding:0;margin:0;width:100%}
 .row:before,.row:after{display:table;content:""}
 .row:after{clear:both}
 .row > [class*=span]{float:left;min-height:1px;margin-right: 2.127659%;}
@@ -351,71 +346,12 @@ ul.list li a{padding:0.3em 0.5em;}
 .clear{clear:both}
 
 
-
-
-
-
-
 /*--Action */
 
 .col_row{width:5px;padding:0;text-align:center;}
 .col_slug{width:100px;direction:ltr;text-align:left}
 .col_status{width:100px;text-align:center;}
 .col_actions{width: 90px;}
-
-
-
-
-#header{width: 100%;overflow: hidden;position: fixed;top: 0;left: 0;z-index: 999;height: 100px;background-color: #0683c9;-webkit-transition: all 0.3s;-moz-transition: all 0.3s;-ms-transition: all 0.3s;-o-transition: all 0.3s;transition: all 0.3s; }
-#header-back{height:100px;}
-#header-nav{padding-left:100px;line-height: 100px;font-size: 18px;}
-#header #logo {display:inline-block;line-height:100px;font-size:40px;padding-right:40px;float:right;margin:0;}
-#header #logo a{color:#fff;opacity: 0.1;-webkit-transition: all 0.3s;-moz-transition: all 0.3s;-ms-transition: all 0.3s;-o-transition: all 0.3s;transition: all 0.3s;}
-#header #logo a:hover{opacity: 0.9;}
-.full #header #logo a {opacity: 1;}
-#header-nav{display:inline-block;float:left;}
-#header-nav a {margin-right: 20px;color: #9fdbfc;-webkit-transition: all 0.3s;-moz-transition: all 0.3s;-ms-transition: all 0.3s;-o-transition: all 0.3s;transition: all 0.3s; }
-#header-nav a:hover{color:white;}
-
-.clock{display:inline-block;position: absolute;top:0; left:5%;line-height: 45px;color:#fff;}
-.post-title, .page-header{margin-top: 100px;}
-.persist-header{font-size:10px;font-size:1rem;width:100%;height:45px;line-height: 45px;text-align:center;background-color: #0979B8;}
-.persist-header a{color:#fff;}
-.floatingHeader {position: fixed;z-index: 998;top: 0px;margin:0;visibility: hidden;opacity:0;padding-left: 250px;-webkit-transition: padding 0.3s;-moz-transition: padding 0.3s;-ms-transition: padding 0.3s;-o-transition: padding 0.3s;transition: padding 0.3s; }
-.persist-header h2{line-height: 45px;margin:0}
-#wrapper.removeside .floatingHeader{padding-left: 0px;}
-
-.tiny #header, .fixed #header{height:45px;}
-.tiny #header-nav, .fixed #header-nav{line-height:45px; font-size: 14px;}
-.tiny #header #logo, .fixed #header #logo{line-height: 45px;font-size: 26px;}
-.tiny .slideDown #header{height:0px;}
-.tiny .floatingHeader{top:45px;}
-.full .floatingHeader{top:0px;}
-
-.animated.slideDown {-webkit-animation-name: slideDown;-moz-animation-name: slideDown;-o-animation-name: slideDown;animation-name: slideDown;}
-.animated.slideUp {-webkit-animation-name: slideUp;-moz-animation-name: slideUp;-o-animation-name: slideUp;animation-name: slideUp;}
-.animated {-webkit-animation-duration: .5s;-moz-animation-duration: .5s;-o-animation-duration: .5s;animation-duration: .5s;-webkit-animation-fill-mode: both;-moz-animation-fill-mode: both;-o-animation-fill-mode: both;animation-fill-mode: both;}
-@-webkit-keyframes slideDown{0%{-webkit-transform:translateY(-100%)}100%{-webkit-transform:translateY(0)}}
-@-moz-keyframes slideDown{0%{-moz-transform:translateY(-100%)}100%{-moz-transform:translateY(0)}}
-@-o-keyframes slideDown{0%{-o-transform:translateY(-100%)}100%{-o-transform:translateY(0)}}
-@keyframes slideDown{0%{transform:translateY(-100%)}100%{transform:translateY(0)}}
-.animated.slideDown{-webkit-animation-name:slideDown;-moz-animation-name:slideDown;-o-animation-name:slideDown;animation-name:slideDown}
-@-webkit-keyframes slideUp{0%{-webkit-transform:translateY(0)}100%{-webkit-transform:translateY(-100%)}}
-@-moz-keyframes slideUp{0%{-moz-transform:translateY(0)}100%{-moz-transform:translateY(-100%)}}
-@-o-keyframes slideUp{0%{-o-transform:translateY(0)}100%{-o-transform:translateY(-100%)}}
-@keyframes slideUp{0%{transform:translateY(0)}100%{transform:translateY(-100%)}}
-.animated.slideUp{-webkit-animation-name:slideUp;-moz-animation-name:slideUp;-o-animation-name:slideUp;animation-name:slideUp}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
