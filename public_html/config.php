@@ -46,6 +46,14 @@ define('CommingSoon', true);
 define('MultiLanguage', true);
 
 /**
+ * Defaultlanguage
+ * Default: 'en_US'
+ * 
+ * If your site support multi language then you can fix default language for visitors
+ */
+define('DefaultLanguage', 'fa_IR');
+
+/**
  * MainAccount
  * Default: true
  *
