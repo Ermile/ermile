@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2015 at 09:28 PM
+-- Generation Time: Apr 20, 2015 at 10:27 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -51,38 +51,6 @@ INSERT INTO `accounts` (`id`, `account_title`, `account_slug`, `bank_id`, `accou
 -- --------------------------------------------------------
 
 --
--- Table structure for table `banks`
---
-
-CREATE TABLE IF NOT EXISTS `banks` (
-`id` smallint(5) unsigned NOT NULL,
-  `bank_title` varchar(50) NOT NULL,
-  `bank_slug` varchar(50) NOT NULL,
-  `bank_website` varchar(50) DEFAULT NULL,
-  `bank_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=107 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `banks`
---
-
-INSERT INTO `banks` (`id`, `bank_title`, `bank_slug`, `bank_website`, `bank_status`, `date_modified`) VALUES
-(1, 'پارسیان', 'parsian', 'http://parsian-bank.com', 'enable', '2015-01-22 13:31:40'),
-(2, 'ملی', 'melli', NULL, 'enable', '2015-01-22 13:31:44'),
-(3, 'ملت', 'mellat', NULL, 'disable', '2015-01-23 21:23:09'),
-(4, 'پاسارگاد', 'pasargad', NULL, 'enable', '2015-01-23 23:03:52'),
-(100, 'reba', 'reba', NULL, 'expire', '2015-01-25 01:04:55'),
-(101, 'asfasfsf', 'asfasfsf', NULL, 'enable', NULL),
-(102, '325asfasfsf', '325asfasfsf', NULL, 'enable', NULL),
-(103, '325asfasfsf', '325asfasfsf5123', NULL, 'enable', NULL),
-(104, '342t', '342t', NULL, 'enable', NULL),
-(105, '342twefwet', '342twefwet', NULL, 'enable', NULL),
-(106, '342twefwetdsag', '342twefwetdsag', NULL, 'enable', NULL);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `comments`
 --
 
@@ -97,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `comment_status` enum('approved','unapproved','spam','deleted') NOT NULL DEFAULT 'unapproved',
   `comment_parent` smallint(5) unsigned DEFAULT NULL,
   `user_id` int(10) unsigned DEFAULT NULL,
-  `Visitor_id` int(10) unsigned NOT NULL,
+  `Visitor_id` bigint(20) unsigned NOT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -135,7 +103,7 @@ INSERT INTO `costcats` (`id`, `costcat_title`, `costcat_slug`, `costcat_desc`, `
 --
 
 CREATE TABLE IF NOT EXISTS `costs` (
-`id` smallint(5) unsigned NOT NULL,
+`id` int(10) unsigned NOT NULL,
   `cost_title` varchar(50) NOT NULL,
   `cost_price` decimal(13,4) NOT NULL,
   `costcat_id` smallint(5) unsigned NOT NULL,
@@ -143,6 +111,7 @@ CREATE TABLE IF NOT EXISTS `costs` (
   `cost_date` datetime NOT NULL,
   `cost_desc` varchar(200) DEFAULT NULL,
   `cost_type` enum('income','outcome') NOT NULL DEFAULT 'outcome',
+  `paper_id` int(10) unsigned DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -203,75 +172,6 @@ CREATE TABLE IF NOT EXISTS `files` (
   `file_status` enum('inprogress','ready','temp') NOT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `funds`
---
-
-CREATE TABLE IF NOT EXISTS `funds` (
-`id` smallint(5) unsigned NOT NULL,
-  `fund_title` varchar(100) NOT NULL,
-  `fund_slug` varchar(100) NOT NULL,
-  `location_id` smallint(5) unsigned NOT NULL,
-  `fund_initialbalance` decimal(14,4) NOT NULL DEFAULT '0.0000',
-  `fund_desc` varchar(200) DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `funds`
---
-
-INSERT INTO `funds` (`id`, `fund_title`, `fund_slug`, `location_id`, `fund_initialbalance`, `fund_desc`, `date_modified`) VALUES
-(2, 'Main', 'main', 1, '0.0000', NULL, '0000-00-00 00:00:00'),
-(3, 'werew', 'wqrwer', 1, '9999999999.9999', NULL, '0000-00-00 00:00:00');
-
---
--- Triggers `funds`
---
-DELIMITER //
-CREATE TRIGGER `funds_BD_inline_block` BEFORE DELETE ON `funds`
- FOR EACH ROW IF old.id = 1 THEN
- SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'delete blocked';
-End if
-//
-DELIMITER ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `locations`
---
-
-CREATE TABLE IF NOT EXISTS `locations` (
-`id` smallint(5) unsigned NOT NULL,
-  `location_title` varchar(100) NOT NULL,
-  `location_slug` varchar(100) NOT NULL,
-  `location_desc` varchar(200) DEFAULT NULL,
-  `location_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `locations`
---
-
-INSERT INTO `locations` (`id`, `location_title`, `location_slug`, `location_desc`, `location_status`, `date_modified`) VALUES
-(1, 'Main Location', 'main', NULL, 'enable', '2014-11-07 18:21:17'),
-(2, 'test', 't', NULL, 'enable', '0000-00-00 00:00:00');
-
---
--- Triggers `locations`
---
-DELIMITER //
-CREATE TRIGGER `locations_BD_inline_block` BEFORE DELETE ON `locations`
- FOR EACH ROW IF old.id = 1 THEN
- SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'delete blocked';
-End if
-//
-DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -391,7 +291,7 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `postmetas` (
-  `id` int(10) NOT NULL,
+  `id` bigint(20) unsigned NOT NULL,
   `post_id` bigint(20) unsigned NOT NULL,
   `postmeta_cat` varchar(50) NOT NULL,
   `postmeta_key` varchar(100) NOT NULL,
@@ -415,7 +315,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `post_content` text,
   `post_type` varchar(50) NOT NULL DEFAULT 'post',
   `post_url` text,
-  `post_comment` enum('open','closed','','') NOT NULL DEFAULT 'open',
+  `post_comment` enum('open','closed') DEFAULT NULL,
   `post_count` smallint(5) unsigned DEFAULT NULL,
   `post_status` enum('publish','draft','schedule','deleted','expire') NOT NULL DEFAULT 'draft',
   `post_parent` smallint(5) unsigned DEFAULT NULL,
@@ -581,7 +481,7 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `productprices` (
-`id` int(10) unsigned NOT NULL,
+`id` bigint(20) unsigned NOT NULL,
   `product_id` int(10) unsigned NOT NULL,
   `productmeta_id` int(10) unsigned DEFAULT NULL,
   `productprice_cat` varchar(50) DEFAULT NULL,
@@ -607,16 +507,16 @@ CREATE TABLE IF NOT EXISTS `products` (
   `product_slug` varchar(50) NOT NULL,
   `product_barcode` varchar(20) DEFAULT NULL,
   `product_barcode2` varchar(20) DEFAULT NULL,
-  `product_buyprice` decimal(13,4) DEFAULT NULL,
-  `product_price` decimal(13,4) NOT NULL,
+  `product_buyprice` decimal(13,4) unsigned DEFAULT NULL,
+  `product_price` decimal(13,4) unsigned NOT NULL,
   `product_discount` decimal(13,4) DEFAULT NULL,
-  `product_vat` decimal(6,4) DEFAULT NULL,
+  `product_vat` decimal(6,4) unsigned DEFAULT NULL,
   `product_initialbalance` int(10) DEFAULT '0',
-  `product_mininventory` int(10) DEFAULT NULL,
+  `product_mininventory` int(10) unsigned DEFAULT NULL,
   `product_status` enum('unset','available','soon','discontinued','unavailable','expire') DEFAULT 'unset',
   `product_sold` int(10) DEFAULT '0',
   `product_stock` int(10) DEFAULT '0',
-  `product_carton` int(10) DEFAULT NULL,
+  `product_carton` int(10) unsigned DEFAULT NULL,
   `product_service` enum('yes','no') NOT NULL DEFAULT 'no',
   `product_sellin` enum('store','online','both') NOT NULL DEFAULT 'both',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
@@ -688,7 +588,7 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `receipts` (
-`id` int(10) unsigned NOT NULL,
+`id` bigint(20) unsigned NOT NULL,
   `receipt_code` varchar(30) DEFAULT NULL,
   `receipt_type` enum('income','outcome') DEFAULT 'income',
   `receipt_price` decimal(13,4) NOT NULL DEFAULT '0.0000',
@@ -697,19 +597,20 @@ CREATE TABLE IF NOT EXISTS `receipts` (
   `receipt_paperdate` datetime DEFAULT NULL,
   `receipt_paperstatus` enum('pass','recovery','fail','lost','block','delete','inprogress') DEFAULT NULL,
   `receipt_desc` varchar(200) DEFAULT NULL,
-  `transaction_id` int(10) unsigned DEFAULT NULL,
+  `transaction_id` bigint(20) unsigned DEFAULT NULL,
   `fund_id` smallint(5) unsigned NOT NULL,
   `user_id` int(10) unsigned NOT NULL,
   `user_idcustomer` int(10) unsigned NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `account_id` smallint(5) unsigned NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `receipts`
 --
 
-INSERT INTO `receipts` (`id`, `receipt_code`, `receipt_type`, `receipt_price`, `receipt_date`, `paper_id`, `receipt_paperdate`, `receipt_paperstatus`, `receipt_desc`, `transaction_id`, `fund_id`, `user_id`, `user_idcustomer`, `date_modified`) VALUES
-(6, '123', 'income', '0.0000', '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, 2, 150, 150, '2015-02-11 14:47:59');
+INSERT INTO `receipts` (`id`, `receipt_code`, `receipt_type`, `receipt_price`, `receipt_date`, `paper_id`, `receipt_paperdate`, `receipt_paperstatus`, `receipt_desc`, `transaction_id`, `fund_id`, `user_id`, `user_idcustomer`, `date_modified`, `account_id`) VALUES
+(6, '123', 'income', '0.0000', '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, 2, 150, 150, '2015-04-20 08:20:04', 10);
 
 -- --------------------------------------------------------
 
@@ -781,7 +682,7 @@ CREATE TABLE IF NOT EXISTS `termusages` (
 
 CREATE TABLE IF NOT EXISTS `transactiondetails` (
   `transactiondetail_row` smallint(5) unsigned DEFAULT NULL,
-  `transaction_id` int(10) unsigned NOT NULL,
+  `transaction_id` bigint(20) unsigned NOT NULL,
   `product_id` int(10) unsigned NOT NULL,
   `transactiondetail_quantity` int(10) NOT NULL DEFAULT '0',
   `transactiondetail_price` decimal(13,4) NOT NULL,
@@ -875,8 +776,8 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `transactionmetas` (
-`id` int(10) unsigned NOT NULL,
-  `transaction_id` int(10) unsigned NOT NULL,
+`id` bigint(10) unsigned NOT NULL,
+  `transaction_id` bigint(20) unsigned NOT NULL,
   `transactionmeta_cat` varchar(50) NOT NULL,
   `transactionmeta_key` varchar(100) NOT NULL,
   `transactionmeta_value` varchar(200) DEFAULT NULL,
@@ -891,7 +792,7 @@ CREATE TABLE IF NOT EXISTS `transactionmetas` (
 --
 
 CREATE TABLE IF NOT EXISTS `transactions` (
-`id` int(10) unsigned NOT NULL,
+`id` bigint(20) unsigned NOT NULL,
   `transaction_type` enum('sale','purchase','customertostore','storetocompany','anbargardani','install','repair','chqeuebackfail') NOT NULL DEFAULT 'sale',
   `user_id` int(10) unsigned NOT NULL,
   `user_idcustomer` int(10) unsigned NOT NULL,
@@ -1011,7 +912,7 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `visitors` (
-`id` int(10) unsigned NOT NULL,
+`id` bigint(20) unsigned NOT NULL,
   `visitor_ip` int(10) unsigned NOT NULL,
   `visitor_url` varchar(255) NOT NULL,
   `visitor_agent` varchar(255) NOT NULL,
@@ -1030,13 +931,7 @@ CREATE TABLE IF NOT EXISTS `visitors` (
 -- Indexes for table `accounts`
 --
 ALTER TABLE `accounts`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`account_slug`), ADD UNIQUE KEY `cardnumber_unique` (`account_card`), ADD UNIQUE KEY `accountnumber_unique` (`account_number`), ADD KEY `bank_id` (`bank_id`), ADD KEY `accounts_users_id` (`user_id`) USING BTREE;
-
---
--- Indexes for table `banks`
---
-ALTER TABLE `banks`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`bank_slug`);
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`account_slug`), ADD UNIQUE KEY `cardnumber_unique` (`account_card`), ADD UNIQUE KEY `accountnumber_unique` (`account_number`), ADD KEY `accounts_users_id` (`user_id`) USING BTREE;
 
 --
 -- Indexes for table `comments`
@@ -1054,7 +949,7 @@ ALTER TABLE `costcats`
 -- Indexes for table `costs`
 --
 ALTER TABLE `costs`
- ADD PRIMARY KEY (`id`), ADD KEY `type_index` (`cost_type`) USING BTREE, ADD KEY `costs_costcats_id` (`costcat_id`) USING BTREE, ADD KEY `costs_accounts_id` (`account_id`) USING BTREE;
+ ADD PRIMARY KEY (`id`), ADD KEY `type_index` (`cost_type`) USING BTREE, ADD KEY `costs_costcats_id` (`costcat_id`) USING BTREE, ADD KEY `costs_accounts_id` (`account_id`) USING BTREE, ADD KEY `costs_papers_id` (`paper_id`);
 
 --
 -- Indexes for table `errorlogs`
@@ -1081,18 +976,6 @@ ALTER TABLE `files`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `funds`
---
-ALTER TABLE `funds`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`fund_slug`), ADD KEY `funds_locations_id` (`location_id`) USING BTREE;
-
---
--- Indexes for table `locations`
---
-ALTER TABLE `locations`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`location_slug`);
-
---
 -- Indexes for table `notifications`
 --
 ALTER TABLE `notifications`
@@ -1108,7 +991,7 @@ ALTER TABLE `options`
 -- Indexes for table `papers`
 --
 ALTER TABLE `papers`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id+bankid_unique` (`id`,`bank_id`) USING BTREE, ADD KEY `bank_id` (`bank_id`) USING BTREE;
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `postmetas`
@@ -1144,7 +1027,7 @@ ALTER TABLE `products`
 -- Indexes for table `receipts`
 --
 ALTER TABLE `receipts`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `receipts_papers_id` (`paper_id`) USING BTREE, ADD KEY `receipts_transactions_id` (`transaction_id`) USING BTREE, ADD KEY `receipts_funds_id` (`fund_id`) USING BTREE, ADD KEY `receipts_users_id` (`user_id`), ADD KEY `receipts_users_idcustomer` (`user_idcustomer`);
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `receipts_papers_id` (`paper_id`) USING BTREE, ADD KEY `receipts_transactions_id` (`transaction_id`) USING BTREE, ADD KEY `receipts_funds_id` (`fund_id`) USING BTREE, ADD KEY `receipts_users_id` (`user_id`), ADD KEY `receipts_users_idcustomer` (`user_idcustomer`), ADD KEY `receipts_accounts_id` (`account_id`);
 
 --
 -- Indexes for table `smss`
@@ -1222,11 +1105,6 @@ ALTER TABLE `visitors`
 ALTER TABLE `accounts`
 MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
--- AUTO_INCREMENT for table `banks`
---
-ALTER TABLE `banks`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=107;
---
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
@@ -1240,7 +1118,7 @@ MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 -- AUTO_INCREMENT for table `costs`
 --
 ALTER TABLE `costs`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `errorlogs`
 --
@@ -1256,16 +1134,6 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 --
 ALTER TABLE `files`
 MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `funds`
---
-ALTER TABLE `funds`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `locations`
---
-ALTER TABLE `locations`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `notifications`
 --
@@ -1295,7 +1163,7 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=74;
 -- AUTO_INCREMENT for table `productprices`
 --
 ALTER TABLE `productprices`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `products`
 --
@@ -1305,7 +1173,7 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 -- AUTO_INCREMENT for table `receipts`
 --
 ALTER TABLE `receipts`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `smss`
 --
@@ -1320,12 +1188,12 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 -- AUTO_INCREMENT for table `transactionmetas`
 --
 ALTER TABLE `transactionmetas`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` bigint(10) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `userlogs`
 --
@@ -1350,7 +1218,7 @@ MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `visitors`
 --
 ALTER TABLE `visitors`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
@@ -1359,7 +1227,6 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 -- Constraints for table `accounts`
 --
 ALTER TABLE `accounts`
-ADD CONSTRAINT `accounts_banks_id` FOREIGN KEY (`bank_id`) REFERENCES `banks` (`id`),
 ADD CONSTRAINT `accounts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
@@ -1376,7 +1243,8 @@ ADD CONSTRAINT `comments_visitors_id` FOREIGN KEY (`Visitor_id`) REFERENCES `vis
 --
 ALTER TABLE `costs`
 ADD CONSTRAINT `costs_accounts_id` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE,
-ADD CONSTRAINT `costs_costcats_id` FOREIGN KEY (`costcat_id`) REFERENCES `costcats` (`id`);
+ADD CONSTRAINT `costs_costcats_id` FOREIGN KEY (`costcat_id`) REFERENCES `costcats` (`id`),
+ADD CONSTRAINT `costs_papers_id` FOREIGN KEY (`paper_id`) REFERENCES `papers` (`id`) ON DELETE SET NULL;
 
 --
 -- Constraints for table `errorlogs`
@@ -1392,22 +1260,10 @@ ALTER TABLE `fileparts`
 ADD CONSTRAINT `fileparts_files_id` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `funds`
---
-ALTER TABLE `funds`
-ADD CONSTRAINT `funds_locations_id` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE CASCADE;
-
---
 -- Constraints for table `notifications`
 --
 ALTER TABLE `notifications`
 ADD CONSTRAINT `notifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
-
---
--- Constraints for table `papers`
---
-ALTER TABLE `papers`
-ADD CONSTRAINT `papers_banks_id` FOREIGN KEY (`bank_id`) REFERENCES `banks` (`id`);
 
 --
 -- Constraints for table `postmetas`
@@ -1438,7 +1294,7 @@ ADD CONSTRAINT `productprices_products_id` FOREIGN KEY (`product_id`) REFERENCES
 -- Constraints for table `receipts`
 --
 ALTER TABLE `receipts`
-ADD CONSTRAINT `receipts_funds_id` FOREIGN KEY (`fund_id`) REFERENCES `funds` (`id`),
+ADD CONSTRAINT `receipts_accounts_id` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`),
 ADD CONSTRAINT `receipts_papers_id` FOREIGN KEY (`paper_id`) REFERENCES `papers` (`id`),
 ADD CONSTRAINT `receipts_transactions_id` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`),
 ADD CONSTRAINT `receipts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
