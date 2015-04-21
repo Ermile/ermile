@@ -30,56 +30,15 @@
   {% import macro.forms as forms %}
 {% endif %}
 
-<body data-xhr="body_def" id="{{global.id}}" class="{{global.direction}} {{bodyclass}} {{module}}">
+<body data-xhr="body" id="{{global.id}}" class="{{global.direction}} {{bodyclass}} {{module}}">
 
-{%block body_def%}
-{%block header_def%}
- <header>
-  <div id="header" class="unselectable animated">
-   <div id="site-title">
-    <h1 id="logo"><a class="navbar-brand" href="{{url.root}}">{{site.title}}</a></h1>
-    <nav>
-     <div id="header-nav">
-      <a href="{{url.root}}">{%trans "Home Page"%}</a>
-      <a href="http://cp.{{url.raw}}">{%trans "Control Panel"%}</a>
-{%if global.login%}
-      <a href="{{url.LoginService}}/logout">{%trans "Logout"%}</a>
-{%else%}
-      <a href="{{url.LoginService}}/login">{%trans "Login"%}</a>
-{%endif%}
-     </div>
-    </nav>
-   </div>
-  </div>
-  <div id="header-back"></div>
- </header>
-{%endblock%}
+{%block body%}
 {%block header%}{%endblock%}
 {%block content_def%}
  <style type="text/css">body{background-color:#eee}.def-msg{font-family:sans-serif;padding-left:15%;color:#403B33;}h1.def-msg{margin-top:10%;color:#9E4949}</style>
  <h1 class='def-msg'>{{site.title}}</h1>
  <h2 class='def-msg'>{{site.desc}}</h2>
  <p class='def-msg'>Let start using Saloos! start edit twig block for show your content. for replace this text use <b>block content</b>.</p>
-{%endblock%}
-{%block footer_def%}
-<footer id="footer">
-  <div id="copyright">
-   <div class='hint--right' data-hint='{{site.desc}}'>
-    <span>&copy; {{'now'|date('Y')}}</span>
-    <a href="{{url.root}}" tabindex='-1'>{{site.title}}</a>
-   </div>
-
-   <div id='languages' class='hint--left' data-hint='{%trans "Experience our service in your language"%}'>
-    <select id="langlist" tabindex='-1'>
-{%for key, value in global.langlist%}{%if key == global.lang%}
-     <option value="{{key}}" selected="selected">{{value}}</option>
-{%else%}
-     <option value="{{key}}">{{value}}</option>
-{%endif%}{% endfor %}
-    </select>
-   </div>
-  </div>
-</footer>
 {%endblock%}
 {%block footer%}{%endblock%}
 {%endblock%}

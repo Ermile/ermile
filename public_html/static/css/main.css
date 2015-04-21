@@ -17,7 +17,8 @@ html{
   font-family:serif;
   -ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;-webkit-font-smoothing: antialiased;
-  min-height: 100%;
+  height:100%;
+  overflow: hidden;
 }
 body {overflow-x: hidden;position: relative;margin: 0;font-family:'Roboto Slab',serif;direction:ltr;}
 body.rtl{font-family:'IRANSans',serif;direction:rtl;}
@@ -297,7 +298,9 @@ ul.list li a{padding:0.3em 0.5em;}
 .align-center{text-align:center;}
 .align-justify{text-align:justify;}
 .float-right{float:right;}
+.rtl .float-right{float:left;}
 .float-left{float:left}
+.rtl .float-left{float:right}
 .gray{background-color:#dfe3e3}
 .brown{background-color:#333333}
 .black{background-color:#000}
@@ -886,50 +889,6 @@ ul.list li a{padding:0.3em 0.5em;}
 
 
 
-.breadcrumb { 
-  list-style: none; 
-  width:100%;
-  display:block;
-  overflow: hidden;
-  background-color: #eee;
-  -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;
-  margin: 0;
-  padding: 0;
-}
-.breadcrumb li a {
-  padding: 10px 0 10px 65px;
-  position: relative; 
-  display: block;
-  float: left;
-  transition: all .2s ease;-webkit-transition: all .2s ease;-o-transition: all .2s ease;-moz-transition: all .2s ease;
-}
-.breadcrumb li a:after, .breadcrumb li a:before { 
-  transition: all .2s ease;-webkit-transition: all .2s ease;-o-transition: all .2s ease;-moz-transition: all .2s ease;
-  content: " "; 
-  display: block;
-  width: 0; 
-  height: 0;
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-  border-left: 30px solid #eee;
-  position: absolute;
-  top: 50%;
-  margin-top: -50px; 
-  left: 100%;
-  z-index: 2; 
-}
-.breadcrumb li a:before { 
-  border-left: 30px solid #ccc;
-  margin-left: 1px;
-  z-index: 1;
-}
-
-.breadcrumb li:first-child a {padding-left: 20px;}
-.breadcrumb li:last-child a {background: #eee;color: #000;pointer-events: none;cursor: default;}
-.breadcrumb li:last-child a:before{display: none;}
-
-.breadcrumb li a:hover { background: #ccc; }
-.breadcrumb li a:hover:after { border-left-color: #ccc !important; }
 
 
 /* Modals */

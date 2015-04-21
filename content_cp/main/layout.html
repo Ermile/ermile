@@ -10,95 +10,80 @@
 
 
 
-{%block content_def%}
-<div data-xhr="content_def" class="content_def">
 
-{% set fieldcounter = 0%}
-{% for key, value in field_list if value.form%}{% set fieldcounter = (fieldcounter+1) %}{% endfor %}
-{%if child and fieldcounter >0%}
- <div id="options" class="unselectable">
-  <div id="options-meta" class="disappear">
-{% for key, value in field_list if value.form%}
-   <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{value.value}}" {%if value.show%}checked="checked"{%endif%}><span>{{value.name}}</span></label>
-{% endfor %}
-  </div>
-  <a id="options-link" href="javascript: void(0)">{%trans%}Options{%endtrans%}</a>
- </div>
-{%endif%}
- <div class="container" id="main">
+
+
+
+
+
+
+
+
+{%block body%}
+ <aside id="page-sidebar">
+  <h1 id="page-logo"><a href="{{url.root}}" title="{{site.desc}}">{{site.title}}</a></h1>
+  <nav class="sidebar-items">
+   <a href="#"><i class="fa fa-desktop"></i> {%trans "Dashboard"%}</a>
+   <a href="#"><i class="fa fa-file-text-o"></i> {%trans "Posts"%}</a>
+   <a href="#"><i class="fa fa-files-o"></i> {%trans "Pages"%}</a>
+   <a href="#"><i class="fa fa-bookmark-o"></i> {%trans "Tags"%}</a>
+   <a href="#"><i class="fa fa-file"></i> {%trans "Attachments"%}</a>
+   <a href="#"><i class="fa fa-comments-o"></i> {%trans "Comments"%}</a>
+   <a href="#"><i class="fa fa-user"></i> {%trans "Users"%}</a>
+   <a href="#"><i class="fa fa-cogs"></i> {%trans "Settings"%}</a>
+<!-- {% for i in list %}
+   <a href="{{store}}/{{i}}">{% trans i %}</a>
+{% endfor %} -->
+  </nav>
+ </aside>
+ <div id="page-sidespace"></div>
+ <section id="page-content">
+  <header id="header">
+   <ul id="header-nav">
+    <li><a href="{{url.root}}"><i class="fa fa-home"></i></a></li>
+    <li>
+     <a href="{{url.root}}"><i class="fa fa-language"></i></a>
+     <nav class="vertical-menu">
+      <a href="/profile"><i class="fa fa-user"></i> {%trans "My Profile"%}</a>
+      <a href="/lock"><i class="fa fa-lock"></i> {%trans "Lock Screen"%}</a>
+      <a href="/logout"><i class="fa fa-sign-out"></i> {%trans "Logout"%}</a>
+     </nav>
+    </li>
+   </ul>
+
+   <div id="profile" tabindex=1>
+    <span>Javad Evazzadeh<i class="fa fa-power-off"></i></span>
+    <nav class="vertical-menu">
+     <a href="/profile"><i class="fa fa-user"></i> {%trans "My Profile"%}</a>
+     <a href="/lock"><i class="fa fa-lock"></i> {%trans "Lock Screen"%}</a>
+     <a href="/logout"><i class="fa fa-sign-out"></i> {%trans "Logout"%}</a>
+    </nav>
+   </div>
+  </header>
+
+ <nav class="breadcrumb">
+   <a href="/"><i class="fa fa-home"></i> Home</a>
+   <a href="#2">Page 1</a>
+   <a href="#3">Page 2</a>
+   <a href="#4">Page 3</a>
+   <a href="#5">Page 4</a>
+ </nav>
+
+ <section id="content">
 {%if page.title%}  <h1>{{page.title}}</h1><hr />{%endif%}
-{%if module and module!="home"%}
-{%if child%}
-  <p class="alert alert-block alert-info">
-   <b class="float-left">{%trans module%}</b>|
-   <a class="float-right" href="{{store}}/{{module}}">{%trans%}Go to{%endtrans%} {%trans module%}</a>
-  </p>
-   <form class="ajx form row inline autostyle" method="post">{{forms.make(form[module])}}</form>
-{%else%}
-  <p class="alert alert-block alert-info">
-   <a class="float-left" href="{{store}}/{{module}}/add">{%trans%}Add New Record{%endtrans%}</a>|
-   <a class="float-right" href="/">{%trans "Home"%}</a>
-  </p>
+{%block content%}{%endblock%} 
+ </section>
 
-{%block datatable%}
-{%if include.datatable%}
-    <table class="datatable display responsive nowrap" cellspacing="0" width="100%">
-     <thead>
-     <tr>
-      <th class="column_row"></th>
-{%for value in columns if value.table%}
-      <th>{{value.name}}</th>
-{%endfor%}
-      <th class="column_actions">{%trans "Actions"%}</th>
-     </tr>
-     </thead>
+ <footer id="page-footer">
+  <p class="float-left">{%trans "Powered by Saloos."%} {%trans "All right reserved."%}</p>
+  <p class="float-right">{%trans "Version"%} {{saloos.version}}</p>
+ </footer>
 
-     <tbody>
-{%block tbody%}
-{%for d in datatable%}
-      <tr class="{{ cycle(['odd', 'even'], loop.index0) }}">
-       <td class="col_row">{{loop.index}}</td>
-{%for col,value in columns if value.table%}
-{%set myvalue = attribute(d,col)%}
-{% if not myvalue or value.value == 'slug' or value.value == 'title'%}
-       <td class="col_{{value.value}}">{{myvalue}}</td>
-{%else%}
-       <td class="col_{{value.value}}">{%trans myvalue%}</td>
-{%endif%}
-{%endfor%}
-       <td class="col_actions">
-       <span class="hint--left hint--info" data-hint='{%trans "Edit this record"%}'>
-        <a class="fa fa-pencil" href="{{store}}/{{module}}/edit={{d.id}}">{%trans "Edit"%}</a>
-       </span>
-       <span class="hint--left hint--error" data-hint='{%trans "Delete this record"%}'>
-        <a class="fa fa-times" href="{{store}}/{{module}}/delete={{d.id}}" data-data='{"id": {{d.id}}}' data-method="post" data-modal="delete-confirm">{%trans "Delete"%}</a>
-       </span>
-       </td>
-      </tr>
-{%endfor%}
-{%endblock%}
-     </tbody>
-    </table>
-{%else%}
-    Data not exist!
-{%endif%}
-{%endblock%}
 
-<div class='modal hidden' id='delete-confirm'>
- <div class='modal-dialog'>
-  <h3 class='modal-title'>{%trans%}delete record{%endtrans%}</h3>
-  <div class='modal-body'>{%trans%}seriously, are you sure? There's no coming back.{%endtrans%}</div>
-  <div class='modal-footer buttons'>
-   <a class='button delete-cancel' data-action data-cancel>{%trans "Cancel"%}</a>
-   <div class='or' data-text='{%trans "or"%}'></div>
-   <a class='button negative' data-ajaxify data-ok>{%trans "Delete"%}</a>
-  </div>
- </div>
-</div>
 
-{%endif%}
-{%endif%}
 
- </div>
-</div>
+
+
+ </section>
+
 {%endblock%}
