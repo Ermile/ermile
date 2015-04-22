@@ -350,6 +350,7 @@ ul.list li a{padding:0.3em 0.5em;}
 .font20{font-size:20px;}
 .cursor-pointer{cursor:pointer;}
 .cursor-help{cursor:help;}
+.not-active {pointer-events: none;cursor:not-allowed;}
 .clear{clear:both}
 
 

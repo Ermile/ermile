@@ -23,14 +23,14 @@
  <aside id="page-sidebar">
   <h1 id="page-logo"><a href="{{url.root}}" title="{{site.desc}}">{{site.title}}</a></h1>
   <nav class="sidebar-items">
-   <a href="#"><i class="fa fa-desktop"></i> {%trans "Dashboard"%}</a>
-   <a href="#"><i class="fa fa-file-text-o"></i> {%trans "Posts"%}</a>
-   <a href="#"><i class="fa fa-files-o"></i> {%trans "Pages"%}</a>
-   <a href="#"><i class="fa fa-bookmark-o"></i> {%trans "Tags"%}</a>
-   <a href="#"><i class="fa fa-file"></i> {%trans "Attachments"%}</a>
-   <a href="#"><i class="fa fa-comments-o"></i> {%trans "Comments"%}</a>
-   <a href="#"><i class="fa fa-user"></i> {%trans "Users"%}</a>
-   <a href="#"><i class="fa fa-cogs"></i> {%trans "Settings"%}</a>
+   <a href="/"><i class="fa fa-desktop"></i> <span>{%trans "Dashboard"%}</span></a>
+   <a href="/posts"><i class="fa fa-file-text-o"></i> <span>{%trans "Posts"%}</span></a>
+   <a href="/pages"><i class="fa fa-files-o"></i> <span>{%trans "Pages"%}</span></a>
+   <a href="/tags"><i class="fa fa-bookmark-o"></i> <span>{%trans "Tags"%}</span></a>
+   <a href="/attachments"><i class="fa fa-file"></i> <span>{%trans "Attachments"%}</span></a>
+   <a href="/comments"><i class="fa fa-comments-o"></i> <span>{%trans "Comments"%}</span></a>
+   <a href="/users"><i class="fa fa-user"></i> <span>{%trans "Users"%}</span></a>
+   <a href="/options"><i class="fa fa-cogs"></i> <span>{%trans "Options"%}</span></a>
 <!-- {% for i in list %}
    <a href="{{store}}/{{i}}">{% trans i %}</a>
 {% endfor %} -->
@@ -40,19 +40,24 @@
  <section id="page-content">
   <header id="header">
    <ul id="header-nav">
-    <li><a href="{{url.root}}"><i class="fa fa-home"></i></a></li>
-    <li>
-     <a href="{{url.root}}"><i class="fa fa-language"></i></a>
+    <li><a href="{{url.root}}"><i class="fa fa-home fa-2x"></i></a></li>
+    <li id="languages">
+     <i class="fa fa-language fa-2x"></i>
      <nav class="vertical-menu">
-      <a href="/profile"><i class="fa fa-user"></i> {%trans "My Profile"%}</a>
-      <a href="/lock"><i class="fa fa-lock"></i> {%trans "Lock Screen"%}</a>
-      <a href="/logout"><i class="fa fa-sign-out"></i> {%trans "Logout"%}</a>
+{%for key, value in global.langlist%}{%if key == global.lang%}
+      <a href="?lang={{key}}" class="default not-active">{{value}}</a>
+{%else%}
+      <a href="?lang={{key}}">{{value}}</a>
+{%endif%}{% endfor %}
      </nav>
     </li>
    </ul>
 
    <div id="profile" tabindex=1>
-    <span>Javad Evazzadeh<i class="fa fa-power-off"></i></span>
+    <span>Javad Evazzadeh
+     <i class="fa fa-user"></i>
+     </span>
+
     <nav class="vertical-menu">
      <a href="/profile"><i class="fa fa-user"></i> {%trans "My Profile"%}</a>
      <a href="/lock"><i class="fa fa-lock"></i> {%trans "Lock Screen"%}</a>
@@ -64,9 +69,6 @@
  <nav class="breadcrumb">
    <a href="/"><i class="fa fa-home"></i> Home</a>
    <a href="#2">Page 1</a>
-   <a href="#3">Page 2</a>
-   <a href="#4">Page 3</a>
-   <a href="#5">Page 4</a>
  </nav>
 
  <section id="content">
