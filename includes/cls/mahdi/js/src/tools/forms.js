@@ -108,6 +108,7 @@
     send.call(_super, $form.first());
   };
 
+  // Used to show notification
   $.fn.ajaxify.showResults = function(data, $form, _super) {
     $form.trigger('ajaxify:render:start', data, $form, _super);
 
@@ -137,6 +138,7 @@
           type = 'info';
       }
 
+      // Generate Notification HTML
       var $ul = $('<ul class="' + i + ' unselectable"></ul>');
 
       $form.find('input').removeClass('invalid');

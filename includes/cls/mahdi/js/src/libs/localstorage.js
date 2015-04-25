@@ -1,3 +1,5 @@
+// Used to work with localStorage. LocalStorage API doesn't allow for setting/getting
+// objects/arrays directly
 (function(root) {
   function stringify(something) {
     if(typeof something === 'object')

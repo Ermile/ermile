@@ -72,6 +72,7 @@ class controller extends \mvc\controller
 	// if url is outside of our list, return false else if valid module return true
 	public function cpModlueList($_module = null)
 	{
+		return true;
 		$mylist		= array(
 						'accounts',
 						'comments',

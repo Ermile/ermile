@@ -18,6 +18,7 @@ $(document).ready(function() {
     }
   });
 
+  // Ajaxify links and forms
   $(document).on('submit', 'form', function(e) {
     e.preventDefault();
     $(this).ajaxify();
@@ -28,6 +29,7 @@ $(document).ready(function() {
     $(this).ajaxify({link: true});
   });
 
+  // Open modals by clicking on elements with data-modal attribute
   $(document).on('click', '[data-modal]', function(e) {
     var $this = $(this);
 
@@ -40,6 +42,7 @@ $(document).ready(function() {
     $modal.trigger('open', $this);
   });
 
+  // Close modals and emit events
   $(document).on('click','[data-cancel]', function(e) {
     $('.modal').trigger('close').trigger('cancel');
   });
@@ -94,10 +97,12 @@ $(document).ready(function() {
                               return false;
                             });
 
-    // 'a:not([target="_blank"])\
-    // :not([data-ajaxify])\
-    // :not([data-action])\
-    // :not([data-modal])',
+
+
+  // 'a:not([target="_blank"])\
+  // :not([data-ajaxify])\
+  // :not([data-action])\
+  // :not([data-modal])',
   $(document.body).on('click', 'a', function(e) {
     var $this = $(this);
 
@@ -119,10 +124,11 @@ $(document).ready(function() {
   });
 });
 
-route('*', function() {
+$(window).on('statechange', function() {
   $('input').prop('lang', 'en');
   /* MODALS */
 
+  // Things to do after closing/opening modal
   $('.modal', this).on('close', function() {
     var $this = $(this);
 

@@ -1,3 +1,5 @@
+// Universal Tools used by other files
+
 (function(root) {
   function extend(protoProps, staticProps) {
     var parent = this;

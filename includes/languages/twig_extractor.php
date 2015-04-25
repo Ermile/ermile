@@ -10,13 +10,37 @@ else
 }
 echo "<!DOCTYPE html><meta charset='UTF-8'/><title>Extract text form twig files</title><body>";
 
-$directory   = new RecursiveDirectoryIterator(realpath(__DIR__."/../../").'/' );
+$myPath = realpath(__DIR__."/../../").'/';
+foreach (glob($myPath.'/*.php') as $filename)
+{
+    echo($filename);
+}
+
+
+
+
+// $iterator     = new RecursiveIteratorIterator($dir_iterator, RecursiveIteratorIterator::SELF_FIRST);
+
+
+$dir_iterator = new RecursiveDirectoryIterator($myPath);
+$Iterator = new RecursiveIteratorIterator($dir_iterator);
+// var_dump($Iterator);
+$Regex = new RegexIterator($Iterator, '/^.+\.php$/i');
+var_dump($Regex);
+
+// foreach ($Regex as $file) {
+//     echo $file, "\n";
+// }
+
+
+$directory   = new RecursiveDirectoryIterator($myPath);
 $flattened   = new RecursiveIteratorIterator($directory);
+
 // Make sure the path does not contain "/.Trash*" folders and ends eith a .php or .html file
 $files       = new RegexIterator($flattened, '#^(?:[A-Z]:)?(?:/(?!\.Trash)[^/]+)+/[^/]+\.(?:html)$#Di');
 $translation = array();
 
-foreach($files as $file)
+foreach($flattened as $file)
 {
 	// create an record for array name
 	$trans_key = substr($file, strpos($file, db_name)+strlen(db_name)+1 );
