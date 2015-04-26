@@ -18,7 +18,7 @@ html{
   -ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;-webkit-font-smoothing: antialiased;
   height:100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body {overflow-x: hidden;position: relative;margin: 0;font-family:'Roboto Slab',serif;direction:ltr;}
 body.rtl{font-family:'IRANSans',serif;direction:rtl;}
