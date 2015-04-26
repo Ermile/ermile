@@ -26,7 +26,6 @@ class view extends \mvc\view
 			// get all fields of table and filter fields name for show in datatable, access from columns variable
 			$this->include->datatable = true;
 			$this->data->columns      = \lib\sql\getTable::get($this->data->module);
-			// var_dump($this->data->columns);
 		}
 	}
 

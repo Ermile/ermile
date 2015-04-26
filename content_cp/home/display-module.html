@@ -34,12 +34,15 @@
 {%endif%}
 {%endfor%}
          <td class="col_actions">
-         <span class="hint--left hint--info" data-hint='{%trans "Edit this record"%}'>
-         <a class="fa fa-pencil" href="{{store}}/{{module}}/edit={{d.id}}">{%trans "Edit"%}</a>
-         </span>
-         <span class="hint--left hint--error" data-hint='{%trans "Delete this record"%}'>
-         <a class="fa fa-times" href="{{store}}/{{module}}/delete={{d.id}}" data-data='{"id": {{d.id}}}' data-method="post" data-modal="delete-confirm">{%trans "Delete"%}</a>
-         </span>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square-o fa-stack-2x"></i>
+            <a class="fa fa-pencil fa-stack-1x label-default" href="{{store}}/{{module}}/edit={{d.id}}"></a>
+          </span>
+
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square-o fa-stack-2x"></i>
+            <a class="fa fa-times fa-stack-1x label-danger" href="{{store}}/{{module}}/delete={{d.id}}" data-data='{"id": {{d.id}}}' data-method="post" data-modal="delete-confirm"></a>
+          </span>
          </td>
         </tr>
 {%endfor%}

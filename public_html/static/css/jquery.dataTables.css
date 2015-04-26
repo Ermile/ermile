@@ -8,6 +8,7 @@ table.dataTable {
   border-collapse: separate;
   border-spacing: 0;
   color:#000;
+  font-size:1.2em;
   /*
    * Header and footer styles
    */
@@ -18,7 +19,13 @@ table.dataTable {
 table.dataTable thead th,
 table.dataTable tfoot th {
   font-weight: bold;
+  text-align:left;
 }
+.rtl table.dataTable thead th,
+.rtl table.dataTable tfoot th {
+  text-align:right;
+}
+
 table.dataTable thead th,
 table.dataTable thead td {
   padding: 10px 18px;
@@ -56,11 +63,11 @@ table.dataTable thead .sorting:after {
   content: "\f0dc";
 }
 table.dataTable thead .sorting_asc:after {
-  content: "\f160";
+  content: "\f0de";
   color:#5FBAED;
 }
 table.dataTable thead .sorting_desc:after{
-  content: "\f161";
+  content: "\f0dd";
   color:#5FBAED;
 }
 table.dataTable thead .sorting_desc_disabled:after, table.dataTable thead .sorting_asc_disabled:after{
