@@ -20,8 +20,12 @@ html{
   height:100%;
   overflow-x: hidden;
 }
-body {overflow-x: hidden;position: relative;margin: 0;font-family:'Roboto Slab',serif;direction:ltr;}
+body {overflow-x: hidden;overflow-y:scroll;position: relative;margin: 0;font-family:'Roboto Slab',serif;direction:ltr;}
 body.rtl{font-family:'IRANSans',serif;direction:rtl;}
+-webkit-scrollbar {width: 1em;}
+-webkit-scrollbar-track {background-color:#e8e8e8;}
+-webkit-scrollbar-thumb {background-color: #aaa;}
+
 /* HTML5 display definitions
    ========================================================================== */
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
@@ -59,7 +63,7 @@ h1 {
 }
 
 mark{background:#ff0;color:#000;}
-small{font-size:80%;}
+small{font-size:70%;}
 sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
 sup{top:-0.5em;}
 sub{bottom:-0.25em;}
@@ -164,6 +168,17 @@ code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em;margin: 10px 5%;
 .alert-block > p,.alert-block > ul{margin-bottom:0}
 .alert-block p + p{margin-top:5px}
 
+/* Labels */
+.label {font-weight: 500;display: inline;padding: .2em .6em .3em;font-size: 85%;line-height: 1.5;color: #fff;text-align: center;vertical-align: baseline;border-radius: .25em;}
+a.label:hover{color:#000;}
+.label-form {display: inline-block;font-size: 120%;padding: 5px 10px;line-height:120%;margin-top: 4px;margin: 0 1%;}
+.label-default {background-color: #777;}
+.label-primary{background-color: #33414e;}
+.label-success{background-color: #95b75d;}
+.label-info{background-color: #3fbae4;}
+.label-warning{background-color: #fea223;}
+.label-danger{background-color: #b64645;}
+
 /* ROLL LINKS */
 .roll-link{display:inline-block;overflow:hidden;vertical-align:top;-webkit-perspective:600px;-moz-perspective:600px;-ms-perspective:600px;perspective:600px;-webkit-perspective-origin:50% 50%;-moz-perspective-origin:50% 50%;-ms-perspective-origin:50% 50%;perspective-origin:50% 50%}
 .roll-link:hover{text-decoration:none;}
@@ -224,11 +239,7 @@ h5{font-size:2.5em;line-height:1.1em}
 h6{font-size:2.4em;line-height:1.0em}
 p{margin-bottom:1.5em;font-size:1.3em;line-height:1.5em;}
 
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small{
-  font-weight: normal;
-  line-height: 1;
-  color: #999;
-}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small{font-weight: normal;line-height: 1;color: #999;}
 
 #footer{position:fixed; bottom: 0;width:100%;z-index:2;background-color: rgba(0, 0, 0, 0.1);padding:15px 10%;font-size:1.5em;}
 #footer #languages{float: right;color:#888;}

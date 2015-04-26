@@ -13,12 +13,6 @@
 
 
 
-
-
-
-
-
-
 {%block body%}
  <aside id="page-sidebar">
   <h1 id="page-logo"><a href="{{url.root}}" title="{{site.desc}}">{{site.title}}</a></h1>
@@ -26,7 +20,7 @@
    <a href="/"><i class="fa fa-desktop"></i> <span>{%trans "Dashboard"%}</span></a>
    <a href="/posts"><i class="fa fa-file-text-o"></i> <span>{%trans "Posts"%}</span></a>
    <a href="/pages"><i class="fa fa-files-o"></i> <span>{%trans "Pages"%}</span></a>
-   <a href="/tags"><i class="fa fa-bookmark-o"></i> <span>{%trans "Tags"%}</span></a>
+   <a href="/terms"><i class="fa fa-bookmark-o"></i> <span>{%trans "Terms"%}</span></a>
    <a href="/attachments"><i class="fa fa-file"></i> <span>{%trans "Attachments"%}</span></a>
    <a href="/comments"><i class="fa fa-comments-o"></i> <span>{%trans "Comments"%}</span></a>
    <a href="/users"><i class="fa fa-user"></i> <span>{%trans "Users"%}</span></a>
@@ -59,9 +53,9 @@
      </span>
 
     <nav class="vertical-menu">
-     <a href="/profile"><i class="fa fa-user"></i> {%trans "My Profile"%}</a>
-     <a href="/lock"><i class="fa fa-lock"></i> {%trans "Lock Screen"%}</a>
-     <a href="/logout"><i class="fa fa-sign-out"></i> {%trans "Logout"%}</a>
+     <a id="profile-me" href="/profile"><i class="fa fa-user"></i> {%trans "My Profile"%}</a>
+     <a id="profile-lock" href="/lock"><i class="fa fa-lock"></i> {%trans "Lock Screen"%}</a>
+     <a id="profile-logout" href="/logout"><i class="fa fa-sign-out"></i> {%trans "Logout"%}</a>
     </nav>
    </div>
   </header>
@@ -72,7 +66,14 @@
  </nav>
 
  <section id="content" data-xhr="content">
-{%if page.title%}  <h1>{{page.title}}</h1><hr />{%endif%}
+{%if page.title%}
+  <header id="page-title">
+   <h2>{{page.title}} {%if page.desc%}<small>{{page.desc}}</small>{%endif%}</h2>
+{%if not child and page.haschild%}
+   <a class="label label-info label-form" href="{{store}}/{{module}}/add">{%trans%}Add New Record{%endtrans%}</a>
+{%endif%}
+  </header>
+{%endif%}
 {%block content%}{%endblock%} 
  </section>
 

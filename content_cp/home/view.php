@@ -5,11 +5,13 @@ class view extends \mvc\view
 {
 	public function config()
 	{
-		$this->data->list      = $this->cpModlueList('all');
-		$this->data->bodyclass = 'fixed';
-		$this->include->css    = false;
-		$this->include->js     = false;
-		$this->include->fontawesome  = true;
+		$this->data->list           = $this->cpModlueList('all');
+		$this->data->bodyclass      = 'fixed';
+		$this->include->css         = false;
+		$this->include->js          = false;
+		$this->include->fontawesome = true;
+		// $this->data->page['desc'] = 'salam';
+		$this->data->page['haschild'] = true;
 	}
 
 	function view_datatable()
@@ -24,6 +26,7 @@ class view extends \mvc\view
 			// get all fields of table and filter fields name for show in datatable, access from columns variable
 			$this->include->datatable = true;
 			$this->data->columns      = \lib\sql\getTable::get($this->data->module);
+			// var_dump($this->data->columns);
 		}
 	}
 

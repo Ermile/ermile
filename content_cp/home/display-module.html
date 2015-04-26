@@ -2,59 +2,67 @@
 
 
 {%block content%}
-  <p class="alert alert-block alert-info">
-   <a class="float-left" href="{{store}}/{{module}}/add">{%trans%}Add New Record{%endtrans%}</a>|
-   <a class="float-right" href="/">{%trans "Home"%}</a>
-  </p>
-
-
+ <div class="row">
+  <div class="span12">
+   <div class="panel panel-default">
+     <div class="panel-body">
 
 {%block datatable%}
 {%if include.datatable%}
-    <table class="datatable display responsive nowrap" cellspacing="0" width="100%">
-     <thead>
-     <tr>
-      <th class="column_row"></th>
+       <table class="datatable display responsive nowrap" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+        <th class="column_row"></th>
 {%for value in columns if value.table%}
-      <th>{{value.name}}</th>
+        <th>{{value.label}}</th>
 {%endfor%}
-      <th class="column_actions">{%trans "Actions"%}</th>
-     </tr>
-     </thead>
+        <th class="column_actions">{%trans "Actions"%}</th>
+        </tr>
+        </thead>
 
-     <tbody>
+        <tbody>
 {%block tbody%}
 {%for d in datatable%}
-      <tr class="{{ cycle(['odd', 'even'], loop.index0) }}">
-       <td class="col_row">{{loop.index}}</td>
+        <tr class="{{ cycle(['odd', 'even'], loop.index0) }}">
+         <td class="col_row">{{loop.index}}</td>
 {%for col,value in columns if value.table%}
 {%set myvalue = attribute(d,col)%}
 {% if not myvalue or value.value == 'slug' or value.value == 'title'%}
-       <td class="col_{{value.value}}">{{myvalue}}</td>
+         <td class="col_{{value.value}}">{{myvalue}}</td>
 {%else%}
-       <td class="col_{{value.value}}">{%trans myvalue%}</td>
+         <td class="col_{{value.value}}">{%trans myvalue%}</td>
 {%endif%}
 {%endfor%}
-       <td class="col_actions">
-       <span class="hint--left hint--info" data-hint='{%trans "Edit this record"%}'>
-        <a class="fa fa-pencil" href="{{store}}/{{module}}/edit={{d.id}}">{%trans "Edit"%}</a>
-       </span>
-       <span class="hint--left hint--error" data-hint='{%trans "Delete this record"%}'>
-        <a class="fa fa-times" href="{{store}}/{{module}}/delete={{d.id}}" data-data='{"id": {{d.id}}}' data-method="post" data-modal="delete-confirm">{%trans "Delete"%}</a>
-       </span>
-       </td>
-      </tr>
+         <td class="col_actions">
+         <span class="hint--left hint--info" data-hint='{%trans "Edit this record"%}'>
+         <a class="fa fa-pencil" href="{{store}}/{{module}}/edit={{d.id}}">{%trans "Edit"%}</a>
+         </span>
+         <span class="hint--left hint--error" data-hint='{%trans "Delete this record"%}'>
+         <a class="fa fa-times" href="{{store}}/{{module}}/delete={{d.id}}" data-data='{"id": {{d.id}}}' data-method="post" data-modal="delete-confirm">{%trans "Delete"%}</a>
+         </span>
+         </td>
+        </tr>
 {%endfor%}
 {%endblock%}
-     </tbody>
-    </table>
+        </tbody>
+       </table>
 {%else%}
-    Data not exist!
+  <p class="alert alert-block alert-info">Data not exist!</p>
 {%endif%}
 {%endblock%}
 
-<div class='modal hidden' id='delete-confirm'>
- <div class='modal-dialog'>
+     </div>
+     <div class="panel-footer">
+      <a class="float-right label label-info" href="{{store}}/{{module}}/add">{%trans%}Add New Record{%endtrans%}</a>
+       {{page.title}}
+     </div>
+   </div>
+  </div>
+ </div>
+
+
+ <div class='modal hidden' id='delete-confirm'>
+  <div class='modal-dialog'>
   <h3 class='modal-title'>{%trans%}delete record{%endtrans%}</h3>
   <div class='modal-body'>{%trans%}seriously, are you sure? There's no coming back.{%endtrans%}</div>
   <div class='modal-footer buttons'>
@@ -62,7 +70,7 @@
    <div class='or' data-text='{%trans "or"%}'></div>
    <a class='button negative' data-ajaxify data-ok>{%trans "Delete"%}</a>
   </div>
+  </div>
  </div>
-</div>
 
 {%endblock%}
