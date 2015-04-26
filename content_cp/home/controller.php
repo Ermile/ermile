@@ -31,7 +31,7 @@ class controller extends \mvc\controller
 			// on module root without child like /post
 			if($mychild)
 			{
-				$this->display_name	= 'content_cp\home\child.html';
+				$this->display_name	= 'content_cp\home\display-child.html';
 				//all("edit=.*")
 				if($mychild == 'delete')
 				{
@@ -62,7 +62,7 @@ class controller extends \mvc\controller
 			}
 			else
 			{
-				$this->display_name	= 'content_cp\home\module.html';
+				$this->display_name	= 'content_cp\home\display-module.html';
 				$this->get(null, 'datatable')->ALL();
 			}
 		}

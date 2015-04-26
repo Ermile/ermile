@@ -24,7 +24,7 @@ class view extends \lib\mvc\view
 		// $this->data->bodyclass      = null;
 		
 		$this->data->display['account'] = "content_account/main/layout.html";
-		$this->data->display['cp']      = "content_cp/main/layout.html";
+
 
 
 
@@ -44,7 +44,7 @@ class view extends \lib\mvc\view
 	function pushState()
 	{
 		$this->data->display['account'] = "content_account/main/xhr-layout.html";
-		$this->data->display['cp']      = "content_cp/main/xhr-layout.html";
+		$this->data->display['cp']      = "content_cp/home/layout-xhr.html";
 	}
 }
 ?>
