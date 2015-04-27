@@ -16,42 +16,28 @@ foreach (glob($myPath.'/*.php') as $filename)
     echo($filename);
 }
 
-
-
-
-// $iterator     = new RecursiveIteratorIterator($dir_iterator, RecursiveIteratorIterator::SELF_FIRST);
-
-
-$dir_iterator = new RecursiveDirectoryIterator($myPath);
-$Iterator = new RecursiveIteratorIterator($dir_iterator);
-// var_dump($Iterator);
-$Regex = new RegexIterator($Iterator, '/^.+\.php$/i');
-var_dump($Regex);
-
-// foreach ($Regex as $file) {
-//     echo $file, "\n";
-// }
-
-
 $directory   = new RecursiveDirectoryIterator($myPath);
 $flattened   = new RecursiveIteratorIterator($directory);
 
 // Make sure the path does not contain "/.Trash*" folders and ends eith a .php or .html file
-$files       = new RegexIterator($flattened, '#^(?:[A-Z]:)?(?:/(?!\.Trash)[^/]+)+/[^/]+\.(?:html)$#Di');
+$files       = new RegexIterator($flattened, "/\\.html\$/i");
 $translation = array();
 
-foreach($flattened as $file)
+foreach($files as $file)
 {
 	// create an record for array name
 	$trans_key = substr($file, strpos($file, db_name)+strlen(db_name)+1 );
 	$file_name = basename($file,'.html');
 	$lines     = file($file);
 	$find      = "trans";
+	$count     = 0;
 
 	foreach($lines as $num => $line)
 	{
-		if(strpos($line, $find) !== false)
+		if(strpos($line, $find) !== false && strpos($line, "transparent") === false)
+		// if(!preg_match("/\btrans\b/i", $line))
 		{
+			$count +=1;
 			// find all matches with my creteria
 			// preg_match_all('/{%trans(.*?)%}/s', $line, $matches);										// #1
 			// preg_match_all("/\{\s*%trans\s*(\"|')?([^\"'%]*)(\"|')?\s*%/", $line, $matches); // #2
@@ -67,7 +53,6 @@ foreach($flattened as $file)
 				if($value)
 				{
 					$translation[$value] = 'Line '.($num+1);
-					
 				}
 			}
 			preg_match_all("/\{\s*%\s*trans\s*%\s*}(.+?)\{\s*%\s*endtrans\s*%\s*}/", $line, $matches2);
@@ -82,6 +67,11 @@ foreach($flattened as $file)
 				}
 			}
 		}
+	}
+	if($count === 0 )
+	{
+		echo($trans_key.'<br/>');
+		// unset($translation[$trans_key]);
 	}
 }
 
