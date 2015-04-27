@@ -70,7 +70,7 @@ foreach($files as $file)
 	}
 	if($count === 0 )
 	{
-		echo($trans_key.'<br/>');
+		// echo($trans_key.'<br/>');
 		// unset($translation[$trans_key]);
 	}
 }
