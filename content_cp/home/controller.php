@@ -13,7 +13,7 @@ class controller extends \mvc\controller
 		}
 
 		$mymodule = $this->module();
-		$mychild	 = $this->child();
+		$mychild  = $this->child();
 
 		// Restrict unwanted child
 		if($mychild && !($mychild=='add' || $mychild=='edit' || $mychild=='delete' || $mychild=='options')

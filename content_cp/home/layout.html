@@ -60,9 +60,8 @@
    </div>
   </header>
 
- <nav class="breadcrumb">
-   <a href="/"><i class="fa fa-home"></i> Home</a>
-   <a href="#2">Page 1</a>
+ <nav class="breadcrumb" data-xhr="breadcrumb">
+   {{breadcrumb(url.breadcrumb) | raw}}
  </nav>
 
  <section id="content" data-xhr="content">

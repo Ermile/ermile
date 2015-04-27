@@ -1,4 +1,8 @@
 {% import macro.forms as forms %}
+ <nav class="breadcrumb" data-xhr="breadcrumb">
+   {{breadcrumb(url.breadcrumb) | raw}}
+ </nav>
+
 
  <section id="content" data-xhr="content">
 {%if page.title%}
