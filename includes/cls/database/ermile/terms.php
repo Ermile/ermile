@@ -4,10 +4,10 @@ class terms
 {
 	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                            );
 	public $term_language = array('null' =>'YES', 'show' =>'YES', 'label'=>'language',      'type' => 'char@2',                            );
-	public $term_cat      = array('null' =>'NO',  'show' =>'YES', 'label'=>'cat',           'type' => 'varchar@50',                        );
 	public $term_title    = array('null' =>'NO',  'show' =>'YES', 'label'=>'title',         'type' => 'varchar@50',                        );
 	public $term_slug     = array('null' =>'NO',  'show' =>'YES', 'label'=>'slug',          'type' => 'varchar@50',                        );
 	public $term_desc     = array('null' =>'NO',  'show' =>'NO',  'label'=>'desc',          'type' => 'text@',                             );
+	public $term_url      = array('null' =>'NO',  'show' =>'YES', 'label'=>'url',           'type' => 'varchar@200',                       );
 	public $term_parent   = array('null' =>'YES', 'show' =>'YES', 'label'=>'parent',        'type' => 'int@10',                            );
 	public $term_count    = array('null' =>'YES', 'show' =>'YES', 'label'=>'count',         'type' => 'smallint@5',                        );
 	public $term_status   = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable', );
@@ -19,10 +19,6 @@ class terms
 	public function term_language() 
 	{
 		$this->form("text")->name("language")->maxlength(2)->type('text');
-	}
-	public function term_cat() 
-	{
-		$this->form("text")->name("cat")->maxlength(50)->required()->type('text');
 	}
 
 	//------------------------------------------------------------------ title
@@ -41,6 +37,10 @@ class terms
 	public function term_desc() 
 	{
 		$this->form("#desc")->required();
+	}
+	public function term_url() 
+	{
+		$this->form("text")->name("url")->maxlength(200)->required()->type('textarea');
 	}
 	public function term_parent() 
 	{

@@ -157,7 +157,6 @@ function transtext()
 	echo T_("posts");               // Table posts
 	echo T_("post");                // post
 	echo T_("language");            // post_language
-	echo T_("cat");                 // post_cat
 	echo T_("title");               // post_title
 	echo T_("slug");                // post_slug
 	echo T_("content");             // post_content
@@ -255,10 +254,10 @@ function transtext()
 	echo T_("terms");               // Table terms
 	echo T_("term");                // term
 	echo T_("language");            // term_language
-	echo T_("cat");                 // term_cat
 	echo T_("title");               // term_title
 	echo T_("slug");                // term_slug
 	echo T_("desc");                // term_desc
+	echo T_("url");                 // term_url
 	echo T_("parent");              // term_parent
 	echo T_("count");               // term_count
 	echo T_("status");              // term_status
