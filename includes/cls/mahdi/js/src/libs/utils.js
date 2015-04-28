@@ -50,6 +50,16 @@
     return result;
   };
 
+  String.prototype.toFarsi = function() {
+    var result = this.split('').map(function(a) {
+      var code = a.charCodeAt(0);
+      if(code > 57 || code < 48) return a;
+
+      return String.fromCharCode(code+1728);
+    }).join('');
+    return result;
+  };
+
 
   // Find the right method, call on correct element
   function launchFullscreen(element) {

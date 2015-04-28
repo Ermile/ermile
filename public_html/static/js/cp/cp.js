@@ -10,26 +10,6 @@ function slugify(text) {
 
 route('*', function() 
 {
-  $(".panel .panel-heading", this).click(
-    function () 
-    {
-      var el = $(this).parent();
-      if(el.hasClass('closed'))
-      {
-        el.removeClass('closed');
-        el.children('.panel-body').fadeIn();
-      }
-      else
-      {
-        el.addClass('closed');
-        el.children('.panel-body').hide();
-      }
-    }
-  );
-
-
-
-
   hideFields();
 
   $(".fields-toggle", this).change(function () {

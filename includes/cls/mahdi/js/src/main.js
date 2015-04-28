@@ -2,7 +2,8 @@
 // Az jomle meqdar dehi haye avvalie
 // va etesale roydad haye mokhtalef
 
-$(document).ready(function() {
+$(document).ready(function()
+{
   var regex = /(?:\?|&)?lang=\w*/g;
   if(regex.test(location.search)) {
     Navigate({
@@ -29,27 +30,6 @@ $(document).ready(function() {
     $(this).ajaxify({link: true});
   });
 
-  // Open modals by clicking on elements with data-modal attribute
-  $(document).on('click', '[data-modal]', function(e) {
-    var $this = $(this);
-
-    if($this.hasClass('modal') || $this.parents('.modal').length > 0) return;
-
-    e.preventDefault();
-    var $modal = $('#' + $this.attr('data-modal'));
-    $modal.copyData($this, ['modal']);
-
-    $modal.trigger('open', $this);
-  });
-
-  // Close modals and emit events
-  $(document).on('click','[data-cancel]', function(e) {
-    $('.modal').trigger('close').trigger('cancel');
-  });
-
-  $(document).on('click', '[data-ok]', function(e) {
-    $('.modal').trigger('close').trigger('ok');
-  });
 
   $(document).on('change', '#langlist', function() {
     var regex = /(?:\?|&)?lang=\w*/g;
@@ -124,7 +104,9 @@ $(document).ready(function() {
   });
 });
 
-$(window).on('statechange', function() {
+
+
+route('*', function() {
   $('input').prop('lang', 'en');
   /* MODALS */
 
@@ -155,4 +137,22 @@ $(window).on('statechange', function() {
 
     $send.copyData(this, ['modal']);
   });
+
+  $(".panel .panel-heading", this).click(
+    function () 
+    {
+      var el = $(this).parent();
+      if(el.hasClass('closed'))
+      {
+        el.removeClass('closed');
+        el.children('.panel-body').fadeIn();
+      }
+      else
+      {
+        el.addClass('closed');
+        el.children('.panel-body').hide();
+      }
+    }
+  );
+
 });
