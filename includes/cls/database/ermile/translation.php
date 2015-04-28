@@ -254,6 +254,7 @@ function transtext()
 	echo T_("terms");               // Table terms
 	echo T_("term");                // term
 	echo T_("language");            // term_language
+	echo T_("type");                // term_type
 	echo T_("title");               // term_title
 	echo T_("slug");                // term_slug
 	echo T_("desc");                // term_desc

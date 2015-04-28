@@ -8,7 +8,7 @@ class posts
 	public $post_slug        = array('null' =>'NO',  'show' =>'YES', 'label'=>'slug',          'type' => 'varchar@100',                                      );
 	public $post_content     = array('null' =>'YES', 'show' =>'YES', 'label'=>'content',       'type' => 'text@',                                            );
 	public $post_type        = array('null' =>'NO',  'show' =>'YES', 'label'=>'type',          'type' => 'varchar@50!post',                                  );
-	public $post_url         = array('null' =>'YES', 'show' =>'YES', 'label'=>'url',           'type' => 'text@',                                            );
+	public $post_url         = array('null' =>'NO',  'show' =>'YES', 'label'=>'url',           'type' => 'varchar@2000',                                     );
 	public $post_comment     = array('null' =>'YES', 'show' =>'YES', 'label'=>'comment',       'type' => 'enum@open,closed',                                 );
 	public $post_count       = array('null' =>'YES', 'show' =>'YES', 'label'=>'count',         'type' => 'smallint@5',                                       );
 	public $post_status      = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@publish,draft,schedule,deleted,expire!draft', );
@@ -49,7 +49,7 @@ class posts
 	}
 	public function post_url() 
 	{
-		$this->form("text")->name("url");
+		$this->form("text")->name("url")->maxlength(2000)->required()->type('textarea');
 	}
 	public function post_comment() 
 	{

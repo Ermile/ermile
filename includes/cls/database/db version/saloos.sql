@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2015 at 11:41 PM
+-- Generation Time: Apr 29, 2015 at 12:55 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -165,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `post_slug` varchar(100) NOT NULL,
   `post_content` text,
   `post_type` varchar(50) NOT NULL DEFAULT 'post',
-  `post_url` text,
+  `post_url` varchar(2000) NOT NULL,
   `post_comment` enum('open','closed') DEFAULT NULL,
   `post_count` smallint(5) unsigned DEFAULT NULL,
   `post_status` enum('publish','draft','schedule','deleted','expire') NOT NULL DEFAULT 'draft',
@@ -180,8 +180,8 @@ CREATE TABLE IF NOT EXISTS `posts` (
 --
 
 INSERT INTO `posts` (`id`, `post_language`, `post_title`, `post_slug`, `post_content`, `post_type`, `post_url`, `post_comment`, `post_count`, `post_status`, `post_parent`, `user_id`, `post_publishdate`, `date_modified`) VALUES
-(4, NULL, 'salam', 'salam', 'salam khobi?', 'post', NULL, NULL, NULL, 'publish', NULL, 15, NULL, NULL),
-(5, NULL, 'khobi?', 'khobi', 'khobi che khabar?', 'post', NULL, NULL, NULL, 'draft', NULL, 15, NULL, NULL);
+(4, NULL, 'salam', 'salam', 'salam khobi?', 'post', 'salam', NULL, NULL, 'publish', NULL, 15, NULL, '2015-04-28 22:49:26'),
+(5, NULL, 'khobi?', 'khobi', 'khobi che khabar?', 'post', 'khobi', NULL, NULL, 'draft', NULL, 15, NULL, '2015-04-28 22:49:31');
 
 -- --------------------------------------------------------
 
@@ -192,10 +192,11 @@ INSERT INTO `posts` (`id`, `post_language`, `post_title`, `post_slug`, `post_con
 CREATE TABLE IF NOT EXISTS `terms` (
 `id` int(10) unsigned NOT NULL,
   `term_language` char(2) DEFAULT NULL,
-  `term_cat` varchar(50) NOT NULL,
+  `term_type` varchar(50) NOT NULL DEFAULT 'tag',
   `term_title` varchar(50) NOT NULL,
   `term_slug` varchar(50) NOT NULL,
-  `term_desc` text NOT NULL,
+  `term_desc` text,
+  `term_url` varchar(200) NOT NULL,
   `term_parent` int(10) unsigned DEFAULT NULL,
   `term_count` smallint(5) unsigned DEFAULT NULL,
   `term_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
@@ -206,11 +207,11 @@ CREATE TABLE IF NOT EXISTS `terms` (
 -- Dumping data for table `terms`
 --
 
-INSERT INTO `terms` (`id`, `term_language`, `term_cat`, `term_title`, `term_slug`, `term_desc`, `term_parent`, `term_count`, `term_status`, `date_modified`) VALUES
-(1, NULL, '', 'news', 'news', '', NULL, NULL, 'enable', '0000-00-00 00:00:00'),
-(5, NULL, '', 'test', 'test', 't', NULL, NULL, 'enable', '2015-01-18 13:33:13'),
-(6, NULL, '', 'news2', 'news2', 'news 2', 1, NULL, 'enable', '2015-01-18 15:45:20'),
-(7, NULL, '', 'tag1', 'tag1', '', NULL, NULL, 'enable', NULL);
+INSERT INTO `terms` (`id`, `term_language`, `term_type`, `term_title`, `term_slug`, `term_desc`, `term_url`, `term_parent`, `term_count`, `term_status`, `date_modified`) VALUES
+(1, NULL, '', 'news', 'news', '', 'news', NULL, NULL, 'enable', '2015-04-28 22:48:26'),
+(5, NULL, '', 'test', 'test', 't', 'test', NULL, NULL, 'enable', '2015-04-28 22:48:29'),
+(6, NULL, '', 'news2', 'news2', 'news 2', 'news2', 1, NULL, 'enable', '2015-04-28 22:48:34'),
+(7, NULL, '', 'tag1', 'tag1', '', 'tag1', NULL, NULL, 'enable', '2015-04-28 22:48:37');
 
 -- --------------------------------------------------------
 
@@ -381,13 +382,13 @@ ALTER TABLE `postmetas`
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`post_slug`), ADD KEY `posts_users_id` (`user_id`) USING BTREE;
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`post_slug`), ADD KEY `posts_users_id` (`user_id`) USING BTREE, ADD KEY `posturl_index` (`post_url`(255));
 
 --
 -- Indexes for table `terms`
 --
 ALTER TABLE `terms`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`term_slug`) USING BTREE;
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`term_slug`) USING BTREE, ADD UNIQUE KEY `termurl_unique` (`term_url`);
 
 --
 -- Indexes for table `termusages`
