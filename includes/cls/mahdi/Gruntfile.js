@@ -82,16 +82,16 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-      ermile: {
-        files: [
-          {
-            expand: true,
-            src: ['js/*.js'],
-            dest: '../../../public_html/static/js/',
-            flatten: true
-          }
-        ]
-      },
+      // ermile: {
+      //   files: [
+      //     {
+      //       expand: true,
+      //       src: ['js/*.js'],
+      //       dest: '../../../public_html/static/js/',
+      //       flatten: true
+      //     }
+      //   ]
+      // },
       talambar: {
         files: [
           {
@@ -108,14 +108,29 @@ module.exports = function(grunt) {
           }
         ]
       },
-      city: {
+
+      all: {
         files: [
-          {
-            expand: true,
-            src: ['js/common.js'],
-            dest: '../../../../city/public_html/static/js/',
-            flatten: true
-          }
+          { 
+            expand: true, flatten: true, src: ['js/common.js'], 
+            dest: '../../../../ermile/public_html/static/js/'
+          },
+          { 
+            expand: true, flatten: true, src: ['js/common.js'], 
+            dest: '../../../../saloos-project/public_html/static/js/'
+          },
+          { 
+            expand: true, flatten: true, src: ['js/common.js'], 
+            dest: '../../../../amon/public_html/static/js/'
+          },
+          { 
+            expand: true, flatten: true, src: ['js/common.js'], 
+            dest: '../../../../city/public_html/static/js/'
+          },
+          { 
+            expand: true, flatten: true, src: ['js/common.js'], 
+            dest: '../../../../quranhadith/public_html/static/js/'
+          },
         ]
       }
     },
@@ -151,7 +166,7 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: ['js/*.js', 'js/src/libs/*.js', 'js/src/subs/*.js'],
-        tasks: ['copy:ermile', 'copy:talambar', 'copy:city']
+        tasks: ['copy:ermile', 'copy:talambar', 'copy:all']
       },
       less: {
         files: ['css/**'],

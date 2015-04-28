@@ -36,6 +36,6 @@ describe('Navigate', function() {
     })
   })
   after(function() {
-    Navigate({url: '/mahdi/tests', title: 'Mocha Tests'});
+    Navigate({url: '/js/tests', title: 'Mocha Tests'});
   })
 })
