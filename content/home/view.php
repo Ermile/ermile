@@ -1,7 +1,7 @@
 <?php
 namespace content\home;
 
-class view extends \content\main\view
+class view extends \mvc\view
 {
 	public function options()
 	{

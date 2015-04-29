@@ -2,7 +2,7 @@
 namespace content\home;
 use \lib\debug;
 
-class model extends \content\main\model
+class model extends \mvc\model
 {
 	// public function get_validate($object){
 	// 	$maker = $this->validate()->make();
