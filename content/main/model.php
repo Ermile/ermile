@@ -4,6 +4,39 @@ use \lib\debug;
 
 class model extends \mvc\model
 {
+	/**
+	 * this fuction check the url entered from user in database
+	 * first search in posts and if not exist search in terms table
+	 * @return [array] datarow of result if exist else return false
+	 */
+	function url_checker()
+	{
+		$url = $this->url('path');
+		// first of all search in url field if exist return row data
+		$qry = $this->sql()->tablePosts()->wherePost_url($url)->andPost_status('publish')->select();
+		if($qry->num() === 1)
+		{
+			$datarow = $qry->assoc();
+			return array('type' => $datarow['post_type'], 'slug' => $datarow['post_slug'] );
+		}
+
+		// if url not exist in posts then search in terms table and if exist return row data
+		elseif($qry->num() === 0)
+		{
+			$qry =  $this->sql()->tableTerms()->whereTerm_url($url)->andTerm_status('enable')->select();
+			if($qry->num() === 1)
+			{
+				$datarow = $qry->assoc();
+				return array('type' => $datarow['term_type'], 'slug' => $datarow['term_slug'] );
+			}
+		}
+
+		// else retun false
+		return false;
+	}
+
+
+
 	public function get_posts($object)
 	{
 		$_url       = $this->module('array');
@@ -28,7 +61,7 @@ class model extends \mvc\model
 		return null;
 	}
 
-	function url_checker($_url = null)
+	function url_checker_old($_url = null)
 	{
 		if(!$_url)
 			$_url = $this->module('array');
