@@ -108,7 +108,7 @@ function transtext()
 	// ------------------------------------------------------------------- Table notifications
 	echo T_("notifications");       // Table notifications
 	echo T_("notification");        // notification
-	echo T_("idsender");            // user_idsender
+	echo T_("user sender");         // user_idsender
 	echo T_("title");               // notification_title
 	echo T_("content");             // notification_content
 	echo T_("url");                 // notification_url
@@ -231,7 +231,7 @@ function transtext()
 	echo T_("desc");                // receipt_desc
 	echo T_("transaction");         // transaction_id
 	echo T_("fund");                // fund_id
-	echo T_("idcustomer");          // user_idcustomer
+	echo T_("user customer");       // user_idcustomer
 	echo T_("post");                // Enum post
 	echo T_("get");                 // Enum get
 	echo T_("receive");             // Enum receive

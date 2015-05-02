@@ -14,7 +14,7 @@ class receipts
 	public $transaction_id      = array('null' =>'YES', 'show' =>'YES', 'label'=>'transaction',   'type' => 'bigint@20',                                            'foreign'=>'transactions@id!id');
 	public $fund_id             = array('null' =>'NO',  'show' =>'YES', 'label'=>'fund',          'type' => 'smallint@5',                                           'foreign'=>'funds@id!fund_title');
 	public $user_id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'user',          'type' => 'int@10',                                               'foreign'=>'users@id!user_nickname');
-	public $user_idcustomer     = array('null' =>'NO',  'show' =>'YES', 'label'=>'idcustomer',    'type' => 'int@10',                                               );
+	public $user_idcustomer     = array('null' =>'NO',  'show' =>'NO',  'label'=>'user customer', 'type' => 'int@10',                                               'foreign'=>'users@id!user_nickname');
 	public $date_modified       = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                                           );
 	public $account_id          = array('null' =>'NO',  'show' =>'YES', 'label'=>'account',       'type' => 'smallint@5',                                           'foreign'=>'accounts@id!account_title');
 
@@ -81,9 +81,12 @@ class receipts
 
 	//------------------------------------------------------------------ user_id
 	public function user_id() {$this->validate()->id();}
+
+	//------------------------------------------------------------------ id - foreign key
 	public function user_idcustomer() 
 	{
-		$this->form("text")->name("idcustomer")->min(0)->max(9999999999)->required()->type('number');
+		$this->form("select")->name("user_customer")->min(0)->max(9999999999)->required()->type("select")->validate()->id();
+		$this->setChild();
 	}
 	public function date_modified() {}
 

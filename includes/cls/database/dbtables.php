@@ -16,11 +16,13 @@ CAUTIONS : IF YOU DON'T KNOW WHAT'S THIS, PLEASE DON'T RUN IT!
 *THIS FILE READ DATABASE AND CREATE A PHP FILE FOR CREATING FORM
 ***********************************************************************************
 **/
+
 echo "<!DOCTYPE html><meta charset='UTF-8'/><title>Create file from db</title><body>";
 $connect     = mysqli_connect("localhost", db_user, db_pass, db_name);
 $qTables     = $connect->query("SHOW TABLES FROM ".db_name);
 $translation = array();
 
+// create db folder name if not exist
 if (!file_exists(__DIR__.'/'.db_name))
 	mkdir(__DIR__.'/'.db_name, 0777, true);
 
@@ -33,7 +35,7 @@ function _type($_type, $_def, $_table = null)
 	preg_match("/^([^(]*)(\((.*)\))?/", $_type, $tp);
 	$_type   = $tp[1];
 	$_length = isset($tp[3]) ? $tp[3] : null;
-	switch ($_type) 
+	switch ($_type)
 	{
 		case 'enum':
 			$_length     = preg_replace("[']", "", $_length);
@@ -168,12 +170,12 @@ function field_userFriendly($_fieldname, $_export = 'name')
 			$mytype  = 'foreign';
 		}
 
-		// if especial foreign key like user_id_customer
+		// if especial foreign key like user_idcustomer
 		// change it to user_customer
-		elseif(substr($suffix, 0, 3) === 'id_')
+		elseif(substr($suffix, 0, 2) === 'id')
 		{
-			$myname  = $prefix.'_'.substr($suffix, 3);
-			$mylabel = $prefix.' '.substr($suffix, 3);
+			$myname  = $prefix.'_'.substr($suffix, 2);
+			$mylabel = $prefix.' '.substr($suffix, 2);
 			$mytype  = 'foreign';
 		}
 
@@ -367,7 +369,7 @@ while ($row = $qTables->fetch_object())
 		
 
 		// ****************************************************************************for show in form or not
-		if( $myfield=="user_id" || $myfield=="user_id_customer")
+		if( $myfield=="user_id" || $myfield=="user_idcustomer")
 		{
 			$myfield_show	= 'NO';
 		}
