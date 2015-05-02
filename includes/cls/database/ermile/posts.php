@@ -38,7 +38,7 @@ class posts
 	}
 	public function post_content() 
 	{
-		$this->form("text")->name("content");
+		$this->form("text")->name("content")->type('textarea');
 	}
 
 	//------------------------------------------------------------------ select button
@@ -75,7 +75,7 @@ class posts
 	public function user_id() {$this->validate()->id();}
 	public function post_publishdate() 
 	{
-		$this->form("text")->name("publishdate");
+		$this->form("text")->name("publishdate")->type('text');
 	}
 	public function date_modified() {}
 }

@@ -38,11 +38,11 @@ class productprices
 	}
 	public function productprice_startdate() 
 	{
-		$this->form("text")->name("startdate")->required();
+		$this->form("text")->name("startdate")->required()->type('text');
 	}
 	public function productprice_enddate() 
 	{
-		$this->form("text")->name("enddate");
+		$this->form("text")->name("enddate")->type('text');
 	}
 	public function productprice_buyprice() 
 	{

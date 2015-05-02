@@ -44,7 +44,7 @@ class terms
 	//------------------------------------------------------------------ desc
 	public function term_desc() 
 	{
-		$this->form("#desc");
+		$this->form("#desc")->type('textarea');
 	}
 	public function term_url() 
 	{

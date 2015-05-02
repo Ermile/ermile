@@ -40,7 +40,7 @@ class visitors
 	public function user_id() {$this->validate()->id();}
 	public function visitor_createdate() 
 	{
-		$this->form("text")->name("createdate");
+		$this->form("text")->name("createdate")->type('text');
 	}
 	public function date_modified() {}
 }

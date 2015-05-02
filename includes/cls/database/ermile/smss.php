@@ -53,7 +53,7 @@ class smss
 	}
 	public function sms_createdate() 
 	{
-		$this->form("text")->name("createdate")->required();
+		$this->form("text")->name("createdate")->required()->type('text');
 	}
 
 	//------------------------------------------------------------------ select button

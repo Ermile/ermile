@@ -38,7 +38,7 @@ class receipts
 	}
 	public function receipt_date() 
 	{
-		$this->form("text")->name("date")->required();
+		$this->form("text")->name("date")->required()->type('text');
 	}
 
 	//------------------------------------------------------------------ id - foreign key
@@ -49,7 +49,7 @@ class receipts
 	}
 	public function receipt_paperdate() 
 	{
-		$this->form("text")->name("paperdate");
+		$this->form("text")->name("paperdate")->type('text');
 	}
 
 	//------------------------------------------------------------------ select button

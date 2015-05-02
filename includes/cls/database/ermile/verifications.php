@@ -54,7 +54,7 @@ class verifications
 	}
 	public function verification_createdate() 
 	{
-		$this->form("text")->name("createdate");
+		$this->form("text")->name("createdate")->type('text');
 	}
 	public function date_modified() {}
 }

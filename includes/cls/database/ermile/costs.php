@@ -42,7 +42,7 @@ class costs
 	}
 	public function cost_date() 
 	{
-		$this->form("text")->name("date")->required();
+		$this->form("text")->name("date")->required()->type('text');
 	}
 
 	//------------------------------------------------------------------ desc

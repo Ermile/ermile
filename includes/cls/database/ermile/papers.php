@@ -29,7 +29,7 @@ class papers
 	}
 	public function paper_date() 
 	{
-		$this->form("text")->name("date");
+		$this->form("text")->name("date")->type('text');
 	}
 	public function paper_price() 
 	{

@@ -53,7 +53,7 @@ class users
 	}
 	public function user_createdate() 
 	{
-		$this->form("text")->name("createdate")->required();
+		$this->form("text")->name("createdate")->required()->type('text');
 	}
 	public function date_modified() {}
 }
