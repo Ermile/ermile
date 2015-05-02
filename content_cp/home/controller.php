@@ -16,16 +16,22 @@ class controller extends \mvc\controller
 		$mychild  = $this->child();
 		$mypath   = $this->url('path','_');
 
-		if($mymodule === 'dbtable' && $mychild === 'create')
+		if($mymodule === 'utility')
 		{
-			\lib\utility\dbTables::create();
+			if($mychild === 'dbtables')
+				\lib\utility\dbTables::create();
+			elseif( $mychild === 'twigtrans')
+				\lib\utility\twigTrans::extract();
+			
 			$this->get()->ALL();
+			$this->display_name	= 'content_cp/templates/raw.html';
+			return;
 		}
 
 
 		if( is_file(root.'content_cp/templates/'.$mypath.'.html') )
 		{
-			$this->display_name	= 'content_cp/templates\\'.$mypath.'.html';
+			$this->display_name	= 'content_cp/templates/'.$mypath.'.html';
 		}
 		else
 		{

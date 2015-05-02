@@ -59,6 +59,10 @@ function transtext()
 	echo T_("or");                                                                    // Line 73
 	echo T_("Delete");                                                                // Line 74
 
+	//----------------------------------------------------content_cp\home\display.html
+	echo T_("Hello!");                                                                // Line 7
+	echo T_("Welcome to Saloos control panel.");                                      // Line 7
+
 	//-------------------------------------------------content_cp\home\layout-xhr.html
 
 	//-----------------------------------------------------content_cp\home\layout.html
@@ -69,6 +73,7 @@ function transtext()
 	echo T_("Attachments");                                                           // Line 24
 	echo T_("Comments");                                                              // Line 25
 	echo T_("Users");                                                                 // Line 26
+	echo T_("Javad Evazzadeh");                                                       // Line 51
 	echo T_("My Profile");                                                            // Line 56
 	echo T_("Lock Screen");                                                           // Line 57
 	echo T_("Logout");                                                                // Line 58
