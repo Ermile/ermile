@@ -14,20 +14,27 @@ class controller extends \mvc\controller
 
 		$mymodule = $this->module();
 		$mychild  = $this->child();
+		$mypath   = $this->url('path','_');
 
-		// Restrict unwanted child
-		if($mychild && !($mychild=='add' || $mychild=='edit' || $mychild=='delete' || $mychild=='options')
-			 || !$this->cpModlueList()
-			)
-			\lib\error::page(T_("Not found!"));
-
-
-		if( is_file(root.'content_cp/'.$mymodule.'/display.html') )
+		if($mymodule === 'dbtable' && $mychild === 'create')
 		{
-			$this->display_name	= 'content_cp\\'.$mymodule.'\display.html';
+			\lib\utility\dbTables::create();
+			$this->get()->ALL();
+		}
+
+
+		if( is_file(root.'content_cp/templates/'.$mypath.'.html') )
+		{
+			$this->display_name	= 'content_cp/templates\\'.$mypath.'.html';
 		}
 		else
 		{
+			// Restrict unwanted child
+			if($mychild && !($mychild=='add' || $mychild=='edit' || $mychild=='delete' || $mychild=='options')
+				 || !$this->cpModlueList()
+				)
+				\lib\error::page(T_("Not found!"));
+
 			// on module root without child like /post
 			if($mychild)
 			{
