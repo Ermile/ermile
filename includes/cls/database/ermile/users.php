@@ -8,7 +8,7 @@ class users
 	public $user_pass        = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'pass'            ,'type'=>'varchar@64'];
 	public $user_displayname = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'displayname'     ,'type'=>'varchar@50'];
 	public $user_status      = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'enum@active,awaiting,deactive,removed,filter!awaiting'];
-	public $permission_id    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'permission'      ,'type'=>'smallint@5'                      ,'foreign'=>'permissions@id!permission_title'];
+	public $user_permission  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'permission'      ,'type'=>'smallint@5'];
 	public $user_createdate  = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'createdate'      ,'type'=>'datetime@'];
 	public $date_modified    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
 
@@ -40,11 +40,10 @@ class users
 		$this->form()->type('radio')->name('status');
 		$this->setChild();
 	}
-	//--------------------------------------------------------------------------------foreign
-	public function permission_id()
+
+	public function user_permission()
 	{
-		$this->form()->type('select')->name('permission_');
-		$this->setChild();
+		$this->form()->type('number')->name('permission')->min()->max('99999');
 	}
 
 	public function user_createdate()

@@ -336,7 +336,7 @@ function transtext()
 	echo T_("pass");                // user_pass
 	echo T_("displayname");         // user_displayname
 	echo T_("status");              // user_status
-	echo T_("permission");          // permission_id
+	echo T_("permission");          // user_permission
 	echo T_("createdate");          // user_createdate
 
 	// ------------------------------------------------------------ Table verifications

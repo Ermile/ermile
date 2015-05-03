@@ -29,55 +29,55 @@ class controller extends \mvc\controller
 		}
 
 
-		if( is_file(root.'content_cp/templates/'.$mypath.'.html') )
+
+		// Restrict unwanted child
+		if($mychild && !($mychild=='add' || $mychild=='edit' || $mychild=='delete' || $mychild=='options')
+			 || !$this->cpModlueList()
+			)
+			\lib\error::page(T_("Not found!"));
+
+		// on module root without child like /post
+		if($mychild)
 		{
-			$this->display_name	= 'content_cp/templates/'.$mypath.'.html';
+			$this->display_name	= 'content_cp\home\display-child.html';
+			//all("edit=.*")
+			if($mychild == 'delete')
+			{
+				// $this->model()->delete();
+				// $controller->route_check_true = true;
+				// $this->redirector()->set_url($mymodule); //->redirect();
+				$this->get($mychild)->ALL();		// @hasan: regular?
+				$this->post($mychild)->ALL();
+				// return;
+				// $this->redirector()->set_domain('cp.ermile.dev')->set_url('banks');
+			}
+			if($mychild == 'edit')
+			{
+				// var_dump($this->model()->datarow());
+				$this->get(null, 'child')->ALL();
+				$this->post($mychild)->ALL();
+			}
+			elseif($mychild == 'add')
+			{
+				$this->get(null, 'child')->ALL();
+				$this->post($mychild)->ALL();
+			}
+			elseif($mychild == 'options')
+			{
+				$this->post($mychild)->ALL();
+			}
+
 		}
 		else
 		{
-			// Restrict unwanted child
-			if($mychild && !($mychild=='add' || $mychild=='edit' || $mychild=='delete' || $mychild=='options')
-				 || !$this->cpModlueList()
-				)
-				\lib\error::page(T_("Not found!"));
+			$this->display_name	= 'content_cp\home\display-module.html';
+			$this->get(null, 'datatable')->ALL();
+		}
 
-			// on module root without child like /post
-			if($mychild)
-			{
-				$this->display_name	= 'content_cp\home\display-child.html';
-				//all("edit=.*")
-				if($mychild == 'delete')
-				{
-					// $this->model()->delete();
-					// $controller->route_check_true = true;
-					// $this->redirector()->set_url($mymodule); //->redirect();
-					$this->get($mychild)->ALL();		// @hasan: regular?
-					$this->post($mychild)->ALL();
-					// return;
-					// $this->redirector()->set_domain('cp.ermile.dev')->set_url('banks');
-				}
-				if($mychild == 'edit')
-				{
-					// var_dump($this->model()->datarow());
-					$this->get(null, 'child')->ALL();
-					$this->post($mychild)->ALL();
-				}
-				elseif($mychild == 'add')
-				{
-					$this->get(null, 'child')->ALL();
-					$this->post($mychild)->ALL();
-				}
-				elseif($mychild == 'options')
-				{
-					$this->post($mychild)->ALL();
-				}
 
-			}
-			else
-			{
-				$this->display_name	= 'content_cp\home\display-module.html';
-				$this->get(null, 'datatable')->ALL();
-			}
+		if( is_file(root.'content_cp/templates/'.$mypath.'.html') )
+		{
+			$this->display_name	= 'content_cp/templates/'.$mypath.'.html';
 		}
 	}
 
