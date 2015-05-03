@@ -2,32 +2,31 @@
 namespace database\ermile;
 class errors 
 {
-	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',                           );
-	public $error_title    = array('null' =>'NO',  'show' =>'YES', 'label'=>'title',         'type' => 'varchar@100',                          );
-	public $error_solution = array('null' =>'YES', 'show' =>'YES', 'label'=>'solution',      'type' => 'varchar@999',                          );
-	public $error_priority = array('null' =>'NO',  'show' =>'YES', 'label'=>'priority',      'type' => 'enum@critical,high,medium,low!medium', );
-	public $date_modified  = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                           );
+	public $id             = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'smallint@5'];
+	public $error_title    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'title'           ,'type'=>'varchar@100'];
+	public $error_solution = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'solution'        ,'type'=>'varchar@999'];
+	public $error_priority = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'priority'        ,'type'=>'enum@critical,high,medium,low!medium'];
+	public $date_modified  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
 
+	//--------------------------------------------------------------------------------id
+	public function id(){}
 
-	//------------------------------------------------------------------ id
-	public function id() {$this->validate()->id();}
-
-	//------------------------------------------------------------------ title
-	public function error_title() 
+	public function error_title()
 	{
-		$this->form("#title")->maxlength(100)->required()->type('text');
-	}
-	public function error_solution() 
-	{
-		$this->form("text")->name("solution")->maxlength(999)->type('textarea');
+		$this->form('#title')->type('text')->name('title')->maxlength('100')->required();
 	}
 
-	//------------------------------------------------------------------ select button
-	public function error_priority() 
+	public function error_solution()
 	{
-		$this->form("select")->name("priority")->type("select")->required()->validate();
+		$this->form()->type('textarea')->name('solution')->maxlength('999');
+	}
+
+	public function error_priority()
+	{
+		$this->form()->type('radio')->name('priority')->required();
 		$this->setChild();
 	}
-	public function date_modified() {}
+
+	public function date_modified(){}
 }
 ?>

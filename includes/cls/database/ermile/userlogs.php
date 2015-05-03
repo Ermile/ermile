@@ -2,46 +2,45 @@
 namespace database\ermile;
 class userlogs 
 {
-	public $id               = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'bigint@20',                   );
-	public $userlog_title    = array('null' =>'YES', 'show' =>'YES', 'label'=>'title',         'type' => 'varchar@50',                  );
-	public $userlog_desc     = array('null' =>'YES', 'show' =>'NO',  'label'=>'desc',          'type' => 'varchar@999',                 );
-	public $userlog_priority = array('null' =>'NO',  'show' =>'YES', 'label'=>'priority',      'type' => 'enum@high,medium,low!medium', );
-	public $userlog_type     = array('null' =>'YES', 'show' =>'YES', 'label'=>'type',          'type' => 'enum@forgetpassword',         );
-	public $user_id          = array('null' =>'YES', 'show' =>'NO',  'label'=>'user',          'type' => 'int@10',                      'foreign'=>'users@id!user_nickname');
-	public $date_modified    = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                  );
+	public $id               = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'bigint@20'];
+	public $userlog_title    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'title'           ,'type'=>'varchar@50'];
+	public $userlog_desc     = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'desc'            ,'type'=>'varchar@999'];
+	public $userlog_priority = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'priority'        ,'type'=>'enum@high,medium,low!medium'];
+	public $userlog_type     = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'type'            ,'type'=>'enum@forgetpassword'];
+	public $user_id          = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'user'            ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_displayname'];
+	public $date_modified    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
 
+	//--------------------------------------------------------------------------------id
+	public function id(){}
 
-	//------------------------------------------------------------------ id
-	public function id() {$this->validate()->id();}
-
-	//------------------------------------------------------------------ title
-	public function userlog_title() 
+	public function userlog_title()
 	{
-		$this->form("#title")->maxlength(50)->type('text');
+		$this->form('#title')->type('text')->name('title')->maxlength('50');
 	}
 
-	//------------------------------------------------------------------ desc
-	public function userlog_desc() 
+	public function userlog_desc()
 	{
-		$this->form("#desc")->maxlength(999)->type('textarea');
+		$this->form('#desc')->type('textarea')->name('desc')->maxlength('999');
 	}
 
-	//------------------------------------------------------------------ select button
-	public function userlog_priority() 
+	public function userlog_priority()
 	{
-		$this->form("select")->name("priority")->type("select")->required()->validate();
+		$this->form()->type('radio')->name('priority')->required();
 		$this->setChild();
 	}
 
-	//------------------------------------------------------------------ select button
-	public function userlog_type() 
+	public function userlog_type()
 	{
-		$this->form("select")->name("type")->type("select")->validate();
+		$this->form()->type('radio')->name('type');
+		$this->setChild();
+	}
+	//--------------------------------------------------------------------------------foreign
+	public function user_id()
+	{
+		$this->form()->type('select')->name('user_');
 		$this->setChild();
 	}
 
-	//------------------------------------------------------------------ user_id
-	public function user_id() {$this->validate()->id();}
-	public function date_modified() {}
+	public function date_modified(){}
 }
 ?>

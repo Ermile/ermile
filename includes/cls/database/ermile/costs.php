@@ -2,68 +2,64 @@
 namespace database\ermile;
 class costs 
 {
-	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                      );
-	public $cost_title    = array('null' =>'NO',  'show' =>'YES', 'label'=>'title',         'type' => 'varchar@50',                  );
-	public $cost_price    = array('null' =>'NO',  'show' =>'YES', 'label'=>'price',         'type' => 'decimal@13,4',                );
-	public $costcat_id    = array('null' =>'NO',  'show' =>'YES', 'label'=>'costcat',       'type' => 'smallint@5',                  'foreign'=>'costcats@id!costcat_title');
-	public $account_id    = array('null' =>'NO',  'show' =>'YES', 'label'=>'account',       'type' => 'smallint@5',                  'foreign'=>'accounts@id!account_title');
-	public $cost_date     = array('null' =>'NO',  'show' =>'YES', 'label'=>'date',          'type' => 'datetime@',                   );
-	public $cost_desc     = array('null' =>'YES', 'show' =>'NO',  'label'=>'desc',          'type' => 'varchar@200',                 );
-	public $cost_type     = array('null' =>'NO',  'show' =>'YES', 'label'=>'type',          'type' => 'enum@income,outcome!outcome', );
-	public $paper_id      = array('null' =>'YES', 'show' =>'YES', 'label'=>'paper',         'type' => 'int@10',                      'foreign'=>'papers@id!id');
-	public $date_modified = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                  );
+	public $id            = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'int@10'];
+	public $cost_title    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'title'           ,'type'=>'varchar@50'];
+	public $cost_price    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'price'           ,'type'=>'decimal@13,4'];
+	public $costcat_id    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'costcat'         ,'type'=>'smallint@5'                      ,'foreign'=>'costcats@id!costcat_title'];
+	public $account_id    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'account'         ,'type'=>'smallint@5'                      ,'foreign'=>'accounts@id!account_title'];
+	public $cost_date     = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'date'            ,'type'=>'datetime@'];
+	public $cost_desc     = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'desc'            ,'type'=>'varchar@200'];
+	public $cost_type     = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'type'            ,'type'=>'enum@income,outcome!outcome'];
+	public $paper_id      = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'paper'           ,'type'=>'int@10'                          ,'foreign'=>'papers@id!id'];
+	public $date_modified = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
 
+	//--------------------------------------------------------------------------------id
+	public function id(){}
 
-	//------------------------------------------------------------------ id
-	public function id() {$this->validate()->id();}
-
-	//------------------------------------------------------------------ title
-	public function cost_title() 
+	public function cost_title()
 	{
-		$this->form("#title")->maxlength(50)->required()->type('text');
-	}
-	public function cost_price() 
-	{
-		$this->form("text")->name("price")->max(9999999999999)->required()->type('number');
+		$this->form('#title')->type('text')->name('title')->maxlength('50')->required();
 	}
 
-	//------------------------------------------------------------------ id - foreign key
-	public function costcat_id() 
+	public function cost_price()
 	{
-		$this->form("select")->name("costcat_")->min(0)->max(99999)->required()->type("select")->validate()->id();
+		$this->form()->type('number')->name('price')->max('9999999999999')->required();
+	}
+	//--------------------------------------------------------------------------------foreign
+	public function costcat_id()
+	{
+		$this->form()->type('select')->name('costcat_')->required();
+		$this->setChild();
+	}
+	//--------------------------------------------------------------------------------foreign
+	public function account_id()
+	{
+		$this->form()->type('select')->name('account_')->required();
 		$this->setChild();
 	}
 
-	//------------------------------------------------------------------ id - foreign key
-	public function account_id() 
+	public function cost_date()
 	{
-		$this->form("select")->name("account_")->min(0)->max(99999)->required()->type("select")->validate()->id();
+		$this->form()->type('text')->name('date')->required();
+	}
+
+	public function cost_desc()
+	{
+		$this->form('#desc')->type('textarea')->name('desc')->maxlength('200');
+	}
+
+	public function cost_type()
+	{
+		$this->form()->type('radio')->name('type')->required();
 		$this->setChild();
 	}
-	public function cost_date() 
+	//--------------------------------------------------------------------------------foreign
+	public function paper_id()
 	{
-		$this->form("text")->name("date")->required()->type('text');
-	}
-
-	//------------------------------------------------------------------ desc
-	public function cost_desc() 
-	{
-		$this->form("#desc")->maxlength(200)->type('textarea');
-	}
-
-	//------------------------------------------------------------------ select button
-	public function cost_type() 
-	{
-		$this->form("select")->name("type")->type("select")->required()->validate();
+		$this->form()->type('select')->name('paper_');
 		$this->setChild();
 	}
 
-	//------------------------------------------------------------------ id - foreign key
-	public function paper_id() 
-	{
-		$this->form("select")->name("paper_")->min(0)->max(9999999999)->type("select")->validate()->id();
-		$this->setChild();
-	}
-	public function date_modified() {}
+	public function date_modified(){}
 }
 ?>

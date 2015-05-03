@@ -2,75 +2,78 @@
 namespace database\ermile;
 class comments 
 {
-	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                                           );
-	public $post_id         = array('null' =>'YES', 'show' =>'YES', 'label'=>'post',          'type' => 'bigint@20',                                        'foreign'=>'posts@id!post_title');
-	public $product_id      = array('null' =>'YES', 'show' =>'YES', 'label'=>'product',       'type' => 'int@10',                                           'foreign'=>'products@id!product_title');
-	public $comment_author  = array('null' =>'YES', 'show' =>'YES', 'label'=>'author',        'type' => 'varchar@50',                                       );
-	public $comment_email   = array('null' =>'YES', 'show' =>'YES', 'label'=>'email',         'type' => 'varchar@100',                                      );
-	public $comment_url     = array('null' =>'YES', 'show' =>'YES', 'label'=>'url',           'type' => 'varchar@100',                                      );
-	public $comment_content = array('null' =>'NO',  'show' =>'YES', 'label'=>'content',       'type' => 'varchar@999',                                      );
-	public $comment_status  = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@approved,unapproved,spam,deleted!unapproved', );
-	public $comment_parent  = array('null' =>'YES', 'show' =>'YES', 'label'=>'parent',        'type' => 'smallint@5',                                       );
-	public $user_id         = array('null' =>'YES', 'show' =>'NO',  'label'=>'user',          'type' => 'int@10',                                           'foreign'=>'users@id!user_nickname');
-	public $Visitor_id      = array('null' =>'NO',  'show' =>'YES', 'label'=>'visitor',       'type' => 'bigint@20',                                        'foreign'=>'Visitors@id!Visitor_title');
-	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                                       );
+	public $id              = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'int@10'];
+	public $post_id         = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'post'            ,'type'=>'bigint@20'                       ,'foreign'=>'posts@id!post_title'];
+	public $product_id      = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'product'         ,'type'=>'int@10'                          ,'foreign'=>'products@id!product_title'];
+	public $comment_author  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'author'          ,'type'=>'varchar@50'];
+	public $comment_email   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'email'           ,'type'=>'varchar@100'];
+	public $comment_url     = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'url'             ,'type'=>'varchar@100'];
+	public $comment_content = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'content'         ,'type'=>'varchar@999'];
+	public $comment_status  = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'enum@approved,unapproved,spam,deleted!unapproved'];
+	public $comment_parent  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'parent'          ,'type'=>'smallint@5'                      ,'foreign'=>'comments@id!comment_title'];
+	public $user_id         = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'user'            ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_displayname'];
+	public $Visitor_id      = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'visitor'         ,'type'=>'bigint@20'                       ,'foreign'=>'visitors@id!visitor_title'];
+	public $date_modified   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
 
-
-	//------------------------------------------------------------------ id
-	public function id() {$this->validate()->id();}
-
-	//------------------------------------------------------------------ id - foreign key
-	public function post_id() 
+	//--------------------------------------------------------------------------------id
+	public function id(){}
+	//--------------------------------------------------------------------------------foreign
+	public function post_id()
 	{
-		$this->form("select")->name("post_")->min(0)->max(99999999999999999999)->type("select")->validate()->id();
+		$this->form()->type('select')->name('post_');
+		$this->setChild();
+	}
+	//--------------------------------------------------------------------------------foreign
+	public function product_id()
+	{
+		$this->form()->type('select')->name('product_');
 		$this->setChild();
 	}
 
-	//------------------------------------------------------------------ id - foreign key
-	public function product_id() 
+	public function comment_author()
 	{
-		$this->form("select")->name("product_")->min(0)->max(9999999999)->type("select")->validate()->id();
+		$this->form()->type('text')->name('author')->maxlength('50');
+	}
+
+	public function comment_email()
+	{
+		$this->form('#email')->type('email')->name('email')->maxlength('100');
+	}
+
+	public function comment_url()
+	{
+		$this->form()->type('text')->name('url')->maxlength('100');
+	}
+
+	public function comment_content()
+	{
+		$this->form()->type('textarea')->name('content')->maxlength('999')->required();
+	}
+
+	public function comment_status()
+	{
+		$this->form()->type('radio')->name('status')->required();
 		$this->setChild();
 	}
-	public function comment_author() 
-	{
-		$this->form("text")->name("author")->maxlength(50)->type('text');
-	}
 
-	//------------------------------------------------------------------ email
-	public function comment_email() 
+	public function comment_parent()
 	{
-		$this->form("#email")->maxlength(100)->type('email');
-	}
-	public function comment_url() 
-	{
-		$this->form("text")->name("url")->maxlength(100)->type('text');
-	}
-	public function comment_content() 
-	{
-		$this->form("text")->name("content")->maxlength(999)->required()->type('textarea');
-	}
-
-	//------------------------------------------------------------------ select button
-	public function comment_status() 
-	{
-		$this->form("select")->name("status")->type("select")->required()->validate();
+		$this->form()->type('select')->name('parent');
 		$this->setChild();
 	}
-	public function comment_parent() 
+	//--------------------------------------------------------------------------------foreign
+	public function user_id()
 	{
-		$this->form("text")->name("parent")->min(0)->max(99999)->type('number');
-	}
-
-	//------------------------------------------------------------------ user_id
-	public function user_id() {$this->validate()->id();}
-
-	//------------------------------------------------------------------ id - foreign key
-	public function Visitor_id() 
-	{
-		$this->form("select")->name("visitor_")->min(0)->max(99999999999999999999)->required()->type("select")->validate()->id();
+		$this->form()->type('select')->name('user_');
 		$this->setChild();
 	}
-	public function date_modified() {}
+	//--------------------------------------------------------------------------------foreign
+	public function Visitor_id()
+	{
+		$this->form()->type('select')->name('visitor_')->required();
+		$this->setChild();
+	}
+
+	public function date_modified(){}
 }
 ?>

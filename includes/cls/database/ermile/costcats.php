@@ -2,59 +2,57 @@
 namespace database\ermile;
 class costcats 
 {
-	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',                        );
-	public $costcat_title  = array('null' =>'NO',  'show' =>'YES', 'label'=>'title',         'type' => 'varchar@50',                        );
-	public $costcat_slug   = array('null' =>'NO',  'show' =>'YES', 'label'=>'slug',          'type' => 'varchar@50',                        );
-	public $costcat_desc   = array('null' =>'YES', 'show' =>'NO',  'label'=>'desc',          'type' => 'varchar@200',                       );
-	public $costcat_parent = array('null' =>'YES', 'show' =>'YES', 'label'=>'parent',        'type' => 'smallint@5',                        );
-	public $costcat_order  = array('null' =>'YES', 'show' =>'YES', 'label'=>'order',         'type' => 'smallint@5',                        );
-	public $costcat_type   = array('null' =>'YES', 'show' =>'YES', 'label'=>'type',          'type' => 'enum@income,outcome',               );
-	public $costcat_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified  = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                        );
+	public $id             = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'smallint@5'];
+	public $costcat_title  = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'title'           ,'type'=>'varchar@50'];
+	public $costcat_slug   = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'slug'            ,'type'=>'varchar@50'];
+	public $costcat_desc   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'desc'            ,'type'=>'varchar@200'];
+	public $costcat_parent = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'parent'          ,'type'=>'smallint@5'                      ,'foreign'=>'costcats@id!costcat_title'];
+	public $costcat_order  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'order'           ,'type'=>'smallint@5'];
+	public $costcat_type   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'type'            ,'type'=>'enum@income,outcome'];
+	public $costcat_status = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'enum@enable,disable,expire!enable'];
+	public $date_modified  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
 
+	//--------------------------------------------------------------------------------id
+	public function id(){}
 
-	//------------------------------------------------------------------ id
-	public function id() {$this->validate()->id();}
-
-	//------------------------------------------------------------------ title
-	public function costcat_title() 
+	public function costcat_title()
 	{
-		$this->form("#title")->maxlength(50)->required()->type('text');
+		$this->form('#title')->type('text')->name('title')->maxlength('50')->required();
 	}
 
-	//------------------------------------------------------------------ slug
-	public function costcat_slug() 
+	public function costcat_slug()
 	{
-		$this->form("#slug")->maxlength(50)->required()->type('text');
+		$this->form('#slug')->type('text')->name('slug')->maxlength('50')->required();
 	}
 
-	//------------------------------------------------------------------ desc
-	public function costcat_desc() 
+	public function costcat_desc()
 	{
-		$this->form("#desc")->maxlength(200)->type('textarea');
-	}
-	public function costcat_parent() 
-	{
-		$this->form("text")->name("parent")->max(99999)->type('number');
-	}
-	public function costcat_order() 
-	{
-		$this->form("text")->name("order")->max(99999)->type('number');
+		$this->form('#desc')->type('textarea')->name('desc')->maxlength('200');
 	}
 
-	//------------------------------------------------------------------ select button
-	public function costcat_type() 
+	public function costcat_parent()
 	{
-		$this->form("select")->name("type")->type("select")->validate();
+		$this->form()->type('select')->name('parent');
 		$this->setChild();
 	}
 
-	//------------------------------------------------------------------ select button
-	public function costcat_status() 
+	public function costcat_order()
 	{
-		$this->form("select")->name("status")->type("select")->required()->validate();
+		$this->form()->type('number')->name('order')->max('99999');
+	}
+
+	public function costcat_type()
+	{
+		$this->form()->type('radio')->name('type');
 		$this->setChild();
 	}
-	public function date_modified() {}
+
+	public function costcat_status()
+	{
+		$this->form()->type('radio')->name('status')->required();
+		$this->setChild();
+	}
+
+	public function date_modified(){}
 }
 ?>

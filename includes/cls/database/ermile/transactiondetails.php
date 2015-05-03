@@ -2,42 +2,44 @@
 namespace database\ermile;
 class transactiondetails 
 {
-	public $transactiondetail_row      = array('null' =>'YES', 'show' =>'YES', 'label'=>'row',           'type' => 'smallint@5',   );
-	public $transaction_id             = array('null' =>'NO',  'show' =>'YES', 'label'=>'transaction',   'type' => 'bigint@20',    'foreign'=>'transactions@id!id');
-	public $product_id                 = array('null' =>'NO',  'show' =>'YES', 'label'=>'product',       'type' => 'int@10',       'foreign'=>'products@id!product_title');
-	public $transactiondetail_quantity = array('null' =>'NO',  'show' =>'YES', 'label'=>'quantity',      'type' => 'int@10',       );
-	public $transactiondetail_price    = array('null' =>'NO',  'show' =>'YES', 'label'=>'price',         'type' => 'decimal@13,4', );
-	public $transactiondetail_discount = array('null' =>'YES', 'show' =>'YES', 'label'=>'discount',      'type' => 'decimal@13,4', );
+	public $transactiondetail_row      = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'row'             ,'type'=>'smallint@5'];
+	public $transaction_id             = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'transaction'     ,'type'=>'bigint@20'                       ,'foreign'=>'transactions@id!id'];
+	public $product_id                 = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'product'         ,'type'=>'int@10'                          ,'foreign'=>'products@id!product_title'];
+	public $transactiondetail_quantity = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'quantity'        ,'type'=>'int@10'];
+	public $transactiondetail_price    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'price'           ,'type'=>'decimal@13,4'];
+	public $transactiondetail_discount = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'discount'        ,'type'=>'decimal@13,4'];
 
-	public function transactiondetail_row() 
+
+	public function transactiondetail_row()
 	{
-		$this->form("text")->name("row")->min(0)->max(99999)->type('number');
+		$this->form()->type('number')->name('row')->min()->max('99999');
 	}
-
-	//------------------------------------------------------------------ id - foreign key
-	public function transaction_id() 
+	//--------------------------------------------------------------------------------foreign
+	public function transaction_id()
 	{
-		$this->form("select")->name("transaction_")->min(0)->max(99999999999999999999)->required()->type("select")->validate()->id();
+		$this->form()->type('select')->name('transaction_')->required();
+		$this->setChild();
+	}
+	//--------------------------------------------------------------------------------foreign
+	public function product_id()
+	{
+		$this->form()->type('select')->name('product_')->required();
 		$this->setChild();
 	}
 
-	//------------------------------------------------------------------ id - foreign key
-	public function product_id() 
+	public function transactiondetail_quantity()
 	{
-		$this->form("select")->name("product_")->min(0)->max(9999999999)->required()->type("select")->validate()->id();
-		$this->setChild();
+		$this->form()->type('number')->name('quantity')->max('9999999999')->required();
 	}
-	public function transactiondetail_quantity() 
+
+	public function transactiondetail_price()
 	{
-		$this->form("text")->name("quantity")->max(9999999999)->required()->type('number');
+		$this->form()->type('number')->name('price')->max('9999999999999')->required();
 	}
-	public function transactiondetail_price() 
+
+	public function transactiondetail_discount()
 	{
-		$this->form("text")->name("price")->max(9999999999999)->required()->type('number');
-	}
-	public function transactiondetail_discount() 
-	{
-		$this->form("text")->name("discount")->max(9999999999999)->type('number');
+		$this->form()->type('number')->name('discount')->max('9999999999999');
 	}
 }
 ?>

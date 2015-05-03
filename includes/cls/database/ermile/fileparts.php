@@ -2,38 +2,38 @@
 namespace database\ermile;
 class fileparts 
 {
-	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                                                  );
-	public $file_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'file',          'type' => 'int@10',                                                  'foreign'=>'files@id!id');
-	public $filepart_part   = array('null' =>'NO',  'show' =>'YES', 'label'=>'part',          'type' => 'smallint@5',                                              );
-	public $filepart_code   = array('null' =>'YES', 'show' =>'YES', 'label'=>'code',          'type' => 'varchar@64',                                              );
-	public $filepart_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@awaiting,start,inprogress,appended,failed,finished', );
-	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                                              );
+	public $id              = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'int@10'];
+	public $file_id         = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'file'            ,'type'=>'int@10'                          ,'foreign'=>'files@id!id'];
+	public $filepart_part   = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'part'            ,'type'=>'smallint@5'];
+	public $filepart_code   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'code'            ,'type'=>'varchar@64'];
+	public $filepart_status = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'enum@awaiting,start,inprogress,appended,failed,finished'];
+	public $date_modified   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
 
-
-	//------------------------------------------------------------------ id
-	public function id() {$this->validate()->id();}
-
-	//------------------------------------------------------------------ id - foreign key
-	public function file_id() 
+	//--------------------------------------------------------------------------------id
+	public function id(){}
+	//--------------------------------------------------------------------------------foreign
+	public function file_id()
 	{
-		$this->form("select")->name("file_")->min(0)->max(9999999999)->required()->type("select")->validate()->id();
+		$this->form()->type('select')->name('file_')->required();
 		$this->setChild();
 	}
-	public function filepart_part() 
+
+	public function filepart_part()
 	{
-		$this->form("text")->name("part")->min(0)->max(99999)->required()->type('number');
-	}
-	public function filepart_code() 
-	{
-		$this->form("text")->name("code")->maxlength(64)->type('text');
+		$this->form()->type('number')->name('part')->min()->max('99999')->required();
 	}
 
-	//------------------------------------------------------------------ select button
-	public function filepart_status() 
+	public function filepart_code()
 	{
-		$this->form("select")->name("status")->type("select")->required()->validate();
+		$this->form()->type('text')->name('code')->maxlength('64');
+	}
+
+	public function filepart_status()
+	{
+		$this->form()->type('radio')->name('status')->required();
 		$this->setChild();
 	}
-	public function date_modified() {}
+
+	public function date_modified(){}
 }
 ?>

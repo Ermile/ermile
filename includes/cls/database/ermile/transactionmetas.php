@@ -2,43 +2,44 @@
 namespace database\ermile;
 class transactionmetas 
 {
-	public $id                     = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'bigint@10',                         );
-	public $transaction_id         = array('null' =>'NO',  'show' =>'YES', 'label'=>'transaction',   'type' => 'bigint@20',                         'foreign'=>'transactions@id!id');
-	public $transactionmeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'cat',           'type' => 'varchar@50',                        );
-	public $transactionmeta_key    = array('null' =>'NO',  'show' =>'YES', 'label'=>'key',           'type' => 'varchar@100',                       );
-	public $transactionmeta_value  = array('null' =>'YES', 'show' =>'YES', 'label'=>'value',         'type' => 'varchar@200',                       );
-	public $transactionmeta_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified          = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                        );
+	public $id                     = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'bigint@10'];
+	public $transaction_id         = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'transaction'     ,'type'=>'bigint@20'                       ,'foreign'=>'transactions@id!id'];
+	public $transactionmeta_cat    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'cat'             ,'type'=>'varchar@50'];
+	public $transactionmeta_key    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'key'             ,'type'=>'varchar@100'];
+	public $transactionmeta_value  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'value'           ,'type'=>'varchar@200'];
+	public $transactionmeta_status = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'enum@enable,disable,expire!enable'];
+	public $date_modified          = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
 
-
-	//------------------------------------------------------------------ id
-	public function id() {$this->validate()->id();}
-
-	//------------------------------------------------------------------ id - foreign key
-	public function transaction_id() 
+	//--------------------------------------------------------------------------------id
+	public function id(){}
+	//--------------------------------------------------------------------------------foreign
+	public function transaction_id()
 	{
-		$this->form("select")->name("transaction_")->min(0)->max(99999999999999999999)->required()->type("select")->validate()->id();
+		$this->form()->type('select')->name('transaction_')->required();
 		$this->setChild();
 	}
-	public function transactionmeta_cat() 
+
+	public function transactionmeta_cat()
 	{
-		$this->form("text")->name("cat")->maxlength(50)->required()->type('text');
-	}
-	public function transactionmeta_key() 
-	{
-		$this->form("text")->name("key")->maxlength(100)->required()->type('text');
-	}
-	public function transactionmeta_value() 
-	{
-		$this->form("text")->name("value")->maxlength(200)->type('textarea');
+		$this->form()->type('text')->name('cat')->maxlength('50')->required();
 	}
 
-	//------------------------------------------------------------------ select button
-	public function transactionmeta_status() 
+	public function transactionmeta_key()
 	{
-		$this->form("select")->name("status")->type("select")->required()->validate();
+		$this->form()->type('text')->name('key')->maxlength('100')->required();
+	}
+
+	public function transactionmeta_value()
+	{
+		$this->form()->type('textarea')->name('value')->maxlength('200');
+	}
+
+	public function transactionmeta_status()
+	{
+		$this->form()->type('radio')->name('status')->required();
 		$this->setChild();
 	}
-	public function date_modified() {}
+
+	public function date_modified(){}
 }
 ?>
