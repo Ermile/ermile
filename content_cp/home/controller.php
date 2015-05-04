@@ -68,7 +68,7 @@ class controller extends \mvc\controller
 			}
 
 		}
-		else
+		elseif($mymodule !== 'home')
 		{
 			$this->display_name	= 'content_cp\home\display-module.html';
 			$this->get(null, 'datatable')->ALL();
