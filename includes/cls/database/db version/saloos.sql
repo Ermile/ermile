@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2015 at 12:46 AM
+-- Generation Time: May 05, 2015 at 01:35 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -352,7 +352,14 @@ CREATE TABLE IF NOT EXISTS `usermetas` (
   `usermeta_value` varchar(500) DEFAULT NULL,
   `usermeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `usermetas`
+--
+
+INSERT INTO `usermetas` (`id`, `user_id`, `usermeta_cat`, `usermeta_key`, `usermeta_value`, `usermeta_status`, `date_modified`) VALUES
+(1, 15, 'profile', 'year', '1369', 'enable', NULL);
 
 -- --------------------------------------------------------
 
@@ -565,7 +572,7 @@ MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `usermetas`
 --
 ALTER TABLE `usermetas`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `users`
 --

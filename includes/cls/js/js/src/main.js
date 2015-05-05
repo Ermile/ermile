@@ -107,7 +107,7 @@ $(document).ready(function()
 
 
 route('*', function() {
-  $('input').prop('lang', 'en');
+  // $('input').prop('lang', 'en');
   /* MODALS */
 
   // Things to do after closing/opening modal
