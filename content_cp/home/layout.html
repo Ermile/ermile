@@ -39,9 +39,9 @@
      <i class="fa fa-language fa-2x"></i>
      <nav class="vertical-menu">
 {%for key, value in global.langlist%}{%if key == global.lang%}
-      <a href="?lang={{key}}" class="default not-active">{{value}}</a>
+      <a href="{{url.full}}?lang={{key}}" class="default not-active">{{value}}</a>
 {%else%}
-      <a href="?lang={{key}}">{{value}}</a>
+      <a href="{{url.full}}?lang={{key}}">{{value}}</a>
 {%endif%}{% endfor %}
      </nav>
     </li>

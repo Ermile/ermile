@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-05-04 18:59+0330\n"
-"PO-Revision-Date: 2015-05-04 18:59+0330\n"
+"POT-Creation-Date: 2015-05-07 10:45+0330\n"
+"PO-Revision-Date: 2015-05-07 10:48+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -1510,6 +1510,50 @@ msgid "Welcome to Saloos control panel."
 msgstr "به کنترل پنل سالوس خوش آمدید."
 
 #: ../../../.././includes/languages/twig_translation.php:85
+msgid "Enter title here"
+msgstr "عنوان را اینجا وارد کنید"
+
+#: ../../../.././includes/languages/twig_translation.php:86
+msgid "Write your post content here"
+msgstr "محتوای نوشته خود را در این بخش وارد کنید"
+
+#: ../../../.././includes/languages/twig_translation.php:87
+msgid "Excerpt"
+msgstr "چکیده"
+
+#: ../../../.././includes/languages/twig_translation.php:88
+msgid "If excerpt is empty we get it automatically from content"
+msgstr "اگر چیکده را خالی بگذارید ما آن را به صورت اتوماتیک از روی محتوا خواهیم گرفت"
+
+#: ../../../.././includes/languages/twig_translation.php:89
+msgid "Summaries of your content that can be used as page description."
+msgstr "چکیده ای از محتوا که به عنوان توضیحات صفحه استفاده خواهد شد."
+
+#: ../../../.././includes/languages/twig_translation.php:90
+msgid "Publish"
+msgstr "انتشار"
+
+#: ../../../.././includes/languages/twig_translation.php:91
+msgid "Enter slug here"
+msgstr "نامک را در اینجا وارد کنید"
+
+#: ../../../.././includes/languages/twig_translation.php:92
+msgid "Save as draft"
+msgstr "ذخیره پیش نویس"
+
+#: ../../../.././includes/languages/twig_translation.php:93
+msgid "Preview"
+msgstr "پیش نمایش"
+
+#: ../../../.././includes/languages/twig_translation.php:94
+msgid "Categories"
+msgstr "دسته‌ها"
+
+#: ../../../.././includes/languages/twig_translation.php:95
+msgid "Tags"
+msgstr "کلیدواژه‌ها"
+
+#: ../../../.././includes/languages/twig_translation.php:98
 msgid "Select"
 msgstr "انتخاب"
 

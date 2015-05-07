@@ -48,7 +48,7 @@ function transtext()
 
 	//----------------------------------------------content_cp\home\display-child.html
 	echo T_("Options");                                                               // Line 27
-	echo T_("Back to");                                                               // Line 24 Seperate
+	echo T_("Back to");                                                               // Line 9 Seperate
 
 	//---------------------------------------------content_cp\home\display-module.html
 	echo T_("Actions");                                                               // Line 19
@@ -80,6 +80,19 @@ function transtext()
 	echo T_("Powered by Saloos.");                                                    // Line 80
 	echo T_("All right reserved.");                                                   // Line 80
 	echo T_("Version");                                                               // Line 81
+
+	//---------------------------------------------content_cp\templates\posts_add.html
+	echo T_("Enter title here");                                                      // Line 18
+	echo T_("Write your post content here");                                          // Line 19
+	echo T_("Excerpt");                                                               // Line 23
+	echo T_("If excerpt is empty we get it automatically from content");              // Line 25
+	echo T_("Summaries of your content that can be used as page description.");       // Line 27
+	echo T_("Publish");                                                               // Line 84
+	echo T_("Enter slug here");                                                       // Line 80
+	echo T_("Save as draft");                                                         // Line 82
+	echo T_("Preview");                                                               // Line 83
+	echo T_("Categories");                                                            // Line 92
+	echo T_("Tags");                                                                  // Line 102
 
 	//---------------------------------------------------includes\cls\macro\forms.html
 	echo T_("Select");                                                                // Line 57
