@@ -37,7 +37,7 @@
  <div class="radio">
  {% for child in array.child %}
   <div class="element {{child.attr.value}}">
-   <input type="radio" name="{{array.attr.name}}" {% for attr,value in child.attr if attr in ['value','checked', 'id']%}{{attr}}="{{value}}" {% endfor %}>
+   <input type="radio" name="{{array.attr.name}}" {% for attr,value in child.attr %}{{attr}}="{{value}}" {% endfor %}>
    <label for="{{child.attr.id}}" class="label-radio">{{child.label}}</label>
   </div>
  {% endfor %}
@@ -56,7 +56,7 @@
  <select {% for attr,value in array.attr if attr in ['id','class','name']%}{{attr}}="{{value}}" {% endfor %}>
   <option value="" disabled="disabled">{%trans "Select"%} {{array.label}}</option>
   {% for child in array.child%}
-  <option {% for attr,value in child.attr if attr in ['value','selected']%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
+  <option {% for attr,value in child.attr %}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
   {% endfor %}
  </select>
 {% endmacro %}
@@ -64,7 +64,7 @@
 
 {% macro datalist(array) %}
  {%if array.label %}<label>{{array.label}}</label>{%endif%}
- <input list="{{array.attr.name}}list" type="text" {% for attr,value in array.attr if attr not in ['type','min','max']%}{{attr}}="{{value}}" {% endfor %}>
+ <input list="{{array.attr.name}}list" type="text" {% for attr,value in array.attr %}{{attr}}="{{value}}" {% endfor %}>
  <datalist id="{{array.attr.name}}list">
   {% for child in array.child%}
   <option data-value="{{child.value}}" value="{{child.label}}">{{child.label}}</option>

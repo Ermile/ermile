@@ -15,14 +15,14 @@
 {%block content%}
  <div class="row auto">
   <div class="span9">
-   <input id="post-title" class="input" placeholder='{%trans "Enter title here"%}'></input>
-   <div id="post-content" class="textarea editor" data-placeholder='{%trans "Write your post content here"%}'></div>
+   <input class="input sp-title" placeholder='{%trans "Enter title here"%}'></input>
+   <div class="sp-content textarea editor" data-placeholder='{%trans "Write your post content here"%}'></div>
 
 
    <div class="panel panel-default">
     <div class="panel-heading">{%trans "Excerpt"%}</div>
     <div class="panel-body">
-     <textarea id="post-excerpt" maxlength='160' placeholder='{%trans "If excerpt is empty we get it automatically from content"%}'></textarea>
+     <textarea class="sp-excerpt" maxlength='160' placeholder='{%trans "If excerpt is empty we get it automatically from content"%}'></textarea>
     </div>
     <div class="panel-footer">{%trans "Summaries of your content that can be used as page description."%}</div>
    </div>
@@ -77,7 +77,7 @@
    <div class="panel panel-default">
     <div class="panel-heading">{%trans "Publish"%}</div>
     <div class="panel-body">
-     <input id="post-slug" class="input" placeholder='{%trans "Enter slug here"%}'></input>
+     <input id="sp-slug" class="input" placeholder='{%trans "Enter slug here"%}'></input>
 
       <a class="button " href="#">{%trans "Save as draft"%}</a>
       <a class="button" href="#">{%trans "Preview"%}</a>

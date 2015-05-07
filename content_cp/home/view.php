@@ -32,10 +32,12 @@ class view extends \mvc\view
 
 	public function view_child()
 	{
+		$mymodule               = $this->data->module;
 		$this->include->editor  = true;
 		$this->data->field_list = \lib\sql\getTable::get($this->data->module);
 		$this->global->js       = array($this->url->myStatic.'js/cp/medium-editor.min.js');
-		$myform                 = $this->createform('@'.db_name.'.'.$this->data->module, $this->data->child);
+		$myform                 = $this->createform('@'.db_name.'.'.$mymodule, $this->data->child);
+		
 	}
 }
 ?>

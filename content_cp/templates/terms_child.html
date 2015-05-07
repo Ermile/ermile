@@ -1,0 +1,74 @@
+{%extends display.cp%}
+
+{%block header%}
+   <div class="panel panel-default">
+     <div class="panel-body">
+      <form class="ajx form row inline autostyle" method="post">{{forms.make(form[module])}}</form>
+     </div>
+     <div class="panel-footer">
+      <a class="float-right label label-info" href="{{store}}/{{module}}">{%trans%}Back to{%endtrans%} {%trans module%}</a>
+       {%trans module%}
+     </div>
+   </div>
+{%endblock%}
+
+{%block content%}
+<form method="post" id="myform">
+   
+
+ <div class="row auto">
+  <div class="span9">
+   <input class="sp-title input" placeholder='{%trans "Enter title here"%}'></input>
+   <div class="sp-content editor" data-placeholder='{%trans "Write your post content here"%}'></div>
+
+
+ </div>
+
+
+  <div class="span3">
+
+   <div class="panel panel-default">
+    <div class="panel-heading">{%trans "Publish"%}</div>
+    <div class="panel-body">
+     <input class="sp-slug input" placeholder='{%trans "Enter slug here"%}'></input>
+      <select class="sp-language">
+       <option value="all" selected="selected">{%trans "All Languages"%}</option>
+{%for key, value in global.langlist%}{%if key == global.lang%}
+       <option value="{{key}}" selected="selected">{{value}}</option>
+{%else%}
+       <option value="{{key}}">{{value}}</option>
+{%endif%}{% endfor %}
+      </select>
+
+      <button type="submit" value="submit" class="button positive">{{page.title}}</button>
+
+
+    </div>
+   </div>
+
+   <div class="panel panel-default">
+    <div class="panel-heading">{%trans "Categories"%}</div>
+       <div class="panel-body">
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+       </div>
+       <div class="panel-footer">
+           Panel Footer
+       </div>
+   </div>
+
+   <div class="panel panel-default">
+    <div class="panel-heading">{%trans "Tags"%}</div>
+       <div class="panel-body">
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+       </div>
+       <div class="panel-footer">
+           Panel Footer
+       </div>
+   </div>
+
+  </div>
+ </div>
+
+
+ </form>
+{%endblock%}

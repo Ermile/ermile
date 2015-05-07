@@ -39,7 +39,10 @@ class controller extends \mvc\controller
 		// on module root without child like /post
 		if($mychild)
 		{
-			$this->display_name	= 'content_cp\home\display-child.html';
+			if( is_file(root.'content_cp/templates/'.$mymodule.'_child.html') )
+				$this->display_name	= 'content_cp/templates/'.$mymodule.'_child.html';
+			else
+				$this->display_name	= 'content_cp\home\display-child.html';
 			//all("edit=.*")
 			if($mychild == 'delete')
 			{
