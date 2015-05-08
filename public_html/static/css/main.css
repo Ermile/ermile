@@ -166,8 +166,8 @@ code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em;margin: 10px 5%;
 .row-clear:before,.row-clear:after{display:table;content:""}
 .row-clear:after{clear:both}
 
-.rtl .row.auto > [class*="span"]{float:right;margin-left: 2.127659%;}
-.rtl .row.auto > [class*="span"]:last-child , .rtl .row.auto > .endline{margin-left: 0;}
+.rtl .row.auto > [class*="span"]{float:right;margin-left: 2.127659%;margin-right:0;}
+.rtl .row.auto > [class*="span"]:last-child , .rtl .row.auto > .endline{margin-left:0;}
 
 
 

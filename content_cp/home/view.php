@@ -20,21 +20,22 @@ class view extends \mvc\view
 		// get data from database through model
 		$this->data->datatable = $this->model()->datatable();
 		$this->global->js      = array($this->url->myStatic.'js/datatable/jquery.dataTables.min.js');
+		$mymodule              = $this->module('cp');
 		// check if datatable exist then get this data
 		if($this->data->datatable)
 		{
 			// get all fields of table and filter fields name for show in datatable, access from columns variable
 			$this->include->datatable = true;
-			$this->data->columns      = \lib\sql\getTable::get($this->data->module);
+			$this->data->columns      = \lib\sql\getTable::get($mymodule);
 		}
 	}
 
 
 	public function view_child()
 	{
-		$mymodule               = $this->data->module;
+		$mymodule               = $this->module('cp');
 		$this->include->editor  = true;
-		$this->data->field_list = \lib\sql\getTable::get($this->data->module);
+		$this->data->field_list = \lib\sql\getTable::get($mymodule);
 		$this->global->js       = array($this->url->myStatic.'js/cp/medium-editor.min.js');
 		$myform                 = $this->createform('@'.db_name.'.'.$mymodule, $this->data->child);
 		

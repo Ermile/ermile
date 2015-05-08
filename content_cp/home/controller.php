@@ -12,7 +12,7 @@ class controller extends \mvc\controller
 			// exit();
 		}
 
-		$mymodule = $this->module();
+		$mymodule = $this->module('cp');
 		$mychild  = $this->child();
 		$mypath   = $this->url('path','_');
 
@@ -98,6 +98,7 @@ class controller extends \mvc\controller
 						'productcats',
 						'products',
 						'terms',
+						'tags',
 						'transactions',
 						'users',
 					);

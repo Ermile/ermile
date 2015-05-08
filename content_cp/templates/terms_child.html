@@ -18,8 +18,8 @@
 
  <div class="row auto">
   <div class="span9">
-   <input class="sp-title input" placeholder='{%trans "Enter title here"%}'></input>
-   <div class="sp-content editor" data-placeholder='{%trans "Write your post content here"%}'></div>
+   <input type="text" name="title" class="sp-title input" placeholder='{%trans "Enter title here"%}' />
+   <textarea name="desc" class="sp-content editor" data-placeholder='{%trans "Write your post content here"%}'></textarea>
 
 
  </div>
@@ -30,9 +30,8 @@
    <div class="panel panel-default">
     <div class="panel-heading">{%trans "Publish"%}</div>
     <div class="panel-body">
-     <input class="sp-slug input" placeholder='{%trans "Enter slug here"%}'></input>
-      <select class="sp-language">
-       <option value="all" selected="selected">{%trans "All Languages"%}</option>
+     <input name="slug" class="sp-slug input" placeholder='{%trans "Enter slug here"%}' />
+      <select name="language" class="sp-language">
 {%for key, value in global.langlist%}{%if key == global.lang%}
        <option value="{{key}}" selected="selected">{{value}}</option>
 {%else%}
@@ -46,25 +45,7 @@
     </div>
    </div>
 
-   <div class="panel panel-default">
-    <div class="panel-heading">{%trans "Categories"%}</div>
-       <div class="panel-body">
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-       </div>
-       <div class="panel-footer">
-           Panel Footer
-       </div>
-   </div>
 
-   <div class="panel panel-default">
-    <div class="panel-heading">{%trans "Tags"%}</div>
-       <div class="panel-body">
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-       </div>
-       <div class="panel-footer">
-           Panel Footer
-       </div>
-   </div>
 
   </div>
  </div>
