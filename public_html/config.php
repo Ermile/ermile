@@ -79,4 +79,21 @@ define('SaveAsCookie', true);
  */
 define('LogVisitors', true);
 
+
+/**
+ * ControlPanel
+ * Default: false
+ *
+ * add saloos control panel to this project
+ */
+define('ControlPanel', true);
+
+/**
+ * Account
+ * Default: false
+ *
+ * add saloos Account manager to this project
+ */
+define('Account', false);
+
 ?>
