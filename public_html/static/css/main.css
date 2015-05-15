@@ -269,6 +269,10 @@ a.label:hover{color:#000;}
 #formError .warn li{background-color:rgba(0,0,0,.9);}
 #formError ul{margin:0;padding:0 2%;}
 #formError ul li{margin-top: 10px;padding:3% 5%;border-radius: 4px;}
+
+.rtl #formError{left:0px;right:inherit;}
+
+
 .visible{visibility: visible;opacity: 1;transition: opacity 0.5s linear;}
 .hidden{visibility: hidden;opacity: 0;transition: visibility 0s 0.5s, opacity 0.5s linear;}
 .hide{display:none;}

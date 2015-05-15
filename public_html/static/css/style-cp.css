@@ -65,7 +65,7 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 
 .breadcrumb {width: 100%;background: #e8e8e8;padding: 6px 15px;display:inline-block;}
 .breadcrumb a{font-size: 1em;line-height:12px;color: #99a0aa;float:left;}
-.rtl .breadcrumb a{float:right;min-width:70px;}
+.rtl .breadcrumb a{float:right;}
 .breadcrumb a:hover {color: #656d78;}
 .breadcrumb a:last-child {color: #656d78;}
 .breadcrumb > a + a:before {font-family: "FontAwesome";content: "\f105";color: #99a0aa;padding: 0px 8px;float:left;}
