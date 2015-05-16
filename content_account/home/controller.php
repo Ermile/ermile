@@ -10,6 +10,9 @@ class controller extends \mvc\controller
 		$islogin	= $this->login();
 		$mymodule = $this->module();
 		// set referrer in cookie
+		if($this->child())
+			return;
+
 		if($referer !== Domain)
 			\lib\utility\Cookie::write('referer', $referer, 60*15);
 		// check permission for changepass
