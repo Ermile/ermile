@@ -76,6 +76,8 @@ class controller extends \mvc\controller
 				\lib\error::page();
 				break;
 		}
+			$this->route_check_true = true;
+		
 	}
 }
 ?>
