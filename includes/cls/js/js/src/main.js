@@ -114,7 +114,7 @@ route('*', function() {
   $('.modal', this).on('close', function() {
     var $this = $(this);
 
-    $this.removeClass('visible').addClass('hidden');
+    $this.removeClass('visible');
 
     $.each($this.data(), function(key) {
       if(key === 'modal') return;
@@ -123,7 +123,7 @@ route('*', function() {
   });
 
   $('.modal', this).on('open', function() {
-    $(this).removeClass('hidden').addClass('visible');
+    $(this).addClass('visible');
 
     var $send = $('[data-ajaxify]', this);
 

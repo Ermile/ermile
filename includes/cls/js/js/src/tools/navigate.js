@@ -82,16 +82,16 @@
     $window.trigger('navigate:render:done');
   }
 
-  function fetch(props, md5) {
+  function fetch(props, md5)
+  {
     $window.trigger('navigate:fetch:start', props, md5);
 
     $(document.body).addClass('loading-page');
 
-    var options = $.extend(true, {}, props.ajax, {
+    var options = $.extend(true, {}, props.ajax,
+    {
       url: props.url,
-      headers: {
-        'Cached-MD5': props.md5
-      }
+      headers: { 'Cached-MD5': props.md5 }
     });
 
     var deferred = new jQuery.Deferred();
