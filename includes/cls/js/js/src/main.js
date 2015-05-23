@@ -31,13 +31,13 @@ $(document).ready(function()
   });
 
 
-  $(document).on('change', '#langlist', function() {
-    var regex = /(?:\?|&)?lang=\w*/g;
-    var srch = location.search.replace(regex, ''),
-        url = location.pathname + (srch ? srch + '&' : '?') + 'lang='+this.value;
+  // $(document).on('change', '#langlist', function() {
+  //   var regex = /(?:\?|&)?lang=\w*/g;
+  //   var srch = location.search.replace(regex, ''),
+  //       url = location.pathname + (srch ? srch + '&' : '?') + 'lang='+this.value;
 
-    location.replace(url);
-  });
+  //   location.replace(url);
+  // });
 
   $(document).on('keypress', 'input[type="date"],\
                             input[type="datetime-local"],\
