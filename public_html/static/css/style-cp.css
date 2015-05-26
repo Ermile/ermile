@@ -146,9 +146,9 @@ position: relative;
 .panel .button{width: 100%}
 .cats label{display:block;display:pointer}
 
+.panel.cats .panel-body{max-height:30vh;overflow:hidden;overflow-y:scroll;}
 
-
-
+.sp-tags{width:100%;border: 1px solid #ddd;}
 
 
 
