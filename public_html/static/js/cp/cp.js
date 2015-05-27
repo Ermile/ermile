@@ -73,7 +73,53 @@ route('*', function()
       });
     });
   }
+
+
+
+  
+  $('#tag-add').keypress(function(e)
+  {
+    // if Enter pressed disallow it and run add func
+    if(e.which == 13) { addTag(); return false; }
+  });
+  $(document).on('click', '#tag-add-btn', function () { addTag(); });
+  $(document).on('click', '#tag-list span i', function ()
+  {
+    var span = $(this).parent();
+    $('#tags').val($('#tags').val().replace(span.text()+', ', ''));
+    span.remove();
+  });
+
+  $(document).ready(function()
+  {
+    var tagDefault = $('#tags').val();
+    if(tagDefault)
+    {
+      $.each(tagDefault.split(', '),function(t, item)
+      {
+        if(item.trim())
+          $('#tag-list').append( "<span><i class='fa fa-times'></i>"+item+"</span>" );   
+      });
+    }
+  });
+
+
+
+
+
 });
+
+function addTag()
+{
+  var tag = $('#tag-add');
+  var tagVal = tag.val().trim();
+  if(tagVal)
+  {
+    $('#tag-list').append( "<span><i class='fa fa-times'></i>"+tagVal+"</span>" );
+    $('#tags').val( $('#tags').val() + tagVal+', ' );
+  }
+  tag.val('');  
+}
 
 function hideFields()
 {

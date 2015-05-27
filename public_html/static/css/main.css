@@ -200,6 +200,8 @@ code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em;margin: 10px 5%;
 .alert-block p + p{margin-top:5px}
 .fade{opacity:0.5;transition: all .5s ease-in;-webkit-transition: all .5s ease-in;-o-transition: all .5s ease-in;-moz-transition: all .5s ease-in;}
 .fade:hover{opacity:0.8}
+.fade-fast{opacity:0.7;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
+.fade-fast:hover{opacity:0.9}
 
 /* Labels */
 .label {font-weight: 500;display: inline;padding: .2em .6em .3em;font-size: 85%;line-height: 1.5;color: #fff;text-align: center;vertical-align: baseline;border-radius: .25em;}
