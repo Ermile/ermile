@@ -93,6 +93,7 @@ route('*', function()
   $(document).ready(function()
   {
     var tagDefault = $('#tags').val();
+    $('#tag-list').text('');
     if(tagDefault)
     {
       $.each(tagDefault.split(', '),function(t, item)
