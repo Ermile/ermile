@@ -113,11 +113,28 @@ route('*', function()
 function addTag()
 {
   var tag = $('#tag-add');
-  var tagVal = tag.val().trim();
-  if(tagVal)
+  var newTag = tag.val().trim();
+  if(newTag)
   {
-    $('#tag-list').append( "<span><i class='fa fa-times'></i>"+tagVal+"</span>" );
-    $('#tags').val( $('#tags').val() + tagVal+', ' );
+
+    var exist = false;
+    $.each($('#tags').val().split(', '),function(t, item)
+    {
+      if(item == newTag) {exist = t+1;}
+    });
+
+    if(exist)
+    {
+      existEl = $("#tag-list span:nth-child("+exist+")" );
+      bg = existEl.css('background-color');
+      existEl.css('background-color', '#ddd');
+      setTimeout(function () { existEl.css("background-color",bg) }, 500);
+    }
+    else
+    {
+      $('#tag-list').append( "<span><i class='fa fa-times'></i>"+newTag+"</span>" );
+      $('#tags').val( $('#tags').val() + newTag+', ' );
+    }
   }
   tag.val('');  
 }
