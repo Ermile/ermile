@@ -151,14 +151,14 @@ position: relative;
 
 .sp-tags{width:100%;border:1px solid #ddd;max-width:100%;max-height:200px;display:none}
 #tag-add{width:85%;border:1px solid #ddd;padding:0 8px;}
-#tag-add-btn{width:15%;float:left;font-size:1em;padding: 9px 0;margin: 0;}
-#tag-list{font-size: 1em;margin-top: 10px;}
-#tag-list span{display: inline-block;max-width: 100%;overflow: hidden;background: #F3F3F3;color: #999;padding: 0 5px;border-radius: 3px;border: 1px solid #DDD;margin:0 5px 0 0;cursor:default;
-transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
+#tag-add-btn{width:15%;float:right;font-size:1em;padding: 5px 0;margin: 0;}
+.rtl #tag-add-btn{width:15%;float:left;font-size:1em;padding: 9px 0;margin: 0;}
+#tag-list{font-size:1em;margin-top:10px;line-height:2em;}
+#tag-list span{display: inline-block;max-width: 100%;overflow: hidden;background: #F3F3F3;color: #999;padding: 0 5px;border-radius: 3px;border: 1px solid #DDD;margin:0 5px 0 0;cursor:default;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
 #rtl #tag-list span{float: right;}
-#tag-list span:hover{color: #333;}
-#tag-list span i{color:#bbb;margin-left:5px;cursor:pointer;vertical-align: middle;
-transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
+#tag-list span:hover{color: #666;}
+#tag-list span i{color:#bbb;margin-right:5px;cursor:pointer;vertical-align: middle;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
+.rtl #tag-list span i{margin-left:5px;}
 #tag-list span i:hover{color:#DF2D2D;}
 
 
