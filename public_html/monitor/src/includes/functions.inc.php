@@ -387,7 +387,8 @@ function psm_update_available() {
  */
 function psm_build_mail($from_name = null, $from_email = null) {
 	$phpmailer = new \PHPMailer();
-	$phpmailer->Encoding = "utf8";
+	$phpmailer->Encoding = "base64";
+	$phpmailer->CharSet = 'UTF-8';
 	$phpmailer->SMTPDebug = false;
 
 	if(psm_get_conf('email_smtp') == '1') {
