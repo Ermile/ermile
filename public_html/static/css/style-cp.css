@@ -56,7 +56,8 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 #languages:hover .vertical-menu{display:block;}
 
 
-.vertical-menu {position:absolute;top:45px;background:#3d4e5d;z-index:100;line-height:20px;font-size:1em;display:none;}
+.vertical-menu {background:#3d4e5d;line-height:20px;font-size:1em;}
+#header .vertical-menu {position:absolute;top:45px;background:#3d4e5d;z-index:100;line-height:20px;font-size:1em;display:none;}
 /*.vertical-menu .default{background-color: #33414e}*/
 .vertical-menu >.default:after{content:"\f00c";display:inline-block;color:#5cb85c;font: normal normal normal 14px/1 FontAwesome;float:right;}
 .rtl .vertical-menu >.default:after{float: left;}
