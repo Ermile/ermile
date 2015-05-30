@@ -54,14 +54,6 @@ define('MultiLanguage', true);
 define('DefaultLanguage', 'fa_IR');
 
 /**
- * MainAccount
- * Default: true
- *
- * all service is managed via main account service.
- */
-define('MainAccount', true);
-
-/**
  * SaveAsCookie
  * Default: true
  *
@@ -93,7 +85,8 @@ define('ControlPanel', true);
  * Default: false
  *
  * add saloos Account manager to this project
+ * if you want use ermile main account set it as 'ermile'
  */
-define('Account', false);
+define('Account', 'ermile');
 
 ?>
