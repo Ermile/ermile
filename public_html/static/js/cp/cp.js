@@ -1,16 +1,41 @@
 function slugify(text) {
   return text.toString().toLowerCase()
     .replace(/\s+/g, '-')           // Replace spaces with -
-    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    // .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
     .replace(/\-\-+/g, '-')         // Replace multiple - with single -
     .replace(/^-+/, '')             // Trim - from start of text
     .replace(/-+$/, '')             // Trim - from end of text
     .replace(/=.*/, '');            
 }
 
+
+// ***************************************************** slug
+function bindSlug() {
+  $('#form_posts').on('ajaxify:success', function() {
+    Navigate({
+      url: location.href,
+      replace: true,
+      filter: 'slug'
+    })
+  });
+}
+
+
 route('*', function() 
 {
+  console.log('route');
+
   hideFields();
+  
+  $(window).on('statechange', function() {
+    // history.state.url.indexOf('posts');
+    if(history.state && !history.state.replace) {
+      console.log('statechange');
+      bindSlug();
+    }
+  });
+  bindSlug();
+
 
   $(".fields-toggle", this).change(function () {
     var box = $("."+this.value);
@@ -44,19 +69,36 @@ route('*', function()
       slug = $slug.get(0),
       handEdited = false;
   if($slug.length) {
-    $('#title').keyup(function() {
+    $('#title').keyup(function()
+    {
       var sv = $slug.val();
       if(sv && handEdited) return;
       handEdited = false;
       $slug.val(slugify(this.value));
+      $('#url-slug').html($slug.val());
     });
-    $slug.parents('form').submit(function() {
+    $slug.parents('form').submit(function()
+    {
       if(!slug.value) slug.value = slugify($('#title').val());
     });
-    $slug.keyup(function() {
+    $slug.keyup(function()
+    {
       if(this.value) handEdited = true;
+      $('#url-slug').html(slugify($slug.val()));
     });
+    $('#url-slug').html($slug.val());
   }
+
+
+  // checkbox
+  $('.cats input:checkbox:checked').each(function()
+  {
+    $('.cats .panel-body .selected').prepend($(this).parent().clone());
+    $(this).parent().remove();
+    console.log($(this).parent());
+  });
+
+
 
   var $options = $('#options-meta');
 
@@ -73,8 +115,6 @@ route('*', function()
       });
     });
   }
-
-
 
   
   $('#tag-add').keypress(function(e)

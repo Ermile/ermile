@@ -212,6 +212,7 @@ a.label:hover{color:#000;}
 .label-info{background-color: #3fbae4;}
 .label-warning{background-color: #fea223;}
 .label-danger{background-color: #b64645;}
+.label-normal{color:#555;background:#f7f7f7;border:#ccc 1px solid;padding-bottom: 0}
 
 /* Panel */
 .panel{margin-bottom: 20px;background-color: #fff;border: 1px solid transparent;border-radius: 4px;-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);box-shadow: 0 1px 1px rgba(0, 0, 0, .05);color:#000;}
