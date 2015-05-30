@@ -18,7 +18,7 @@
 {%if global.login%}
    <a data-action href="logout" id="btn" class="on" title='{%trans "logout form all service"%}'><i class="fa fa-power-off"></i></a>
 {%else%}
-   <a href="{{url.LoginService}}/login" id="btn" title='{%trans "login to all service"%}'><i class="fa fa-power-off"></i></a>
+   <a href="login" id="btn" title='{%trans "login to all service"%}' data-action><i class="fa fa-power-off"></i></a>
 {%endif%}
    <span></span>
   </div>
