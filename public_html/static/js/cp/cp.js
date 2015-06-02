@@ -90,12 +90,43 @@ route('*', function()
   }
 
 
-  // checkbox
+  // ============================================================================= checkbox
+  // ************************************** first init loop in all checkboxes
   $('.cats input:checkbox:checked').each(function()
   {
-    $('.cats .panel-body .selected').prepend($(this).parent().clone());
-    $(this).parent().remove();
-    console.log($(this).parent());
+    console.log($(this).data('slug'));
+    console.log($('#cat').val());
+    if($(this).data('slug') === $('#cat').val())
+    {
+      console.log(33);
+      $(this).parent().appendTo('#cat-main');
+      $('#url-cat').html($(this).data('slug'));
+    }
+    else
+      $(this).parent().appendTo('#cat-selected');
+  });
+
+  // ************************************** on change check box after page load
+  $(".item input:checkbox").change(function()
+  {
+    // if checked
+    if($(this).is(":checked"))
+    {
+      // if main cat not set, set it as main cat
+      if($('#cat-main').children().length == 1)
+      {
+        $(this).parent().appendTo('#cat-main');
+        $('#cat').val($(this).data('slug'));
+      }
+      // else add to selected cat list
+      else
+        $(this).parent().appendTo('#cat-selected');
+    }
+    // if uncheck
+    else if($(this).is(":not(:checked)"))
+    {
+      $(this).parent().prependTo('#cat-list');
+    }
   });
 
 

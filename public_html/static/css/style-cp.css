@@ -165,8 +165,16 @@ position: relative;
 #tag-list span i:hover{color:#DF2D2D;}
 
 #url-box{color: #000;display: block;direction: ltr;padding: 0 1%;font-size:1.2em;margin-bottom:3px;}
-.cats .selected{background-color: #eee}
+.cats .panel-body{padding: 0;}
+.cats input{vertical-align: middle;}
+.cats .item{padding:3px 15px;}
+.cats .item:hover{background-color:#ddd}
+.cats #cat-main #cat{width:100%;border:1px solid #ddd;direction:ltr;display:nonea;}
+.cats #cat-main{background-color: #ddd;}
+.cats #cat-main .item{padding:10px 15px;}
 
+.cats #cat-selected{background-color: #eee;}
+.cats #cat-selected .item{padding:6px 15px;}
 
 
 
