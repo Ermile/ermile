@@ -39,17 +39,17 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 #header-nav > li:hover{background:#3d4e5d;color:#fff;}
 #header-nav > li > a{display:inline-block;color:#ddd;height:100%;}
 
-#profile{float:right;height:100%;cursor:pointer;}
-.rtl #profile{float:left;}
-#profile span{font-size:1.5em;height:100%;display:inline-block;padding: 0 20px;text-align:right;min-width:150px;}
-#profile span i{padding: 10px;}
-#profile:hover span{background:#3d4e5d;color:#fff; }
-.vertical-menu #profile-me:hover i{color:#5cb85c;}
-.vertical-menu #profile-lock:hover i{color:#f0ad4e;}
-.vertical-menu #profile-logout:hover i{color:#F0433D;}
+#header #profile{float:right;height:100%;cursor:pointer;}
+.rtl #header #profile{float:left;}
+#header #profile span{font-size:1.5em;height:100%;display:inline-block;padding: 0 20px;text-align:right;min-width:150px;}
+#header #profile span i{padding: 10px;}
+#header #profile:hover span{background:#3d4e5d;color:#fff; }
+#header .vertical-menu #profile-me:hover i{color:#5cb85c;}
+#header .vertical-menu #profile-lock:hover i{color:#f0ad4e;}
+#header .vertical-menu #profile-logout:hover i{color:#F0433D;}
  
-#profile:hover .vertical-menu{display:block;}
-#profile:active .vertical-menu{display:block;}
+#header #profile:hover .vertical-menu{display:block;}
+#header #profile:active .vertical-menu{display:block;}
 
 #languages .vertical-menu{margin-left:-15px;}
 .rtl #languages .vertical-menu{margin-right:-15px;}
@@ -169,7 +169,7 @@ position: relative;
 .cats input{vertical-align: middle;}
 .cats .item{padding:3px 15px;}
 .cats .item:hover{background-color:#ddd}
-.cats #cat-main #cat{width:100%;border:1px solid #ddd;direction:ltr;display:nonea;}
+.cats #cat-main #cat{width:100%;border:1px solid #ddd;direction:ltr;display:none;}
 .cats #cat-main{background-color: #ddd;}
 .cats #cat-main .item{padding:10px 15px;}
 
