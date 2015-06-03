@@ -65,29 +65,29 @@ route('*', function()
          .copyData($this);
   });
 
-  var $slug = $('#slug'),
-      slug = $slug.get(0),
-      handEdited = false;
-  if($slug.length) {
-    $('#title').keyup(function()
-    {
-      var sv = $slug.val();
-      if(sv && handEdited) return;
-      handEdited = false;
-      $slug.val(slugify(this.value));
-      $('#url-slug').html($slug.val());
-    });
-    $slug.parents('form').submit(function()
-    {
-      if(!slug.value) slug.value = slugify($('#title').val());
-    });
-    $slug.keyup(function()
-    {
-      if(this.value) handEdited = true;
-      $('#url-slug').html(slugify($slug.val()));
-    });
-    $('#url-slug').html($slug.val());
-  }
+  // var $slug = $('#slug'),
+  //     slug = $slug.get(0),
+  //     handEdited = false;
+  // if($slug.length) {
+  //   $('#title').keyup(function()
+  //   {
+  //     var sv = $slug.val();
+  //     if(sv && handEdited) return;
+  //     handEdited = false;
+  //     $slug.val(slugify(this.value));
+  //     $('#url-slug').html($slug.val());
+  //   });
+  //   $slug.parents('form').submit(function()
+  //   {
+  //     if(!slug.value) slug.value = slugify($('#title').val());
+  //   });
+  //   $slug.keyup(function()
+  //   {
+  //     if(this.value) handEdited = true;
+  //     $('#url-slug').html(slugify($slug.val()));
+  //   });
+  //   $('#url-slug').html($slug.val());
+  // }
 
 
   // ============================================================================= checkbox
