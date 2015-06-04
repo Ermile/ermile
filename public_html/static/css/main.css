@@ -222,7 +222,7 @@ a.label:hover{color:#000;}
 .panel.closed .panel-heading:after{content:"\f078";}
 .panel.closed .panel-body, .panel.closed .panel-footer{display:none}
 .panel-body {padding: 15px;}
-.panel-footer {padding: 10px 15px;background-color: #f5f5f5;border-top: 1px solid #ddd;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;}
+.panel-footer {padding: 10px 15px;border-top: 1px solid #ddd;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;}
 .panel-default {border-color: #ddd;}
 .panel-default > .panel-heading {color: #333;background-color: #f5f5f5;border-color: #ddd;}
 .panel-default > .panel-heading + .panel-collapse .panel-body {border-top-color: #ddd;}
@@ -1355,7 +1355,7 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
 .form.inline label{width:20%;}
 .rtl .form.inline .field > label{text-align:left;padding-left:10px;}
 .form.inline .radio label{width: auto;}
-.form.inline input, .form.inline select, .form.inline .radio, .form.inline .editor{display: inline-block;width:75%;margin-right:5%;font-size: 0.9em;}
+.form.inline input, .form.inline select, .form.inline .radio, .form.inline .editor{display: inline-block;width:75%;margin-right:5%;font-size: 0.9em;vertical-align:middle;}
 .rtl .form.inline input,.rtl .form.inline select,.rtl .form.inline .radio, .rtl .form.inline .editor{width:70%;margin-right:0;margin-left:10%;}
 
 .form.autostyle .button{width:75%;margin-left:20%;margin-right:5%;}
