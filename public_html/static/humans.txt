@@ -31,6 +31,7 @@ Proudly made in IRAN, powered by Saloos.
 
 	Ahmad Karimi
 	Contact: ahmadkarimi1991 [at] gmail.com
+	Site: http://eahmad.ir
 	Location: Qom, Iran
 
 	Saman Soltani
@@ -45,8 +46,8 @@ Proudly made in IRAN, powered by Saloos.
 
 
 /* SITE */
-	Last update: 24/3/2015
-	Version: 0.0.1
+	Last update: 06/05/2015
+	Version: 0.2.0
 	Language: Farsi / English
 	Doctype: HTML5
 	IDE: Sublime!
