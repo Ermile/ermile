@@ -1,0 +1,80 @@
+body {color:#eee;background-color: #E0E0E0;background-image: url('../images/bg.jpg');background-attachment: fixed;background-position: center center;background-repeat: no-repeat;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;min-height: 100%;min-width: 100%;width:100%;height:auto;-webkit-transition: background-image 0.2s ease-in-out;transition: background-image 0.2s ease-in-out;}
+a{color:#9DD7FA}
+.center{position: relative;min-width:280px;max-width:500px;width:450px;margin: 0 auto;}
+#kid .center{max-width:600px;width:550px;}
+.center.report{max-width:90%;width:90%;margin:0 5%;}
+.content{margin: 0 auto;padding: 20px 2%;-webkit-border-radius: 7px;-moz-border-radius: 7px;-ms-border-radius: 7px;-o-border-radius: 7px;border-radius: 7px;background: url('../images/bg-white-lock.png') repeat;margin-bottom:50px;}
+h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;font-weight: 700;margin:0;margin-bottom: 20px}
+#logo{display: block;margin:0 auto;width:160px;height:auto;border:none}
+#logo img{width:100%;}
+#logo img:focus, #logo:focus{border:none;outline: none;}
+
+
+#desc,.desc{text-align:center;margin-top: 15px;}
+#desc p{margin:3px 0;}
+.hide{opacity: 0;}
+.show{opacity: 1;}
+
+
+.account{direction:ltr;position:relative;padding:0;color: #aaa;-webkit-border-radius: 10px;border-radius: 10px;font-size:1rem;}
+.account button{position:relative;background-color:#4B8DF8;color:#fff;border-radius:3px; width:90%;margin-top:20px;font-size:1.6em;height:40px;padding-right: 30px;transition: all .3s ease;}
+.account button:after{font-family:FontAwesome;content: "\f0a9";padding:0 5px;position:absolute;top:0;right:5px;font-size:25px;line-height:40px}
+.account button:hover{background-color:#2E73E2}
+.account button:active, .account button:focus{background-color:#094BB6}
+.account input, .account select{background-color:#fff;border-radius:3px;border:none;width:90%;min-height: 25px; margin:2px 5%;padding: 10px 5%;}
+.field span{width:100%;}
+
+
+
+#footer{position:fixed}
+#footer #langlist {font-family:'IRANSans',serif;font-size:0.8em;}
+#register{color:#000;}
+#register form{padding:0;}
+#description{font-size:1em;line-height:1.8em;color:#000;width:98%;margin:0 auto;margin-bottom:10px;text-align:center;}
+
+
+
+@media only screen and (max-width: 900px){
+	#logo{margin-top:0;}
+	h1{margin:0 auto 10px;}
+	#footer{position: relative;bottom: 0;margin-top:80px;}
+  .center{width: 100%;}
+  .list-cards .fa{padding:0 20px;}
+  #report-nav a{display:block}
+  #report-nav span{display:none}
+  #chart{height:auto;}
+}
+@media only screen and (max-width: 650px){
+  .center{width: 90%;margin:0 auto;}
+  .statistics>.statistic{width:30%;}
+  #my_camera_result {right:0px;}
+}
+
+@media only screen and (max-width: 500px){
+	.center{width: 96%;}
+  .list-cards li .c-name{width:120px;}
+  .list-cards .fa{padding:0 8px;}
+  #kid .list-cards li .c-name{width:100px;}
+  .statistics>.statistic{width:47%;}
+  .list-cards li{width:100%}
+  #webcambox{overflow:hidden;}
+}
+
+@media only screen and (max-width: 400px){
+	.list-cards li .c-name{width:100px;}
+	.list-cards .fa{padding:0 1px;}
+	#kid .list-cards li .c-name{width:75px;}
+}
+
+@media only screen and (max-width: 330px){
+	body{display:none;}
+	html::before{content:"!";position:absolute;left: 35%;font-size:100vw;}
+}
+
+input{
+-webkit-user-select: none; 
+-khtml-user-select: none; 
+-moz-user-select: none; 
+-o-user-select: none; 
+user-select: none;
+}

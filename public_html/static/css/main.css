@@ -318,7 +318,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small{font-weight: normal;l
 
 #footer{position:fixed; bottom: 0;width:100%;z-index:2;background-color: rgba(0, 0, 0, 0.1);padding:15px 10%;font-size:1.5em;}
 #footer #languages{float: right;color:#888;}
-#footer #langlist{opacity:0.7;width:100px;font-family:sans-serif;height:30px;padding:0 10px;direction:ltr;padding:3px 5px;font-size:1em;border:0;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
+#footer #langlist{opacity:0.7;min-width:100px;font-family:sans-serif;height:30px;padding:0 10px;direction:ltr;padding:3px 5px;font-size:1em;border:0;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
 .rtl #footer #languages{float: left;}
 #footer #langlist:hover{opacity:1;}
 

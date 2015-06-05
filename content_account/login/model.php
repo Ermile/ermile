@@ -58,7 +58,7 @@ class model extends \mvc\model
 						$this->redirector()->set_domain('talambar.'.$this->url('tld'))->set_url('?ssid='.$_code);
 
 					else
-						$this->redirector()->set_domain()->set_url('?ssid='.$_code);
+						$this->redirector()->set_domain($myreferer.MainTld)->set_url('?ssid='.$_code);
 
 				}, $mycode);
 
