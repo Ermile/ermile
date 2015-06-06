@@ -218,6 +218,146 @@ transition: all .2s ease;-webkit-transition: all .2s ease;-o-transition: all .2s
 
 
 
+/* uploader Form*/
+#form_uploader{
+    background-color:#373a3d;
+
+    background-image:-webkit-linear-gradient(top, #373a3d, #313437);
+    background-image:-moz-linear-gradient(top, #373a3d, #313437);
+    background-image:linear-gradient(top, #373a3d, #313437);
+
+    width:95%;
+    padding:30px;
+    border-radius:3px;
+    margin:10px auto 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#form_uploader #drop{
+    background-color: #2E3134;
+    padding: 7vh 10vw;
+    margin-bottom: 30px;
+    border: 3px dashed  #43494C;
+    border-radius: 3px;
+    text-align: center;
+    font-size:16px;
+    font-weight:bold;
+    color:#7f858a;
+    transition: all .5s ease-in;-webkit-transition: all .5s ease-in;-o-transition: all .5s ease-in;-moz-transition: all .5s ease-in;
+}
+
+#form_uploader #drop.dragover{
+  border-color:#A1ABB0;
+}
+
+#form_uploader #drop a{
+    background-color:#007a96;
+    padding:12px 26px;
+    color:#fff;
+    font-size:14px;
+    border-radius:2px;
+    cursor:pointer;
+    min-width: 40%;
+    display:block;
+    margin:12px auto;
+}
+
+#form_uploader #drop a:hover{
+    background-color:#0986a3;
+}
+
+#form_uploader #drop input{
+    display:none;
+}
+
+#form_uploader ul{
+    list-style:none;
+    direction: ltr;
+    margin:0 -30px;
+    border-top:1px solid #2b2e31;
+    border-bottom:1px solid #3d4043;
+    font-family: sans-serif;
+}
+
+#form_uploader ul li{
+
+    background-color:#333639;
+
+    background-image:-webkit-linear-gradient(top, #333639, #303335);
+    background-image:-moz-linear-gradient(top, #333639, #303335);
+    background-image:linear-gradient(top, #333639, #303335);
+
+    border-top:1px solid #3d4043;
+    border-bottom:1px solid #2b2e31;
+    height: 62px;
+    position: relative;
+    opacity: 0.6;
+    transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;
+}
+#form_uploader ul li:hover{
+  opacity: 1;
+
+}
+
+#form_uploader ul li input{
+    display: none;
+}
+
+#form_uploader ul li p{
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+    color: #EEE;
+    font-size: 1.2em;
+    line-height: 150%;
+    font-weight: bold;
+    position: absolute;
+    top: 17px;
+    left: 100px;
+}
+
+#form_uploader ul li i{
+    font-weight: normal;
+    font-style:normal;
+    color:#7f7f7f;
+    display:block;
+}
+
+#form_uploader ul li canvas{
+    top: 10px;
+    left: 32px;
+    position: absolute;
+}
+
+#form_uploader ul li span{
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    right: 33px;
+    cursor:pointer;
+    font-family: "FontAwesome";
+    font-size: 2rem;
+}
+#form_uploader ul li span:after{
+  content: "\f00c";
+  color: #24C279;
+}
+
+#form_uploader ul li.working span:after{
+    content: "\f00d";
+    color: #D11F49;
+}
+
+#form_uploader ul li.error p{
+    color:red;
+}
+
+
+
+
+
+
+
 
 
 
