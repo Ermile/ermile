@@ -100,7 +100,6 @@ route('*', function()
     {
       console.log(33);
       $(this).parent().appendTo('#cat-main');
-      $('#url-cat').html($(this).data('slug'));
     }
     else
       $(this).parent().appendTo('#cat-selected');
@@ -126,6 +125,7 @@ route('*', function()
     else if($(this).is(":not(:checked)"))
     {
       $(this).parent().prependTo('#cat-list');
+      $('#cat').val('');
     }
   });
 
