@@ -335,6 +335,7 @@ transition: all .2s ease;-webkit-transition: all .2s ease;-o-transition: all .2s
     top: 20px;
     right: 33px;
     cursor:pointer;
+    text-align: center;
     font-family: "FontAwesome";
     font-size: 2rem;
 }
@@ -348,8 +349,16 @@ transition: all .2s ease;-webkit-transition: all .2s ease;-o-transition: all .2s
     color: #D11F49;
 }
 
+#form_uploader ul li.error{
+  box-shadow: 2px 0 0 0 #D7CD21 inset;
+}
+#form_uploader ul li.error span:after{
+    content: "\f12a";
+    color: #D7CD21;
+}
+
 #form_uploader ul li.error p{
-    color:red;
+    color:#D7CD21;
 }
 
 
