@@ -173,8 +173,17 @@ route('*', function()
           $('#tag-list').append( "<span><i class='fa fa-times'></i>"+item+"</span>" );   
       });
     }
-  });
 
+
+      $('[data-hint] input, [data-hint] select').on('blur', function ()
+      {
+        $(this).parent().removeClass('hint--always');
+      }).on('focus', function ()
+      {
+        $(this).parent().addClass('hint--always');
+      });
+    
+  });
 
 
 
