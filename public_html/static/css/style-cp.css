@@ -61,7 +61,7 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 /*.vertical-menu .default{background-color: #33414e}*/
 .vertical-menu >.default:after{content:"\f00c";display:inline-block;color:#5cb85c;font: normal normal normal 14px/1 FontAwesome;float:right;}
 .rtl .vertical-menu >.default:after{float: left;}
-.vertical-menu > a{display:block;color:#ddd;padding:5px 10px;font-size:1.5em;border-top:1px solid #33414E;;min-width:150px}
+.vertical-menu > a{display:block;color:#ddd;padding:5px 10px;font-size:1.5em;border-top:1px solid #33414E;min-width:160px}
 .vertical-menu > a:hover{color:#fff;background:rgba(0,0,0,0.2)}
 .vertical-menu > a > i{padding:0 10px;}
 
@@ -153,7 +153,7 @@ input:focus, select:focus{border-color:#787878;}
 .cats label{display:block;display:pointer}
 
 .panel.cats .panel-body{max-height:30vh;overflow:hidden;overflow-y:auto;}
-.panel.quick-access .panel-body{min-height:135px}
+.panel.quick-access .panel-body{min-height:115px}
 
 .sp-tags{width:100%;border:1px solid #ddd;max-width:100%;max-height:200px;display:none}
 #tag-add{width:85%;border:1px solid #ddd;padding:0 8px;}
