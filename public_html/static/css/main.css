@@ -38,8 +38,8 @@ a{background:transparent;text-decoration:none;
   transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;
   color:#54B4EF;
 }
-a:active,a:hover{outline:0; color:#0E97EA;}
-a:focus{outline:0;}
+a:active,a:hover{outline:0;color:#0E97EA;}
+a:focus{outline:0;color:#0E77EA;}
 
 a.note{border-bottom:3px solid #323232;padding:0px 4px 1px 4px;}
 a.note:hover{color:#FFFFFF;border-bottom:3px solid #A11E22;background-color:#262626;}
@@ -306,13 +306,13 @@ form .error{background: #fff0f0;border-color: #dbb1b1;color: #d95c5c;border-radi
 /* Headings */
 h1,h2,h3,h4,h5,h6{clear:both;margin-bottom:0.1em;font-weight:400;color:#2f1515;line-height:200%;}
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {font-weight:700;}
-h1{font-size:3.2em;}
-h2{font-size:2.8em;}
-h3{font-size:2.7em;}
-h4{font-size:2.6em;}
-h5{font-size:2.5em;}
-h6{font-size:2.4em;}
-p{margin-bottom:1.5em;font-size:1.3em;line-height:200%;}
+h1{font-size:2.2em;}
+h2{font-size:1.9em;}
+h3{font-size:1.7em;}
+h4{font-size:1.5em;}
+h5{font-size:1.4em;}
+h6{font-size:1.3em;}
+p{margin-bottom:1.5em;font-size:1.2em;line-height:250%;}
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small{font-weight: normal;line-height: 1;color: #999;}
 
@@ -1028,7 +1028,7 @@ visibility: hidden;opacity: 0;transition: visibility 0s 0.5s, opacity 0.5s linea
 /*******************************
             Forms
 *******************************/
-label, input, select, textarea, button {font-family:'Roboto Slab',serif;box-sizing: border-box;}
+label, input, select, textarea, button {font-family:'Roboto Slab',serif;box-sizing: border-box;transition:all 0.2s ease;}
 .rtl label, .rtl input, .rtl select, .rtl textarea, .rtl button {font-family:'IRANSans',serif;}
 input:focus,select:focus,textarea:focus,button:focus{outline:none;}
 

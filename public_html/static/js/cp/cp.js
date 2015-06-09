@@ -157,13 +157,13 @@ route('*', function()
   $(document).on('click', '#tag-list span i', function ()
   {
     var span = $(this).parent();
-    $('#tags').val($('#tags').val().replace(span.text()+', ', ''));
+    $('#sp-tags').val($('#sp-tags').val().replace(span.text()+', ', ''));
     span.remove();
   });
 
   $(document).ready(function()
   {
-    var tagDefault = $('#tags').val();
+    var tagDefault = $('#sp-tags').val();
     $('#tag-list').text('');
     if(tagDefault)
     {
@@ -175,7 +175,7 @@ route('*', function()
     }
 
 
-      $('[data-hint] input, [data-hint] select').on('blur', function ()
+      $('[data-hint] input, [data-hint] select, [data-hint] .button').on('blur', function ()
       {
         $(this).parent().removeClass('hint--always');
       }).on('focus', function ()
@@ -198,7 +198,7 @@ function addTag()
   {
 
     var exist = false;
-    $.each($('#tags').val().split(', '),function(t, item)
+    $.each($('#sp-tags').val().split(', '),function(t, item)
     {
       if(item == newTag) {exist = t+1;}
     });
@@ -213,7 +213,7 @@ function addTag()
     else
     {
       $('#tag-list').append( "<span><i class='fa fa-times'></i>"+newTag+"</span>" );
-      $('#tags').val( $('#tags').val() + newTag+', ' );
+      $('#sp-tags').val( $('#sp-tags').val() + newTag+', ' );
     }
   }
   tag.val('');  
