@@ -167,7 +167,7 @@ input:focus, select:focus{border-color:#787878;}
 #home .panel{margin-bottom:1vh;}
 #home .panel-body{padding: 2vh;}
 .panel-body.summary .fa-plus{position:absolute;top:3%;left:3%;opacity:0;transition: all .2s ease-in-out;}
-.panel:hover .fa-plus{opacity:1;}
+.panel:hover .fa-plus, .panel a:focus .fa-plus{opacity:1;}
 
 .sp-tags{width:100%;border:1px solid #ddd;max-width:100%;max-height:200px;display:none}
 #tag-add{width:85%;border:1px solid #ddd;padding:0 8px;}
