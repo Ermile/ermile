@@ -35,7 +35,7 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 #header{width: 100%;z-index: 2;height:45px;line-height:45px;background-color: #33414e;}
 #header-nav{float:left;}
 .rtl #header-nav{float:right;}
-#header-nav > li{display:inline-block;padding:0 15px;}
+#header-nav > li{display:inline-block;padding:0 15px;transition: all .2s ease-in-out;}
 #header-nav > li:hover{background:#3d4e5d;color:#fff;}
 #header-nav > li > a{display:inline-block;color:#ddd;height:100%;}
 
@@ -48,16 +48,15 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 #header .vertical-menu #profile-lock:hover i{color:#f0ad4e;}
 #header .vertical-menu #profile-logout:hover i{color:#F0433D;}
  
-#header #profile:hover .vertical-menu{display:block;}
-#header #profile:active .vertical-menu{display:block;}
+#header #profile:hover .vertical-menu, #header #profile:focus .vertical-menu{visibility:visible;opacity:1;transition-delay:0s;}
 
 #languages .vertical-menu{margin-left:-15px;}
 .rtl #languages .vertical-menu{margin-right:-15px;}
-#languages:hover .vertical-menu{display:block;}
+#languages:hover .vertical-menu, #languages:focus .vertical-menu{visibility:visible;opacity:1;transition-delay:0s;}
 
 
 .vertical-menu {background:#3d4e5d;line-height:20px;font-size:1em;}
-#header .vertical-menu {position:absolute;top:45px;background:#3d4e5d;z-index:100;line-height:20px;font-size:1em;display:none;}
+#header .vertical-menu {position:absolute;top:45px;background:#3d4e5d;z-index:100;line-height:20px;font-size:1em;visibility:hidden;opacity:0;transition:visibility 0s linear 0.1s,opacity 0.1s linear;}
 /*.vertical-menu .default{background-color: #33414e}*/
 .vertical-menu >.default:after{content:"\f00c";display:inline-block;color:#5cb85c;font: normal normal normal 14px/1 FontAwesome;float:right;}
 .rtl .vertical-menu >.default:after{float: left;}
@@ -78,7 +77,17 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 
 
 
+/*--Action */
+
+.col_row{width:5px;padding:0;text-align:center;}
+.col_slug{width:100px;direction:ltr;text-align:left}
+.col_email{min-width:150px;direction:ltr;text-align:left}
+.col_mobile{min-width:100px;direction:ltr;text-align:left}
+.col_url{min-width:150px;width:30%;direction:ltr;text-align:left}
+.col_status{width:100px;text-align:center;}
+.col_actions{width: 90px;}
 .col_actions a{color:#fff;}
+.col_publishdate, .col_createdate{direction: ltr; min-width: 100px;width:125px}
 
 
 
@@ -155,6 +164,10 @@ input:focus, select:focus{border-color:#787878;}
 .panel.cats .panel-body{max-height:30vh;overflow:hidden;overflow-y:auto;}
 .panel.quick-access .panel-body{min-height:115px}
 .panel-body.summary a{color:inherit;}
+#home .panel{margin-bottom:1vh;}
+#home .panel-body{padding: 2vh;}
+.panel-body.summary .fa-plus{position:absolute;top:3%;left:3%;opacity:0;transition: all .2s ease-in-out;}
+.panel:hover .fa-plus{opacity:1;}
 
 .sp-tags{width:100%;border:1px solid #ddd;max-width:100%;max-height:200px;display:none}
 #tag-add{width:85%;border:1px solid #ddd;padding:0 8px;}
@@ -383,13 +396,14 @@ transition: all .2s ease;-webkit-transition: all .2s ease;-o-transition: all .2s
 #chart-type{position: absolute;top:30px;left:50px;}
 #chart-type a{display:inline;}
 .report small{font-family:'IRANSans',serif;text-align:center;display:block}
-#chart{direction:ltr;width:100%;height:40vh;min-height:200px;max-height:500px;background-color:#eee;margin-bottom:20px;border-radius:5px;overflow:hidden;}
+#chart{direction:ltr;width:100%;height:30vh;min-height:200px;max-height:500px;background-color:#eee;margin-bottom:2vh;border-radius:5px;overflow:hidden;}
+#chart>.highcharts-container>svg>path{opacity:0;transition:visibility 0s linear 0.2s,opacity 0.2s linear;}
+#chart>.highcharts-container:hover>svg>path{visibility:visible;opacity:1;transition-delay:0s;}
 #chart>.highcharts-container>svg>text:last-child{display:none;}
 #chart>.highcharts-container text{font-family:'IRANSans',serif;}
 #chart>.highcharts-container .highcharts-tooltip table{font-family:'IRANSans',serif}
 
 #chart>.highcharts-container text tspan{display:block}
-
 
 @media only screen and (max-width: 900px){
   #chart{height:auto;}
