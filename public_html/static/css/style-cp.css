@@ -76,6 +76,10 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 #page-footer p{margin:0;}
 
 
+#file-meta{display:block;text-align:center;color:#aaa;transition: all .2s ease-in-out;}
+#file-meta:hover{color:#888;}
+#file-type{font-size:10vw;}
+
 
 /*--Action */
 
@@ -252,7 +256,7 @@ transition: all .2s ease;-webkit-transition: all .2s ease;-o-transition: all .2s
     width:95%;
     padding:30px;
     border-radius:3px;
-    margin:10px auto 100px;
+    margin:10px auto 10vh;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
