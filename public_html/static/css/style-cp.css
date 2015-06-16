@@ -92,7 +92,7 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 .col_actions{width: 90px;}
 .col_actions a{color:#fff;}
 .col_publishdate, .col_createdate{direction: ltr; min-width: 100px;width:125px}
-
+.col_filetype{text-align: center;width:50px}
 
 
 
