@@ -363,13 +363,12 @@ transition: all .2s ease;-webkit-transition: all .2s ease;-o-transition: all .2s
     position: absolute;
     top: 20px;
     right: 60px;
-    cursor:pointer;
     text-align: center;
     font-size: 1.3em;
     line-height: 2rem;
     padding: 0 10px;
 }
-#form_uploader ul li > i{position: absolute;width:30px;float:right;font-size:3rem;font-family: "FontAwesome";top:15px;right:30px;text-align:center;}
+#form_uploader ul li > i{position: absolute;width:30px;float:right;font-size:3rem;font-family: "FontAwesome";top:15px;right:30px;text-align:center;cursor:pointer;}
 #form_uploader ul li > i:after{
   content: "\f00c";
   color: #24C279;

@@ -46,7 +46,7 @@ route('*', function()
       tpl.find('input').knob();
 
       // Listen for clicks on the cancel icon
-      tpl.find('span').click(function()
+      tpl.find('i').click(function()
       {
 
         if(tpl.hasClass('working')){
@@ -76,6 +76,14 @@ route('*', function()
           data.context = tpl.appendTo(ul);
 
         }
+        else if(response.status == 'ok')
+        {
+          // Append edit url
+          tpl.find('span').append(response.edit);
+          // Add the HTML to the UL element
+          data.context = tpl.appendTo(ul);          
+        }
+
       });
 
     },
