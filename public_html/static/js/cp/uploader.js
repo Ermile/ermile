@@ -29,10 +29,11 @@ route('*', function()
 
     // This function is called when a file is added to the queue;
     // either via the browse button, or via drag/drop:
-    add: function (e, data) {
+    add: function (e, data)
+    {
 
       var tpl = $('<li class="working"><input type="text" value="0" data-width="48" data-height="48"'+
-        ' data-fgColor="#0788a5" data-readOnly="1" data-bgColor="#3e4043" /><p></p><span></span></li>');
+        ' data-fgColor="#0788a5" data-readOnly="1" data-bgColor="#3e4043" /><p></p><span></span><i></i></li>');
 
       // Append the file name and file size
       tpl.find('p').text(data.files[0].name)
@@ -45,7 +46,8 @@ route('*', function()
       tpl.find('input').knob();
 
       // Listen for clicks on the cancel icon
-      tpl.find('span').click(function(){
+      tpl.find('span').click(function()
+      {
 
         if(tpl.hasClass('working')){
           jqXHR.abort();
@@ -59,6 +61,23 @@ route('*', function()
 
       // Automatically upload the file once it is added to the queue
       var jqXHR = data.submit();
+
+      jqXHR.then(function()
+      {
+        var response = JSON.parse(jqXHR.responseText);
+        console.log(response);
+        if(response.status == 'fail')
+        {
+          data.context.addClass('error');
+
+          // Append error
+          tpl.find('span').text(response.error);
+          // Add the HTML to the UL element
+          data.context = tpl.appendTo(ul);
+
+        }
+      });
+
     },
 
     progress: function(e, data){
