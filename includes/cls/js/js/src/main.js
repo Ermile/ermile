@@ -20,14 +20,22 @@ $(document).ready(function()
   });
 
   // Ajaxify links and forms
-  $(document).on('submit', 'form', function(e) {
-    e.preventDefault();
-    $(this).ajaxify();
+  $(document).on('submit', 'form', function(e)
+  {
+    if(!$this.hasAttr('data-action'))
+    {
+      e.preventDefault();
+      $(this).ajaxify();
+    }
   });
 
-  $(document).on('click', '[data-ajaxify]', function(e) {
-    e.preventDefault();
-    $(this).ajaxify({link: true});
+  $(document).on('click', '[data-ajaxify]', function(e)
+  {
+    if(!$this.hasAttr('data-action'))
+    {
+      e.preventDefault();
+      $(this).ajaxify({link: true});
+    }
   });
 
 
