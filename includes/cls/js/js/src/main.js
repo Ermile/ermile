@@ -22,20 +22,17 @@ $(document).ready(function()
   // Ajaxify links and forms
   $(document).on('submit', 'form', function(e)
   {
-    if(!$this.hasAttr('data-action'))
-    {
-      e.preventDefault();
-      $(this).ajaxify();
-    }
+    if($this.hasAttr('data-action')) return;
+
+    e.preventDefault();
+    $(this).ajaxify();
+
   });
 
   $(document).on('click', '[data-ajaxify]', function(e)
   {
-    if(!$this.hasAttr('data-action'))
-    {
-      e.preventDefault();
-      $(this).ajaxify({link: true});
-    }
+    e.preventDefault();
+    $(this).ajaxify({link: true});
   });
 
 
@@ -91,7 +88,8 @@ $(document).ready(function()
   // :not([data-ajaxify])\
   // :not([data-action])\
   // :not([data-modal])',
-  $(document.body).on('click', 'a', function(e) {
+  $(document.body).on('click', 'a', function(e)
+  {
     var $this = $(this);
 
     if($this.attr('target') === '_blank' || $this.hasAttr('data-ajaxify') ||
