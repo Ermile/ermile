@@ -82,16 +82,16 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-      // ermile: {
-      //   files: [
-      //     {
-      //       expand: true,
-      //       src: ['js/*.js'],
-      //       dest: '../../../public_html/static/js/',
-      //       flatten: true
-      //     }
-      //   ]
-      // },
+      ermile: {
+        files: [
+          {
+            expand: true,
+            src: ['js/*.js'],
+            dest: '../../../public_html/static/js/',
+            flatten: true
+          }
+        ]
+      },
       talambar: {
         files: [
           {

@@ -62,7 +62,7 @@ route('*', function()
   console.log('route');
 
   hideFields();
-  
+  // $(window).off('statechange');
   $(window).on('statechange', function() {
     // history.state.url.indexOf('posts');
     if(history.state && !history.state.replace) {
@@ -81,15 +81,16 @@ route('*', function()
     console.log('clicked');
     $("#options-meta").toggleClass('disappear');
   });
-
+  $(document).unbind('ajaxSuccess');
   $(document).bind('ajaxSuccess', function(e, promise, xhr) {
+    bindSlug();
     if(xhr.url === $('#delete-confirm [data-ajaxify]').prop('href')) {
-      setTimeout(function() {
-        Navigate({
-          url: location.href,
-          replace: true
-        });
-      }, 500);
+      // setTimeout(function() {
+      //   Navigate({
+      //     url: location.href,
+      //     replace: true
+      //   });
+      // }, 500);
     }
   });
 

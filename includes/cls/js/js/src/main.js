@@ -22,7 +22,7 @@ $(document).ready(function()
   // Ajaxify links and forms
   $(document).on('submit', 'form', function(e)
   {
-    if($this.hasAttr('data-action')) return;
+    if($(this).hasAttr('data-action')) return;
 
     e.preventDefault();
     $(this).ajaxify();

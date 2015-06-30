@@ -71,7 +71,7 @@
       .done(function(data, status, xhr) {
         _super.results = data;
 
-       $.fn.ajaxify.showResults(data, $this, _super);
+        $.fn.ajaxify.showResults(data, $this, _super);
 
         if(data.msg && data.msg.redirect) {
           var a = $('<a href="' + data.msg.redirect + '"></a>');
@@ -125,17 +125,17 @@
 
       switch(i) {
         case 'true':
-          type = 'success';
-          break;
+        type = 'success';
+        break;
         case 'warn':
-          type = 'warning';
-          break;
+        type = 'warning';
+        break;
         case 'error':
-          type = 'error';
-          hasError = true;
-          break;
+        type = 'error';
+        hasError = true;
+        break;
         default:
-          type = 'info';
+        type = 'info';
       }
 
       // Generate Notification HTML
@@ -146,7 +146,7 @@
       for(var j = 0, len = grp.length; j < len; j++) {
         var msg = grp[j];
         var $msg = $ul.append('<li class="notify-' + msg.group + ' ' + msg.redirect + '">' +
-                              (data.title||'') + msg.title + '</li>');
+          (data.title||'') + msg.title + '</li>');
 
         if(msg.element) {
           try {
@@ -173,7 +173,9 @@
 
     if(!hasError) {
       setTimeout(function() {
-        $form.find('input').get(0).select();
+        if($form.find('input').get(0)){
+          $form.find('input').get(0).select();
+        }
       }, 100);
     }
 
