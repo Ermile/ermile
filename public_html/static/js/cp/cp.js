@@ -34,6 +34,10 @@ typeof a)this._introBeforeChangeCallback=a;else throw Error("Provided callback f
 typeof a)this._introCompleteCallback=a;else throw Error("Provided callback for oncomplete was not a function.");return this},onexit:function(a){if("function"===typeof a)this._introExitCallback=a;else throw Error("Provided callback for onexit was not a function.");return this}};return w.introJs=B});
 
 
+/** jquery-select-hierarchy | Turns a single select containing breadcrumb trails into multiple dynamic selects to allow easy drill-down */
+!function(e){e.fn.selectHierarchy=function(t){for(var a={separator:" > ",hideOriginal:!0,placeholder:"------"},t=e.extend(a,t),l=e(this),n=1,i=l.find("option").map(function(){var a=e(this).val();if(a){var l=e(this).text(),i=l.split(t.separator),h=i.length;h>n&&(n=h);var r={label:l,short_label:i[h-1],value:a,depth:h,children:[]};return r}}),h=[],r=1;n>=r;r++)e.each(i,function(){var t=this;t.depth==r&&(1===r&&h.push(this),e.each(i,function(){var e=this;e.depth==r+1&&e.label.match("^"+t.label)==t.label&&t.children.push(e)}))});t.hideOriginal&&l.hide(),l.wrap('<span class="drilldown-wrapper" />'),l.after('<select class="drilldown-1"><option value="">'+t.placeholder+"</option></select>");var o=l.next();o.data("depth",1),e.each(h,function(){var t=e("<option>");t.val(this.value),t.text(this.short_label),t.data("node",this),o.append(t)});var d=function(){var a=e(this),n=a.find("option:selected"),i=n.data("node");if(l.val(a.val()?a.val():a.data("depth")>1?a.prev().val():""),a.nextAll("select").remove(),i&&i.children.length>0){a.after('<select><option value="">'+t.placeholder+"</option></select>");var h=a.next();h.addClass("drilldown-"+(i.depth+1)),h.data("depth",i.depth+1),e.each(i.children,function(){var t=e("<option>");t.val(this.value),t.text(this.short_label),t.data("node",this),h.append(t)}),h.change(d)}};o.change(d);var s={};e.each(i,function(){s[this.short_label]=this});var c=l.find(" option:selected").text(),p=c.split(t.separator),v=1;e.each(p,function(){s[this]&&(e("select.drilldown-"+v,l.parent()).val(s[this].value),e("select.drilldown-"+v,l.parent()).change()),v++})}}(jQuery);
+
+
 function slugify(text) {
   return text.toString().toLowerCase()
     .replace(/\s+/g, '-')           // Replace spaces with -
@@ -223,7 +227,7 @@ route('*', function()
   });
 
 
-
+  $('select.sp-parent').selectHierarchy({ hideOriginal: true });
 
 });
 
