@@ -71,7 +71,7 @@ route('*', function()
           data.context.addClass('error');
 
           // Append error
-          tpl.find('span').text(response.error);
+          tpl.find('span').append(response.error);
           // Add the HTML to the UL element
           data.context = tpl.appendTo(ul);
 
