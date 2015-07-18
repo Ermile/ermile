@@ -228,7 +228,9 @@ route('*', function()
 
 
   $('select.sp-parent').selectHierarchy({ hideOriginal: true });
-  $(document).ready(function() { $(".light-gallery").lightGallery(); });
+  $(document).ready(function() {
+  	$(".light-gallery").lightGallery();
+  });
 
 
 });
