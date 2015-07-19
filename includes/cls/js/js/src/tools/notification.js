@@ -16,7 +16,6 @@
     if (timeout) {
       clearTimeout(timeout);
     }
-
     if (options === false) {
       $notif.fadeOutAndRemove();
       $window.trigger('notify:close:force')
@@ -38,10 +37,10 @@
     if (!options.sticky) {
       $notif.prop('sticky', false);
     }
-    if (options.sticky) {
-      $notif.prop('sticky', true);
-      return;
-    }
+    // if (options.sticky) {
+    //   $notif.prop('sticky', true);
+    //   return;
+    // }
 
     timeout = setTimeout(function() {
       $notif.fadeOutAndRemove();

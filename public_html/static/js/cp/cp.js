@@ -63,10 +63,8 @@ function bindSlug() {
 
 route('*', function() 
 {
-  console.log('route');
-
   hideFields();
-  // $(window).off('statechange');
+  $(window).off('statechange');
   $(window).on('statechange', function() {
     // history.state.url.indexOf('posts');
     if(history.state && !history.state.replace) {

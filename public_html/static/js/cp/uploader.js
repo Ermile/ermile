@@ -14,8 +14,8 @@
 route('*', function()
 {
   var ul = $('#form_uploader ul');
-
-  $('#drop a').click(function(){
+  $('#drop a').unbind('click.uploader');
+  $('#drop a').bind('click.uploader', function(){
     // Simulate a click on the file input button
     // to show the file browser dialog
     $(this).parent().find('input').click();

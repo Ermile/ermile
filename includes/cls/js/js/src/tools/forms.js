@@ -10,7 +10,11 @@
       processData: false,
       contentType: false,
       dataType: 'json',
-      cache: false
+      cache: false,
+      beforeSend: function (request)
+      {
+        request.setRequestHeader("accept", "application/json");
+      }
     },
     noLoading: false
   };
