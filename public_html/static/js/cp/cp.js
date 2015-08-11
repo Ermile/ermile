@@ -224,11 +224,8 @@ route('*', function()
     
   });
 
-
-  $('select.sp-parent').selectHierarchy({ hideOriginal: true });
-  $(document).ready(function() {
-  	$(".light-gallery").lightGallery();
-  });
+  $('select.sp-parent', this).selectHierarchy({ hideOriginal: true });
+  $(".light-gallery", this).lightGallery();
 
 
 });
