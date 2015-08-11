@@ -91,7 +91,7 @@
     var options = $.extend(true, {}, props.ajax,
     {
       url: props.url,
-      headers: { 'Cached-MD5': props.md5 }
+      // headers: { 'Cached-MD5': props.md5 }
     });
 
     var deferred = new jQuery.Deferred();
@@ -108,15 +108,16 @@
         n = n === -1 ? undefined : n;
         json = JSON.parse(res.slice(0, n));
 
-        if(json.getFromCache) {
-          json = LS.get(props.md5);
-        } else {
+        // if(json.getFromCache) {
+          // json = LS.get(props.md5);
+        // } else {
           html = res.slice(n);
-          if(json.md5) {
-            LS.set(props.url, json.md5);
-            LS.set(json.md5, _.extend(json, {html: html}));
-          }
-        }
+          // if(json.md5) {
+            // LS.set(props.url, json.md5);
+            // LS.set(json.md5, _.extend(json, {html: html}));
+            _.extend(json, {html: html});
+          // }
+        // }
 
         if(json.options) {
           var $options = $('#options-meta');
@@ -169,7 +170,7 @@
 
     var md5 = LS.get(props.url);
     props.md5 = md5;
-
+    console.log(md5);
     fetch(props).then(function(data) {
       _.extend(props, data);
 
