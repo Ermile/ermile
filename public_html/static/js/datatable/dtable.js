@@ -13,16 +13,16 @@
     data_compile = Object();
 
     function datatable(el) {
-      var e, first_data;
+      var a, e, first_data;
       if (el instanceof Element) {
         try {
           first_data = JSON.parse($("tbody td:first", el).text());
         } catch (_error) {
           e = _error;
-          console.log(e);
-          alert("Json paresError");
+          $(el).html("<tr><td>Json pares Error</td></tr>");
         }
         if (first_data) {
+          a = 10;
           run.call(el, first_data);
         }
       } else {
@@ -33,16 +33,20 @@
     }
 
     run = function(columns) {
-      var i, j, ref;
-      for (i = j = 0, ref = columns.headers.length; 0 <= ref ? j < ref : j > ref; i = 0 <= ref ? ++j : --j) {
-        if (!columns.headers[i]['name'] && columns.headers[i]['data']) {
-          columns.headers[i]['name'] = columns.headers[i]['data'];
+      var cl, o_columns;
+      o_columns = Array();
+      for (cl in columns.columns) {
+        if (columns.columns[cl]['table']) {
+          columns.columns[cl]['title'] = columns.columns[cl]['label'];
+          columns.columns[cl]['name'] = cl;
+          columns.columns[cl]['data'] = cl;
+          o_columns.push(columns.columns[cl]);
         }
       }
       return $(this).DataTable({
         processing: true,
         serverSide: true,
-        columns: columns.headers,
+        columns: o_columns,
         ajax: {
           cache: true,
           url: $(this).attr('data-tablesrc'),
@@ -68,20 +72,16 @@
             }
             return ret.join('&');
           },
-          rowCallback: function(row, data, index) {
-            return console.log(row, data, index);
-          }
+          rowCallback: function(row, data, index) {}
         },
-        createdRow: function(row, data, dataIndex) {
-          return console.log(row, data, dataIndex);
-        }
+        createdRow: function(row, data, dataIndex) {}
       });
     };
 
     data_compile.order = function(order, data) {
       var col_name;
       col_name = data_compile.getColName(data, order[0]['column']);
-      return "sort=" + col_name + "," + order[0]['dir'];
+      return "sortby=" + col_name + "&order=" + order[0]['dir'];
     };
 
     data_compile.search = function(search, data) {
@@ -103,7 +103,6 @@
     };
 
     data_compile.getColName = function(data, col) {
-      console.log(data);
       if (data['columns'][col]['name']) {
         return data['columns'][col]['name'];
       } else {
