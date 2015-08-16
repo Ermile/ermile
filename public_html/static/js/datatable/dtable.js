@@ -36,7 +36,7 @@
     }
 
     run = function(columns) {
-      var cl, o_columns, obj;
+      var cl, lang, o_columns, obj;
       o_columns = Array();
       if (columns.columns.id) {
         columns.columns.id.table = true;
@@ -69,7 +69,11 @@
         className: "col_actions",
         createdCell: col_creat['action'] ? col_creat['action'] : null
       });
+      lang = document.documentElement.lang.slice(0, 2) + ".json";
       return $(this).DataTable({
+        language: {
+          "url": location.protocol + "//" + location.hostname.match(/([^\.]*)\.([^\.]*)$/)[0] + "/static/js/datatable/datatable-langs/" + lang
+        },
         processing: true,
         serverSide: true,
         columns: o_columns,
