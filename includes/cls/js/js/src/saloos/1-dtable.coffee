@@ -1,6 +1,4 @@
 $.fn.dataTableExt.sErrMode = "throw"
-if(!window.saloos)
-	window.saloos = new Object()
 
 class window.saloos.datatable
 	first_make_data = true

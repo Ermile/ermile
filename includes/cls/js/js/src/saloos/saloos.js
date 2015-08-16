@@ -1,9 +1,12 @@
 (function() {
-  $.fn.dataTableExt.sErrMode = "throw";
-
   if (!window.saloos) {
     window.saloos = new Object();
   }
+
+}).call(this);
+
+(function() {
+  $.fn.dataTableExt.sErrMode = "throw";
 
   window.saloos.datatable = (function() {
     var col_creat, data_compile, first_make_data, run;
@@ -183,6 +186,42 @@
 
   route('*', function() {
     return window.saloos.datatable($("[data-tablesrc]"));
+  });
+
+}).call(this);
+
+(function() {
+  window.saloos.getParent = (function() {
+    function getParent(el) {
+      var name;
+      name = $(el).attr('name');
+      $(el).removeAttr('name');
+      $("<input type=\"hidden\" name=\"" + name + "\" value=\"" + ($(el).val()) + "\">").insertAfter($(el));
+      $(el).change(function() {
+        var addr, val;
+        $(this).attr('disabled', '');
+        val = $(this).val();
+        addr = location.pathname.replace(/\/[^\/]*$/, '') + "/get-list";
+        return $.ajax({
+          url: addr,
+          data: {
+            parent: val
+          },
+          success: function(data) {
+            return console.log(data);
+          }
+        });
+      });
+    }
+
+    return getParent;
+
+  })();
+
+  route('*', function() {
+    return $("#sp-parent").each(function() {
+      return new saloos.getParent(this);
+    });
   });
 
 }).call(this);
