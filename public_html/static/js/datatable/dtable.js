@@ -6,23 +6,26 @@
   }
 
   window.saloos.datatable = (function() {
-    var data_compile, first_make_data, run;
+    var col_creat, data_compile, first_make_data, run;
 
     first_make_data = true;
 
     data_compile = Object();
 
+    col_creat = Object();
+
     function datatable(el) {
-      var a, e, first_data;
+      var e, first_data;
       if (el instanceof Element) {
         try {
           first_data = JSON.parse($("tbody td:first", el).text());
         } catch (_error) {
           e = _error;
-          $(el).html("<tr><td>Json pares Error</td></tr>");
+          console.log(el);
         }
         if (first_data) {
-          a = 10;
+          $(el).empty();
+          $(el).removeClass('hidden');
           run.call(el, first_data);
         }
       } else {
@@ -33,16 +36,39 @@
     }
 
     run = function(columns) {
-      var cl, o_columns;
+      var cl, o_columns, obj;
       o_columns = Array();
+      if (columns.columns.id) {
+        columns.columns.id.table = true;
+      }
       for (cl in columns.columns) {
         if (columns.columns[cl]['table']) {
           columns.columns[cl]['title'] = columns.columns[cl]['label'];
           columns.columns[cl]['name'] = cl;
           columns.columns[cl]['data'] = cl;
-          o_columns.push(columns.columns[cl]);
+          columns.columns[cl]['className'] = "col_" + columns.columns[cl]['value'];
+          obj = {
+            title: columns.columns[cl]['label'],
+            name: cl,
+            data: cl,
+            className: "col_" + columns.columns[cl]['value'],
+            _resp: columns.columns[cl],
+            createdCell: col_creat[columns.columns[cl]['value']] ? col_creat[columns.columns[cl]['value']] : null
+          };
+          if (cl === 'id') {
+            obj.className = "col_row";
+          }
+          o_columns.push(obj);
         }
       }
+      o_columns.push({
+        orderable: false,
+        title: "",
+        name: "id",
+        data: "id",
+        className: "col_actions",
+        createdCell: col_creat['action'] ? col_creat['action'] : null
+      });
       return $(this).DataTable({
         processing: true,
         serverSide: true,
@@ -71,10 +97,24 @@
               }
             }
             return ret.join('&');
-          },
-          rowCallback: function(row, data, index) {}
+          }
         },
-        createdRow: function(row, data, dataIndex) {}
+        rowCallback: function(row, data, index) {},
+        createdRow: function(row, data, dataIndex) {
+          var len, num, sort, start, total;
+          window.ffff = this;
+          len = this.fnSettings()._iDisplayLength;
+          start = this.fnSettings()._iDisplayStart;
+          sort = this.fnSettings().aaSorting[0][1];
+          total = this.fnSettings()._iRecordsDisplay;
+          if (sort === 'asc') {
+            num = dataIndex + start + 1;
+          } else {
+            num = total - (dataIndex + start);
+            data.num = num;
+          }
+          return $('td:first', row).text(num);
+        }
       });
     };
 
@@ -110,11 +150,34 @@
       }
     };
 
+    col_creat.action = function(td, cellData, rowData, row, col) {
+      var html, text;
+      text = $(td).text();
+      html = $("<span class=\"fa-stack fa-lg\"> <i class=\"fa fa-square-o fa-stack-2x\"></i> <a class=\"fa fa-pencil fa-stack-1x label-default\" href=\"" + location.pathname + "/edit=" + rowData.id + "\"></a> </span> <span class=\"fa-stack fa-lg\"> <i class=\"fa fa-square-o fa-stack-2x\"></i> <a class=\"fa fa-times fa-stack-1x label-danger\" href=\"" + location.pathname + "/delete=" + rowData.id + "\" data-data='{\"id\": " + rowData.id + "}' data-method=\"post\" data-modal=\"delete-confirm\"></a> </span>");
+      return $(td).html(html);
+    };
+
+    col_creat.title = function(td, cellData, rowData, row, col) {
+      var html, text;
+      text = $(td).text();
+      html = $("<a href='" + location.pathname + "/edit=" + rowData.id + "'>" + text + "</a>");
+      return $(td).html(html);
+    };
+
+    col_creat.url = function(td, cellData, rowData, row, col) {
+      var html, root, site_location, text;
+      text = $(td).text();
+      root = $("meta[name='site:root']").attr('content');
+      site_location = root + text;
+      html = $("<a href='" + site_location + "?preview=yes'>" + text + "</a>");
+      return $(td).html(html);
+    };
+
     return datatable;
 
   })();
 
-  $(document).ready(function() {
+  route('*', function() {
     return window.saloos.datatable($("[data-tablesrc]"));
   });
 
