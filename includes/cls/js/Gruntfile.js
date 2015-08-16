@@ -1,9 +1,23 @@
 module.exports = function(grunt) {
   grunt.initConfig({
+    coffee: {
+      compile: {
+        files: {
+          'js/src/saloos/saloos.js': 'js/src/saloos/*.coffee'
+        }
+      },
+    },
     uglify: {
       options: {
         sourceMap: false,
         mangle: false
+      },
+      saloos: {
+        files: {
+          'js/saloos.js': [
+            'js/src/saloos/*.js'
+            ]
+        }
       },
       common: {
         files: {
@@ -120,6 +134,10 @@ module.exports = function(grunt) {
             dest: '../../../../saloos-project/public_html/static/js/'
           },
           { 
+            expand: true, flatten: true, src: ['js/saloos.js'], 
+            dest: '../../../../amon/public_html/static/js/'
+          },
+          { 
             expand: true, flatten: true, src: ['js/common.js'], 
             dest: '../../../../amon/public_html/static/js/'
           },
@@ -138,6 +156,14 @@ module.exports = function(grunt) {
       views: {
         files: ['views/*'],
         tasks: ['react', 'uglify:filemanager']
+      },
+      coffee: {
+        files: ['js/src/saloos/*.coffee'],
+        tasks: ['coffee:compile']
+      },
+      saloos: {
+        files: ['js/src/saloos/*.js'],
+        tasks: ['uglify:saloos']
       },
       common: {
         files: ['js/src/libs/jquery.js', 'js/src/libs/localstorage.js',
@@ -183,7 +209,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-open');
   grunt.loadNpmTasks('grunt-react');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
 
   grunt.registerTask('test', ['uglify:tests']);
-  grunt.registerTask('default', ['react', 'uglify', 'less', 'autoprefixer', 'copy', 'watch']);
+  grunt.registerTask('default', ['react', 'uglify', 'less', 'autoprefixer', 'copy', 'coffee', 'watch']);
 }
