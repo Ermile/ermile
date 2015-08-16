@@ -8,8 +8,8 @@ class window.saloos.datatable
 		if(el instanceof Element)
 			try
 				first_data = JSON.parse($("tbody td:first", el).text())
-			catch e
-				console.log(el)
+			catch
+				# console.log(el)
 				# alert("Json paresError")
 			if(first_data)
 				$(el).empty();
@@ -78,7 +78,7 @@ class window.saloos.datatable
 			rowCallback : (row, data, index) ->
 				# console.log(row, data, index)
 			createdRow : (row, data, dataIndex)->
-				window.ffff = this
+				# window.ffff = this
 				# console.log(data)
 				len = this.fnSettings()._iDisplayLength
 				start = this.fnSettings()._iDisplayStart
@@ -133,7 +133,8 @@ class window.saloos.datatable
 		$(td).html(html)
 
 route('*', () ->
-	window.saloos.datatable($("[data-tablesrc]"))
+	$("[data-tablesrc]").each () ->
+		new window.saloos.datatable(@)
 	)
 
 		

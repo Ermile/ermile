@@ -1,3 +1,4 @@
+var fs = require('fs')
 module.exports = function(grunt) {
   grunt.initConfig({
     coffee: {
@@ -13,8 +14,11 @@ module.exports = function(grunt) {
         mangle: false
       },
       saloos: {
+        options: {
+          // mangle: true
+        },
         files: {
-          'js/saloos.js': [
+          'js/src/saloos/saloos.min': [
             'js/src/saloos/*.js'
             ]
         }
@@ -162,6 +166,10 @@ module.exports = function(grunt) {
         tasks: ['coffee:compile']
       },
       saloos: {
+        files: ['js/src/saloos/saloos.min'],
+        tasks: ['ermile_cp']
+      },
+      ermile_cp: {
         files: ['js/src/saloos/*.js'],
         tasks: ['uglify:saloos']
       },
@@ -210,7 +218,19 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-open');
   grunt.loadNpmTasks('grunt-react');
   grunt.loadNpmTasks('grunt-contrib-coffee');
-
+  grunt.task.registerTask('ermile_cp', 'A sample task that logs stuff.', function(arg1, arg2) {
+    var projects = Array('ermile');
+    for (var i = 0; i< projects.length; i++){
+      var file_name = '../../../../'+projects[i]+'/public_html/static/js/cp/cp.js';
+        if(fs.existsSync(file_name)){
+          file = fs.readFileSync(file_name).toString()
+          saloos = fs.readFileSync('js/src/saloos/saloos.min').toString()
+          file = file.replace(/\/\*\*\*cpjs\*\*\*\/([.\r\n\s\S]+)\/\*\*\*cpjs\*\*\*\//gmi, '/***cpjs***/'+saloos+'/***cpjs***/')
+          fs.writeFileSync(file_name, file)
+          console.log("ermile saved true on cp's")
+        }
+    }
+  });
   grunt.registerTask('test', ['uglify:tests']);
-  grunt.registerTask('default', ['react', 'uglify', 'less', 'autoprefixer', 'copy', 'coffee', 'watch']);
+  grunt.registerTask('default', ['react', 'uglify', 'less', 'autoprefixer', 'copy', 'coffee', 'ermile_cp', 'watch']);
 }

@@ -18,13 +18,12 @@
     col_creat = Object();
 
     function datatable(el) {
-      var e, first_data;
+      var first_data;
       if (el instanceof Element) {
         try {
           first_data = JSON.parse($("tbody td:first", el).text());
         } catch (_error) {
-          e = _error;
-          console.log(el);
+
         }
         if (first_data) {
           $(el).empty();
@@ -109,7 +108,6 @@
         rowCallback: function(row, data, index) {},
         createdRow: function(row, data, dataIndex) {
           var len, num, sort, start, total;
-          window.ffff = this;
           len = this.fnSettings()._iDisplayLength;
           start = this.fnSettings()._iDisplayStart;
           sort = this.fnSettings().aaSorting[0][1];
@@ -185,7 +183,9 @@
   })();
 
   route('*', function() {
-    return window.saloos.datatable($("[data-tablesrc]"));
+    return $("[data-tablesrc]").each(function() {
+      return new window.saloos.datatable(this);
+    });
   });
 
 }).call(this);
