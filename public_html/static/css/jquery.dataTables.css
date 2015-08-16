@@ -342,7 +342,7 @@ table.dataTable td {
   text-align: right;
   padding-top: 0.25em;
 }
-.dataTables_wrapper .dataTables_paginate .paginate_button {
+.dataTables_wrapper .dataTables_paginate .paginate_button, .dataTables_wrapper .dataTables_paginate .ellipsis {
   padding: 4px 12px;
   text-align: center;
   vertical-align: middle !important;
@@ -361,6 +361,7 @@ table.dataTable td {
   float: left;
   margin-right: 1px;
 }
+
 .dataTables_wrapper .dataTables_paginate .paginate_button.default {
   background-color: #008287;
   color: #fff;
