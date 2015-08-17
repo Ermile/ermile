@@ -207,7 +207,8 @@
         return $.ajax({
           url: addr,
           data: {
-            parent: val
+            parent: val,
+            type: "getparent"
           },
           success: function(data) {
             return console.log(data);

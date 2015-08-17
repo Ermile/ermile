@@ -9,7 +9,7 @@ class window.saloos.getParent
 			addr = location.pathname.replace(/\/[^\/]*$/, '') + "/options"
 			$.ajax({
 				url : addr
-				data : {parent:val}
+				data : {parent:val, type: "getparent"}
 				success : (data) ->
 					console.log(data)
 				})
