@@ -203,7 +203,7 @@
         var addr, val;
         $(this).attr('disabled', '');
         val = $(this).val();
-        addr = location.pathname.replace(/\/[^\/]*$/, '') + "/get-list";
+        addr = location.pathname.replace(/\/[^\/]*$/, '') + "/options";
         return $.ajax({
           url: addr,
           data: {

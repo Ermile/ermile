@@ -6,7 +6,7 @@ class window.saloos.getParent
 		$(el).change ()->
 			$(@).attr('disabled', '')
 			val = $(@).val()
-			addr = location.pathname.replace(/\/[^\/]*$/, '') + "/get-list"
+			addr = location.pathname.replace(/\/[^\/]*$/, '') + "/options"
 			$.ajax({
 				url : addr
 				data : {parent:val}
