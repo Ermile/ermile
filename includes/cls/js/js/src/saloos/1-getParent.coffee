@@ -15,7 +15,7 @@ class window.saloos.getParent
 				})
 
 route('*', ()->
-	$("#sp-parent").each(()->
+	$("#sp-parent", this).each(()->
 		new saloos.getParent(@)
 		)
 	)

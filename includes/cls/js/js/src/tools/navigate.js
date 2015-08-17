@@ -170,7 +170,6 @@
 
     var md5 = LS.get(props.url);
     props.md5 = md5;
-    console.log(md5);
     fetch(props).then(function(data) {
       _.extend(props, data);
 

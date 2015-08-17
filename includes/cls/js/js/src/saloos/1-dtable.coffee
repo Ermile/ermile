@@ -8,9 +8,9 @@ class window.saloos.datatable
 		if(el instanceof Element)
 			try
 				first_data = JSON.parse($("tbody td:first", el).text())
-			catch
-				# console.log(el)
-				# alert("Json paresError")
+			catch e
+				$("tbody td:first", el).html("<tr><td>Json paresError</td></tr>")
+				console.log(e)
 			if(first_data)
 				$(el).empty();
 				$(el).removeClass('hidden')
@@ -133,7 +133,7 @@ class window.saloos.datatable
 		$(td).html(html)
 
 route('*', () ->
-	$("[data-tablesrc]").each () ->
+	$("[data-tablesrc]", this).each () ->
 		new window.saloos.datatable(@)
 	)
 

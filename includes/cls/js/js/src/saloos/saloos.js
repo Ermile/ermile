@@ -18,12 +18,14 @@
     col_creat = Object();
 
     function datatable(el) {
-      var first_data;
+      var e, first_data;
       if (el instanceof Element) {
         try {
           first_data = JSON.parse($("tbody td:first", el).text());
         } catch (_error) {
-
+          e = _error;
+          $("tbody td:first", el).html("<tr><td>Json paresError</td></tr>");
+          console.log(e);
         }
         if (first_data) {
           $(el).empty();
@@ -183,7 +185,7 @@
   })();
 
   route('*', function() {
-    return $("[data-tablesrc]").each(function() {
+    return $("[data-tablesrc]", this).each(function() {
       return new window.saloos.datatable(this);
     });
   });
@@ -219,7 +221,7 @@
   })();
 
   route('*', function() {
-    return $("#sp-parent").each(function() {
+    return $("#sp-parent", this).each(function() {
       return new saloos.getParent(this);
     });
   });
