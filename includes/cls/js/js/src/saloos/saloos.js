@@ -194,28 +194,70 @@
 
 (function() {
   window.saloos.getParent = (function() {
+    var change, remove;
+
     function getParent(el) {
       var name;
       name = $(el).attr('name');
       $(el).removeAttr('name');
-      $("<input type=\"hidden\" name=\"" + name + "\" value=\"" + ($(el).val()) + "\">").insertAfter($(el));
-      $(el).change(function() {
-        var addr, val;
-        $(this).attr('disabled', '');
-        val = $(this).val();
-        addr = location.pathname.replace(/\/[^\/]*$/, '') + "/options";
-        return $.ajax({
-          url: addr,
-          data: {
-            parent: val,
-            type: "getparent"
-          },
-          success: function(data) {
-            return console.log(data);
-          }
-        });
-      });
+      $("<input id=\"hidden-parent\" type=\"hidden\" name=\"" + name + "\" value=\"" + ($(el).val()) + "\">").insertBefore($(el));
+      $(el).change(change);
     }
+
+    change = function() {
+      var addr, val;
+      val = $(this).val();
+      remove.call(this);
+      if (val === '') {
+        val = $(this).prev('select').val();
+        $("#hidden-parent").val(val);
+        return;
+      }
+      $("#hidden-parent").val(val);
+      $(this, $(this).parents(".panel")).attr('disabled', '');
+      addr = location.pathname.replace(/\/[^\/]*$/, '') + "/options";
+      return $.ajax({
+        context: this,
+        url: addr,
+        data: {
+          parent: val,
+          type: "getparent"
+        }
+      }).done(function(obj, header, xhr) {
+        var i, j, parent, ref, select;
+        if (xhr.status !== 200) {
+          $("#hidden-parent").val('');
+          return;
+        }
+        parent = $(this).parents(".panel");
+        $(this, parent).removeAttr("disabled");
+        if (obj.data.length > 0) {
+          select = $("<select class='input'></select>");
+          select.insertAfter($(this));
+          $("<option selected=\"selected\"></option>").appendTo(select);
+          select.change(change);
+          for (i = j = 0, ref = obj.data.length; 0 <= ref ? j < ref : j > ref; i = 0 <= ref ? ++j : --j) {
+            $("<option value=\"" + obj.data[i].id + "\">" + obj.data[i].title + "</option>").appendTo(select);
+          }
+        }
+        return void 0;
+      });
+    };
+
+    remove = function() {
+      var _self, parent, start_remove;
+      _self = this;
+      parent = $(this).parents(".panel");
+      start_remove = false;
+      return $("select", parent).each(function() {
+        if (start_remove) {
+          $(this).remove();
+        }
+        if ($(this).is(_self)) {
+          return start_remove = true;
+        }
+      });
+    };
 
     return getParent;
 
