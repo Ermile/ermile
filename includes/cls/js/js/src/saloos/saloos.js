@@ -193,10 +193,90 @@
 }).call(this);
 
 (function() {
-  window.saloos.getParent = (function() {
+  window.saloos.getCatlist = (function() {
+    var ajax;
+
+    function getCatlist(el) {
+      $('.panel-body .item span', el).unbind('click.getCatlist');
+      $('.panel-body .item span', el).bind('click.getCatlist', function() {
+        var id, parent;
+        parent = $(this).parents('.panel');
+        if ($(parent).hasClass('data-disabled')) {
+          return;
+        }
+        parent.addClass('data-disabled');
+        $(":checkbox", parent).attr('disabled', '');
+        id = $(this).parents('.item').find(':checkbox').val();
+        return ajax.call(this, id);
+      });
+    }
+
+    ajax = function(id) {
+      var addr, parent;
+      if (!/^\d+$/.test(id)) {
+        id = '';
+        parent = $(this).parents('.panel');
+        $('.panel-heading span', parent).remove();
+      }
+      addr = location.pathname.replace(/\/[^\/]*$/, '') + "/options";
+      $.ajax({
+        context: this,
+        url: addr,
+        data: {
+          parent: id,
+          type: "getcatlist"
+        }
+      }).done(function(obj, header, xhr) {
+        var ch, i, j, label, ref;
+        if (xhr.status !== 200) {
+          return;
+        }
+        $('.cat-list').empty();
+        parent = $(this).parents('.panel');
+        if (!parent[0]) {
+          parent = $(".cats");
+        }
+        parent.removeClass('data-disabled');
+        $('.panel-heading i', parent).removeClass('hidden');
+        $('.panel-heading span', parent).remove();
+        if (id !== '') {
+          $("<span> × " + ($(this).text()) + " </span>").appendTo($('.panel-heading', parent));
+          $('.panel-heading span', parent).click(ajax);
+        }
+        $(":checkbox", parent).removeAttr('disabled');
+        $('#cat-list', parent).empty();
+        for (i = j = 0, ref = obj.data.length; 0 <= ref ? j < ref : j > ref; i = 0 <= ref ? ++j : --j) {
+          ch = $(":checkbox[value=" + obj.data[i].id + "]", parent);
+          if (ch.length) {
+            continue;
+          }
+          label = $("<label class='item'><input type='checkbox' name='categories[]' value='" + obj.data[i].id + "' data-slug='book-index/haj'> <span>" + obj.data[i].title + "</span></label>");
+          label.appendTo($('#cat-list', parent));
+        }
+        cat_selected();
+        new saloos.getCatlist(parent[0]);
+        return void 0;
+      });
+      return false;
+    };
+
+    return getCatlist;
+
+  })();
+
+  route('*', function() {
+    return $(".cats", this).each(function() {
+      return new saloos.getCatlist(this);
+    });
+  });
+
+}).call(this);
+
+(function() {
+  window.saloos.getParentlist = (function() {
     var change, remove;
 
-    function getParent(el) {
+    function getParentlist(el) {
       var name;
       name = $(el).attr('name');
       $(el).removeAttr('name');
@@ -221,7 +301,7 @@
         url: addr,
         data: {
           parent: val,
-          type: "getparent"
+          type: "getparentlist"
         }
       }).done(function(obj, header, xhr) {
         var i, j, parent, ref, select;
@@ -259,13 +339,13 @@
       });
     };
 
-    return getParent;
+    return getParentlist;
 
   })();
 
   route('*', function() {
     return $("#sp-parent", this).each(function() {
-      return new saloos.getParent(this);
+      return new saloos.getParentlist(this);
     });
   });
 

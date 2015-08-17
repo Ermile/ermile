@@ -205,7 +205,10 @@ input:focus, select:focus{border-color:#787878;}
 .cats input{vertical-align: middle;}
 .cats .item{padding:3px 15px;}
 .cats .item:hover, .cats .item:focus{background-color:#f3f3f3}
-
+.cats .item span{cursor: pointer; color:#54B4EF;}
+.cats .item span{cursor: pointer; color:#54B4EF;}
+.panel.data-disabled .item span{color: #DDD ; cursor: default}
+.panel-heading span{background: red}
 
 .cats #cat-main #cat{width:100%;border:1px solid #ddd;direction:ltr;display:none;}
 .cats #cat-main{background-color: #ddd;}

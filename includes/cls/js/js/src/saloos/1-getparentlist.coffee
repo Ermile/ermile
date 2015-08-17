@@ -1,4 +1,4 @@
-class window.saloos.getParent
+class window.saloos.getParentlist
 	constructor : (el)->
 		name = $(el).attr('name')
 		$(el).removeAttr('name')
@@ -17,7 +17,7 @@ class window.saloos.getParent
 		$.ajax({
 			context: @
 			url : addr
-			data : {parent:val, type: "getparent"}
+			data : {parent:val, type: "getparentlist"}
 			}).done (obj, header, xhr) ->
 				if xhr.status != 200
 					$("#hidden-parent").val('')
@@ -46,6 +46,6 @@ class window.saloos.getParent
 
 route('*', ()->
 	$("#sp-parent", this).each(()->
-		new saloos.getParent(@)
+		new saloos.getParentlist(@)
 		)
 	)
