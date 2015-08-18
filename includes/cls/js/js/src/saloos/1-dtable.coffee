@@ -129,7 +129,7 @@ class window.saloos.datatable
 		text = $(td).text()
 		root = $("meta[name='site:root']").attr('content')
 		site_location = root + text
-		html = $("<a href='#{site_location}?preview=yes'>#{text}</a>")
+		html = $("<a href='#{site_location}?preview=yes' target='_blank'>#{text}</a>")
 		$(td).html(html)
 	col_creat.filetype = (td, cellData, rowData, row, col)->
 		$(td).html('<i class="fa fa-2x fa-file-'+cellData.type+'-o"></i>')

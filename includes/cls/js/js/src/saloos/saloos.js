@@ -176,7 +176,7 @@
       text = $(td).text();
       root = $("meta[name='site:root']").attr('content');
       site_location = root + text;
-      html = $("<a href='" + site_location + "?preview=yes'>" + text + "</a>");
+      html = $("<a href='" + site_location + "?preview=yes' target='_blank'>" + text + "</a>");
       return $(td).html(html);
     };
 
