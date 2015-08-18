@@ -180,6 +180,10 @@
       return $(td).html(html);
     };
 
+    col_creat.filetype = function(td, cellData, rowData, row, col) {
+      return $(td).html('<i class="fa fa-2x fa-file-' + cellData.type + '-o"></i>');
+    };
+
     return datatable;
 
   })();

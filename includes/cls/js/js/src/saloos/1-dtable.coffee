@@ -131,6 +131,8 @@ class window.saloos.datatable
 		site_location = root + text
 		html = $("<a href='#{site_location}?preview=yes'>#{text}</a>")
 		$(td).html(html)
+	col_creat.filetype = (td, cellData, rowData, row, col)->
+		$(td).html('<i class="fa fa-2x fa-file-'+cellData.type+'-o"></i>')
 
 route('*', () ->
 	$("[data-tablesrc]", this).each () ->
