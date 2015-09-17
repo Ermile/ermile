@@ -1,4 +1,5 @@
 var fs = require('fs')
+exec = require('child_process').exec;
 module.exports = function(grunt) {
   grunt.initConfig({
     coffee: {
@@ -26,7 +27,7 @@ module.exports = function(grunt) {
       common: {
         files: {
           'js/common.js': [
-            'js/src/libs/jquery.js', 'js/src/libs/localstorage.js',
+            'js/src/libs/jquery.js', 'js/src/libs/localstorage.js', 'js/src/libs/jquery.autoComplete.js',
             'js/src/libs/modal.js', 'js/src/tools/router.js',
             'js/src/libs/underscore.js', 'js/src/libs/utils.js',
             'js/src/tools/navigate.js',
@@ -174,7 +175,7 @@ module.exports = function(grunt) {
         tasks: ['uglify:saloos']
       },
       common: {
-        files: ['js/src/libs/jquery.js', 'js/src/libs/localstorage.js',
+        files: ['js/src/libs/jquery.js', 'js/src/libs/localstorage.js', 'js/src/libs/jquery.autoComplete.js',
             'js/src/libs/modal.js', 'js/src/tools/router.js',
             'js/src/libs/underscore.js', 'js/src/libs/utils.js',
             'js/src/tools/navigate.js',
@@ -230,6 +231,8 @@ module.exports = function(grunt) {
           console.log("ermile saved true on cp's")
         }
     }
+    args = ['notify-send', '-c', 'Grunt', '-t', '5000', "'End Grunt'", "'saloos'"];
+    exec(args.join(' '));
   });
   grunt.registerTask('test', ['uglify:tests']);
   grunt.registerTask('default', ['react', 'uglify', 'less', 'autoprefixer', 'copy', 'coffee', 'ermile_cp', 'watch']);
