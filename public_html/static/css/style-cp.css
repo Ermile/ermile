@@ -54,9 +54,10 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
  
 #header #profile:hover .vertical-menu, #header #profile:focus .vertical-menu{visibility:visible;opacity:1;transition-delay:0s;}
 
+#languages{cursor:pointer;}
 #languages .vertical-menu{margin-left:-15px;}
 .rtl #languages .vertical-menu{margin-right:-15px;}
-#languages:hover .vertical-menu, #languages:focus .vertical-menu{visibility:visible;opacity:1;transition-delay:0s;}
+#languages:hover .vertical-menu, #languages:focus .vertical-menu, #languages:focus{visibility:visible;opacity:1;transition-delay:0s;}
 
 
 .vertical-menu {background:#3d4e5d;line-height:20px;font-size:1em;}
@@ -88,14 +89,15 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 /*--Action */
 
 .col_row{width:5px;padding:0;text-align:center;}
+.col_title{min-width:350px;width:30%}
 .col_slug{width:100px;direction:ltr;text-align:left}
 .col_email{min-width:150px;direction:ltr;text-align:left}
 .col_mobile{min-width:100px;direction:ltr;text-align:left}
-.col_url{min-width:150px;width:30%;direction:ltr;text-align:left}
-.col_status{width:100px;text-align:center;}
-.col_actions{width: 90px;}
+.col_url{min-width:100px;width:15%;direction:ltr;text-align:left}
+.col_status{min-width:80px;width:100px;text-align:center;}
+.col_actions{width: 40px;}
 .col_actions a{color:#fff;}
-.col_publishdate, .col_createdate{direction: ltr; min-width: 100px;width:125px}
+.col_publishdate, .col_createdate{direction: ltr; min-width: 100px;width:100px}
 .col_filetype{text-align: center;width:50px}
 
 
@@ -418,10 +420,14 @@ transition: all .2s ease;-webkit-transition: all .2s ease;-o-transition: all .2s
 #chart>.highcharts-container>svg>path{opacity:0;transition:visibility 0s linear 0.2s,opacity 0.2s linear;}
 #chart>.highcharts-container:hover>svg>path{visibility:visible;opacity:1;transition-delay:0s;}
 #chart>.highcharts-container>svg>text:last-child{display:none;}
-#chart>.highcharts-container text{font-family:'IRANSans',serif;}
-#chart>.highcharts-container .highcharts-tooltip table{font-family:'IRANSans',serif}
+.rtl #chart>.highcharts-container text{font-family:'IRANSans',serif;}
+.rtl #chart>.highcharts-container .highcharts-tooltip table{direction: rtl}
+#chart>.highcharts-container .highcharts-tooltip table thead{background-color: #eee;text-align: center;}
+#chart>.highcharts-container .highcharts-tooltip .table-tooltip {}
+
 
 #chart>.highcharts-container text tspan{display:block}
+.rtl #chart>.highcharts-container text tspan{direction: rtl}
 
 @media only screen and (max-width: 900px){
   #chart{height:auto;}
