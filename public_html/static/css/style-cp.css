@@ -179,7 +179,13 @@ input:focus, select:focus{border-color:#787878;}
 .cats label{display:block;display:pointer}
 
 .panel.cats .panel-body{max-height:30vh;overflow:hidden;overflow-y:auto;}
-.panel.quick-access .panel-body{min-height:115px}
+.panel.top-pages .panel-body{min-height:115px;overflow:hidden;}
+
+.panel.top-pages .panel-body li{display:block;direction:ltr;text-align: left;}
+.panel.top-pages .panel-body li:hover{background-color:#eee}
+.panel.top-pages .panel-body li span{display:inline-block;min-width:25px}
+.panel.top-pages .panel-body a{}
+
 .panel-body.summary a{color:inherit;}
 #home .panel{margin-bottom:1vh;}
 #home .panel-body{padding: 2vh;}
