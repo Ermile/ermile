@@ -1,0 +1,8 @@
+User-Agent: *
+Disallow: /account/
+Disallow: /admin/
+Disallow: /cp/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /*.asp$
+Disallow: /*.txt$
