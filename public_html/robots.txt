@@ -6,3 +6,5 @@ Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /*.asp$
 Disallow: /*.txt$
+
+Sitemap: /sitemap.xml
