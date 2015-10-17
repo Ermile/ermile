@@ -139,6 +139,8 @@
              .trigger('navigate:fetch:done', json);
       deferred.resolve(json);
       $(document.body).removeClass('loading-page');
+    }).error(function(a, b, c){
+      $window.trigger('navigate:fetch:ajax:error', a, b, c);
     });
 
     return deferred.promise();
