@@ -32,8 +32,8 @@
       $form.trigger('ajaxify:send:before', _super);
 
       var elementOptions = {
-        type: _super.link ? $this.attr('data-method') || 'get' : $this.prop('method'),
-        url: (_super.link ? $this.prop('href') : $this.prop('action')) || location.href
+        type: _super.link ? $this.attr('data-method') || 'get' : $this.prop('method') || $this.attr('data-method'),
+        url: (_super.link ? $this.prop('href') : $this.prop('action')  || $this.attr('data-action')) || location.href
       };
 
       var ajax = _.extend(_super.ajax, elementOptions);
@@ -46,7 +46,9 @@
         $this.find('[contenteditable]').each(function() {
           fd.append(this.getAttribute('name'), this.innerHTML);
         });
-
+        for(var formName in ajax.data){
+          fd.append(formName, ajax.data[formName]);
+        }
         ajaxOptions = _.extend(ajax, {
           data: fd
         });
