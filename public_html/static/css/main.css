@@ -951,7 +951,7 @@ ul.list li a{padding:0.3em 0.5em;}
 
 
 /* Specificity hack */
-.loading.loading.loading.loading.loading.loading.button, .loading-form .button {
+.loading.loading.loading.loading.loading.loading.button, .loading-form  form .button {
   position: relative;
   cursor: default;
   point-events: none;
@@ -960,7 +960,7 @@ ul.list li a{padding:0.3em 0.5em;}
   -webkit-transition: all 0s linear;
           transition: all 0s linear;
 }
-.loading.button:before, .loading-form .button:before  {
+.loading.button:before, .loading-form form .button:before  {
   position: absolute;
   content: '';
   top: 50%;
@@ -971,7 +971,7 @@ ul.list li a{padding:0.3em 0.5em;}
   border-radius: 500rem;
   border: 0.2em solid #000;
 }
-.loading.button:after, .loading-form .button:after {
+.loading.button:after, .loading-form form .button:after {
   position: absolute;
   content: '';
   top: 50%;
@@ -991,7 +991,7 @@ ul.list li a{padding:0.3em 0.5em;}
   z-index:10001;
   cursor: wait;
 }
-.labeled.icon.loading.button .icon, .loading-form .labeled.icon.button .icon {
+.labeled.icon.loading.button .icon, .loading-form form .labeled.icon.button .icon {
   background-color: transparent;
   box-shadow: none;
 }
@@ -1017,10 +1017,10 @@ ul.list li a{padding:0.3em 0.5em;}
             transform: rotate(360deg);
   }
 }
-.basic.loading.button:not(.inverted):before, .loading-form .basic.button:not(.inverted):before {
+.basic.loading.button:not(.inverted):before, .loading-form form .basic.button:not(.inverted):before {
   border-color: rgba(0, 0, 0, 0.1);
 }
-.basic.loading.button:not(.inverted):after, .loading-form .basic.button:not(.inverted):after {
+.basic.loading.button:not(.inverted):after, .loading-form form .basic.button:not(.inverted):after {
   border-top-color: #aaaaaa;
 }
 
