@@ -1125,7 +1125,7 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
 .form select{
   width: 95%;
   vertical-align: top;
-  margin: 0 auto;
+  margin: 0 auto 5px;
   outline: none;
   padding: 8px 2%;
   font-size: 1em;
