@@ -1043,7 +1043,7 @@ ul.list li a{padding:0.3em 0.5em;}
 
 visibility: hidden;opacity: 0;transition: visibility 0s 0.5s, opacity 0.5s linear;
 }
-.modal-dialog {position:relative; background-color: rgba(255,255,255,0.97);vertical-align: middle;display: inline-block;outline: none;overflow: hidden;min-height: 200px;min-width: 300px;max-width: 580px;padding: 50px 80px;margin-top:70px;padding-bottom:5%;border-radius:3px}
+.modal-dialog {position:relative; background-color: rgba(255,255,255,0.97);vertical-align: middle;display: inline-block;outline: none;overflow: hidden;min-height: 200px;min-width: 300px;max-width: 95%;padding: 50px 80px;margin-top:70px;padding-bottom:5%;border-radius:3px}
 .modal-body {color: rgba(0,0,0,0.6);line-height: 1.4;margin-bottom: 50px;}
 .modal-footer{position:absolute;bottom:10%;margin: 0 auto;left: 50%;transform: translate(-50%, 0);}
 .modal.visible{visibility: visible;opacity: 1;transition: opacity 0.5s linear;}
