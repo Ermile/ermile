@@ -79,7 +79,7 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 
 #page-footer{padding:10px 20px;background:#e8e8e8;color:#99a0aa;border-top:1px solid #eee;position:absolute;left:0;right:0;display:block;bottom:0;}
 #page-footer p{margin:0;}
-#page-footer p.float-right{cursor: progress;}
+#page-footer p.float-right abbr{cursor: progress;}
 
 
 #file-meta{display:block;text-align:center;color:#aaa;transition: all .2s ease-in-out;}
