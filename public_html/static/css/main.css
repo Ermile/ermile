@@ -521,6 +521,7 @@ ul.list li a{padding:0.3em 0.5em;}
   color: rgba(0, 0, 0, 0.6);
   margin: 0.3em auto;
   padding: 0.78571em 1.5em 0.78571em;
+  padding: 8px 1.5em 8px;
   text-transform: none;
   text-shadow: none;
   font-weight: bold;
@@ -693,7 +694,6 @@ ul.list li a{padding:0.3em 0.5em;}
   height: 100%;
   background-color: rgba(0, 0, 0, 0.05);
   text-align: center;
-  color: '';
   border-radius: 0.2857rem 0px 0px 0.2857rem;
   line-height: 1;
 }
