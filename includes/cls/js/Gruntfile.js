@@ -130,29 +130,33 @@ module.exports = function(grunt) {
 
       all: {
         files: [
-          { 
-            expand: true, flatten: true, src: ['js/common.js'], 
+          {
+            expand: true, flatten: true, src: ['js/common.js'],
             dest: '../../../../ermile/public_html/static/js/'
           },
-          { 
-            expand: true, flatten: true, src: ['js/common.js'], 
+          {
+            expand: true, flatten: true, src: ['js/common.js'],
             dest: '../../../../saloos-project/public_html/static/js/'
           },
-          { 
-            expand: true, flatten: true, src: ['js/saloos.js'], 
+          {
+            expand: true, flatten: true, src: ['js/saloos.js'],
             dest: '../../../../amon/public_html/static/js/'
           },
-          { 
-            expand: true, flatten: true, src: ['js/common.js'], 
+          {
+            expand: true, flatten: true, src: ['js/common.js'],
             dest: '../../../../amon/public_html/static/js/'
           },
-          { 
-            expand: true, flatten: true, src: ['js/common.js'], 
+          {
+            expand: true, flatten: true, src: ['js/common.js'],
             dest: '../../../../city/public_html/static/js/'
           },
-          { 
-            expand: true, flatten: true, src: ['js/common.js'], 
+          {
+            expand: true, flatten: true, src: ['js/common.js'],
             dest: '../../../../quranhadith/public_html/static/js/'
+          },
+          {
+            expand: true, flatten: true, src: ['js/common.js'],
+            dest: '../../../../archiver/public_html/static/js/'
           },
         ]
       }
