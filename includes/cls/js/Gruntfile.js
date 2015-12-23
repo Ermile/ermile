@@ -90,20 +90,20 @@ module.exports = function(grunt)
     //     }
     //   }
     // },
-    autoprefixer: {
-      options: {
-        browsers: ['Firefox ESR', 'Chrome > 30']
-      },
-      'css/main.css': 'css/main.css'
-    },
-    htmlmin: {
-      html: {
-        files: {
-          'dist/index.html': 'index.html',
-          'dist/file.html': 'file.html'
-        }
-      }
-    },
+    // autoprefixer: {
+    //   options: {
+    //     browsers: ['Firefox ESR', 'Chrome > 30']
+    //   },
+    //   'css/main.css': 'css/main.css'
+    // },
+    // htmlmin: {
+    //   html: {
+    //     files: {
+    //       'dist/index.html': 'index.html',
+    //       'dist/file.html': 'file.html'
+    //     }
+    //   }
+    // },
     copy: {
       ermile: {
         files: [
@@ -210,7 +210,8 @@ module.exports = function(grunt)
       // },
       scripts: {
         files: ['js/*.js', 'js/src/libs/*.js', 'js/src/subs/*.js'],
-        tasks: ['copy:ermile', 'copy:talambar', 'copy:all']
+        // tasks: ['copy:ermile', 'copy:talambar', 'copy:all']
+        tasks: ['copy:ermile', 'copy:all']
       },
       // less: {
       //   files: ['css/**'],

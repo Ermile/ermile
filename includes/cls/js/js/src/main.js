@@ -117,25 +117,30 @@ route('*', function() {
   /* MODALS */
 
   // Things to do after closing/opening modal
-  $('.modal', this).on('close', function() {
+  $('.modal', this).on('close', function()
+  {
     var $this = $(this);
 
     $this.removeClass('visible');
 
-    $.each($this.data(), function(key) {
+    $.each($this.data(), function(key)
+    {
       if(key === 'modal') return;
       $(this).removeAttr(key);
     });
   });
 
-  $('.modal', this).on('open', function() {
+
+  $('.modal', this).on('open', function()
+  {
     $(this).addClass('visible');
 
     var $send = $('[data-ajaxify]', this);
 
     if (!$send.length) return;
 
-    $.each($send.data(), function(key) {
+    $.each($send.data(), function(key)
+    {
       if(key === 'modal') return;
 
       $send.removeAttr(key);
@@ -144,8 +149,9 @@ route('*', function() {
     $send.copyData(this, ['modal']);
   });
 
+
   $(".panel .panel-heading", this).click(
-    function () 
+    function ()
     {
       var el = $(this).parent();
       if(el.hasClass('closed'))
