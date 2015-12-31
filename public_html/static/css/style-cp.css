@@ -606,4 +606,11 @@ right: calc(100% + 40px);
 
 
 
+.tags-list{font-size:1.3em}
+.tags-list span{position:relative;background-color:#F4F4F4; margin:0 5px;padding:10px 0;border-radius:1px;}
+.tags-list a{padding:5px 10px;display:inline-block;margin-bottom:10px;}
+.tags-list a:hover{background-color: #ECECEC}
+#permissions .tags-list a{padding: 10px 5%}
+#permissions .tags-list .fa{color:#aaa;padding:10px;line-height:1.7em;opacity:0;margin:0 -20px;}
+#permissions .tags-list span:hover .fa, #permissions .tags-list span:focus .fa{color:#b64645;opacity:1;margin:0}
 

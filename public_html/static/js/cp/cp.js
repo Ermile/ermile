@@ -44,7 +44,7 @@ function slugify(text) {
     .replace(/\-\-+/g, '-')         // Replace multiple - with single -
     .replace(/^-+/, '')             // Trim - from start of text
     .replace(/-+$/, '')             // Trim - from end of text
-    .replace(/=.*/, '');            
+    .replace(/=.*/, '');
 }
 
 
@@ -60,7 +60,7 @@ function bindSlug() {
 }
 
 
-route('*', function() 
+route('*', function()
 {
   hideFields();
   $(window).off('statechange');
@@ -140,7 +140,7 @@ route('*', function()
     $options.find('input').change(function() {
       var data = $options.getData();
       $.ajax({
-        url: location.protocol + '//' + location.hostname + 
+        url: location.protocol + '//' + location.hostname +
              location.pathname.slice(0, location.pathname.lastIndexOf('/')+1) + 'options',
         type: 'post',
         data: data,
@@ -150,7 +150,7 @@ route('*', function()
     });
   }
 
-  
+
   $('#tag-add').keypress(function(e)
   {
     // if Enter pressed disallow it and run add func
@@ -173,7 +173,7 @@ route('*', function()
       $.each(tagDefault.split(', '),function(t, item)
       {
         if(item.trim())
-          $('#tag-list').append( "<span><i class='fa fa-times'></i>"+item+"</span>" );   
+          $('#tag-list').append( "<span><i class='fa fa-times'></i>"+item+"</span>" );
       });
     }
 
@@ -185,7 +185,7 @@ route('*', function()
       {
         $(this).parent().addClass('hint--always');
       });
-    
+
   });
 
   $(".light-gallery", this).lightGallery();
@@ -219,7 +219,7 @@ function addTag()
       $('#sp-tags').val( $('#sp-tags').val() + newTag+', ' );
     }
   }
-  tag.val('');  
+  tag.val('');
 }
 
 function hideFields()
