@@ -1077,7 +1077,7 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
 .form.black{color:#fff;}
 .rtl .form {font-size:12px;font-size: 1.2rem;}
 .form > p {margin: 1em 0em;}
-.form .field {clear: both;margin: 0em 0em 1em;}
+.form .field {clear: both;margin: 0em 0em 1em;min-height: 30px;}
 .form.row .field[class*=span]{clear:none;}
 .form .field label {
   display: inline-block;

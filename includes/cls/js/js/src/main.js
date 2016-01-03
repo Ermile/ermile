@@ -156,13 +156,19 @@ route('*', function() {
       var el = $(this).parent();
       if(el.hasClass('closed'))
       {
-        el.removeClass('closed');
-        el.children('.panel-body').fadeIn();
+        el.children('.panel-footer').slideDown(200);
+        el.children('.panel-body').slideDown(300, function(){
+          el.removeClass('closed');
+        });
+        // el.children('.panel-body').fadeIn();
       }
       else
       {
-        el.addClass('closed');
-        el.children('.panel-body').hide();
+        el.children('.panel-footer').slideUp(300);
+        el.children('.panel-body').slideUp(500, function(){
+          el.addClass('closed');
+        });
+        // el.children('.panel-body').hide();
       }
     }
   );

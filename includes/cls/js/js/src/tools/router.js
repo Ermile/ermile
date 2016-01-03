@@ -65,9 +65,10 @@
   route_main = main;
 })();
 
-(function($) {
+(function($)
+{
   $.fn.sroute = function(url)
-
+  {
     var args = arguments;
     url = (url) ? url : location.pathname;
     url = (url.replace(/^\//,"")).replace(/\/$/, "");

@@ -516,7 +516,15 @@ body{
   position: relative;
   cursor: pointer;
   height: 30px;
+  float: left;
 }
+
+.rtl .checkbox:not(:checked) + label,
+.rtl .checkbox:checked + label {
+  float: right;
+}
+
+
 .checkbox:not(:checked) + label:before,
 .checkbox:checked + label:before,
 .checkbox:not(:checked) + label:after,
@@ -527,7 +535,7 @@ body{
 .checkbox:not(:checked) + label:before,
 .checkbox:checked + label:before {
   left:100%;
-  top: -3px;
+  top: 0;
   width: 65px; height: 30px;
   background: #eee;
   border-radius: 15px;
@@ -545,7 +553,7 @@ body{
   transition: all .2s;
   border-radius: 50%;
   background: #7F8C9A;
-  top: 2px; left: calc(100% + 5px);
+  top: 5px; left: calc(100% + 5px);
 }
 .rtl .checkbox:not(:checked) + label:after,
 .rtl .checkbox:checked + label:after {
@@ -560,7 +568,7 @@ right: calc(100% + 5px);
 }
 .checkbox:checked + label:after {
   background: #39D2B4;
-  top: 2px; left: calc(100% + 40px);
+  top: 5px; left: calc(100% + 40px);
 }
 
 .rtl .checkbox:checked + label:after {
@@ -579,6 +587,7 @@ right: calc(100% + 40px);
   font-weight: bold;
   line-height: 22px;
   transition: all .2s;
+  top: 2px;
 }
 
 .checkbox:checked + label>span:after {
@@ -614,4 +623,18 @@ right: calc(100% + 40px);
 #permissions .tags-list .fa{color:#aaa;padding:10px;line-height:1.7em;opacity:0;margin:0 -20px;}
 #permissions .tags-list span:hover a, #permissions .tags-list span:focus a{padding:10px 15px;}
 #permissions .tags-list span:hover .fa, #permissions .tags-list span:focus .fa{color:#b64645;opacity:1;margin:0}
+
+.sensetive .row{padding:0.15em 0;min-height:30px;transition:0.2s;border-radius:3px;}
+.rtl .row.auto > [class*="span"]{line-height:30px}
+.sensetive .row label{cursor:pointer;display:block}
+.sensetive .row:hover{background-color:#F9F9F9}
+.row.head{background-color:#eee}
+.row.head [class*="span"]{padding:1em 1em;}
+
+.span2 label span{padding:0 0.5em;}
+.permission-content .row{padding:2em;min-height:30px;transition:0.2s;border-radius:3px;}
+.permission-detail .row{opacity:0.6}
+.permission-detail:hover .row{opacity:0.7}
+.permission-detail .row:hover{opacity:1}
+
 
