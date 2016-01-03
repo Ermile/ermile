@@ -563,11 +563,11 @@ right: calc(100% + 5px);
 
 /* on checked */
 .checkbox:checked + label:before {
-  background:#34495E;
   background:#33414e;
+  background:#34A7C1;
 }
 .checkbox:checked + label:after {
-  background: #39D2B4;
+  background: #fff;
   top: 5px; left: calc(100% + 40px);
 }
 
@@ -593,7 +593,7 @@ right: calc(100% + 40px);
 .checkbox:checked + label>span:after {
   left: calc(100% + 10px);
   content: "ON";
-  color: #39D2B4;
+  color: #fff;
 }
 
 .rtl .checkbox:checked + label>span:after {
@@ -605,7 +605,7 @@ right: calc(100% + 40px);
 .checkbox:not(:checked) + label>span:before {
   left: calc(100% + 32px);
   content: "OFF";
-  color: #7F8C9A;
+  color: #999;
 }
 .rtl .checkbox:not(:checked) + label>span:before {
   right: calc(100% + 32px);
@@ -628,13 +628,19 @@ right: calc(100% + 40px);
 .rtl .row.auto > [class*="span"]{line-height:30px}
 .sensetive .row label{cursor:pointer;display:block}
 .sensetive .row:hover{background-color:#F9F9F9}
-.row.head{background-color:#eee}
-.row.head [class*="span"]{padding:1em 1em;}
+.row.head{background-color:#eee;margin-bottom:1em}
+.row.head [class*="span"]{padding:0.5em;}
+.row.head .span2{padding:0.5em 2em}
+.row.head .span1{text-align: center;}
 
 .span2 label span{padding:0 0.5em;}
 .permission-content .row{padding:2em;min-height:30px;transition:0.2s;border-radius:3px;}
-.permission-detail .row{opacity:0.6}
-.permission-detail:hover .row{opacity:0.7}
+.permission-detail .row{opacity:0.9}
+.rtl .permission-detail .row .span2:first-child{text-align:left;}
+.permission-detail .row .span1{opacity:0.8}
 .permission-detail .row:hover{opacity:1}
+
+.permission-detail .opacity5{opacity:0.5};
+.permission-detail .opacity7{opacity:0.7};
 
 

@@ -60,15 +60,24 @@ function bindSlug() {
 }
 
 
+checkPermissions();
+
+
 route('*', function()
 {
   hideFields();
   $(window).off('statechange');
-  $(window).on('statechange', function() {
+  $(window).on('statechange', function()
+  {
     // history.state.url.indexOf('posts');
     if(history.state && !history.state.replace) {
       // console.log('statechange');
       bindSlug();
+    }
+
+    if(location.pathname.match('/permissions/'))
+    {
+      checkPermissions();
     }
   });
   bindSlug();
@@ -222,6 +231,53 @@ function addTag()
   tag.val('');
 }
 
+
+/**
+ * this function check status of permissions and do good job!
+ */
+function checkPermissions()
+{
+  //show or hide detail box of each part of permissions
+  $('.permission-content .checkbox').change(function()
+  {
+    var contentName = $(this).attr('id');
+    var contentDetail = $("#"+contentName+"-detail");
+
+    if($(this).is(":checked"))
+    {
+      contentDetail.addClass('closed');
+      contentDetail.slideDown(300);
+    }
+    else
+    {
+      contentDetail.slideUp(500);
+    }
+  });
+
+
+  $(".permission-detail .checkbox").change(function()
+  {
+    var detailField = $(this).parents('.row').find('.checkbox').not("[name$='-all']");
+    var detailChecks = detailField.filter(':checked');
+
+    // if click on all checkbox change status of others
+    if($(this).is("[name$='-all']"))
+    {
+      detailField.prop('checked', $(this).prop("checked"));
+    }
+    // if user on or off 4th checkbox, do it for all check on this field
+    else if(detailChecks.length == 4)
+    {
+      $(this).parents('.row').find(".checkbox").filter("[name$='-all']").prop('checked', $(this).prop("checked"));
+    }
+    else
+    {
+      $(this).parents('.row').find(".checkbox").filter("[name$='-all']").prop('checked', false);
+    }
+  });
+}
+
+
 function hideFields()
 {
   $("input:checkbox", document).each(function()
@@ -231,8 +287,11 @@ function hideFields()
       $("."+$(this).val()).addClass('disappear');
     }
   }
-  );}
-function cat_selected(){
+);}
+
+
+function cat_selected()
+{
   $('.cats input:checkbox:checked').each(function()
   {
     // console.log($('#cat').val());
@@ -270,3 +329,4 @@ function cat_selected(){
     }
   });
 }
+
