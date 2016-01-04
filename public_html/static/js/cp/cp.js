@@ -245,7 +245,7 @@ function checkPermissions()
 
     if($(this).is(":checked"))
     {
-      contentDetail.addClass('closed');
+      contentDetail.removeClass('closed');
       contentDetail.slideDown(300);
     }
     else
@@ -275,6 +275,50 @@ function checkPermissions()
       $(this).parents('.row').find(".checkbox").filter("[name$='-all']").prop('checked', false);
     }
   });
+
+  // on click each title select or deselect all of this column
+  $(".permission-detail .head div").click(function()
+  {
+    var mySelection;
+    if($(this).hasClass('allAll'))
+    {
+      mySelection = 'all';
+    }
+    else if($(this).hasClass('allSelect'))
+    {
+      mySelection = 'select';
+    }
+    else if($(this).hasClass('allAdd'))
+    {
+      mySelection = 'add';
+    }
+    else if($(this).hasClass('allEdit'))
+    {
+      mySelection = 'edit';
+    }
+    else if($(this).hasClass('allDelete'))
+    {
+      mySelection = 'delete';
+    }
+    var detailField = $(this).parents('form').find('.checkbox').filter("[name$='-" + mySelection + "']");
+    var detailChecks = detailField.filter(':checked');
+
+    if(detailField.length == detailChecks.length)
+    {
+      detailField.prop('checked', false).change();
+    }
+    else
+    {
+      detailField.prop('checked', true).change();
+    }
+
+
+    // if(detailChecks.length)
+
+
+
+  });
+
 }
 
 
