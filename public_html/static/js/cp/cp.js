@@ -272,6 +272,10 @@ function checkPermissions()
     }
     else
     {
+      if(!$(this).is("[name$='-select']") && $(this).prop('checked') )
+      {
+          $(this).parents('.row').find(".checkbox").filter("[name$='-select']").prop('checked', true);
+      }
       $(this).parents('.row').find(".checkbox").filter("[name$='-all']").prop('checked', false);
     }
   });
