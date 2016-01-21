@@ -266,15 +266,15 @@ function checkPermissions()
       detailField.prop('checked', $(this).prop("checked"));
     }
     // if user on or off 4th checkbox, do it for all check on this field
-    else if(detailChecks.length == 4)
+    else if(detailChecks.length == $(this).parents('.row').find('.checkbox').length - 1)
     {
       $(this).parents('.row').find(".checkbox").filter("[name$='-all']").prop('checked', $(this).prop("checked"));
     }
     else
     {
-      if(!$(this).is("[name$='-select']") && $(this).prop('checked') )
+      if(!$(this).is("[name$='-view']") && $(this).prop('checked') )
       {
-          $(this).parents('.row').find(".checkbox").filter("[name$='-select']").prop('checked', true);
+          $(this).parents('.row').find(".checkbox").filter("[name$='-view']").prop('checked', true);
       }
       $(this).parents('.row').find(".checkbox").filter("[name$='-all']").prop('checked', false);
     }
@@ -288,9 +288,9 @@ function checkPermissions()
     {
       mySelection = 'all';
     }
-    else if($(this).hasClass('allSelect'))
+    else if($(this).hasClass('allView'))
     {
-      mySelection = 'select';
+      mySelection = 'view';
     }
     else if($(this).hasClass('allAdd'))
     {
@@ -304,7 +304,11 @@ function checkPermissions()
     {
       mySelection = 'delete';
     }
-    var detailField = $(this).parents('form').find('.checkbox').filter("[name$='-" + mySelection + "']");
+    else if($(this).hasClass('allAdmin'))
+    {
+      mySelection = 'admin';
+    }
+    var detailField = $(this).parents('.panel-body').find('.checkbox').filter("[name$='-" + mySelection + "']");
     var detailChecks = detailField.filter(':checked');
 
     if(detailField.length == detailChecks.length)
