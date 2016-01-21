@@ -254,31 +254,44 @@ function checkPermissions()
     }
   });
 
-
-  $(".permission-detail .checkbox").change(function()
+  $(".permission-detail [class$='-all']").click(function()
   {
-    var detailField = $(this).parents('.row').find('.checkbox').not("[name$='-all']");
-    var detailChecks = detailField.filter(':checked');
-
-    // if click on all checkbox change status of others
-    if($(this).is("[name$='-all']"))
+    var detailField  = $(this).parents('.row').find('.checkbox');
+    var detailChecks = detailField.filter(':checked').length;
+    if(detailField.length == detailChecks)
     {
-      detailField.prop('checked', $(this).prop("checked"));
-    }
-    // if user on or off 4th checkbox, do it for all check on this field
-    else if(detailChecks.length == $(this).parents('.row').find('.checkbox').length - 1)
-    {
-      $(this).parents('.row').find(".checkbox").filter("[name$='-all']").prop('checked', $(this).prop("checked"));
+      detailField.prop('checked', false);
     }
     else
     {
-      if(!$(this).is("[name$='-view']") && $(this).prop('checked') )
-      {
-          $(this).parents('.row').find(".checkbox").filter("[name$='-view']").prop('checked', true);
-      }
-      $(this).parents('.row').find(".checkbox").filter("[name$='-all']").prop('checked', false);
+      detailField.prop('checked', true);
     }
   });
+
+  // $(".permission-detail [class$='-all']").change(function()
+  // {
+  //   var detailField  = $(this).parents('.row').find('.checkbox').not("[name$='-all']");
+  //   var detailChecks = detailField.filter(':checked');
+
+  //   // if click on all checkbox change status of others
+  //   if($(this).is("[name$='-all']"))
+  //   {
+  //     detailField.prop('checked', $(this).prop("checked"));
+  //   }
+  //   // if user on or off 4th checkbox, do it for all check on this field
+  //   else if(detailChecks.length == $(this).parents('.row').find('.checkbox').length - 1)
+  //   {
+  //     $(this).parents('.row').find(".checkbox").filter("[name$='-all']").prop('checked', $(this).prop("checked"));
+  //   }
+  //   else
+  //   {
+  //     if(!$(this).is("[name$='-view']") && $(this).prop('checked') )
+  //     {
+  //         $(this).parents('.row').find(".checkbox").filter("[name$='-view']").prop('checked', true);
+  //     }
+  //     $(this).parents('.row').find(".checkbox").filter("[name$='-all']").prop('checked', false);
+  //   }
+  // });
 
   // on click each title select or deselect all of this column
   $(".permission-detail .head div").click(function()
@@ -309,6 +322,10 @@ function checkPermissions()
       mySelection = 'admin';
     }
     var detailField = $(this).parents('.panel-body').find('.checkbox').filter("[name$='-" + mySelection + "']");
+    if($(this).hasClass('allAll'))
+    {
+      var detailField = $(this).parents('.panel-body').find('.checkbox');
+    }
     var detailChecks = detailField.filter(':checked');
 
     if(detailField.length == detailChecks.length)
@@ -319,14 +336,7 @@ function checkPermissions()
     {
       detailField.prop('checked', true).change();
     }
-
-
-    // if(detailChecks.length)
-
-
-
   });
-
 }
 
 
