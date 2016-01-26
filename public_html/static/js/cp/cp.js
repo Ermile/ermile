@@ -69,6 +69,7 @@ route('*', function()
   $(window).off('statechange');
   $(window).on('statechange', function()
   {
+    checkLocation();
     // history.state.url.indexOf('posts');
     if(history.state && !history.state.replace) {
       // console.log('statechange');
@@ -391,4 +392,31 @@ function cat_selected()
     }
   });
 }
+
+/**
+ * check current location and highligh it
+ */
+function checkLocation()
+{
+  var CURRENTPATH = (location.pathname).replace(/^\/+/, '');
+  var currentModule = CURRENTPATH;
+
+  if(CURRENTPATH.indexOf('/') > -1)
+  {
+    currentModule = CURRENTPATH.substring(0, CURRENTPATH.indexOf('/'));
+  }
+  $('#page-sidebar a').removeClass('active');
+
+  $('#page-sidebar .sidebar-items a').each(function()
+  {
+    var myHref    = $(this).attr('href');
+    myHref        = myHref.substring(myHref.lastIndexOf('/')+1);
+
+    if(myHref == currentModule)
+    {
+      $(this).addClass('active');
+    }
+  });
+}
+checkLocation();
 

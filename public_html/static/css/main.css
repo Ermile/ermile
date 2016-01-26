@@ -71,7 +71,7 @@ html{
   text-rendering: optimizeLegibility;-webkit-font-smoothing: antialiased;
   height:100%;
 }
-body {overflow-x:hidden;position:relative;margin: 0;direction:ltr;font-family: "Roboto Slab", "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;}
+body {overflow-x:hidden;position:relative;margin: 0;direction:ltr;font-family: "Roboto Slab", "Open sans", "Segoe UI", "Segoe WP", Helvetica, sans-serif;}
 body.rtl{font-family:'IRANSans',sans-serif;direction:rtl;}
 ::-webkit-scrollbar {width: 1em;}
 ::-webkit-scrollbar-track {background-color:#e8e8e8;}
@@ -126,7 +126,7 @@ svg:not(:root){overflow:hidden;}
 /* Grouping content
    ========================================================================== */
 figure{margin:1em 40px;}
-hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;overflow: visible;}
 pre{direction:ltr;text-align:left;background:#eee;color: #000;font-size:15px;font-size:1.5em;line-height:1.6;margin:1em auto;padding:1.6em;overflow:auto;max-width:90%;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
 code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em;margin: 10px 5%;}
 abbr, acronym{border-bottom:0.1em dotted;cursor:help;}

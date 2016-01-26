@@ -27,6 +27,7 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 #page-sidespace{width:15%;float:left;min-height:100%;}
 .rtl #page-sidespace{float:right;}
 .sidebar-items a:hover .fa-cog{  -webkit-animation: fa-spin 2s infinite linear;animation: fa-spin 2s infinite linear;}
+#page-sidebar .active{color:#fff;background:rgba(0,0,0,0.3)}
 
 #page-content{float:left;width:85%;background-color:#f5f5f5;color:#fff;min-height:100%;position:relative;padding-bottom:50px;}
 .rtl #page-content{float:right}
