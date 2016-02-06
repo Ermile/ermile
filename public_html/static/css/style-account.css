@@ -1,6 +1,10 @@
 @import url("intlTelInput.css");
 
 
+::-webkit-scrollbar {width: 1em;}
+::-webkit-scrollbar-track {background-color:#e8e8e8;}
+::-webkit-scrollbar-thumb {background-color: #aaa;}
+
 body {background-color: #34383d;color:#4f5561;}
 a{color:#6f7787;text-decoration:none;outline:none;}
 .center{position: relative;min-width:280px;max-width:350px;margin: 0 auto;margin-bottom: 80px;}
@@ -78,6 +82,14 @@ form input.invalid {color: #5E3B3B;}
 .loading-page .svgperload path:nth-child(5){-webkit-animation-delay:-.2s;animation-delay:-.2s}
 
 .loading-form .svgperload circle{opacity:0.5;-webkit-animation:fadeit 0.5s ease infinite;animation:fadeit 0.5s ease infinite}
+
+
+#footer{position:fixed; bottom: 0;width:100%;z-index:2;background-color: rgba(0, 0, 0, 0.1);padding:15px 10%;font-size:1.5em;}
+#footer #languages{float: right;color:#888;}
+#footer #langlist{opacity:0.7;min-width:100px;font-family:sans-serif;height:30px;padding:0 10px;direction:ltr;padding:3px 5px;font-size:1em;border:0;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
+.rtl #footer #languages{float: left;}
+#footer #langlist:hover{opacity:1;}
+
 
 
 @-webkit-keyframes fadeit{0%{ opacity:1; }100%{ opacity:0.1;}}
