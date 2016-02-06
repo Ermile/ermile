@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.2.4
+Version: 7.2.6
 */
 @charset "utf-8";
 /*! IRAN Sans-Serif 4.0 by Moslem Ebrahimi - http://fontiran.com */
@@ -23,7 +23,7 @@ audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
 audio:not([controls]){display: none;height: 0;}
 [hidden],template{display: none;}
 /* Links ========================================================================== */
-a{background:transparent;text-decoration:none;transition: all .2s ease-in-out;-webkit-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;-moz-transition: all .2s ease-in-out;color:#54B4EF;}
+a{background:transparent;text-decoration:none;color:#54B4EF;}
 a:active,a:hover{outline:0;color:#0E97EA;}
 a:focus{outline:0;color:#0E77EA;}
 a.note{border-bottom:3px solid #323232;padding:0px 4px 1px 4px;}
@@ -139,7 +139,7 @@ blockquote{color:#59666f;font-style:italic;padding:10px}
 .ltr{direction: ltr}
 .rtl{direction: rtl}
 /* Base Elements */
-.container{position:relative;margin:0 auto;padding:0;max-width:1024px;min-width:959px;width:90%;/*Animation Property*/animation-property:width;animation-property:height;transition-duration:1s;-webkit-animation-property:width;-webkit-animation-property:height;-webkit-transition-duration:2s;-moz-animation-property:width;-moz-animation-property:height;-moz-transition-duration:2s;-o-animation-property:width;-o-animation-property:height;-o-transition-duration:2s;}
+.container{position:relative;margin:0 auto;padding:0;max-width:1024px;min-width:920px;width:90%;}
 .container:after{content:"\0020";display:block;height:0;clear:both;visibility:hidden}.clearfix:before,.clearfix:after{content:'\0020';display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:after{clear:both}.clearfix{zoom:1}.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}img.scale-with-grid{max-width:100%;height:auto}
 .unselectable{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;}
 /* Utility ========================================================================== */
@@ -401,46 +401,56 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none}
 .form.autostyle .button{width:75%;margin-left:20%;margin-right:5%;}
 .rtl .form.autostyle .button{width:70%;margin-left:10%;margin-right:20%;}
 
-/* Responsie Style
-   ========================================================================== */
-.hidden-desktop{display:none;}.hidden-tablet{display:inherit;}.hidden-phone{display:inherit;}.visible-desktop{display:inherit;}.visible-tablet{display:none;}.visible-phone{display:none;}
-/* #Large Desktop ======================================== Design for a width of 1400 */
-@media screen and (min-width: 1400px){
-  html{font-size:70%;}
-  .container{max-width:1080px;min-width:1000px;}
+/* Responsie Style ========================================================================== */
+.hidden-desktop{display:none;} .hidden-tablet{display:inherit;} .hidden-phone{display:inherit;} .visible-desktop{display:inherit;} .visible-tablet{display:none;} .visible-phone{display:none;}
+
+/* #Large Screens ======================================== Design for a width more than 1824 */
+@media only screen and (min-width : 1824px) {
+  html{font-size:80%;}
+  .container{max-width:1400px;min-width:1250px;}
 }
 
-/* #Tablet (Portrait) =================================== Design for a width of 768px */
-@media only screen and (min-width: 768px) and (max-width: 959px){
+/* #Large Desktop ======================================== Design for a width of 1400 until 1823px*/
+@media screen and (min-width: 1400px) and (max-width : 1823px){
+  html{font-size:70%;}
+  .container{max-width:1280px;min-width:1024px;}
+}
+
+/* #Tablet (Portrait) =================================== Design for a width of 768px until 959px */
+@media only screen and (min-width:768px) and (max-width:959px) {
   .hidden-desktop{display:inherit;}.hidden-tablet{display:none;}.hidden-phone{display:inherit;}.visible-desktop{display:none;}.visible-tablet{display:inherit;}.visible-phone{display:none;}
   html{font-size: 60%;}
-  .container{max-width:959px;min-width:720px;}
+  .container{max-width:940px;min-width:710px;}
 }
 
-/* #Mobile (Landscape) =================================== Design for a width of 480px*/
-@media only screen and (min-width: 480px) and (max-width: 767px){
+/* #Mobile (Landscape) =================================== Design for a width 480px until 767px*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   .hidden-desktop{display:inherit;}.hidden-tablet{display:inherit;}.hidden-phone{display:none;}.visible-desktop{display:none;}.visible-tablet{display:none;}.visible-phone{display:inherit;}
   .row .row{margin:0}
   .row > [class*=span],.row .row > [class*=span]{width:100%!important;margin:0 0 5px!important}
   .row > [class*=span]:nth-child(even),.row .row > [class*=span]:nth-child(even){margin-right:0!important}
   .row > .span12,.row .row .span12{width:100%!important}
   html{font-size: 50%;}
-  .container{max-width:767px;min-width:480px;}
+  .container{max-width:750px;min-width:450px;}
   #footer{position:relative;}
   #formError{bottom:10px;}
 }
 
-/* #Mobile (Portrait) ================================== Design for a width of 320px */
-@media only screen and (max-width: 480px){
+
+/* #Mobile (Portrait) ================================== Design for a width until 479px */
+@media only screen and (max-width: 479px){
   .hidden-desktop{display:inherit;}.hidden-tablet{display:inherit;}.hidden-phone{display:none;}.visible-desktop{display:none;}.visible-tablet{display:none;}.visible-phone{display:inherit;}
   .row .row{margin:0}
   .row > [class*=span],.row .row > [class*=span]{width:100%!important;margin:0 0 5px!important}
   .row > [class*=span]:nth-child(even),.row .row > [class*=span]:nth-child(even){margin-right:0!important}
   .row > .span12,.row .row .span12{width:100%!important}
   html{font-size: 50%;}
-  .container{max-width:480px;min-width:290px;}
+  .container{max-width:470px;min-width:290px;}
   #formError{bottom:10px;width:100%;}
   [data-hint].hint--left:after,[data-hint].hint--left:before,[data-hint].hint--right:after,[data-hint].hint--right:before{display:none;}
+}
+@media only screen and (max-width: 320px) {
+  .container{max-width:96%;min-width:60%;}
 }
 
 /* #IE 9 and 10 ===================================================== Design for IE! */
