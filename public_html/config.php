@@ -18,7 +18,7 @@
 /**
  * For developers: debugging mode.
  * Default: False
- * 
+ *
  * Change this to true to enable the display of notices during development.
  * It is strongly recommended that in developement condition use DEBUG in the development environments.
  */
@@ -27,7 +27,7 @@ define('DEBUG', true);
 /**
  * For developers: Show comming soon page.
  * Default: false
- * 
+ *
  * If you are developing this site enable option to redirect all request to /static/page/coming/
  * for see and work with site you can set with this address: YourSite.com?dev=yes
  * if your site is now ready for show to visitors, turn this option off
@@ -37,7 +37,7 @@ define('CommingSoon', true);
 /**
  * Multilanguage
  * Default: false
- * 
+ *
  * If your site support multi language enable with this option.
  * You can use T_() function to translate via dll and if not exist with php gettext.
  * also you can use __() and _() functions.
@@ -48,10 +48,10 @@ define('MultiLanguage', true);
 /**
  * Defaultlanguage
  * Default: 'en_US'
- * 
+ *
  * If your site support multi language then you can fix default language for visitors
  */
-define('DefaultLanguage', 'fa_IR');
+define('DefaultLanguage', 'en_US');
 
 /**
  * SaveAsCookie

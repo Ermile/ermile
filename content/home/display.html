@@ -1,63 +1,21 @@
 {%extends display.mvc%}
 {%block body%}
 
+<nav>
+  <a href="/about" title="">{%trans "About"%}</a>
+  <a href="/mission" title="">{%trans "Mission"%}</a>
+  <a href="/vision" title="">{%trans "Vision"%}</a>
+</nav>
 
- <section class="center">
+<header>
+  <img id="logo" src="{{url.static}}images/ermile.png" alt="">
+  <h1>{{site.title}}</h1>
+  <h2>{{site.desc}}</h2>
+</header>
 
- <header>{%spaceless%}
-  
-   <svg id='logo' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 310.667 368" xml:space="preserve" class="svgperload" width="240" height="300">
-     
-     <path fill="#eee" d="M140.25,238.229c-8.257,0.86-7.333,5.021-0.875,6.771c18.232,8.233,35.292,25.032,34.125,55.25c23-7.333,57-1.583,76,2.75C235.125,274.25,198.75,229.25,140.25,238.229z"/>
-     <path fill="#eee" d="M279.25,153.625c-23.125,21.25-40,76.5-36.75,93.259c-40.625-24.009-85.375-23.509-116.375-15.572c-7.75,2.188-9.678-2.581-1-8.813C177.375,180.125,251.948,152.795,279.25,153.625z"/>
-     <path fill="#eee" d="M188.75,61.75c13.064,18.443,50,51.75,100,64c-87.25,19-177.319,88.015-198.319,115.265c-8.494,10.61-21.244,12.923-19.306,1.798C78,196.75,139.25,105.25,188.75,61.75z"/>
-     <path fill="#eee" d="M40.083,35c20,5.25,81.417,18,151.854-3.563C141.75,85,51.415,198,59.457,276.611c0.918,10.202-5.894,15.389-10.582,7.014C18.75,230.25,22.5,94.5,40.083,35z"/>
-   </svg>
-
-  <div id="button">
-{%if global.login%}
-   <a data-action href="logout" id="btn" class="on" title='{%trans "logout form all service"%}'><i class="fa fa-power-off"></i></a>
-{%else%}
-   <a href="login" id="btn" title='{%trans "login to all service"%}' data-action><i class="fa fa-power-off"></i></a>
-{%endif%}
-   <span></span>
-  </div>
-  
- </header>{%endspaceless%}
-
-
-
-
-
-
-
-
-  <h1>{%trans "One account for all service"%}</h1>
-  <div id='desc'>
-   <p>{%trans "now only"%} <a href="http://talambar.{{url.tld}}" title='{%trans "secure online storage"%}'>{%trans "Talambar"%} </a>{%trans "is ready to use at alfa version."%}</p>
-   <p>{%trans%}our new service is comming soon.{%endtrans%}</p>
-  </div>
- </section>
-
-
-
-<footer id="footer">
-  <div id="copyright">
-   <div class='hint--right' data-hint='{%trans "Ermile is our brand"%}'>
-    <span>&copy; {{'now'|date('Y')}}</span>
-    <a href="{{url.root}}" title="{{site.desc}}" tabindex="-1">{{site.title}}</a>
-   </div>
-
-   <div id='languages' class='hint--left' data-hint='{%trans "Experience our service in your language"%}'>
-    <select id="langlist">
-   {{global.lang}}
-{%for key, value in saloos.langlist%}{%if key == global.lang%}
-     <option value="{{key}}" selected="selected">{{value}}</option>
-{%else%}
-     <option value="{{key}}">{{value}}</option>
-{%endif%}{% endfor %}
-    </select>
-   </div>
+<footer>
+  <div class="container">
+    <span>&copy; {{'now'|date('Y')}}</span> <a href="{{url.root}}" title="{{site.desc}}" tabindex="-1">{{site.title}}</a>
   </div>
 </footer>
 
