@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.2.8
+Version: 7.2.9
 */
 @charset "utf-8";
 /* IRAN Sans-Serif 4.0 */
@@ -14,8 +14,8 @@ Version: 7.2.8
 @font-face{font-family:IRANSans;font-style:normal;font-weight:400;src:url(../fonts/IRANSans/eot/IRANSansWeb.eot);src:url(../fonts/IRANSans/eot/IRANSansWeb.eot?#iefix) format("embedded-opentype"),url(../fonts/IRANSans/woff2/IRANSansWeb.woff2) format("woff2"),url(../fonts/IRANSans/woff/IRANSansWeb.woff) format("woff"),url(../fonts/IRANSans/ttf/IRANSansWeb.ttf) format("truetype")}
 /* CSS Reset and ermile common styles */
 *, *:before, *:after{margin:0;padding:0;outline:none !important;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
-html{font-size:62.5%;font-family:serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust: 100%;text-rendering: optimizeLegibility;-webkit-font-smoothing: antialiased;height:100%;}
-body{overflow-x:hidden;position:relative;margin:0;direction:ltr;font-family:IRANSans, "Roboto Slab", "Open sans", "Segoe UI", Helvetica, sans-serif;}
+html{font-size:62.5%;min-height:100%;font-family:IRANSans, "Roboto Slab", "Open sans", "Segoe UI", Helvetica, sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust: 100%;text-rendering: optimizeLegibility;-webkit-font-smoothing: antialiased;}
+body{overflow-x:hidden;margin:0;direction:ltr;}
 body.rtl{direction:rtl;}
 /* HTML5 display definitions ========================================================================= */
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
