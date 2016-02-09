@@ -7,7 +7,7 @@ class papers
 	public $paper_number  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'number'          ,'type'=>'varchar@20'];
 	public $paper_date    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'date'            ,'type'=>'datetime@'];
 	public $paper_price   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'price'           ,'type'=>'decimal@13,4'];
-	public $bank_id       = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'bank'            ,'type'=>'smallint@5'                      ,'foreign'=>'banks@id!bank_title'];
+	public $bank_id       = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'bank'            ,'type'=>'smallint@5'                      ,'foreign'=>'banks@id!id'];
 	public $paper_holder  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'holder'          ,'type'=>'varchar@100'];
 	public $paper_desc    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'desc'            ,'type'=>'varchar@200'];
 	public $paper_status  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'enum@pass,recovery,fail,lost,block,delete,inprogress'];

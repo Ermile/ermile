@@ -4,7 +4,7 @@ class transactiondetails
 {
 	public $transactiondetail_row      = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'row'             ,'type'=>'smallint@5'];
 	public $transaction_id             = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'transaction'     ,'type'=>'bigint@20'                       ,'foreign'=>'transactions@id!id'];
-	public $product_id                 = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'product'         ,'type'=>'int@10'                          ,'foreign'=>'products@id!product_title'];
+	public $product_id                 = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'product'         ,'type'=>'int@10'                          ,'foreign'=>'products@id!id'];
 	public $transactiondetail_quantity = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'quantity'        ,'type'=>'int@10'];
 	public $transactiondetail_price    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'price'           ,'type'=>'decimal@13,4'];
 	public $transactiondetail_discount = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'discount'        ,'type'=>'decimal@13,4'];

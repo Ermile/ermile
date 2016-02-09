@@ -11,6 +11,7 @@ class users
 	public $user_permission  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'permission'      ,'type'=>'smallint@5'];
 	public $user_createdate  = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'createdate'      ,'type'=>'datetime@'];
 	public $date_modified    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
+	public $permission_id    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'permission'      ,'type'=>'smallint@5'                      ,'foreign'=>'permissions@id!id'];
 
 	//--------------------------------------------------------------------------------id
 	public function id(){}
@@ -25,10 +26,7 @@ class users
 		$this->form('#email')->type('email')->name('email')->maxlength('50');
 	}
 
-	public function user_pass()
-	{
-		$this->form('#pass')->type('password')->name('pass')->maxlength('64')->required();
-	}
+	public function user_pass(){}
 
 	public function user_displayname()
 	{
@@ -52,5 +50,11 @@ class users
 	}
 
 	public function date_modified(){}
+	//--------------------------------------------------------------------------------foreign
+	public function permission_id()
+	{
+		$this->form()->type('select')->name('permission_');
+		$this->setChild();
+	}
 }
 ?>

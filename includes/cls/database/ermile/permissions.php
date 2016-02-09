@@ -2,64 +2,39 @@
 namespace database\ermile;
 class permissions 
 {
-	public $id                = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',                        );
-	public $permission_title  = array('null' =>'NO',  'show' =>'YES', 'label'=>'title',         'type' => 'varchar@50',                        );
-	public $Permission_module = array('null' =>'NO',  'show' =>'YES', 'label'=>'module',        'type' => 'varchar@50',                        );
-	public $permission_view   = array('null' =>'NO',  'show' =>'YES', 'label'=>'view',          'type' => 'enum@yes,no!yes',                   );
-	public $permission_add    = array('null' =>'NO',  'show' =>'YES', 'label'=>'add',           'type' => 'enum@yes,no!no',                    );
-	public $permission_edit   = array('null' =>'NO',  'show' =>'YES', 'label'=>'edit',          'type' => 'enum@yes,no!no',                    );
-	public $permission_delete = array('null' =>'NO',  'show' =>'YES', 'label'=>'delete',        'type' => 'enum@yes,no!no',                    );
-	public $permission_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable', );
-	public $date_modified     = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                        );
+	public $id                = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'smallint@5'];
+	public $permission_title  = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'title'           ,'type'=>'varchar@50'];
+	public $permission_object = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'object'          ,'type'=>'varchar@100'];
+	public $permission_read   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'read'            ,'type'=>'bit@1'];
+	public $permission_add    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'add'             ,'type'=>'bit@1'];
+	public $permission_edit   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'edit'            ,'type'=>'bit@1'];
+	public $permission_delete = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'delete'          ,'type'=>'bit@1'];
+	public $permission_type   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'type'            ,'type'=>'varchar@50'];
 
+	//--------------------------------------------------------------------------------id
+	public function id(){}
 
-	//------------------------------------------------------------------ id
-	public function id() {$this->validate()->id();}
-
-	//------------------------------------------------------------------ title
-	public function permission_title() 
+	public function permission_title()
 	{
-		$this->form("#title")->maxlength(50)->required()->type('text');
-	}
-	public function Permission_module() 
-	{
-		$this->form("text")->name("module")->maxlength(50)->required()->type('text');
+		$this->form('#title')->type('text')->name('title')->maxlength('50')->required();
 	}
 
-	//------------------------------------------------------------------ radio button
-	public function permission_view() 
+	public function permission_object()
 	{
-		$this->form("radio")->name("view")->type("radio")->required();
-		$this->setChild();
+		$this->form()->type('text')->name('object')->maxlength('100')->required();
 	}
 
-	//------------------------------------------------------------------ radio button
-	public function permission_add() 
-	{
-		$this->form("radio")->name("add")->type("radio")->required();
-		$this->setChild();
-	}
+	public function permission_read(){}
 
-	//------------------------------------------------------------------ radio button
-	public function permission_edit() 
-	{
-		$this->form("radio")->name("edit")->type("radio")->required();
-		$this->setChild();
-	}
+	public function permission_add(){}
 
-	//------------------------------------------------------------------ radio button
-	public function permission_delete() 
-	{
-		$this->form("radio")->name("delete")->type("radio")->required();
-		$this->setChild();
-	}
+	public function permission_edit(){}
 
-	//------------------------------------------------------------------ radio button
-	public function permission_status() 
+	public function permission_delete(){}
+
+	public function permission_type()
 	{
-		$this->form("radio")->name("status")->type("radio")->required();
-		$this->setChild();
+		$this->form()->type('text')->name('type')->maxlength('50');
 	}
-	public function date_modified() {}
 }
 ?>

@@ -5,7 +5,7 @@ class accounts
 	public $id                     = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'smallint@5'];
 	public $account_title          = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'title'           ,'type'=>'varchar@50'];
 	public $account_slug           = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'slug'            ,'type'=>'varchar@50'];
-	public $bank_id                = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'bank'            ,'type'=>'smallint@5'                      ,'foreign'=>'banks@id!bank_title'];
+	public $bank_id                = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'bank'            ,'type'=>'smallint@5'                      ,'foreign'=>'banks@id!id'];
 	public $account_branch         = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'branch'          ,'type'=>'varchar@50'];
 	public $account_number         = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'number'          ,'type'=>'varchar@50'];
 	public $account_card           = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'card'            ,'type'=>'varchar@30'];

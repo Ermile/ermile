@@ -12,11 +12,11 @@ class receipts
 	public $receipt_paperstatus = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'paperstatus'     ,'type'=>'enum@pass,recovery,fail,lost,block,delete,inprogress'];
 	public $receipt_desc        = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'desc'            ,'type'=>'varchar@200'];
 	public $transaction_id      = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'transaction'     ,'type'=>'bigint@20'                       ,'foreign'=>'transactions@id!id'];
-	public $fund_id             = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'fund'            ,'type'=>'smallint@5'                      ,'foreign'=>'funds@id!fund_title'];
+	public $fund_id             = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'fund'            ,'type'=>'smallint@5'                      ,'foreign'=>'funds@id!id'];
 	public $user_id             = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'user'            ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_displayname'];
 	public $user_idcustomer     = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'user customer'   ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_custome_displayname'];
 	public $date_modified       = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
-	public $account_id          = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'account'         ,'type'=>'smallint@5'                      ,'foreign'=>'accounts@id!account_title'];
+	public $account_id          = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'account'         ,'type'=>'smallint@5'                      ,'foreign'=>'accounts@id!id'];
 
 	//--------------------------------------------------------------------------------id
 	public function id(){}

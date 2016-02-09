@@ -12,6 +12,7 @@ class terms
 	public $term_parent   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'parent'          ,'type'=>'int@10'                          ,'foreign'=>'terms@id!term_title'];
 	public $term_count    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'count'           ,'type'=>'smallint@5'];
 	public $term_status   = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'enum@enable,disable,expire!enable'];
+	public $user_id       = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'user'            ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_displayname'];
 	public $date_modified = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
 
 	//--------------------------------------------------------------------------------id
@@ -61,6 +62,12 @@ class terms
 	public function term_status()
 	{
 		$this->form()->type('radio')->name('status')->required();
+		$this->setChild();
+	}
+	//--------------------------------------------------------------------------------foreign
+	public function user_id()
+	{
+		$this->form()->type('select')->name('user_');
 		$this->setChild();
 	}
 

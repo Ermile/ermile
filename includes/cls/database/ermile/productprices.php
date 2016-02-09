@@ -3,8 +3,8 @@ namespace database\ermile;
 class productprices 
 {
 	public $id                     = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'bigint@20'];
-	public $product_id             = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'product'         ,'type'=>'int@10'                          ,'foreign'=>'products@id!product_title'];
-	public $productmeta_id         = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'productmeta'     ,'type'=>'int@10'                          ,'foreign'=>'productmetas@id!productmeta_title'];
+	public $product_id             = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'product'         ,'type'=>'int@10'                          ,'foreign'=>'products@id!id'];
+	public $productmeta_id         = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'productmeta'     ,'type'=>'int@10'                          ,'foreign'=>'productmetas@id!id'];
 	public $productprice_cat       = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'cat'             ,'type'=>'varchar@50'];
 	public $productprice_startdate = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'startdate'       ,'type'=>'datetime@'];
 	public $productprice_enddate   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'enddate'         ,'type'=>'datetime@'];

@@ -4,7 +4,7 @@ class errorlogs
 {
 	public $id            = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'int@10'];
 	public $user_id       = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'user'            ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_displayname'];
-	public $errorlog_id   = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'errorlog'        ,'type'=>'smallint@5'                      ,'foreign'=>'errorlogs@id!errorlog_title'];
+	public $errorlog_id   = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'errorlog'        ,'type'=>'smallint@5'];
 	public $date_modified = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
 
 	//--------------------------------------------------------------------------------id

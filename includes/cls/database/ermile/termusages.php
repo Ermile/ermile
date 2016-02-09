@@ -2,10 +2,10 @@
 namespace database\ermile;
 class termusages 
 {
-	public $term_id         = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'term'            ,'type'=>'int@10'                          ,'foreign'=>'terms@id!term_title'];
-	public $object_id       = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'object'          ,'type'=>'bigint@20'                       ,'foreign'=>'objects@id!object_title'];
-	public $termusage_type  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'type'            ,'type'=>'enum@posts,products,attachments,comments'];
-	public $termusage_order = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'order'           ,'type'=>'smallint@5'];
+	public $term_id           = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'term'            ,'type'=>'int@10'                          ,'foreign'=>'terms@id!term_title'];
+	public $termusage_id      = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'termusage'       ,'type'=>'bigint@20'];
+	public $termusage_foreign = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'foreign'         ,'type'=>'enum@posts,products,attachments,comments'];
+	public $termusage_order   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'order'           ,'type'=>'smallint@5'];
 
 	//--------------------------------------------------------------------------------foreign
 	public function term_id()
@@ -14,15 +14,15 @@ class termusages
 		$this->setChild();
 	}
 	//--------------------------------------------------------------------------------foreign
-	public function object_id()
+	public function termusage_id()
 	{
-		$this->form()->type('select')->name('object_')->required();
+		$this->form()->type('select')->name('termusage_')->required();
 		$this->setChild();
 	}
 
-	public function termusage_type()
+	public function termusage_foreign()
 	{
-		$this->form()->type('radio')->name('type');
+		$this->form()->type('radio')->name('foreign');
 		$this->setChild();
 	}
 

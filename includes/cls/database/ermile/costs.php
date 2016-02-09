@@ -5,8 +5,8 @@ class costs
 	public $id            = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'int@10'];
 	public $cost_title    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'title'           ,'type'=>'varchar@50'];
 	public $cost_price    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'price'           ,'type'=>'decimal@13,4'];
-	public $costcat_id    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'costcat'         ,'type'=>'smallint@5'                      ,'foreign'=>'costcats@id!costcat_title'];
-	public $account_id    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'account'         ,'type'=>'smallint@5'                      ,'foreign'=>'accounts@id!account_title'];
+	public $costcat_id    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'costcat'         ,'type'=>'smallint@5'                      ,'foreign'=>'costcats@id!id'];
+	public $account_id    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'account'         ,'type'=>'smallint@5'                      ,'foreign'=>'accounts@id!id'];
 	public $cost_date     = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'date'            ,'type'=>'datetime@'];
 	public $cost_desc     = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'desc'            ,'type'=>'varchar@200'];
 	public $cost_type     = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'type'            ,'type'=>'enum@income,outcome!outcome'];

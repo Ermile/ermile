@@ -140,6 +140,17 @@ function transtext()
 	echo T_("desc");                // paper_desc
 	echo T_("status");              // paper_status
 
+	// ------------------------------------------------------------ Table permissions
+	echo T_("permissions");         // Table permissions
+	echo T_("permission");          // permission
+	echo T_("title");               // permission_title
+	echo T_("object");              // permission_object
+	echo T_("read");                // permission_read
+	echo T_("add");                 // permission_add
+	echo T_("edit");                // permission_edit
+	echo T_("delete");              // permission_delete
+	echo T_("type");                // permission_type
+
 	// ------------------------------------------------------------ Table postmetas
 	echo T_("postmetas");           // Table postmetas
 	echo T_("postmeta");            // postmeta
@@ -271,8 +282,8 @@ function transtext()
 	echo T_("attachments");         // Enum attachments
 	echo T_("comments");            // Enum comments
 	echo T_("term");                // term_id
-	echo T_("object");              // object_id
-	echo T_("type");                // termusage_type
+	echo T_("termusage");           // termusage_id
+	echo T_("foreign");             // termusage_foreign
 	echo T_("order");               // termusage_order
 
 	// ------------------------------------------------------------ Table transactiondetails
@@ -338,6 +349,7 @@ function transtext()
 	echo T_("status");              // user_status
 	echo T_("permission");          // user_permission
 	echo T_("createdate");          // user_createdate
+	echo T_("permission");          // permission_id
 
 	// ------------------------------------------------------------ Table verifications
 	echo T_("verifications");       // Table verifications
