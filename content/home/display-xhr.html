@@ -1,15 +1,3 @@
-{%extends display.mvc%}
-
-{%block header%}
-<header>
- <img id="logo" src="{{url.static}}images/ermile.png" alt="">
- <h1>{{site.title}}</h1>
- <h2>{{site.desc}}</h2>
-</header>
-{%endblock%}
-
-
-{%block content%}
 <nav data-xhr='nav'>
 {%block nav%}
 {%if module !='home'%} <a href="/" title="Ermile Homepage">{%trans "Home"%}</a>{%endif%}
@@ -19,16 +7,7 @@
 {%endblock%}
 </nav>
 
+
 <article data-xhr='article'>
 {%block article%}{%endblock%}
 </article>
-{%endblock%}
-
-
-{%block footer%}
-<footer>
-  <div class="container">
-    <span>&copy; {{'now'|date('Y')}}</span> <a href="{{url.root}}" title="{{site.desc}}" class="roll-link"><span data-title="{{site.title}}">{{site.title}}</span></a>
-  </div>
-</footer>
-{%endblock%}

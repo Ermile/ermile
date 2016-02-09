@@ -1,21 +1,9 @@
 {%extends display.mvc%}
-{%block content%}
-  <section>
-    <div class="topic blue1">
-      <div class="row Slogan">
-        <h2>{{post.title}} Page</h2>
-      </div>
-      <div class="body">
-        <div class="row">
-          <div class="span7"></div>
-          <div class="span5">
-            <div class="desc">
-              {{post.content}}
-            </div>
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+{%block article%}
+ <h2>{{post.title}} Page</h2>
+ 
+ <div class="row">
+   {{post.content}}
+ </div>
 {%endblock%}
