@@ -29,11 +29,11 @@ class model extends \mvc\model
 				// Create Token and add to db for cross login ****************************************************
 				// you can change the code way easily at any time!
 				$mycode	= md5('^_^'.$tmp_result['id'].'_*Ermile*_'.date('Y-m-d H:i:s').'^_^');
-				$qry		= $this->sql()->tableUsermetas ()
+				$qry		= $this->sql()->table ('options')
 								->setUser_id                ($tmp_result['id'])
-								->setUsermeta_cat           ('cookie_token')
-								->setUsermeta_key          (ip2long($_SERVER['REMOTE_ADDR']))
-								->setUsermeta_value         ($mycode);
+								->setOption_cat           ('cookie_token')
+								->setOption_key          (ip2long($_SERVER['REMOTE_ADDR']))
+								->setOption_value         ($mycode);
 				$sql		= $qry->insert();
 
 				$_SESSION['ssid'] = $mycode;
@@ -52,13 +52,24 @@ class model extends \mvc\model
 					debug::true(T_("login successfully"));
 
 					if($myreferer=='jibres')
+					{
 						$this->redirector()->set_domain('jibres.'.$this->url('tld'))->set_url('?ssid='.$_code);
+					}
 
 					elseif($myreferer=='talambar')
+					{
 						$this->redirector()->set_domain('talambar.'.$this->url('tld'))->set_url('?ssid='.$_code);
+					}
 
-					else
+					elseif($myreferer)
+					{
 						$this->redirector()->set_domain($myreferer.MainTld)->set_url('?ssid='.$_code);
+					}
+					else
+					{
+						// $this->redirector()->set_domain()->set_url('?ssid='.$_code);
+						$this->redirector()->set_domain()->set_url();
+					}
 
 				}, $mycode);
 
