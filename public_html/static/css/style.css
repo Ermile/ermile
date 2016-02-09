@@ -38,6 +38,17 @@ nav a:hover{
   color: #433
 }
 
+nav a:focus::after{
+  background-color: #10A1A6;
+  width: 100%;
+  color: #433
+
+}
+
+nav a:focus{
+  color: #10A1A6
+}
+
 header{
   position: absolute;
   right:5%;
