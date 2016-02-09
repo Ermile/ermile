@@ -7,11 +7,11 @@ class users
 	public $user_email       = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'email'           ,'type'=>'varchar@50'];
 	public $user_pass        = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'pass'            ,'type'=>'varchar@64'];
 	public $user_displayname = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'displayname'     ,'type'=>'varchar@50'];
+	public $user_meta        = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'meta'            ,'type'=>'mediumtext@'];
 	public $user_status      = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'enum@active,awaiting,deactive,removed,filter!awaiting'];
 	public $user_permission  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'permission'      ,'type'=>'smallint@5'];
 	public $user_createdate  = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'createdate'      ,'type'=>'datetime@'];
 	public $date_modified    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
-	public $permission_id    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'permission'      ,'type'=>'smallint@5'                      ,'foreign'=>'permissions@id!id'];
 
 	//--------------------------------------------------------------------------------id
 	public function id(){}
@@ -33,6 +33,8 @@ class users
 		$this->form()->type('text')->name('displayname')->maxlength('50');
 	}
 
+	public function user_meta(){}
+
 	public function user_status()
 	{
 		$this->form()->type('radio')->name('status');
@@ -50,11 +52,5 @@ class users
 	}
 
 	public function date_modified(){}
-	//--------------------------------------------------------------------------------foreign
-	public function permission_id()
-	{
-		$this->form()->type('select')->name('permission_');
-		$this->setChild();
-	}
 }
 ?>
