@@ -39,14 +39,20 @@ nav a::after{
   height: 5px;
   width:0;
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: 0;
   transition:.4s;
+}
+
+#home nav a::after
+{
+  left: 0;
 }
 
 nav a:hover::after{
   background-color: #555;
   width: 100%;
+  left: 0;
 }
 
 nav a:hover{
@@ -76,7 +82,7 @@ header #logo{
   width: auto;
   height: 40vh;
   max-height: 600px;
-  transition:.7s;
+  transition: .7s;
 }
 
 #home header #logo{

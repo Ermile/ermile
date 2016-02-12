@@ -89,4 +89,12 @@ define('ControlPanel', true);
  */
 define('Account', 'ermile');
 
+/**
+ * LangList
+ * Default serialize (['fa_IR' => 'فارسی', 'en_US' => 'English'])
+ *
+ * List of Site languages
+ */
+define('LangList', serialize (['fa_IR' => 'فارسی', 'en_US' => 'English']));
+
 ?>
