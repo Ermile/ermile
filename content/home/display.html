@@ -28,7 +28,9 @@
 {%block footer%}
 <footer>
   <div class="container">
-    <span>&copy; {{'now'|date('Y')}}</span> <a href="{{url.root}}" title="{{site.desc}}" class="roll-link"><span data-title="{{site.title}}">{{site.title}}</span></a>
+    <div class="hint--right" data-hint='{{site.desc}}'>
+      <span>&copy; {{'now'|date('Y')}}</span> <a href="{{url.root}}" class="roll-link"><span data-title="{{site.title}}">{{site.title}}</span></a>
+    </div>
   </div>
 </footer>
 {%endblock%}
