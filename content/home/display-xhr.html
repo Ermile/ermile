@@ -1,13 +1,13 @@
 <nav data-xhr='nav'>
 {%block nav%}
-{%if module !='home'%} <a href="{{url.base}}" title="Ermile Homepage">{%trans "Home"%}</a>{%endif%}
-{%if module !='about'%} <a href="{{url.base}}about" title='{%trans "About Ermile"%}'>{%trans "About"%}</a>{%endif%}
-{%if module !='mission'%} <a href="{{url.base}}mission" title='{%trans "Ermile Missions"%}'>{%trans "Mission"%}</a>{%endif%}
-{%if module !='vision'%} <a href="{{url.base}}vision" title='{%trans "Ermile Visions"%}'>{%trans "Vision"%}</a>{%endif%}
+ <a href="{{url.base}}" title="Ermile Homepage" {%if module =='home'%}class="active"{%endif%}>{%trans "Home"%}</a>
+ <a href="{{url.base}}about" title='{%trans "About Ermile"%}' {%if module =='about'%}class="active"{%endif%}>{%trans "About"%}</a>
+ <a href="{{url.base}}mission" title='{%trans "Ermile Missions"%}' {%if module =='mission'%}class="active"{%endif%}>{%trans "Mission"%}</a>
+ <a href="{{url.base}}vision" title='{%trans "Ermile Visions"%}' {%if module =='vision'%}class="active"{%endif%}>{%trans "Vision"%}</a>
 {%endblock%}
 </nav>
 
 
-<article data-xhr='article'>
+<div data-xhr='article' class="container main">
 {%block article%}{%endblock%}
-</article>
+</div>

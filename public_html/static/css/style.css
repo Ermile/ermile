@@ -2,8 +2,9 @@ body{
   background: url(../images/pattern/shattered_@2X.png);
   min-height: 100%;
 }
+
 nav{
-  font-size: 3em;
+  font-size: 2.5em;
   position: absolute;
   top: 5%;
   left: 7%;
@@ -14,8 +15,13 @@ nav{
 
 #home nav{
   min-width: auto;
+  font-size: 3em;
   top: 20%;
   left: 7%;
+}
+
+.rtl nav,#home.rtl nav{
+  font-size: 2em;
 }
 
 nav a{
@@ -23,11 +29,17 @@ nav a{
   color: #888;
   transition: .3s;
   position: relative;
+  min-width: 140px;
 }
 
-article{
-  margin: 12% auto 0;
-  width: 80%;
+.main{
+  margin-top: 12% ;
+  width: 50%;
+  left: 0;
+}
+
+.rtl .main{
+  text-align: left;
 }
 
 #home nav a{
@@ -49,6 +61,10 @@ nav a::after{
   left: 0;
 }
 
+#home.rtl nav a::after{
+  right: 0
+}
+
 nav a:hover::after{
   background-color: #555;
   width: 100%;
@@ -59,14 +75,14 @@ nav a:hover{
   color: #433
 }
 
-nav a:focus::after{
+nav a:focus::after, nav .active::after{
   background-color: #10A1A6;
   width: 100%;
-  color: #433
-
+  color: #433;
+  left: 0;
 }
 
-nav a:focus{
+nav a:focus, nav .active{
   color: #10A1A6
 }
 
