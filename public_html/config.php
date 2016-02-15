@@ -32,7 +32,7 @@ define('DEBUG', true);
  * for see and work with site you can set with this address: YourSite.com?dev=yes
  * if your site is now ready for show to visitors, turn this option off
  */
-define('CommingSoon', true);
+define('CommingSoon', false);
 
 /**
  * Multilanguage

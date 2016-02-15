@@ -2,19 +2,33 @@
 function transtext()
 {
 
+	//---------------------------------------------------content\home\display-xhr.html
+	echo T_("Home");                                                                  // Line 4
+	echo T_("About Ermile");                                                          // Line 16
+	echo T_("About");                                                                 // Line 16
+	echo T_("Ermile Missions");                                                       // Line 17
+	echo T_("Mission");                                                               // Line 5
+	echo T_("Ermile Visions");                                                        // Line 18
+	echo T_("Vision");                                                                // Line 6
+
 	//-------------------------------------------------------content\home\display.html
-	echo T_("logout form all service");                                               // Line 19
-	echo T_("login to all service");                                                  // Line 21
-	echo T_("One account for all service");                                           // Line 35
-	echo T_("now only");                                                              // Line 37
-	echo T_("secure online storage");                                                 // Line 37
-	echo T_("Talambar");                                                              // Line 37
-	echo T_("is ready to use at alfa version.");                                      // Line 37
-	echo T_("our new service is comming soon.");                                      // Line 38 Seperate
-	echo T_("Ermile is our brand");                                                   // Line 37
-	echo T_("Experience our service in your language");                               // Line 42
+	echo T_("Work with Ermile in your own language");                                 // Line 34
+
+	//---------------------------------------------------content\template\static_.html
+
+	//----------------------------------------------content\template\static_about.html
+	echo T_("Ermile is ready for future...");                                         // Line 4 Seperate
+	echo T_("Maybe tomorrow you hear more about our works!");                         // Line 5 Seperate
+
+	//--------------------------------------------content\template\static_mission.html
+	echo T_("Creating the best!");                                                    // Line 4 Seperate
+
+	//---------------------------------------------content\template\static_vision.html
+	echo T_("Create all of our idea");                                                // Line 4 Seperate
 
 	//------------------------------------------------content_account\home\layout.html
+	echo T_("Ermile is our brand");                                                   // Line 37
+	echo T_("Experience our service in your language");                               // Line 42
 
 	//----------------------------------------------content_account\login\display.html
 	echo T_("Click here for recovery your password");                                 // Line 6

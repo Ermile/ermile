@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile - Persian\n"
-"POT-Creation-Date: 2016-02-12 17:28+0330\n"
-"PO-Revision-Date: 2016-02-12 17:29+0330\n"
+"POT-Creation-Date: 2016-02-15 14:38+0330\n"
+"PO-Revision-Date: 2016-02-15 14:39+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -97,7 +97,7 @@ msgstr "لطفا این پیغام را برای مدیر سیستم ارسال 
 #: ../../../.././content_account/recovery/model.php:38
 #: ../../../.././content_account/signup/model.php:51
 #: ../../../.././includes/languages/trans_addon.php:15
-#: ../../../.././includes/languages/trans_twig.php:41
+#: ../../../.././includes/languages/trans_twig.php:55
 #: ../../../.././includes/languages/twig_translation.php:41
 msgid "we send a verification code for you"
 msgstr "ما کد اعتبارسنجی را برای شما ارسال خواهیم کرد"
@@ -760,6 +760,7 @@ msgstr "خانه"
 
 #: ../../../.././includes/languages/static_translation.php:41
 #: ../../../.././includes/languages/trans_addon.php:140
+#: ../../../.././includes/languages/trans_twig.php:6
 msgid "Home"
 msgstr "صفحه نخست"
 
@@ -919,67 +920,70 @@ msgid "Report"
 msgstr "گزارش"
 
 #: ../../../.././includes/languages/static_translation.php:82
+#: ../../../.././includes/languages/trans_twig.php:8
 msgid "About"
 msgstr "درباره"
 
 #: ../../../.././includes/languages/static_translation.php:83
+#: ../../../.././includes/languages/trans_twig.php:10
 msgid "Mission"
 msgstr "ماموریت"
 
 #: ../../../.././includes/languages/static_translation.php:84
+#: ../../../.././includes/languages/trans_twig.php:12
 msgid "Vision"
 msgstr "چشم‌انداز"
 
 #: ../../../.././includes/languages/trans_addon.php:6
-#: ../../../.././includes/languages/trans_twig.php:27
+#: ../../../.././includes/languages/trans_twig.php:41
 #: ../../../.././includes/languages/twig_translation.php:27
 msgid "click here to login to your account"
 msgstr "برای ورود به اکانت خود کلیک کنید"
 
 #: ../../../.././includes/languages/trans_addon.php:7
-#: ../../../.././includes/languages/trans_twig.php:28
+#: ../../../.././includes/languages/trans_twig.php:42
 #: ../../../.././includes/languages/twig_translation.php:28
 msgid "are you remember your password!?"
 msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
 
 #: ../../../.././includes/languages/trans_addon.php:10
-#: ../../../.././includes/languages/trans_twig.php:33
+#: ../../../.././includes/languages/trans_twig.php:47
 #: ../../../.././includes/languages/twig_translation.php:33
 msgid "already have an account?"
 msgstr "اکانت دارید؟"
 
 #: ../../../.././includes/languages/trans_addon.php:11
-#: ../../../.././includes/languages/trans_twig.php:34
+#: ../../../.././includes/languages/trans_twig.php:48
 #: ../../../.././includes/languages/twig_translation.php:34
 msgid "click here to sign in to your account"
 msgstr "برای ورود به اکانت خود کلیک کنید"
 
 #: ../../../.././includes/languages/trans_addon.php:12
-#: ../../../.././includes/languages/trans_twig.php:35
+#: ../../../.././includes/languages/trans_twig.php:49
 #: ../../../.././includes/languages/twig_translation.php:35
 msgid "Sign In"
 msgstr "ورود به سیستم"
 
 #: ../../../.././includes/languages/trans_addon.php:16
-#: ../../../.././includes/languages/trans_twig.php:42
+#: ../../../.././includes/languages/trans_twig.php:56
 #: ../../../.././includes/languages/twig_translation.php:42
 msgid "please check your mobile and enter the code"
 msgstr "پس از بررسی موبایل خود کد را وارد کنید"
 
 #: ../../../.././includes/languages/trans_addon.php:17
-#: ../../../.././includes/languages/trans_twig.php:43
+#: ../../../.././includes/languages/trans_twig.php:57
 #: ../../../.././includes/languages/twig_translation.php:43
 msgid "don't receive message?"
 msgstr "هنوز پیامک ما را دریافت نکردید؟"
 
 #: ../../../.././includes/languages/trans_addon.php:20
-#: ../../../.././includes/languages/trans_twig.php:46
+#: ../../../.././includes/languages/trans_twig.php:60
 #: ../../../.././includes/languages/twig_translation.php:46
 msgid "Please send number <b>2015</b> to below number"
 msgstr "لطفا عدد <b>2015</b> را به شماره زیر پیامک کنید"
 
 #: ../../../.././includes/languages/trans_addon.php:21
-#: ../../../.././includes/languages/trans_twig.php:47
+#: ../../../.././includes/languages/trans_twig.php:61
 #: ../../../.././includes/languages/twig_translation.php:47
 msgid "Then wait we receive your message and verificate your account"
 msgstr ""
@@ -1209,7 +1213,6 @@ msgid "Qom"
 msgstr "قم"
 
 #: ../../../.././includes/languages/trans_addon.php:129
-#, fuzzy
 msgid "qom"
 msgstr "قم"
 
@@ -1270,95 +1273,119 @@ msgstr "ویرایش"
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
-#: ../../../.././includes/languages/trans_twig.php:6
-#: ../../../.././includes/languages/twig_translation.php:6
-msgid "logout form all service"
-msgstr "خروج از همه حساب ها"
-
 #: ../../../.././includes/languages/trans_twig.php:7
-#: ../../../.././includes/languages/twig_translation.php:7
-msgid "login to all service"
-msgstr "ورود به سرویس ها"
-
-#: ../../../.././includes/languages/trans_twig.php:8
-#: ../../../.././includes/languages/twig_translation.php:8
-msgid "One account for all service"
-msgstr "یک اکانت برای همه سرویس ها"
+msgid "About Ermile"
+msgstr "درباره ارمایل"
 
 #: ../../../.././includes/languages/trans_twig.php:9
-#: ../../../.././includes/languages/twig_translation.php:9
-msgid "now only"
-msgstr "در حالا حاضر تنها"
-
-#: ../../../.././includes/languages/trans_twig.php:10
-#: ../../../.././includes/languages/twig_translation.php:10
-msgid "secure online storage"
-msgstr "فضایی مطمئن برای ذخیره سازی آنلاین"
+msgid "Ermile Missions"
+msgstr "ماموریت ارمایل"
 
 #: ../../../.././includes/languages/trans_twig.php:11
-#: ../../../.././includes/languages/twig_translation.php:11
-msgid "Talambar"
-msgstr "تلمبار"
+msgid "Ermile Visions"
+msgstr "چشم‌انداز ارمایل"
 
-#: ../../../.././includes/languages/trans_twig.php:12
-#: ../../../.././includes/languages/twig_translation.php:12
-msgid "is ready to use at alfa version."
-msgstr "آماده استفاده در نسخه آلفا است"
+#: ../../../.././includes/languages/trans_twig.php:15
+msgid "Work with Ermile in your own language"
+msgstr "ارمایل را با زبان خود تجربه کنید"
 
-#: ../../../.././includes/languages/trans_twig.php:13
-#: ../../../.././includes/languages/twig_translation.php:13
-msgid "our new service is comming soon."
-msgstr "سرویس های جدید ما به زودی رونمایی می شوند"
+#: ../../../.././includes/languages/trans_twig.php:20
+msgid "Ermile is ready for future..."
+msgstr "ارمایل آماده برای فرداست..."
 
-#: ../../../.././includes/languages/trans_twig.php:14
+#: ../../../.././includes/languages/trans_twig.php:21
+msgid "Maybe tomorrow you hear more about our works!"
+msgstr "شاید فردا در مورد کارهای ما بیشتر بشنوید!"
+
+#: ../../../.././includes/languages/trans_twig.php:24
+msgid "Creating the best!"
+msgstr "ساخت بهترین‌ها!"
+
+#: ../../../.././includes/languages/trans_twig.php:27
+msgid "Create all of our idea"
+msgstr "ساخت تمام ایده‌هایمان"
+
+#: ../../../.././includes/languages/trans_twig.php:30
 #: ../../../.././includes/languages/twig_translation.php:14
 msgid "Ermile is our brand"
 msgstr "ارمایل نام برند ماست"
 
-#: ../../../.././includes/languages/trans_twig.php:15
+#: ../../../.././includes/languages/trans_twig.php:31
 #: ../../../.././includes/languages/twig_translation.php:15
 msgid "Experience our service in your language"
 msgstr "سرویس های ما را با زبان اصلی خودتان تجربه کنید"
 
-#: ../../../.././includes/languages/trans_twig.php:20
+#: ../../../.././includes/languages/trans_twig.php:34
 #: ../../../.././includes/languages/twig_translation.php:20
 msgid "Click here for recovery your password"
 msgstr "برای بازیابی کلمه عبور کلیک کنید"
 
-#: ../../../.././includes/languages/trans_twig.php:21
+#: ../../../.././includes/languages/trans_twig.php:35
 #: ../../../.././includes/languages/twig_translation.php:21
 msgid "Can't access your account?"
 msgstr "نمی توانید به حساب خود وارد شوید؟"
 
-#: ../../../.././includes/languages/trans_twig.php:22
+#: ../../../.././includes/languages/trans_twig.php:36
 #: ../../../.././includes/languages/twig_translation.php:22
 msgid "Don't have an account?"
 msgstr "اکانت ندارید؟"
 
-#: ../../../.././includes/languages/trans_twig.php:23
+#: ../../../.././includes/languages/trans_twig.php:37
 #: ../../../.././includes/languages/twig_translation.php:23
 msgid "Click here to create an account"
 msgstr "برای ساخت اکانت کلیک کنید"
 
-#: ../../../.././includes/languages/trans_twig.php:24
+#: ../../../.././includes/languages/trans_twig.php:38
 #: ../../../.././includes/languages/twig_translation.php:24
 msgid "Sign Up"
 msgstr "ثبت نام"
 
-#: ../../../.././includes/languages/trans_twig.php:31
+#: ../../../.././includes/languages/trans_twig.php:45
 #: ../../../.././includes/languages/twig_translation.php:31
 msgid "terms of service"
 msgstr "قوانین استفاده"
 
-#: ../../../.././includes/languages/trans_twig.php:32
+#: ../../../.././includes/languages/trans_twig.php:46
 #: ../../../.././includes/languages/twig_translation.php:32
 msgid "by signing up, you agree to the"
 msgstr "با ثبت نام شما موافق هستید با"
 
-#: ../../../.././includes/languages/trans_twig.php:38
+#: ../../../.././includes/languages/trans_twig.php:52
 #: ../../../.././includes/languages/twig_translation.php:38
 msgid "receive message callback!"
 msgstr "دریافت پیامک"
+
+#: ../../../.././includes/languages/twig_translation.php:6
+msgid "logout form all service"
+msgstr "خروج از همه حساب ها"
+
+#: ../../../.././includes/languages/twig_translation.php:7
+msgid "login to all service"
+msgstr "ورود به سرویس ها"
+
+#: ../../../.././includes/languages/twig_translation.php:8
+msgid "One account for all service"
+msgstr "یک اکانت برای همه سرویس ها"
+
+#: ../../../.././includes/languages/twig_translation.php:9
+msgid "now only"
+msgstr "در حالا حاضر تنها"
+
+#: ../../../.././includes/languages/twig_translation.php:10
+msgid "secure online storage"
+msgstr "فضایی مطمئن برای ذخیره سازی آنلاین"
+
+#: ../../../.././includes/languages/twig_translation.php:11
+msgid "Talambar"
+msgstr "تلمبار"
+
+#: ../../../.././includes/languages/twig_translation.php:12
+msgid "is ready to use at alfa version."
+msgstr "آماده استفاده در نسخه آلفا است"
+
+#: ../../../.././includes/languages/twig_translation.php:13
+msgid "our new service is comming soon."
+msgstr "سرویس های جدید ما به زودی رونمایی می شوند"
 
 #: ../../../.././includes/languages/twig_translation.php:92
 msgid "Save as draft"
