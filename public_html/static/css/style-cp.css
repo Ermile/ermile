@@ -1,3 +1,10 @@
+/*
+@ In the name of Allah
+Description: Ermile Control Panel CSS
+Author: Javad Evazzadeh Karkoudi | Ermile
+Author URI: Evazzade.com
+Version: 1.0.1
+*/
 @import url("font-awesome.min.css");
 @import url("lightGallery.css");
 @import url("jquery.dataTables.css");
@@ -770,7 +777,7 @@ right: calc(100% + 35px);
 
 .tags-list{font-size:1.3em}
 .tags-list span{position:relative;background-color:#F4F4F4; margin:0 5px;padding:10px 0;border-radius:1px;overflow:hidden;}
-.tags-list a{padding:5px 10px;display:inline-block;margin-bottom:10px;}
+.tags-list a{padding:5px 10px;display:inline-block;margin-bottom:10px;transition:.3s;}
 .tags-list a:hover{background-color: #ECECEC}
 #permissions .tags-list a{padding: 10px 40px}
 #permissions .tags-list .fa{color:#aaa;padding:10px;line-height:1.7em;opacity:0;margin:0 -20px;}
