@@ -3,7 +3,7 @@
 Description: Ermile Control Panel CSS
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 1.0.1
+Version: 1.0.2
 */
 @import url("font-awesome.min.css");
 @import url("lightGallery.css");
@@ -106,7 +106,7 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 .col_mobile{min-width:100px;direction:ltr;text-align:left}
 .col_url{min-width:100px;width:15%;direction:ltr;text-align:left}
 .col_status{min-width:80px;width:100px;text-align:center;}
-.col_actions{width: 40px;}
+.col_actions{width: 70px;}
 .col_actions a{color:#fff;}
 .col_publishdate, .col_createdate{direction: ltr; min-width: 100px;width:100px}
 .col_filetype{text-align: center;width:50px}
