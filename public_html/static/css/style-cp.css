@@ -3,7 +3,7 @@
 Description: Ermile Control Panel CSS
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 2.0.1
+Version: 2.0.2
 */
 @import url("font-awesome.min.css");
 @import url("lightGallery.css");
@@ -762,6 +762,11 @@ right: calc(100% + 35px);
   line-height: 26px;
 }
 
+:lang(fa-IR) .rtl .checkbox:checked + label>span:after {
+  right: calc(100% + 12px);
+  content: "فعال";
+}
+
 .checkbox:not(:checked) + label>span:before {
   left: calc(100% + 32px);
   content: "OFF";
@@ -770,7 +775,13 @@ right: calc(100% + 35px);
 .rtl .checkbox:not(:checked) + label>span:before {
   right: calc(100% + 32px);
   left: inherit;
-  line-height: 26px
+  line-height: 26px;
+}
+
+:lang(fa-IR) .rtl .checkbox:not(:checked) + label>span:before {
+  right: calc(100% + 29px);
+  content: "غیرفعال";
+  font-size: 0.8em;
 }
 
 
