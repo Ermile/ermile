@@ -59,6 +59,19 @@ function bindSlug() {
   });
 }
 
+function showPass()
+{
+  $("#pass").focus(function()
+  {
+    this.type = "text";
+  }).blur(function()
+  {
+    this.type = "password";
+  })
+}
+showPass();
+
+
 
 checkPermissions();
 
@@ -70,6 +83,7 @@ route('*', function()
   $(window).on('statechange', function()
   {
     checkLocation();
+    showPass();
     // history.state.url.indexOf('posts');
     if(history.state && !history.state.replace) {
       // console.log('statechange');
