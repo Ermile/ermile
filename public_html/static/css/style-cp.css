@@ -3,7 +3,7 @@
 Description: Ermile Control Panel CSS
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 2.0.2
+Version: 2.0.3
 */
 @import url("font-awesome.min.css");
 @import url("lightGallery.css");
@@ -43,7 +43,7 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 #page-content > #content{margin: 0 1%;display: block}
 .rtl #page-content > #content{margin-left:2%;}
 #page-content > #content #page-title{margin:0 1%;border-bottom:1px solid #C7D1DD;margin:10px 0 35px;padding-bottom:5px;}
-#page-content > #content #page-title h2{font-weight:bold;display:inline-block;}
+#page-content > #content #page-title h2{font-weight:bold;display:inline-block;margin:0;}
 #page-title small{font-size:50%;}
 
 #header{width: 100%;z-index: 2;height:45px;line-height:45px;background-color: #33414e;}
