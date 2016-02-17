@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.3.1
+Version: 7.3.2
 */
 @charset "utf-8";
 /* IRAN Sans-Serif 4.0 */
@@ -228,9 +228,6 @@ a.label:hover{color:#000;}
 .modal-footer-old{position:absolute;bottom:10%;margin: 0 auto;left: 50%;transform: translate(-50%, 0);}
 .modal-header{margin: 0 auto;}
 .modal-footer{margin: 0 auto;}
-/* Form */
-form .error{background: #fff0f0;border-color: #dbb1b1;color: #d95c5c;border-radius: 0 .2857em .2857em 0;box-shadow: 2px 0 0 0 #d95c5c inset;}
-.form input.invalid{background-color:#FFDDDD;border-color:#dbb1b1;color:#9B1111;}
 /* BASIC */
 img{margin:0;border:none;max-width:100%;height:auto;}
 img.aligncenter{display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;background:#eee;padding:5px}
@@ -397,7 +394,9 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none}
 .form.inline select, .rtl .form.inline select{margin:0;}
 .form.autostyle .button{width:75%;margin-left:20%;margin-right:5%;}
 .rtl .form.autostyle .button{width:70%;margin-left:10%;margin-right:20%;}
-
+/* Form */
+form .error{background: #fff0f0;border-color: #dbb1b1;color: #d95c5c;border-radius: 0 .2857em .2857em 0;box-shadow: 2px 0 0 0 #d95c5c inset;}
+.form input.invalid{background-color:#FFDDDD;border-color:#dbb1b1;color:#9B1111;}
 /* Responsie Style ========================================================================== */
 .hidden-desktop{display:none;} .hidden-tablet{display:inherit;} .hidden-phone{display:inherit;} .visible-desktop{display:inherit;} .visible-tablet{display:none;} .visible-phone{display:none;}
 

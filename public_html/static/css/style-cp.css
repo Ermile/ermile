@@ -97,6 +97,8 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 #file-type{font-size:10vw;}
 
 
+#email, #url{direction: ltr;text-align: left;}
+
 /*--Action */
 
 .col_row{width:5px;padding:0;text-align:center;}
