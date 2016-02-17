@@ -3,7 +3,7 @@
 Description: Ermile Control Panel CSS
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 2.0.3
+Version: 2.0.5
 */
 @import url("font-awesome.min.css");
 @import url("lightGallery.css");
@@ -323,9 +323,10 @@ input:focus, select:focus{border-color:#787878;}
 .panel:hover .fa-plus, .panel a:focus .fa-plus{opacity:1;}
 
 .sp-tags{width:100%;border:1px solid #ddd;max-width:100%;max-height:200px;display:none}
-#tag-add{width:85%;border:1px solid #ddd;padding:0 8px;height:30px}
-#tag-add-btn{width:15%;float:right;font-size:1em;padding: 5px 0;margin: 0;height:30px}
-.rtl #tag-add-btn{float:left;padding: 9px 0;}
+#tag-add{width:85%;border:1px solid #ddd;padding:0 8px;height:30px;border-radius:3px 0 0 3px;}
+.rtl #tag-add{border-radius:0 3px 3px 0}
+#tag-add-btn{width:15%;float:right;font-size:1em;padding: 5px 0;margin: 0;height:30px;border-radius:0 3px 3px 0;}
+.rtl #tag-add-btn{float:left;padding: 9px 0;border-radius:3px 0 0 3px;}
 #tag-list{font-size:1em;margin-top:10px;line-height:2em;}
 #tag-list span{display: inline-block;max-width: 100%;overflow: hidden;background: #F3F3F3;color: #999;padding: 0 5px;border-radius: 3px;border: 1px solid #DDD;margin:0 5px 0 0;cursor:default;transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
 #rtl #tag-list span{float: right;}
@@ -346,7 +347,9 @@ input:focus, select:focus{border-color:#787878;}
 .cats .item span{cursor: pointer; color:#54B4EF;}
 .cats .item span{cursor: pointer; color:#54B4EF;}
 .panel.data-disabled .item span{color: #DDD ; cursor: default}
-.panel-heading span{background: red}
+.panel-heading i.fa{display: none}
+.panel-heading span{background:#eee;color:#555;padding:0px 10px;border-radius:3px;transition:0.3s;}
+.panel-heading span:hover{background:#ededed;color:#000;}
 
 .cats #cat-main #cat{width:100%;border:1px solid #ddd;direction:ltr;display:none;}
 .cats #cat-main{background-color: #ddd;}
