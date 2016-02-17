@@ -3,7 +3,7 @@
 Description: Ermile Control Panel CSS
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 1.0.2
+Version: 2.0.1
 */
 @import url("font-awesome.min.css");
 @import url("lightGallery.css");
@@ -774,6 +774,25 @@ right: calc(100% + 35px);
 }
 
 
+.form .radio label {min-width:50px;padding:0 1em 0 3.25em;border-radius: 4px;border: 1px solid #D1D3D4;transition:.3s;color:#888;}
+.rtl .form .radio label{padding:0 3.25em 0 1em;}
+/* hide input */
+.form .radio input:empty {display: none;}
+/* style label */
+.form .radio input:empty ~ label {position: relative;float: left;line-height: 2.5em;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+.form .radio input:empty ~ label:before {position: absolute;display: block;top: 0;bottom: 0;left: 0;content: '';width: 2.5em;background: #D1D3D4;padding:0.1em 0.8em 0;transition:.3s;color:#C2C2C2}
+.form .radio input:empty ~ label:before{left:initial; right:0;}
+/* toggle hover */
+.form .radio .element:hover input:not(:checked) ~ label:before {content:'\2714';}
+/*.form .radio .element:hover input:not(:checked) ~ label {color: #888;}*/
+/* toggle on */
+.form .radio input:checked ~ label:before{content:'\2714';color: #fff;background-color: #34A7C1;}
+.form .radio input:checked ~ label {color:#000;border-color: #34A7C1;}
+/* radio focus */
+.form .radio .element:active label:before {color:#777;}
+
+
+
 
 .tags-list{font-size:1.3em}
 .tags-list span{position:relative;background-color:#F4F4F4; margin:0 5px;padding:10px 0;border-radius:1px;overflow:hidden;}
@@ -800,7 +819,6 @@ right: calc(100% + 35px);
 .permission-detail .row .span1{opacity:0.8}
 .permission-detail .row:hover{opacity:1}
 .permission-detail .head div, .permission-detail .span2{cursor:pointer;}
-.permission-detail .opacity5{opacity:0.5};
-.permission-detail .opacity7{opacity:0.7};
-
+.permission-detail .opacity5{opacity:0.5;}
+.permission-detail .opacity7{opacity:0.7;}
 
