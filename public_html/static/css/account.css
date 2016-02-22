@@ -1,3 +1,10 @@
+/*
+@ In the name of Allah
+Description: Saloos Addons Account CSS
+Author: Javad Evazzadeh Karkoudi | Ermile
+Author URI: Evazzade.com
+Version: 1.0.0
+*/
 body {color:#eee;background-color: #E0E0E0;background-image: url('../images/bg.jpg');background-attachment: fixed;background-position: center center;background-repeat: no-repeat;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;min-height: 100%;min-width: 100%;width:100%;height:auto;-webkit-transition: background-image 0.2s ease-in-out;transition: background-image 0.2s ease-in-out;}
 a{color:#9DD7FA}
 .center{position: relative;min-width:280px;max-width:500px;width:450px;margin: 0 auto;}
