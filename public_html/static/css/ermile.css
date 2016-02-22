@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.3.4
+Version: 7.3.5
 */
 @charset "utf-8";
 /* IRAN Sans-Serif 4.0 */
@@ -318,7 +318,7 @@ ul.list li a{padding:0.3em 0.5em;}
 .button:hover{background-color:#e8e8e8;}
 .button:hover .icon{opacity:0.85;}
 /*-------------- Focus ---------------*/
-.button:focus{opacity:.9;color:#000}
+.button:focus{opacity:.9;}
 .button:focus .icon{opacity:.85}
 /*-------------- Down ---------------*/
 .button:active,.active.button:active{background-color:#ccc;color:rgba(0,0,0,0.8)}

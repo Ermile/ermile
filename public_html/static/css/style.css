@@ -1,3 +1,11 @@
+/*
+@ In the name of Allah
+Description: Saloos Addons Account CSS
+Author: Javad Evazzadeh Karkoudi | Ermile
+Author URI: Evazzade.com
+Version: 2.0.0
+*/
+
 body{
   background: url(../images/pattern/shattered_@2X.png);
 }
@@ -90,7 +98,7 @@ header h1, header h2{
 }
 
 header #logo{
-  position: absolute;
+  position: fixed;
   right:5%;
   bottom:10vh;
   z-index: 1;
@@ -98,6 +106,10 @@ header #logo{
   height: 40vh;
   max-height: 600px;
   transition: .7s;
+}
+
+header #logo img{
+  max-height: 100%;
 }
 
 #home header #logo{
@@ -111,7 +123,7 @@ footer{
   font-size: 1.5em;
   background: #FFF;
   box-shadow: 1px 1px 5px 0 #C4C5C6;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   left: 0;
