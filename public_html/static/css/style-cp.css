@@ -3,7 +3,7 @@
 Description: Ermile Control Panel CSS
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 2.0.6
+Version: 2.0.7
 */
 @import url("font-awesome.min.css");
 @import url("lightGallery.css");
@@ -838,3 +838,11 @@ right: calc(100% + 35px);
 .permission-detail .opacity5{opacity:0.5;}
 .permission-detail .opacity7{opacity:0.7;}
 
+
+.panel-tab{padding-top:0;}
+.tabs{font-size: 1.7em;margin-bottom:3em;}
+.tabs li{border-bottom: 1px solid #ddd;font-weight: 700;text-align: center;color: #bbb;border: 1px solid transparent;border-bottom-width: 2px;padding: 1em;transition:0.3s;}
+.tabs li:hover{color: #888;cursor: pointer;}
+.tabs li.active{color: #555;border: 1px solid #eee;border-top: 1px solid transparent;border-bottom: 2px solid #3fbae4;}
+ul#tab li{display:none;}
+ul#tab li.active{display:inherit;}

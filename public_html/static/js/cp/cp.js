@@ -190,6 +190,27 @@ route('*', function()
 
   $(document).ready(function()
   {
+    // add tab support to cp
+    $('ul.tabs li').click(function()
+    {
+      var tabNum = $(this).attr('data-tab');
+      $('ul.tabs li').removeClass('active');
+      $(this).addClass('active');
+      var tabSelected;
+      if(tabNum)
+      {
+        tabSelected = $("#tab-"+tabNum);
+        $('[id^=tab-]').not(tabSelected).css('display', "none");
+      }
+      else
+      {
+        tabNum = $(this).index()+1;
+        tabSelected = $("#tab li:nth-child("+tabNum+")");
+        $('#tab li').not(tabSelected).css('display', "none");
+      }
+      $(tabSelected).fadeIn(300);
+    })
+
     var tagDefault = $('#sp-tags').val();
     $('#tag-list').text('');
     if(tagDefault)
