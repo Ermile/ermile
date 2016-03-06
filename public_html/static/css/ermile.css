@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.3.7
+Version: 7.3.8
 */
 @charset "utf-8";
 /* IRAN Sans-Serif 4.0 */
@@ -333,6 +333,7 @@ ul.list li a{padding:0.3em 0.5em;}
 .active.button:active{background-color:#d0d0d0;background-image:none}
 /******************************* Forms*******************************/
 label,input,select,textarea,button{font-family:"IRANSans",'Roboto Slab',sans-serif;box-sizing:border-box;transition:border .2s, color .2s, background .2s}
+input[type=url],input[type=email]{direction: ltr;}
 input:focus,select:focus,textarea:focus,button:focus{outline:none}
 .form{position:relative;max-width:98%;padding:1em 1%;font-size:12px;font-size:1.2rem;color:#000;margin:0 auto}
 .rtl .form{font-size:16px;font-size:1.6rem}
