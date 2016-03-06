@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.3.6
+Version: 7.3.7
 */
 @charset "utf-8";
 /* IRAN Sans-Serif 4.0 */
@@ -282,6 +282,11 @@ ul.list li a{padding:0.3em 0.5em;}
 .cursor-help{cursor:help;}
 .not-active {pointer-events: none;cursor:not-allowed;}
 .clear{clear:both}
+.fa.middle::before{position: absolute;width: 100%;top: 50%;left: 0;margin-top: -0.5em}
+.ltr .labeled, .rtl .labeled.reverse{padding-left:2.5em;padding-right:initial;}
+.rtl .labeled, .ltr .labeled.reverse{padding-left:initial;padding-right:2.5em; }
+.labeled .fa, .rtl .labeled.reverse .fa{position: absolute;height: 100%;text-align: center;width: 2.5em;padding:0;margin:0;top:0;left:0;right:initial;}
+.rtl .labeled .fa, .labeled.reverse .fa{left:initial;right:0;}
 /******************************* Button *******************************/
 .button{cursor:pointer;display:block;min-height:1em;outline:none;border:none;vertical-align:baseline;background-color:#e0e0e0;color:rgba(0,0,0,0.6);margin:.3em auto;padding:.78571em 1.5em;padding:8px 1.5em 8px;text-transform:none;text-shadow:none;font-weight:700;line-height:1;font-style:normal;text-align:center;text-decoration:none;background-image:none;border-radius:.2857rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-transition:opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;transition:opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;-webkit-tap-highlight-color:transparent;transition:.3s background;}
 /*--------------- Positive ----------------*/

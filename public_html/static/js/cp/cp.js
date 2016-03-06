@@ -191,25 +191,59 @@ route('*', function()
   $(document).ready(function()
   {
     // add tab support to cp
-    $('ul.tabs li').click(function()
+    $('.tabs li').click(function()
     {
-      var tabNum = $(this).attr('data-tab');
-      $('ul.tabs li').removeClass('active');
-      $(this).addClass('active');
+      var _this     = $(this);
+      var tabNum    = _this.attr('data-tab');
+      var tabsItems = _this.parent().children('li');
+      var tabGroup  = _this.parent().attr('data-group');
       var tabSelected;
-      if(tabNum)
+      var tabItems
+      // if use group find it else use default tab value
+      if(tabGroup)
       {
-        tabSelected = $("#tab-"+tabNum);
-        $('[id^=tab-]').not(tabSelected).css('display', "none");
+        tabItems  = $('.tab[data-group="'+ tabGroup +'"]');
       }
       else
       {
-        tabNum = $(this).index()+1;
-        tabSelected = $("#tab li:nth-child("+tabNum+")");
-        $('#tab li').not(tabSelected).css('display', "none");
+        tabItems  = $('.tab');
+      }
+
+      // remove active class from all items and select clicked item
+      tabsItems.removeClass('active');
+      _this.addClass('active');
+      console.log(_this);
+
+      if(tabNum)
+      {
+        tabSelected = tabItems.children("#tab-"+tabNum);
+        // $('[id^=tab-]').not(tabSelected).css('display', "none");
+        tabItems.children('[id^=tab-]').not(tabSelected).css('display', "none");
+      }
+      else
+      {
+        tabNum = _this.index()+1;
+        tabSelected = tabItems.children("li:nth-child("+tabNum+")");
+        tabItems.children('li').not(tabSelected).css('display', "none");
       }
       $(tabSelected).fadeIn(300);
     })
+    // run click for first time and show content of active tab
+    $(".tabs").each(function()
+    {
+      // if select one element as active select content of it
+      if($(this).children('li.active').length == 1)
+      {
+        $(this).children('li.active').trigger("click");
+      }
+      // else select first child
+      else
+      {
+        $(this).children('li:first-child').trigger("click");
+      }
+      console.log($(this).children('li.active').length);
+    });
+
 
     var tagDefault = $('#sp-tags').val();
     $('#tag-list').text('');
