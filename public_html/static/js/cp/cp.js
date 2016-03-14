@@ -1,6 +1,6 @@
 /**
  * Ermile Control Panel JS
- * V 3.0.0
+ * V 3.0.1
  */
 
 
@@ -281,14 +281,14 @@ function checkInput(_this, _firstTime)
 {
 	var chkID        = $(_this).attr('id');
   var chkChildrens = $('input[data-parent='+ chkID +']').parent();
-	var chkChildrens = $('input[data-relation='+ chkID +']');
+	var chkRelations = $('input[data-relation='+ chkID +']');
 
   if($(_this).is(":checked"))
   {
     chkChildrens.fadeIn()
     if(!_firstTime)
     {
-      chkChildrens.prop('checked', true);
+      chkRelations.prop('checked', true);
     }
   }
   else
@@ -315,10 +315,9 @@ function checkInputChange()
 {
   $('input[type="checkbox"]').change(function()
   {
-    checkInput(this);
+    checkInput(this, false);
   });
 }
-checkInputChange();
 
 
 
