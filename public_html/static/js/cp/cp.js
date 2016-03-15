@@ -1,6 +1,6 @@
 /**
  * Ermile Control Panel JS
- * V 3.0.1
+ * V 3.1.0
  */
 
 
@@ -280,8 +280,8 @@ function addTag()
 function checkInput(_this, _firstTime)
 {
 	var chkID        = $(_this).attr('id');
-  var chkChildrens = $('input[data-parent='+ chkID +']').parent();
-	var chkRelations = $('input[data-relation='+ chkID +']');
+  var chkChildrens = $('[data-parent*='+ chkID +']').parent();
+	var chkRelations = $('input[type=checkbox][data-relation*='+ chkID +']');
 
   if($(_this).is(":checked"))
   {
