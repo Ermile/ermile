@@ -501,10 +501,17 @@ function checkLocation()
 {
   var CURRENTPATH = (location.pathname).replace(/^\/+/, '');
   var currentModule = CURRENTPATH;
+  console.log(currentModule);
 
-  if(CURRENTPATH.indexOf('/') > -1)
+
+  if(currentModule.substr(0, 2)  == 'cp')
   {
-    currentModule = CURRENTPATH.substring(0, CURRENTPATH.indexOf('/'));
+    currentModule = currentModule.substr(3);
+  }
+
+  if(currentModule.indexOf('/') > -1)
+  {
+    currentModule = currentModule.substring(0, currentModule.indexOf('/'));
   }
   $('#page-sidebar a').removeClass('active');
 
