@@ -129,6 +129,8 @@ footer{
   left: 0;
 }
 
+footer #langList a{padding:0 0.5em;float: right}
+
 /* ROLL LINKS */
 .roll-link{display:inline-block;overflow:hidden;vertical-align:top;-webkit-perspective:600px;-moz-perspective:600px;-ms-perspective:600px;perspective:600px;-webkit-perspective-origin:50% 50%;-moz-perspective-origin:50% 50%;-ms-perspective-origin:50% 50%;perspective-origin:50% 50%}
 .roll-link span{display:block;position:relative;-webkit-transition:all 400ms ease;-moz-transition:all 400ms ease;-ms-transition:all 400ms ease;transition:all 400ms ease;-webkit-transform-origin:50% 0;-moz-transform-origin:50% 0;-ms-transform-origin:50% 0;transform-origin:50% 0;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;padding:0 2px}
@@ -168,7 +170,7 @@ footer{
 }
 
 @media only screen and (min-width:768px) and (max-width:959px) {
-  header #logo{
+  #home header #logo, header #logo{
     width:50vw;
     margin:0 auto;
     height:auto;
