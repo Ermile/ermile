@@ -3,7 +3,7 @@
 Description: Ermile Control Panel CSS
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 2.2.0
+Version: 2.2.1
 */
 @charset "utf-8";
 @import url("font-awesome.min.css");
@@ -318,8 +318,8 @@ input:focus, select:focus{border-color:#787878;}
 
 .panel.top-pages .panel-body li{display:block;direction:ltr;text-align: left;}
 .panel.top-pages .panel-body li:hover{background-color:#eee}
-.panel.top-pages .panel-body li span{display:inline-block;min-width:25px}
-.panel.top-pages .panel-body a{}
+.panel.top-pages .panel-body li span{display:inline-block;min-width:30px;text-align:center;color:#33414E;}
+.panel.top-pages .panel-body a{display: block;padding:1px 1em;line-height:1.8em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
 
 .panel-body.summary a{color:inherit;}
 #home .panel{margin-bottom:1vh;}
