@@ -16,7 +16,7 @@ class model extends \mvc\model
 		{
 			$myuserid = $tmp_result->assoc('id');
 			$mycode   = utility::randomCode();
-			
+
 			$qry      = $this->sql()->tableVerifications ()
 							->setVerification_type           ('mobilerecovery')
 							->setVerification_value          ($mymobile)
@@ -32,13 +32,13 @@ class model extends \mvc\model
 			// if query run without error means commit
 			$this->commit(function($_mobile, $_code)
 			{
-				$myreferer = utility\Cookie::read('referer');
+				$myreferer = utility\cookie::read('referer');
 				//Send SMS
 				\lib\utility\Sms::send($_mobile, 'recovery', $_code);
 				debug::true(T_("we send a verification code for you"));
 
-				$myreferer = utility\Cookie::write('mobile', $_mobile, 60*5);
-				$myreferer = utility\Cookie::write('from', 'recovery', 60*5);
+				$myreferer = utility\cookie::write('mobile', $_mobile, 60*5);
+				$myreferer = utility\cookie::write('from', 'recovery', 60*5);
 
 				$this->redirector()->set_url('verification');
 			}, $mymobile, $mycode);

@@ -6,7 +6,7 @@ class controller extends \mvc\controller
 	function _route()
 	{
 		$referer  = \lib\router::urlParser('referer', 'domain');
-		$from     = \lib\utility\Cookie::read('from');
+		$from     = \lib\utility\cookie::read('from');
 		$islogin	= $this->login();
 		$mymodule = $this->module();
 		// set referrer in cookie
@@ -14,7 +14,7 @@ class controller extends \mvc\controller
 			return;
 
 		if($referer !== Domain)
-			\lib\utility\Cookie::write('referer', $referer, 60*15);
+			\lib\utility\cookie::write('referer', $referer, 60*15);
 		// check permission for changepass
 		if($mymodule === 'changepass' && $from !== 'verification' && !$islogin)
 			\lib\error::access(T_("you can't access to this page!"));
@@ -52,7 +52,7 @@ class controller extends \mvc\controller
 			case 'smsdelivery':
 			case 'smscallback':
 				$uid = 201500001;
-				if(\lib\utility::get('uid') == $uid || \lib\utility\Cookie::read('uid') == $uid)
+				if(\lib\utility::get('uid') == $uid || \lib\utility\cookie::read('uid') == $uid)
 				{
 					$this->model_name	= 'content_account\sms\model';
 					$this->display_name	= 'content_account\sms\display.html';
@@ -77,7 +77,7 @@ class controller extends \mvc\controller
 				break;
 		}
 			$this->route_check_true = true;
-		
+
 	}
 }
 ?>

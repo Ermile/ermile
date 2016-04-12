@@ -44,8 +44,8 @@ class model extends \mvc\model
 				// if query run without error means commit
 				$this->commit(function($_code)
 				{
-					$myreferer = utility\Cookie::read('referer');
-					utility\Cookie::delete('referer');
+					$myreferer = utility\cookie::read('referer');
+					utility\cookie::delete('referer');
 
 
 					// create code for pass with get to service home page

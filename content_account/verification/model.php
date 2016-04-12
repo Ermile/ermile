@@ -15,7 +15,7 @@ class model extends \mvc\model
 		// get parameters and set to local variables
 		$mymobile   = utility::post('mobile', 'filter');
 		$mycode     = utility::post('code');
-		$myfrom     = utility\Cookie::read('from');
+		$myfrom     = utility\cookie::read('from');
 
 		// check for mobile exist
 		$tmp_result	= $this->sql()->tableVerifications  ()
@@ -58,8 +58,8 @@ class model extends \mvc\model
 					$this->model()->setLogin($myid, false);
 					$this->redirector()->set_url('changepass');
 
-					$myreferer = utility\Cookie::write('mobile', $_mobile, 60*5);
-					$myreferer = utility\Cookie::write('from', 'verification', 60*5);
+					$myreferer = utility\cookie::write('mobile', $_mobile, 60*5);
+					$myreferer = utility\cookie::write('from', 'verification', 60*5);
 					debug::true(T_("verify successfully.").' '.T_("please Input your new password"));
 				}
 			}, $mymobile, $myfrom);
