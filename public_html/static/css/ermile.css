@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.4.1
+Version: 7.4.2
 */
 @charset "utf-8";
 /* IRAN Sans-Serif 4.0 */
@@ -104,6 +104,8 @@ blockquote{color:#59666f;font-style:italic;padding:10px}
 .row > .offset11:not(:first-child){margin-left: 95.744666%;}
 .row > .offset12{margin-left: 102.12764399999999%;}
 .row > .offset12:not(:first-child){margin-left: 104.25530299999998%;}
+.rtl .row.auto > [class*="span"]{float:right;margin-left: 2.127659%;margin-right:0;}
+.rtl .row.auto > [class*="span"]:last-child , .rtl .row.auto > .endline{margin-left:0;}
 .rtl .row.auto > .offset1{margin-right: 8.510637%;}
 .rtl .row.auto > .offset1:not(:first-child){margin-right: 10.638296%;}
 .rtl .row.auto > .offset2{margin-right: 17.021274%;}
@@ -128,8 +130,6 @@ blockquote{color:#59666f;font-style:italic;padding:10px}
 .rtl .row.auto > .offset11:not(:first-child){margin-right: 95.744666%;}
 .rtl .row.auto > .offset12{margin-right: 102.12764399999999%;}
 .rtl .row.auto > .offset12:not(:first-child){margin-right: 104.25530299999998%;}
-.rtl .row.auto > [class*="span"]{float:right;margin-left: 2.127659%;margin-right:0;}
-.rtl .row.auto > [class*="span"]:last-child , .rtl .row.auto > .endline{margin-left:0;}
 .row-clear{clear: both;display: block;}
 .row-clear:before,.row-clear:after{display:table;content:""}
 .row-clear:after{clear:both}
@@ -179,7 +179,8 @@ a.label:hover{color:#000;}
 .panel.closed .panel-heading:after{content:"\f078";}
 .panel.closed .panel-body, .panel.closed .panel-footer{display:none}
 .panel-body {padding: 15px;}
-.panel-footer {padding: 10px 15px;border-top: 1px solid #ddd;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;}
+.panel-footer {padding: 5px 15px;border-top: 1px solid #ddd;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;}
+.summary .panel-footer{padding: 10px 15px;}
 .panel-default {border-color: #ddd;}
 .panel-default > .panel-heading {color: #333;background-color: #f5f5f5;border-color: #ddd;}
 .panel-default > .panel-heading + .panel-collapse .panel-body {border-top-color: #ddd;}
