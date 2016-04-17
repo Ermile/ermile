@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.4.2
+Version: 7.4.3
 */
 @charset "utf-8";
 /* IRAN Sans-Serif 4.0 */
@@ -346,7 +346,7 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none}
 .form .field label{display:inline-block;vertical-align:middle;margin:0 0 .2em;opacity:.8;font-size:.9em;font-weight:700;text-transform:none}
 .form .radio label{margin:0 .2em 0 0;vertical-align:top}
 .form .radio .element{display:inline-block;margin:0 1% 0 0}
-.rtl .form .radio .element{display:inline-block;margin:0 0 0 1%}
+.rtl .form .radio .element{margin:0 0 0 1%}
 .form.block .radio .element{display:block}
 /*-------------------- Standard Inputs ---------------------*/
 .form input:not([type]),.form input[type="text"],.form input[type="email"],.form input[type="date"],.form input[type="datetime-local"],.form input[type="password"],.form input[type="number"],.form input[type="url"],.form input[type="tel"],.form textarea,.form .editor,.form select{width:95%;vertical-align:top;margin:0 auto 5px;outline:none;padding:8px 2%;font-size:1em;background:#fff;border:1px solid rgba(39,41,43,0.15);opacity:.6;border-radius:3px;display:block;background-color:#eee}
