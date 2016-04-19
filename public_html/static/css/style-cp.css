@@ -3,7 +3,7 @@
 Description: Ermile Control Panel CSS
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 2.3.0
+Version: 2.3.1
 */
 @charset "utf-8";
 @import url("font-awesome.min.css");
@@ -827,7 +827,7 @@ right: calc(100% + 35px);
 #permissions .tags-list span:hover .fa, #permissions .tags-list span:focus .fa{color:#b64645;opacity:1;margin:0}
 
 .sensetive .row{padding:0.15em 0;transition:0.2s;border-radius:3px;}
-.rtl .row.auto > [class*="span"]{line-height:30px}
+.rtl .row.auto > [class*="span"]{line-height:2em}
 .sensetive .row label{cursor:pointer;display:block}
 .sensetive .row:hover{background-color:#F9F9F9}
 .row.head{background-color:#eee;margin-bottom:1em;font-weight:700}
