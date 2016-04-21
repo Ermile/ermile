@@ -866,10 +866,25 @@ right: calc(100% + 35px);
 .sortable {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
 .sortable.grid {overflow: hidden;}
 .sortable li {list-style: none;border:1px dashed transparent;background: #F6F6F6;color: #1C94C4;margin: 5px;}
-.sortable li:hover{cursor: move}
+.sortable li:not(.disabled):hover{cursor: move}
 .sortable.grid li {float: left;text-align: center;}
 .handle {cursor: move;}
 .sortable.connected {float: left;}
-li.disabled {opacity: 0.5;}
-li.highlight {background: #FEE25F;}
-li.sortable-placeholder {border-color:#CCC;background: none;}
+.sortable li.disabled {opacity: 0.5;}
+.sortable li.highlight {background: #FEE25F;}
+.sortable li.sortable-placeholder {border-color:#CCC;background: none;}
+
+.answers.sortable li{min-height: 40px;}
+.answers input{
+	line-height: 30px;
+	border:none;
+	background-color: #fff;
+	margin:2px 10px;
+	padding: 2px 5px;
+}
+.answers input:focus{background-color: #eee;}
+.answers input[type="number"]{width: 10%;}
+.answers input[type="text"]{width: 80%;}
+
+.sortable li.add{opacity: 1;font-size: 2em;text-align: center;}
+.sortable li.add i{display: inline-block;font-size: 2em;line-height:40px;}

@@ -617,20 +617,40 @@ $.fn.sortable = function(options) {
 })(jQuery);
 
 // after sorting element recalculate name of elements
-$('.sortable').sortable({forcePlaceholderSize: true}).bind('sortupdate', function(e, ui) {
+$('.sortable').sortable({items: ':not(.add)'}).bind('sortupdate', function(e, ui) {
   //changed element
   // $(ui.item[0]).attr('data-number','test');
 
     //ui.item contains the current dragged element.
     //Triggered when the user stopped sorting and the DOM position has changed.
-  $(".sortable.answers li").each(function(index)
+    ans_regenerate();
+});
+
+function ans_regenerate()
+{
+  $(".sortable.answers li:not(.add)").each(function(index)
   {
     var ans_number = index+1;
     $(this).attr('data-number', ans_number);
     $(this).children("input[type='number']").attr('name', 'ans' + ans_number + '_point');
     $(this).children("input[type='text']").attr('name', 'ans' + ans_number);
   });
-});
+
+}
+function ans_add()
+{
+  $(".sortable.answers li.add").click(function()
+  {
+    var _this = $(this);
+    _this
+    var newEl = "<p>blablablalblablab</p>";
+    newEl = $(".sortable.answers li:first").clone(true);
+    newEl.children('input').val("");
+    _this.before(newEl);
+    ans_regenerate();
+  });
+}
+ans_add();
 
 
 
