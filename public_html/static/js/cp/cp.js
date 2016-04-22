@@ -649,6 +649,11 @@ function ans_add()
     _this.before(newEl);
     ans_regenerate();
   });
+  $(".sortable.answers li .fa-times").click(function()
+  {
+    $(this).parent().remove();
+  });
+
 }
 ans_add();
 
