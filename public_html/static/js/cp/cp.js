@@ -1,6 +1,6 @@
 /**
  * Ermile Control Panel JS
- * V 3.2.0
+ * V 3.2.1
  */
 
 
@@ -52,6 +52,7 @@ route('*', function()
   $(window).on('statechange', function()
   {
     checkLocation();
+    ans_add();
     showPass();
     // history.state.url.indexOf('posts');
     if(history.state && !history.state.replace) {
@@ -643,8 +644,7 @@ function ans_add()
   {
     var _this = $(this);
     _this
-    var newEl = "<p>blablablalblablab</p>";
-    newEl = $(".sortable.answers li:first").clone(true);
+    var newEl = $(".sortable.answers li:first").clone(true);
     newEl.children('input').val("");
     _this.before(newEl);
     ans_regenerate();
