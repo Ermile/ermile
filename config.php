@@ -15,7 +15,6 @@
  /** MySQL database password */
  define("db_pass", 'ermile@#$567');
 
-define('DEBUG', true);
 
 /**
  * Account
