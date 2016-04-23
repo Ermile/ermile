@@ -13,7 +13,7 @@
  define("db_user", 'ermile');
 
  /** MySQL database password */
- define("db_pass", 'ermile@#$567');
+ define("db_pass", 'Ermile@#$1233');
 
 
 /**
@@ -24,13 +24,5 @@
  * if you want use ermile main account set it as 'ermile'
  */
 define('Account', 'ermile');
-
-/**
- * LangList
- * Default serialize (['fa_IR' => 'فارسی', 'en_US' => 'English'])
- *
- * List of Site languages
- */
-define('LangList', serialize (['fa_IR' => 'فارسی', 'en_US' => 'English']));
 
 ?>
