@@ -17,15 +17,6 @@
 
 define('DEBUG', true);
 
-
-/**
- * Defaultlanguage
- * Default: 'en_US'
- *
- * If your site support multi language then you can fix default language for visitors
- */
-define('DefaultLanguage', 'en_US');
-
 /**
  * Account
  * Default: false
