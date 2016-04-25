@@ -24,5 +24,6 @@
  * if you want use ermile main account set it as 'ermile'
  */
 define('Account', 'ermile');
+define('debug', true);
 
 ?>
