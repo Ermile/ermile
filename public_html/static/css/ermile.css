@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.5.1
+Version: 7.5.3
 */
 @charset "utf-8";
 /* IRAN Sans-Serif 4.0 */
@@ -362,14 +362,14 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none}
 /*-------------------- Dividers ---------------------*/
 .form .divider{clear:both;margin:1em 0em;}
 /*-------------------- Prepend ---------------------*/
-.form .field.prepend::before{content: attr(data-before);font-size:0.9em;background-color: #E8E8E8;padding: 8px;margin:1px;position: absolute;left: 25%;text-align: right;min-width: 120px;max-width: 150px;width: 10%;z-index: 1;opacity: 0.7;direction: ltr;}
+.form .field.prepend::before{content: attr(data-before);font-size:0.9em;background-color: #E8E8E8;padding: 8px;margin:1px;position: absolute;left: 25%;text-align: right;min-width: 120px;max-width: 150px;width: 10%;z-index: 1;opacity: 0.7;direction: ltr;top:0;bottom:5px;}
 .ltr .form.inline .field.prepend input{padding-left:16%;}
 .rtl .form .field.prepend::before{padding:5px;left:5%}
 .rtl .form.inline .field.prepend input{padding-left:16%;}
 
-.form .field.append::after{content: attr(data-after);font-size:0.9em;background-color: #E8E8E8;padding: 8px;margin:1px;position: absolute;right: 5%;text-align: right;min-width: 120px;max-width: 150px;width: 10%;z-index: 1;opacity: 0.7;direction: ltr;}
+.form .field.append::after{content: attr(data-after);font-size:0.9em;background-color: #E8E8E8;padding: 8px;margin:1px;position: absolute;right: 5%;text-align: left;min-width: 120px;max-width: 150px;width: 10%;z-index: 1;opacity: 0.7;direction: ltr;top:0;bottom:5px;}
 .ltr .form.inline .field.append input{padding-right:16%;}
-.rtl .form .field.append::after:not(.required){padding:5px;right:25%}
+.rtl .form .field.append:not(.required)::after{padding:5px;right:25%}
 .rtl .form.inline .field.append:not(.required) input{padding-right:16%;}
 
 /*-------------------- Required Field ---------------------*/
