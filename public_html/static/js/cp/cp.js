@@ -1,6 +1,6 @@
 /**
  * Ermile Control Panel JS
- * V 3.2.1
+ * V 3.3.0
  */
 
 
@@ -280,13 +280,31 @@ function addTag()
  */
 function checkInput(_this, _firstTime)
 {
-	var chkID        = $(_this).attr('id');
-  var chkChildrens = $('[data-parent*='+ chkID +']').parent();
-	var chkRelations = $('input[type=checkbox][data-relation*='+ chkID +']');
+  var chkID                      = $(_this).attr('id');
+  var chkHide                    = $('[data-init=hide]').parent();
+  var disable                    = null;
+  // normal childrens
+  var chkChildrens               = $('[data-parent*='+ chkID +']:not([data-reverse])').parent();
+  var chkChildrensReverse        = $('[data-parent*='+ chkID +'][data-reverse]').parent();
+  var chkRelations               = $('input[type=checkbox][data-relation*='+ chkID +']');
+
 
   if($(_this).is(":checked"))
   {
-    chkChildrens.fadeIn()
+    chkChildrensReverse.fadeOut();
+    chkChildrens.fadeIn();
+    chkChildrens.each(function()
+    {
+      var mythis = $(this).children('input');
+      if(mythis.is(":checked"))
+      {
+        $('[data-parent*='+ mythis.attr('id') +']:not([data-reverse])').parent().fadeIn();
+      }
+      else
+      {
+        $('[data-parent*='+ mythis.attr('id') +'][data-reverse]').parent().fadeIn();
+      }
+    });
     if(!_firstTime)
     {
       chkRelations.prop('checked', true);
@@ -294,8 +312,39 @@ function checkInput(_this, _firstTime)
   }
   else
   {
+    chkChildrensReverse.fadeIn();
     chkChildrens.fadeOut();
+    chkChildrens.each(function()
+    {
+      var mythis = $(this).children('input');
+      $('[data-parent*='+ mythis.attr('id') +']').parent().fadeOut();
+    });
   }
+  if(_firstTime)
+  {
+    chkHide.fadeOut();
+  }
+
+  // check disabled
+  if($(_this).attr('data-disable') == true)
+  {
+    disable             = true;
+    chkChildrens        = chkChildrens.find('input, textarea, button, select');
+    chkChildrensReverse = chkChildrensReverse.find('input, textarea, button, select');
+    if($(_this).is(":checked"))
+    {
+      chkChildrens.prop('disabled', false);
+      chkChildrensReverse.prop('disabled', true);
+    }
+    else
+    {
+      chkChildrens.prop('disabled', true);
+      chkChildrensReverse.prop('disabled', false);
+    }
+
+  }
+
+
 }
 
 /**
