@@ -10,6 +10,7 @@ class view extends \lib\mvc\view
 		$this->data->site['desc']    = T_("Ermile contain a new tools for each one");
 		$this->data->site['slogan']  = T_("One account to access all service");
 
+		$this->data->page['desc']    = T_("Ermile is inteligent");
 
 
 		// if you need to set a class for body element in html add in this value
