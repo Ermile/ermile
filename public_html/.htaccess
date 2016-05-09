@@ -9,6 +9,9 @@ Options -Indexes
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteRule . /index.php [L]
+
+	RewriteCond %{HTTP_HOST} (www\.)?ermile\.(ir)$ [NC]
+	RewriteRule ^(.*)$ https://ermile.com/fa/$1 [R=301,L]
 </IfModule>
 
 # -----------------------------------------------------
