@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.6.0
+Version: 7.6.1
 */
 @charset "utf-8";
 /* IRAN Sans-Serif 4.0 */
@@ -56,8 +56,8 @@ svg:not(:root){overflow:hidden;}
 /* Grouping content ========================================================================== */
 figure{margin:1em 40px;}
 hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;overflow: visible;}
-pre{direction:ltr;text-align:left;background:#eee;color: #000;font-size:15px;font-size:1.5em;line-height:1.6;margin:1em auto;padding:1.6em;overflow:auto;max-width:90%;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
 code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em;margin: 10px 5%;}
+pre{direction:ltr;text-align:left;background:#eee;color: #000;font-size:15px;font-size:1.5em;line-height:1.6;margin:1em auto;padding:1.6em;overflow:auto;max-width:90%;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
 abbr, acronym{border-bottom:0.1em dotted;cursor:help;}
 blockquote{background: #f9f9f9;font-size: 1.5em;color:#59666f;border-right: 10px solid #ccc;margin: 1.5em 1em;padding: 0.5em 1em;}
 /* Grid Element Sizing ========================================================================== */
