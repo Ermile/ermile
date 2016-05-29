@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.5.5
+Version: 7.6.0
 */
 @charset "utf-8";
 /* IRAN Sans-Serif 4.0 */
@@ -357,6 +357,10 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none}
 .form input,.form textarea,.form .editor,.form select{transition:all .2s ease-in;-webkit-transition:all .2s ease-in;-o-transition:all .2s ease-in;-moz-transition:all .2s ease-in}
 .form input:hover,.form textarea:hover,.form .editor:hover,.form select:hover{opacity:.7}
 .form input:focus,.form textarea:focus,.form .editor:focus,.form select:focus{opacity:.8}
+.editor ul{list-style:square inside none;padding: 0 1em;}
+.editor ul li{padding:0.3em 0;font-size:1.3em;}
+.editor ul ul{list-style-type: circle}
+.editor ul ul ul{list-style-type: disc}
 /*-------------------------- Input w/ attached Button ---------------------------*/
 .form input.attached{width:auto;}
 /*-------------------- Dividers ---------------------*/
