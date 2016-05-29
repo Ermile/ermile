@@ -129,6 +129,7 @@
 #lg-gallery.show-after-load .lg-slide.complete > * {
 	transition:1s;
 	opacity: 1;
+	background: #fff;
 }
 #lg-slider.slide .lg-slide, #lg-slider.use-left .lg-slide {
 	position: absolute;
