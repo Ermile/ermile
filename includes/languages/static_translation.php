@@ -84,6 +84,20 @@ function transtext()
 	echo T_('Vision');
 
 
+	echo T_('Talambar');
+	echo T_('Jibres');
+	echo T_('Azvir');
+	echo T_('Sarshomar');
+	echo T_('Linkres');
+	echo T_('Saloos');
+	echo T_('DeadBrowser');
+	echo T_('Deadbrowser');
+	echo T_('2016');
+	echo T_('2017');
+	echo T_('2018');
+	echo T_('2019');
+	echo T_('2020');
+	echo T_('#83, Moallem 10, Qom, Iran +98 25 3773 5183');
 
 }
 ?>
