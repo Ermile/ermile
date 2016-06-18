@@ -6,14 +6,15 @@
 <p>{%trans%}Maybe tomorrow you hear more about our works!{%endtrans%}</p>
 
 {%set linkTld %}{%if site.currentlang == 'fa'%}ir{%else%}com{%endif%}{%endset%}
+{%set linkProtocol %}{%if site.currentlang == 'fa'%}http{%else%}https{%endif%}{%endset%}
 
 <p>
-	<a href="https://talambar.{{linkTld}}">{%trans%}Talambar{%endtrans%}</a>,
-	<a href="https://jibres.{{linkTld}}">{%trans%}Jibres{%endtrans%}</a>,
-	<a href="https://azvir.{{linkTld}}">{%trans%}Azvir{%endtrans%}</a>,
-	<a href="https://sarshomar.{{linkTld}}">{%trans%}Sarshomar{%endtrans%}</a>,
+	<a href="{{linkProtocol}}://talambar.{{linkTld}}">{%trans%}Talambar{%endtrans%}</a>,
+	<a href="{{linkProtocol}}://jibres.{{linkTld}}">{%trans%}Jibres{%endtrans%}</a>,
+	<a href="{{linkProtocol}}://azvir.{{linkTld}}">{%trans%}Azvir{%endtrans%}</a>,
+	<a href="{{linkProtocol}}://sarshomar.{{linkTld}}">{%trans%}Sarshomar{%endtrans%}</a>,
 	<a href="http://saloos.ir">{%trans%}Saloos{%endtrans%}</a>,
-	<a href="https://deadbrowser.{{linkTld}}">{%trans%}DeadBrowser{%endtrans%}</a>
+	<a href="{{linkProtocol}}://deadbrowser.{{linkTld}}">{%trans%}DeadBrowser{%endtrans%}</a>
 </p>
 <p>{%trans%}#83, Moallem 10, Qom, Iran +98 25 3773 5183{%endtrans%}</p>
 {%endblock%}
