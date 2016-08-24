@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.6.1
+Version: 7.6.3
 */
 @charset "utf-8";
 /* IRAN Sans-Serif 4.0 */
@@ -56,7 +56,8 @@ svg:not(:root){overflow:hidden;}
 /* Grouping content ========================================================================== */
 figure{margin:1em 40px;}
 hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;overflow: visible;}
-code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em;margin: 10px 5%;}
+code,kbd,pre,samp{font-family:monospace;margin: 1em 1em;}
+kbd{padding:0.4em 0.6em;border:1px solid #ccc;font-size:11px;font-family:sans-serif;background-color:#f7f7f7;color:#333;-moz-box-shadow:0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;-webkit-box-shadow:0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;box-shadow:0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;display:inline-block;margin:0 0.1em;text-shadow:0 1px 0 #fff;line-height:1.4;white-space:nowrap;max-width:100%;}
 pre{direction:ltr;text-align:left;background:#eee;color: #000;font-size:15px;font-size:1.5em;line-height:1.6;margin:1em auto;padding:1.6em;overflow:auto;max-width:90%;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
 abbr, acronym{border-bottom:0.1em dotted;cursor:help;}
 blockquote{background: #f9f9f9;font-size: 1.5em;color:#59666f;border-right: 10px solid #ccc;margin: 1.5em 1em;padding: 0.5em 1em;}
@@ -140,6 +141,21 @@ blockquote{background: #f9f9f9;font-size: 1.5em;color:#59666f;border-right: 10px
 .container:after{content:"\0020";display:block;height:0;clear:both;visibility:hidden}.clearfix:before,.clearfix:after{content:'\0020';display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:after{clear:both}.clearfix{zoom:1}.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}img.scale-with-grid{max-width:100%;height:auto}
 .unselectable{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;}
 /* Utility ========================================================================== */
+/* Message */
+.msg{position:relative;margin:1em 0;background-color:#F8F8F9;color:#c09853;border-radius:.3rem;padding:1em 1.5em;color:rgba(0,0,0,.87);box-shadow:0 0 0 1px rgba(34,36,38,.22) inset,0 0 0 0 transparent;}
+.msg.warning{background-color:#FFFAF3;color:#573A08;box-shadow:0 0 0 1px #C9BA9B inset,0 0 0 0 transparent;}
+.msg.info{background-color:#F8FFFF;color:#276F86;box-shadow:0 0 0 1px #A9D5DE inset,0 0 0 0 transparent;}
+.msg.success,.msg.positive{background-color:#FCFFF5;color:#2C662D;box-shadow:0 0 0 1px #A3C293 inset,0 0 0 0 transparent;}
+.msg.error,.msg.negative{background-color:#FFF6F6;color:#9F3A38;box-shadow:0 0 0 1px #E0B4B4 inset,0 0 0 0 transparent;}
+.msg.danger{background-color:#f2dede;color:#b94a48;box-shadow:0 0 0 1px #eed3d7 inset,0 0 0 0 transparent;}
+.msg.compact{display:inline-block;}
+.msg.attached{margin-bottom:-1px;}
+.msg.attached.bottom{margin-top:-1px;}
+.msg .list{margin-top:1em;}
+.msg .list li{margin:0 0 .3em 1em;padding:0}
+.small{font-size:0.8em;}
+.big{font-size:1.2em;}
+.massive{font-size:2em;}
 /* ALert Box */
 .alert{position:relative;margin-bottom:18px;color:#c09853;text-shadow:0 1px 0 rgba(255,255,255,0.5);background-color:#fcf8e3;border:1px solid #fbeed5;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;padding:8px 35px 8px 14px;font-size:1.4em;font-family:sans-serif;}
 .rtl .alert{padding:8px 14px 8px 35px;}
