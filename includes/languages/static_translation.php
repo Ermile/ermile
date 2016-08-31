@@ -98,6 +98,8 @@ function transtext()
 	echo T_('2019');
 	echo T_('2020');
 	echo T_('#83, Moallem 10, Qom, Iran +98 25 3773 5183');
+	echo T_('#614, Omranieh, Moallem St, Qom, Iran');
+	echo T_('+98 25 3773 5183');
 
 }
 ?>

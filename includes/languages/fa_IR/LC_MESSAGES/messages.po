@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile - Persian\n"
-"POT-Creation-Date: 2016-06-18 16:48+0430\n"
-"PO-Revision-Date: 2016-06-18 16:50+0430\n"
+"POT-Creation-Date: 2016-08-31 11:38+0430\n"
+"PO-Revision-Date: 2016-08-31 11:39+0430\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -973,6 +973,14 @@ msgstr "۱۳۹۹"
 #: includes/languages/static_translation.php:100
 msgid "#83, Moallem 10, Qom, Iran +98 25 3773 5183"
 msgstr "ایران، قم، خیابان معلم ۱۰، پلاک ۸۳. تلفن تماس ۵۱۸۳ ۳۷۷۳ ۲۵ ۰۰۹۸"
+
+#: includes/languages/static_translation.php:101
+msgid "#614, Omranieh, Moallem St, Qom, Iran"
+msgstr "ایران، قم، خیابان معلم، مجتمع عمرانیه، واحد ۶۱۴"
+
+#: includes/languages/static_translation.php:102
+msgid "+98 25 3773 5183"
+msgstr "تلفن تماس ۵۱۸۳ ۳۷۷۳ ۰۲۵"
 
 #: includes/languages/trans_addon.php:6 includes/languages/trans_twig.php:41
 #: includes/languages/twig_translation.php:27
