@@ -155,6 +155,10 @@ footer #langList a{padding:0 0.5em;float: right}
     display:inline-block;
   }
 
+  #home header #logo{
+    height:auto;
+  }
+
   header #logo{
     position:inherit;
     margin-top: 10vh;
