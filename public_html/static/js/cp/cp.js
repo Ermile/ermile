@@ -781,8 +781,8 @@ attachment_addons = (function(){
     });
 
   }
-
-  $("[data-ejax-group=attachment-addons]").bind('keyup click', function(_event){
+  $("[data-ejax-group=attachment-addons]").unbind('keyup.attachment_addons click.attachment_addons');
+  $("[data-ejax-group=attachment-addons]").bind('keyup.attachment_addons click.attachment_addons', function(_event){
     if((_event.type == 'keyup' && !$(this).is("[name=attachments_search_q]"))
       || (_event.type == 'keyup' && $(this).is("[name=attachments_search_q]") && $(this).val() == back_change)
       || (_event.type == 'click' && $(this).is("[name=attachments_search_q]")))
@@ -813,5 +813,14 @@ attachment_addons = (function(){
     });
     time_start = setTimeout(start.bind(this,url.join('/')), 300);
   });
+  $("#addons-attachments-panel nav.pagination a").click(function()
+  {
+    Navigate({
+      data: false,
+      url: $(this).attr('href'),
+      nostate: true,
+    });
+    return false;
+  });
 });
-attachment_addons();
+route("*", attachment_addons);
