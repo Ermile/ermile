@@ -9,7 +9,13 @@ class view extends \mvc\view
 		$this->include->fontawesome = true;
 
 		$this->data->bodyclass  = 'unselectable';
-		
+
+    if($this->data->module == 'careers')
+    {
+      $this->include->css = false;
+      $this->include->js = false;
+
+    }
 	}
 }
 ?>
