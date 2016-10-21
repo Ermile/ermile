@@ -63,6 +63,19 @@ private function transtext()
 	echo T_("Job opportunity in Ermile");                                             // Line 198
 	echo T_("PHP developer");                                                         // Line 199
 	echo T_("javaScript developer");                                                  // Line 200
+	echo T_("Expert in PHP and ability to analyze the codes");                        // Line 207
+	echo T_("Be familiar with some PHP frameworks");                                  // Line 208
+	echo T_("Be familiar with OOP and MVC");                                          // Line 209
+	echo T_("Be familiar with the best new UI");                                      // Line 210
+	echo T_("Be familiar with Database");                                             // Line 211
+	echo T_("Creative and on time");                                                  // Line 223
+	echo T_("Be familiar with Git");                                                  // Line 222
+	echo T_("Fall in love with Documentation");                                       // Line 224
+	echo T_("Send cv");                                                               // Line 225
+	echo T_("Expert in Html, Css, JavaScript and ability to analyze codes");          // Line 218
+	echo T_("Be familiar with javaScript frameworks");                                // Line 219
+	echo T_("Be familiar with UX");                                                   // Line 220
+	echo T_("Be familiar with database");                                             // Line 221
 	echo T_("Be sure your CV must contain...!");                                      // Line 239
 	echo T_("Kindly mention your contact number properly so we can contact you easily.");// Line 244
 	echo T_("Don’t forget your social network links especially LinkedIn.");         // Line 245
