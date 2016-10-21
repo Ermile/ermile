@@ -1,7 +1,7 @@
 h1,h2,h3,h4,h5,h6{color:#444;cursor:default}
 span{cursor:default}
 header{background:url(images/heading1.jpg) no-repeat top center;background-size:cover;min-height:550px;height:100%;position:relative}
-header h1{text-align:center;font-weight:900;font-size:5.3em;color:#2c3e50;position:absolute;top:6.5em;right:32%;transform:rotate(-10deg)}
+header h1{text-align:center;font-weight:900;font-size:5.3em;color:#2c3e50;position:absolute;top:6.5em;right:32%;transform:rotate(-9.6deg)}
 header strong{color:#10A1A6;font-weight:900}
 header .container{height: 100%;}
 body{height:100%;background-color:#fff;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}
