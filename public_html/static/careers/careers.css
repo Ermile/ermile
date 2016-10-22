@@ -303,16 +303,12 @@ footer .company-logo img{width:70%;text-align:center;margin-right:15%;margin-top
 }
 
 @media only screen and (max-width: 450px) {
-  header h1{top: 9em;right: 12%;font-size: 3.8em;}
+  header h1{top: 8em;right: 12%;font-size: 3.8em;}
 .info{padding: 6px;padding-top:1px;}
 }
 
-@media only screen and (max-width: 390px) {
-  header h1{top: 7.1em;right: 0;font-size: 3.8em;}
-}
-
 @media only screen and (max-width: 350px) {
-  header h1{ font-size: 3.2em; top: 9em; right: 0;}
+  header h1{ font-size: 3.2em; top: 7.6em; right: 0;}
   .info{padding: 5px;padding-top: 2px;}
   .benefits li {width: 130px; height: 130px;}
   .contarct-process-boxes .text-top-left{right: -5%; bottom: -45px; font-size:.8em; }
