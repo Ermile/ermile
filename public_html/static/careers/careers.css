@@ -173,6 +173,34 @@ footer .contact-details .phone-links img{margin:0;width:27px;margin-left:10px;ve
 footer .company-logo{padding:20px;background-color:#dadada}
 footer .company-logo img{width:70%;text-align:center;margin-right:15%;margin-top:-12px}
 
+/*modal form css*/
+.modal p{margin:0;cursor:default}
+.modal input[type=text]{background-color:#f7f7f7;border:none;border-left:5px solid transparent;display:block;width:90%;margin-left:5%;text-align:left;background-image:url(images/svg/phone-book.svg);background-position:94% 9px;background-size:25px;background-repeat:no-repeat;text-align:left;padding:10px 20px;padding-left:5%;direction:rtl;border:none;border-left:5px solid transparent;margin-top:40px}
+.rtl .modal input[type=text]{background-color:#f7f7f7;border:none;border-right:5px solid transparent;display:block;width:90%;margin-right:5%;text-align:right;background-image:url(images/svg/phone-book.svg);background-position:6% 9px;background-size:25px;background-repeat:no-repeat;text-align:right;padding:10px 20px;padding-right:5%;direction:rtl;border:none;border-right:5px solid transparent;margin-top:40px}
+.modal input[type=text]:focus,.modal input[type=number]:focus{border-left:5px solid #10A1A6;border-right:none;}
+.rtl .modal input[type=text]:focus,.rtl .modal input[type=number]:focus{border-right:5px solid #10A1A6}
+.modal input[type=number]{background-color:#f7f7f7;direction:ltr;display:block;width:90%;margin-left:5%;text-align:left;background-image:url(images/svg/phone-book2.svg);background-position:94% 9px;background-size:25px;background-repeat:no-repeat;padding:10px 20px;padding-right:5%;border:none;border-left:5px solid transparent;margin-top:40px;}
+.rtl .modal input[type=number]{background-color:#f7f7f7;direction:ltr;display:block;width:90%;margin-right:5%;text-align:left;background-image:url(images/svg/phone-book2.svg);background-position:94% 9px;background-size:25px;background-repeat:no-repeat;padding:10px 20px;padding-right:5%;border:none;border-right:5px solid transparent;margin-top:40px;}
+.rtl .modal input[type=number]{background-color:#f7f7f7;direction:ltr;display:block;width:90%;margin-right:5%;text-align:left;background-image:url(images/svg/phone-book2.svg);background-position:6% 9px;background-size:25px;background-repeat:no-repeat;padding:10px 20px;padding-right:5%;border:none;border-right:5px solid transparent;margin-top:40px;padding-left:14%}
+.modal input[type=number]:hover,.modal input[type=text]:hover{border-color:rgba(16,161,166,.8)}
+.modal input[type=number]:not(:placeholder-shown),.rtl .modal input[type=text]:not(:placeholder-shown){border-left:5px solid #10A1A6; border-right:none;}
+.rtl .modal input[type=number]:not(:placeholder-shown),.rtl .modal input[type=text]:not(:placeholder-shown){border-right:5px solid #10A1A6}
+.modal input[type=submit]{font-weight:600;font-size:1.2em;color:#fff;border:none;background-color:#10A1A6;cursor:pointer;width:90%;margin-left:5%;padding:10px 20px;margin-top:40px;background-image:url(images/svg/upload.svg);background-position:28% 10px;background-size:20px;background-repeat:no-repeat;outline:none;display:block}
+.rtl .modal input[type=submit]{font-size:1.2em;color:#fff;border:none;background-color:#10A1A6;cursor:pointer;width:90%;margin-right:5%;padding:10px 20px;margin-top:40px;background-image:url(images/svg/upload.svg);background-position:70% 10px;background-size:20px;background-repeat:no-repeat;outline:none;display:block}
+.modal input[type=submit]:hover{background-color:#15adb1}
+.modal .close{width:30px;position:absolute;right:2%;top:10px;-webkit-filter:grayscale(100%);transition:.3s;cursor:pointer}
+.modal .close:hover{-webkit-filter:grayscale(0%)}
+.modal input[type="file"]{width:.1px;height:.1px;opacity:0;overflow:hidden;position:absolute;z-index:-1}
+.modal-body label.successful{background-image:url(images/svg/checked.svg)}
+.custom-file-upload{font-size:1.2em;color:#fff;border:none;background-color:#737373;cursor:pointer;width:90%;margin-left:5%;padding:10px 20px;margin-top:40px;background-image:url(images/svg/curriculum.svg);background-position:28% 10px;background-size:20px;background-repeat:no-repeat;outline:none;display:block}
+.rtl .custom-file-upload{font-size:1.2em;color:#fff;border:none;background-color:#737373;cursor:pointer;width:90%;margin-right:5%;padding:10px 20px;margin-top:40px;background-image:url(images/svg/curriculum.svg);background-position:70% 10px;background-size:20px;background-repeat:no-repeat;outline:none;display:block}
+.custom-file-upload:hover{background-color:#878787}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.modal.visible .modal-dialog{padding:30px;width:40%}
+.modal.visible .modal-title{margin-top:1em}
+.modal .modal-body{opacity:0;transition:.2s}
+.modal.visible .modal-body{opacity:1;transition:.2s}
+
 /* media */
 @media only screen and (min-width: 1800px) { header h1{top: 9em;font-size: 6em;}}
 
@@ -197,6 +225,8 @@ footer .company-logo img{width:70%;text-align:center;margin-right:15%;margin-top
   .general-property .important_taps h2.absolute_title{position:absolute;bottom:.55em;right:6.6%;top:initial}
   .general-property .not_important_taps h2.fixed_title{top:.5em;right:11%}
   .general-property .not_important_taps h2.absolute_title{position:absolute;bottom:.54em;right:6.6%}
+  .custom-file-upload{background-position:25% 9px}
+  .modal.visible .modal-dialog input[type=submit]{background-position:25% 10px}
 }
 
 @media only screen and (max-width: 1170px) {
@@ -205,6 +235,9 @@ footer .company-logo img{width:70%;text-align:center;margin-right:15%;margin-top
   footer .contact-details .social-links{padding:0}
   footer .contact-details .social-links p{width:100%;margin-top:20px}
   header h1{top:5em;right:33%;font-size:4.25em;}
+  .modal.visible .modal-dialog{width:56%}
+  .modal.visible .modal-dialog input[type=submit]{background-position:25% 9px}
+  .rtl .modal.visible .modal-dialog input[type=submit]{background-position:70% 10px}
 }
 
 @media only screen and (max-width: 1025px) {
@@ -259,7 +292,7 @@ footer .company-logo img{width:70%;text-align:center;margin-right:15%;margin-top
   .rtl .contract-process .img-contain{width:60%;margin-right:20%;margin-bottom:100px}
   .contarct-process-boxes .final-contract{float:initial;}
   .contract-process .img-contain img{opacity:1}
-  .contarct-process-boxes .text-top-right{text-align:center;position:absolute;right:16%;bottom:-79px;top:initial}
+  .contarct-process-boxes .text-top-right{text-align:center;position:absolute;right:16%;bottom:-70px;top:initial}
   .contarct-process-boxes .text-bottom-right, .rtl .contarct-process-boxes .text-bottom-right{width:120%;right:-9%}
   .contarct-process-boxes .text-top-left{text-align:center;position:absolute;right:-6%;bottom:-55px;top:initial}
   .contarct-process-boxes .text-bottom-left{text-align:center;position:absolute;right:-1%;bottom:-79px;top:initial}
@@ -271,9 +304,17 @@ footer .company-logo img{width:70%;text-align:center;margin-right:15%;margin-top
   .contract-process .second-line{display:none}
   .general-property .not-important{top:23px}
   .rtl .our-opportunity h3, .our-opportunity h3{text-align: center;}
+  .our-opportunity .active h3::before{right:50%; }
   .contract-process h2{font-size:3.5em}
   .rtl .our-opportunity .titles{height: auto;}
   footer .company-logo{display:none}
+  .modal.visible .modal-dialog{width:90%}
+  .modal.visible .modal-dialog input[type=submit]{background-position:30% 7px}
+  .rtl .modal.visible .modal-dialog input[type=submit]{background-position:68% 10px}
+  .custom-file-upload{background-position:30% 7px}
+  .rtl .custom-file-upload{background-position:68% 7px}
+  .benefits li h3{font-size:13px}
+  .benefits li p{font-size:10px}
 }
 
 @media only screen and (max-width: 550px) {
@@ -281,7 +322,7 @@ footer .company-logo img{width:70%;text-align:center;margin-right:15%;margin-top
   .contarct-process-boxes .text-bottom-right, .rtl .contarct-process-boxes .text-bottom-right{width:120%;right:-9%}
   .contarct-process-boxes .text-top-left{text-align:center;position:absolute;right: -5%;bottom: -53px;top:initial}
   .contarct-process-boxes .text-bottom-left{text-align:center;position:absolute;right:0;bottom:-79px;top:initial}
-  .contarct-process-boxes .text-bottom-right, .rtl .contarct-process-boxes .text-bottom-right{text-align:center;position:absolute;right:-13%;bottom:-79px;top:initial}
+  .contarct-process-boxes .text-bottom-right, .rtl .contarct-process-boxes .text-bottom-right{text-align: center;position: absolute;right: -13%;bottom: -72px;top: initial;width: 130%;}
   .contarct-process-boxes .line-Horizontal{display:none}
   .contract-process .second-line{display:none}
 }
@@ -300,11 +341,27 @@ footer .company-logo img{width:70%;text-align:center;margin-right:15%;margin-top
   @keyframes out-bottom { from { -webkit-transform: rotate3d(0, 0, 0, 0deg); transform: rotate3d(0, 0, 0, 0deg);} to { -webkit-transform: rotate3d(1, 0, 0, 100.2deg); transform: rotate3d(1, 0, 0, 100.2deg);}}
   @-webkit-keyframes out-left { from { -webkit-transform: rotate3d(0, 0, 0, 0deg); transform: rotate3d(0, 0, 0, 0deg);} to { -webkit-transform: rotate3d(0, 1, 0, 100.2deg); transform: rotate3d(0, 1, 0, 100.2deg);}}
   @keyframes out-left { from { -webkit-transform: rotate3d(0, 0, 0, 0deg); transform: rotate3d(0, 0, 0, 0deg);} to { -webkit-transform: rotate3d(0, 1, 0, 100.2deg); transform: rotate3d(0, 1, 0, 100.2deg);}}
+  .benefits li h3{font-size:12px;     margin: 5px 0;}
+  .modal.visible .modal-dialog input[type=submit]{background-image:none}
+  .modal-body label.successful{background-image:none}
+  .custom-file-upload{background-image:none}
+  .modal.visible .modal-dialog{width:90%;padding:0}
+  .modal.visible .modal-dialog input[type=text]{width:80%;margin-left:10%}
+  .rtl .modal.visible .modal-dialog input[type=text]{width:80%;margin-right:10%}
+  .modal.visible .modal-dialog input[type=number]{width:80%;margin-left:10%;}
+  .rtl .modal.visible .modal-dialog input[type=number]{width:80%;margin-right:10%;padding-left:15%}
+  .custom-file-upload{width:80%;margin-left:10%}
+  .rtl .custom-file-upload{width:80%;margin-right:10%}
+  .modal.visible .modal-dialog input[type=submit]{width:80%;margin-left:10%}
+  .rtl .modal.visible .modal-dialog input[type=submit]{width:80%;margin-right:10%}
 }
 
 @media only screen and (max-width: 450px) {
   header h1{top: 8em;right: 12%;font-size: 3.8em;}
 .info{padding: 6px;padding-top:1px;}
+.about-ermile{padding: 0; }
+div.video::after{display: none;}
+.contract-process { padding-right: 0;padding-top: 8em;}
 }
 
 @media only screen and (max-width: 350px) {
@@ -324,70 +381,4 @@ footer .company-logo img{width:70%;text-align:center;margin-right:15%;margin-top
   @keyframes out-bottom { from { -webkit-transform: rotate3d(0, 0, 0, 0deg); transform: rotate3d(0, 0, 0, 0deg);} to { -webkit-transform: rotate3d(1, 0, 0, 99.22deg); transform: rotate3d(1, 0, 0, 99.22deg);}}
   @-webkit-keyframes out-left { from { -webkit-transform: rotate3d(0, 0, 0, 0deg); transform: rotate3d(0, 0, 0, 0deg);} to { -webkit-transform: rotate3d(0, 1, 0, 99.22deg); transform: rotate3d(0, 1, 0, 99.22deg);}}
   @keyframes out-left { from { -webkit-transform: rotate3d(0, 0, 0, 0deg); transform: rotate3d(0, 0, 0, 0deg);} to { -webkit-transform: rotate3d(0, 1, 0, 99.22deg); transform: rotate3d(0, 1, 0, 99.22deg);}}
-}
-
-/*modal form css*/
-.modal p{margin:0;cursor:default}
-.modal input[type=text]{background-color:#f7f7f7;border:none;border-left:5px solid transparent;display:block;width:90%;margin-left:5%;text-align:left;background-image:url(images/svg/phone-book.svg);background-position:94% 9px;background-size:25px;background-repeat:no-repeat;text-align:left;padding:10px 20px;padding-left:5%;direction:rtl;border:none;border-left:5px solid transparent;margin-top:40px}
-.rtl .modal input[type=text]{background-color:#f7f7f7;border:none;border-right:5px solid transparent;display:block;width:90%;margin-right:5%;text-align:right;background-image:url(images/svg/phone-book.svg);background-position:6% 9px;background-size:25px;background-repeat:no-repeat;text-align:right;padding:10px 20px;padding-right:5%;direction:rtl;border:none;border-right:5px solid transparent;margin-top:40px}
-.modal input[type=text]:focus,.modal input[type=number]:focus{border-left:5px solid #10A1A6;border-right:none;}
-.rtl .modal input[type=text]:focus,.rtl .modal input[type=number]:focus{border-right:5px solid #10A1A6}
-.modal input[type=number]{background-color:#f7f7f7;direction:ltr;display:block;width:90%;margin-left:5%;text-align:left;background-image:url(images/svg/phone-book2.svg);background-position:94% 9px;background-size:25px;background-repeat:no-repeat;padding:10px 20px;padding-right:5%;border:none;border-left:5px solid transparent;margin-top:40px;}
-.rtl .modal input[type=number]{background-color:#f7f7f7;direction:ltr;display:block;width:90%;margin-right:5%;text-align:left;background-image:url(images/svg/phone-book2.svg);background-position:94% 9px;background-size:25px;background-repeat:no-repeat;padding:10px 20px;padding-right:5%;border:none;border-right:5px solid transparent;margin-top:40px;}
-.rtl .modal input[type=number]{background-color:#f7f7f7;direction:ltr;display:block;width:90%;margin-right:5%;text-align:left;background-image:url(images/svg/phone-book2.svg);background-position:6% 9px;background-size:25px;background-repeat:no-repeat;padding:10px 20px;padding-right:5%;border:none;border-right:5px solid transparent;margin-top:40px;padding-left:14%}
-.modal input[type=number]:hover,.modal input[type=text]:hover{border-color:rgba(16,161,166,.8)}
-.modal input[type=number]:not(:placeholder-shown),.rtl .modal input[type=text]:not(:placeholder-shown){border-left:5px solid #10A1A6; border-right:none;}
-.rtl .modal input[type=number]:not(:placeholder-shown),.rtl .modal input[type=text]:not(:placeholder-shown){border-right:5px solid #10A1A6}
-.modal input[type=submit]{font-weight:600;font-size:1.2em;color:#fff;border:none;background-color:#10A1A6;cursor:pointer;width:90%;margin-left:5%;padding:10px 20px;margin-top:40px;background-image:url(images/svg/upload.svg);background-position:28% 10px;background-size:20px;background-repeat:no-repeat;outline:none;display:block}
-.rtl .modal input[type=submit]{font-size:1.2em;color:#fff;border:none;background-color:#10A1A6;cursor:pointer;width:90%;margin-right:5%;padding:10px 20px;margin-top:40px;background-image:url(images/svg/upload.svg);background-position:70% 10px;background-size:20px;background-repeat:no-repeat;outline:none;display:block}
-.modal input[type=submit]:hover{background-color:#15adb1}
-.modal .close{width:30px;position:absolute;right:2%;top:10px;-webkit-filter:grayscale(100%);transition:.3s;cursor:pointer}
-.modal .close:hover{-webkit-filter:grayscale(0%)}
-.modal input[type="file"]{width:.1px;height:.1px;opacity:0;overflow:hidden;position:absolute;z-index:-1}
-.modal-body label.successful{background-image:url(images/svg/checked.svg)}
-.custom-file-upload{font-size:1.2em;color:#fff;border:none;background-color:#737373;cursor:pointer;width:90%;margin-left:5%;padding:10px 20px;margin-top:40px;background-image:url(images/svg/curriculum.svg);background-position:28% 10px;background-size:20px;background-repeat:no-repeat;outline:none;display:block}
-.rtl .custom-file-upload{font-size:1.2em;color:#fff;border:none;background-color:#737373;cursor:pointer;width:90%;margin-right:5%;padding:10px 20px;margin-top:40px;background-image:url(images/svg/curriculum.svg);background-position:70% 10px;background-size:20px;background-repeat:no-repeat;outline:none;display:block}
-.custom-file-upload:hover{background-color:#878787}
-input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
-.modal.visible .modal-dialog{padding:30px;width:40%}
-.modal.visible .modal-title{margin-top:1em}
-.modal .modal-body{opacity:0;transition:.2s}
-.modal.visible .modal-body{opacity:1;transition:.2s}
-
-/* modal form media */
-@media only screen and (max-width: 1300px) {
-  .custom-file-upload{background-position:25% 9px}
-  .modal.visible .modal-dialog input[type=submit]{background-position:25% 10px}
-}
-
-@media only screen and (max-width: 1150px) {
-  .modal.visible .modal-dialog{width:56%}
-  .modal.visible .modal-dialog input[type=submit]{background-position:25% 9px}
-  .rtl .modal.visible .modal-dialog input[type=submit]{background-position:70% 10px}
-}
-
-@media only screen and (max-width: 768px) {
-  .modal.visible .modal-dialog{width:90%}
-  .modal.visible .modal-dialog input[type=submit]{background-position:30% 7px}
-  .rtl .modal.visible .modal-dialog input[type=submit]{background-position:68% 10px}
-  .custom-file-upload{background-position:30% 7px}
-  .rtl .custom-file-upload{background-position:68% 7px}
-  .benefits li h3{font-size:13px}
-  .benefits li p{font-size:10px}
-}
-
-@media only screen and (max-width: 500px) {
-  .benefits li h3{font-size:12px;     margin: 5px 0;}
-  .modal.visible .modal-dialog input[type=submit]{background-image:none}
-  .modal-body label.successful{background-image:none}
-  .custom-file-upload{background-image:none}
-  .modal.visible .modal-dialog{width:90%;padding:0}
-  .modal.visible .modal-dialog input[type=text]{width:80%;margin-left:10%}
-  .rtl .modal.visible .modal-dialog input[type=text]{width:80%;margin-right:10%}
-  .modal.visible .modal-dialog input[type=number]{width:80%;margin-left:10%;}
-  .rtl .modal.visible .modal-dialog input[type=number]{width:80%;margin-right:10%;padding-left:15%}
-  .custom-file-upload{width:80%;margin-left:10%}
-  .rtl .custom-file-upload{width:80%;margin-right:10%}
-  .modal.visible .modal-dialog input[type=submit]{width:80%;margin-left:10%}
-  .rtl .modal.visible .modal-dialog input[type=submit]{width:80%;margin-right:10%}
 }
