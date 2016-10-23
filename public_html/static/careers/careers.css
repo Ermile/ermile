@@ -317,6 +317,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 }
 @media only screen and (max-width: 768px) and (orientation : landscape){
   header h1{top: 4em;right: 34%;font-size: 3.5em;}
+  .benefits{ padding:1.4em 0; }
   .our-opportunity .opportunity-desc{ height: auto;}
   .benefits li img{padding: 28px;}
   .benefits li {width: 144px; height: 144px;}
