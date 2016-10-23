@@ -146,10 +146,10 @@
   <div class="container">
 
   <div class="row auto important_taps">
-   <div class="span4">
+   <div class="span3">
     <h2 class="my_title"><img src="{{url.static}}careers/images/svg/success.svg"></h2>
    </div>
-   <div class="span8">
+   <div class="span9">
     <div class="row">
       <div class="general_texts_taps">
        <p>{%trans "Motive is the major factor for any person to be successful in work and that demands enthusiastic, keen and eager people that can help us reach our goal"%}</p>
@@ -175,10 +175,10 @@
 
 
    <div class="row auto not_important_taps">
-    <div class="span4">
+    <div class="span3">
      <h2 class="my_title"><img src="{{url.static}}careers/images/svg/error.svg"></h2>
     </div>
-    <div class="span8">
+    <div class="span9">
       <div class="general_texts_taps">
        <p>{%trans "Age does not matter for us. Having the above qualities are enough to be a member of Email."%}</p>
       </div>
@@ -239,7 +239,7 @@
     <h2>{%trans "Be sure your CV must contain...!"%}</h2>
     <img src="{{url.static}}careers/images/svg/resume.svg">
    </div>
-   <div class="span8">
+   <div class="span9">
     <ul>
      <li><p> {%trans "Kindly mention your contact number properly so we can contact you easily."%}</p></li>
      <li><p> {%trans "Don’t forget your social network links especially LinkedIn."%}</p></li>
@@ -273,8 +273,13 @@
        </div>
      </div>
     </div>
-    <div class="span5 company-logo">
+    <div class="company-logo">
      <a href="http:\\ermile.com"><img src="{{url.static}}careers/images/ermile.png"></a>
+    </div>
+    <div id="langList" data-xhr="langList" class="hint--left float-right" data-hint='{%trans "Work with Ermile in your own language"%}'>
+{%for key, lang in site.langlist if site.langlist|length >1 and site.currentlang != key|slice(0, 2)%}
+     <a href="{{url.root}}{%if site.defaultLang != key|slice(0, 2) %}{{key|slice(0, 2)}}/{%endif%}{{url.path}}" hreflang="{{key|slice(0, 2)}}" data-direct>{{lang}}</a>
+{%endfor%}
     </div>
    </div>
   </div>
