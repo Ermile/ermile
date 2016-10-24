@@ -1,7 +1,7 @@
 h1,h2,h3,h4,h5,h6{color:#444;cursor:default}
 span{cursor:default}
 header{background:url(images/heading1.jpg) no-repeat top center;background-size:cover;height:100%;position:relative}
-header h1{text-align:center;font-weight:900;font-size:5.3em;color:#2c3e50;position:absolute;top:6.5em;right:32%;transform:rotate(-9.6deg)}
+header h1{text-align:center;font-weight:900;font-size:5em;color:#2c3e50;position:absolute;top:6.5em;right:32%;transform:rotate(-9.6deg)}
 .rtl header h1{top: 5.5em;}
 header strong{color:#10A1A6;font-weight:900}
 header .container{height: 100%;}
@@ -153,7 +153,7 @@ div.video::after{content:"";width: 100%; height:50px; background-color:#fff;disp
 .resume-taps li p{position:relative;color:#555;margin-bottom:1.3em; text-align: left;}
 .rtl .resume-taps li p{text-align: right;}
 .resume-taps li p::before{content:"";background-image:url(images/svg/right-chevron.svg);width:17px;height:17px;background-size:17px;background-repeat:no-repeat;display:inline-block;position:absolute;left:-32px;top:3px}
-.rtl .resume-taps li p::before{content:"";background-image:url(images/svg/chevron-pointing-to-the-left.svg);width:17px;height:17px;background-size:17px;background-repeat:no-repeat;display:inline-block;position:absolute;right:-32px;top:10px}
+.rtl .resume-taps li p::before{content:"";background-image:url(images/svg/left-chevron.svg);width:17px;height:17px;background-size:17px;background-repeat:no-repeat;display:inline-block;position:absolute;right:-32px;top:9px}
 .resume-taps li p img{width:22px;float:right;float:right;vertical-align:text-top}
 
 /*footer*/
@@ -175,6 +175,10 @@ footer .contact-details .phone-links img{margin:0;width:27px;margin-left:10px;ve
 .rtl footer .contact-details .phone-links img{margin:0;width:27px;margin-right:9px;vertical-align:text-top}
 footer .company-logo{padding:20px;padding: 20px;width: 30%; position: absolute;right: 10%;margin-top: 2em;}
 footer .company-logo img{text-align:center;margin-right:15%;margin-top:1em; width:68%;}
+footer div.lang-btn{ display: block; clear:both; position: absolute; bottom:10px ; background-color: transparent;}
+footer #langList a{ padding:5px; background-color:#ccc; border-radius:2px; transition:.3s; }
+footer #langList a:hover{ background-color:#c1c1c1;}
+
 
 /*modal form css*/
 .modal p{margin:0;cursor:default}
@@ -237,7 +241,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
   .rtl .contract-process-boxes .text-bottom-right{right:-77%;top:47px}
   footer .contact-details .social-links{padding:0}
   footer .contact-details .social-links p{width:100%;margin-top:20px}
-  header h1{top:8em;right:33%;font-size:5.25em;}
+  header h1{top:4.25em;right:36%;font-size:4.25em;}
   .modal.visible .modal-dialog{width:56%}
   .modal.visible .modal-dialog input[type=submit]{background-position:25% 9px}
   .rtl .modal.visible .modal-dialog input[type=submit]{background-position:70% 10px}
@@ -284,7 +288,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 
 @media only screen and (max-width: 820px) {
   header h1{ top: 6.6em; right: 21%; font-size: 5em;}
-  .rtl header h1{ top:3.3em; right:33%; font-size:3.5em; }
+  .rtl header h1{ top:5.3em; right:33%; font-size:3.5em; }
 }
 @media only screen and (max-width: 767px) {
   header h1{top:8em;right:27%}
@@ -376,6 +380,7 @@ header h1 { top: 4.2em; right: 35%; font-size: 2.8em;}
   .modal.visible .modal-dialog input[type=submit]{background-image:none}
   .modal-body label.successful{background-image:none}
   .custom-file-upload{background-image:none}
+  .rtl .custom-file-upload{background-image:none}
   .modal.visible .modal-dialog{width:90%;padding:0}
   .modal.visible .modal-dialog input[type=text]{width:80%;margin-left:10%}
   .rtl .modal.visible .modal-dialog input[type=text]{width:80%;margin-right:10%}

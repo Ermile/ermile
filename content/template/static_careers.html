@@ -276,10 +276,12 @@
     <div class="company-logo">
      <a href="http:\\ermile.com"><img src="{{url.static}}careers/images/ermile.png"></a>
     </div>
-    <div id="langList" data-xhr="langList" class="hint--left float-right" data-hint='{%trans "Work with Ermile in your own language"%}'>
-{%for key, lang in site.langlist if site.langlist|length >1 and site.currentlang != key|slice(0, 2)%}
-     <a href="{{url.root}}{%if site.defaultLang != key|slice(0, 2) %}{{key|slice(0, 2)}}/{%endif%}{{url.path}}" hreflang="{{key|slice(0, 2)}}" data-direct>{{lang}}</a>
-{%endfor%}
+    <div class="lang-btn">
+        <div id="langList" data-xhr="langList" class="hint--left float-right" data-hint='{%trans "Work with Ermile in your own language"%}'>
+    {%for key, lang in site.langlist if site.langlist|length >1 and site.currentlang != key|slice(0, 2)%}
+         <a href="{{url.root}}{%if site.defaultLang != key|slice(0, 2) %}{{key|slice(0, 2)}}/{%endif%}{{url.path}}" hreflang="{{key|slice(0, 2)}}" data-direct>{{lang}}</a>
+    {%endfor%}
+        </div>
     </div>
    </div>
   </div>
