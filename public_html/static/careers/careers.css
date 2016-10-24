@@ -339,6 +339,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
   .modal  .modal-title{ margin: 0; }
   .modal input[type=text], .modal input[type=number], .modal .custom-file-upload, .modal input[type=submit]{ margin-top:10px; }
   .modal-dialog{ top: 49%; }
+  footer .company-logo img{width:73%; top:74px; }
 }
 
 @media only screen and (max-width: 570px) and (orientation: landscape){
