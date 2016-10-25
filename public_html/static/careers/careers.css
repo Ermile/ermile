@@ -345,7 +345,7 @@ header h1 { top: 4.2em; right: 35%; font-size: 2.8em;}
 }
 @media only screen and (max-width: 550px) {
   header h1 { top: 7em; right: 8%; font-size: 3.4em;}
-  .rtl header h1 { right: 35%;}
+  .rtl header h1 { right: 17%;}
   .contract-process-boxes .text-bottom-right, .rtl .contract-process-boxes .text-bottom-right {top: 19em; right: 4%;}
   .contract-process-boxes .text-bottom-left { right: -3%; bottom: -8.2em; text-align: center;}
   .rtl .contract-process-boxes .text-bottom-left { right: -3%; bottom: -5.2em; text-align: center;}
