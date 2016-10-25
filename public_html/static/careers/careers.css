@@ -210,7 +210,6 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 
 /* media */
 @media only screen and (min-width: 1800px) { header h1{top: 4.5em;font-size: 6em;}}
-
 @media only screen and (max-width: 1380px) {
   .benefits li{width:200px;height:200px}
   .benefits li img{padding:42px}
@@ -226,7 +225,6 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
   @-webkit-keyframes out-left { from { -webkit-transform: rotate3d(0, 0, 0, 0deg); transform: rotate3d(0, 0, 0, 0deg);} to { -webkit-transform: rotate3d(0, 1, 0, 104deg); transform: rotate3d(0, 1, 0, 104deg);}}
   @keyframes out-left { from { -webkit-transform: rotate3d(0, 0, 0, 0deg); transform: rotate3d(0, 0, 0, 0deg);} to { -webkit-transform: rotate3d(0, 1, 0, 104deg); transform: rotate3d(0, 1, 0, 104deg);}}
 }
-
 @media only screen and (max-width: 1300px) {
 /*  .general-property .important_taps h2.fixed_title{position:fixed;top:.5em;right:11%}
   .general-property .important_taps h2.absolute_title{position:absolute;bottom:.55em;right:6.6%;top:initial}
@@ -235,7 +233,6 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
   .custom-file-upload{background-position:25% 9px}
   .modal.visible .modal-dialog input[type=submit]{background-position:25% 10px}
 }
-
 @media only screen and (max-width: 1170px) {
   .contract-process-boxes .text-bottom-right{right:107%;top:47px}
   .rtl .contract-process-boxes .text-bottom-right{right:-77%;top:47px}
@@ -247,16 +244,13 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
   .rtl .modal.visible .modal-dialog input[type=submit]{background-position:70% 10px}
   footer .company-logo img{width: 100%; }
 }
-
 @media only screen and (max-width: 1100px) and (orientation : landscape){
   header h1{top: 4em;right: 34%;font-size: 4.25em;}
 }
-
 /*@media only screen and (max-width: 1025px) {
   .general-property h2.fixed_title{right:6%}
   .general-property h2.absolute_title{right:2.5%}
 }*/
-
 @media only screen and (max-width: 1000px) {
   .contract-process-boxes .text-top-right{width:70%}
   .contract-process-boxes .text-top-left{right:24%;bottom:-42px}
@@ -277,7 +271,6 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
   .general-property .not_important_taps h2.absolute_title{position:absolute;bottom:.54em;right:6.6%}*/
   footer .company-logo img{margin-top: 2em;margin-right:0; }
 }
-
 @media only screen and (max-width: 900px) {
   header h1{top:6.5em;right:29%}
   .contract-process-boxes .text-bottom-right{right: 17%; top: 252px;}
@@ -285,7 +278,6 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
   footer .company-logo img{margin-top: 4em;width: 90%; margin-right: 0;}
   /*footer .contact-details .social-links img{ width: 38px;}*/
 }
-
 @media only screen and (max-width: 820px) {
   header h1{ top: 6.6em; right: 21%; font-size: 5em;}
   .rtl header h1{ top:5.3em; right:33%; font-size:3.5em; }
