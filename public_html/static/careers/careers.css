@@ -352,6 +352,7 @@ header h1 { top: 4.2em; right: 35%; font-size: 2.8em;}
   .resume-taps h2{ font-size:2em; }
   div.video{display: none;}
   footer .row{padding:1em;}
+  footer #langList a{padding: 8px; }
   footer .contact-details .social-links img{ width: 37px; }
 }
 @media only screen and (max-width: 480px){
