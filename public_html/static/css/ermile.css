@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.6.5
+Version: 7.6.6
 */
 @charset "utf-8";
 /* IRAN Sans-Serif 4.0 */
@@ -423,10 +423,6 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none}
 .form .field :disabled,.form .field.disabled{opacity:.4;cursor:not-allowed}
 .form .field.disabled label{opacity:.4}
 .form .field.disabled :disabled{opacity:1}
-/*-------------- Loading ---------------*/
-.loading-form{cursor:progress;}
-.loading-form .form{position:relative;cursor:default;point-events:none;text-shadow:none!important;color:transparent!important;-webkit-transition:all 0 linear;transition:all 0 linear}
-.loading-form form:before{position:fixed;display:block;content:'';top:0;bottom:0;left:0;right:0;opacity:.3;width:100%;height:100%;z-index:1000;cursor:wait;background-color:#fff}
 /******************************* Variations *******************************/
 /*-------------------- Inline Field ---------------------*/
 .form.inline label{width:25%;float:left;}
