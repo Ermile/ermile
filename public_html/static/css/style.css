@@ -20,14 +20,14 @@ nav{
   transition: .5s;
 }
 
-#home nav{
+#homepage nav{
   min-width: auto;
   font-size: 3em;
   top: 20%;
   left: 7%;
 }
 
-.rtl nav,#home.rtl nav{
+.rtl nav,#homepage.rtl nav{
   font-size: 2em;
 }
 
@@ -49,7 +49,7 @@ nav a{
   text-align: left;
 }
 
-#home nav a{
+#homepage nav a{
   display: block;
 }
 
@@ -63,12 +63,12 @@ nav a::after{
   transition:.4s;
 }
 
-#home nav a::after
+#homepage nav a::after
 {
   left: 0;
 }
 
-#home.rtl nav a::after{
+#homepage.rtl nav a::after{
   right: 0
 }
 
@@ -112,7 +112,7 @@ header #logo img{
   max-height: 100%;
 }
 
-#home header #logo{
+#homepage header #logo{
   bottom: 20vh;
   height: 70vh;
 }
@@ -155,7 +155,7 @@ footer #langList a{padding:0 0.5em;float: right}
     display:inline-block;
   }
 
-  #home header #logo{
+  #homepage header #logo{
     height:auto;
   }
 
@@ -174,7 +174,7 @@ footer #langList a{padding:0 0.5em;float: right}
 }
 
 @media only screen and (min-width:768px) and (max-width:959px) {
-  #home header #logo, header #logo{
+  #homepage header #logo, header #logo{
     width:50vw;
     margin:0 auto;
     height:auto;
