@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.6.6
+Version: 7.6.7
 */
 @charset "utf-8";
 /* IRAN Sans-Serif 4.0 */
@@ -261,8 +261,8 @@ img.alignleft{display:inline;background:#eee;margin:5px 15px 10px 0;padding:5px}
 .clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
 .clearfix{display:inline-block}
 ul{list-style:none inside none;}
-ul.list{list-style:square inside none;}
-ul.list li{padding:0.5em 0;font-size:16px;}
+ul.list{list-style:square outside none;margin:0 3em;}
+ul.list li{padding:0.5em 0;font-size:1.4em;}
 ul.list li a{padding:0.3em 0.5em;}
 /* Useful Elements */
 .shadow{box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), 0 3px 8px rgba(0, 0, 0, 0.2);}
