@@ -72,9 +72,9 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 .vertical-menu {background:#3d4e5d;line-height:20px;font-size:1em;}
 #header .vertical-menu {position:absolute;top:45px;background:#3d4e5d;z-index:100;line-height:20px;font-size:1em;visibility:hidden;opacity:0;transition:visibility 0s linear 0.1s,opacity 0.1s linear;}
 #header #profile .vertical-menu{right:0;left: 0}
-/*.vertical-menu .default{background-color: #33414e}*/
-.vertical-menu >.default:after{content:"\f00c";display:inline-block;color:#5cb85c;font: normal normal normal 14px/1 FontAwesome;float:right;}
-.rtl .vertical-menu >.default:after{float: left;}
+/*.vertical-menu .active{background-color: #33414e}*/
+.vertical-menu >.active:after{content:"\f00c";display:inline-block;color:#5cb85c;font: normal normal normal 14px/1 FontAwesome;float:right;}
+.rtl .vertical-menu >.active:after{float: left;}
 .vertical-menu > a{display:block;color:#ddd;padding:5px 10px;font-size:1.5em;border-top:1px solid #33414E;min-width:160px}
 .vertical-menu > a:hover{color:#fff;background:rgba(0,0,0,0.2)}
 .vertical-menu > a > i{padding:0 10px;}

@@ -31,11 +31,7 @@
     <div class="hint--right" data-hint='{{site.desc}}'>
       <span>&copy; {{'now'|date('Y')}}</span> <a href="{{url.root}}" class="roll-link"><span data-title="{{site.title}}">{{site.title}}</span></a>
     </div>
-    <div id="langList" data-xhr="langList" class="hint--left float-right" data-hint='{%trans "Work with Ermile in your own language"%}'>
-{%for key, lang in site.langlist if site.langlist|length >1 and site.currentlang != key|slice(0, 2)%}
-     <a href="{{url.root}}{%if site.defaultLang != key|slice(0, 2) %}{{key|slice(0, 2)}}/{%endif%}{{url.path}}" hreflang="{{key|slice(0, 2)}}" data-direct>{{lang}}</a>
-{%endfor%}
-    </div>
+    {{langList({'html':true, 'class':"float-right"})}}
   </div>
 </footer>
 {%endblock%}

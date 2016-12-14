@@ -10,7 +10,7 @@ body{
   background: url(../images/pattern/shattered_@2X.png);
 }
 
-nav{
+body>nav{
   font-size: 2.5em;
   position: absolute;
   top: 5%;
@@ -20,18 +20,18 @@ nav{
   transition: .5s;
 }
 
-#homepage nav{
+#homepage > nav{
   min-width: auto;
   font-size: 3em;
   top: 20%;
   left: 7%;
 }
 
-.rtl nav,#homepage.rtl nav{
+.rtl >nav,#homepage.rtl >nav{
   font-size: 2em;
 }
 
-nav a{
+body>nav a{
   padding: 10px 5% 5px;
   color: #888;
   transition: .3s;
@@ -49,11 +49,11 @@ nav a{
   text-align: left;
 }
 
-#homepage nav a{
+#homepage > nav a{
   display: block;
 }
 
-nav a::after{
+body>nav a::after{
   content: "";
   height: 5px;
   width:0;
@@ -63,33 +63,33 @@ nav a::after{
   transition:.4s;
 }
 
-#homepage nav a::after
+#homepage> nav a::after
 {
   left: 0;
 }
 
-#homepage.rtl nav a::after{
+#homepage.rtl> nav a::after{
   right: 0
 }
 
-nav a:hover::after{
+body>nav a:hover::after{
   background-color: #555;
   width: 100%;
   left: 0;
 }
 
-nav a:hover{
+body>nav a:hover{
   color: #433
 }
 
-nav a:focus::after, nav .active::after{
+body>nav a:focus::after, body>nav .active::after{
   background-color: #10A1A6;
   width: 100%;
   color: #433;
   left: 0;
 }
 
-nav a:focus, nav .active{
+body>nav a:focus, body>nav .active{
   color: #10A1A6
 }
 
@@ -129,7 +129,7 @@ footer{
   left: 0;
 }
 
-footer #langList a{padding:0 0.5em;float: right}
+footer .langlist a{padding:0 0.5em;float: right}
 
 /* ROLL LINKS */
 .roll-link{display:inline-block;overflow:hidden;vertical-align:top;-webkit-perspective:600px;-moz-perspective:600px;-ms-perspective:600px;perspective:600px;-webkit-perspective-origin:50% 50%;-moz-perspective-origin:50% 50%;-ms-perspective-origin:50% 50%;perspective-origin:50% 50%}
