@@ -897,3 +897,5 @@ right: calc(100% + 35px);
 .rtl .sortable li .fa-times{float:right;}
 .sortable li .fa-times:hover{color:#DF2D2D;}
 .sortable li:first-child .fa-times:hover{color:#333; }
+
+.disabled{pointer-events:none}

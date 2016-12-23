@@ -423,7 +423,6 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none}
 .form .field :disabled,.form .field.disabled{opacity:.4;cursor:not-allowed}
 .form .field.disabled label{opacity:.4}
 .form .field.disabled :disabled{opacity:1}
-.form input.disabled{pointer-events:none;opacity:1}
 /******************************* Variations *******************************/
 /*-------------------- Inline Field ---------------------*/
 .form.inline label{width:25%;float:left;}
