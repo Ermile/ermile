@@ -9,9 +9,6 @@ Options -Indexes
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteRule . /index.php [L]
-
-	RewriteCond %{HTTP_HOST} (www\.)?ermile\.(ir)$ [NC]
-	RewriteRule ^(.*)$ https://ermile.com/fa/$1 [R=301,L]
 </IfModule>
 
 # -----------------------------------------------------
@@ -42,4 +39,4 @@ AddDefaultCharset "Content-Type: text/html; charset=UTF-8"
 Header always append X-Frame-Options SAMEORIGIN
 Header set Access-Control-Allow-Origin "*"
 Header set Access-Control-Allow-Headers "origin, x-requested-with, content-type"
-Header set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+#Header set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
