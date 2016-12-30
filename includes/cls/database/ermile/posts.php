@@ -1,6 +1,6 @@
 <?php
 namespace database\ermile;
-class posts 
+class posts
 {
 	public $id               = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'bigint@20'];
 	public $post_language    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'language'        ,'type'=>'char@2'];

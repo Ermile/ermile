@@ -1,6 +1,6 @@
 <?php
 namespace database\ermile;
-class notifications 
+class notifications
 {
 	public $id                   = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'bigint@20'];
 	public $user_idsender        = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'user sender'     ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_sende_displayname'];

@@ -1,5 +1,5 @@
 <?php
-function transtext()
+private function transtext()
 {
 
 	// ------------------------------------------------------------ Table comments
@@ -9,6 +9,8 @@ function transtext()
 	echo T_("unapproved");          // Enum unapproved
 	echo T_("spam");                // Enum spam
 	echo T_("deleted");             // Enum deleted
+	echo T_("comment");             // Enum comment
+	echo T_("rate");                // Enum rate
 	echo T_("id");                  // id
 	echo T_("post");                // post_id
 	echo T_("author");              // comment_author
@@ -19,6 +21,9 @@ function transtext()
 	echo T_("status");              // comment_status
 	echo T_("parent");              // comment_parent
 	echo T_("user");                // user_id
+	echo T_("minus");               // comment_minus
+	echo T_("plus");                // comment_plus
+	echo T_("type");                // comment_type
 	echo T_("visitor");             // visitor_id
 	echo T_("modified");            // date_modified
 
@@ -29,9 +34,12 @@ function transtext()
 	echo T_("high");                // Enum high
 	echo T_("medium");              // Enum medium
 	echo T_("low");                 // Enum low
+	echo T_("type");                // logitem_type
+	echo T_("caller");              // logitem_caller
 	echo T_("title");               // logitem_title
 	echo T_("desc");                // logitem_desc
 	echo T_("meta");                // logitem_meta
+	echo T_("count");               // count
 	echo T_("priority");            // logitem_priority
 
 	// ------------------------------------------------------------ Table logs
@@ -93,14 +101,25 @@ function transtext()
 	// ------------------------------------------------------------ Table terms
 	echo T_("terms");               // Table terms
 	echo T_("term");                // term
+	echo T_("expired");             // Enum expired
+	echo T_("awaiting");            // Enum awaiting
+	echo T_("filtered");            // Enum filtered
+	echo T_("blocked");             // Enum blocked
+	echo T_("violence");            // Enum violence
+	echo T_("pornography");         // Enum pornography
+	echo T_("other");               // Enum other
 	echo T_("language");            // term_language
 	echo T_("type");                // term_type
+	echo T_("caller");              // term_caller
 	echo T_("title");               // term_title
 	echo T_("slug");                // term_slug
 	echo T_("url");                 // term_url
 	echo T_("desc");                // term_desc
 	echo T_("meta");                // term_meta
 	echo T_("parent");              // term_parent
+	echo T_("status");              // term_status
+	echo T_("count");               // term_count
+	echo T_("usercount");           // term_usercount
 
 	// ------------------------------------------------------------ Table termusages
 	echo T_("termusages");          // Table termusages
@@ -110,6 +129,7 @@ function transtext()
 	echo T_("attachments");         // Enum attachments
 	echo T_("files");               // Enum files
 	echo T_("comments");            // Enum comments
+	echo T_("users");               // Enum users
 	echo T_("term");                // term_id
 	echo T_("termusage");           // termusage_id
 	echo T_("foreign");             // termusage_foreign
@@ -119,7 +139,6 @@ function transtext()
 	echo T_("users");               // Table users
 	echo T_("user");                // user
 	echo T_("active");              // Enum active
-	echo T_("awaiting");            // Enum awaiting
 	echo T_("deactive");            // Enum deactive
 	echo T_("removed");             // Enum removed
 	echo T_("filter");              // Enum filter
@@ -131,18 +150,6 @@ function transtext()
 	echo T_("status");              // user_status
 	echo T_("permission");          // user_permission
 	echo T_("createdate");          // user_createdate
-
-	// ------------------------------------------------------------ Table visitors
-	echo T_("visitors");            // Table visitors
-	echo T_("visitor");             // visitor
-	echo T_("yes");                 // Enum yes
-	echo T_("no");                  // Enum no
-	echo T_("ip");                  // visitor_ip
-	echo T_("url");                 // visitor_url
-	echo T_("agent");               // visitor_agent
-	echo T_("referer");             // visitor_referer
-	echo T_("robot");               // visitor_robot
-	echo T_("createdate");          // visitor_createdate
 
 }
 ?>

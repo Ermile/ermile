@@ -141,7 +141,7 @@ div.video::after{content:"";width: 100%; height:50px; background-color:#fff;disp
 .our-opportunity .opportunity-desc #tab_data li.selected p{position:relative;padding-left:8px;margin-bottom:.9em}
 .rtl .our-opportunity .opportunity-desc #tab_data li.selected p{position:relative;padding-right:8px;margin-bottom:.9em}
 .our-opportunity .opportunity-desc #tab_data li.selected p::before{content:"";background-image:url(images/svg/right-chevron.svg);width:10px;height:10px;background-size:10px;background-repeat:no-repeat;display:inline-block;position:absolute;left:-15px;top:8px}
-.rtl .our-opportunity .opportunity-desc #tab_data li.selected p::before{content:"";background-image:url(images/svg/left-chevron);width:10px;height:10px;background-size:10px;background-repeat:no-repeat;display:inline-block;position:absolute;right:-15px;top:8px}
+.rtl .our-opportunity .opportunity-desc #tab_data li.selected p::before{content:"";background-image:url(images/svg/left-chevron.svg);width:10px;height:10px;background-size:10px;background-repeat:no-repeat;display:inline-block;position:absolute;right:-15px;top:8px}
 
 /*resume taps*/
 .resume-taps{background-color:#f7f7f7;padding:8em 0}

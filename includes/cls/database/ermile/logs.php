@@ -1,6 +1,6 @@
 <?php
 namespace database\ermile;
-class logs 
+class logs
 {
 	public $id             = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'bigint@20'];
 	public $logitem_id     = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'logitem'         ,'type'=>'smallint@5'                      ,'foreign'=>'logitems@id!logitem_title'];
@@ -39,10 +39,7 @@ class logs
 		$this->setChild();
 	}
 
-	public function log_createdate()
-	{
-		$this->form()->type('text')->name('createdate')->required();
-	}
+	public function log_createdate(){}
 
 	public function date_modified(){}
 }

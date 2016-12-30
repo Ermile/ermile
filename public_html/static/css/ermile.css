@@ -17,6 +17,7 @@ Version: 7.6.7
 html{font-size:62.5%;min-height:100%;height:100%;font-family:IRANSans, "Roboto Slab", "Open sans", "Segoe UI", Helvetica, sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust: 100%;text-rendering: optimizeLegibility;-webkit-font-smoothing: antialiased;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 body{overflow-x:hidden;margin:0;direction:ltr;}
 body.rtl{direction:rtl;font-family:IRANSans, "Segoe UI", Helvetica,  sans-serif;}
+html.noscroll{position:fixed;overflow-y:scroll;width:100%}
 /* HTML5 display definitions ========================================================================= */
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
@@ -492,3 +493,5 @@ form .error{background: #fff0f0;border-color: #dbb1b1;color: #d95c5c;border-radi
 @media screen and (min-width:0\0) {
 
 }
+
+@media screen and (max-height: 600px) { .modal-dialog{top:50%;}

@@ -1,6 +1,6 @@
 <?php
 namespace database\ermile;
-class users 
+class users
 {
 	public $id               = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'int@10'];
 	public $user_mobile      = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'mobile'          ,'type'=>'varchar@15'];
@@ -26,7 +26,10 @@ class users
 		$this->form('#email')->type('email')->name('email')->maxlength('50');
 	}
 
-	public function user_pass(){}
+	public function user_pass()
+	{
+		$this->form('#pass')->type('password')->name('pass')->maxlength('64');
+	}
 
 	public function user_displayname()
 	{
@@ -46,10 +49,7 @@ class users
 		$this->form()->type('number')->name('permission')->min()->max('99999');
 	}
 
-	public function user_createdate()
-	{
-		$this->form()->type('text')->name('createdate')->required();
-	}
+	public function user_createdate(){}
 
 	public function date_modified(){}
 }

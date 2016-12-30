@@ -1,6 +1,6 @@
 <?php
 namespace database\ermile;
-class comments 
+class comments
 {
 	public $id              = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'bigint@20'];
 	public $post_id         = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'post'            ,'type'=>'bigint@20'                       ,'foreign'=>'posts@id!post_title'];
@@ -12,6 +12,9 @@ class comments
 	public $comment_status  = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'enum@approved,unapproved,spam,deleted!unapproved'];
 	public $comment_parent  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'parent'          ,'type'=>'smallint@5'                      ,'foreign'=>'comments@id!comment_title'];
 	public $user_id         = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'user'            ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_displayname'];
+	public $comment_minus   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'minus'           ,'type'=>'int@10'];
+	public $comment_plus    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'plus'            ,'type'=>'int@10'];
+	public $comment_type    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'type'            ,'type'=>'enum@comment,rate'];
 	public $visitor_id      = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'visitor'         ,'type'=>'bigint@20'                       ,'foreign'=>'visitors@id!id'];
 	public $date_modified   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
 
@@ -61,6 +64,22 @@ class comments
 	public function user_id()
 	{
 		$this->form()->type('select')->name('user_');
+		$this->setChild();
+	}
+
+	public function comment_minus()
+	{
+		$this->form()->type('number')->name('minus')->min()->max('9999999999');
+	}
+
+	public function comment_plus()
+	{
+		$this->form()->type('number')->name('plus')->min()->max('9999999999');
+	}
+
+	public function comment_type()
+	{
+		$this->form()->type('radio')->name('type');
 		$this->setChild();
 	}
 	//--------------------------------------------------------------------------------foreign

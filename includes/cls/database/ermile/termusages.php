@@ -1,10 +1,10 @@
 <?php
 namespace database\ermile;
-class termusages 
+class termusages
 {
 	public $term_id           = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'term'            ,'type'=>'int@10'                          ,'foreign'=>'terms@id!term_title'];
 	public $termusage_id      = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'termusage'       ,'type'=>'bigint@20'];
-	public $termusage_foreign = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'foreign'         ,'type'=>'enum@posts,products,attachments,files,comments'];
+	public $termusage_foreign = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'foreign'         ,'type'=>'enum@posts,products,attachments,files,comments,users'];
 	public $termusage_order   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'order'           ,'type'=>'smallint@5'];
 
 	//--------------------------------------------------------------------------------foreign
