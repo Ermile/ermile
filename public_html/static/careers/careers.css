@@ -203,10 +203,10 @@ footer #langList a:hover{ background-color:#c1c1c1;}
 .rtl .custom-file-upload{font-size:1.2em;color:#fff;border:none;background-color:#737373;cursor:pointer;width:90%;margin-right:5%;padding:10px 20px;margin-top:40px;background-image:url(images/svg/curriculum.svg);background-position:70% 10px;background-size:20px;background-repeat:no-repeat;outline:none;display:block}
 .custom-file-upload:hover{background-color:#878787}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
-.modal.visible .modal-dialog{padding:30px;width:40%}
-.modal.visible .modal-title{margin-top:1em}
+.modal .modal-dialog{padding:30px;width:40%}
+.modal .modal-title{margin-top:1em}
 .modal .modal-body{opacity:0;transition:.2s}
-.modal.visible .modal-body{opacity:1;transition:.2s}
+.modal .modal-body{opacity:1;transition:.2s}
 
 /* media */
 @media only screen and (min-width: 1800px) { header h1{top: 4.5em;font-size: 6em;}}
@@ -231,7 +231,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
   .general-property .not_important_taps h2.fixed_title{top:.5em;right:11%}
   .general-property .not_important_taps h2.absolute_title{position:absolute;bottom:.54em;right:6.6%}*/
   .custom-file-upload{background-position:25% 9px}
-  .modal.visible .modal-dialog input[type=submit]{background-position:25% 10px}
+  .modal .modal-dialog input[type=submit]{background-position:25% 10px}
 }
 @media only screen and (max-width: 1170px) {
   .contract-process-boxes .text-bottom-right{right:107%;top:47px}
@@ -239,9 +239,9 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
   footer .contact-details .social-links{padding:0}
   footer .contact-details .social-links p{width:100%;margin-top:20px}
   header h1{top:4.25em;right:36%;font-size:4.25em;}
-  .modal.visible .modal-dialog{width:56%}
-  .modal.visible .modal-dialog input[type=submit]{background-position:25% 9px}
-  .rtl .modal.visible .modal-dialog input[type=submit]{background-position:70% 10px}
+  .modal .modal-dialog{width:56%}
+  .modal .modal-dialog input[type=submit]{background-position:25% 9px}
+  .rtl .modal .modal-dialog input[type=submit]{background-position:70% 10px}
   footer .company-logo img{width: 100%; }
 }
 @media only screen and (max-width: 1100px) and (orientation : landscape){
@@ -300,9 +300,9 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
   .contract-process-boxes .text-bottom-right{top:203px; right:14%; }
   .rtl .contract-process-boxes .text-bottom-right{top: 23em; right: 24%;}
   .rtl .our-opportunity .titles{height: auto;}
-  .modal.visible .modal-dialog{width:90%}
-  .modal.visible .modal-dialog input[type=submit]{background-position:30% 7px}
-  .rtl .modal.visible .modal-dialog input[type=submit]{background-position:68% 10px}
+  .modal .modal-dialog{width:90%}
+  .modal .modal-dialog input[type=submit]{background-position:30% 7px}
+  .rtl .modal .modal-dialog input[type=submit]{background-position:68% 10px}
   .custom-file-upload{background-position:30% 7px}
   .rtl .custom-file-upload{background-position:68% 7px}
   .benefits li h3{font-size:13px; line-height:1.3em; }
@@ -332,7 +332,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
   @keyframes out-left { from { -webkit-transform: rotate3d(0, 0, 0, 0deg); transform: rotate3d(0, 0, 0, 0deg);} to { -webkit-transform: rotate3d(0, 1, 0, 100.2deg); transform: rotate3d(0, 1, 0, 100.2deg);}}
   div.video{display: none;}
   .modal .modal-body{ margin-bottom: 0;}
-  .modal .modal.visible .modal-dialog{ padding: 7px 30px;}
+  .modal .modal .modal-dialog{ padding: 7px 30px;}
   .modal  .modal-title{ margin: 0; }
   .modal input[type=text], .modal input[type=number], .modal .custom-file-upload, .modal input[type=submit]{ margin-top:10px; }
   .modal-dialog{ top: 49%; }
@@ -370,19 +370,19 @@ header h1 { top: 4.2em; right: 35%; font-size: 2.8em;}
   @-webkit-keyframes out-left { from { -webkit-transform: rotate3d(0, 0, 0, 0deg); transform: rotate3d(0, 0, 0, 0deg);} to { -webkit-transform: rotate3d(0, 1, 0, 100.2deg); transform: rotate3d(0, 1, 0, 100.2deg);}}
   @keyframes out-left { from { -webkit-transform: rotate3d(0, 0, 0, 0deg); transform: rotate3d(0, 0, 0, 0deg);} to { -webkit-transform: rotate3d(0, 1, 0, 100.2deg); transform: rotate3d(0, 1, 0, 100.2deg);}}
   .benefits li h3{font-size:12px; margin: 5px 0;}
-  .modal.visible .modal-dialog input[type=submit]{background-image:none}
+  .modal .modal-dialog input[type=submit]{background-image:none}
   .modal-body label.successful{background-image:none}
   .custom-file-upload{background-image:none}
   .rtl .custom-file-upload{background-image:none}
-  .modal.visible .modal-dialog{width:90%;padding:0}
-  .modal.visible .modal-dialog input[type=text]{width:80%;margin-left:10%}
-  .rtl .modal.visible .modal-dialog input[type=text]{width:80%;margin-right:10%}
+  .modal .modal-dialog{width:90%;padding:0}
+  .modal .modal-dialog input[type=text]{width:80%;margin-left:10%}
+  .rtl .modal .modal-dialog input[type=text]{width:80%;margin-right:10%}
   .custom-file-upload{width:80%;margin-left:10%}
-  .modal.visible .modal-dialog input[type=number]{width:80%;margin-left:10%;}
-  .rtl .modal.visible .modal-dialog input[type=number] {width:80%; margin-right:10%; padding-left:15%;}
+  .modal .modal-dialog input[type=number]{width:80%;margin-left:10%;}
+  .rtl .modal .modal-dialog input[type=number] {width:80%; margin-right:10%; padding-left:15%;}
   .rtl .custom-file-upload{width:80%; margin-right:10%;}
-  .modal.visible .modal-dialog input[type=submit]{width:80%;margin-left:10%}
-  .rtl .modal.visible .modal-dialog input[type=submit]{width:80%;margin-right:10%}
+  .modal .modal-dialog input[type=submit]{width:80%;margin-left:10%}
+  .rtl .modal .modal-dialog input[type=submit]{width:80%;margin-right:10%}
   .contract-process .first-line , .rtl .contract-process .first-line{ min-height:135px;}
   .contract-process .second-line, .rtl .contract-process .second-line{ min-height:49px;}
   .contract-process-boxes .Top-line-Horizontal{height:6em; }
