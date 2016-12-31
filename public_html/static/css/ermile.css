@@ -494,4 +494,4 @@ form .error{background: #fff0f0;border-color: #dbb1b1;color: #d95c5c;border-radi
 
 }
 
-@media screen and (max-height: 600px) { .modal-dialog{top:50%;}
+@media screen and (max-height: 650px) { .modal-dialog{top:50%;}
