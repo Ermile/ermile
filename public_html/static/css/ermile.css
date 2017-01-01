@@ -18,6 +18,7 @@ html{font-size:62.5%;min-height:100%;height:100%;font-family:IRANSans, "Roboto S
 body{overflow-x:hidden;margin:0;direction:ltr;}
 body.rtl{direction:rtl;font-family:IRANSans, "Segoe UI", Helvetica,  sans-serif;}
 html.noscroll{position:fixed;overflow-y:scroll;width:100%}
+.simpleHeatArea{position:absolute;top:0;bottom:0;right:0;left:0;}
 /* HTML5 display definitions ========================================================================= */
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
