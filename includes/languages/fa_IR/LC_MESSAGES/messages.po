@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile - Persian\n"
-"POT-Creation-Date: 2017-01-08 12:11+0330\n"
-"PO-Revision-Date: 2017-01-08 12:11+0330\n"
+"POT-Creation-Date: 2017-01-09 11:46+0330\n"
+"PO-Revision-Date: 2017-01-09 11:47+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -97,7 +97,7 @@ msgstr "لطفا این پیغام را برای مدیر سیستم ارسال 
 
 #: content_account2/recovery/model.php:38 content_account2/signup/model.php:51
 #: includes/languages/trans_addon.php:15 includes/languages/trans_addons.php:30
-#: includes/languages/trans_twig.php:127
+#: includes/languages/trans_twig.php:128
 #: includes/languages/twig_translation.php:41
 msgid "we send a verification code for you"
 msgstr "ما کد اعتبارسنجی را برای شما ارسال خواهیم کرد"
@@ -1059,55 +1059,55 @@ msgid "+98 25 3773 5183"
 msgstr "۵۱۸۳ ۳۷۷۳ ۰۲۵"
 
 #: includes/languages/trans_addon.php:6 includes/languages/trans_addons.php:21
-#: includes/languages/trans_twig.php:113
+#: includes/languages/trans_twig.php:114
 #: includes/languages/twig_translation.php:27
 msgid "click here to login to your account"
 msgstr "برای ورود به اکانت خود کلیک کنید"
 
 #: includes/languages/trans_addon.php:7 includes/languages/trans_addons.php:22
-#: includes/languages/trans_twig.php:114
+#: includes/languages/trans_twig.php:115
 #: includes/languages/twig_translation.php:28
 msgid "are you remember your password!?"
 msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
 
 #: includes/languages/trans_addon.php:10 includes/languages/trans_addons.php:25
-#: includes/languages/trans_twig.php:119
+#: includes/languages/trans_twig.php:120
 #: includes/languages/twig_translation.php:33
 msgid "already have an account?"
 msgstr "اکانت دارید؟"
 
 #: includes/languages/trans_addon.php:11 includes/languages/trans_addons.php:26
-#: includes/languages/trans_twig.php:120
+#: includes/languages/trans_twig.php:121
 #: includes/languages/twig_translation.php:34
 msgid "click here to sign in to your account"
 msgstr "برای ورود به اکانت خود کلیک کنید"
 
 #: includes/languages/trans_addon.php:12 includes/languages/trans_addons.php:27
-#: includes/languages/trans_twig.php:121
+#: includes/languages/trans_twig.php:122
 #: includes/languages/twig_translation.php:35
 msgid "Sign In"
 msgstr "ورود به سیستم"
 
 #: includes/languages/trans_addon.php:16 includes/languages/trans_addons.php:31
-#: includes/languages/trans_twig.php:128
+#: includes/languages/trans_twig.php:129
 #: includes/languages/twig_translation.php:42
 msgid "please check your mobile and enter the code"
 msgstr "پس از بررسی موبایل خود کد را وارد کنید"
 
 #: includes/languages/trans_addon.php:17 includes/languages/trans_addons.php:32
-#: includes/languages/trans_twig.php:129
+#: includes/languages/trans_twig.php:130
 #: includes/languages/twig_translation.php:43
 msgid "don't receive message?"
 msgstr "هنوز پیامک ما را دریافت نکردید؟"
 
 #: includes/languages/trans_addon.php:20 includes/languages/trans_addons.php:35
-#: includes/languages/trans_twig.php:132
+#: includes/languages/trans_twig.php:133
 #: includes/languages/twig_translation.php:46
 msgid "Please send number <b>2015</b> to below number"
 msgstr "لطفا عدد <b>2015</b> را به شماره زیر پیامک کنید"
 
 #: includes/languages/trans_addon.php:21 includes/languages/trans_addons.php:36
-#: includes/languages/trans_twig.php:133
+#: includes/languages/trans_twig.php:134
 #: includes/languages/twig_translation.php:47
 msgid "Then wait we receive your message and verificate your account"
 msgstr ""
@@ -1434,27 +1434,27 @@ msgstr "جستجو"
 msgid "Work with Ermile in your own language"
 msgstr "ارمایل را با زبان خود تجربه کنید"
 
-#: includes/languages/trans_addons.php:14 includes/languages/trans_twig.php:106
+#: includes/languages/trans_addons.php:14 includes/languages/trans_twig.php:107
 #: includes/languages/twig_translation.php:20
 msgid "Click here for recovery your password"
 msgstr "برای بازیابی کلمه عبور کلیک کنید"
 
-#: includes/languages/trans_addons.php:15 includes/languages/trans_twig.php:107
+#: includes/languages/trans_addons.php:15 includes/languages/trans_twig.php:108
 #: includes/languages/twig_translation.php:21
 msgid "Can't access your account?"
 msgstr "نمی توانید به حساب خود وارد شوید؟"
 
-#: includes/languages/trans_addons.php:16 includes/languages/trans_twig.php:108
+#: includes/languages/trans_addons.php:16 includes/languages/trans_twig.php:109
 #: includes/languages/twig_translation.php:22
 msgid "Don't have an account?"
 msgstr "اکانت ندارید؟"
 
-#: includes/languages/trans_addons.php:17 includes/languages/trans_twig.php:109
+#: includes/languages/trans_addons.php:17 includes/languages/trans_twig.php:110
 #: includes/languages/twig_translation.php:23
 msgid "Click here to create an account"
 msgstr "برای ساخت اکانت کلیک کنید"
 
-#: includes/languages/trans_addons.php:18 includes/languages/trans_twig.php:110
+#: includes/languages/trans_addons.php:18 includes/languages/trans_twig.php:111
 #: includes/languages/twig_translation.php:24
 msgid "Sign Up"
 msgstr "ثبت نام"
@@ -2810,21 +2810,14 @@ msgid "Maybe tomorrow you hear more about our works!"
 msgstr "شاید فردا در مورد کارهای ما بیشتر بشنوید!"
 
 #: includes/languages/trans_twig.php:29
-msgid "Be a member of <strong>Ermile</strong>"
-msgstr "همکار ما در <strong>ارمایل</strong> شوید"
+msgid "Ermile Jobs"
+msgstr "فرصت‌های شغلی ارمایل"
 
 #: includes/languages/trans_twig.php:30
-msgid "<strong>Ermile</strong> Benefits"
-msgstr "مزایای <strong>ارمایل</strong>"
+msgid "Be a member of Ermile"
+msgstr "همکار ما در ارمایل شوید"
 
 #: includes/languages/trans_twig.php:31
-msgid ""
-"Choosing the best place as a job is most important for professional people."
-msgstr ""
-"انتخاب یک گزینه مناسب برای محل کار کردن، برای افراد متخصص و دقیق بسیار مهم "
-"است."
-
-#: includes/languages/trans_twig.php:32
 msgid ""
 "Ermile team which is made by young proficient people, pleasant environment, "
 "dynamic and energetic sincere motivate for those who are interested at co-"
@@ -2833,11 +2826,26 @@ msgstr ""
 "ارمایل با تیمی متشکل از متخصصان جوان و نخبه، با محیطی شاداب، پویا و صمیمی "
 "علاقمند به همکاری با متخصصان با ‌انگیزه است."
 
+#: includes/languages/trans_twig.php:32
+msgid "Be a member of <strong>Ermile</strong>"
+msgstr "همکار ما در <strong>ارمایل</strong> شوید"
+
 #: includes/languages/trans_twig.php:33
+msgid "<strong>Ermile</strong> Benefits"
+msgstr "مزایای <strong>ارمایل</strong>"
+
+#: includes/languages/trans_twig.php:34
+msgid ""
+"Choosing the best place as a job is most important for professional people."
+msgstr ""
+"انتخاب یک گزینه مناسب برای محل کار کردن، برای افراد متخصص و دقیق بسیار مهم "
+"است."
+
+#: includes/languages/trans_twig.php:35
 msgid "Teamwork"
 msgstr "کار گروهی"
 
-#: includes/languages/trans_twig.php:34
+#: includes/languages/trans_twig.php:36
 msgid ""
 "Working as a team helps in quickly improvement of work and also easily "
 "figuring out a problem."
@@ -2845,11 +2853,11 @@ msgstr ""
 "گروهی کار کردن باعث سرعت گرفتن پیشرفت کارها و همچنین راحت‌تر حل شدن مشکلات "
 "می‌شود."
 
-#: includes/languages/trans_twig.php:35
+#: includes/languages/trans_twig.php:37
 msgid "Free working hours"
 msgstr "ساعت کاری انعطاف‌پذیر"
 
-#: includes/languages/trans_twig.php:36
+#: includes/languages/trans_twig.php:38
 msgid ""
 "There is no any restriction about working hours. You can work every day for "
 "the whole week including Fridays and holidays from morning till night."
@@ -2857,11 +2865,11 @@ msgstr ""
 "هیچ محدودیتی برای ساعت کاری وجود ندارد! شما می‌توانید هر روز از هر ساعتی از "
 "صبح تا شب می‌توانید کار کنید."
 
-#: includes/languages/trans_twig.php:37
+#: includes/languages/trans_twig.php:39
 msgid "Exciting work environment"
 msgstr "محیط کاری شاد"
 
-#: includes/languages/trans_twig.php:38
+#: includes/languages/trans_twig.php:40
 msgid ""
 "You can work with talented and friendly group of people in a cheerful and "
 "dynamic environment of Ermile"
@@ -2869,11 +2877,11 @@ msgstr ""
 "محیط شاد و پویای ارمایل و همکاری با افراد شاداب باعث می‌شود شما از کار در این "
 "فضا لذت ببرید."
 
-#: includes/languages/trans_twig.php:39
+#: includes/languages/trans_twig.php:41
 msgid "Specialist Team"
 msgstr "تیم متخصص"
 
-#: includes/languages/trans_twig.php:40
+#: includes/languages/trans_twig.php:42
 msgid ""
 "Our experience that made of working with Specialist people cause perfect "
 "feeling in our team."
@@ -2881,27 +2889,27 @@ msgstr ""
 "کار کردن با تیم متخصص و با تجربه باعث رشد و پیشرفت سریع‌تر کارها و ایجاد حس "
 "خوب در تمام اعضا می‌شود."
 
-#: includes/languages/trans_twig.php:41
+#: includes/languages/trans_twig.php:43
 msgid "Lofty goals"
 msgstr "هدف های بزرگ"
 
-#: includes/languages/trans_twig.php:42
+#: includes/languages/trans_twig.php:44
 msgid ""
 "Having high and lofty goals are the main reasons for rapid progress of any "
 "company."
 msgstr "داشتن هدف‌های بزرگ مهمترین عامل پیشرفت یک مجموعه است."
 
-#: includes/languages/trans_twig.php:43
+#: includes/languages/trans_twig.php:45
 msgid "A pleasant green environment"
 msgstr "محیط کاری سبز"
 
-#: includes/languages/trans_twig.php:44
+#: includes/languages/trans_twig.php:46
 msgid ""
 "Your working environment will have a great impact and effect on your mind."
 msgstr ""
 "محیطی که شما در آن مشغول به کار هستید تأثیر زیادی بر روحیه شما خواهد گذاشت. "
 
-#: includes/languages/trans_twig.php:45
+#: includes/languages/trans_twig.php:47
 msgid ""
 "Green, beautiful and peaceful environment of Ermile makes you feel energetic, "
 "encouraged and at peace while you're at work."
@@ -2909,27 +2917,27 @@ msgstr ""
 "محیط کاری سبز و اداب و زیبای ارمایل باعث نشاط شما در هنگام حضور در محل کارتان "
 "می‌شود."
 
-#: includes/languages/trans_twig.php:46
+#: includes/languages/trans_twig.php:48
 msgid "Steps to join Ermile"
 msgstr "مراحل پیوستن به ارمایل"
 
-#: includes/languages/trans_twig.php:47
+#: includes/languages/trans_twig.php:49
 msgid "Send CV"
 msgstr "ارسال رزومه"
 
-#: includes/languages/trans_twig.php:48
+#: includes/languages/trans_twig.php:50
 msgid "Initial Interview"
 msgstr "بررسی و مصاحبه اولیه"
 
-#: includes/languages/trans_twig.php:49
+#: includes/languages/trans_twig.php:51
 msgid "Specialized Interview"
 msgstr "مصاحبه تخصصی"
 
-#: includes/languages/trans_twig.php:50
+#: includes/languages/trans_twig.php:52
 msgid "Final agreement"
 msgstr "قرارداد نهایی"
 
-#: includes/languages/trans_twig.php:51
+#: includes/languages/trans_twig.php:53
 msgid ""
 "Motive is the major factor for any person to be successful in work and that "
 "demands enthusiastic, keen and eager people that can help us reach our goal"
@@ -2937,7 +2945,7 @@ msgstr ""
 "انگیزه، محرک اصلی هر فرد برای پیش بردن کارهاست. ما نیز برای رسیدن به "
 "اهدافمان، نیاز به افراد با انگیزه داریم."
 
-#: includes/languages/trans_twig.php:52
+#: includes/languages/trans_twig.php:54
 msgid ""
 "Lofty projects need great thoughts and these great thoughts help us to reach "
 "valuable And huge goals."
@@ -2945,13 +2953,13 @@ msgstr ""
 "پروژه‌‌های بزرگ، نیازمند فکرهای بزرگ هستند و فکرهای بزرگ به اهداف بزرگ و "
 "ارزشمند می‌اندیشند."
 
-#: includes/languages/trans_twig.php:53
+#: includes/languages/trans_twig.php:55
 msgid ""
 "And that demands enthusiastic, keen and eager people that can help us reach "
 "our goal"
 msgstr "ما نیز برای رسیدن به اهدافمان، نیاز به افراد با انگیزه داریم."
 
-#: includes/languages/trans_twig.php:54
+#: includes/languages/trans_twig.php:56
 msgid ""
 "We all are always trying to make Ermile’s working environment as a pleasant, "
 "energetic and successful place for our team."
@@ -2959,26 +2967,26 @@ msgstr ""
 "همه‌ی ما همیشه سعی داریم که محیط کاری ارمایل یک محیط شاداب، پویا و بستر موفقیت "
 "اعضای تیم‌مان باشد."
 
-#: includes/languages/trans_twig.php:55
+#: includes/languages/trans_twig.php:57
 msgid ""
 "Working as a teamwork in Ermile helps us to acquire more power to reach our "
 "great aims."
 msgstr ""
 "ما در ارمایل با کار گروهی به قدرت بیشتری برای رسیدن به اهداف بزرگ می‌رسیم."
 
-#: includes/languages/trans_twig.php:56
+#: includes/languages/trans_twig.php:58
 msgid ""
 "Having creative and self-starter colleagues helps us to step quickly towards "
 "our goals."
 msgstr ""
 "داشتن همکارانی خلاق و مبتکر باعث سرعت گرفتن ما برای رسیدن به اهدافمان می‌گردد."
 
-#: includes/languages/trans_twig.php:57
+#: includes/languages/trans_twig.php:59
 msgid "Be a coworker who is ingenious cause us to do our project fast."
 msgstr ""
 "داشتن همکارانی خلاق و مبتکر باعث سرعت گرفتن ما برای رسیدن به اهدافمان می‌گردد."
 
-#: includes/languages/trans_twig.php:58
+#: includes/languages/trans_twig.php:60
 msgid ""
 "Age does not matter for us. Having the above qualities are enough to be a "
 "member of Email."
@@ -2986,7 +2994,7 @@ msgstr ""
 "سن کارمندان برای ما اهمیتی ندارد. داشتن ویژگی‌های فوق برای اضافه شدن به جمع "
 "ارمایل کافی است."
 
-#: includes/languages/trans_twig.php:59
+#: includes/languages/trans_twig.php:61
 msgid ""
 "Academic certificates are not important for us. Having a good and well "
 "knowledge about the related subject is enough for us."
@@ -2994,119 +3002,115 @@ msgstr ""
 "مدرک تحصیلی برای ما مهم نیست داشتن تخصص و دانش در موضوع مربوطه برای ما کافی "
 "است."
 
-#: includes/languages/trans_twig.php:60
+#: includes/languages/trans_twig.php:62
 msgid "Job opportunity in Ermile"
 msgstr "فرصت‌های شغلی در ارمایل"
 
-#: includes/languages/trans_twig.php:61
+#: includes/languages/trans_twig.php:63
 msgid "PHP developer"
 msgstr "متخصص پی‌اچ‌پی"
 
-#: includes/languages/trans_twig.php:62
+#: includes/languages/trans_twig.php:64
 msgid "JavaScript developer"
 msgstr "برنامه‌نویس جاوااسکریپت"
 
-#: includes/languages/trans_twig.php:63
+#: includes/languages/trans_twig.php:65
 msgid "Graphic Designer"
 msgstr "طراح گرافیک"
 
-#: includes/languages/trans_twig.php:64
+#: includes/languages/trans_twig.php:66
 msgid "Expert in PHP and ability to analyze the codes"
 msgstr "مسلط به پی‌اچ‌پی و توان تحلیل کد"
 
-#: includes/languages/trans_twig.php:65
+#: includes/languages/trans_twig.php:67
 msgid "Familiar with some PHP frameworks"
 msgstr "آشنا با چند فریم‌ورک‌های پی‌اچ‌پی"
 
-#: includes/languages/trans_twig.php:66
+#: includes/languages/trans_twig.php:68
 msgid "Familiar with OOP and MVC"
 msgstr "آشنا با برنامه‌نویسی شی‌گرا و ام‌وی‌سی"
 
-#: includes/languages/trans_twig.php:67
-msgid "Familiar with Database"
-msgstr "آشنا با دیتابیس"
-
-#: includes/languages/trans_twig.php:68
-msgid "Familiar with Git"
-msgstr "آشنا به گیت"
-
 #: includes/languages/trans_twig.php:69
-msgid "Creative and systematic"
-msgstr "خلاق و منظم"
-
-#: includes/languages/trans_twig.php:70
-msgid "Fall in love with Documentation"
-msgstr "علاقمند به تهیه مستندات"
-
-#: includes/languages/trans_twig.php:71
-msgid "Send cv"
-msgstr "ارسال رزومه"
-
-#: includes/languages/trans_twig.php:72
-msgid "Expert in Html, Css, JavaScript and ability to analyze codes"
-msgstr "مسلط به اچ‌تی‌ام‌ال و سی‌اس‌اس و جاوااسکریپت و توان تحلیل کد"
-
-#: includes/languages/trans_twig.php:73
-msgid "Familiar with JavaScript frameworks"
-msgstr "آشنا با فریم‌ورک‌های جاوااسکریپت"
-
-#: includes/languages/trans_twig.php:74
-msgid "Familiar with UX"
-msgstr "آشنا به تجربه‌کاربری"
-
-#: includes/languages/trans_twig.php:75
 msgid "Familiar with database"
 msgstr "آشنا به دیتابیس"
 
+#: includes/languages/trans_twig.php:70
+msgid "Familiar with Git"
+msgstr "آشنا به گیت"
+
+#: includes/languages/trans_twig.php:71
+msgid "Creative and systematic"
+msgstr "خلاق و منظم"
+
+#: includes/languages/trans_twig.php:72
+msgid "Fall in love with Documentation"
+msgstr "علاقمند به تهیه مستندات"
+
+#: includes/languages/trans_twig.php:73
+msgid "Send cv"
+msgstr "ارسال رزومه"
+
+#: includes/languages/trans_twig.php:74
+msgid "Expert in Html, Css, JavaScript and ability to analyze codes"
+msgstr "مسلط به اچ‌تی‌ام‌ال و سی‌اس‌اس و جاوااسکریپت و توان تحلیل کد"
+
+#: includes/languages/trans_twig.php:75
+msgid "Familiar with JavaScript frameworks"
+msgstr "آشنا با فریم‌ورک‌های جاوااسکریپت"
+
 #: includes/languages/trans_twig.php:76
+msgid "Familiar with UX"
+msgstr "آشنا به تجربه‌کاربری"
+
+#: includes/languages/trans_twig.php:77
 msgid "Ability of designing professionally(Logo and illustration)"
 msgstr "قدرت طراحی با دست عالی(لوگو و تصویرسازی)"
 
-#: includes/languages/trans_twig.php:77
+#: includes/languages/trans_twig.php:78
 msgid "Familiar with Adobe Photoshop"
 msgstr "آشنایی به نرم‌افزار ادوبی فتوشاپ"
 
-#: includes/languages/trans_twig.php:78
+#: includes/languages/trans_twig.php:79
 msgid "Familiar with Adobe Illustrator"
 msgstr "آشنایی به نرم‌افزار ادوبی ایلاستریتر"
 
-#: includes/languages/trans_twig.php:79
+#: includes/languages/trans_twig.php:80
 msgid "Familiar with essential traditional Iranian and Islamic art"
 msgstr "آشنا با مبانی هنرهای سنتی ایرانی و اسلامی"
 
-#: includes/languages/trans_twig.php:80
+#: includes/languages/trans_twig.php:81
 msgid "Familiar with graphic basics"
 msgstr "آشنا با مبانی گرافیک"
 
-#: includes/languages/trans_twig.php:81
+#: includes/languages/trans_twig.php:82
 msgid "Familiar with web and user interface"
 msgstr "آشنا با وب و رابط‌کاربری"
 
-#: includes/languages/trans_twig.php:82
+#: includes/languages/trans_twig.php:83
 msgid "Familiar with color"
 msgstr "آشنا به رنگ"
 
-#: includes/languages/trans_twig.php:83
+#: includes/languages/trans_twig.php:84
 msgid "Be sure your CV must contain...!"
 msgstr "حتما می‌دانید رزومه باید...!"
 
-#: includes/languages/trans_twig.php:84
+#: includes/languages/trans_twig.php:85
 msgid ""
 "Kindly mention your contact number properly so we can contact you easily."
 msgstr ""
 "اطلاعات تماس خود را ذکر کنید، تا برای تماس با شما مشکلی وجود نداشته باشد!"
 
-#: includes/languages/trans_twig.php:85
+#: includes/languages/trans_twig.php:86
 msgid "Don’t forget your social network links especially LinkedIn."
 msgstr "لینک شبکه‌های اجتماعی خود، خصوصا لینکداین برای حرفه‌ای‌ها فراموش نشود!"
 
-#: includes/languages/trans_twig.php:86
+#: includes/languages/trans_twig.php:87
 msgid ""
 "It’s better if your CV is in one page and be sure it should not be more than "
 "3 pages."
 msgstr "بهتر است رزومه در یک صفحه تنظیم شود و در نهایت بیشتر از سه صفحه نشود!"
 
-#: includes/languages/trans_twig.php:87
+#: includes/languages/trans_twig.php:88
 msgid ""
 "Writing about your experience and your skills in your CV helps us to check "
 "your CV properly and hastily."
@@ -3114,54 +3118,54 @@ msgstr ""
 "نوشتن سوابق‌کاری و مهارت‌هایتان در رزومه، به ما در بررسی بهتر و سریع‌تر رزومه "
 "شما کمک می‌کند!"
 
-#: includes/languages/trans_twig.php:88
+#: includes/languages/trans_twig.php:89
 msgid ""
 "If you have any work experience, kindly provide complete information about it "
 "in your CV."
 msgstr "در صورت داشتن سابقه‌کار، آدرس یا نمونه‌ای از آن را در رزومه ذکر کنید!"
 
-#: includes/languages/trans_twig.php:89
+#: includes/languages/trans_twig.php:90
 msgid "Be sure to mention your personal information, picture and Interests."
 msgstr "اطلاعات شخصی، عکس و علایق خود را حتما ذکر کنید!"
 
-#: includes/languages/trans_twig.php:90
+#: includes/languages/trans_twig.php:91
 msgid ""
 "Please note down your CV with a suitable font and it should be in pdf file."
 msgstr "رزومه را با فونت مناسب بنویسید و فایل ارسالی حتما باید پی‌دی‌اف باشد!"
 
-#: includes/languages/trans_twig.php:91
+#: includes/languages/trans_twig.php:92
 msgid "Kindly register your Information"
 msgstr "لطفا اطلاعات خود را وارد کنید"
 
-#: includes/languages/trans_twig.php:94
+#: includes/languages/trans_twig.php:95
 msgid "Creating the best!"
 msgstr "ساخت بهترین‌ها!"
 
-#: includes/languages/trans_twig.php:97
+#: includes/languages/trans_twig.php:98
 msgid "Create all of our idea"
 msgstr "ساخت تمام ایده‌هایمان"
 
-#: includes/languages/trans_twig.php:102
+#: includes/languages/trans_twig.php:103
 #: includes/languages/twig_translation.php:14
 msgid "Ermile is our brand"
 msgstr "ارمایل نام برند ماست"
 
-#: includes/languages/trans_twig.php:103
+#: includes/languages/trans_twig.php:104
 #: includes/languages/twig_translation.php:15
 msgid "Experience our service in your language"
 msgstr "سرویس های ما را با زبان اصلی خودتان تجربه کنید"
 
-#: includes/languages/trans_twig.php:117
+#: includes/languages/trans_twig.php:118
 #: includes/languages/twig_translation.php:31
 msgid "terms of service"
 msgstr "قوانین استفاده"
 
-#: includes/languages/trans_twig.php:118
+#: includes/languages/trans_twig.php:119
 #: includes/languages/twig_translation.php:32
 msgid "by signing up, you agree to the"
 msgstr "با ثبت نام شما موافق هستید با"
 
-#: includes/languages/trans_twig.php:124
+#: includes/languages/trans_twig.php:125
 #: includes/languages/twig_translation.php:38
 msgid "receive message callback!"
 msgstr "دریافت پیامک"
@@ -3209,6 +3213,9 @@ msgstr "یک اکانت برای دسترسی به همه سرویس ها"
 #: includes/mvc/view.php:13
 msgid "Ermile is inteligent"
 msgstr "ارمایل باهوش است!"
+
+#~ msgid "Familiar with Database"
+#~ msgstr "آشنا با دیتابیس"
 
 #~ msgid "Familiar with the best new UI"
 #~ msgstr "آشنا با "
