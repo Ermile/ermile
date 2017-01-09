@@ -6,8 +6,12 @@
 {%endblock%}
 
 {%block foot_js%}
-
  <script src="{{url.static}}careers/js/script.js"></script>
+ <script type="text/javascript">
+   $('#opportunity .titles li').click(function(){
+    $('#resume-type').val($(this).attr('data-tab'))
+   });
+ </script>
 {%endblock%}
 
 
@@ -22,7 +26,7 @@
 
 
 {%block content%}
-    
+
   {%if file_list%}
     {{block('list')}}
   {%else%}
@@ -39,7 +43,7 @@
     number: {{value.number}} <br>
     date: {{value.date|jdate()}}</li>
     {%endfor%}
-  
+
 </ul>
 {%endblock%}
 
@@ -244,7 +248,7 @@
        <p>{%trans "Familiar with Git"%}</p>
        <p>{%trans "Creative and systematic"%}</p>
        <p>{%trans "Fall in love with Documentation"%}</p>
-       <button class="go_btn" data-modal="resume-send">{%trans "Send cv"%}</button>
+       <button class="go_btn" data-modal="resume-send" data-data='php'>{%trans "Send cv"%}</button>
       </li>
       <li data-tab="js">
        <p>{%trans "Expert in Html, Css, JavaScript and ability to analyze codes"%}</p>
@@ -254,7 +258,7 @@
        <p>{%trans "Familiar with Git"%}</p>
        <p>{%trans "Creative and systematic"%}</p>
        <p>{%trans "Fall in love with Documentation"%}</p>
-       <button class="go_btn" data-modal="resume-send">{%trans "Send cv"%}</button>
+       <button class="go_btn" data-modal="resume-send" data-data='js'>{%trans "Send cv"%}</button>
       </li>
       <li data-tab="graphic">
        <p>{%trans "Ability of designing professionally(Logo and illustration)"%}</p>
@@ -265,7 +269,7 @@
        <p>{%trans "Familiar with web and user interface"%}</p>
        <p>{%trans "Familiar with color"%}</p>
        <p>{%trans "Creative and systematic"%}</p>
-       <button class="go_btn" data-modal="resume-send">{%trans "Send cv"%}</button>
+       <button class="go_btn" data-modal="resume-send" data-data='graphic'>{%trans "Send cv"%}</button>
       </li>
      </ul>
     </div>
@@ -332,12 +336,12 @@
   <form method="post" class='modal-body'>
    <h3 class='modal-title'>{%trans "Kindly register your Information"%}</h3>
    <img src="{{url.static}}careers/images/svg/error.svg" class="close" data-cancel>
-   <input type="text" name="name" placeholder="{%trans 'Name'%}">
-   <input type="number" name="number" placeholder="{%trans 'Contact number'%}">
+   <input type="text" name="name" placeholder='{%trans "Name"%}'' maxlength="20">
+   <input type="number" name="number" placeholder='{%trans "Contact number"%}' min="11" max="11">
    <input type="file" name="file" id="file" />
-   <label class="custom-file-upload" for="file"><strong>{%trans 'Upload CV'%}</strong></label>
-   <input type="text" name="type" value="php">
-   <input type="submit" name="send-resume" value="{%trans 'Send your Information'%}">
+   <label class="custom-file-upload" for="file"><strong>{%trans "Upload CV"%}</strong></label>
+   <input type="hidden" name="type" id="resume-type" value="">
+   <input type="submit" name="send-resume" value='{%trans "Send your Information"%}'>
   </form>
  </div>
  </div>

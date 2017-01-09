@@ -2,6 +2,78 @@
 private function transtext()
 {
 
+	//----------------------------------------------------content\careers\display.html
+	echo T_("Ermile Jobs");                                                           // Line 20
+	echo T_("Be a member of Ermile");                                                 // Line 24
+	echo T_("Ermile team which is made by young proficient people, pleasant environment, dynamic and energetic sincere motivate for those who are interested at co-operate.");// Line 62
+	echo T_("Be a member of <strong>Ermile</strong>");                                // Line 52
+	echo T_("<strong>Ermile</strong> Benefits");                                      // Line 60
+	echo T_("Choosing the best place as a job is most important for professional people.");// Line 61
+	echo T_("Teamwork");                                                              // Line 70
+	echo T_("Working as a team helps in quickly improvement of work and also easily figuring out a problem.");// Line 71
+	echo T_("Free working hours");                                                    // Line 79
+	echo T_("There is no any restriction about working hours. You can work every day for the whole week including Fridays and holidays from morning till night.");// Line 80
+	echo T_("Exciting work environment");                                             // Line 88
+	echo T_("You can work with talented and friendly group of people in a cheerful and dynamic environment of Ermile");// Line 89
+	echo T_("Specialist Team");                                                       // Line 97
+	echo T_("Our experience that made of working with Specialist people cause perfect feeling in our team.");// Line 98
+	echo T_("Lofty goals");                                                           // Line 106
+	echo T_("Having high and lofty goals are the main reasons for rapid progress of any company.");// Line 107
+	echo T_("A pleasant green environment");                                          // Line 115
+	echo T_("Your working environment will have a great impact and effect on your mind.");// Line 116
+	echo T_("Green, beautiful and peaceful environment of Ermile makes you feel energetic, encouraged and at peace while you're at work.");// Line 116
+	echo T_("Steps to join Ermile");                                                  // Line 132
+	echo T_("Send CV");                                                               // Line 138
+	echo T_("Initial Interview");                                                     // Line 147
+	echo T_("Specialized Interview");                                                 // Line 160
+	echo T_("Final agreement");                                                       // Line 169
+	echo T_("Motive is the major factor for any person to be successful in work and that demands enthusiastic, keen and eager people that can help us reach our goal");// Line 191
+	echo T_("Lofty projects need great thoughts and these great thoughts help us to reach valuable And huge goals.");// Line 194
+	echo T_("And that demands enthusiastic, keen and eager people that can help us reach our goal");// Line 194
+	echo T_("We all are always trying to make Ermile’s working environment as a pleasant, energetic and successful place for our team.");// Line 197
+	echo T_("Working as a teamwork in Ermile helps us to acquire more power to reach our great aims.");// Line 200
+	echo T_("Having creative and self-starter colleagues helps us to step quickly towards our goals.");// Line 203
+	echo T_("Be a coworker who is ingenious cause us to do our project fast.");       // Line 206
+	echo T_("Age does not matter for us. Having the above qualities are enough to be a member of Email.");// Line 219
+	echo T_("Academic certificates are not important for us. Having a good and well knowledge about the related subject is enough for us.");// Line 222
+	echo T_("Job opportunity in Ermile");                                             // Line 234
+	echo T_("PHP developer");                                                         // Line 235
+	echo T_("JavaScript developer");                                                  // Line 236
+	echo T_("Graphic Designer");                                                      // Line 237
+	echo T_("Expert in PHP and ability to analyze the codes");                        // Line 244
+	echo T_("Familiar with some PHP frameworks");                                     // Line 245
+	echo T_("Familiar with OOP and MVC");                                             // Line 246
+	echo T_("Familiar with database");                                                // Line 257
+	echo T_("Familiar with Git");                                                     // Line 258
+	echo T_("Creative and systematic");                                               // Line 271
+	echo T_("Fall in love with Documentation");                                       // Line 260
+	echo T_("Send cv");                                                               // Line 272
+	echo T_("Expert in Html, Css, JavaScript and ability to analyze codes");          // Line 254
+	echo T_("Familiar with JavaScript frameworks");                                   // Line 255
+	echo T_("Familiar with UX");                                                      // Line 256
+	echo T_("Ability of designing professionally(Logo and illustration)");            // Line 264
+	echo T_("Familiar with Adobe Photoshop");                                         // Line 265
+	echo T_("Familiar with Adobe Illustrator");                                       // Line 266
+	echo T_("Familiar with essential traditional Iranian and Islamic art");           // Line 267
+	echo T_("Familiar with graphic basics");                                          // Line 268
+	echo T_("Familiar with web and user interface");                                  // Line 269
+	echo T_("Familiar with color");                                                   // Line 270
+	echo T_("Be sure your CV must contain...!");                                      // Line 286
+	echo T_("Kindly mention your contact number properly so we can contact you easily.");// Line 291
+	echo T_("Don’t forget your social network links especially LinkedIn.");         // Line 292
+	echo T_("It’s better if your CV is in one page and be sure it should not be more than 3 pages.");// Line 293
+	echo T_("Writing about your experience and your skills in your CV helps us to check your CV properly and hastily.");// Line 294
+	echo T_("If you have any work experience, kindly provide complete information about it in your CV.");// Line 295
+	echo T_("Be sure to mention your personal information, picture and Interests.");  // Line 296
+	echo T_("Please note down your CV with a suitable font and it should be in pdf file.");// Line 297
+	echo T_("#614, Omranieh, Moallem St, Qom, Iran");                                 // Line 19 Seperate
+	echo T_("+98 25 3773 5183");                                                      // Line 19 Seperate
+	echo T_("Kindly register your Information");                                      // Line 337
+	echo T_("Name");                                                                  // Line 339
+	echo T_("Contact number");                                                        // Line 340
+	echo T_("Upload CV");                                                             // Line 342
+	echo T_("Send your Information");                                                 // Line 344
+
 	//---------------------------------------------------content\home\display-xhr.html
 	echo T_("Home");                                                                  // Line 4
 	echo T_("About Ermile");                                                          // Line 16
@@ -22,74 +94,6 @@ private function transtext()
 	echo T_("Sarshomar");                                                             // Line 15 Seperate
 	echo T_("Saloos");                                                                // Line 16 Seperate
 	echo T_("DeadBrowser");                                                           // Line 17 Seperate
-	echo T_("#614, Omranieh, Moallem St, Qom, Iran");                                 // Line 291
-	echo T_("+98 25 3773 5183");                                                      // Line 293
-
-	//--------------------------------------------content\template\static\careers.html
-	echo T_("Ermile Jobs");                                                           // Line 16
-	echo T_("Be a member of Ermile");                                                 // Line 20
-	echo T_("Ermile team which is made by young proficient people, pleasant environment, dynamic and energetic sincere motivate for those who are interested at co-operate.");// Line 36
-	echo T_("Be a member of <strong>Ermile</strong>");                                // Line 26
-	echo T_("<strong>Ermile</strong> Benefits");                                      // Line 34
-	echo T_("Choosing the best place as a job is most important for professional people.");// Line 35
-	echo T_("Teamwork");                                                              // Line 44
-	echo T_("Working as a team helps in quickly improvement of work and also easily figuring out a problem.");// Line 45
-	echo T_("Free working hours");                                                    // Line 53
-	echo T_("There is no any restriction about working hours. You can work every day for the whole week including Fridays and holidays from morning till night.");// Line 54
-	echo T_("Exciting work environment");                                             // Line 62
-	echo T_("You can work with talented and friendly group of people in a cheerful and dynamic environment of Ermile");// Line 63
-	echo T_("Specialist Team");                                                       // Line 71
-	echo T_("Our experience that made of working with Specialist people cause perfect feeling in our team.");// Line 72
-	echo T_("Lofty goals");                                                           // Line 80
-	echo T_("Having high and lofty goals are the main reasons for rapid progress of any company.");// Line 81
-	echo T_("A pleasant green environment");                                          // Line 89
-	echo T_("Your working environment will have a great impact and effect on your mind.");// Line 90
-	echo T_("Green, beautiful and peaceful environment of Ermile makes you feel energetic, encouraged and at peace while you're at work.");// Line 90
-	echo T_("Steps to join Ermile");                                                  // Line 106
-	echo T_("Send CV");                                                               // Line 112
-	echo T_("Initial Interview");                                                     // Line 121
-	echo T_("Specialized Interview");                                                 // Line 134
-	echo T_("Final agreement");                                                       // Line 143
-	echo T_("Motive is the major factor for any person to be successful in work and that demands enthusiastic, keen and eager people that can help us reach our goal");// Line 165
-	echo T_("Lofty projects need great thoughts and these great thoughts help us to reach valuable And huge goals.");// Line 168
-	echo T_("And that demands enthusiastic, keen and eager people that can help us reach our goal");// Line 168
-	echo T_("We all are always trying to make Ermile’s working environment as a pleasant, energetic and successful place for our team.");// Line 171
-	echo T_("Working as a teamwork in Ermile helps us to acquire more power to reach our great aims.");// Line 174
-	echo T_("Having creative and self-starter colleagues helps us to step quickly towards our goals.");// Line 177
-	echo T_("Be a coworker who is ingenious cause us to do our project fast.");       // Line 180
-	echo T_("Age does not matter for us. Having the above qualities are enough to be a member of Email.");// Line 193
-	echo T_("Academic certificates are not important for us. Having a good and well knowledge about the related subject is enough for us.");// Line 196
-	echo T_("Job opportunity in Ermile");                                             // Line 208
-	echo T_("PHP developer");                                                         // Line 209
-	echo T_("JavaScript developer");                                                  // Line 210
-	echo T_("Graphic Designer");                                                      // Line 211
-	echo T_("Expert in PHP and ability to analyze the codes");                        // Line 218
-	echo T_("Familiar with some PHP frameworks");                                     // Line 219
-	echo T_("Familiar with OOP and MVC");                                             // Line 220
-	echo T_("Familiar with database");                                                // Line 231
-	echo T_("Familiar with Git");                                                     // Line 232
-	echo T_("Creative and systematic");                                               // Line 245
-	echo T_("Fall in love with Documentation");                                       // Line 234
-	echo T_("Send cv");                                                               // Line 246
-	echo T_("Expert in Html, Css, JavaScript and ability to analyze codes");          // Line 228
-	echo T_("Familiar with JavaScript frameworks");                                   // Line 229
-	echo T_("Familiar with UX");                                                      // Line 230
-	echo T_("Ability of designing professionally(Logo and illustration)");            // Line 238
-	echo T_("Familiar with Adobe Photoshop");                                         // Line 239
-	echo T_("Familiar with Adobe Illustrator");                                       // Line 240
-	echo T_("Familiar with essential traditional Iranian and Islamic art");           // Line 241
-	echo T_("Familiar with graphic basics");                                          // Line 242
-	echo T_("Familiar with web and user interface");                                  // Line 243
-	echo T_("Familiar with color");                                                   // Line 244
-	echo T_("Be sure your CV must contain...!");                                      // Line 260
-	echo T_("Kindly mention your contact number properly so we can contact you easily.");// Line 265
-	echo T_("Don’t forget your social network links especially LinkedIn.");         // Line 266
-	echo T_("It’s better if your CV is in one page and be sure it should not be more than 3 pages.");// Line 267
-	echo T_("Writing about your experience and your skills in your CV helps us to check your CV properly and hastily.");// Line 268
-	echo T_("If you have any work experience, kindly provide complete information about it in your CV.");// Line 269
-	echo T_("Be sure to mention your personal information, picture and Interests.");  // Line 270
-	echo T_("Please note down your CV with a suitable font and it should be in pdf file.");// Line 271
-	echo T_("Kindly register your Information");                                      // Line 311
 
 	//--------------------------------------------content\template\static\mission.html
 	echo T_("Creating the best!");                                                    // Line 4 Seperate

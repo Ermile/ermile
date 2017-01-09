@@ -41,7 +41,6 @@ function has_class(_this , _class){
 }
 
 function get_class(_this){
-  console.log(_this);
   var classnames = _this.getAttribute('class');
   return classnames.split(" ");
 }
@@ -119,7 +118,6 @@ var addClass = function ( ev, obj, state ) {
     var direction = getDirection( ev, obj ),
         class_suffix = "";
     obj.className = "";
-console.log(direction);
     switch ( direction ) {
         case 0 : class_suffix = '-top';    break;
         case 1 : class_suffix = '-right';  break;
