@@ -47,28 +47,29 @@ class model extends \mvc\model
 			utility\file::makeDir($url);
 		}
 		$url = $url. '/';
-		$url .= $type. '_'. $number. '_'; 
+		$url .= $type. '_'. $number. '_';
 		$url .= utility\filter::slug($name). '_';
-		$url .= utility\filter::slug(utility::files("file")['name']);
-		
+		$url .= '['.utility\filter::slug(utility::files("file")['name']).']';
+
 		$path = utility\file::getName(utility::files("file")['name']);
 		$path = explode('.', $path);
 		$path = end($path);
-		
+
 		$extentionsDisallow = ['php', 'php5', 'htaccess', 'exe', 'bat', 'bin'];
-		if(in_array($path, $extentionsDisallow))
+		// if(in_array($path, $extentionsDisallow))
+		if($path !== 'pdf')
 		{
-			return debug::error(T_("Can not upload this file"));
+			return debug::error(T_("Can not upload this file! only PDF:/"));
 		}
 
 		$url = str_replace('-'. $path, '', $url);
 		$url .= '.'. $path;
 
 		if(isset(utility::files("file")['tmp_name']))
-		{	
+		{
 			if(move_uploaded_file(utility::files("file")['tmp_name'], $url))
 			{
-				return debug::true(T_("Tank you for upload CV file"));
+				return debug::true(T_("Thank you. Wait for our call"));
 			}
 			else
 			{
@@ -80,11 +81,11 @@ class model extends \mvc\model
 	public function get_list($_args)
 	{
 		$file_list = [];
-		if (is_dir(self::$url)) 
+		if (is_dir(self::$url))
 		{
-		    if ($dh = opendir(self::$url)) 
+		    if ($dh = opendir(self::$url))
 		    {
-		        while (($file = readdir($dh)) !== false) 
+		        while (($file = readdir($dh)) !== false)
 		        {
 		        	if($file == '.' || $file == '..')
 		        	{
@@ -102,9 +103,9 @@ class model extends \mvc\model
 		        		$number = $split[1];
 		        	}
 
-		            $file_list[] = 
+		            $file_list[] =
 		            [
-						'name'   => $file, 
+						'name'   => $file,
 						'type'   => $type,
 						'number' => $number,
 						'date'   => date("Y-m-d H:i:s", filemtime(self::$url. '/'. $file)),
@@ -115,7 +116,7 @@ class model extends \mvc\model
 		    }
 		}
 		return $file_list;
-		
+
 	}
 }
 ?>

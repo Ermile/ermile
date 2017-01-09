@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile - Persian\n"
-"POT-Creation-Date: 2017-01-09 18:42+0330\n"
-"PO-Revision-Date: 2017-01-09 18:42+0330\n"
+"POT-Creation-Date: 2017-01-09 19:11+0330\n"
+"PO-Revision-Date: 2017-01-09 19:12+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.8.3\n"
 "X-Poedit-Basepath: ../../../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -21,35 +21,35 @@ msgstr ""
 
 #: content/careers/model.php:19
 msgid "Type not found"
-msgstr ""
+msgstr "نوع یافت نشد"
 
 #: content/careers/model.php:23
 msgid "Contact number not set"
-msgstr ""
+msgstr "شماره موبایل وارد نشده است"
 
 #: content/careers/model.php:27
 msgid "Contact number must be number"
-msgstr ""
+msgstr "موبایل باید شماره باشد!"
 
 #: content/careers/model.php:31
 msgid "Contact number must 11 character"
-msgstr ""
+msgstr "موبایل باید حداقل ۱۱ کاراکتر باشد"
 
 #: content/careers/model.php:41
 msgid "You must upload a CV file"
-msgstr ""
+msgstr "شما باید فایل روزمه را ضمیمه کنید"
 
-#: content/careers/model.php:61
-msgid "Can not upload this file"
-msgstr ""
+#: content/careers/model.php:62
+msgid "Can not upload this file! only PDF:/"
+msgstr "نمی‌توانیم این فایل را بارگذاری کنیم! فقط پی‌دی‌اف :/"
 
-#: content/careers/model.php:71
-msgid "Tank you for upload CV file"
-msgstr ""
+#: content/careers/model.php:72
+msgid "Thank you. Wait for our call"
+msgstr "سپاسگزاریم. منتظر تماس ما بمانید"
 
-#: content/careers/model.php:75
+#: content/careers/model.php:76
 msgid "We could not upload CV file"
-msgstr ""
+msgstr "ما نمی‌توانیم فایل شما را آپلود کنیم"
 
 #: content_account2/changepass/model.php:18
 #: includes/languages/trans_addons.php:497
@@ -129,7 +129,7 @@ msgstr "لطفا این پیغام را برای مدیر سیستم ارسال 
 
 #: content_account2/recovery/model.php:38 content_account2/signup/model.php:51
 #: includes/languages/trans_addon.php:15 includes/languages/trans_addons.php:30
-#: includes/languages/trans_twig.php:132
+#: includes/languages/trans_twig.php:134
 #: includes/languages/twig_translation.php:41
 msgid "we send a verification code for you"
 msgstr "ما کد اعتبارسنجی را برای شما ارسال خواهیم کرد"
@@ -657,7 +657,7 @@ msgstr "بین ۵ تا ۴۰ کاراکتر. در انتخاب کلمه عبور 
 #: includes/languages/static_translation.php:6
 #: includes/languages/static_translation.php:92
 #: includes/languages/trans_addon.php:46 includes/languages/trans_addons.php:77
-#: includes/languages/trans_twig.php:95
+#: includes/languages/trans_twig.php:97
 msgid "Saloos"
 msgstr "سالوس"
 
@@ -1024,23 +1024,23 @@ msgid "Vision"
 msgstr "چشم‌انداز"
 
 #: includes/languages/static_translation.php:87
-#: includes/languages/trans_twig.php:91
+#: includes/languages/trans_twig.php:93
 #: includes/languages/twig_translation.php:11
 msgid "Talambar"
 msgstr "تلمبار"
 
 #: includes/languages/static_translation.php:88
-#: includes/languages/trans_twig.php:92
+#: includes/languages/trans_twig.php:94
 msgid "Jibres"
 msgstr "جیبرس"
 
 #: includes/languages/static_translation.php:89
-#: includes/languages/trans_twig.php:93
+#: includes/languages/trans_twig.php:95
 msgid "Azvir"
 msgstr "ازویر"
 
 #: includes/languages/static_translation.php:90
-#: includes/languages/trans_twig.php:94
+#: includes/languages/trans_twig.php:96
 msgid "Sarshomar"
 msgstr "سرشمار"
 
@@ -1049,7 +1049,7 @@ msgid "Linkres"
 msgstr "لینکرس"
 
 #: includes/languages/static_translation.php:93
-#: includes/languages/trans_twig.php:96
+#: includes/languages/trans_twig.php:98
 msgid "DeadBrowser"
 msgstr "ددبروزر"
 
@@ -1092,55 +1092,55 @@ msgid "+98 25 3773 5183"
 msgstr "۵۱۸۳ ۳۷۷۳ ۰۲۵"
 
 #: includes/languages/trans_addon.php:6 includes/languages/trans_addons.php:21
-#: includes/languages/trans_twig.php:118
+#: includes/languages/trans_twig.php:120
 #: includes/languages/twig_translation.php:27
 msgid "click here to login to your account"
 msgstr "برای ورود به اکانت خود کلیک کنید"
 
 #: includes/languages/trans_addon.php:7 includes/languages/trans_addons.php:22
-#: includes/languages/trans_twig.php:119
+#: includes/languages/trans_twig.php:121
 #: includes/languages/twig_translation.php:28
 msgid "are you remember your password!?"
 msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
 
 #: includes/languages/trans_addon.php:10 includes/languages/trans_addons.php:25
-#: includes/languages/trans_twig.php:124
+#: includes/languages/trans_twig.php:126
 #: includes/languages/twig_translation.php:33
 msgid "already have an account?"
 msgstr "اکانت دارید؟"
 
 #: includes/languages/trans_addon.php:11 includes/languages/trans_addons.php:26
-#: includes/languages/trans_twig.php:125
+#: includes/languages/trans_twig.php:127
 #: includes/languages/twig_translation.php:34
 msgid "click here to sign in to your account"
 msgstr "برای ورود به اکانت خود کلیک کنید"
 
 #: includes/languages/trans_addon.php:12 includes/languages/trans_addons.php:27
-#: includes/languages/trans_twig.php:126
+#: includes/languages/trans_twig.php:128
 #: includes/languages/twig_translation.php:35
 msgid "Sign In"
 msgstr "ورود به سیستم"
 
 #: includes/languages/trans_addon.php:16 includes/languages/trans_addons.php:31
-#: includes/languages/trans_twig.php:133
+#: includes/languages/trans_twig.php:135
 #: includes/languages/twig_translation.php:42
 msgid "please check your mobile and enter the code"
 msgstr "پس از بررسی موبایل خود کد را وارد کنید"
 
 #: includes/languages/trans_addon.php:17 includes/languages/trans_addons.php:32
-#: includes/languages/trans_twig.php:134
+#: includes/languages/trans_twig.php:136
 #: includes/languages/twig_translation.php:43
 msgid "don't receive message?"
 msgstr "هنوز پیامک ما را دریافت نکردید؟"
 
 #: includes/languages/trans_addon.php:20 includes/languages/trans_addons.php:35
-#: includes/languages/trans_twig.php:137
+#: includes/languages/trans_twig.php:139
 #: includes/languages/twig_translation.php:46
 msgid "Please send number <b>2015</b> to below number"
 msgstr "لطفا عدد <b>2015</b> را به شماره زیر پیامک کنید"
 
 #: includes/languages/trans_addon.php:21 includes/languages/trans_addons.php:36
-#: includes/languages/trans_twig.php:138
+#: includes/languages/trans_twig.php:140
 #: includes/languages/twig_translation.php:47
 msgid "Then wait we receive your message and verificate your account"
 msgstr ""
@@ -1467,27 +1467,27 @@ msgstr "جستجو"
 msgid "Work with Ermile in your own language"
 msgstr "ارمایل را با زبان خود تجربه کنید"
 
-#: includes/languages/trans_addons.php:14 includes/languages/trans_twig.php:111
+#: includes/languages/trans_addons.php:14 includes/languages/trans_twig.php:113
 #: includes/languages/twig_translation.php:20
 msgid "Click here for recovery your password"
 msgstr "برای بازیابی کلمه عبور کلیک کنید"
 
-#: includes/languages/trans_addons.php:15 includes/languages/trans_twig.php:112
+#: includes/languages/trans_addons.php:15 includes/languages/trans_twig.php:114
 #: includes/languages/twig_translation.php:21
 msgid "Can't access your account?"
 msgstr "نمی توانید به حساب خود وارد شوید؟"
 
-#: includes/languages/trans_addons.php:16 includes/languages/trans_twig.php:113
+#: includes/languages/trans_addons.php:16 includes/languages/trans_twig.php:115
 #: includes/languages/twig_translation.php:22
 msgid "Don't have an account?"
 msgstr "اکانت ندارید؟"
 
-#: includes/languages/trans_addons.php:17 includes/languages/trans_twig.php:114
+#: includes/languages/trans_addons.php:17 includes/languages/trans_twig.php:116
 #: includes/languages/twig_translation.php:23
 msgid "Click here to create an account"
 msgstr "برای ساخت اکانت کلیک کنید"
 
-#: includes/languages/trans_addons.php:18 includes/languages/trans_twig.php:115
+#: includes/languages/trans_addons.php:18 includes/languages/trans_twig.php:117
 #: includes/languages/twig_translation.php:24
 msgid "Sign Up"
 msgstr "ثبت نام"
@@ -3174,43 +3174,51 @@ msgstr "ماموریت ارمایل"
 msgid "Ermile Visions"
 msgstr "چشم‌انداز ارمایل"
 
-#: includes/languages/trans_twig.php:89
+#: includes/languages/trans_twig.php:85
+msgid "Ermile Careers"
+msgstr "فرصت‌های شغلی ارمایل"
+
+#: includes/languages/trans_twig.php:86
+msgid "Careers"
+msgstr "فرصت‌های شغلی"
+
+#: includes/languages/trans_twig.php:91
 msgid "Ermile is ready for future..."
 msgstr "ارمایل آماده برای فرداست..."
 
-#: includes/languages/trans_twig.php:90
+#: includes/languages/trans_twig.php:92
 msgid "Maybe tomorrow you hear more about our works!"
 msgstr "شاید فردا در مورد کارهای ما بیشتر بشنوید!"
 
-#: includes/languages/trans_twig.php:99
+#: includes/languages/trans_twig.php:101
 msgid "Creating the best!"
 msgstr "ساخت بهترین‌ها!"
 
-#: includes/languages/trans_twig.php:102
+#: includes/languages/trans_twig.php:104
 msgid "Create all of our idea"
 msgstr "ساخت تمام ایده‌هایمان"
 
-#: includes/languages/trans_twig.php:107
+#: includes/languages/trans_twig.php:109
 #: includes/languages/twig_translation.php:14
 msgid "Ermile is our brand"
 msgstr "ارمایل نام برند ماست"
 
-#: includes/languages/trans_twig.php:108
+#: includes/languages/trans_twig.php:110
 #: includes/languages/twig_translation.php:15
 msgid "Experience our service in your language"
 msgstr "سرویس های ما را با زبان اصلی خودتان تجربه کنید"
 
-#: includes/languages/trans_twig.php:122
+#: includes/languages/trans_twig.php:124
 #: includes/languages/twig_translation.php:31
 msgid "terms of service"
 msgstr "قوانین استفاده"
 
-#: includes/languages/trans_twig.php:123
+#: includes/languages/trans_twig.php:125
 #: includes/languages/twig_translation.php:32
 msgid "by signing up, you agree to the"
 msgstr "با ثبت نام شما موافق هستید با"
 
-#: includes/languages/trans_twig.php:129
+#: includes/languages/trans_twig.php:131
 #: includes/languages/twig_translation.php:38
 msgid "receive message callback!"
 msgstr "دریافت پیامک"
@@ -3258,6 +3266,12 @@ msgstr "یک اکانت برای دسترسی به همه سرویس ها"
 #: includes/mvc/view.php:13
 msgid "Ermile is inteligent"
 msgstr "ارمایل باهوش است!"
+
+#~ msgid "Can not upload this file"
+#~ msgstr "نمی‌توانیم این فایل را بارگذاری کنیم!"
+
+#~ msgid "Tank you for upload CV file"
+#~ msgstr "ممنون از آپلود رزومه شما!"
 
 #~ msgid "Contact number"
 #~ msgstr "شماره تماس"

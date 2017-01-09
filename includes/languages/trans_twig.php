@@ -82,6 +82,8 @@ private function transtext()
 	echo T_("Mission");                                                               // Line 5
 	echo T_("Ermile Visions");                                                        // Line 18
 	echo T_("Vision");                                                                // Line 6
+	echo T_("Ermile Careers");                                                        // Line 19
+	echo T_("Careers");                                                               // Line 19
 
 	//-------------------------------------------------------content\home\display.html
 

@@ -32,7 +32,7 @@ body>nav{
 }
 
 body>nav a{
-  padding: 10px 5% 5px;
+  padding: 10px 3% 5px;
   color: #888;
   transition: .3s;
   position: relative;
@@ -144,19 +144,20 @@ footer .langlist a{padding:0 0.5em;float: right}
 
 
 @media only screen and (max-width: 767px) {
-  nav{
+  body nav{
     position:inherit;
     margin:10px auto;
     text-align:center;
     font-size:2em;
   }
 
-  nav a{
+  body nav a{
     display:inline-block;
   }
 
   #homepage header #logo{
     height:auto;
+    width:30vw;
   }
 
   header #logo{
@@ -170,6 +171,11 @@ footer .langlist a{padding:0 0.5em;float: right}
 
   footer{
     text-align:center;
+  }
+
+  .langlist{
+    font-size: 1em;
+    margin: 0;
   }
 }
 
