@@ -22,6 +22,28 @@
 
 
 {%block content%}
+    
+  {%if file_list%}
+    {{block('list')}}
+  {%else%}
+    {{block('careers')}}
+  {%endif%}
+{%endblock%}
+
+{%block list%}
+<ul>
+  {%for key, value in file_list%}
+    <li>
+    <a href="{{value.url}}">{{value.name}}</a> <br>
+    type: {{value.type}} <br>
+    number: {{value.number}} <br>
+    date: {{value.date|jdate()}}</li>
+    {%endfor%}
+  
+</ul>
+{%endblock%}
+
+{%block careers%}
  <header>
   <div class="container"><h1>{%trans "Be a member of <strong>Ermile</strong>"%}</h1></div>
  </header>
@@ -310,10 +332,11 @@
   <form method="post" class='modal-body'>
    <h3 class='modal-title'>{%trans "Kindly register your Information"%}</h3>
    <img src="{{url.static}}careers/images/svg/error.svg" class="close" data-cancel>
-   <input type="text" name="Name" placeholder="{%trans 'Name'%}">
-   <input type="number" name="Number" placeholder="{%trans 'Contact number'%}">
+   <input type="text" name="name" placeholder="{%trans 'Name'%}">
+   <input type="number" name="number" placeholder="{%trans 'Contact number'%}">
    <input type="file" name="file" id="file" />
    <label class="custom-file-upload" for="file"><strong>{%trans 'Upload CV'%}</strong></label>
+   <input type="text" name="type" value="php">
    <input type="submit" name="send-resume" value="{%trans 'Send your Information'%}">
   </form>
  </div>
