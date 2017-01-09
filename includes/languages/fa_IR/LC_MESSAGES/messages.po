@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile - Persian\n"
-"POT-Creation-Date: 2017-01-09 18:33+0330\n"
-"PO-Revision-Date: 2017-01-09 18:33+0330\n"
+"POT-Creation-Date: 2017-01-09 18:42+0330\n"
+"PO-Revision-Date: 2017-01-09 18:42+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -638,6 +638,7 @@ msgid "Tel"
 msgstr "تلفن"
 
 #: includes/cls/form-old/symbol.php:56 includes/languages/trans_addons.php:199
+#: includes/languages/trans_twig.php:73
 msgid "Mobile"
 msgstr "موبایل"
 
@@ -3153,10 +3154,6 @@ msgstr "لطفا اطلاعات خود را وارد کنید"
 msgid "Name"
 msgstr "نام"
 
-#: includes/languages/trans_twig.php:73
-msgid "Contact number"
-msgstr "شماره تماس"
-
 #: includes/languages/trans_twig.php:74
 msgid "Upload CV"
 msgstr "بارگذاری رزومه"
@@ -3261,6 +3258,9 @@ msgstr "یک اکانت برای دسترسی به همه سرویس ها"
 #: includes/mvc/view.php:13
 msgid "Ermile is inteligent"
 msgstr "ارمایل باهوش است!"
+
+#~ msgid "Contact number"
+#~ msgstr "شماره تماس"
 
 #~ msgid "Familiar with Database"
 #~ msgstr "آشنا با دیتابیس"

@@ -70,7 +70,7 @@ private function transtext()
 	echo T_("+98 25 3773 5183");                                                      // Line 19 Seperate
 	echo T_("Kindly register your Information");                                      // Line 337
 	echo T_("Name");                                                                  // Line 339
-	echo T_("Contact number");                                                        // Line 340
+	echo T_("Mobile");                                                                // Line 340
 	echo T_("Upload CV");                                                             // Line 342
 	echo T_("Send your Information");                                                 // Line 344
 
