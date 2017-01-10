@@ -210,17 +210,17 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 
 /*careers get*/
 #careers_get{background:#BE93C5;background:-webkit-linear-gradient(to left, #BE93C5 , #7BC6CC);background:linear-gradient(to left, #BE93C5 , #7BC6CC);padding-top:2em}
-.careers-get-list{width:45%;margin:0 auto;box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);border-radius:2px;overflow:hidden}
-.careers-get-list li{background-color:#fff;transition:.2s}
+.careers-get-list{width:65%;margin:0 auto;box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);border-radius:2px;overflow:hidden}
+
+.careers-get-list li{background-color:#fff;transition:.2s;padding:10px;display:-webkit-flex;display:flex;justify-content:space-between}
 .careers-get-list li:not(:last-child){border-bottom:1px solid #f1edee}
 .careers-get-list li:hover{background-color:#f7f7f7}
-.careers-get-list .list-item-title,.careers-get-list .list-item-details{padding:10px}
-.careers-get-list .list-item-title{text-align:left}
-.careers-get-list .list-item-title a{font-size:1.6em;color:#f77565;transition:.2s}
-.careers-get-list .list-item-title a:hover,.careers-get-list .list-item-title a:focus{color:#e04a37}
-.careers-get-list .list-item-details{display:-webkit-flex;display:flex;justify-content:space-between;direction:ltr}
-.careers-get-list .list-item-details div{direction:ltr;color:#858585;font-size:1.4em}
-.careers-get-list .list-item-details i{font-size:1.6em;color:#e2dedb;vertical-align:middle}
+
+.careers-get-list li div{color:#858585;font-size:1.4em;-webkit-flex:1;flex:1}
+.careers-get-list li i{font-size:1.4em;color:#e2dedb;vertical-align:middle}
+.careers-get-list li .item-user{-webkit-flex:3;flex:3}
+.careers-get-list li .item-user i{color:#f77565;transition:.2s}
+
 
 /* media */
 @media only screen and (min-width: 1800px) { header h1{top: 4.5em;font-size: 6em;}}

@@ -38,15 +38,13 @@
 <ul class="careers-get-list">
  {%for key, value in file_list%}
  <li>
-  <div class="list-item-title">
-   <a href="{{value.url}}">{{value.name}}</a>
-  </div>
-
-  <div class="list-item-details">
-   <div><i class="fa fa-question"></i> {{value.type}}</div>
+   <div class="item-user">
+    <a href="{{value.url}}"><i class="fa fa-file-pdf-o"></i></a>
+    <span>{{value.name}}</span>
+   </div>
    <div><i class="fa fa-phone"></i> {{value.number}}</div>
    <div><i class="fa fa-calendar"></i> {{value.date|jdate()}}</div>
-  </div>
+   <div><i class="fa fa-question"></i> {{value.type}}</div>
  </li>
  {%endfor%}
 </ul>
