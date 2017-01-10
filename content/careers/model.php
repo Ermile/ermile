@@ -102,12 +102,25 @@ class model extends \mvc\model
 		        	{
 		        		$number = $split[1];
 		        	}
+		        	$name = null;
+		        	if(isset($split[2]))
+		        	{
+		        		$name = $split[2];
+		        	}
+		        	$fileRawName = null;
+		        	if(isset($split[3]))
+		        	{
+		        		$fileRawName = $split[3];
+		        	}
+
 
 		            $file_list[] =
 		            [
-						'name'   => $file,
+						'file'   => $file,
 						'type'   => $type,
 						'number' => $number,
+						'name'   => $name,
+						'fileRawName'   => $fileRawName,
 						'date'   => date("Y-m-d H:i:s", filemtime(self::$url. '/'. $file)),
 						'url'    => \lib\router::$base. '/files/careers/'. $file
 		            ];
