@@ -1,6 +1,6 @@
 h1,h2,h3,h4,h5,h6{color:#444;cursor:default}
 span{cursor:default}
-header{background:url(images/heading1.jpg) no-repeat top center;background-size:cover;height:100%;position:relative}
+header{background:url(images/heading1.jpg) no-repeat top center;background-size:cover;height:100%;position:relative;min-height:600px;}
 header h1{text-align:center;font-weight:900;font-size:5em;color:#2c3e50;position:absolute;top:6.5em;right:32%;transform:rotate(-9.6deg)}
 .rtl header h1{top: 5.5em;}
 header strong{color:#10A1A6;font-weight:900}
@@ -328,7 +328,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
   .rtl footer .contact-details .social-links p{ margin-right:20%; }
 }
 @media only screen and (max-width: 768px) and (orientation : landscape){
-  header h1{top: 4em;right: 34%;font-size: 3.5em;}
+  header h1{top:5em;right: 34%;font-size: 3.5em;}
   .benefits{ padding:1.4em 0; }
   .our-opportunity .opportunity-desc{ height: auto;}
   .benefits li img{padding: 28px;}
@@ -353,20 +353,22 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 }
 
 @media only screen and (max-width: 570px) and (orientation: landscape){
+
 header h1 { top: 4.2em; right: 35%; font-size: 2.8em;}
 .contract-process-boxes .text-bottom-right {top: 22.4em; right: 8%;}
 }
 @media only screen and (max-width: 550px) {
-  header h1 { top: 7em; right: 8%; font-size: 3.4em;}
+  header{min-height:500px;height: 500px;}
+  header h1 {top:7em;right:27%;font-size:3.4em;}
   .rtl header h1 { right: 17%;}
   .contract-process-boxes .text-bottom-right, .rtl .contract-process-boxes .text-bottom-right {top: 19em; right: 4%;}
-  .contract-process-boxes .text-bottom-left { right: -3%; bottom: -8.2em; text-align: center;}
-  .rtl .contract-process-boxes .text-bottom-left { right: -3%; bottom: -5.2em; text-align: center;}
-  .resume-taps h2{ font-size:2em; }
-  div.video{display: none;}
+  .contract-process-boxes .text-bottom-left {right:-3%;bottom:-8.2em;text-align:center;}
+  .rtl .contract-process-boxes .text-bottom-left {right:-3%;bottom:-5.2em;text-align:center;}
+  .resume-taps h2{font-size:2em;}
+  div.video{display:none;}
   footer .row{padding:1em;}
-  footer #langList a{padding: 8px; }
-  footer .contact-details .social-links img{ width: 37px; }
+  footer #langList a{padding:8px; }
+  footer .contact-details .social-links img{ width:37px; }
 }
 @media only screen and (max-width: 480px){
    header h1 {top: 7.5em;right: 11%;}
@@ -403,11 +405,11 @@ header h1 { top: 4.2em; right: 35%; font-size: 2.8em;}
   .contract-process{padding: 0;}
 }
 @media only screen and (max-width: 450px) {
-  header h1{top: 7em;right: 12%;font-size: 3.4em;}
-  .info{padding: 6px;padding-top:1px;}
-  .about-ermile{padding: 0; }
-  div.video::after{display: none;}
-  .contract-process-boxes .text-bottom-right {top: 13em;text-align: center;right: -13%; width: 126%;}
+  header h1{top:7em;right:21%;font-size:3.4em;}
+  .info{padding:6px;padding-top:1px;}
+  .about-ermile{padding:0; }
+  div.video::after{display:none;}
+  .contract-process-boxes .text-bottom-right {top:13em;text-align:center;right:-13%;width:126%;}
   .rtl .contract-process-boxes .text-bottom-right {top: 11.8em; right: 2%;}
   .resume-taps h2 { font-size: 2em; margin-top: 0em;}
   footer .contact-details .social-links img{ width:32px;}
