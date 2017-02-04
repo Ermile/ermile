@@ -643,6 +643,9 @@ body{
 .checkbox:checked {
   height: 0;
   float: right;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
 }
 .rtl .checkbox:not(:checked),
 .rtl .checkbox:checked
@@ -725,6 +728,7 @@ right: calc(100% + 40px);
   left: calc(100% + 10px);
   background: transparent;
   color: #7F8C9A;
+  line-height:30px;
 }
 
 .rtl .adminCheck .checkbox:not(:checked) + label:after,
