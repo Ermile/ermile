@@ -3,7 +3,7 @@
 Description: Ermile CSS Framework, It's responsive, enjoy!
 Author: Javad Evazzadeh Karkoudi | Ermile
 Author URI: Evazzade.com
-Version: 7.6.7
+Version: 7.6.8
 */
 @charset "utf-8";
 /* IRAN Sans-Serif 4.0 */
@@ -396,7 +396,7 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none}
 
 /*-------------------- Required Field ---------------------*/
 .form .field.append.required::after{content: '';color:#BB0707;min-width:0;padding:0;background-color: transparent;width: 0;height: 0;border-style: solid;border-width: 0 5em 1.5em 0;border-color: transparent #BB0707 transparent transparent;opacity:0.4}
-.rtl .form .field.append.required::after{left: 5%;right: inherit;border-width:1.5em 5em 0 0;border-color:#BB0707 transparent transparent transparent;}
+.rtl .form .field.append.required::after{left: 5%;right: inherit;border-width:1.5em 1em 0 0;border-color:#BB0707 transparent transparent transparent;}
 .form .required.field > label:after,.form .required.field > .checkbox:after{margin:-.2em 0 0 .2em;content:'*';color:#d95c5c;display:inline-block;vertical-align:top}
 /*.form .required.field:after{left:5%;content:'*';color:#d95c5c;display:inline-block;vertical-align:top}*/
 /******************************* States *******************************/
