@@ -13,8 +13,11 @@ h1{color:#0FA1A6;text-shadow:0px 0px 3px #0FA1A6;text-align: center;font-size: 4
 .account button:after{font-family:FontAwesome;content: "\f0a9";padding:0 5px;position:absolute;top:0;right:5px;font-size:25px;line-height:40px}
 .account button:hover{background-color:#2E73E2}
 .account button:active, .account button:focus{background-color:#094BB6}
-.account input, .account select{direction:ltr;background-color:#fff;border-radius:3px;border:none;width:90%;min-height: 25px; margin:2px 5%;padding: 10px 5%;}
+.account input:not([type='checkbox']), .account select{direction:ltr;background-color:#fff;border-radius:3px;border:none;width:90%;min-height: 25px; margin:2px 5%;padding: 10px 5%;}
 .account .field span{width:100%;}
+.account .remember_me{width:90%;margin:0 auto;padding:10px 0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;direction:ltr}
+.account .remember_me label{padding:0 1em;font-size:1.2em}
+
 #desc,.desc{text-align:center;margin-top: 15px;}
 #desc p{margin:3px 0;}
 
