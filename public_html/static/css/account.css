@@ -16,8 +16,36 @@ h1{color:#0FA1A6;text-shadow:0px 0px 3px #0FA1A6;text-align: center;font-size: 4
 .account input:not([type='checkbox']), .account select{direction:ltr;background-color:#fff;border-radius:3px;border:none;width:90%;min-height: 25px; margin:2px 5%;padding: 10px 5%;}
 .account input[type='checkbox']{width:25px;height:25px}
 .account .field span{width:100%;}
+
+
+
+
+/************************************************************** checkbox */
+@-moz-keyframes dothabottomcheck{0%{height:0;}100%{height:12px;}}
+@-webkit-keyframes dothabottomcheck{0%{height:0;}100%{height:12px;}}
+@-o-keyframes dothabottomcheck{0%{height:0;}100%{height:12px;}}
+@keyframes dothabottomcheck{0%{height:0;}100%{height:12px;}}
+@-o-keyframes dothatopcheck{0%{height:0;}50%{height:0;}100%{height:30px;}}
+@keyframes dothatopcheck{0%{height:0;}50%{height:0;}100%{height:30px;}}
+@-webkit-keyframes dothatopcheck{0%{height:0;}50%{height:0;}100%{height:30px;}}
+@-moz-keyframes dothatopcheck{0%{height:0;}50%{height:0;}100%{height:30px;}}
+
+.account .remember_me{position:relative}
+div.account .remember_me{margin-bottom:15px}
+.account .remember_me input{opacity:0;width:0;height:0;z-index:-1;position:absolute}
+.account .remember_me input+label{position:relative;display:inline-block;background-color:transparent;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:25px;height:25px;cursor:pointer;-webkit-transition:border-color ease .2s;-o-transition:border-color ease .2s;-moz-transition:border-color ease .2s;transition:border-color ease .2s;border:2px solid #d8d8d8;background-color:transparent;vertical-align:text-bottom;margin-right:5px}
+.rtl .account .remember_me input+label{margin-right:0;margin-left:5px}
+.account .remember_me input+label::before,.account .remember_me input+label::after{position:absolute;display:inline-block;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:4px;height:0;content:'';-webkit-transition:opacity ease .5;-o-transition:opacity ease .5;-moz-transition:opacity ease .5;transition:opacity ease .5;-webkit-transform-origin:left top;-moz-transform-origin:left top;-ms-transform-origin:left top;-o-transform-origin:left top;transform-origin:left top;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;background-color:#e5a428}
+.account .remember_me input+label::before{top:17px;left:11px;-webkit-transform:rotate(-135deg);-moz-transform:rotate(-135deg);-ms-transform:rotate(-135deg);-o-transform:rotate(-135deg);transform:rotate(-135deg);-webkit-box-shadow:0 0 0 2px transparent;-moz-box-shadow:0 0 0 2px transparent;box-shadow:0 0 0 2px transparent}
+.account .remember_me input+label::after{top:8px;left:2px;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}
+.account .remember_me input:checked+label::before{-webkit-animation:dothatopcheck .4s ease 0s forwards;-moz-animation:dothatopcheck .4s ease 0s forwards;-o-animation:dothatopcheck .4s ease 0s forwards;animation:dothatopcheck .4s ease 0s forwards}
+.account .remember_me input:checked+label::after{height:15px;-webkit-animation:dothabottomcheck .2s ease 0s forwards;-moz-animation:dothabottomcheck .2s ease 0s forwards;-o-animation:dothabottomcheck .2s ease 0s forwards;animation:dothabottomcheck .2s ease 0s forwards}
+.account .remember_me input:focus+label{border:2px solid #00667a}
+.account .remember_me.active input+label{border-color:#00667a}
+.account .remember_me.margin-bottom{margin-bottom:15px}
+
 .account .remember_me{width:90%;margin:0 auto;padding:10px 0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;direction:ltr}
-.account .remember_me label{padding:0 1em;font-size:1.2em}
+.account .remember_me input+label+label{padding:0 1em;font-size:1.2em;padding-top:5px}
 
 #desc,.desc{text-align:center;margin-top: 15px;}
 #desc p{margin:3px 0;}
