@@ -16,21 +16,23 @@ h1{color:#0FA1A6;text-shadow:0px 0px 3px #0FA1A6;text-align: center;font-size: 4
 .account input:not([type='checkbox']), .account select{direction:ltr;background-color:#fff;border-radius:3px;border:none;width:90%;min-height: 25px; margin:2px 5%;padding: 10px 5%;}
 .account input[type='checkbox']{width:25px;height:25px}
 .account .field span{width:100%;}
+.account .remember_me{width:90%;margin:0 auto;padding:10px 0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;direction:ltr}
+.account .remember_me label{padding:0 1em;font-size:1.2em}
 
 
 
 
 /************************************************************** checkbox */
-@-moz-keyframes dothabottomcheck{0%{height:0;}100%{height:12px;}}
+/*@-moz-keyframes dothabottomcheck{0%{height:0;}100%{height:12px;}}
 @-webkit-keyframes dothabottomcheck{0%{height:0;}100%{height:12px;}}
 @-o-keyframes dothabottomcheck{0%{height:0;}100%{height:12px;}}
 @keyframes dothabottomcheck{0%{height:0;}100%{height:12px;}}
 @-o-keyframes dothatopcheck{0%{height:0;}50%{height:0;}100%{height:30px;}}
 @keyframes dothatopcheck{0%{height:0;}50%{height:0;}100%{height:30px;}}
 @-webkit-keyframes dothatopcheck{0%{height:0;}50%{height:0;}100%{height:30px;}}
-@-moz-keyframes dothatopcheck{0%{height:0;}50%{height:0;}100%{height:30px;}}
+@-moz-keyframes dothatopcheck{0%{height:0;}50%{height:0;}100%{height:30px;}}*/
 
-.account .remember_me{position:relative}
+/*.account .remember_me{position:relative}
 div.account .remember_me{margin-bottom:15px}
 .account .remember_me input{opacity:0;width:0;height:0;z-index:-1;position:absolute}
 .account .remember_me input+label{position:relative;display:inline-block;background-color:transparent;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:25px;height:25px;cursor:pointer;-webkit-transition:border-color ease .2s;-o-transition:border-color ease .2s;-moz-transition:border-color ease .2s;transition:border-color ease .2s;border:2px solid #d8d8d8;background-color:transparent;vertical-align:text-bottom;margin-right:5px}
@@ -45,7 +47,7 @@ div.account .remember_me{margin-bottom:15px}
 .account .remember_me.margin-bottom{margin-bottom:15px}
 
 .account .remember_me{width:90%;margin:0 auto;padding:10px 0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;direction:ltr}
-.account .remember_me input+label+label{padding:0 1em;font-size:1.2em;padding-top:5px}
+.account .remember_me input+label+label{padding:0 1em;font-size:1.2em;padding-top:5px}*/
 
 #desc,.desc{text-align:center;margin-top: 15px;}
 #desc p{margin:3px 0;}
