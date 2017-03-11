@@ -79,6 +79,18 @@ body {background-color: #f5f5f5;position: relative;color: #656d78;min-height:100
 .vertical-menu > a:hover{color:#fff;background:rgba(0,0,0,0.2)}
 .vertical-menu > a > i{padding:0 10px;}
 
+/* tools*/
+[data-page="tools"] h2{margin:0;}
+.btns{margin-bottom:3em}
+.btns a{display:inline-block; background-color:#e8e8e8;padding:1em 2em;margin:0.5em;border-radius:2px;color:#000;transition:.3s;}
+.btns a:hover{background-color:#ddd}
+.btns a:focus{background-color:#3d4e5d;color:#fff;}
+.btns .info{background-color:#d9edf7}
+.btns .warn{background-color:#fdd5d1}
+.btns input{border:none;padding:0.5em 1em;margin:0 0.5em;}
+.btns input:hover{opacity:0.8}
+.btns input[type="submit"]{cursor:pointer;}
+
 .breadcrumb {width: 100%;background: #e8e8e8;padding: 6px 15px;display:inline-block;}
 .breadcrumb a{font-size: 1em;line-height:12px;color: #99a0aa;float:left;font-weight:700}
 .rtl .breadcrumb a{float:right;}
