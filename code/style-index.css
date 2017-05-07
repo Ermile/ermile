@@ -1,0 +1,6 @@
+body{background-color:#eee;}
+body::after{content:"";background:url(https://ermile.com/static/images/logo.png);background-size:cover;height:10em;width:10em;position:absolute;bottom:1em;right:1em;opacity:0.3}
+td {padding:3px 1em;}
+a{text-decoration:none;border-bottom:1px solid #044f9e;color:#044f9e;}
+
+
