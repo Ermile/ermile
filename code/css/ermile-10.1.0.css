@@ -4,7 +4,7 @@
  * Description: Ermile CSS Framework, It's responsive, enjoy!
  * Author: Ermile UI team
  * Author URI: Ermile.com
- * Version: 10.0.0
+ * Version: 10.1.0
  */
 @font-face{font-family:IRANSans;font-style:normal;font-weight:700;src:url(../font/IRANSans/4.2/eot/IRANSansWeb_Bold.eot);src:url(../font/IRANSans/4.2/eot/IRANSansWeb_Bold.eot?#iefix) format("embedded-opentype"),url(../font/IRANSans/4.2/woff2/IRANSansWeb_Bold.woff2) format("woff2"),url(../font/IRANSans/4.2/woff/IRANSansWeb_Bold.woff) format("woff"),url(../font/IRANSans/4.2/ttf/IRANSansWeb_Bold.ttf) format("truetype")}
 @font-face{font-family:IRANSans;font-style:normal;font-weight:500;src:url(../font/IRANSans/4.2/eot/IRANSansWeb_Medium.eot);src:url(../font/IRANSans/4.2/eot/IRANSansWeb_Medium.eot?#iefix) format("embedded-opentype"),url(../font/IRANSans/4.2/woff2/IRANSansWeb_Medium.woff2) format("woff2"),url(../font/IRANSans/4.2/woff/IRANSansWeb_Medium.woff) format("woff"),url(../font/IRANSans/4.2/ttf/IRANSansWeb_Medium.ttf) format("truetype")}
@@ -12,6 +12,8 @@
 @font-face{font-family:IRANSans;font-style:normal;font-weight:200;src:url(../font/IRANSans/4.2/eot/IRANSansWeb_UltraLight.eot);src:url(../font/IRANSans/4.2/eot/IRANSansWeb_UltraLight.eot?#iefix) format("embedded-opentype"),url(../font/IRANSans/4.2/woff2/IRANSansWeb_UltraLight.woff2) format("woff2"),url(../font/IRANSans/4.2/woff/IRANSansWeb_UltraLight.woff) format("woff"),url(../font/IRANSans/4.2/ttf/IRANSansWeb_UltraLight.ttf) format("truetype")}
 @font-face{font-family:IRANSans;font-style:normal;font-weight:400;src:url(../font/IRANSans/4.2/eot/IRANSansWeb.eot);src:url(../font/IRANSans/4.2/eot/IRANSansWeb.eot?#iefix) format("embedded-opentype"),url(../font/IRANSans/4.2/woff2/IRANSansWeb.woff2) format("woff2"),url(../font/IRANSans/4.2/woff/IRANSansWeb.woff) format("woff"),url(../font/IRANSans/4.2/ttf/IRANSansWeb.ttf) format("truetype")}
 
+/* reset */
+*, *:before, *:after{margin:0;padding:0;outline:none!important;-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit;}
 html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0}
 article,aside,footer,header,nav,section{display:block}
@@ -54,6 +56,8 @@ summary{display:list-item}
 canvas{display:inline-block}
 template{display:none}
 [hidden]{display:none}
+
+/* custom style */
 html{font-family:IRANSans,'Roboto Slab','Open sans','Segoe UI',Helvetica,sans-serif;font-size:62.5%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;height:100%;min-height:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 body{overflow-x:hidden;margin:0;direction:ltr}
 body.rtl{direction:rtl;font-family:IRANSans,"Segoe UI",Helvetica,sans-serif}
@@ -80,6 +84,30 @@ a:hover,a:active,a:focus{outline:0}
 .msg.small{font-size:.8em}
 .msg.big{font-size:1.2em}
 .msg.massive{font-size:2em}
+
+/* Form Error Box  || error_0: failed | error_1: successful | error_2: warning;*/
+#formError{position:fixed;bottom:1em;right:0;left:0;margin:0 auto;min-width:200px;max-width:95%;width:90%;color:#fff;font-size:1.3em;pointer-events:none;z-index:100}
+.rtl #formError{left:0;right:inherit}
+#formError .error_false{background-color:#d9edf7;color:#3a87ad}
+#formError .error li{background-color:#cc1030}
+#formError .true li{background-color:#37aaa7}
+#formError .warn li{background-color:#e5a428}
+#formError ul{display:inline-block;margin:0;padding:0 2%}
+#formError ul li{margin-top:10px;padding:.5em 2em;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;cursor:pointer;display:inline-block;pointer-events:auto;display:block}
+
+/* list */
+ul{list-style:none inside none;}
+ul.list{list-style:square outside none;margin:0 3em;}
+ul.list li{padding:0.5em 0;font-size:1.4em;}
+ul.list li a{padding:0.3em 0.5em;}
+
+/* very usefull styles*/
+.unselectable{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;}
+.visible{visibility:visible;opacity:1;-webkit-transition:opacity .5s linear;-o-transition:opacity .5s linear;-moz-transition:opacity .5s linear;transition:opacity .5s linear}
+.hidden{visibility:hidden;opacity:0;-webkit-transition:visibility 0 0.5s,opacity .5s linear;-o-transition:visibility 0 0.5s,opacity .5s linear;-moz-transition:visibility 0 0.5s,opacity .5s linear;transition:visibility 0 0.5s,opacity .5s linear}
+.hide{display:none!important}
+
+/* grid */
 .container{position:relative;width:90%;min-width:920px;max-width:1200px;margin:0 auto;padding:0}
 .f{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:-moz-box;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .f.gutters>div{padding-right:15px;padding-left:15px}

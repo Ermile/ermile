@@ -20,7 +20,7 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 #sidebar figure .avatar{margin:1em auto;width:100px;position:relative;}
 #sidebar figure .avatar:before{content:'';right:0;left:0;top:0;bottom:0;position:absolute;border-radius:50%;border:2px solid transparent;border-color:transparent #ddd;transition:0.3s}
 #sidebar figure:hover .avatar:before{border-color:transparent #fff;}
-#sidebar figure .avatar img{display:block;border-radius:50%;padding:0.5em;-webkit-box-sizing:border-box;box-sizing:border-box;}
+#sidebar figure .avatar img{display:block;border-radius:50%;padding:0.5em;}
 #sidebar figure figcaption{padding:1em 0;}
 
 /* header */
