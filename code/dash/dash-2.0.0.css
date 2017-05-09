@@ -30,12 +30,15 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 
 #sidebar ul.sidenav{font-size:1.4em}
 #sidebar ul > li{}
-#sidebar ul > li > a{display:block;padding:1.5em 2em;color:#d5d5d5;transition:0.3s}
+#sidebar ul > li > a{display:block;padding:1.5em 2em;color:#d5d5d5;transition:0.3s;cursor:pointer;}
 #sidebar ul > li > a > i{font-size: 1.2em;display:inline-block;width:1.5em;}
 #sidebar ul > li > a:hover{background-color:#1d1818}
-#sidebar ul > li > ul{display:none}
+#sidebar ul > li > ul{display:none;}
 #sidebar ul > li > ul > li{}
-#sidebar ul > li > ul > li > a{}
+#sidebar ul > li > ul > li > a{padding:0.8em 3em}
+
+#header{height:50px;}
+#content{padding:5em 1em;}
 
 /*#sidebar nav > a,#sidebar nav div > span,#sidebar nav > div a{font-size:1.2em;font-weight:500;display:block;padding:1rem;transition:.3s;color:#d5d5d5}
 #sidebar nav div > span{cursor:pointer}
