@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@font-face{font-family:"dash";src:url(dash.eot);src:url(dash.eot?#iefix) format("embedded-opentype"),url(dash.woff) format("woff"),url(dash.ttf) format("truetype"),url(dash.svg#dash) format("svg");font-weight:400;font-style:normal}
+@font-face{font-family:"dash";src:url(fonts/dash.eot);src:url(fonts/dash.eot?#iefix) format("embedded-opentype"),url(fonts/dash.woff) format("woff"),url(fonts/dash.ttf) format("truetype"),url(fonts/dash.svg#dash) format("svg");font-weight:400;font-style:normal}
 
 html{height:100%}
 body{min-height:100%;background-color:#eee}
@@ -25,31 +25,35 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 
 /* header */
 #sidebar h1{margin:0;text-align:center;color:#fff;background-color:#201f1f;height:60px;line-height:60px;margin-bottom:1em;transition:0.3s}
-#sidebar h1:hover{background-color:#283035}
+#sidebar h1:hover{background-color:#000}
 #sidebar h1 a{display:block;}
 
-#sidebar > ul{}
-#sidebar > ul > li{}
-#sidebar > ul > li a{}
-#sidebar > ul > li > ul{}
-#sidebar > ul > li > ul > li{}
-#sidebar > ul > li > ul > li > a{}
+#sidebar ul.sidenav{font-size:1.4em}
+#sidebar ul > li{}
+#sidebar ul > li > a{display:block;padding:1.5em 2em;color:#d5d5d5;transition:0.3s}
+#sidebar ul > li > a > i{font-size: 1.2em;display:inline-block;width:1.5em;}
+#sidebar ul > li > a:hover{background-color:#1d1818}
+#sidebar ul > li > ul{display:none}
+#sidebar ul > li > ul > li{}
+#sidebar ul > li > ul > li > a{}
 
-#sidebar nav > a,#sidebar nav div > span,#sidebar nav div a{font-size:1.2em;font-weight:500;display:block;padding:1rem;transition:.3s;color:#d5d5d5}
+/*#sidebar nav > a,#sidebar nav div > span,#sidebar nav > div a{font-size:1.2em;font-weight:500;display:block;padding:1rem;transition:.3s;color:#d5d5d5}
 #sidebar nav div > span{cursor:pointer}
 #sidebar nav > div a{padding-left:4.5rem}
 #sidebar nav > a:hover,#sidebar div > span:hover,#sidebar div a:hover{background-color:#5e636b}
 #sidebar nav > a::before,#sidebar div > span::before{display:inline-block;width:25px;height:25px;margin-right:1rem;content:'';vertical-align:middle;background-repeat:no-repeat;background-size:contain}
 #sidebar nav div > span::after{float:right;width:10px;height:10px;margin-top:.7rem;content:'';transition:.1s;background-image:url(images/down-arrow.svg);background-repeat:no-repeat;background-size:contain}
-#sidebar nav div > span.open::after{-webkit-transform:rotate(180deg);transform:rotate(180deg)}
+#sidebar nav div > span.open::after{-webkit-transform:rotate(180deg);transform:rotate(180deg)}*/
 /*#sidebar ul{display:none;margin:0;padding:0;list-style:none}*/
-#sidebar [data-icon='check-form']::before{background-image:url(images/bar-chart.svg)}
+
+/*#sidebar [data-icon='check-form']::before{background-image:url(images/bar-chart.svg)}
 #sidebar [data-icon='pie-chart']::before{background-image:url(images/pie-chart.svg)}
 #sidebar [data-icon='note']::before{background-image:url(images/note.svg)}
 #sidebar [data-icon='line-chart']::before{background-image:url(images/line-chart.svg)}
 #sidebar [data-icon='app']::before{background-image:url(images/app.svg)}
 #sidebar [data-icon='form']::before{background-image:url(images/form.svg)}
-#sidebar [data-icon='calendar']::before{background-image:url(images/calendar.svg)}
+#sidebar [data-icon='calendar']::before{background-image:url(images/calendar.svg)}*/
+
 /* sidebar rtl*/
 .rtl #sidebar{right:0;left:initial}
 .rtl #sidebar div a{padding-right:4.5rem;padding-left:0}
@@ -141,7 +145,7 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 
 /* fonts */
 [data-icon]:before{font-family:"dash"!important;content:attr(data-icon);font-style:normal!important;font-weight:400!important;font-variant:normal!important;text-transform:none!important;speak:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-[class^="icon-"]:before,[class*=" icon-"]:before{font-family:"dash"!important;font-style:normal!important;font-weight:400!important;font-variant:normal!important;text-transform:none!important;speak:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+[class^="icon-"]:before,[class*=" icon-"]:before{font-family:"dash"!important;font-style:normal!important;font-weight:400!important;font-variant:normal!important;text-transform:none!important;speak:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;vertical-align:middle;}
 .icon-angle-down:before{content:"\61"}
 .icon-angle-left:before{content:"\62"}
 .icon-angle-right:before{content:"\63"}
