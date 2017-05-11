@@ -1,24 +1,44 @@
 @charset "UTF-8";
+/*
+@ In the name of Allah
+Description: Ermile Dash Styles!
+Author:  Ermile
+Author URI: Ermile.com
+Version: 2.0.0
+*/
 @font-face{font-family:"dash";src:url(fonts/dash.eot);src:url(fonts/dash.eot?#iefix) format("embedded-opentype"),url(fonts/dash.woff) format("woff"),url(fonts/dash.ttf) format("truetype"),url(fonts/dash.svg#dash) format("svg");font-weight:400;font-style:normal}
 
-html{height:100%}
+/* main styles */
 body{min-height:100%;background-color:#eee}
-body.rtl{direction:rtl}
-.wrapper{padding:2em}
-header{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:-moz-box;display:flex;padding:0 2em;background-color:#607d8b;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;-moz-box-pack:justify;justify-content:space-between}
-header nav a,#profile span{font-size:1.4em;font-weight:500;display:block;padding:1.5rem 1rem;transition:.3s;color:#fefefe}
-header nav a:hover,header #profile:hover{background-color:#486775}
-header #profile{position:relative;overflow:hidden;cursor:pointer;transition:.3s;min-width:15em}
-header #profile span + nav{position:absolute;z-index:2;right:0;left:0;transition:.3s;opacity:0;background-color:#607d8b}
-header #profile:hover{overflow:visible}
-header #profile:hover nav{display:block;opacity:1}
-header #profile nav a:hover{color:#fff;background-color:#36525f}
+
+
+/* header */
+header{height:50px;}
+header{background-color:#fff;overflow:hidden;}
+header:hover{overflow:visible;}
+header h1{margin:0;overflow:hidden;max-width:30%}
+header h1 a{margin:0;padding:0 1em;color:#888;transition:0.3s;display:block;height:100%;line-height:50px}
+header h1 a:hover{color:#000}
+/* header flex */
+header > .flex nav{max-width:200px;width:auto;position:absolute;top:50px;opacity:0;background-color:#eee;transition:0.3s;visibility:hidden;}
+header > .flex nav > a{display:block;padding:1em 2em;transition:0.3s}
+header > .flex nav > a:hover{background-color:#ddd;}
+header > .flex nav .isActive{cursor:alias;pointer-events:none;}
+header > .flex nav .isActive::after{content:"\6f";display:inline-block;color:#5cb85c;font:normal normal normal 14px/1 dash;padding:0 10px;vertical-align:bottom;}
+header > .flex > .f:hover nav{opacity:1;visibility:visible;}
+header > .flex span{padding:15px 15px 10px;cursor:pointer;transition:0.3s}
+header > .flex span:before{font-size:1.5em;vertical-align:-webkit-baseline-middle;}
+header > .flex div:hover span, header > .flex span:hover{background-color:#eee}
+.ltr header .right{margin-left:auto;}
+.rtl header .right{margin-right:auto;}
+
+
 
 /* sidebar */
 #sidebar{overflow-x:hidden;overflow-y:auto;height:100vh;min-height:300px;padding-bottom:2em;background-color:#302b2b}
 #sidebar figure{color:#ddd;text-align:center;margin:4em 0;}
 #sidebar figure .avatar{margin:1em auto;width:100px;position:relative;}
-#sidebar figure .avatar:before{content:'';right:0;left:0;top:0;bottom:0;position:absolute;border-radius:50%;border:2px solid transparent;border-color:transparent #ddd;transition:0.3s}
+#sidebar figure .avatar:before{content:'';right:0;left:0;top:0;bottom:0;position:absolute;border-radius:50%;border:2px solid transparent;border-color:transparent #888;transition:0.3s}
 #sidebar figure:hover .avatar:before{border-color:transparent #fff;}
 #sidebar figure .avatar img{display:block;border-radius:50%;padding:0.5em;}
 #sidebar figure figcaption{padding:1em 0;}
@@ -31,13 +51,24 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 #sidebar ul.sidenav{font-size:1.4em}
 #sidebar ul > li{}
 #sidebar ul > li > a{display:block;padding:1.5em 2em;color:#d5d5d5;transition:0.3s;cursor:pointer;}
-#sidebar ul > li > a > i{font-size: 1.2em;display:inline-block;width:1.5em;}
+#sidebar ul > li > a > i{font-size:1.2em;display:inline-block;width:1.5em;}
 #sidebar ul > li > a:hover{background-color:#1d1818}
 #sidebar ul > li > ul{display:none;}
 #sidebar ul > li > ul > li{}
 #sidebar ul > li > ul > li > a{padding:0.8em 3em}
 
-#header{height:50px;}
+
+
+/*
+header nav a,#profile span{font-size:1.4em;font-weight:500;display:block;padding:1.5rem 1rem;transition:.3s;color:#fefefe}
+header nav a:hover,header #profile:hover{background-color:#486775}
+header #profile{position:relative;overflow:hidden;cursor:pointer;transition:.3s;min-width:15em}
+header #profile span + nav{position:absolute;z-index:2;right:0;left:0;transition:.3s;opacity:0;background-color:#607d8b}
+header #profile:hover{overflow:visible}
+header #profile:hover nav{display:block;opacity:1}
+header #profile nav a:hover{color:#fff;background-color:#36525f}
+
+*/
 #content{padding:5em 1em;}
 
 /*#sidebar nav > a,#sidebar nav div > span,#sidebar nav > div a{font-size:1.2em;font-weight:500;display:block;padding:1rem;transition:.3s;color:#d5d5d5}
