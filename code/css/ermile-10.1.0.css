@@ -107,6 +107,12 @@ ul.list li a{padding:0.3em 0.5em;}
 .hidden{visibility:hidden;opacity:0;-webkit-transition:visibility 0 0.5s,opacity .5s linear;-o-transition:visibility 0 0.5s,opacity .5s linear;-moz-transition:visibility 0 0.5s,opacity .5s linear;transition:visibility 0 0.5s,opacity .5s linear}
 .hide{display:none!important}
 
+/* default style of forms */
+.df input, .df textarea, .df select{padding: 1em;border:none;margin-bottom:1em;background-color:#eaeaea;font-size:1.2em;line-height:2em}
+.df label{padding: 1em;}
+.df input[type="submit"]{background-color:#37aaa7;color:#fff}
+
+
 /* grid */
 .container{position:relative;width:90%;min-width:920px;max-width:1200px;margin:0 auto;padding:0}
 .f{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:-moz-box;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
