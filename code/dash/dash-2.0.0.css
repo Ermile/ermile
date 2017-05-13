@@ -204,6 +204,14 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 .df label{padding:1em}
 .df input[type="submit"]{background-color:#37aaa7;color:#fff}
 
+.dt>.f.th{background-color:#302b2b;color:#fff;font-weight:700}
+.dt>.f:not(.th):nth-child(even){background-color:#fff}
+.dt>.f:not(.th):nth-child(odd){background-color:#eee}
+.dt>.f:not(.th){transition:.3s}
+.dt>.f:not(.th):hover{background-color:#f0a000}
+.dt>.f>[class*="c"]{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;-moz-box-align:center;align-items:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:-moz-box;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;-moz-box-pack:center;justify-content:center;text-align:center;padding:.5rem}
+.dt a{color:#00667a;transition:.3s;font-size:1.2em;border-bottom:2px solid transparent}
+.dt a:hover,.dt a:focus,.dt a:active{border-bottom:2px solid #00667a}
 
 /* fonts */
 [data-icon]:before{font-family:"dash"!important;content:attr(data-icon);font-style:normal!important;font-weight:400!important;font-variant:normal!important;text-transform:none!important;speak:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
