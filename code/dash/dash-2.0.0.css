@@ -202,7 +202,7 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 
 .df input,.df textarea,.df select{padding:1em;border:none;margin-bottom:1em;background-color:#eaeaea;font-size:1.2em;line-height:2em;max-width:100%;}
 .df label{padding:1em}
-.df input[type="submit"]{background-color:#37aaa7;color:#fff}
+.df input[type="submit"], .df button{background-color:#37aaa7;color:#fff;padding:1em 2em;border:none}
 
 .dt>.f.th{background-color:#302b2b;color:#fff;font-weight:700}
 .dt>.f:not(.th):nth-child(even){background-color:#fff}
