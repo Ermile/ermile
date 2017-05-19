@@ -110,7 +110,9 @@ ul.list li a{padding:0.3em 0.5em;}
 /* default style of forms */
 .df input, .df textarea, .df select{padding: 1em;border:none;margin-bottom:1em;background-color:#eaeaea;font-size:1.2em;line-height:2em}
 .df label{padding: 1em;}
-.df input[type="submit"]{background-color:#37aaa7;color:#fff}
+.df input[type="submit"]{background-color:#37aaa7;color:#fff;transition:0.3s;cursor:pointer;}
+.df input[type="submit"]:hover{background-color:#0fa09f;}
+.df input[type="submit"]:focus{background-color:#309090}
 
 
 /* grid */
