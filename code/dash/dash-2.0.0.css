@@ -27,7 +27,7 @@ header .hm a, header .hm div{transition:0.3s;color:#888;}
 header .hm a:hover, header .hm div:hover{color:#555;background-color:#eee}
 header .hm a:focus{color:#000;}
 /* vertical menu nav */
-header .vm nav{max-width:200px;width:auto;position:absolute;top:50px;opacity:0;background-color:#dfdfdf;transition:0.3s;visibility:hidden;}
+header .vm nav{max-width:200px;width:auto;position:absolute;top:50px;opacity:0;background-color:#dfdfdf;transition:0.3s;visibility:hidden;z-index:1}
 header .vm nav > a{display:block;padding:1em 2em;transition:0.3s}
 header .vm nav > a:hover{background-color:#fff;}
 header .vm nav .isActive, header .vm nav .active{cursor:alias;}
