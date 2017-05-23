@@ -64,6 +64,12 @@ footer .breadcrumb nav > a + a:before{font-family:"dash";content:"\63";color:#99
 #sidebar figure .avatar img{display:block;border-radius:50%;padding:0.5em;}
 #sidebar figure figcaption{padding:1em 0;max-width:300px;margin:0 auto;}
 #sidebar .menu{flex-grow:1;overflow-y:auto;}
+/* change avatar placeholder on page loading */
+body.loading-page #sidebar .avatar:before{animation-duration:1s;-webkit-animation-duration:1s;animation-fill-mode:both;-webkit-animation-fill-mode:both;animation-name:flash;-webkit-animation-name:flash;animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;}
+@-webkit-keyframes flash{ from, 50%, to {opacity:1;} 25%, 75% {opacity:0.5;}}
+@keyframes flash { from, 50%, to {opacity:1;} 25%, 75% {opacity:0.5;}}
+
+
 /* header */
 #sidebar h2{margin:0;text-align:center;color:#fff;background-color:#201f1f;height:60px;line-height:60px;margin-bottom:1em;transition:0.3s}
 #sidebar h2:hover{background-color:#000}
