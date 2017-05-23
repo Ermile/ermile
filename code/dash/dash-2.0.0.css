@@ -46,13 +46,13 @@ footer #copyright{padding:0 1em;}
 footer #copyright span{display:inline-block;line-height:30px;height:30px}
 footer #copyright abbr{display:inline-block;line-height:30px;height:30px}
 /* breadcrumb */
-footer .breadcrumb{padding:5px 1em;display:inline-block;line-height:30px;height:30px}
-footer .breadcrumb a{font-size:1em;line-height:20px;color:#99a0aa;float:left;font-weight:700;transition:0.3s;}
-footer .breadcrumb a:hover{color:#656d78;}
-footer .breadcrumb a:last-child{color:#656d78;}
-footer .breadcrumb > a + a:before{font-family:"dash";content:"\63";color:#99a0aa;padding:0px 8px;float:left;}
-.rtl footer .breadcrumb a{float:right;}
-.rtl footer .breadcrumb > a + a:before{content:"\62";float:right;}
+footer .breadcrumb nav{padding:5px 1em;display:inline-block;line-height:30px;height:30px}
+footer .breadcrumb nav a{font-size:1em;line-height:20px;color:#99a0aa;float:left;font-weight:700;transition:0.3s;}
+footer .breadcrumb nav a:hover{color:#656d78;}
+footer .breadcrumb nav a:last-child{color:#656d78;}
+footer .breadcrumb nav > a + a:before{font-family:"dash";content:"\63";color:#99a0aa;padding:0px 8px;float:left;}
+.rtl footer .breadcrumb nav a{float:right;}
+.rtl footer .breadcrumb nav > a + a:before{content:"\62";float:right;}
 
 
 /* sidebar */
