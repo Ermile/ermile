@@ -4,7 +4,7 @@
  * Description: Ermile CSS Framework, It's responsive, enjoy!
  * Author: Ermile UI team
  * Author URI: Ermile.com
- * Version: 10.1.0
+ * Version: 10.2.0
  */
 @font-face{font-family:IRANSans;font-style:normal;font-weight:700;src:url(../font/IRANSans/4.2/eot/IRANSansWeb_Bold.eot);src:url(../font/IRANSans/4.2/eot/IRANSansWeb_Bold.eot?#iefix) format("embedded-opentype"),url(../font/IRANSans/4.2/woff2/IRANSansWeb_Bold.woff2) format("woff2"),url(../font/IRANSans/4.2/woff/IRANSansWeb_Bold.woff) format("woff"),url(../font/IRANSans/4.2/ttf/IRANSansWeb_Bold.ttf) format("truetype")}
 @font-face{font-family:IRANSans;font-style:normal;font-weight:500;src:url(../font/IRANSans/4.2/eot/IRANSansWeb_Medium.eot);src:url(../font/IRANSans/4.2/eot/IRANSansWeb_Medium.eot?#iefix) format("embedded-opentype"),url(../font/IRANSans/4.2/woff2/IRANSansWeb_Medium.woff2) format("woff2"),url(../font/IRANSans/4.2/woff/IRANSansWeb_Medium.woff) format("woff"),url(../font/IRANSans/4.2/ttf/IRANSansWeb_Medium.ttf) format("truetype")}
@@ -115,7 +115,7 @@ ul.list li a{padding:0.3em 0.5em;}
 
 
 /* grid */
-.container{position:relative;width:90%;min-width:920px;max-width:1200px;margin:0 auto;padding:0}
+.cn{position:relative;width:90%;min-width:920px;max-width:1200px;margin:0 auto;padding:0}
 .f{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:-moz-box;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .f.gutters>div{padding-right:15px;padding-left:15px}
 .ltr .f .os{margin-left:auto;}
@@ -216,7 +216,7 @@ ul.list li a{padding:0.3em 0.5em;}
   .x-align-content-stretch{-webkit-align-content:stretch!important;-ms-flex-line-pack:stretch!important;align-content:stretch!important}
 }
 @media all and (min-width: 768px) and (max-width: 959px) {
-  .container{min-width:710px;max-width:940px}
+  .cn{min-width:710px;max-width:940px}
   .f>.m{-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;-moz-box-flex:1;flex-grow:1;max-width:100%}
   .f>.mauto{-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;-moz-box-flex:0;flex:0 0 auto;width:auto}
   .f>.m0{-webkit-box-flex:0;-webkit-flex:0 0 0;-ms-flex:0 0 0;-moz-box-flex:0;flex:0 0 0;max-width:0;display:none}
@@ -265,7 +265,7 @@ ul.list li a{padding:0.3em 0.5em;}
 }
 
 @media all and (max-width: 767px) {
-  .container{min-width:450px;max-width:750px}
+  .cn{min-width:450px;max-width:750px}
   .f>.s{-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;-moz-box-flex:1;flex-grow:1;max-width:100%}
   .f>.sauto{-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;-moz-box-flex:0;flex:0 0 auto;width:auto}
   .f>.s0{-webkit-box-flex:0;-webkit-flex:0 0 0;-ms-flex:0 0 0;-moz-box-flex:0;flex:0 0 0;max-width:0;display:none}
