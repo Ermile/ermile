@@ -501,6 +501,7 @@ function sendToBigBrother(_step)
 
 						case 'block':
 						default:
+							console.log('now?')
 							// setNotif('WHAT HAPPEN !!');
 							break;
 					}
