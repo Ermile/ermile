@@ -96,6 +96,8 @@ function changeUsername()
 			myUsername.attr('placeholder', myUsername.attr('data-pl-user'));
 			myUsername.val('');
 			$(this).find('.icon-mobile2').removeClass('icon-mobile2').addClass('icon-star');
+			// new change
+			$(this).removeClass('mobile').addClass('username');
 		}
 		else
 		{
@@ -103,6 +105,8 @@ function changeUsername()
 			myUsername.attr('placeholder', myUsername.data('placeholderDefault'));
 			myUsername.val('');
 			$(this).find('.icon-star').removeClass('icon-star').addClass('icon-mobile2');
+			//
+			$(this).removeClass('username').addClass('mobile');
 		}
 		changer('go');
 	});
@@ -339,7 +343,7 @@ function changer(_name, _enable, _delay, _changeEnterBox)
 				setTimeout(function()
 				{
 					// enable it
-					$('.enter').addClass('large');
+					$('#enter').addClass('large');
 					elField.removeClass('disabled');
 					elField.fadeIn();
 					el.val('').attr('disabled', null).focus();
@@ -351,7 +355,7 @@ function changer(_name, _enable, _delay, _changeEnterBox)
 				elField.fadeOut(100);
 				if(_changeEnterBox === undefined)
 				{
-					$('.enter').removeClass('large');
+					$('#enter').removeClass('large');
 				}
 			}
 			else if(_enable === null)
@@ -361,7 +365,7 @@ function changer(_name, _enable, _delay, _changeEnterBox)
 				elField.fadeOut(100);
 				if(_changeEnterBox === undefined)
 				{
-					$('.enter').removeClass('large');
+					$('#enter').removeClass('large');
 				}
 			}
 			break;
@@ -372,12 +376,12 @@ function changer(_name, _enable, _delay, _changeEnterBox)
 				// disable it
 				elField.fadeOut(50);
 				el.attr('disabled', true);
-				$('.enter').removeClass('large');
+				$('#enter').removeClass('large');
 			}
 			else if(_enable === true)
 			{
 				// enable it
-				$('.enter').addClass('large');
+				$('#enter').addClass('large');
 				elField.fadeIn();
 				el.attr('disabled', null);
 			}
@@ -399,7 +403,7 @@ function gotoStep(_step, _delay, _resend)
 	switch(_step)
 	{
 		case 'mobile':
-			$('.enter').removeClass('large');
+			$('#enter').removeClass('large');
 			$('#username').val('');
 			changer('username', true);
 			changer('go');

@@ -32,14 +32,18 @@ body.bg16{background-image:url(images/16.jpg)}
 #enter h2 abbr{cursor:pointer;}
 /* filed style*/
 #enter .field{border-radius:3px;overflow:hidden}
-#enter .field label{background-color:#fff;color:#6f6f6f;transition:0.3s;}
+#enter .field label{background-color:#fff;color:#6f6f6f;transition:0.3s;background-color:#eee;}
+#enter .field label:hover{background-color:#ddd}
+#enter .field label svg{display:none;}
+#enter .field label.mobile svg#i-mobile{display:block;}
+#enter .field label.username svg#i-username{display:block;}
 #enter .field label.active{/*background-color:#efefef;*/color:#00667a}
 #enter .field label span[class*="icon-"]{font-size:20px}
 #enter .field label .icon-range-right{display:none;cursor:pointer;}
 #enter .field label span:not([class*="icon-"]){font-weight:bold;font-size:1.2em}
 #enter .usernameBox label{cursor:pointer;}
 #enter .field input,#enter button{font-size:1.8em;-webkit-transition:0.3s;transition:0.3s}
-#enter .field input{width:100%;padding:10px 5px;border:none;background-color:#fff;direction:ltr;color:#404040;height:50px;line-height:50px}
+#enter .field input{width:100%;padding:10px 5%;border:none;background-color:#fff;direction:ltr;color:#404040;height:50px;line-height:50px}
 #enter .field input.disabled,#enter .field input[disabled],.disabled input,.disabled label{pointer-events:none;opacity:.45}
 #enter .field input.ltr{text-align:left}
 #enter .field input.center{text-align:center}
