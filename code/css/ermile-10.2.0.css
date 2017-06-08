@@ -313,7 +313,7 @@ ul.list li a{padding:0.3em 0.5em;}
   .s-align-content-stretch{-webkit-align-content:stretch!important;-ms-flex-line-pack:stretch!important;align-content:stretch!important}
 }
 
-@media all and (max-width: 299px) {
-  body{display:none}
+@media all and (max-width: 280px) {
   html:before{font-size:100vw;position:absolute;right:0;left:0;content:":\\";text-align:center;color:#f4f4f4}
+  html body{display:none!important}
 }
