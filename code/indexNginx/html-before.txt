@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Ermile Code Source</title>
+	<meta charset="utf-8" />
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/ermile-10.2.0.css" type="text/css" />
+	<link rel="stylesheet" href="/indexNginx/style.css">
+</head>
+
+<body>
+	<div class="cn">
+		<h2>Ermile Code | <a href="https://ermile.com">Homepage</a></h2>
