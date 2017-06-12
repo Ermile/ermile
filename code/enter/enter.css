@@ -35,18 +35,43 @@ body.bg16{background-image:url(images/16.jpg)}
 /* form new styles*/
 form{line-height:30px;font-size:1.8em;}
 form .flex{border-radius:3px;height:50px;margin:1em 0;}
-form .flex label{padding:10px 0;border:none;direction:ltr;min-width:50px;width:50px;background-color:rgba(0,0,0,0.2);color:#ddd;transition:0.3s;cursor:pointer;text-align:center;font-size:0.8em}
+form .flex.hide{display:none!important;}
+form .flex label{padding:0;border:none;direction:ltr;min-width:50px;width:50px;background-color:rgba(0,0,0,0.2);color:#ddd;transition:0.3s;cursor:pointer;text-align:center;font-size:0.8em;line-height:50px;}
 form .flex label:hover{background-color:rgba(0,0,0,0.3);}
 form .flex input{padding:10px 1em;border:none;direction:ltr;width:100%;background-color:rgba(0,0,0,0.1);color:#eee;transition:0.3s;}
 form .flex input:hover{background-color:rgba(0,0,0,0.15);}
 form .flex input:focus{background-color:rgba(0,0,0,0.25);}
+form .flex input::-webkit-outer-spin-button,form .flex input::-webkit-inner-spin-button{-webkit-appearance:none;}
 form .flex ::-webkit-input-placeholder{color:#ccc;}
+/* custom style for some inputs*/
+form #emobile label{padding:10px 0}
+form #eramz label{font-size:2em;font-size:2em;line-height:1.9em}
+form #eusername label{padding:10px 0}
 /* change style of autocomplete*/
 input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill{border: none;-webkit-text-fill-color: #fff;-webkit-box-shadow: 0 0 0px 1000px #000 inset;transition: background-color 0.3 ease-in-out 0s;}
 
 form .flex button{width:100%;padding:10px;cursor:pointer;border:none;border-radius:3px;outline:none;background-color:#0275d8;color:#fff;opacity:0.6;transition:0.3s}
 form .flex button:hover{opacity:0.8}
 form .flex button:focus{opacity:1}
+
+
+hr{margin-bottom:1em;}
+#eMethods{}
+
+#eMethods div{height:40px;line-height:40px;margin:5px 0;margin:5px;}
+#eMethods div a{height:100%;background-color:rgba(0,0,0,0.1);transition:0.3s;display:inline-block;color:#eee;margin:0}
+#eMethods div a:hover{opacity:0.7}
+#eMethods .active a{background-color:rgba(0,0,0,0.6)}
+
+#eMethods #ebgoogle a{border:1px solid #fff;border-radius:3px;overflow:hidden;}
+#eMethods #ebgoogle svg{min-width:38px;height:100%;background-color:#eee;}
+#eMethods #ebgoogle span{padding:0 1em;width:100%;}
+
+#eMethods #ebmobile a{min-width:40px;width:40px;text-align:center;padding:5px 0}
+#eMethods #ebemail a{min-width:40px;width:40px;text-align:center;}
+#eMethods #ebusername a{min-width:40px;width:40px;text-align:center;padding:5px 0;}
+
+
 
 /* filed style*/
 /*#enter .field{border-radius:3px;overflow:hidden}
