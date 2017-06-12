@@ -19,30 +19,48 @@ body.bg13{background-image:url(images/13.jpg)}
 body.bg14{background-image:url(images/14.jpg)}
 body.bg15{background-image:url(images/15.jpg)}
 body.bg16{background-image:url(images/16.jpg)}
+
 /* Layout */
-#enter{width:20%;min-width:350px;max-width:450px;height:330px;margin-bottom:10vh;padding:40px;background-color:rgba(255,255,255,0.2);border-radius:5px;box-shadow:0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0, 0, 0, 0.05);transition:0.3s;color:#fff;}
+#enter{width:20%;min-width:350px;max-width:450px;min-height:330px;margin-bottom:10vh;padding:40px;background-color:rgba(255,255,255,0.2);border-radius:5px;box-shadow:0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0, 0, 0, 0.05);transition:0.3s;color:#fff;}
 #enter.large{height:400px}
-#enter #enter-header{position:relative;width:100px;height:10px;margin:0 auto 20px;border-radius:5px;background-color:rgba(0,0,0,.25)}
-#enter #enter-header::before{position:absolute;right:0;bottom:5px;left:0;width:75%;height:3000px;margin:auto;content:'';background-color:#f4f4f4;background-image:url(images/mesh.png);box-shadow:0px -5px 5px #757575}
+#enter #band{position:relative;width:100px;height:10px;margin:0 auto 20px;border-radius:5px;background-color:rgba(0,0,0,.25)}
+#enter #band::before{position:absolute;right:0;bottom:10px;left:0;width:50%;height:3000px;margin:auto;content:'';background-color:rgba(255,255,255,0.7);box-shadow:0px -5px 5px #757575;border-radius:0}
 #enter .logo{margin:0}
-#enter .logo a{display:block}
-#enter .logo img{display:block;max-width:100%;height:90px;margin:0 auto}
+#enter .logo a{display:block;}
+#enter .logo a:focus img{background-color:rgba(0,0,0,0.1);border-radius:50%}
+#enter .logo img{display:block;max-width:100%;height:90px;margin:0 auto;transition:0.3s;}
 #enter .logo span{display:none !important}
 #enter h2{font-size:1.2em;overflow:hidden;height:70px;max-height:70px;margin:5px 0;text-align:center;color:#fff}
 #enter h2 abbr{cursor:pointer;}
+/* form new styles*/
+form{line-height:30px;font-size:1.8em;}
+form .flex{border-radius:3px;height:50px;margin:1em 0;}
+form .flex label{padding:10px 0;border:none;direction:ltr;min-width:50px;width:50px;background-color:rgba(0,0,0,0.2);color:#ddd;transition:0.3s;cursor:pointer;text-align:center;font-size:0.8em}
+form .flex label:hover{background-color:rgba(0,0,0,0.3);}
+form .flex input{padding:10px 1em;border:none;direction:ltr;width:100%;background-color:rgba(0,0,0,0.1);color:#eee;transition:0.3s;}
+form .flex input:hover{background-color:rgba(0,0,0,0.15);}
+form .flex input:focus{background-color:rgba(0,0,0,0.25);}
+form .flex ::-webkit-input-placeholder{color:#ccc;}
+/* change style of autocomplete*/
+input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill{border: none;-webkit-text-fill-color: #fff;-webkit-box-shadow: 0 0 0px 1000px #000 inset;transition: background-color 0.3 ease-in-out 0s;}
+
+form .flex button{width:100%;padding:10px;cursor:pointer;border:none;border-radius:3px;outline:none;background-color:#0275d8;color:#fff;opacity:0.6;transition:0.3s}
+form .flex button:hover{opacity:0.8}
+form .flex button:focus{opacity:1}
+
 /* filed style*/
-#enter .field{border-radius:3px;overflow:hidden}
+/*#enter .field{border-radius:3px;overflow:hidden}
 #enter .field label{background-color:#fff;color:#6f6f6f;transition:0.3s;background-color:#eee;}
 #enter .field label:hover{background-color:#ddd}
 #enter .field label svg{display:none;}
 #enter .field label.mobile svg#i-mobile{display:block;}
 #enter .field label.username svg#i-username{display:block;}
-#enter .field label.active{/*background-color:#efefef;*/color:#00667a}
+#enter .field label.active{color:#00667a}
 #enter .field label span[class*="icon-"]{font-size:20px}
 #enter .field label .icon-range-right{display:none;cursor:pointer;}
 #enter .field label span:not([class*="icon-"]){font-weight:bold;font-size:1.2em}
 #enter .usernameBox label{cursor:pointer;}
-#enter .field input,#enter button{font-size:1.8em;-webkit-transition:0.3s;transition:0.3s}
+#enter .field input,#enter button{-webkit-transition:0.3s;transition:0.3s}
 #enter .field input{width:100%;padding:10px 5%;border:none;background-color:#fff;direction:ltr;color:#404040;height:50px;line-height:50px}
 #enter .field input.disabled,#enter .field input[disabled],.disabled input,.disabled label{pointer-events:none;opacity:.45}
 #enter .field input.ltr{text-align:left}
@@ -53,10 +71,10 @@ body.bg16{background-image:url(images/16.jpg)}
 #enter button:hover,#enter button:focus{color:#fff;background-color:#025aa5}
 #enter .codeBox .field label .icon-barcode{font-size:1.2em}
 #enter .passcodeBox,.pinBox,.codeBox{display:none}
-#enter .passcodeBox,.pinBox,.codeBox,.goBox{margin-top:20px}
+#enter .passcodeBox,.pinBox,.codeBox,.goBox{margin-top:20px}*/
 /*.mesh{background:url(images/mesh.png);width:100%;height:100%;position:absolute;top:0px;}*/
 /*langlist*/
-.langlist{position: absolute;bottom:0;left:0;}
+.langlist{position: absolute;bottom:0;left:0;padding:1em}
 .rtl .langlist{left:inherit;right:0;}
 .langlist a{display:inline-block;padding:1em 2em;color:#fff;background-color:#000;transition:0.3s;opacity:0.3}
 .langlist a:hover{opacity:0.6;}
@@ -77,7 +95,7 @@ body.bg16{background-image:url(images/16.jpg)}
 }
 
 @media all and (min-width:320px) and (max-width:767px) {
- #enter{min-width:300px;padding:40px 20px}
+ #enter{min-width:300px;padding:40px 20px;width:50%}
  #enter .logo{}
 }
 
