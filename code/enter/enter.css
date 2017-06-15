@@ -43,7 +43,8 @@ form .flex input::-webkit-outer-spin-button,form .flex input::-webkit-inner-spin
 form .flex ::-webkit-input-placeholder{color:#ccc;}
 /* custom style for some inputs*/
 form #emobile label{padding:10px 0}
-form #eramz label{font-size:2em;font-size:2em;line-height:1.9em}
+form #eramz label, form #eramzNew label{font-size:2em;line-height:1.9em}
+form #eramz input[type="text"], form #eramzNew input[type="text"]{font-size:0.5em;}
 form #eusername label{padding:10px 0}
 /* change style of autocomplete*/
 input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill{border: none;-webkit-text-fill-color: #fff;-webkit-box-shadow: 0 0 0px 1000px #000 inset;transition: background-color 0.3 ease-in-out 0s;}

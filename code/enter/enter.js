@@ -7,6 +7,7 @@ route('*', function ()
 	{
 		runDataRequire();
 	});
+	allowTogglePass();
 
 
 
@@ -67,6 +68,25 @@ function runDataRequire(_firstTime)
 	});
 }
 
+
+
+function allowTogglePass()
+{
+	$('#eramzNew label, #eramz label').on('click', function()
+	{
+		var inputEl = $(this).parent().find('input');
+		var oldVal  = inputEl.attr('type');
+
+		if(oldVal === 'password')
+		{
+			inputEl.attr('type', 'text');
+		}
+		else
+		{
+			inputEl.attr('type', 'password');
+		}
+	});
+}
 
 
 /**
