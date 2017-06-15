@@ -51,6 +51,9 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
 form .flex button{width:100%;padding:10px;cursor:pointer;border:none;border-radius:3px;outline:none;background-color:#0275d8;color:#fff;opacity:0.6;transition:0.3s}
 form .flex button:hover{opacity:0.8}
 form .flex button:focus{opacity:1}
+form #forgetLink{color:#eee;font-size:0.8em;padding:0.5em 1em;transition:0.3s}
+form #forgetLink:hover{background-color:rgba(0,0,0,0.1)}
+form #forgetLink:focus{background-color:rgba(0,0,0,0.2)}
 
 
 hr{margin-bottom:1em;}
