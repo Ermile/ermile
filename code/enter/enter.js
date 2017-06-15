@@ -2,15 +2,54 @@
 route('*', function ()
 {
 	// on successfull load check mobile
-	verifyInputMobile(null, true);
-	$('#mobile').on('input', function()
+	// run for each input
+	$('input').on('input', function()
 	{
-		verifyInputMobile();
+		runDataRequire();
 	});
+
+
+
 }).once(function()
 {
+	// add check handler to all data-require elements
+	runDataRequire(true);
 
 });
+
+
+function runDataRequire(_firstTime)
+{
+	// check on start
+	$("[data-require]").each(function()
+	{
+		$this = $(this);
+		var requireEl = $this.attr('data-require');
+		callFunction('verifyInput_'+ requireEl, $this, _firstTime);
+	});
+}
+
+
+
+/**
+ * call function if exist
+ * @param  {[type]} _func [description]
+ * @return {[type]}       [description]
+ */
+function callFunction(_func, _arg1, _arg2, _onlyCheckExist)
+{
+	isExist = false;
+	// if wanna to call function and exist, call it
+	if(_func && typeof window[_func] === 'function')
+	{
+		isExist = true;
+		if(!_onlyCheckExist)
+		{
+			window[_func](_arg1, _arg2);
+		}
+	}
+	return isExist;
+}
 
 
 
@@ -19,14 +58,11 @@ route('*', function ()
  * @param  {[type]} _target [description]
  * @return {[type]}         [description]
  */
-function verifyInputMobile(_target, _quick)
+function verifyInput_mobile(_target, _quick)
 {
-	if(!_target)
-	{
-		_target = $('#' + 'ego');
-	}
+	var mobileVal = $('#mobile').val();
 	// validate mobile number with pattern
-	if(validateMobile($('#mobile').val()))
+	if(validateMobile(mobileVal))
 	{
 		if(!_quick)
 		{
@@ -36,10 +72,17 @@ function verifyInputMobile(_target, _quick)
 	}
 	else
 	{
-		_target.slideUp(200, function()
+		if(_quick)
 		{
-			$(this).addClass('hide');
-		});
+			_target.addClass('hide');
+		}
+		else
+		{
+			_target.slideUp(200, function()
+			{
+				$(this).addClass('hide');
+			});
+		}
 	}
 }
 
