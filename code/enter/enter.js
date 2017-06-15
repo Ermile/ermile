@@ -23,9 +23,47 @@ function runDataRequire(_firstTime)
 	// check on start
 	$("[data-require]").each(function()
 	{
-		$this = $(this);
-		var requireEl = $this.attr('data-require');
-		callFunction('verifyInput_'+ requireEl, $this, _firstTime);
+		var $this        = $(this);
+		var requireEl    = $this.attr('data-require');
+		var requireElVal = $('#'+ requireEl).val();
+		var checkResult  = null;
+
+		switch(requireEl)
+		{
+			case 'mobile':
+				checkResult = validateMobile(requireElVal);
+				break;
+
+			case 'usercode':
+				checkResult = validateUsercode(requireElVal);
+				break;
+		}
+
+
+		console.log(checkResult);
+		// if its true and okay show it
+		if(checkResult)
+		{
+			if(!_firstTime)
+			{
+				$this.slideDown(300);
+			}
+			$this.removeClass('hide');
+		}
+		else
+		{
+			if(_firstTime)
+			{
+				$this.addClass('hide');
+			}
+			else
+			{
+				$this.slideUp(200, function()
+				{
+					$this.addClass('hide');
+				});
+			}
+		}
 	});
 }
 
@@ -53,38 +91,30 @@ function callFunction(_func, _arg1, _arg2, _onlyCheckExist)
 
 
 
-/**
- * [verifyInputMobile description]
- * @param  {[type]} _target [description]
- * @return {[type]}         [description]
- */
-function verifyInput_mobile(_target, _quick)
+function validateUsercode(_user)
 {
-	var mobileVal = $('#mobile').val();
-	// validate mobile number with pattern
-	if(validateMobile(mobileVal))
+	if(!_user)
 	{
-		if(!_quick)
-		{
-			_target.slideDown(300);
-		}
-		_target.removeClass('hide');
+		return null;
+	}
+	// convert to string for continue
+	_user    = _user.toString();
+	// define variables
+	var numLen = _user.length;
+	var result = null;
+	console.log(numLen);
+	// if len is true then check another filters
+	if(numLen >= 5 && numLen <= 30)
+	{
+		result = true;
 	}
 	else
 	{
-		if(_quick)
-		{
-			_target.addClass('hide');
-		}
-		else
-		{
-			_target.slideUp(200, function()
-			{
-				$(this).addClass('hide');
-			});
-		}
+		result = false;
 	}
+	return result;
 }
+
 
 
 /**
