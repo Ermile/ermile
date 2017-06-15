@@ -104,7 +104,8 @@ ul.list li a{padding:0.3em 0.5em;}
 .visible{visibility:visible;opacity:1;-webkit-transition:opacity .5s linear;-o-transition:opacity .5s linear;-moz-transition:opacity .5s linear;transition:opacity .5s linear}
 .hidden{visibility:hidden;opacity:0;-webkit-transition:visibility 0 0.5s,opacity .5s linear;-o-transition:visibility 0 0.5s,opacity .5s linear;-moz-transition:visibility 0 0.5s,opacity .5s linear;transition:visibility 0s 0.5s,opacity .5s linear}
 .hide{display:none!important}
-
+.ltr{direction:ltr}
+.rtl{direction:rtl}
 /* default style of forms */
 .df input, .df textarea, .df select{padding:1em;border:none;margin-bottom:1em;background-color:#eaeaea;font-size:1.2em;line-height:2em}
 .df label{padding:1em;}
