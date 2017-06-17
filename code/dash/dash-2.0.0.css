@@ -330,7 +330,7 @@ h2{margin-bottom: 0}
 
 
 @media only screen and (max-width:767px) {
-  header h1 a{padding:0 0.5em}
+  header h1 a{padding:0;}
   #sidebar{display:none}
 
   .wrapper{padding:2em 1em}
