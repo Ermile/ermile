@@ -221,11 +221,16 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 /* default style of forms in dash*/
 .dbox{background-color:rgba(255,255,255,0.8);border-radius:3px;padding:2em;min-height:300px;max-width:90%;margin:0 auto}
 .df{font-size:1.4em;}
-.df *:not(div){border:none;line-height:5rem;max-width:100%;transition:0.3s;padding:0 2em;background-color:rgba(0,0,0,0.05);border-radius:3px;margin:5px;}
+.df *:not(div){border:none;line-height:5rem;max-width:100%;transition:0.3s;padding:0 2em;background-color:rgba(0,0,0,0.05);border-radius:3px;}
 .df *:not(div):hover{background-color:rgba(0,0,0,0.15)}
 .df *:not(div):focus{background-color:rgba(0,0,0,0.1);}
 .df.nr *{border-radius:0}
 .df *:not(div){width:100%;}
+
+
+.g1 > *{padding:5px}
+.g2 > *{padding:10px}
+.g3 > *{padding:20px}
 
 .b1, .b2, .bp, .bn{display:inline-block;line-height:5rem;padding:0 2em;border-radius:3px;text-align:center;}
 body .b1{background-color:#4090d0;color:#fff}
@@ -325,6 +330,7 @@ h2{margin-bottom: 0}
 
 
 @media only screen and (max-width:767px) {
+  header h1 a{padding:0 0.5em}
   #sidebar{display:none}
 
   .wrapper{padding:2em 1em}
