@@ -28,7 +28,7 @@ body.bg15{background-image:url(images/15.jpg)}
 #enter .logo a:focus img{background-color:rgba(0,0,0,0.1);border-radius:50%}
 #enter .logo img{display:block;max-width:100%;height:90px;margin:0 auto;transition:0.3s;}
 #enter .logo span{display:none !important}
-#enter h2{font-size:1.2em;overflow:hidden;margin:1em 0;text-align:center;color:#fff}
+#enter h2{font-size:1.3em;font-weight:100;overflow:hidden;margin:1em 0;text-align:center;color:#fff}
 #enter h2 abbr{cursor:pointer;}
 #enter .text p{font-size:1.2em;line-height:2em;margin-bottom:2em;transition:0.3s;padding:0.5em}
 #enter .text p:hover{background-color:rgba(0,0,0,0.1);}
@@ -50,18 +50,19 @@ body.bg15{background-image:url(images/15.jpg)}
 .rtl #enter .sessions a{left:0.5em;right:inherit;}
 /* form new styles*/
 form{line-height:30px;font-size:1.8em;}
+form p{font-size:0.8em;}
 form .flex{border-radius:3px;height:50px;margin:1em 0;}
 form .flex.hide{display:none!important;}
 form .flex label{padding:0;border:none;direction:ltr;min-width:50px;width:50px;background-color:rgba(0,0,0,0.2);color:#ddd;transition:0.3s;cursor:pointer;text-align:center;font-size:0.8em;line-height:50px;}
 form .flex label:hover{background-color:rgba(0,0,0,0.3);}
-form .flex input{padding:0 1em;line-height:50px;border:none;direction:ltr;width:100%;background-color:rgba(0,0,0,0.1);color:#eee;transition:0.3s;}
+form .flex input{padding:0 1em;line-height:50px;border:none;direction:ltr;width:100%;background-color:rgba(0,0,0,0.1);color:#eee;transition:0.3s;font-weight:100;}
 form .flex input:disabled{opacity:0.8}
 form .flex input:hover{background-color:rgba(0,0,0,0.15);}
 form .flex input:focus{background-color:rgba(0,0,0,0.25);}
 form .flex input::-webkit-outer-spin-button,form .flex input::-webkit-inner-spin-button{-webkit-appearance:none;}
 form .flex ::-webkit-input-placeholder{color:#ccc;}
-form label{padding:1em 0;display:block;}
-form textarea{min-height:3em;padding:1em;line-height:2em;background-color:rgba(0,0,0,0.1);color:#eee}
+form label{padding:1em 0;display:block;font-size:0.8em;}
+form textarea{min-height:3em;padding:1em;line-height:2em;background-color:rgba(0,0,0,0.1);color:#eee;font-size:0.8em}
 /* custom style for some inputs*/
 form #emobile label{padding:10px 0}
 form #eramz label, form #eramzNew label{font-size:2em;line-height:1.9em}
@@ -81,7 +82,7 @@ form .link:focus{background-color:rgba(0,0,0,0.2)}
 
 
 hr{margin-bottom:1em;}
-#eMethods{font-size:0.5em;}
+#eMethods{font-size:0.5em;font-weight:100;}
 #eMethods div{height:40px;line-height:40px;margin:5px 0;margin:5px;}
 #eMethods div a{height:100%;background-color:rgba(0,0,0,0.1);transition:0.3s;display:inline-block;color:#eee;margin:0}
 #eMethods div a:hover{opacity:0.7}
