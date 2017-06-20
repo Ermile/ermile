@@ -1,3 +1,20 @@
+// on start
+route('*', function ()
+{
+
+
+}).once(function()
+{
+
+  runDataResponse();
+
+});
+
+
+
+
+
+
   $('#sidebar ul.sidenav > li > a').click(function()
   {
     var menuTitle = $(this);

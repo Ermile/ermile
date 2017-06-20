@@ -251,6 +251,9 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 .g2 > *{padding:10px}
 .g3 > *{padding:20px}
 
+
+body [data-response-hide]{display:none!important}
+
 .b1, .b2, .bp, .bn{display:inline-block;line-height:5rem;padding:0 2em;border-radius:3px;text-align:center;}
 body .b1{background-color:#4090d0;color:#fff}
 body .b1:hover{background-color:#3080C0}
