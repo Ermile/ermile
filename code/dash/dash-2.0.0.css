@@ -219,7 +219,7 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 .pagination a:focus{background-color:#e3a23d;color:#f4f4f4}
 
 /* default style of forms in dash*/
-.dbox{background-color:rgba(255,255,255,0.8);border-radius:3px;padding:2em 2%;min-height:300px;max-width:98%;margin:0 auto}
+.dbox{background-color:rgba(255,255,255,0.8);border-radius:3px;padding:2em 2%;max-width:98%;margin:0 auto}
 .dbox h2{margin-bottom:1em;text-align:center}
 
 .df{font-size:1.4em;}
