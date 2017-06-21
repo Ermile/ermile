@@ -235,9 +235,13 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 .df.nr *{border-radius:0}
 .df .inline{display:inline-block;width:auto;margin:0}
 /* df default label*/
-.df .lbl{min-width:120px;font-size:1.2rem;padding-right:0.5em;padding-left:0.5em;text-align:center;color:#777;opacity:0.7}
-.df .lbl span{padding:0 1em;}
+.df .lbl{min-width:120px;font-size:1.2rem;padding-right:0.5em;padding-left:0.5em;text-align:center;color:#333;opacity:0.5}
+.df .lbl span{padding:0 1em;background-color:transparent;}
 .df .lbl:hover span{background-color:rgba(0,0,0,0.1);}
+
+/* df headings*/
+.df h4{background-color:transparent;font-size:1em;height:initial;line-height:normal;margin:0;margin-top:1em;padding:0;border-top:1px solid #ddd;padding:5px}
+.df h4:hover{background-color:transparent;}
 
 .df label{font-size:1.25rem;display:block;height:initial;padding:0;border-radius:0;background-color:transparent}
 .df label:hover,.df label:focus{background-color:transparent}
@@ -273,7 +277,7 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 
 
 /* radio type 1*/
-.df .radio1{background-color:#eee}
+.df .radio1{background-color:#eee;border-radius:3px;}
 .df .radio1 input[type="radio"]{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
 .df .radio1 input[type="radio"]+label{position:relative;height:50px;display:block;color:#777;font-size:1rem;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:0 20px;line-height:15px;text-align:center;padding-top:35px}
 .df .radio1 input[type="radio"]+label::before{-webkit-transition:all 250ms cubic-bezier(.4,.25,.3,1);transition:all 250ms cubic-bezier(.4,.25,.3,1);content:"";width:20px;height:20px;border-radius:50%;background-color:#999;border:0 solid #999;font-size:0;position:absolute;bottom:32px;left:50%;-webkit-transform:translate(-50%,50%);transform:translate(-50%,50%)}
@@ -290,7 +294,8 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 .g1 > *{padding:5px}
 .g2 > *{padding:10px}
 .g3 > *{padding:20px}
-
+.mt1{margin-top:1em;}
+.mt2{margin-top:2em;}
 
 body [data-response-hide]{display:none!important}
 
