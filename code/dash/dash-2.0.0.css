@@ -235,7 +235,8 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 .df.nr *{border-radius:0}
 .df .inline{display:inline-block;width:auto;margin:0}
 /* df default label*/
-.df .lbl{min-width:110px;font-size:1.2rem;padding-right:0.5em;padding-left:0.5em;text-align:center;color:#777;opacity:0.7}
+.df .lbl{min-width:120px;font-size:1.2rem;padding-right:0.5em;padding-left:0.5em;text-align:center;color:#777;opacity:0.7}
+.df .lbl span{padding:0 1em;}
 .df .lbl:hover span{background-color:rgba(0,0,0,0.1);}
 
 .df label{font-size:1.25rem;display:block;height:initial;padding:0;border-radius:0;background-color:transparent}
