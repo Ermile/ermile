@@ -285,10 +285,10 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 .df .radio1 input[type="radio"]+label{position:relative;height:50px;display:block;color:#777;font-size:1rem;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:0 20px;line-height:15px;text-align:center;padding-top:35px}
 .df .radio1 input[type="radio"]+label::before{-webkit-transition:all 250ms cubic-bezier(.4,.25,.3,1);transition:all 250ms cubic-bezier(.4,.25,.3,1);content:"";width:20px;height:20px;border-radius:50%;background-color:#999;border:0 solid #999;font-size:0;position:absolute;bottom:32px;left:50%;-webkit-transform:translate(-50%,50%);transform:translate(-50%,50%)}
 .df .radio1 input[type="radio"]+label::after{-webkit-transition:all 250ms cubic-bezier(.4,.25,.3,1);transition:all 250ms cubic-bezier(.4,.25,.3,1);content:"";width:0;height:0;border-radius:50%;background-color:#999;position:absolute;bottom:32px;left:50%;-webkit-transform:translate(-50%,50%);transform:translate(-50%,50%)}
-.df .radio1 input[type="radio"]+label:hover::before{background-color:#777;}
+.df .radio1 input[type="radio"]+label:hover::before{background-color:#4090d0;}
 .df .radio1 input[type="radio"]:checked+label::before{background-color:transparent;width:30px;height:30px;border-width:2px}
 .df .radio1 input[type="radio"]:checked+label::after{width:20px;height:20px;background-color:#4090d0}
-.df .radio1 input[type="radio"]:checked+label:hover::after{background-color:#333}
+.df .radio1 input[type="radio"]:checked+label:hover::before{border-color:#4090d0}
 .df .radio1 input[type="radio"]:focus+label::before{box-shadow:0 0 0 3px rgba(0,0,0,0.2)}
 /* radio type 1 - vertical*/
 .df .radio1.v input[type="radio"]+label{padding:0 20px;line-height:50px;padding-left:40px;text-align:left;}
