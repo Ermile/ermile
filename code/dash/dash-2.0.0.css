@@ -224,7 +224,7 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 .pagination a:focus{background-color:#e3a23d;color:#f4f4f4}
 
 /* default style of forms in dash*/
-.dbox{background-color:rgba(255,255,255,0.8);border-radius:3px;padding:2em 2%;max-width:98%;margin:1em auto}
+.dbox{background-color:rgba(255,255,255,0.8);border-radius:3px;padding:2em 2%;max-width:98%;margin:1em auto 5rem}
 .dbox h2{margin-bottom:1em;text-align:center}
 
 .df{font-size:1.4em;line-height:50px}
@@ -238,6 +238,7 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 .df .lbl{min-width:120px;font-size:1.2rem;padding-right:0.5em;padding-left:0.5em;text-align:center;color:#333;opacity:0.5}
 .df .lbl span{padding:0 1em;background-color:transparent;}
 .df .lbl:hover span{background-color:rgba(0,0,0,0.1);}
+.rtl .df .lbl{min-width:150px;}
 
 /* df headings*/
 .df h4{background-color:transparent;font-size:1em;height:initial;line-height:normal;margin:0;margin-top:1em;padding:0;border-top:1px solid #ddd;padding:5px}
@@ -258,8 +259,9 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 .df input[type='file']#logo+label{width:110px;height:110px;}
 .df input[type='file']#logo+label:after{line-height:110px;font-size:7rem;width:100%;content:"$"}
 .df input[type='file']+label span{display:inline-block;width:auto;}
-.df input[type='file']+label img{margin:0;padding:1em;width:100%;height:100%;background-color:transparent;}
-.df input[type='file']+label+img{width:40px;position:absolute;top:5px;width:110px;height:110px;padding:0;background-color:#eee}
+/*.df input[type='file']+label img{margin:0;padding:1em;width:100%;height:100%;background-color:transparent;}*/
+.df input[type='file']+label img{position:absolute;top:5px;bottom:0;max-width:110px;max-height:110px;width:100%;height:auto; padding:0;background-color:#eee;opacity:0;transition:0.3s}
+.df input[type='file']+label img[src]{opacity:1;}
 
 
 
