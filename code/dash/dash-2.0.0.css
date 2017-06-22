@@ -290,6 +290,13 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 .df .radio1 input[type="radio"]:checked+label::after{width:20px;height:20px;background-color:#555}
 .df .radio1 input[type="radio"]:checked+label:hover::after{background-color:#333}
 .df .radio1 input[type="radio"]:focus+label::before{border-color:#333}
+/* radio type 1 - vertical*/
+.df .radio1.v input[type="radio"]+label{padding:0 20px;line-height:50px;padding-left:40px;text-align:left;}
+.df .radio1.v input[type="radio"]+label::before{bottom:25px;left:20px;}
+.df .radio1.v input[type="radio"]+label::after{bottom:25px;left:20px;}
+.rtl .df .radio1.v input[type="radio"]+label{padding-left:20px;padding-right:40px;text-align:right;}
+.rtl .df .radio1.v input[type="radio"]+label::before{left:initial;right:20px;-webkit-transform:translate(50%,50%);transform:translate(50%,50%);}
+.rtl .df .radio1.v input[type="radio"]+label::after{left:initial;right:20px;-webkit-transform:translate(50%,50%);transform:translate(50%,50%);}
 
 
 .df .divider{line-height:normal;height:1px;margin:3rem 5px;padding:0;background-color:rgba(0, 0, 0, .15)}
