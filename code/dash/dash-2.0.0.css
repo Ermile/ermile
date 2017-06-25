@@ -87,7 +87,8 @@ body.loading-page #sidebar .avatar:before{animation-duration:1s;-webkit-animatio
 #sidebar h2 a:focus{border-color:#fff;}
 /* sidenav menu */
 #sidebar ul.sidenav{font-size:1.4em}
-#sidebar ul > li{}
+#sidebar ul > li{color:#d5d5d5;}
+#sidebar ul > li.title{background-color:#333;padding:0.5em 1em;}
 #sidebar ul > li > a{display:block;padding:1.5em 2em;color:#d5d5d5;transition:0.3s;cursor:pointer;max-width:300px;margin:0 auto;}
 #sidebar ul > li > a > i{font-size:1.2em;display:inline-block;width:1.5em;vertical-align:text-bottom;}
 #sidebar ul > li > a:hover{background-color:rgba(0,0,0,0.3)}
