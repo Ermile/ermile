@@ -66,7 +66,7 @@ footer .breadcrumb nav > a + a:before{font-family:"dash";content:"\63";color:#99
 
 
 /* sidebar */
-#sidebar{overflow:hidden;overflow-y:auto;width:250px;background-color:#302b2b}
+#sidebar{overflow:hidden;overflow-y:auto;width:250px;background-color:#302b2b;transition:0.3s}
 #sidebar figure{margin:4em 0;text-align:center;color:#ddd}
 #sidebar figure .avatar{margin:1em auto;width:100px;position:relative;}
 #sidebar figure .avatar{position:relative;width:100px;margin:1em auto}
@@ -75,6 +75,11 @@ footer .breadcrumb nav > a + a:before{font-family:"dash";content:"\63";color:#99
 #sidebar figure .avatar img{display:block;max-width:100%;padding:.5em;border-radius:50%}
 #sidebar figure figcaption{max-width:100%;margin:0 auto;padding:1em 0}
 #sidebar .menu{overflow-y:auto;}
+/*responsive sidebar*/
+#main::before{content:"";position:fixed;top:0;bottom:0;right:0;left:0;background-color:rgba(0,0,0,0.7);z-index:-1;opacity:0;transition:.3s;}
+body[data-sidebar] #main::before{opacity:1;z-index:2}
+body.ltr[data-sidebar] #sidebar{left:0}
+body.rtl[data-sidebar] #sidebar{right:0}
 
 /* change avatar placeholder on page loading */
 body.loading-page #sidebar .avatar:before{animation-duration:1s;-webkit-animation-duration:1s;animation-fill-mode:both;-webkit-animation-fill-mode:both;animation-name:flash;-webkit-animation-name:flash;animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;}
@@ -379,7 +384,7 @@ body .w200{min-width:200px;width:200px}
 /* ALert Box */
 .alert{position:relative;margin-bottom:18px;color:#c09853;text-shadow:0 1px 0 rgba(255,255,255,0.5);background-color:#fcf8e3;border:1px solid #fbeed5;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;padding:8px 35px 8px 14px;font-size:1.4em;font-family:sans-serif;}
 .rtl .alert{padding:8px 14px 8px 35px;}
-.alert .close{font-family:"FontAwesome";content:"\f00d";cursor:pointer;position:relative;display:block;opacity:0.5;transition: all .2s ease-in;font-size:1.2;line-height:130%;float:right;right: -21px;}
+.alert .close{font-family:"FontAwesome";content:"\f00d";cursor:pointer;position:relative;display:block;opacity:0.5;transition:all .2s ease-in;font-size:1.2;line-height:130%;float:right;right:-21px;}
 .rtl .alert .close{float:left;right:auto;left:-21px;}
 .alert:hover .close{color:#000;}
 .alert a{font-weight:bold;}
@@ -389,7 +394,7 @@ body .w200{min-width:200px;width:200px}
 .alert-error, table .alert-error td{color:#c09853;background-color:#fcf8e3;border-color:#eed3d7}
 .alert-info, table .alert-info td{color:#3a87ad;background-color:#d9edf7;border-color:#bce8f1}
 .alert-good, table .alert-good td{color:#000000;background-color:#ebf8a4;border-color:#a2d246}
-.alert-block{padding-top:14px;padding-bottom:14px;margin-top: 14px;}
+.alert-block{padding-top:14px;padding-bottom:14px;margin-top:14px;}
 .alert-block > p,.alert-block > ul{margin-bottom:0}
 .alert-block p + p{margin-top:5px}
 
@@ -404,7 +409,7 @@ body .w200{min-width:200px;width:200px}
 .btns input:hover{opacity:0.8}
 .btns input[type="submit"]{cursor:pointer;}
 
-h2{margin-bottom: 0}
+h2{margin-bottom:0}
 
 /*! Hint.css - v1.3.3 - 2014-07-06 * http://kushagragour.in/lab/hint/ * Copyright (c) 2014 Kushagra Gour; Licensed MIT */
 /* add rtl support - Javad Evazzadeh  v1.3*/
@@ -419,16 +424,17 @@ h2{margin-bottom: 0}
 
 
 @media only screen and (max-width:959px) {
-  #sidebar{display:none}
-
+  #sidebar {display:block;position:fixed;top:0;bottom:0;overflow-y:auto;z-index:3;left:-250px;}
+  .rtl #sidebar{right:-250px;left:initial;}
+  #sidebar figure{margin:2em 0;}
+  #sidebar ul > li > a {padding:1.2em 2em;}
+  #sidebar h2{display:none;}
 
 }
 
 
 @media only screen and (max-width:767px) {
   header h1 a{padding:0;}
-  #sidebar{display:none}
-
   .wrapper{padding:2em 1em}
   .card .card-data img{max-height:25px}
   .card .card-data span{font-size:1.6em}
@@ -455,3 +461,4 @@ h2{margin-bottom: 0}
 
 
 }
+
