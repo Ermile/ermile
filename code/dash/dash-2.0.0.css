@@ -66,7 +66,7 @@ footer .breadcrumb nav > a + a:before{font-family:"dash";content:"\63";color:#99
 
 
 /* sidebar */
-#sidebar{overflow:hidden;overflow-y:auto;width:250px;background-color:#302b2b;transition:0.3s}
+#sidebar{overflow:hidden;overflow-y:auto;width:250px;position:relative;background-color:#302b2b;transition:0.3s}
 #sidebar figure{margin:4em 0;text-align:center;color:#ddd}
 #sidebar figure .avatar{margin:1em auto;width:100px;position:relative;}
 #sidebar figure .avatar{position:relative;width:100px;margin:1em auto}
