@@ -48,6 +48,13 @@ body.bg15{background-image:url(images/15.jpg)}
 #enter .sessions a:focus{border-color:#444;opacity:0.8;}
 .rtl #enter .sessions .lastseen{left:0.5em;right:inherit;}
 .rtl #enter .sessions a{left:0.5em;right:inherit;}
+
+#enter footer a{color:#eee;font-size:1em;padding:1em 1em;transition:0.3s;display:block;}
+#enter footer a:hover{background-color:rgba(0,0,0,0.1)}
+#enter footer a:focus{background-color:rgba(0,0,0,0.2)}
+#enter footer a:last-child{text-align:right;}
+.rtl #enter footer a:last-child{text-align:left;}
+
 /* form new styles*/
 form{line-height:30px;font-size:1.8em;overflow:hidden;}
 form p{font-size:0.8em;}

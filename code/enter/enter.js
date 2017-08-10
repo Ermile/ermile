@@ -8,6 +8,7 @@ route('*', function ()
 		runDataRequire();
 	});
 	allowTogglePass();
+	runTimer();
 
 
 
@@ -87,6 +88,54 @@ function allowTogglePass()
 		}
 	});
 }
+
+
+function runTimer()
+{
+	$('[data-timer]').each(function(_index, _el)
+	{
+		startTimer($(_el).attr('data-timer'), $(_el));
+	});
+}
+
+
+function startTimer(duration, display)
+{
+	var timer      = duration, minutes, seconds;
+	var myInterval = setInterval(function ()
+	{
+		minutes = parseInt(timer / 60, 10)
+		seconds = parseInt(timer % 60, 10);
+
+		minutes = minutes < 10 ? "0" + minutes : minutes;
+		seconds = seconds < 10 ? "0" + seconds : seconds;
+
+		display.text(minutes + ":" + seconds);
+
+
+		if (--timer <= 0)
+		{
+			if(display.attr('data-href'))
+			{
+				display.attr('href', display.attr('data-href'));
+			}
+
+			if(display.attr('data-text'))
+			{
+				display.fadeOut(function()
+				{
+					$(this).text(display.attr('data-text'));
+				}).fadeIn();
+			}
+
+			console.log('finish');
+			clearInterval(myInterval);
+			// timer = duration;
+		}
+	}, 1000);
+}
+
+
 
 
 /**
