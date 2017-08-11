@@ -192,6 +192,9 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 .card form input[type='submit']{font-weight:600;margin-top:1.5em;padding:.8em;cursor:pointer;color:#fefefe;border:none;background-color:#434a54}
 .card form input[type='submit']:hover{background-color:#5e636b}
 .card form label{font-size:1.2em;font-weight:600;color:#555}
+form #mobile{direction:ltr;}
+form #email{direction:ltr;}
+
 .row-header{font-weight:600;padding:1em;color:#fefefe;background-color:#434a54}
 .row-header span{cursor:default;text-align:center}
 .row-tbl{font-weight:500;padding:1em;transition:.3s;color:#444;background-color:#fff}
@@ -234,7 +237,14 @@ header #profile nav a:hover{color:#fff;background-color:#36525f}
 
 /* default style of forms in dash*/
 .dbox{background-color:rgba(255,255,255,0.8);border-radius:3px;padding:2em 2%;max-width:98%;margin:1em auto 5rem}
-.dbox h2{margin-bottom:1em;text-align:center}
+.dbox.center{width:500px;}
+.dbox.center h2{text-align:center}
+/* delete below line*/
+.middle h2{text-align:center}
+
+.dbox h2{margin-bottom:1em;}
+.dbox .title{border-bottom:6px solid #ddd;display:inline-block;transition:.3s;}
+.dbox:hover .title{border-color:rgba(192, 20, 65, 0.7);}
 
 .df{font-size:1.4em;line-height:50px}
 
