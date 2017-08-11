@@ -69,7 +69,7 @@ function runDataRequire(_firstTime)
 		}
 	});
 }
-https://tejarak.dev/enter/
+
 
 /**
  * set link of language on each page
@@ -81,9 +81,6 @@ function setLanguageURL()
   var indexOfLang = urlPath.indexOf('/' + $('html').attr('lang') + '/');
   var urlBase     = $('base').attr('href');
   urlBase         = urlBase.substr(0, urlBase.indexOf('/', 9));
-  console.log(urlPath);
-  console.log(indexOfLang);
-  console.log(urlBase);
 
   if(indexOfLang === 0)
   {
@@ -93,7 +90,6 @@ function setLanguageURL()
   {
     urlPath = urlPath.substr(1);
   }
-  console.log(urlPath);
 
   $('.langlist a').each(function(key, index)
   {
@@ -227,7 +223,7 @@ function validateUsercode(_user)
 	// define variables
 	var numLen = _user.length;
 	var result = null;
-	console.log(numLen);
+	// console.log(numLen);
 	// if len is true then check another filters
 	if(numLen >= 5 && numLen <= 30)
 	{
