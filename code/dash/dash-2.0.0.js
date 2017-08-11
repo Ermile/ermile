@@ -22,7 +22,7 @@ function setLanguageURL()
 {
   var urlPath     = window.location.pathname;
   var urlHash     = window.location.hash;
-  var indexOfLang = urlPath.indexOf('/' + $('html').attr('lang') + '/');
+  var indexOfLang = urlPath.indexOf('/' + $('html').attr('lang'));
   var urlBase     = $('base').attr('href');
   urlBase         = urlBase.substr(0, urlBase.indexOf('/', 9));
 
