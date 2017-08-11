@@ -1,6 +1,6 @@
 body{min-height:100%}
 /* Initial CSS */
-body{background-color:#d7d8d8;background-image:url(images/bg.jpg);background-repeat:repeat;background-size:cover;display:-webkit-box !important;display:-webkit-flex !important;display:-ms-flexbox !important;display:-moz-box !important;display:flex !important;-webkit-box-pack:center !important;-webkit-justify-content:center !important;-ms-flex-pack:center !important;-moz-box-pack:center !important;justify-content:center !important;-webkit-box-align:center !important;-webkit-align-items:center !important;-ms-flex-align:center !important;-moz-box-align:center !important;align-items:center!important;background-attachment:fixed;}
+body{background-color:#d7d8d8;background-image:url(images/bg.jpg);background-repeat:repeat;background-size:cover;display:-webkit-box !important;display:-webkit-flex !important;display:-ms-flexbox !important;display:-moz-box !important;display:flex !important;-webkit-box-pack:center !important;-webkit-justify-content:center !important;-ms-flex-pack:center !important;-moz-box-pack:center !important;justify-content:center !important;-webkit-box-align:center !important;-webkit-align-items:center !important;-ms-flex-align:center !important;-moz-box-align:center !important;align-items:center!important;background-attachment:fixed;position:relative;}
 body.bg1{background-image:url(images/bg.jpg)}
 body.bg2{background-image:url(images/2.jpg)}
 body.bg3{background-image:url(images/3.jpg)}
@@ -19,7 +19,7 @@ body.bg14{background-image:url(images/14.jpg)}
 body.bg15{background-image:url(images/15.jpg)}
 
 /* Layout */
-#enter{width:20%;min-width:380px;max-width:450px;min-height:400px;margin:10px 0 50px;padding:30px;background-color:rgba(255,255,255,0.2);border-radius:5px;box-shadow:0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0, 0, 0, 0.05);transition:0.3s;color:#fff;}
+#enter{width:20%;min-width:380px;max-width:450px;min-height:400px;margin:10px 0 70px;padding:30px;background-color:rgba(255,255,255,0.2);border-radius:5px;box-shadow:0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0, 0, 0, 0.05);transition:0.3s;color:#fff;}
 #enter.large{height:400px}
 #enter #band{position:relative;width:100px;height:10px;margin:0 auto 20px;border-radius:5px;background-color:rgba(0,0,0,.25)}
 #enter #band::before{position:absolute;right:0;bottom:10px;left:0;width:50%;height:3000px;margin:auto;content:'';background-color:rgba(255,255,255,0.7);box-shadow:0px -5px 5px #757575;border-radius:0}
@@ -137,7 +137,7 @@ hr{margin-bottom:1em;}
 #enter .passcodeBox,.pinBox,.codeBox,.goBox{margin-top:20px}*/
 /*.mesh{background:url(images/mesh.png);width:100%;height:100%;position:absolute;top:0px;}*/
 /*langlist*/
-.langlist{position:fixed;bottom:0;left:0;padding:1em}
+.langlist{position:absolute;bottom:0;left:0;padding:1em}
 .rtl .langlist{left:inherit;right:0;}
 .langlist a{display:inline-block;padding:1em 2em;color:#fff;background-color:#000;transition:0.3s;opacity:0.3}
 .langlist a:hover{opacity:0.6;}
@@ -160,7 +160,7 @@ hr{margin-bottom:1em;}
 @media all and (max-width:767px) {
  #enter{min-width:300px;padding:40px 20px;width:50%}
  #enter .logo{}
- .langlist{display:none;}
+ .langlist{position:absolute;}
 }
 
 /* Design for print */
