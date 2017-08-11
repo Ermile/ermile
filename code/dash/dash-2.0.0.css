@@ -37,12 +37,13 @@ header .hm a, header .hm div{transition:0.3s;color:#888;}
 header .hm a:hover, header .hm div:hover{color:#555;background-color:rgba(0,0,0,0.1);}
 header .hm a:focus, header .hm div:focus{color:#000;background-color:rgba(0,0,0,0.2);}
 /* vertical menu nav */
-header .vm nav{max-width:200px;min-width:120px;width:auto;position:absolute;top:50px;opacity:0;background-color:#ccc;transition:0.3s;visibility:hidden;z-index:1}
-header .vm nav > a{display:block;padding:1em 2em;transition:0.3s;margin:0.5em;background-color:#eee}
+header .vm nav{max-width:200px;min-width:140px;width:auto;position:absolute;top:50px;opacity:0;background-color:#ccc;transition:0.3s;visibility:hidden;z-index:1}
+header .vm nav > a{display:block;padding:1em 1em;transition:0.3s;margin:0.5em;background-color:#eee}
 header .vm nav > a:hover{background-color:#fff;}
 header .vm nav > a:focus{background-color:rgba(255,255,255,0.4);}
 header .vm nav .isActive, header .vm nav .active{cursor:alias;}
-header .vm nav .isActive::after, header .vm nav .active::after{content:"\6f";display:inline-block;color:#5cb85c;font:normal normal normal 14px/1 dash;padding:0 10px;vertical-align:bottom;}
+header .vm nav .isActive::after, header .vm nav .active::after{content:"\6f";display:inline-block;color:#5cb85c;font:normal normal normal 14px/11px dash;padding:0 5px;float:right;vertical-align:bottom;}
+.rtl header .vm nav .isActive::after, .rtl header .vm nav .active::after{float:left;}
 header .vm:hover nav{opacity:1;visibility:visible;}
 .ltr header .right{margin-left:auto;}
 .rtl header .right{margin-right:auto;}
