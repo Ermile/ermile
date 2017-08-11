@@ -72,6 +72,8 @@ footer .breadcrumb nav > a + a:before{font-family:"dash";content:"\63";color:#99
 #sidebar figure .avatar{position:relative;width:100px;margin:1em auto;display:block;}
 #sidebar figure .avatar:before{position:absolute;top:0;right:0;bottom:0;left:0;content:'';transition:.3s;border:2px solid transparent;border-color:transparent #888;border-radius:50%}
 #sidebar figure:hover .avatar:before{border-color:transparent #fff}
+#sidebar figure .avatar:after{font-family:"dash";content:"\e05f";position:absolute;top:0;bottom:0;right:0;left:0;text-align:center;line-height:90px;font-size:2em;border-radius:50%;color:#fff;opacity:0;transition:0.3s;margin:5px;}
+#sidebar figure:hover .avatar:after{background-color:rgba(0,0,0,0.3);opacity:1}
 #sidebar figure .avatar img{display:block;max-width:100%;padding:.5em;border-radius:50%}
 #sidebar figure figcaption{max-width:100%;margin:0 auto;padding:1em 0}
 #sidebar .menu{overflow-y:auto;}
