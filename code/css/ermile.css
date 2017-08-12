@@ -46,6 +46,7 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects}
 abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
 b,strong{font-weight:inherit;font-weight:bolder}
 code,kbd,samp, pre{font-family:monospace,monospace;font-size:1em}
+code{display:inline-block;}
 dfn{font-style:italic}
 mark{background-color:#ff0;color:#000}
 small{font-size:80%}
