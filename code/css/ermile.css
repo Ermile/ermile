@@ -126,7 +126,8 @@ ul.list li a{padding:0.3em 0.5em;}
 .ltr{direction:ltr}
 .rtl{direction:rtl}
 .center{text-align:center;}
-[data-develop]:after{content:"";position:fixed;bottom:0;left:0;right:0;height:5px;background-color:#bfc015}
+[data-develop]:after{content:"Dev";position:fixed;bottom:0;left:0;right:0;opacity:0.5;transition:0.3s;color:#333;padding:20px;font-size:100px;font-family:sans-serif;border-bottom:5px solid #b5c015;text-align:right;}
+[data-develop]:hover:after{opacity:0;z-index:-1;}
 
 
 /* grid */
