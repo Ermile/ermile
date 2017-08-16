@@ -10,3 +10,6 @@ desktop.ini
 /includes/cls/database/backup
 /includes/cls/database/log
 *sftp-config.json
+
+.sass-cache
+*.css.map
