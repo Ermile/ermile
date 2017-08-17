@@ -1,1 +1,1 @@
-sass --watch style.scss:styles.css
+sass --watch source.scss:../siftal.css
