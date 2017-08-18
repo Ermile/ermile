@@ -8,13 +8,17 @@ Version       1.0.0
 */
 
 
+// add fonts
 @import 'base/fonts';
+@import 'dash/font';
 @import 'base/reset';
 
+// add base styles
 @import 'base/global';
 @import 'base/typography';
 @import 'base/grid';
 
+// add style of dash
 @import 'dash/layout';
 @import 'dash/header';
 @import 'dash/aside';

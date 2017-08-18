@@ -24,7 +24,7 @@
 .df input[type='file']{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
 .df input[type='file']:focus+label{box-shadow:0 0 0 3px rgba(0,0,0,0.2)}
 .df input[type='file']+label{display:block;height:50px;margin:0 auto;padding:0;-webkit-transition:.3s;transition:.3s;border-radius:3px;background-color:rgba(0,0,0,.05)}
-.df input[type='file']+label:after{font-family:"dash";content:"3";color:#bbb;display:inline-block;text-align:center;line-height:50px;font-size:3rem;vertical-align:middle;}
+.df input[type='file']+label:after{font-family:"siftal";content:"3";color:#bbb;display:inline-block;text-align:center;line-height:50px;font-size:3rem;vertical-align:middle;}
 .df input[type='file']+label:hover{background-color:rgba(0,0,0,.15)}
 .df input[type='file']#avatar+label{width:110px;height:110px;}
 .df input[type='file']#avatar+label:after{line-height:110px;font-size:7rem;width:100%;content:""}

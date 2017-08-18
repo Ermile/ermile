@@ -11,7 +11,7 @@ footer .breadcrumb nav{padding:5px 1em;display:inline-block;line-height:30px;hei
 footer .breadcrumb nav a{font-size:1em;line-height:20px;color:#99a0aa;float:left;font-weight:700;transition:0.3s;}
 footer .breadcrumb nav a:hover{color:#656d78;}
 footer .breadcrumb nav a:last-child{color:#656d78;}
-footer .breadcrumb nav > a + a:before{font-family:"dash";content:"\63";color:#99a0aa;padding:0px 8px;float:left;}
+footer .breadcrumb nav > a + a:before{font-family:"siftal";content:"\63";color:#99a0aa;padding:0px 8px;float:left;}
 .rtl footer .breadcrumb nav a{float:right;}
 .rtl footer .breadcrumb nav > a + a:before{content:"\62";float:right;}
 
