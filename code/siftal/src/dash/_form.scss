@@ -1,0 +1,127 @@
+
+.df{font-size:1.4em;line-height:50px}
+
+.df *:not(div){line-height:5rem;max-width:100%;height:5rem;padding:0 2rem;-webkit-transition:.3s;transition:.3s;border:none;border-radius:3px;background-color:rgba(0,0,0,.05);display:inline-block;width:100%;}
+.df *:not(div):hover{background-color:rgba(0,0,0,0.15)}
+.df *:not(div):focus{box-shadow:0 0 0 3px rgba(0,0,0,0.2)}
+.df.nr *{border-radius:0}
+.df .inline{display:inline-block;width:auto;margin:0}
+/* df default label*/
+.df .lbl{min-width:120px;font-size:1.2rem;padding-right:0.5em;padding-left:0.5em;text-align:center;color:#333;opacity:0.5}
+.df .lbl span{padding:0 1em;background-color:transparent;}
+.df .lbl:hover span{background-color:rgba(0,0,0,0.1);}
+.rtl .df .lbl{min-width:150px;}
+
+/* df headings*/
+.df h4{background-color:transparent;font-size:1em;height:initial;line-height:normal;margin:0;margin-top:1em;padding:0;border-top:1px solid #ddd;padding:5px}
+.df h4:hover{background-color:transparent;}
+
+.df label{font-size:1.25rem;display:block;height:initial;padding:0;border-radius:0;background-color:transparent}
+.df label:hover,.df label:focus{background-color:transparent}
+.df textarea{line-height:2.5rem;display:block;min-height:10rem;padding-top:1.4rem;padding-bottom:1.4rem}
+
+/* handle all type of files*/
+.df input[type='file']{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
+.df input[type='file']:focus+label{box-shadow:0 0 0 3px rgba(0,0,0,0.2)}
+.df input[type='file']+label{display:block;height:50px;margin:0 auto;padding:0;-webkit-transition:.3s;transition:.3s;border-radius:3px;background-color:rgba(0,0,0,.05)}
+.df input[type='file']+label:after{font-family:"dash";content:"3";color:#bbb;display:inline-block;text-align:center;line-height:50px;font-size:3rem;vertical-align:middle;}
+.df input[type='file']+label:hover{background-color:rgba(0,0,0,.15)}
+.df input[type='file']#avatar+label{width:110px;height:110px;}
+.df input[type='file']#avatar+label:after{line-height:110px;font-size:7rem;width:100%;content:""}
+.df input[type='file']#logo+label{width:110px;height:110px;}
+.df input[type='file']#logo+label:after{line-height:110px;font-size:7rem;width:100%;content:"$"}
+.df input[type='file']+label span{display:inline-block;width:auto;}
+/*.df input[type='file']+label img{margin:0;padding:1em;width:100%;height:100%;background-color:transparent;}*/
+.df input[type='file']+label img{position:absolute;top:5px;bottom:0;max-width:110px;max-height:110px;width:100%;height:auto; padding:0;background-color:#eee;opacity:0;transition:0.3s}
+.df input[type='file']+label img[src]{opacity:1;}
+
+
+
+/*.df .df-file input[type='file']{position:absolute;z-index:-1;width:0;height:0;margin:0;padding:0;opacity:0}
+.df .df-file label{display:block;width:110px;height:110px;margin:0 auto;border-radius:3px;background-color:rgba(0,0,0,.05)}
+.df .df-file.df-avatar label{background-image:url(images/avatar.svg);background-repeat:no-repeat;background-position:center center;background-size:80%}
+.df .df-file.df-avatar label:hover{background-color:rgba(0,0,0,0.15)}
+.df .df-file.df-avatar input[type='file']:focus+label{background-color:rgba(0,0,0,0.10)}*/
+
+
+.df input[type='checkbox']{width:20px;height:20px;vertical-align:middle}
+.df input[type='checkbox']+label{display:inline-block;width:auto;margin:0}
+.df input[type='radio']{width:20px;height:20px;vertical-align:middle}
+.df input[type='radio']+label{display:inline-block;width:auto;margin:0;padding:0 0.5em}
+.df label.checkbox{margin:0}
+.df label[for]{cursor:pointer;}
+
+/* radio type 1*/
+.df .radio1{background-color:#eee;border-radius:3px;}
+.df .radio1 input[type="radio"]{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
+.df .radio1 input[type="radio"]+label{position:relative;height:50px;display:block;color:#777;font-size:1rem;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:0 20px;line-height:15px;text-align:center;padding-top:35px}
+.df .radio1 input[type="radio"]+label::before{-webkit-transition:all 250ms cubic-bezier(.4,.25,.3,1);transition:all 250ms cubic-bezier(.4,.25,.3,1);content:"";width:20px;height:20px;border-radius:50%;background-color:#999;border:0 solid #999;font-size:0;position:absolute;bottom:32px;left:50%;-webkit-transform:translate(-50%,50%);transform:translate(-50%,50%)}
+.df .radio1 input[type="radio"]+label::after{-webkit-transition:all 250ms cubic-bezier(.4,.25,.3,1);transition:all 250ms cubic-bezier(.4,.25,.3,1);content:"";width:0;height:0;border-radius:50%;background-color:#999;position:absolute;bottom:32px;left:50%;-webkit-transform:translate(-50%,50%);transform:translate(-50%,50%)}
+.df .radio1 input[type="radio"]+label:hover::before{background-color:#4090d0;}
+.df .radio1 input[type="radio"]:checked+label::before{background-color:transparent;width:30px;height:30px;border-width:2px}
+.df .radio1 input[type="radio"]:checked+label::after{width:20px;height:20px;background-color:#4090d0}
+.df .radio1 input[type="radio"]:checked+label:hover::before{border-color:#4090d0}
+.df .radio1 input[type="radio"]:focus+label::before{box-shadow:0 0 0 3px rgba(0,0,0,0.2)}
+/* radio type 1 - vertical*/
+.df .radio1.v input[type="radio"]+label{padding:0 20px;line-height:50px;padding-left:40px;text-align:left;}
+.df .radio1.v input[type="radio"]+label::before{bottom:25px;left:20px;}
+.df .radio1.v input[type="radio"]+label::after{bottom:25px;left:20px;}
+.rtl .df .radio1.v input[type="radio"]+label{padding-left:20px;padding-right:40px;text-align:right;}
+.rtl .df .radio1.v input[type="radio"]+label::before{left:initial;right:20px;-webkit-transform:translate(50%,50%);transform:translate(50%,50%);}
+.rtl .df .radio1.v input[type="radio"]+label::after{left:initial;right:20px;-webkit-transform:translate(50%,50%);transform:translate(50%,50%);}
+/* checkbox type 1*/
+.df .check1 input[type='checkbox']{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
+.df .check1 input[type='checkbox']+label{position:relative;cursor:pointer;padding:0}
+.df .check1 input[type='checkbox']+label:before{content:'';margin-right:10px;display:inline-block;vertical-align:middle;width:20px;height:20px;background:rgba(0,0,0,0.1);transition:0.3s;border-radius:3px;}
+.df .check1 input[type='checkbox']:hover+label:before{background-color:#4090d0}
+.df .check1 input[type='checkbox']:checked+label:before{background-color:#4090d0}
+.df .check1 input[type='checkbox']:focus+label:before{box-shadow:0 0 0 3px rgba(0,0,0,0.2)}
+.df .check1 input[type='checkbox']:disabled+label{color:#bbb;cursor:auto}
+.df .check1 input[type='checkbox']:disabled+label:before{box-shadow:none;background-color:#ddd}
+.df .check1 input[type='checkbox']+label:after{content:'';position:absolute;left:5px;top:23px;background-color:#fff;width:2px;height:2px;box-shadow:2px 0 0 white,4px 0 0 white,4px -2px 0 white,4px -4px 0 white,4px -6px 0 white,4px -8px 0 #fff;-webkit-transform:rotate(45deg);transform:rotate(45deg);opacity:0;transition:0.1s}
+.df .check1 input[type='checkbox']:checked+label:after{opacity:1}
+.rtl .df .check1 input[type='checkbox']+label:before{margin-right:0;margin-left:10px;}
+.rtl .df .check1 input[type='checkbox']+label:after{left:0;right:13px;}
+
+.df .divider{line-height:normal;height:1px;margin:3rem 5px;padding:0;background-color:rgba(0, 0, 0, .15)}
+
+.g1 > *{padding:5px}
+.g2 > *{padding:10px}
+.g3 > *{padding:20px}
+.mt1{margin-top:1em;}
+.mt2{margin-top:2em;}
+
+
+body [data-response-hide]{display:none!important}
+
+.b1, .b2, .bp, .bn{display:inline-block;line-height:5rem;padding:0 2em;border-radius:3px;text-align:center;}
+body .b1{background-color:#4090d0;color:#fff}
+body .b1:hover{background-color:#3080C0}
+body .b1:focus{background-color:#2070B0}
+body .b2{background-color:#444;color:#eee}
+body .b2:hover{background-color:#333}
+body .b2:focus{background-color:#000}
+body .bp{background-color:#70b020;color:#eee}
+body .bp:hover{background-color:#60a010}
+body .bp:focus{background-color:#609000}
+body .bn{background-color:#e03030;color:#eee}
+body .bn:hover{background-color:#d02020}
+body .bn:focus{background-color:#c01010}
+body .bs{background-color:transparent;border:1px solid #ccc}
+
+body .w100{min-width:100px;width:100px}
+body .w125{min-width:125px;width:125px}
+body .w150{min-width:150px;width:150px}
+body .w200{min-width:200px;width:200px}
+
+/*.df label{padding:1em}
+.df input[type="submit"], .df button{background-color:#4070c0;color:#fff;padding:1em 2em;border:none}
+.df input[type="file"]{cursor:pointer;}
+.df button{border:none}
+.df textarea{min-height:100px;height:150px;max-height:500px;}
+.df-button{font-size:1.2em;line-height:2em;padding:1em 2em;cursor:pointer;transition:.3s;color:#fff;border:none;background-color:#4070c0;display:inline-block;}
+.df-button:hover{background-color:#2957a5;}
+.df-button:focus{background-color:#2957a5;color:#fff}
+*/
+
+
