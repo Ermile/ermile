@@ -1,41 +1,41 @@
 
 /* sidebar */
-#sidebar{overflow:hidden;overflow-y:auto;width:250px;position:relative;background-color:#302b2b;transition:0.3s}
-#sidebar figure{margin:4em 0;text-align:center;color:#ddd}
-#sidebar figure .avatar{position:relative;width:100px;margin:1em auto;display:block;height:100px;}
-#sidebar figure .avatar:before{position:absolute;top:0;right:0;bottom:0;left:0;content:'';transition:.3s;border:2px solid transparent;border-color:transparent #888;border-radius:50%}
-#sidebar figure:hover .avatar:before{border-color:transparent #fff}
-#sidebar figure .avatar:after{font-family:"siftal";content:"\e05f";position:absolute;top:0;bottom:0;right:0;left:0;text-align:center;line-height:90px;font-size:2em;border-radius:50%;color:#fff;opacity:0;transition:0.3s;margin:5px;}
-#sidebar figure:hover .avatar:after{background-color:rgba(0,0,0,0.3);opacity:1}
-#sidebar figure .avatar img{display:block;max-width:100%;height:100%;padding:.5em;border-radius:50%;margin:0 auto;width:100%;}
-#sidebar figure figcaption{max-width:100%;margin:0 auto;padding:1em 0}
-#sidebar .menu{overflow-y:auto;}
+.siftal #sidebar{overflow:hidden;overflow-y:auto;width:250px;position:relative;background-color:#302b2b;transition:0.3s}
+.siftal #sidebar figure{margin:4em 0;text-align:center;color:#ddd}
+.siftal #sidebar figure .avatar{position:relative;width:100px;margin:1em auto;display:block;height:100px;}
+.siftal #sidebar figure .avatar:before{position:absolute;top:0;right:0;bottom:0;left:0;content:'';transition:.3s;border:2px solid transparent;border-color:transparent #888;border-radius:50%}
+.siftal #sidebar figure:hover .avatar:before{border-color:transparent #fff}
+.siftal #sidebar figure .avatar:after{font-family:"siftal";content:"\e05f";position:absolute;top:0;bottom:0;right:0;left:0;text-align:center;line-height:90px;font-size:2em;border-radius:50%;color:#fff;opacity:0;transition:0.3s;margin:5px;}
+.siftal #sidebar figure:hover .avatar:after{background-color:rgba(0,0,0,0.3);opacity:1}
+.siftal #sidebar figure .avatar img{display:block;max-width:100%;height:100%;padding:.5em;border-radius:50%;margin:0 auto;width:100%;}
+.siftal #sidebar figure figcaption{max-width:100%;margin:0 auto;padding:1em 0}
+.siftal #sidebar .menu{overflow-y:auto;}
 /*responsive sidebar*/
-#main::before{content:"";position:fixed;top:0;bottom:0;right:0;left:0;background-color:rgba(0,0,0,0.7);z-index:-1;opacity:0;transition:.3s;}
-body[data-sidebar] #main::before{opacity:1;z-index:2}
-body.ltr[data-sidebar] #sidebar{left:0}
-body.rtl[data-sidebar] #sidebar{right:0}
+.siftal #main::before{content:"";position:fixed;top:0;bottom:0;right:0;left:0;background-color:rgba(0,0,0,0.7);z-index:-1;opacity:0;transition:.3s;}
+body[data-sidebar].siftal #main::before{opacity:1;z-index:2}
+body.siftal.ltr[data-sidebar] #sidebar{left:0}
+body.siftal.rtl[data-sidebar] #sidebar{right:0}
 
 /* change avatar placeholder on page loading */
-body.loading-page #sidebar .avatar:before{animation-duration:1s;-webkit-animation-duration:1s;animation-fill-mode:both;-webkit-animation-fill-mode:both;animation-name:flash;-webkit-animation-name:flash;animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;}
+body.siftal.loading-page #sidebar .avatar:before{animation-duration:1s;-webkit-animation-duration:1s;animation-fill-mode:both;-webkit-animation-fill-mode:both;animation-name:flash;-webkit-animation-name:flash;animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;}
 @-webkit-keyframes flash{ from, 50%, to {opacity:1;} 25%, 75% {opacity:0.5;}}
 @keyframes flash { from, 50%, to {opacity:1;} 25%, 75% {opacity:0.5;}}
 
 
 /* header */
-#sidebar h2{margin:0;text-align:center;color:#fff;background-color:#201f1f;height:60px;line-height:60px;margin-bottom:1em;transition:0.3s}
-#sidebar h2:hover{background-color:#000}
-#sidebar h2 a{display:block;max-width:300px;margin:0 auto;transition:0.3s;border:1em solid transparent;border-top-width:0.1em;border-bottom-width:0.1em;}
-#sidebar h2 a:focus{border-color:#fff;}
+.siftal #sidebar h2{margin:0;text-align:center;color:#fff;background-color:#201f1f;height:60px;line-height:60px;margin-bottom:1em;transition:0.3s}
+.siftal #sidebar h2:hover{background-color:#000}
+.siftal #sidebar h2 a{display:block;max-width:300px;margin:0 auto;transition:0.3s;border:1em solid transparent;border-top-width:0.1em;border-bottom-width:0.1em;}
+.siftal #sidebar h2 a:focus{border-color:#fff;}
 /* sidenav menu */
-#sidebar ul.sidenav{font-size:1.4em}
-#sidebar ul > li{color:#d5d5d5;}
-#sidebar ul > li.title{background-color:#333;padding:0.5em 1em;}
-#sidebar ul > li > a{display:block;padding:1.5em 2em;color:#d5d5d5;transition:0.3s;cursor:pointer;max-width:300px;margin:0 auto;}
-#sidebar ul > li > a > i{font-size:1.2em;display:inline-block;width:1.5em;vertical-align:text-bottom;}
-#sidebar ul > li > a:hover{background-color:rgba(0,0,0,0.3)}
-#sidebar ul > li > a:focus{background-color:rgba(0,0,0,0.7)}
-#sidebar ul > li > ul{display:none;}
-#sidebar ul > li > ul > li{}
-#sidebar ul > li > ul > li > a{padding:0.8em 3em}
+.siftal #sidebar ul.sidenav{font-size:1.4em}
+.siftal #sidebar ul > li{color:#d5d5d5;}
+.siftal #sidebar ul > li.title{background-color:#333;padding:0.5em 1em;}
+.siftal #sidebar ul > li > a{display:block;padding:1.5em 2em;color:#d5d5d5;transition:0.3s;cursor:pointer;max-width:300px;margin:0 auto;}
+.siftal #sidebar ul > li > a > i{font-size:1.2em;display:inline-block;width:1.5em;vertical-align:text-bottom;}
+.siftal #sidebar ul > li > a:hover{background-color:rgba(0,0,0,0.3)}
+.siftal #sidebar ul > li > a:focus{background-color:rgba(0,0,0,0.7)}
+.siftal #sidebar ul > li > ul{display:none;}
+.siftal #sidebar ul > li > ul > li{}
+.siftal #sidebar ul > li > ul > li > a{padding:0.8em 3em}
 

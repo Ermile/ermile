@@ -1,29 +1,29 @@
 
 /* header */
-header{height:50px;flex-shrink:0;background-color:#fff;overflow:hidden;}
-header:hover{overflow:visible;}
-header #sidenavHandler{width:50px;text-align:center;font-size:1.2em;}
-header #sidenavHandler i{width:100%;padding:0;}
-header h1{margin:0;overflow:hidden;min-width:100px;}
-header h1 a{margin:0;padding:0 1em;color:#888;transition:0.3s;display:inline-block;height:100%;line-height:50px;color:#888;}
-header h1 a:hover{color:#444;background-color:rgba(0,0,0,0.1);}
-header h1 a:focus{color:#444;background-color:rgba(0,0,0,0.15);}
-header h1 img{height:50px;width:50px;padding:5px;}
-header h1 span{padding:0 0.5em}
+.siftal header{height:50px;flex-shrink:0;background-color:#fff;overflow:hidden;}
+.siftal header:hover{overflow:visible;}
+.siftal header #sidenavHandler{width:50px;text-align:center;font-size:1.2em;}
+.siftal header #sidenavHandler i{width:100%;padding:0;}
+.siftal header h1{margin:0;overflow:hidden;min-width:100px;}
+.siftal header h1 a{margin:0;padding:0 1em;color:#888;transition:0.3s;display:inline-block;height:100%;line-height:50px;color:#888;}
+.siftal header h1 a:hover{color:#444;background-color:rgba(0,0,0,0.1);}
+.siftal header h1 a:focus{color:#444;background-color:rgba(0,0,0,0.15);}
+.siftal header h1 img{height:50px;width:50px;padding:5px;}
+.siftal header h1 span{padding:0 0.5em}
 /* header flex */
-header i{padding:0 1.5em;cursor:pointer;transition:0.3s;display:block;height:100%;color:#888;line-height:45px;}
-header i:before{font-size:1.5em;vertical-align:-webkit-baseline-middle;}
-header .hm a, header .hm div{transition:0.3s;color:#888;}
-header .hm a:hover, header .hm div:hover{color:#555;background-color:rgba(0,0,0,0.1);}
-header .hm a:focus, header .hm div:focus{color:#000;background-color:rgba(0,0,0,0.2);}
+.siftal header i{padding:0 1.5em;cursor:pointer;transition:0.3s;display:block;height:100%;color:#888;line-height:45px;}
+.siftal header i:before{font-size:1.5em;vertical-align:-webkit-baseline-middle;}
+.siftal header .hm a, .siftal header .hm div{transition:0.3s;color:#888;}
+.siftal header .hm a:hover, .siftal header .hm div:hover{color:#555;background-color:rgba(0,0,0,0.1);}
+.siftal header .hm a:focus, .siftal header .hm div:focus{color:#000;background-color:rgba(0,0,0,0.2);}
 /* vertical menu nav */
-header .vm nav{max-width:200px;min-width:140px;width:auto;position:absolute;top:50px;opacity:0;background-color:#ccc;transition:0.3s;visibility:hidden;z-index:1}
-header .vm nav > a{display:block;padding:1em 1em;transition:0.3s;margin:0.5em;background-color:#eee}
-header .vm nav > a:hover{background-color:#fff;}
-header .vm nav > a:focus{background-color:rgba(255,255,255,0.4);}
-header .vm nav .isActive, header .vm nav .active{cursor:alias;}
-header .vm nav .isActive::after, header .vm nav .active::after{content:"\6f";display:inline-block;color:#5cb85c;font:normal normal normal 14px/11px siftal;padding:0 5px;float:right;vertical-align:bottom;}
-.rtl header .vm nav .isActive::after, .rtl header .vm nav .active::after{float:left;}
-header .vm:hover nav{opacity:1;visibility:visible;}
-.ltr header .right{margin-left:auto;}
-.rtl header .right{margin-right:auto;}
+.siftal header .vm nav{max-width:200px;min-width:140px;width:auto;position:absolute;top:50px;opacity:0;background-color:#ccc;transition:0.3s;visibility:hidden;z-index:1}
+.siftal header .vm nav > a{display:block;padding:1em 1em;transition:0.3s;margin:0.5em;background-color:#eee}
+.siftal header .vm nav > a:hover{background-color:#fff;}
+.siftal header .vm nav > a:focus{background-color:rgba(255,255,255,0.4);}
+.siftal header .vm nav .isActive, .siftal header .vm nav .active{cursor:alias;}
+.siftal header .vm nav .isActive::after, .siftal header .vm nav .active::after{content:"\6f";display:inline-block;color:#5cb85c;font:normal normal normal 14px/11px siftal;padding:0 5px;float:right;vertical-align:bottom;}
+.siftal.rtl header .vm nav .isActive::after, .siftal.rtl header .vm nav .active::after{float:left;}
+.siftal header .vm:hover nav{opacity:1;visibility:visible;}
+.siftal.ltr header .right{margin-left:auto;}
+.siftal.rtl header .right{margin-right:auto;}
