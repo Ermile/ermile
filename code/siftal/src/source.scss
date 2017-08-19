@@ -11,7 +11,7 @@ Version       1.0.0
 // add fonts
 @import 'base/fonts';
 @import 'dash/font';
-@import 'base/reset';
+@import 'reset/reset';
 
 // add base styles
 @import 'base/global';
@@ -29,5 +29,12 @@ Version       1.0.0
 
 // add shame style temporary
 @import 'tools/shame';
+
+// add responsive styles
+@import 'responsive/desktop';
+@import 'responsive/tablet';
+@import 'responsive/mobile';
+@import 'responsive/dev';
+@import 'responsive/print';
 
 

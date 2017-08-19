@@ -1,0 +1,6 @@
+@media all and (max-width: 280px) {
+  html:before{font-size:100vw;position:absolute;right:0;left:0;content:":\\";text-align:center;color:#f4f4f4}
+  html body{display:none!important}
+
+}
+

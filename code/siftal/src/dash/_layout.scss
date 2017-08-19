@@ -54,29 +54,3 @@ body.siftal .full .middle{width:100%;max-height:100%;}
 
 
 
-@media only screen and (max-width:959px) {
-  .siftal #sidebar {display:block;position:fixed;top:0;bottom:0;overflow-y:auto;z-index:3;left:-250px;}
-  .siftal.rtl #sidebar{right:-250px;left:initial;}
-  .siftal #sidebar figure{margin:2em 0;}
-  .siftal #sidebar ul > li > a {padding:1.2em 2em;}
-  .siftal #sidebar h2{display:none;}
-
-}
-
-
-@media only screen and (max-width:767px) {
-  .siftal header h1 a{padding:0;}
-  .siftal .wrapper{padding:2em 1em}
-  .siftal .card .card-data img{max-height:25px}
-  .siftal .card .card-data span{font-size:1.6em}
-  .siftal .card .card-desc{font-size:1.4em}
-
-  body .w100{min-width:75px;width:75px}
-  body .w125{min-width:100px;width:100px}
-  body .w150{min-width:125px;width:125px}
-  body .w200{min-width:150px;width:150px}
-
-
-}
-
-
