@@ -21,3 +21,58 @@
     outline: 1px solid #ADD8E6;
     overflow: hidden;
 }
+
+
+
+@-webkit-keyframes grid {
+  0% {
+    width: 100%;
+  }
+  45% {
+    width: 90%;
+  }
+  55% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes grid {
+  0% {
+    width: 100%;
+  }
+  45% {
+    width: 90%;
+  }
+  55% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes grid {
+  0% {
+    width: 100%;
+  }
+  45% {
+    width: 90%;
+  }
+  55% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animated {
+  margin: 0 auto;
+  -webkit-animation: grid 7s ease infinite;
+  -moz-animation: grid 7s ease infinite;
+  animation: grid 7s ease infinite;
+}
+
+.f.animated{background-color:rgba(0,0,0,0.1)}
+

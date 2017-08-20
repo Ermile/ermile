@@ -14,7 +14,7 @@ main, article, aside, figure, figcaption, footer, header, nav, section, details,
    http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 html {
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   -ms-text-size-adjust:100%;
   -webkit-text-size-adjust:100%;
@@ -24,8 +24,8 @@ html {
   line-height: 1.15;
 }
 
-body.rtl{direction:rtl;font-family:IRANSans,"Segoe UI",Helvetica,sans-serif}
-body.ltr{direction:ltr;font-family:LatoLatinWeb,IRANSans,"Segoe UI",Helvetica,sans-serif}
+body.rtl{direction:rtl;font-family:$fontNameFa}
+body.ltr{direction:ltr;font-family:$fontNameEn}
 
 
 *,
@@ -151,7 +151,7 @@ svg:not(:root) {
 /* Forms
    ========================================================================== */
 input{
-  font-family:IRANSans,"Segoe UI",Helvetica,sans-serif;
+  font-family:$fontNameFa;
   max-width:100%;
   font-size: 100%;
   line-height: 1.15;
@@ -198,7 +198,7 @@ input[type="submit"]:-moz-focusring {
 }
 
 select{
-  font-family:IRANSans,"Segoe UI",Helvetica,sans-serif;
+  font-family:$fontNameFa;
   max-width:100%;
   margin: 0;
   vertical-align: middle;
@@ -208,7 +208,7 @@ select{
 }
 
 optgroup{
-  font-family:IRANSans,"Segoe UI",Helvetica,sans-serif;
+  font-family:$fontNameFa;
   max-width:100%;
   font-size: 100%;
   line-height: 1.15;
@@ -216,7 +216,7 @@ optgroup{
 }
 
 button{
-  font-family:IRANSans,"Segoe UI",Helvetica,sans-serif;
+  font-family:$fontNameFa;
   max-width:100%;
   font-size: 100%;
   line-height: 1.15;
@@ -229,7 +229,7 @@ button{
 }
 
 textarea{
-  font-family:IRANSans,"Segoe UI",Helvetica,sans-serif;
+  font-family:$fontNameFa;
   max-width:100%;
   max-height:500px;
   overflow: auto;

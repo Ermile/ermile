@@ -4,8 +4,32 @@
 	display: flex;
 }
 
+@mixin paddingAll($val) {
+  .pA#{$val} {padding: #{$val}px #{$val}px;}
+  .pT#{$val} {padding-top: #{$val}px;}
+  .pB#{$val} {padding-bottom: #{$val}px;}
+  .pR#{$val} {padding-right: #{$val}px;}
+  .pL#{$val} {padding-left: #{$val}px;}
+  .pTB#{$val} {padding-top: #{$val}px; padding-bottom: #{$val}px;}
+  .pLR#{$val} {padding-left: #{$val}px; padding-right: #{$val}px;}
+}
 
-@mixin padding($pads...) {
+@mixin marginAll($val) {
+  .mA#{$val} {margin: #{$val}px #{$val}px;}
+  .mT#{$val} {margin-top: #{$val}px;}
+  .mB#{$val} {margin-bottom: #{$val}px;}
+  .mR#{$val} {margin-right: #{$val}px;}
+  .mL#{$val} {margin-left: #{$val}px;}
+  .mTB#{$val} {margin-top: #{$val}px; margin-bottom: #{$val}px;}
+  .mLR#{$val} {margin-left: #{$val}px; margin-right: #{$val}px;}
+}
+
+@mixin margin($val) {
+  padding: $val $val;
+}
+
+
+@mixin paddingCreate($pads...) {
 	padding: $pads;
 }
 
@@ -19,7 +43,7 @@
 
 
 @mixin input-placeholder {
-	&.placeholder { @content; }
+	&.mlaceholder { @content; }
 	&:-moz-placeholder { @content; }
 	&::-moz-placeholder { @content; }
 	&:-ms-input-placeholder { @content; }

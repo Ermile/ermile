@@ -1,0 +1,93 @@
+
+// include all paddings
+@include paddingAll(1);
+@include paddingAll(5);
+@include paddingAll(10);
+@include paddingAll(15);
+@include paddingAll(20);
+@include paddingAll(25);
+@include paddingAll(50);
+@include paddingAll(100);
+
+// include all margin
+@include marginAll(1);
+@include marginAll(5);
+@include marginAll(10);
+@include marginAll(15);
+@include marginAll(20);
+@include marginAll(25);
+@include marginAll(50);
+@include marginAll(100);
+
+
+// include all floats
+.floatR{float:right}
+.floatL{float:left}
+.floatN{float:none}
+
+// include all font sizes
+.fs05{font-size: 0.5em}
+.fs06{font-size: 0.6em}
+.fs07{font-size: 0.7em}
+.fs08{font-size: 0.8em}
+.fs09{font-size: 0.9em}
+.fs10{font-size: 1em}
+.fs11{font-size: 1.1em}
+.fs12{font-size: 1.2em}
+.fs13{font-size: 1.3em}
+.fs14{font-size: 1.4em}
+.fs15{font-size: 1.5em}
+.fs16{font-size: 1.6em}
+.fs17{font-size: 1.7em}
+.fs18{font-size: 1.8em}
+.fs19{font-size: 1.9em}
+.fs20{font-size: 2em}
+.fs25{font-size: 2.5em}
+.fs30{font-size: 3em}
+.fs35{font-size: 3.5em}
+.fs40{font-size: 4em}
+.fs50{font-size: 5em}
+.fs60{font-size: 6em}
+.fs70{font-size: 7em}
+.fs80{font-size: 8em}
+.fs90{font-size: 9em}
+.fs100{font-size: 10em}
+
+
+// all font colors
+.fc-red    		{color: $red};
+.fc-orange 		{color: $orange};
+.fc-yellow 		{color: $yellow};
+.fc-olive  		{color: $olive};
+.fc-green  		{color: $green};
+.fc-teal   		{color: $teal};
+.fc-blue   		{color: $blue};
+.fc-violet 		{color: $violet};
+.fc-purple 		{color: $purple};
+.fc-pink   		{color: $pink};
+.fc-brown  		{color: $brown};
+.fc-grey   		{color: $grey};
+.fc-graylight   {color: $graylight};
+.fc-black  		{color: $black};
+.fc-white  		{color: $white};
+
+// all background colors
+.bg-red 		{background-color: $red}
+.bg-orange 		{background-color: $orange}
+.bg-yellow 		{background-color: $yellow}
+.bg-olive 		{background-color: $olive}
+.bg-green 		{background-color: $green}
+.bg-teal 		{background-color: $teal}
+.bg-blue 		{background-color: $blue}
+.bg-violet 		{background-color: $violet}
+.bg-purple 		{background-color: $purple}
+.bg-pink 		{background-color: $pink}
+.bg-brown 		{background-color: $brown}
+.bg-grey 		{background-color: $grey}
+.bg-graylight 	{background-color: $graylight}
+.bg-black 		{background-color: $black}
+.bg-white 		{background-color: $white}
+
+
+// ways
+

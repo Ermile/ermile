@@ -7,6 +7,9 @@ Author URI    Ermile.ir/siftal
 Version       1.0.0
 */
 
+@import 'tools/variables';
+@import 'tools/mixins';
+
 
 // add fonts
 @import 'base/fonts';
@@ -18,6 +21,11 @@ Version       1.0.0
 @import 'base/typography';
 @import 'base/grid';
 
+// add extra componenet
+@import 'components/el';
+@import 'components/button';
+
+
 // add style of dash
 @import 'dash/layout';
 @import 'dash/header';
@@ -27,8 +35,6 @@ Version       1.0.0
 @import 'dash/form';
 @import 'dash/table';
 
-// add shame style temporary
-@import 'tools/shame';
 
 // add responsive styles
 @import 'responsive/desktop';
@@ -37,4 +43,6 @@ Version       1.0.0
 @import 'responsive/dev';
 @import 'responsive/print';
 
+// add shame style temporary
+@import 'tools/shame';
 
