@@ -2439,6 +2439,7 @@ p {
 [data-icon]:before {
   font-family: "siftal" !important;
   content: attr(data-icon);
+  display: inline-block;
   font-style: normal !important;
   font-weight: 400 !important;
   font-variant: normal !important;
@@ -2450,6 +2451,7 @@ p {
 
 [class^="sf-"]:before, [class*=" sf-"]:before {
   font-family: "siftal" !important;
+  display: inline-block;
   font-style: normal !important;
   font-weight: 400 !important;
   font-variant: normal !important;
@@ -3913,6 +3915,19 @@ p {
 
 [class^="sf-"].vlbottom:before {
   vertical-align: bottom; }
+
+@-webkit-keyframes spiny {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); }
+  to {
+    transform: rotate(3600deg);
+    -webkit-transform: rotate(360deg); } }
+.spiny, [class^="sf-"].spiny:before {
+  -webkit-animation: spiny 2s infinite linear;
+  -webkit-animation-timing-function: cubic-bezier(0.43, 0.84, 0.61, 0.14);
+  animation-timing-function: cubic-bezier(0.43, 0.84, 0.61, 0.14);
+  transform-origin: 50% 50%; }
 
 .primary {
   background-color: #2080d0;
