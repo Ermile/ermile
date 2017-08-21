@@ -1,6 +1,8 @@
 
 // include all paddings
+@include paddingAll(0);
 @include paddingAll(1);
+@include paddingAll(3);
 @include paddingAll(5);
 @include paddingAll(10);
 @include paddingAll(15);
@@ -10,7 +12,9 @@
 @include paddingAll(100);
 
 // include all margin
+@include marginAll(0);
 @include marginAll(1);
+@include marginAll(3);
 @include marginAll(5);
 @include marginAll(10);
 @include marginAll(15);
@@ -90,4 +94,4 @@
 
 
 // ways
-
+.code1{padding:0.2em 0.5em; color:#c04040;background-color:#f8f8f8;border-radius:0.25rem;font-size:90%;}

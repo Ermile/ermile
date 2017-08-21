@@ -1,0 +1,467 @@
+// our main color with full color!
+
+// primary
+.primary{
+	background-color: #2080d0;
+	color: #fff;
+}
+.primary.outline{
+	background-color: transparent;
+	border-color:#2080d0;
+	color: #2080d0;
+}
+.primary:hover{
+	background-color: #1678c2;
+	color: #fff;
+}
+.primary:focus{
+	background-color: #0d71bb;
+	color: #fff;
+}
+.primary:active, .primary.active{
+	background-color: #0060b0;
+	color: #fff;
+}
+.primary > a{
+	@include links(#fff, #fff, #fff, #fff);
+}
+
+
+// secondary btn
+.secondary{
+	background-color: #111111;
+	color: #fff;
+}
+.secondary.outline{
+	background-color: transparent;
+	border-color:#111111;
+	color: #111111;
+}
+.secondary:hover{
+	background-color: #333333;
+	color: #fff;
+}
+.secondary:focus{
+	background-color: #444444;
+	color: #fff;
+}
+.secondary:active, .secondary.active{
+	background-color: #555555;
+	color: #fff;
+}
+.secondary > a{
+	@include links(#fff, #fff, #fff, #fff);
+}
+
+
+// success btn
+.success{
+	background-color: #20b040;
+	color: #fff;
+}
+.success.outline{
+	background-color: transparent;
+	border-color:#20b040;
+	color: #20b040;
+}
+.success:hover{
+	background-color: #10a030;
+	color: #fff;
+}
+.success:focus{
+	background-color: #009020;
+	color: #fff;
+}
+.success:active, .success.active{
+	background-color: #008010;
+	color: #fff;
+}
+.success > a{
+	@include links(#fff, #fff, #fff, #fff);
+}
+
+
+// danger btn
+.danger{
+	background-color: #e02020;
+	color: #fff;
+}
+.danger.outline{
+	background-color: transparent;
+	border-color:#e02020;
+	color: #e02020;
+}
+.danger:hover{
+	background-color: #d02020;
+	color: #fff;
+}
+.danger:focus{
+	background-color: #c02020;
+	color: #fff;
+}
+.danger:active, .danger.active{
+	background-color: #b02020;
+	color: #fff;
+}
+.danger > a{
+	@include links(#fff, #fff, #fff, #fff);
+}
+
+
+// warn btn
+.warn{
+	background-color: #ffc000;
+	color: #111;
+}
+.warn.outline{
+	background-color: transparent;
+	border-color:#ffc000;
+	color: #ffc000;
+}
+.warn:hover{
+	background-color: #ffb000;
+	color: #111;
+}
+.warn:focus{
+	background-color: #eeb000;
+	color: #111;
+}
+.warn:active, .warn.active{
+	background-color: #ddb000;
+	color: #111;
+}
+.warn > a{
+	@include links(#111, #111, #111, #111);
+}
+
+
+// info btn
+.info{
+	background-color: #00b0aa;
+	color: #fff;
+}
+.info.outline{
+	background-color: transparent;
+	border-color:#00b0aa;
+	color: #00b0aa;
+}
+.info:hover{
+	background-color: #00a0a0;
+	color: #fff;
+}
+.info:focus{
+	background-color: #009090;
+	color: #fff;
+}
+.info:active, .info.active{
+	background-color: #008080;
+	color: #fff;
+}
+.info > a{
+	@include links(#fff, #fff, #fff, #fff);
+}
+
+
+// light btn
+.light{
+	background-color: #f6f8fa;
+	color: #111;
+}
+.light.outline{
+	background-color: transparent;
+	border-color:#f6f8fa;
+	color: #f6f8fa;
+}
+.light:hover{
+	background-color: #e2e6ea;
+	color: #111;
+}
+.light:focus{
+	background-color: #d0d6e0;
+	color: #111;
+}
+.light:active, .light.active{
+	background-color: #c0d0e0;
+	color: #111;
+}
+.light > a{
+	@include links(#111, #111, #111, #111);
+}
+
+
+// dark btn
+.dark{
+	background-color: #444444;
+	color: #fff;
+}
+.dark.outline{
+	background-color: transparent;
+	border-color:#444444;
+	color: #444444;
+}
+.dark:hover{
+	background-color: #333333;
+	color: #fff;
+}
+.dark:focus{
+	background-color: #222222;
+	color: #fff;
+}
+.dark:active, .dark.active{
+	background-color: #000000;
+	color: #fff;
+}
+.dark > a{
+	@include links(#fff, #fff, #fff, #fff);
+}
+
+
+// link btn
+.link{
+	background-color: transparent;
+	color: #007bff;
+}
+.link.outline{
+	background-color: transparent;
+	border-color:#007bff;
+	color: #007bff;
+}
+.link:hover{
+	background-color: transparent;
+	color: #0070f0;
+}
+.link:focus{
+	background-color: transparent;
+	color: #0060e0;
+}
+.link:active, .link.active{
+	background-color: transparent;
+	color: #0050d0;
+	text-decoration: underline;
+}
+.link > a{
+	@include links(#111, #111, #111, #111);
+}
+
+
+
+
+
+
+// version 2 for sometimes
+
+// primary
+.primary2{
+	background-color: #cce5ff;
+	color: #004085;
+}
+.primary2.outline{
+	background-color: transparent;
+	border-color:#2080d0;
+	color: #2080d0;
+}
+.primary2:hover{
+	background-color: #1678c2;
+	color: #fff;
+}
+.primary2:focus{
+	background-color: #0d71bb;
+	color: #fff;
+}
+.primary2:active, .primary2.active{
+	background-color: #0060b0;
+	color: #fff;
+}
+
+
+// secondary btn
+.secondary2{
+	background-color: #dddfe2;
+	color: #464a4e;
+}
+.secondary2.outline{
+	background-color: transparent;
+	border-color:#111111;
+	color: #111111;
+}
+.secondary2:hover{
+	background-color: #333333;
+	color: #fff;
+}
+.secondary2:focus{
+	background-color: #444444;
+	color: #fff;
+}
+.secondary2:active, .secondary2.active{
+	background-color: #555555;
+	color: #fff;
+}
+
+
+// success btn
+.success2{
+	background-color: #d4edda;
+	color: #155724;
+}
+.success2.outline{
+	background-color: transparent;
+	border-color:#20b040;
+	color: #20b040;
+}
+.success2:hover{
+	background-color: #10a030;
+	color: #fff;
+}
+.success2:focus{
+	background-color: #009020;
+	color: #fff;
+}
+.success2:active, .success2.active{
+	background-color: #008010;
+	color: #fff;
+}
+
+
+// danger btn
+.danger2{
+	background-color: #f8d7da;
+	color: #721c24;
+}
+.danger2.outline{
+	background-color: transparent;
+	border-color:#e02020;
+	color: #e02020;
+}
+.danger2:hover{
+	background-color: #d02020;
+	color: #fff;
+}
+.danger2:focus{
+	background-color: #c02020;
+	color: #fff;
+}
+.danger2:active, .danger2.active{
+	background-color: #b02020;
+	color: #fff;
+}
+
+
+// warn btn
+.warn2{
+	background-color: #fff3cd;
+	color: #856404;
+}
+.warn2.outline{
+	background-color: transparent;
+	border-color:#ffc000;
+	color: #ffc000;
+}
+.warn2:hover{
+	background-color: #ffb000;
+	color: #111;
+}
+.warn2:focus{
+	background-color: #eeb000;
+	color: #111;
+}
+.warn2:active, .warn2.active{
+	background-color: #ddb000;
+	color: #111;
+}
+
+
+// info btn
+.info2{
+	background-color: #d1ecf1;
+	color: #0c5460;
+}
+.info2.outline{
+	background-color: transparent;
+	border-color:#00b0aa;
+	color: #00b0aa;
+}
+.info2:hover{
+	background-color: #00a0a0;
+	color: #fff;
+}
+.info2:focus{
+	background-color: #009090;
+	color: #fff;
+}
+.info2:active, .info2.active{
+	background-color: #008080;
+	color: #fff;
+}
+
+
+// light btn
+.light2{
+	background-color: #fefefe;
+	color: #818182;
+}
+.light2.outline{
+	background-color: transparent;
+	border-color:#f6f8fa;
+	color: #f6f8fa;
+}
+.light2:hover{
+	background-color: #e2e6ea;
+	color: #111;
+}
+.light2:focus{
+	background-color: #d0d6e0;
+	color: #111;
+}
+.light2:active, .light2.active{
+	background-color: #c0d0e0;
+	color: #111;
+}
+
+
+// dark btn
+.dark2{
+	background-color: #d6d8d9;
+	color: #1b1e21;
+}
+.dark2.outline{
+	background-color: transparent;
+	border-color:#444444;
+	color: #444444;
+}
+.dark2:hover{
+	background-color: #333333;
+	color: #fff;
+}
+.dark2:focus{
+	background-color: #222222;
+	color: #fff;
+}
+.dark2:active, .dark2.active{
+	background-color: #000000;
+	color: #fff;
+}
+
+
+// link btn
+.link{
+	background-color: transparent;
+	color: #007bff;
+}
+.link.outline{
+	background-color: transparent;
+	border-color:#007bff;
+	color: #007bff;
+}
+.link:hover{
+	background-color: transparent;
+	color: #0070f0;
+}
+.link:focus{
+	background-color: transparent;
+	color: #0060e0;
+}
+.link:active, .link.active{
+	background-color: transparent;
+	color: #0050d0;
+	text-decoration: underline;
+}

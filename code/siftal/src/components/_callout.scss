@@ -1,0 +1,46 @@
+
+.callout {
+  padding: 1.25em;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  border: 1px solid #eee;
+  border-left-width: .25em;
+  border-radius: .25em;
+  background-color: transparent!important;
+}
+.rtl .callout{
+  border-right-width: .25em;
+}
+
+.callout h4 {
+  margin-top: 0;
+  margin-bottom: .25em;
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.callout + .callout {
+  margin-top: -.25em;
+}
+
+@mixin callout-type($name, $color) {
+.ltr .callout.#{$name} {
+  border-left-color: $color;
+  h3 { color: $color; }
+  h4 { color: $color; }
+}
+
+.rtl .callout.#{$name} {
+  border-right-color: $color;
+  h3 { color: $color; }
+  h4 { color: $color; }
+}
+}
+
+
+@include callout-type('success', $success);
+@include callout-type('danger', $danger);
+@include callout-type('warn', $warn);
+@include callout-type('info', $info);

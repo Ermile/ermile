@@ -12,6 +12,11 @@
   .pL#{$val} {padding-left: #{$val}px;}
   .pTB#{$val} {padding-top: #{$val}px; padding-bottom: #{$val}px;}
   .pLR#{$val} {padding-left: #{$val}px; padding-right: #{$val}px;}
+
+  .ltr .pRa#{$val} {padding-right: #{$val}px;}
+  .rtl .pRa#{$val} {padding-left: #{$val}px;}
+  .ltr .pLa#{$val} {padding-left: #{$val}px;}
+  .rtl .pLa#{$val} {padding-right: #{$val}px;}
 }
 
 @mixin marginAll($val) {
@@ -22,6 +27,11 @@
   .mL#{$val} {margin-left: #{$val}px;}
   .mTB#{$val} {margin-top: #{$val}px; margin-bottom: #{$val}px;}
   .mLR#{$val} {margin-left: #{$val}px; margin-right: #{$val}px;}
+
+  .ltr .mRa#{$val} {margin-right: #{$val}px;}
+  .rtl .mRa#{$val} {margin-left: #{$val}px;}
+  .ltr .mLa#{$val} {margin-left: #{$val}px;}
+  .rtl .mLa#{$val} {margin-right: #{$val}px;}
 }
 
 @mixin margin($val) {
@@ -118,5 +128,32 @@
 	@else {
 	  @warn "Breakpoint mixin supports: xs, sm, md, lg";
 	}
+}
+
+@mixin links ($link:null, $hover:null, $focus:null, $active:null, $visited:null) {
+  @if $link {
+    color: $link;
+  }
+
+  @if $hover {
+    &:hover {
+      color: $hover;
+    }
+  }
+  @if $focus {
+    &:focus {
+      color: $focus;
+    }
+  }
+  @if $active {
+    &:active {
+      color: $active;
+    }
+  }
+  @if $visited {
+    &:visited {
+      color: $visited;
+    }
+  }
 }
 

@@ -1,0 +1,33 @@
+@mixin alert-variant($background, $border, $color) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  hr {
+    border-top-color: darken($border, 5%);
+  }
+
+  .alert-link {
+    color: darken($color, 10%);
+  }
+}
+
+.msg{
+  position:relative;
+  transition:0.3s;
+  padding: 1em 1.5em;
+  margin-bottom:1em;
+  border: 1px solid transparent;
+  border-radius:0.25rem;
+  min-height: 1em;
+  line-height:1.25;
+  opacity: 0.7;
+}
+
+.msg.compact{
+  display:inline-block
+}
+
+.msg > a{
+  font-weight: bold;
+}

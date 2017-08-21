@@ -24,6 +24,12 @@ Version       1.0.0
 // add extra componenet
 @import 'components/el';
 @import 'components/button';
+@import 'components/callout';
+@import 'components/msg';
+@import 'components/icon';
+
+// import color after all other styles, because sometimes we need to overwrite
+@import 'components/color';
 
 
 // add style of dash
