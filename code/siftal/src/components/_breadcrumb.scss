@@ -1,0 +1,17 @@
+/* breadcrumb */
+.breadcrumb{padding:5px 1em;display:inline-block;line-height:30px;height:30px}
+.breadcrumb a{font-size:1em;line-height:20px;color:#99a0aa;float:left;font-weight:700;transition:0.3s;}
+.breadcrumb a:hover{color:#656d78;}
+.breadcrumb a:last-child{color:#656d78;}
+.breadcrumb > a + a:before{font-family:"siftal";content:"\63";color:#99a0aa;padding:0px 8px;float:left;}
+.rtl .breadcrumb a{float:right;}
+.rtl .breadcrumb > a + a:before{content:"\62";float:right;}
+
+
+.breadcrumb2{padding:5px 1em;display:inline-block;line-height:30px;height:30px}
+.breadcrumb2 a{font-size:1em;line-height:20px;color:#99a0aa;float:left;font-weight:700;transition:0.3s;}
+.breadcrumb2 a:hover{color:#656d78;}
+.breadcrumb2 a:last-child{color:#656d78;}
+.breadcrumb2 > a + a:before{content:"/";color:#99a0aa;padding:0px 8px;float:left;}
+.rtl .breadcrumb2 a{float:right;}
+.rtl .breadcrumb2 > a + a:before{float:right;}
