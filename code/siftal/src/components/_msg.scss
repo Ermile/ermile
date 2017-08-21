@@ -26,10 +26,20 @@
   color: #333;
 }
 
-.msg.compact{
-  display:inline-block
+.msg .title{
+  font-size:120%;
+  font-weight: bold;
 }
+
+.msg ul{
+  margin-top: 0.5em;
+}
+
 
 .msg > a{
   font-weight: bold;
 }
+
+.msg h2{margin-bottom:0}
+.msg h3{margin-bottom:0}
+.msg h4{margin-bottom:0}
