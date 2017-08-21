@@ -2268,19 +2268,64 @@ p {
 .bg-white {
   background-color: #FFFFFF; }
 
+.op05 {
+  opacity: 0.05;
+  filter: alpha(opacity=5); }
+
+.op10 {
+  opacity: 0.1;
+  filter: alpha(opacity=10); }
+
+.op15 {
+  opacity: 0.15;
+  filter: alpha(opacity=15); }
+
+.op20 {
+  opacity: 0.2;
+  filter: alpha(opacity=20); }
+
+.op30 {
+  opacity: 0.3;
+  filter: alpha(opacity=30); }
+
+.op40 {
+  opacity: 0.4;
+  filter: alpha(opacity=40); }
+
+.op50 {
+  opacity: 0.5;
+  filter: alpha(opacity=50); }
+
+.op60 {
+  opacity: 0.6;
+  filter: alpha(opacity=60); }
+
+.op70 {
+  opacity: 0.7;
+  filter: alpha(opacity=70); }
+
+.op80 {
+  opacity: 0.8;
+  filter: alpha(opacity=80); }
+
+.op90 {
+  opacity: 0.9;
+  filter: alpha(opacity=90); }
+
+.op95 {
+  opacity: 0.95;
+  filter: alpha(opacity=95); }
+
+.op100 {
+  opacity: 1;
+  filter: alpha(opacity=100); }
+
 .code1 {
   padding: 0.2em 0.5em;
   color: #c04040;
   background-color: #f8f8f8;
   border-radius: 0.25rem;
   font-size: 90%; }
-
-.block {
-  display: block;
-  width: 100%; }
-
-.compact {
-  display: inline-block; }
 
 .btn {
   cursor: pointer;
@@ -2451,6 +2496,34 @@ p {
 .msg h4 {
   margin-bottom: 0; }
 
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: 0.3s; }
+  .badge:empty {
+    display: none; }
+
+.btn .badge {
+  position: relative;
+  top: -1px; }
+
+.badge.rounded {
+  padding-right: 0.5em;
+  padding-left: 0.5em; }
+
+.badge.circle {
+  padding-right: 1em;
+  padding-left: 1em; }
+
 /* siftal font */
 [data-icon]:before {
   font-family: "siftal" !important;
@@ -2463,7 +2536,8 @@ p {
   speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle; }
 
 [class^="sf-"]:before, [class*=" sf-"]:before {
   font-family: "siftal" !important;
@@ -2475,7 +2549,8 @@ p {
   speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle; }
 
 .sf-angle-down:before {
   content: "\61"; }
@@ -3944,6 +4019,25 @@ p {
   -webkit-animation-timing-function: cubic-bezier(0.43, 0.84, 0.61, 0.14);
   animation-timing-function: cubic-bezier(0.43, 0.84, 0.61, 0.14);
   transform-origin: 50% 50%; }
+
+.block {
+  display: block;
+  width: 100%; }
+
+.compact {
+  display: inline-block; }
+
+.circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%; }
+
+.rounded {
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  border-radius: 10rem; }
 
 .primary {
   background-color: #2080d0;

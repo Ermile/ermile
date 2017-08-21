@@ -93,10 +93,23 @@
 .bg-white 		{background-color: $white}
 
 
+// all opacity needed
+.op05{@include opacity(0.05)}
+.op10{@include opacity(0.1)}
+.op15{@include opacity(0.15)}
+.op20{@include opacity(0.2)}
+.op30{@include opacity(0.3)}
+.op40{@include opacity(0.4)}
+.op50{@include opacity(0.5)}
+.op60{@include opacity(0.6)}
+.op70{@include opacity(0.7)}
+.op80{@include opacity(0.8)}
+.op90{@include opacity(0.9)}
+.op95{@include opacity(0.95)}
+.op100{@include opacity(1)}
+
+
 // ways
 .code1{padding:0.2em 0.5em; color:#c04040;background-color:#f8f8f8;border-radius:0.25rem;font-size:90%;}
 
-
-.block{display:block;width:100%;}
-.compact{display:inline-block}
 

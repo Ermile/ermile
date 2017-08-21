@@ -1,0 +1,9 @@
+// type of displays
+.block{display:block;width:100%;}
+.compact{display:inline-block}
+
+// border radius
+.circle{@include border-radius(50%)}
+.rounded{@include border-radius(10rem)}
+
+
