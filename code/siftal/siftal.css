@@ -2381,11 +2381,6 @@ p {
   min-height: 60px;
   font-size: 150%; }
 
-.btn:disabled, .btn.disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  pointer-events: none; }
-
 .callout {
   padding: 1.25em;
   margin-top: 1.25em;
@@ -4087,6 +4082,65 @@ p {
 .rtl .breadcrumb2 > a + a:before {
   float: right; }
 
+.pagination {
+  text-align: center;
+  position: relative;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  transition: 0.5s;
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+
+.pagination a {
+  position: relative;
+  padding: 1em 1.5em;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  background-color: transparent;
+  color: #777;
+  border: 1px solid transparent; }
+
+.pagination a:hover {
+  opacity: 0.8; }
+
+.pagination a:focus {
+  background-color: rgba(0, 0, 0, 0.15); }
+
+.pagination a:not([href]) {
+  cursor: default; }
+
+.pagination .active {
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff; }
+
+.pagination a.next::after {
+  content: '>';
+  text-align: center;
+  padding: 0 3px; }
+
+.pagination a.prev::before {
+  content: '<';
+  text-align: center;
+  padding: 0 3px; }
+
+.pagination a.next, .pagination a.prev {
+  padding: 1em 2em; }
+
 .block {
   display: block;
   width: 100%; }
@@ -4105,6 +4159,23 @@ p {
   -moz-border-radius: 10rem;
   -ms-border-radius: 10rem;
   border-radius: 10rem; }
+
+.xs {
+  font-size: 60%; }
+
+.sm {
+  font-size: 75%; }
+
+.lg {
+  font-size: 120%; }
+
+.xl {
+  font-size: 150%; }
+
+.disabled, :disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none; }
 
 .primary {
   background-color: #2080d0;
@@ -4128,9 +4199,9 @@ p {
   color: #fff; }
 
 .primary > a {
-  color: #fff; }
+  color: #eee; }
   .primary > a:hover {
-    color: #fff; }
+    color: #efefef; }
   .primary > a:focus {
     color: #fff; }
   .primary > a:active {
@@ -4165,6 +4236,10 @@ p {
     color: #fff; }
   .secondary > a:active {
     color: #fff; }
+
+.secondary .active, .secondary :active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff; }
 
 .success {
   background-color: #20b040;
@@ -4345,6 +4420,10 @@ p {
     color: #fff; }
   .dark > a:active {
     color: #fff; }
+
+.dark .active, .dark :active {
+  background-color: #000000;
+  color: #fff; }
 
 .link {
   background-color: transparent;
@@ -5422,83 +5501,6 @@ body.siftal.loading-page #sidebar .avatar:before {
   -ms-flex-pack: justify;
   -moz-box-pack: justify;
   justify-content: space-between; }
-
-.siftal .pagination-container {
-  text-align: center; }
-
-.siftal .pagination {
-  text-align: center;
-  position: relative;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
-.siftal .pagination a {
-  padding: 1em 1.2em;
-  background-color: #efefef;
-  color: #00667a;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  -moz-transition: .3s;
-  transition: .3s;
-  font-weight: 600; }
-
-.siftal.rtl .pagination a {
-  float: right; }
-
-.siftal .pagination span {
-  display: inline-block;
-  padding: 1em 1.2em;
-  background-color: #efefef;
-  color: #00667a;
-  float: left;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  -moz-transition: .3s;
-  transition: .3s;
-  font-weight: 600;
-  cursor: default; }
-
-.siftal.rtl .pagination span {
-  float: right; }
-
-.siftal .pagination span.current {
-  background-color: #00667a;
-  color: #f4f4f4; }
-
-.siftal.rtl .pagination span.current {
-  float: right; }
-
-.siftal .pagination a.next::before {
-  content: '>';
-  text-align: center; }
-
-.siftal .pagination a.prev::before {
-  content: '<';
-  text-align: center; }
-
-.siftal .pagination a.next, .pagination a.prev {
-  padding: 1em 3em;
-  background-color: #e7e7e7; }
-
-.siftal .pagination a:hover {
-  background-color: #0a5260;
-  color: #f4f4f4; }
-
-.siftal .pagination a:focus {
-  background-color: #e3a23d;
-  color: #f4f4f4; }
 
 /* default style of forms in dash*/
 .siftal .dbox {

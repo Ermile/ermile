@@ -64,19 +64,7 @@
 .siftal .gallery-btn-box{position:absolute;right:0;bottom:0;left:0;padding:0}
 .siftal .box-details{position:absolute;top:0;right:0;bottom:0;left:0;transition:.4s;opacity:0;color:#444;background-color:rgba(238,238,238,.7);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:-moz-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;-moz-box-pack:justify;justify-content:space-between}
 
-.siftal .pagination-container{text-align:center}
-.siftal .pagination{text-align:center;position:relative;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;overflow:hidden;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center}
-.siftal .pagination a{padding:1em 1.2em;background-color:#efefef;color:#00667a;-webkit-transition:.3s;-o-transition:.3s;-moz-transition:.3s;transition:.3s;font-weight:600}
-.siftal.rtl .pagination a{float:right}
-.siftal .pagination span{display:inline-block;padding:1em 1.2em;background-color:#efefef;color:#00667a;float:left;-webkit-transition:.3s;-o-transition:.3s;-moz-transition:.3s;transition:.3s;font-weight:600;cursor:default}
-.siftal.rtl .pagination span{float:right}
-.siftal .pagination span.current{background-color:#00667a;color:#f4f4f4}
-.siftal.rtl .pagination span.current{float:right}
-.siftal .pagination a.next::before{content:'>';text-align:center}
-.siftal .pagination a.prev::before{content:'<';text-align:center}
-.siftal .pagination a.next,.pagination a.prev{padding:1em 3em;background-color:#e7e7e7}
-.siftal .pagination a:hover{background-color:#0a5260;color:#f4f4f4}
-.siftal .pagination a:focus{background-color:#e3a23d;color:#f4f4f4}
+
 
 /* default style of forms in dash*/
 .siftal .dbox{background-color:rgba(255,255,255,0.8);border-radius:3px;padding:2em 2%;max-width:98%;margin:1em auto 5rem}

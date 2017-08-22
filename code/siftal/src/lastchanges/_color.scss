@@ -23,7 +23,7 @@
 	color: #fff;
 }
 .primary > a{
-	@include links(#fff, #fff, #fff, #fff);
+	@include links(#eee, #efefef, #fff, #fff);
 }
 
 
@@ -51,6 +51,10 @@
 }
 .secondary > a{
 	@include links(#fff, #fff, #fff, #fff);
+}
+.secondary .active, .secondary :active{
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
 }
 
 
@@ -213,6 +217,10 @@
 }
 .dark > a{
 	@include links(#fff, #fff, #fff, #fff);
+}
+.dark .active, .dark :active{
+	background-color: #000000;
+	color: #fff;
 }
 
 
