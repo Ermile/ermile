@@ -4115,6 +4115,7 @@ p {
   border: 1px solid transparent; }
 
 .pagination a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
   opacity: 0.8; }
 
 .pagination a:focus {
