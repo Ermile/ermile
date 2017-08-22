@@ -1,0 +1,31 @@
+progress{
+	-webkit-appearance: progress-bar;
+	display: block;
+	width: 100%;
+	border:none;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+meter{
+	display: block;
+	width: 100%;
+}
+
+// progress sizes
+progress.xs, meter.xs{
+	height: 5px;
+}
+progress.sm, meter.sm{
+	height: 12px;
+}
+progress.lg, meter.lg{
+	height: 25px;
+}
+progress.xl, meter.xl{
+	height: 40px;
+}
