@@ -4193,7 +4193,7 @@ progress.xl, meter.xl {
 .tbl thead th {
   vertical-align: bottom;
   border-bottom: 2px solid rgba(30, 30, 30, 0.1);
-  background-color: #f6f6f6;
+  background-color: rgba(10, 10, 40, 0.1);
   padding-top: 1em;
   padding-bottom: 1em;
   font-weight: 700; }
@@ -4201,7 +4201,7 @@ progress.xl, meter.xl {
 .tbl tfoot th {
   vertical-align: bottom;
   border-top: 2px solid rgba(30, 30, 30, 0.1);
-  background-color: #f6f6f6;
+  background-color: rgba(10, 10, 40, 0.1);
   padding-top: 1em;
   padding-bottom: 1em;
   font-style: normal;
