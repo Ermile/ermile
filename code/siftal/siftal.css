@@ -269,6 +269,8 @@ abbr[title], dfn[title] {
 
 /* tables still need cellspacing="0" in the markup */
 table {
+  font-size: inherit;
+  font: 100%;
   border-collapse: separate;
   border-spacing: 0; }
 
@@ -289,10 +291,6 @@ hr {
   padding: 0;
   box-sizing: content-box;
   overflow: visible; }
-
-table {
-  font-size: inherit;
-  font: 100%; }
 
 small {
   font-size: 80%; }
@@ -4169,6 +4167,74 @@ progress.lg, meter.lg {
 progress.xl, meter.xl {
   height: 40px; }
 
+.tbl {
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  margin-bottom: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  text-align: left;
+  color: #777;
+  transition: 0.3s; }
+
+.rtl .tbl {
+  text-align: right; }
+
+.tbl td, .tbl th {
+  padding: 0.7em 0.7em; }
+
+.tbl tbody tr > * {
+  border-top: 1px solid rgba(30, 30, 30, 0.1); }
+
+.tbl tr:first-child > * {
+  border-top: none; }
+
+.tbl thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid rgba(30, 30, 30, 0.1);
+  background-color: #f6f6f6;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-weight: 700; }
+
+.tbl tfoot th {
+  vertical-align: bottom;
+  border-top: 2px solid rgba(30, 30, 30, 0.1);
+  background-color: #f6f6f6;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-style: normal;
+  font-weight: 400; }
+
+.tbl.padded td, .tbl.padded th {
+  padding: 1em 1em; }
+
+.tbl.padded thead th {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em; }
+
+.tbl.padded tfoot th {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em; }
+
+.tbl.compact {
+  display: table; }
+
+.tbl.compact td, .tbl.compact th {
+  padding: 0.25em 0.5em; }
+
+.tbl.compact thead th {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em; }
+
+.tbl.compact tfoot th {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em; }
+
+.tbl.zebra tbody tr:nth-child(2n) {
+  background-color: rgba(0, 0, 30, 0.02); }
+
 .block {
   display: block;
   width: 100%; }
@@ -4192,7 +4258,7 @@ progress.xl, meter.xl {
   font-size: 60%; }
 
 .sm {
-  font-size: 75%; }
+  font-size: 85%; }
 
 .lg {
   font-size: 120%; }

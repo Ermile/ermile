@@ -92,7 +92,7 @@ abbr[title], dfn[title] {
 }
 
 /* tables still need cellspacing="0" in the markup */
-table {border-collapse: separate; border-spacing: 0;}
+table {font-size: inherit; font: 100%;border-collapse: separate; border-spacing: 0;}
 th {font-weight: bold; vertical-align: bottom;}
 td {font-weight: normal; vertical-align: top;}
 
@@ -104,7 +104,6 @@ hr {display: block; height: 0; border: 0; border-top: 1px solid #ccc; margin: 1e
 
 
 
-table {font-size: inherit; font: 100%;}
 
 small {font-size: 80%;}
 
