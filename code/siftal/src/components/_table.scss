@@ -173,3 +173,42 @@ $tblPadCell: 0.7em 0.7em;
 }
 
 
+
+.tbl thead th[data-sort]{
+	transition:0.3s;
+	cursor:pointer;
+	padding: 0;
+	position: relative;
+}
+.tbl thead th[data-sort]:hover{
+	background-color: rgba(0,0,0,0.2);
+}
+.tbl thead th[data-sort] a{
+	display:block;
+	color: inherit;
+	padding: 1em ;
+	position:relative;
+}
+.tbl thead th[data-sort]::after{
+	font-family:"siftal";
+	display: inline-block;
+	cursor:pointer;
+	vertical-align: bottom;
+	padding: 0 1em;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: -10px;
+}
+.rtl .tbl thead th[data-sort]::after{
+	right: inherit;
+	left: 0;
+}
+.tbl thead th[data-sort='desc']::after{
+	content:"\58";
+}
+.tbl thead th[data-sort='asc']::after{
+	content:"\59";
+}
+
+
