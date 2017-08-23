@@ -4176,13 +4176,17 @@ progress.xl, meter.xl {
   border-radius: 0.25rem;
   text-align: left;
   color: #777;
-  transition: 0.3s; }
+  transition: 0.3s;
+  overflow: hidden; }
 
 .rtl .tbl {
   text-align: right; }
 
 .tbl td, .tbl th {
-  padding: 0.7em 0.7em; }
+  padding: 0.7em 0.7em;
+  max-width: 600px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 .tbl tbody tr > * {
   border-top: 1px solid rgba(30, 30, 30, 0.1); }
@@ -4232,8 +4236,41 @@ progress.xl, meter.xl {
   padding-top: 0.5em;
   padding-bottom: 0.5em; }
 
-.tbl.zebra tbody tr:nth-child(2n) {
-  background-color: rgba(0, 0, 30, 0.02); }
+.tbl:not(.nozebra) tbody tr:nth-child(2n) {
+  background-color: rgba(0, 0, 30, 0.03); }
+
+.tbl.dark:not(.nozebra) tbody tr:nth-child(2n) {
+  background-color: rgba(255, 255, 255, 0.03); }
+
+.tbl.secondary:not(.nozebra) tbody tr:nth-child(2n) {
+  background-color: rgba(255, 255, 255, 0.03); }
+
+.tbl.bordered td, .tbl.bordered th {
+  border: 1px solid rgba(0, 0, 0, 0.05); }
+
+.tbl.dark.bordered td, .tbl.dark.bordered th {
+  border: 1px solid rgba(255, 255, 255, 0.05); }
+
+.tbl.secondary.bordered td, .tbl.secondary.bordered th {
+  border: 1px solid rgba(255, 255, 255, 0.05); }
+
+.tbl tbody tr {
+  transition: 0.3s; }
+
+.tbl tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.07); }
+
+.tbl.dark tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.07); }
+
+.tbl.secondary tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.07); }
+
+.tbl.dead tbody tr {
+  background-color: inherit; }
+
+.tbl.fix {
+  table-layout: fixed; }
 
 .block {
   display: block;
@@ -4769,7 +4806,8 @@ body.siftal #main {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   -moz-box-orient: vertical;
-  -moz-box-direction: normal; }
+  -moz-box-direction: normal;
+  overflow: hidden; }
 
 body.siftal #main, body.siftal #main #content {
   -webkit-box-flex: 1;
@@ -4780,7 +4818,8 @@ body.siftal #main, body.siftal #main #content {
 
 body.siftal #main #content {
   overflow-y: auto;
-  padding: 1em 2%; }
+  padding: 1em 2%;
+  overflow-x: hidden; }
 
 body.siftal .full {
   width: 100%;
@@ -7186,7 +7225,22 @@ body .w200 {
     padding: 1.2em 2em; }
 
   .siftal #sidebar h2 {
-    display: none; } }
+    display: none; }
+
+  .tbl tr {
+    width: auto !important;
+    display: block !important;
+    border-top: 1px solid rgba(30, 30, 30, 0.1);
+    padding-top: 0.8em;
+    padding-bottom: 0.8em; }
+
+  .tbl th, .tbl td {
+    width: auto !important;
+    display: block !important;
+    padding-top: 0.25em !important;
+    padding-bottom: 0.25em !important;
+    border: none !important;
+    background-color: transparent !important; } }
 @media all and (max-width: 280px) {
   html:before {
     font-size: 100vw;
@@ -7260,6 +7314,7 @@ body .w200 {
   position: relative;
   border: 3px solid #f6f6f6;
   margin: 1em;
-  padding: 1em 1.5em; }
+  padding: 1em 1.5em;
+  overflow: hidden; }
 
 /*# sourceMappingURL=siftal.css.map */

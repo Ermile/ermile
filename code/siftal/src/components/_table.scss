@@ -8,6 +8,7 @@
 	text-align: left;
 	color: #777;
 	transition:0.3s;
+	overflow:hidden
 }
 .rtl .tbl{
 	text-align:right;
@@ -15,6 +16,9 @@
 
 .tbl td, .tbl th{
 	padding:0.7em 0.7em;
+	max-width:600px;
+	overflow:hidden;
+	text-overflow: ellipsis;
 }
 
 .tbl tbody tr > *{
@@ -44,6 +48,7 @@
 	font-weight: 400;
 
 }
+
 
 // style for padded table
 .tbl.padded td, .tbl.padded th{
@@ -78,7 +83,53 @@
 	padding-bottom: 0.5em;
 }
 
-.tbl.zebra tbody tr:nth-child(2n){
-	background-color:rgba(0,0,30, 0.02)
 
+// zebra styles
+.tbl:not(.nozebra) tbody tr:nth-child(2n){
+	background-color:rgba(0,0,30, 0.03)
 }
+
+.tbl.dark:not(.nozebra) tbody tr:nth-child(2n){
+	background-color:rgba(255,255,255, 0.03)
+}
+.tbl.secondary:not(.nozebra) tbody tr:nth-child(2n){
+	background-color:rgba(255,255,255, 0.03)
+}
+
+
+// bordered table
+.tbl.bordered td, .tbl.bordered th{
+	border: 1px solid rgba(0,0,0,0.05);
+}
+
+.tbl.dark.bordered td, .tbl.dark.bordered th{
+	border: 1px solid rgba(255,255,255,0.05);
+}
+
+.tbl.secondary.bordered td, .tbl.secondary.bordered th{
+	border: 1px solid rgba(255,255,255,0.05);
+}
+
+
+// hoverable feature
+.tbl tbody tr{
+	transition:0.3s;
+}
+.tbl tbody tr:hover{
+	background-color: rgba(0,0,0,.07);
+}
+.tbl.dark tbody tr:hover{
+	background-color: rgba(255,255,255,.07);
+}
+.tbl.secondary tbody tr:hover{
+	background-color: rgba(255,255,255,.07);
+}
+.tbl.dead tbody tr{
+	background-color: inherit;
+}
+
+
+.tbl.fix{
+	table-layout: fixed;
+}
+

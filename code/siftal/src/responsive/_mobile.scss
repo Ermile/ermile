@@ -65,6 +65,31 @@
   .siftal #sidebar ul > li > a {padding:1.2em 2em;}
   .siftal #sidebar h2{display:none;}
 
+
+  // tables
+  // .tbl{
+  //   display: block;
+  //   overflow-x: hidden;
+  //   -ms-overflow-style:-ms-autohiding-scrollbar;
+  // }
+
+  .tbl tr{
+    width: auto!important;
+    display: block!important;
+    border-top: 1px solid rgba(30,30,30,.1);
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+  }
+  .tbl th, .tbl td{
+    width: auto!important;
+    display: block!important;
+    padding-top:0.25em!important;
+    padding-bottom:0.25em!important;
+    border: none!important;
+    background-color: transparent!important;
+  }
+
+
 }
 
 
