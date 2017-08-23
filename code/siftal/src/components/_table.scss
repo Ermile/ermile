@@ -84,15 +84,15 @@
 }
 
 
-// zebra styles
-.tbl:not(.nozebra) tbody tr:nth-child(2n){
+// dead styles
+.tbl:not(.dead) tbody tr:nth-child(2n){
 	background-color:rgba(0,0,30, 0.03)
 }
 
-.tbl.dark:not(.nozebra) tbody tr:nth-child(2n){
+.tbl.dark:not(.dead):not(.dead) tbody tr:nth-child(2n){
 	background-color:rgba(255,255,255, 0.03)
 }
-.tbl.secondary:not(.nozebra) tbody tr:nth-child(2n){
+.tbl.secondary:not(.dead:not(.dead)) tbody tr:nth-child(2n){
 	background-color:rgba(255,255,255, 0.03)
 }
 
@@ -115,13 +115,13 @@
 .tbl tbody tr{
 	transition:0.3s;
 }
-.tbl tbody tr:hover{
+.tbl:not(.dead) tbody tr:hover{
 	background-color: rgba(0,0,0,.07);
 }
-.tbl.dark tbody tr:hover{
+.tbl.dark:not(.dead) tbody tr:hover{
 	background-color: rgba(255,255,255,.07);
 }
-.tbl.secondary tbody tr:hover{
+.tbl.secondary:not(.dead) tbody tr:hover{
 	background-color: rgba(255,255,255,.07);
 }
 .tbl.dead tbody tr{
@@ -132,4 +132,22 @@
 .tbl.fix{
 	table-layout: fixed;
 }
+
+.tbl .positive{
+	background-color: #fcfff5!important;
+	color: #2c662d!important;
+}
+.tbl .negative{
+	background-color: #fff6f6!important;
+	color: #9f3a38!important;
+}
+.tbl .warning{
+	background-color: #fffaf3!important;
+	color: #573a08!important;
+}
+.tbl .active{
+	background-color: rgba(0, 105, 255, 0.1) !important;
+	color: #333;
+}
+
 
