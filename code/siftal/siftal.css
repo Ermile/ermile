@@ -4298,6 +4298,20 @@ progress.xl, meter.xl {
   background-color: rgba(0, 105, 255, 0.1) !important;
   color: #333; }
 
+.tbl td.collapsing, .tbl th.collapsing {
+  width: 1px;
+  white-space: nowrap; }
+
+.tbl tbody .selectable {
+  transition: 0.3s; }
+
+.tbl tbody .selectable a {
+  display: block;
+  color: inherit; }
+
+.tbl tbody .selectable:hover {
+  background-color: rgba(0, 0, 0, 0.1); }
+
 .block {
   display: block;
   width: 100%; }
@@ -4333,6 +4347,15 @@ progress.xl, meter.xl {
   opacity: 0.6;
   cursor: not-allowed;
   pointer-events: none; }
+
+.txtr {
+  text-align: right; }
+
+.txtl {
+  text-align: left; }
+
+.txtc {
+  text-align: center; }
 
 .primary {
   background-color: #2080d0;

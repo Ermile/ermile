@@ -1,3 +1,5 @@
+$tblPadCell: 0.7em 0.7em;
+
 .tbl{
 	width:100%;
 	max-width:100%;
@@ -15,7 +17,7 @@
 }
 
 .tbl td, .tbl th{
-	padding:0.7em 0.7em;
+	padding:$tblPadCell;
 	max-width:600px;
 	overflow:hidden;
 	text-overflow: ellipsis;
@@ -148,6 +150,26 @@
 .tbl .active{
 	background-color: rgba(0, 105, 255, 0.1) !important;
 	color: #333;
+}
+
+
+.tbl td.collapsing, .tbl th.collapsing{
+	width:1px;
+	white-space: nowrap;
+}
+
+
+// links in selectable table
+.tbl tbody .selectable{
+	transition: 0.3s;
+}
+.tbl tbody .selectable a{
+	display:block;
+	color: inherit;
+}
+
+.tbl tbody .selectable:hover{
+	background-color: rgba(0,0,0,0.1);
 }
 
 
