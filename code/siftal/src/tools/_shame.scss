@@ -83,4 +83,9 @@
   margin: 1em;
   padding: 1em 1.5em;
   overflow:hidden;
+  transition:0.3s;
 }
+.example:hover{
+  border-color:#d8d8c8;
+}
+

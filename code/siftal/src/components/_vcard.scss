@@ -6,10 +6,15 @@
 	@include flex-direction(column);
 	min-width: 0;
 	word-wrap: break-word;
-	border:1px solid rgba(0,0,0,0.1);
+	border:none;
 	border-radius: 0.4rem;
 	overflow: hidden;
 	line-height: 1.25;
+	transition: 0.3s;
+	box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+.vcard:hover, .vcard.:hover{
+	box-shadow:  0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5, 0 5px 20px rgba(0,0,0,0.19), 0 5px 7px rgba(0,0,0,0.23);
 }
 
 .vcard>:first-child
@@ -81,6 +86,9 @@
 	transition: 0.2s;
 	color: rgba(0,0,0,0.4);
 	font-size: 0.9em;
+	-webkit-box-flex:0;
+	-ms-flex-positive:0;
+	flex-grow:0;
 }
 
 img.avatar{
@@ -102,4 +110,9 @@ img.mini{
 	width: 35px;
 	height:auto;
 	border-radius:0.2rem;
+	margin:0.1em;
 }
+
+
+
+

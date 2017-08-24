@@ -3,7 +3,7 @@
 	cursor: pointer;
 	display: inline-block;
 	outline: none;
-	padding: 1em 1.5em;
+	padding: 1em 1.2em;
 	text-decoration:none;
 	text-align:center;
 	transition:.2s ease-out;
@@ -17,6 +17,8 @@
 	font-weight:700;
 	background-color:#e2e2e2;
 	color:rgba(0,0,0,.5);
+	overflow: hidden;
+
 }
 .outline{
 	background-color: transparent;
