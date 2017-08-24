@@ -1,2 +1,105 @@
 
+.vcard{
+	position: relative;
+	max-width: 100%;
+	@include flexbox;
+	@include flex-direction(column);
+	min-width: 0;
+	word-wrap: break-word;
+	border:1px solid rgba(0,0,0,0.1);
+	border-radius: 0.4rem;
+	overflow: hidden;
+	line-height: 1.25;
+}
 
+.vcard>:first-child
+{
+	border-radius: .3rem .3rem 0 0!important;
+	border-top: none!important;
+}
+
+.vcard[class^="sf-"]:before{
+	vertical-align: top;
+}
+
+.vcard img{
+	position: relative;
+	display: block;
+	padding: 0;
+	background-color: rgba(0,0,0,0.3);
+	width:100%;
+	height: auto;
+}
+.vcard .content{
+	border: none;
+	background-color: transparent;
+	margin: 0;
+	padding: 1em 1em;
+}
+
+.vcard .content .header{
+	display: block;
+	color:#222;
+	font-weight:700;
+	font-size:1.2em;
+	margin-top: -0.2em;
+}
+
+.vcard .content .desc{
+	clear: both;
+	color:#777;
+	margin-top: 0.5em;
+}
+
+// meta
+.vcard .meta{
+	clear: both;
+	color:rgba(0,0,0,0.4);
+	font-size: 0.9em;
+}
+
+.ltr .vcard .meta *{
+	margin-right: 0.2em;
+}
+.ltr .vcard .meta:last-child{
+	margin-right: 0;
+}
+.rtl .vcard .meta *{
+	margin-left: 0.2em;
+}
+.rtl .vcard .meta:last-child{
+	margin-left: 0;
+}
+
+
+.vcard .footer{
+	max-width: 100%;
+	min-height: 0!important;
+	border-top: 1px solid rgba(0,0,0,0.05);
+	background-color: transparent;
+	padding:0.75em 1em;
+	transition: 0.2s;
+	color: rgba(0,0,0,0.4);
+	font-size: 0.9em;
+}
+
+img.avatar{
+	width: 2em;
+	height: 2em;
+	display: inline-block;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+
+.ltr .vcard .avatar{
+	margin-right: 0.3em;
+}
+.rtl .vcard .avatar{
+	margin-left: 0.3em;
+}
+
+img.mini{
+	width: 35px;
+	height:auto;
+	border-radius:0.2rem;
+}

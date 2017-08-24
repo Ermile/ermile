@@ -1,6 +1,14 @@
 
 /* header */
-.siftal header{height:50px;flex-shrink:0;background-color:#fff;overflow:hidden;}
+.siftal header{
+	height:50px;
+	flex-shrink:0;
+	background-color:#fff;
+	overflow:hidden;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+  	transition: 0.3s;
+  	z-index: 2
+}
 .siftal header:hover{overflow:visible;}
 .siftal header #sidenavHandler{width:50px;text-align:center;font-size:1.2em;}
 .siftal header #sidenavHandler i{width:100%;padding:0;}

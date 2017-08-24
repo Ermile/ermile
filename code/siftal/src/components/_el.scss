@@ -29,6 +29,12 @@
 .floatL{float:left}
 .floatN{float:none}
 
+.ltr .floataR{float:right}
+.rtl .floataR{float:left}
+.ltr .floataL{float:left}
+.rtl .floataL{float:right}
+
+
 // include all font sizes
 .fs05{font-size: 0.5em}
 .fs06{font-size: 0.6em}

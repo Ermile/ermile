@@ -1,8 +1,45 @@
-@mixin flex {
-	// write the css here
-	display: -webkit-flex;
-	display: flex;
+// Flexbox display
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 }
+
+//----------------------------------------------------------------------
+
+// Flexbox Direction
+//
+// The 'flex-direction' property specifies how flex items are placed in
+// the flex container, by setting the direction of the flex container's
+// main axis. This determines the direction that flex items are laid out in.
+//
+// Values: row | row-reverse | column | column-reverse
+// Default: row
+//
+// h
+@mixin flex-direction($value: column) {
+  @if $value == row-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+  } @else if $value == column {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+  } @else if $value == column-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+  } @else {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+  }
+  -webkit-flex-direction: $value;
+  -moz-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}
+
+
 
 @mixin paddingAll($val) {
   .pA#{$val} {padding: #{$val}px #{$val}px;}
