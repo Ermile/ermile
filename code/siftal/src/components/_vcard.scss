@@ -13,7 +13,7 @@
 	transition: 0.3s;
 	box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
 }
-.vcard:hover, .vcard.:hover{
+.vcard.shadow:hover, .vcard.active{
 	box-shadow:  0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5, 0 5px 20px rgba(0,0,0,0.19), 0 5px 7px rgba(0,0,0,0.23);
 }
 
@@ -31,10 +31,10 @@
 	position: relative;
 	display: block;
 	padding: 0;
-	background-color: rgba(0,0,0,0.3);
 	width:100%;
 	height: auto;
 }
+
 .vcard .content{
 	border: none;
 	background-color: transparent;
@@ -54,6 +54,7 @@
 	clear: both;
 	color:#777;
 	margin-top: 0.5em;
+	display: block;
 }
 
 // meta
@@ -61,6 +62,18 @@
 	clear: both;
 	color:rgba(0,0,0,0.4);
 	font-size: 0.9em;
+	transition: 0.3s;
+	display: block;
+}
+.vcard .meta a{
+	color:rgba(0,0,0,0.4);
+	transition: 0.3s;
+}
+.vcard .meta a:hover{
+	color:rgba(0,0,0,0.6);
+}
+.vcard .meta a:focus{
+	color:rgba(0,0,0,0.7);
 }
 
 .ltr .vcard .meta *{
