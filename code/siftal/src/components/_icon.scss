@@ -2,7 +2,7 @@
 [class^="sf-"]{
 	display: inline-block;
 	margin:0 0.2em;
-	width:1em;
+	min-width:1em;
 	text-align:center;
 	backface-visibility:hidden;
 }
@@ -33,7 +33,7 @@
 		}
 }
 
-.spiny, [class^="sf-"].spiny:before{
+[class^="sf-"].spiny:before{
 	-webkit-animation: spiny 2s infinite linear;
 	-webkit-animation-timing-function:cubic-bezier(.43, .84, .61, .14);
 	animation-timing-function:cubic-bezier(.43, .84, .61, .14);
