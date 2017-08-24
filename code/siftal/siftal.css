@@ -2111,6 +2111,10 @@ a:active {
 .rtl .mLa100 {
   margin-right: 100px; }
 
+.mLRa {
+  margin-right: auto;
+  margin-left: auto; }
+
 .floatR {
   float: right; }
 
@@ -2358,6 +2362,34 @@ a:active {
   background-color: #f8f8f8;
   border-radius: 0.25rem;
   font-size: 90%; }
+
+body .w100 {
+  min-width: 100px;
+  width: 100px; }
+
+body .w125 {
+  min-width: 125px;
+  width: 125px; }
+
+body .w150 {
+  min-width: 150px;
+  width: 150px; }
+
+body .w200 {
+  min-width: 200px;
+  width: 200px; }
+
+body .w300 {
+  min-width: 300px;
+  width: 300px; }
+
+body .w400 {
+  min-width: 400px;
+  width: 400px; }
+
+body .w500 {
+  min-width: 500px;
+  width: 500px; }
 
 .btn {
   cursor: pointer;
@@ -4539,6 +4571,21 @@ img.mini {
   height: auto;
   border-radius: 0.2rem;
   margin: 0.1em; }
+
+.vcard.red {
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5, 0 3px 0 0 #db2828; }
+
+.vcard.blue {
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5, 0 3px 0 0 #2185d0; }
+
+.vcard.green {
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5, 0 3px 0 0 #b5cc18; }
+
+.vcard.yellow {
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5, 0 3px 0 0 #fbbd08; }
+
+.vcard.black {
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5, 0 3px 0 0 #1b1c1d; }
 
 .transparent {
   border-color: transparent !important;

@@ -22,7 +22,10 @@
 @include marginAll(25);
 @include marginAll(50);
 @include marginAll(100);
-
+.mLRa{
+	margin-right:auto;
+	margin-left: auto;
+}
 
 // include all floats
 .floatR{float:right}
@@ -118,4 +121,11 @@
 // ways
 .code1{padding:0.2em 0.5em; color:#c04040;background-color:#f8f8f8;border-radius:0.25rem;font-size:90%;}
 
+body .w100{min-width:100px;width:100px}
+body .w125{min-width:125px;width:125px}
+body .w150{min-width:150px;width:150px}
+body .w200{min-width:200px;width:200px}
+body .w300{min-width:300px;width:300px}
+body .w400{min-width:400px;width:400px}
+body .w500{min-width:500px;width:500px}
 

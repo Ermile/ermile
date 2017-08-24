@@ -127,5 +127,20 @@ img.mini{
 }
 
 
-
+// color of cards
+.vcard.red{
+	box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5, 0 3px 0 0 #db2828;
+}
+.vcard.blue{
+	box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5, 0 3px 0 0 #2185d0;
+}
+.vcard.green{
+	box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5, 0 3px 0 0 #b5cc18;
+}
+.vcard.yellow{
+	box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5, 0 3px 0 0 #fbbd08;
+}
+.vcard.black{
+	box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5, 0 3px 0 0 #1b1c1d;
+}
 
