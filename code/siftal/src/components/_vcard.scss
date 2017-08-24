@@ -40,6 +40,9 @@
 	background-color: transparent;
 	margin: 0;
 	padding: 1em 1em;
+	-webkit-box-flex:1;
+	-ms-flex-positive:1;
+	flex-grow:1;
 }
 
 .vcard .content .header{
@@ -103,6 +106,12 @@
 	-ms-flex-positive:0;
 	flex-grow:0;
 }
+.vcard .footer.pAn .btn{
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+
 
 img.avatar{
 	width: 2em;

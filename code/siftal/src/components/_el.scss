@@ -10,6 +10,9 @@
 @include paddingAll(25);
 @include paddingAll(50);
 @include paddingAll(100);
+.pAn{
+	padding: 0!important;
+}
 
 // include all margin
 @include marginAll(0);
@@ -121,11 +124,18 @@
 // ways
 .code1{padding:0.2em 0.5em; color:#c04040;background-color:#f8f8f8;border-radius:0.25rem;font-size:90%;}
 
-body .w100{min-width:100px;width:100px}
-body .w125{min-width:125px;width:125px}
-body .w150{min-width:150px;width:150px}
-body .w200{min-width:200px;width:200px}
-body .w300{min-width:300px;width:300px}
-body .w400{min-width:400px;width:400px}
-body .w500{min-width:500px;width:500px}
+body .w100{width:100px}
+body .w125{width:125px}
+body .w150{width:150px}
+body .w200{width:200px}
+body .w300{width:300px}
+body .w400{width:400px}
+body .w500{width:500px}
 
+body .we100{min-width:100px;width:100px}
+body .we125{min-width:125px;width:125px}
+body .we150{min-width:150px;width:150px}
+body .we200{min-width:200px;width:200px}
+body .we300{min-width:300px;width:300px}
+body .we400{min-width:400px;width:400px}
+body .we500{min-width:500px;width:500px}

@@ -1761,6 +1761,9 @@ a:active {
 .rtl .pLa100 {
   padding-right: 100px; }
 
+.pAn {
+  padding: 0 !important; }
+
 .mA0 {
   margin: 0px 0px; }
 
@@ -2364,30 +2367,51 @@ a:active {
   font-size: 90%; }
 
 body .w100 {
-  min-width: 100px;
   width: 100px; }
 
 body .w125 {
-  min-width: 125px;
   width: 125px; }
 
 body .w150 {
-  min-width: 150px;
   width: 150px; }
 
 body .w200 {
-  min-width: 200px;
   width: 200px; }
 
 body .w300 {
-  min-width: 300px;
   width: 300px; }
 
 body .w400 {
-  min-width: 400px;
   width: 400px; }
 
 body .w500 {
+  width: 500px; }
+
+body .we100 {
+  min-width: 100px;
+  width: 100px; }
+
+body .we125 {
+  min-width: 125px;
+  width: 125px; }
+
+body .we150 {
+  min-width: 150px;
+  width: 150px; }
+
+body .we200 {
+  min-width: 200px;
+  width: 200px; }
+
+body .we300 {
+  min-width: 300px;
+  width: 300px; }
+
+body .we400 {
+  min-width: 400px;
+  width: 400px; }
+
+body .we500 {
   min-width: 500px;
   width: 500px; }
 
@@ -4496,7 +4520,10 @@ progress.xl, meter.xl {
   border: none;
   background-color: transparent;
   margin: 0;
-  padding: 1em 1em; }
+  padding: 1em 1em;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
 
 .vcard .content .header {
   display: block;
@@ -4552,6 +4579,10 @@ progress.xl, meter.xl {
   -webkit-box-flex: 0;
   -ms-flex-positive: 0;
   flex-grow: 0; }
+
+.vcard .footer.pAn .btn {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
 
 img.avatar {
   width: 2em;
