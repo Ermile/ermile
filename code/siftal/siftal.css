@@ -2307,6 +2307,10 @@ a:active {
 .bg-white {
   background-color: #FFFFFF; }
 
+.op0 {
+  opacity: 0;
+  filter: alpha(opacity=0); }
+
 .op05 {
   opacity: 0.05;
   filter: alpha(opacity=5); }
@@ -4855,6 +4859,9 @@ img.mini {
 
 .txtc {
   text-align: center; }
+
+.fadeIn {
+  display: none; }
 
 .primary {
   background-color: #2080d0;

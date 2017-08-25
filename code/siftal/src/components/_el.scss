@@ -106,6 +106,7 @@
 
 
 // all opacity needed
+.op0{@include opacity(0)}
 .op05{@include opacity(0.05)}
 .op10{@include opacity(0.1)}
 .op15{@include opacity(0.15)}
