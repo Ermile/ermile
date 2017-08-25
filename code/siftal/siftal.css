@@ -4619,7 +4619,7 @@ img.mini {
   box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5, 0 3px 0 0 #1b1c1d; }
 
 .mini .vcard {
-  width: 160px;
+  width: 150px;
   min-width: 150px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4767,6 +4767,40 @@ img.mini {
   line-height: 30px;
   overflow: hidden;
   text-overflow: ellipsis; }
+
+.normal .vcard {
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  text-align: center; }
+
+.large .vcard {
+  width: 220px;
+  min-width: 220px;
+  max-width: 220px;
+  text-align: center;
+  font-size: 1.1em; }
+
+.big .vcard {
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
+  font-size: 1.3em;
+  text-align: center; }
+
+.huge .vcard {
+  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  font-size: 1.4em;
+  text-align: center; }
+
+.massive .vcard {
+  width: 400px;
+  min-width: 400px;
+  max-width: 400px;
+  font-size: 1.6em;
+  text-align: center; }
 
 .transparent {
   border-color: transparent !important;
