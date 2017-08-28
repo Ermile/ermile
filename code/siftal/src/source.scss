@@ -22,7 +22,6 @@ Version       1.0.0
 @import 'base/grid';
 
 // add extra componenet
-@import 'components/el';
 @import 'components/button';
 @import 'components/callout';
 @import 'components/msg';
@@ -34,10 +33,15 @@ Version       1.0.0
 @import 'components/table';
 @import 'components/box';
 @import 'components/vcard';
+@import 'components/modal';
+
+// form elements
 @import 'forms/general';
+@import 'forms/input';
 
 
 // import color after all other styles, because sometimes we need to overwrite
+@import 'components/el';
 @import 'lastchanges/general';
 @import 'lastchanges/color';
 

@@ -1,0 +1,37 @@
+.input{
+	font-weight: 400;
+	display: inline-flex;
+	color: rgba(0,0,0,0.9);
+	position: relative;
+	line-height: 1.25;
+	padding: 0.6em 1em;
+	background-color: #fff;
+	border: 1px solid rgba(0,0,0,0.1);
+	transition: 0.3s;
+	border-radius: 0.25rem;
+	outline:none;
+}
+.input:hover{
+	border-color:rgba(0,0,0,0.15);
+}
+.input:focus, .input.focus{
+	border-color:rgba(0,0,255,0.2);
+}
+.input.active{
+	border-color:rgba(0,0,0,0.4);
+}
+// all type of errors
+.input.error{
+	border-color:rgba(255,0,0,0.5);
+}
+.input.warning{
+	border-color:rgba(255,145,0,0.5);
+}
+.input.ok{
+	border-color:rgba(39,128,39,0.5);
+}
+
+
+
+
+
