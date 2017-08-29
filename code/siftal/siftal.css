@@ -3872,6 +3872,20 @@ img.mini {
   outline: none !important; }
 
 .input {
+  position: relative;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem; }
+
+span.input {
+  display: inline-flex;
+  width: auto; }
+
+.input input {
   font-weight: 400;
   display: inline-flex;
   color: rgba(0, 0, 0, 0.9);
@@ -3881,25 +3895,122 @@ img.mini {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: 0.3s;
-  border-radius: 0.25rem;
-  outline: none; }
+  border-radius: 0.5rem;
+  outline: none;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center; }
 
-.input:hover {
+.input input:hover {
   border-color: rgba(0, 0, 0, 0.15); }
 
-.input:focus, .input.focus {
+.input input:focus, .input.focus input {
   border-color: rgba(0, 0, 255, 0.2); }
 
-.input.active {
+.input.active input {
   border-color: rgba(0, 0, 0, 0.4); }
 
-.input.error {
+.input.error input {
   border-color: rgba(255, 0, 0, 0.5); }
 
-.input.warning {
+.input.warning input {
   border-color: rgba(255, 145, 0, 0.5); }
 
-.input.ok {
+.input.ok input {
+  border-color: rgba(39, 128, 39, 0.5); }
+
+.input .addon {
+  padding: 0.6em 1em;
+  color: #444;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  vertical-align: middle;
+  margin: 0;
+  font-style: normal;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.ltr .input :first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.ltr .input :last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.rtl .input :first-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.rtl .input :last-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.ltr .input .addon:first-child {
+  border-right-width: 0; }
+
+.ltr .input .addon:last-child {
+  border-left-width: 0; }
+
+.ltr .input .addon:not(:fist-child):not(:last-child) {
+  border-left-width: 0; }
+
+.rtl .input .addon:first-child {
+  border-left-width: 0; }
+
+.rtl .input .addon:last-child {
+  border-right-width: 0; }
+
+.rtl .input .addon:not(:fist-child):not(:last-child) {
+  border-right-width: 0; }
+
+.ltr .input :not(:first-child):not(:last-child) {
+  border-radius: 0;
+  border-right-width: 0; }
+
+.rtl .input :not(:first-child):not(:last-child) {
+  border-radius: 0;
+  border-left-width: 0; }
+
+input.input {
+  font-weight: 400;
+  display: inline-flex;
+  color: rgba(0, 0, 0, 0.9);
+  position: relative;
+  line-height: 1.25;
+  padding: 0.6em 1em;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border-radius: 0.5rem;
+  outline: none;
+  width: auto; }
+
+input.input:hover {
+  border-color: rgba(0, 0, 0, 0.15); }
+
+input.input:focus, input.input.focus {
+  border-color: rgba(0, 0, 255, 0.2); }
+
+input.input.active {
+  border-color: rgba(0, 0, 0, 0.4); }
+
+input.input.error {
+  border-color: rgba(255, 0, 0, 0.5); }
+
+input.input.warning {
+  border-color: rgba(255, 145, 0, 0.5); }
+
+input.input.ok {
   border-color: rgba(39, 128, 39, 0.5); }
 
 .pA0 {
