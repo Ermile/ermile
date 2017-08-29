@@ -11,7 +11,7 @@ $inputBorder: 1px solid rgba(0,0,0,0.1);
 	display: flex;
 	width: 100%;
 	overflow: hidden;
-	border-radius: 0.5rem;
+	border-radius: 0.25rem;
 }
 span.input{
 	display: inline-flex;
@@ -28,7 +28,7 @@ span.input{
 	background-color: #fff;
 	border: $inputBorder;
 	transition: 0.3s;
-	border-radius: 0.5rem;
+	border-radius: 0.25rem;
 	outline:none;
 	-ms-flex:1 1 auto;
 	flex:1 1 auto;
@@ -62,10 +62,8 @@ span.input{
 
 .input .addon{
 	padding: 0.6em 1em;
-	color: #444;
 	text-align: center;
-	background-color: rgba(0,0,0,0.05);
-	border-radius: 0.5rem;
+	border-radius: 0.25rem;
 	white-space: nowrap;
 	vertical-align: middle;
 	margin: 0;
@@ -75,7 +73,15 @@ span.input{
 	display: flex;
 	-ms-flex-align:center;
 	align-items:center;
-
+}
+.input .addon:not(.btn)
+{
+	color: #444;
+	background-color: rgba(0,0,0,0.05);
+}
+.input .addon.basic{
+	background-color: #fff;
+	border:$inputBorder;
 }
 
 // for radius
@@ -139,7 +145,7 @@ input.input{
 	background-color: #fff;
 	border: $inputBorder;
 	transition: 0.3s;
-	border-radius: 0.5rem;
+	border-radius: 0.25rem;
 	outline:none;
 	width: auto;
 }

@@ -22,7 +22,6 @@ Version       1.0.0
 @import 'base/grid';
 
 // add extra componenet
-@import 'components/button';
 @import 'components/callout';
 @import 'components/msg';
 @import 'components/badge';
@@ -38,6 +37,8 @@ Version       1.0.0
 // form elements
 @import 'forms/general';
 @import 'forms/input';
+// buttons
+@import 'components/button';
 
 
 // import color after all other styles, because sometimes we need to overwrite
