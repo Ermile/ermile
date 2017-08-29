@@ -3991,6 +3991,9 @@ input.input.ok {
 .txt:focus {
   border-color: #80c0d0; }
 
+.txt[rows] {
+  resize: none; }
+
 .btn {
   cursor: pointer;
   display: inline-block;
