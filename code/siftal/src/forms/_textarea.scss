@@ -1,0 +1,29 @@
+.txt{
+	display: block;
+	margin: 0;
+	-webkit-appearance:none;
+	padding: 0.7em 1em;
+	background-color: #fff;
+	outline: 0;
+	color: #444;
+	border-radius: 0.25rem;
+	transition: border-color 0.3s;
+	resize: vertical;
+	line-height: 1.5;
+	font-size: 1em;
+	border:1px solid rgba(0,0,0,0.1);
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 4em;
+	max-height: 30em;
+	overflow: hidden;
+}
+.txt:hover{
+	border-color: rgba(0,0,0,0.2);
+}
+.txt:focus{
+	border-color: #80c0d0;
+}
+
+

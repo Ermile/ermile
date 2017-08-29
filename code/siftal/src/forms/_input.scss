@@ -42,7 +42,7 @@ span.input{
 	border-color:rgba(0,0,0,0.15);
 }
 .input input:focus, .input.focus input{
-	border-color:rgba(0,0,255,0.2);
+	border-color:rgba(128,192,208,0.9);
 }
 .input.active input{
 	border-color:rgba(0,0,0,0.4);
@@ -153,7 +153,7 @@ input.input:hover{
 	border-color:rgba(0,0,0,0.15);
 }
 input.input:focus, input.input.focus{
-	border-color:rgba(0,0,255,0.2);
+	border-color:rgba(128,192,208,0.9);
 }
 input.input.active{
 	border-color:rgba(0,0,0,0.4);
