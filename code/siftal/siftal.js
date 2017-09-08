@@ -43,11 +43,12 @@ function setLanguageURL()
     {
       $(index).attr('class', 'isActive');
     }
-    if(lang == 'en')
-    {
-      lang = '';
-    }
-    else if(lang == $('html').attr('lang'))
+    // if(lang == 'en')
+    // {
+    //   lang = '';
+    // }
+    // else
+    if(lang == $('html').attr('lang'))
     {
       // lang = '/' + lang;
     }
