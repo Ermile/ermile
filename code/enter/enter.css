@@ -26,7 +26,7 @@ body.bg15{background-image:url(images/15.jpg)}
 #enter .logo{margin:0}
 #enter .logo a{display:block;}
 #enter .logo a:focus img{background-color:rgba(0,0,0,0.1);border-radius:50%}
-#enter .logo img{display:block;max-width:100%;height:90px;margin:0 auto;transition:0.3s;}
+#enter .logo img{display:block;max-width:100%;height:90px;margin:0 auto;transition:0.3s;overflow:hidden;text-align:center;}
 #enter .logo span{display:none !important}
 #enter h2{font-size:1.3em;font-weight:100;overflow:hidden;margin:1em 0;text-align:center;color:#fff}
 #enter h2 abbr{cursor:pointer;}
