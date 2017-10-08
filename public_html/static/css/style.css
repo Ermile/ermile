@@ -211,6 +211,11 @@ picture{display:block;}
 #anyTeam h2{font-size:4em;text-align:initial;padding:0 0.5em;}
 #anyTeam h3{text-align:initial;padding:0 2em;margin-bottom:1em;max-width:700px;color:#333;}
 #anyTeam img{display:block;max-width:700px;width:700px;margin-left:-200px;border-top-left-radius:5px;border-top-right-radius:5px;}
+
+.brandTile h2{font-size:4em;max-width:600px;margin-right:auto;margin-left:auto;}
+.brandTile h3{padding:0 2em;margin-bottom:1em;max-width:600px;color:#333;margin-right:auto;margin-left:auto;}
+.brandTile h4{padding:0 2em;margin-bottom:1em;max-width:600px;color:#333;margin-right:auto;margin-left:auto;}
+
 .browserBox{max-width:700px;border:3px solid #e5e5e8;border-top-width:30px;border-radius:5px;box-shadow:0 0 10px 1px #e5e5e8;margin:0 auto;position:relative;}
 .browserBox::before{content:'';position:absolute;height:14px;background-color:#d6d7d6;border-radius:5px;top:-22px;right:10px;left:80px;transition:0.3s}
 .browserBox:hover::before{background-color:#ccc}

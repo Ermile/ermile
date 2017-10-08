@@ -1,7 +1,7 @@
 <?php
 namespace content\contact;
 
-class view extends \content\main\view
+class view extends \mvc\view
 {
 	function config()
 	{
