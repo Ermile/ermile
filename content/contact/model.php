@@ -69,26 +69,26 @@ class model extends \mvc\model
 			]
 		];
 
-		/**
-		 * register user if set mobile and not register
-		 */
-		if($mobile && !$this->login())
-		{
-			// check valid mobile
-			if(\lib\utility\filter::mobile($mobile))
-			{
-				// check existing mobile
-				$exists_user = \lib\db\users::get_by_mobile($mobile);
-				// register if the mobile is valid
-				if(!$exists_user || empty($exists_user))
-				{
-					// signup user by site_guest
-					$user_id = \lib\db\users::signup(['mobile' => $mobile ,'type' => 'inspection', 'port' => 'site_guest']);
-					// save log by caller 'user:send:contact:register:by:mobile'
-					\lib\db\logs::set('user:send:contact:register:by:mobile', $user_id, $log_meta);
-				}
-			}
-		}
+		// /**
+		//  * register user if set mobile and not register
+		//  */
+		// if($mobile && !$this->login())
+		// {
+		// 	// check valid mobile
+		// 	if(\lib\utility\filter::mobile($mobile))
+		// 	{
+		// 		// check existing mobile
+		// 		$exists_user = \lib\db\users::get_by_mobile($mobile);
+		// 		// register if the mobile is valid
+		// 		if(!$exists_user || empty($exists_user))
+		// 		{
+		// 			// signup user by site_guest
+		// 			$user_id = \lib\db\users::signup(['mobile' => $mobile ,'type' => 'inspection', 'port' => 'site_guest']);
+		// 			// save log by caller 'user:send:contact:register:by:mobile'
+		// 			\lib\db\logs::set('user:send:contact:register:by:mobile', $user_id, $log_meta);
+		// 		}
+		// 	}
+		// }
 
 		// check content
 		if($content == '')
@@ -104,29 +104,29 @@ class model extends \mvc\model
 			'email'   => $email,
 			'type'    => 'comment',
 			'content' => $content,
-			'user_id'         => $user_id
+			'user_id' => $user_id
 		];
-		// insert comments
-		$result = \lib\db\comments::insert($args);
-		if($result)
-		{
-			// $mail =
-			// [
-			// 	'from'    => 'info@tejarak.com',
-			// 	'to'      => 'info@tejarak.com',
-			// 	'subject' => 'contact',
-			// 	'body'    => $content,
-			// 	'debug'   => false,
-			// ];
-			// \lib\utility\mail::send($mail);
 
-			\lib\db\logs::set('user:send:contact', $user_id, $log_meta);
-			debug::true(T_("Thank You For contacting us"));
+
+		$url    = root. 'content/contact/allCommentJson';
+		// if(!\lib\utility\file::exists($url))
+		// {
+		// 	\lib\utility\file::makeDir($url, null, true);
+		// }
+		// $url .= 'total_userteam.txt';
+		if(!\lib\utility\file::exists($url))
+		{
+			\lib\utility\file::write($url, json_encode($args, JSON_UNESCAPED_UNICODE). "\n");
 		}
+
 		else
 		{
-			\lib\db\logs::set('user:send:contact:fail', $user_id, $log_meta);
-			debug::error(T_("We could'nt save the contact"));
+			\lib\utility\file::append($url, json_encode($args, JSON_UNESCAPED_UNICODE). "\n");
+
 		}
+
+		// \lib\db\logs::set('user:send:contact', $user_id, $log_meta);
+		debug::true(T_("Thank You For contacting us"));
+
 	}
 }
