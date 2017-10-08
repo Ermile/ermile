@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile - Persian\n"
-"POT-Creation-Date: 2017-10-08 21:12+0330\n"
-"PO-Revision-Date: 2017-10-08 21:19+0330\n"
+"POT-Creation-Date: 2017-10-08 21:27+0330\n"
+"PO-Revision-Date: 2017-10-08 21:27+0330\n"
 "Last-Translator: Javad <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -55,26 +55,19 @@ msgstr "ما نمی‌توانیم فایل شما را آپلود کنیم"
 msgid "Please try type something!"
 msgstr "لطفا تلاشی برای تایپ داشته باشید!"
 
-#: content/contact/model.php:124
+#: content/contact/model.php:129
 msgid "Thank You For contacting us"
 msgstr "از تماس شما متشکریم"
 
-#: content/contact/model.php:129
-msgid "We could'nt save the contact"
-msgstr "مشکلی در ذخیره‌سازی مخاطب پیش آمد"
-
-#: content_account2/changepass/model.php:18
-#: includes/languages/trans_addons.php:497
+#: content_account2/changepass/model.php:18 includes/languages/trans_addons.php:497
 msgid "change password successfully"
 msgstr "تغییر کلمه عبور با موفقیت به انجام رسید"
 
-#: content_account2/changepass/model.php:23
-#: includes/languages/trans_addons.php:498
+#: content_account2/changepass/model.php:23 includes/languages/trans_addons.php:498
 msgid "change password failed!"
 msgstr "تغییر کلمه عبور ناموفق بود!"
 
-#: content_account2/home/controller.php:20
-#: content_account2/home/controller.php:32
+#: content_account2/home/controller.php:20 content_account2/home/controller.php:32
 msgid "you can't access to this page!"
 msgstr "شما اجازه دسترسی به این صفحه را ندارید!"
 
@@ -114,10 +107,9 @@ msgstr "رسید دریافت پیامک"
 msgid "SMS Callback"
 msgstr "پیامک های دریافتی"
 
-#: content_account2/home/view.php:61
-#: includes/languages/static_translation.php:21
-#: includes/languages/trans_addon.php:118
-#: includes/languages/trans_addons.php:290 includes/mvc/view.php:9
+#: content_account2/home/view.php:61 includes/languages/static_translation.php:21
+#: includes/languages/trans_addon.php:118 includes/languages/trans_addons.php:290
+#: includes/mvc/view.php:9
 msgid "Ermile"
 msgstr "ارمایل"
 
@@ -134,25 +126,21 @@ msgid "mobile or password is incorrect"
 msgstr "شماره موبایل یا کلمه عبور اشتباه است"
 
 #: content_account2/login/model.php:94 content_account2/recovery/model.php:56
-#: content_account2/signup/model.php:65
-#: content_account2/verification/model.php:77
+#: content_account2/signup/model.php:65 content_account2/verification/model.php:77
 msgid "please forward this message to administrator"
 msgstr "لطفا این پیغام را برای مدیر سیستم ارسال کنید"
 
 #: content_account2/recovery/model.php:38 content_account2/signup/model.php:51
 #: includes/languages/trans_addon.php:15 includes/languages/trans_addons.php:30
-#: includes/languages/trans_twig.php:289
-#: includes/languages/twig_translation.php:41
+#: includes/languages/trans_twig.php:252 includes/languages/twig_translation.php:41
 msgid "we send a verification code for you"
 msgstr "ما کد اعتبارسنجی را برای شما ارسال خواهیم کرد"
 
-#: content_account2/recovery/model.php:47
-#: includes/languages/trans_addons.php:485
+#: content_account2/recovery/model.php:47 includes/languages/trans_addons.php:485
 msgid "recovery failed!"
 msgstr "بازیابی ناموفق بود!"
 
-#: content_account2/recovery/model.php:52
-#: includes/languages/trans_addons.php:486
+#: content_account2/recovery/model.php:52 includes/languages/trans_addons.php:486
 msgid "Mobile number is incorrect"
 msgstr "این شماره موبایل اشتباه است."
 
@@ -248,8 +236,7 @@ msgstr "کد"
 
 #: includes/cls/database/ermile/translation.php:15
 #: includes/cls/database/ermile/translation.php:81
-#: includes/languages/trans_addon.php:156
-#: includes/languages/trans_addons.php:339
+#: includes/languages/trans_addon.php:156 includes/languages/trans_addons.php:339
 msgid "post"
 msgstr "نوشته ها"
 
@@ -442,8 +429,7 @@ msgid "options"
 msgstr "تنظیمات"
 
 #: includes/cls/database/ermile/translation.php:72
-#: includes/languages/trans_addon.php:160
-#: includes/languages/trans_addons.php:347
+#: includes/languages/trans_addon.php:160 includes/languages/trans_addons.php:347
 msgid "option"
 msgstr "تنظیمات"
 
@@ -673,33 +659,28 @@ msgid "Saloos"
 msgstr "سالوس"
 
 #: includes/languages/static_translation.php:7
-#: includes/languages/trans_addon.php:102
-#: includes/languages/trans_addons.php:252
+#: includes/languages/trans_addon.php:102 includes/languages/trans_addons.php:252
 msgid "saloos"
 msgstr "سالوس"
 
 #: includes/languages/static_translation.php:8
-#: includes/languages/trans_addon.php:103
-#: includes/languages/trans_addons.php:254
+#: includes/languages/trans_addon.php:103 includes/languages/trans_addons.php:254
 #: includes/languages/twig_translation.php:76
 msgid "Javad Evazzadeh"
 msgstr "جواد عوض زاده"
 
 #: includes/languages/static_translation.php:9
-#: includes/languages/trans_addon.php:105
-#: includes/languages/trans_addons.php:258
+#: includes/languages/trans_addon.php:105 includes/languages/trans_addons.php:258
 msgid "Another Project with Saloos"
 msgstr "یک پروژه دیگر با سالوس"
 
 #: includes/languages/static_translation.php:10
-#: includes/languages/trans_addon.php:106
-#: includes/languages/trans_addons.php:259
+#: includes/languages/trans_addon.php:106 includes/languages/trans_addons.php:259
 msgid "Saloos is an artichokes for PHP programming!!"
 msgstr "سالوس یک کنگر برای برنامه نویسی با پی اچ پی!"
 
 #: includes/languages/static_translation.php:11
-#: includes/languages/trans_addon.php:107
-#: includes/languages/trans_addons.php:260
+#: includes/languages/trans_addon.php:107 includes/languages/trans_addons.php:260
 msgid "Saloos is powerfull."
 msgstr "سالوس اقتدار بخش!"
 
@@ -728,26 +709,23 @@ msgid "delete failed!"
 msgstr "عملیات حذف ناموفق بود!"
 
 #: includes/languages/static_translation.php:18
-#: includes/languages/trans_addon.php:115
-#: includes/languages/trans_addons.php:287
+#: includes/languages/trans_addon.php:115 includes/languages/trans_addons.php:287
 msgid "id does not exist!"
 msgstr "این کد در سیستم وجود ندارد!"
 
 #: includes/languages/static_translation.php:19
-#: includes/languages/trans_addon.php:116
-#: includes/languages/trans_addons.php:288
+#: includes/languages/trans_addon.php:116 includes/languages/trans_addons.php:288
 msgid "all require fields must fill"
 msgstr "تمام رکوردهای الزامی باید پر شوند"
 
 #: includes/languages/static_translation.php:20
-#: includes/languages/trans_addon.php:117
-#: includes/languages/trans_addons.php:289
+#: includes/languages/trans_addon.php:117 includes/languages/trans_addons.php:289
 msgid "some fields must be change for update!"
 msgstr "برای بروزرسانی باید حداقل یک فیلد را تغییر دهید!"
 
 #: includes/languages/static_translation.php:22
-#: includes/languages/trans_addon.php:119
-#: includes/languages/trans_addons.php:291 includes/languages/trans_twig.php:93
+#: includes/languages/trans_addon.php:119 includes/languages/trans_addons.php:291
+#: includes/languages/trans_twig.php:93
 msgid "ermile"
 msgstr "ارمایل"
 
@@ -762,8 +740,7 @@ msgid "your verification code is"
 msgstr "کد اعتبارسنجی شما"
 
 #: includes/languages/static_translation.php:25
-#: includes/languages/trans_addon.php:122
-#: includes/languages/trans_addons.php:484
+#: includes/languages/trans_addon.php:122 includes/languages/trans_addons.php:484
 msgid "your recovery code is"
 msgstr "کد بازیابی کلمه عبور شما"
 
@@ -783,62 +760,53 @@ msgid "made in iran"
 msgstr "ساخت ایران"
 
 #: includes/languages/static_translation.php:29
-#: includes/languages/trans_addon.php:126
-#: includes/languages/trans_addons.php:293 includes/languages/trans_twig.php:97
+#: includes/languages/trans_addon.php:126 includes/languages/trans_addons.php:293
+#: includes/languages/trans_twig.php:97
 msgid "Iran"
 msgstr "ایران"
 
 #: includes/languages/static_translation.php:30
-#: includes/languages/trans_addon.php:127
-#: includes/languages/trans_addons.php:294
+#: includes/languages/trans_addon.php:127 includes/languages/trans_addons.php:294
 msgid "iran"
 msgstr "ایران"
 
 #: includes/languages/static_translation.php:31
-#: includes/languages/trans_addon.php:130
-#: includes/languages/trans_addons.php:297
+#: includes/languages/trans_addon.php:130 includes/languages/trans_addons.php:297
 msgid "submit"
 msgstr "تایید"
 
 #: includes/languages/static_translation.php:32
-#: includes/languages/trans_addon.php:131
-#: includes/languages/trans_addons.php:298
+#: includes/languages/trans_addon.php:131 includes/languages/trans_addons.php:298
 msgid "save"
 msgstr "ذخیره"
 
 #: includes/languages/static_translation.php:33
-#: includes/languages/trans_addon.php:132
-#: includes/languages/trans_addons.php:299
+#: includes/languages/trans_addon.php:132 includes/languages/trans_addons.php:299
 msgid "add new"
 msgstr "افزودن"
 
 #: includes/languages/static_translation.php:34
-#: includes/languages/trans_addon.php:133
-#: includes/languages/trans_addons.php:300
+#: includes/languages/trans_addon.php:133 includes/languages/trans_addons.php:300
 msgid "signin"
 msgstr "ورود"
 
 #: includes/languages/static_translation.php:35
-#: includes/languages/trans_addon.php:134
-#: includes/languages/trans_addons.php:301
+#: includes/languages/trans_addon.php:134 includes/languages/trans_addons.php:301
 msgid "sign in"
 msgstr "ورود"
 
 #: includes/languages/static_translation.php:36
-#: includes/languages/trans_addon.php:135
-#: includes/languages/trans_addons.php:219
+#: includes/languages/trans_addon.php:135 includes/languages/trans_addons.php:219
 msgid "signup"
 msgstr "ثبت نام"
 
 #: includes/languages/static_translation.php:37
-#: includes/languages/trans_addon.php:136
-#: includes/languages/trans_addons.php:302
+#: includes/languages/trans_addon.php:136 includes/languages/trans_addons.php:302
 msgid "sign up"
 msgstr "ثبت نام"
 
 #: includes/languages/static_translation.php:38
-#: includes/languages/trans_addon.php:137
-#: includes/languages/trans_addons.php:303
+#: includes/languages/trans_addon.php:137 includes/languages/trans_addons.php:303
 msgid "register"
 msgstr "ثبت نام"
 
@@ -848,20 +816,18 @@ msgid "create an account"
 msgstr "اکانت بسازید"
 
 #: includes/languages/static_translation.php:40
-#: includes/languages/trans_addon.php:139
-#: includes/languages/trans_addons.php:304
+#: includes/languages/trans_addon.php:139 includes/languages/trans_addons.php:304
 msgid "home"
 msgstr "خانه"
 
 #: includes/languages/static_translation.php:41
-#: includes/languages/trans_addon.php:140
-#: includes/languages/trans_addons.php:305 includes/languages/trans_twig.php:143
+#: includes/languages/trans_addon.php:140 includes/languages/trans_addons.php:305
+#: includes/languages/trans_twig.php:143
 msgid "Home"
 msgstr "صفحه نخست"
 
 #: includes/languages/static_translation.php:42
-#: includes/languages/trans_addon.php:141
-#: includes/languages/trans_addons.php:306
+#: includes/languages/trans_addon.php:141 includes/languages/trans_addons.php:306
 msgid "homepage"
 msgstr "صفحه نخست"
 
@@ -871,8 +837,7 @@ msgid "Homepage"
 msgstr "صفحه نخست"
 
 #: includes/languages/static_translation.php:44
-#: includes/languages/trans_addon.php:143
-#: includes/languages/trans_addons.php:307
+#: includes/languages/trans_addon.php:143 includes/languages/trans_addons.php:307
 msgid "admin"
 msgstr "ادمین"
 
@@ -953,8 +918,7 @@ msgid "Pages"
 msgstr "صفحات"
 
 #: includes/languages/static_translation.php:65
-#: includes/languages/trans_addon.php:144
-#: includes/languages/trans_addons.php:312
+#: includes/languages/trans_addon.php:144 includes/languages/trans_addons.php:312
 #: includes/languages/twig_translation.php:72
 msgid "Terms"
 msgstr "عبارات"
@@ -996,15 +960,13 @@ msgid "Logout"
 msgstr "خروج از سیستم"
 
 #: includes/languages/static_translation.php:72
-#: includes/languages/trans_addon.php:145
-#: includes/languages/trans_addons.php:316
+#: includes/languages/trans_addon.php:145 includes/languages/trans_addons.php:316
 #: includes/languages/twig_translation.php:80
 msgid "Powered by Saloos."
 msgstr "قدرت گرفته از سالوس."
 
 #: includes/languages/static_translation.php:73
-#: includes/languages/trans_addon.php:146
-#: includes/languages/trans_addons.php:317
+#: includes/languages/trans_addon.php:146 includes/languages/trans_addons.php:317
 #: includes/languages/twig_translation.php:81
 msgid "All right reserved."
 msgstr "تمام حقوق محفوظ است."
@@ -1098,56 +1060,47 @@ msgid "+98 25 3773 5183"
 msgstr "۵۱۸۳ ۳۷۷۳ ۰۲۵"
 
 #: includes/languages/trans_addon.php:6 includes/languages/trans_addons.php:21
-#: includes/languages/trans_twig.php:275
-#: includes/languages/twig_translation.php:27
+#: includes/languages/trans_twig.php:238 includes/languages/twig_translation.php:27
 msgid "click here to login to your account"
 msgstr "برای ورود به اکانت خود کلیک کنید"
 
 #: includes/languages/trans_addon.php:7 includes/languages/trans_addons.php:22
-#: includes/languages/trans_twig.php:276
-#: includes/languages/twig_translation.php:28
+#: includes/languages/trans_twig.php:239 includes/languages/twig_translation.php:28
 msgid "are you remember your password!?"
 msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
 
 #: includes/languages/trans_addon.php:10 includes/languages/trans_addons.php:25
-#: includes/languages/trans_twig.php:281
-#: includes/languages/twig_translation.php:33
+#: includes/languages/trans_twig.php:244 includes/languages/twig_translation.php:33
 msgid "already have an account?"
 msgstr "اکانت دارید؟"
 
 #: includes/languages/trans_addon.php:11 includes/languages/trans_addons.php:26
-#: includes/languages/trans_twig.php:282
-#: includes/languages/twig_translation.php:34
+#: includes/languages/trans_twig.php:245 includes/languages/twig_translation.php:34
 msgid "click here to sign in to your account"
 msgstr "برای ورود به اکانت خود کلیک کنید"
 
 #: includes/languages/trans_addon.php:12 includes/languages/trans_addons.php:27
-#: includes/languages/trans_twig.php:283
-#: includes/languages/twig_translation.php:35
+#: includes/languages/trans_twig.php:246 includes/languages/twig_translation.php:35
 msgid "Sign In"
 msgstr "ورود به سیستم"
 
 #: includes/languages/trans_addon.php:16 includes/languages/trans_addons.php:31
-#: includes/languages/trans_twig.php:290
-#: includes/languages/twig_translation.php:42
+#: includes/languages/trans_twig.php:253 includes/languages/twig_translation.php:42
 msgid "please check your mobile and enter the code"
 msgstr "پس از بررسی موبایل خود کد را وارد کنید"
 
 #: includes/languages/trans_addon.php:17 includes/languages/trans_addons.php:32
-#: includes/languages/trans_twig.php:291
-#: includes/languages/twig_translation.php:43
+#: includes/languages/trans_twig.php:254 includes/languages/twig_translation.php:43
 msgid "don't receive message?"
 msgstr "هنوز پیامک ما را دریافت نکردید؟"
 
 #: includes/languages/trans_addon.php:20 includes/languages/trans_addons.php:35
-#: includes/languages/trans_twig.php:294
-#: includes/languages/twig_translation.php:46
+#: includes/languages/trans_twig.php:257 includes/languages/twig_translation.php:46
 msgid "Please send number <b>2015</b> to below number"
 msgstr "لطفا عدد <b>2015</b> را به شماره زیر پیامک کنید"
 
 #: includes/languages/trans_addon.php:21 includes/languages/trans_addons.php:36
-#: includes/languages/trans_twig.php:295
-#: includes/languages/twig_translation.php:47
+#: includes/languages/trans_twig.php:258 includes/languages/twig_translation.php:47
 msgid "Then wait we receive your message and verificate your account"
 msgstr ""
 "ما در انتظار پیامک شما بوده و پس از دریافت اکانت را برایتان فعال خواهیم کردیم"
@@ -1232,13 +1185,13 @@ msgstr "تفاوت بین نوشته و برگه در چیست؟"
 
 #: includes/languages/trans_addon.php:63 includes/languages/trans_addons.php:224
 msgid ""
-"Pages are similar to Posts in that they have a title, body text, and "
-"associated metadata, but they are different in that they are not part of the "
-"chronological blog stream, kind of like permanent posts."
+"Pages are similar to Posts in that they have a title, body text, and associated "
+"metadata, but they are different in that they are not part of the chronological "
+"blog stream, kind of like permanent posts."
 msgstr ""
-"برگه ها در عنوان، متن و سایر ویژگی ها شبیه به نوشته ها هستند، اما تفاوت اصلی "
-"آن ها در این است که به مانند نوشته ها دارای جریان زمانی دنباله دار نیستند، در "
-"حقیقت شبیه به یک پست دائمی هستند."
+"برگه ها در عنوان، متن و سایر ویژگی ها شبیه به نوشته ها هستند، اما تفاوت اصلی آن "
+"ها در این است که به مانند نوشته ها دارای جریان زمانی دنباله دار نیستند، در حقیقت "
+"شبیه به یک پست دائمی هستند."
 
 #: includes/languages/trans_addon.php:64 includes/languages/trans_addons.php:225
 msgid "Pages are not categorized or tagged, but can have a hierarchy."
@@ -1298,13 +1251,13 @@ msgstr "تفاوت بین دسته ها و کلیدواژه ها در چیست؟
 
 #: includes/languages/trans_addon.php:78 includes/languages/trans_addons.php:145
 msgid ""
-"Normally, tags are ad-hoc keywords that identify important information in "
-"your post (names, subjects, etc) that may or may not recur in other posts, "
-"while categories are pre-determined sections."
+"Normally, tags are ad-hoc keywords that identify important information in your "
+"post (names, subjects, etc) that may or may not recur in other posts, while "
+"categories are pre-determined sections."
 msgstr ""
-"به طول معمول، کلیدواژه ها عبارات تک کاربره ای برای شناسایی اطلاعات مهم در "
-"نوشته شما مانند نام، موضوع یا .. هستند که امکان تکرار آن ها در سایر نوشته ها "
-"مشخص نیست، این در حالی است که دسته ها از قبل مشخص شده هستند."
+"به طول معمول، کلیدواژه ها عبارات تک کاربره ای برای شناسایی اطلاعات مهم در نوشته "
+"شما مانند نام، موضوع یا .. هستند که امکان تکرار آن ها در سایر نوشته ها مشخص "
+"نیست، این در حالی است که دسته ها از قبل مشخص شده هستند."
 
 #: includes/languages/trans_addon.php:79 includes/languages/trans_addons.php:190
 msgid ""
@@ -1339,131 +1292,108 @@ msgstr "نمایش اطلاعات سرور"
 msgid "Select"
 msgstr "انتخاب"
 
-#: includes/languages/trans_addon.php:104
-#: includes/languages/trans_addons.php:255
+#: includes/languages/trans_addon.php:104 includes/languages/trans_addons.php:255
 msgid "Hasan Salehi"
 msgstr "حسن صالحی"
 
-#: includes/languages/trans_addon.php:108
-#: includes/languages/trans_addons.php:261
+#: includes/languages/trans_addon.php:108 includes/languages/trans_addons.php:261
 msgid "Insert Successfully"
 msgstr "افزودن با موفقیت انجام شد"
 
-#: includes/languages/trans_addon.php:109
-#: includes/languages/trans_addons.php:262
+#: includes/languages/trans_addon.php:109 includes/languages/trans_addons.php:262
 msgid "Insert Failed!"
 msgstr "افزودن ناموفق بود!"
 
-#: includes/languages/trans_addon.php:110
-#: includes/languages/trans_addons.php:263
+#: includes/languages/trans_addon.php:110 includes/languages/trans_addons.php:263
 msgid "Update Successfully"
 msgstr "بروزرسانی با موفقیت انجام شد"
 
-#: includes/languages/trans_addon.php:111
-#: includes/languages/trans_addons.php:264
+#: includes/languages/trans_addon.php:111 includes/languages/trans_addons.php:264
 msgid "Update Failed!"
 msgstr "بروزرسانی ناموفق بود!"
 
-#: includes/languages/trans_addon.php:112
-#: includes/languages/trans_addons.php:265
+#: includes/languages/trans_addon.php:112 includes/languages/trans_addons.php:265
 msgid "Delete Successfully"
 msgstr "حذف با موفقیت انجام شد"
 
-#: includes/languages/trans_addon.php:113
-#: includes/languages/trans_addons.php:266
+#: includes/languages/trans_addon.php:113 includes/languages/trans_addons.php:266
 msgid "Delete Failed!"
 msgstr "حذف ناموفق بود!"
 
-#: includes/languages/trans_addon.php:114
-#: includes/languages/trans_addons.php:267
+#: includes/languages/trans_addon.php:114 includes/languages/trans_addons.php:267
 msgid "Transaction error"
 msgstr "خطای در تراکنش"
 
-#: includes/languages/trans_addon.php:128
-#: includes/languages/trans_addons.php:295 includes/languages/trans_twig.php:96
+#: includes/languages/trans_addon.php:128 includes/languages/trans_addons.php:295
+#: includes/languages/trans_twig.php:96
 msgid "Qom"
 msgstr "قم"
 
-#: includes/languages/trans_addon.php:129
-#: includes/languages/trans_addons.php:296
+#: includes/languages/trans_addon.php:129 includes/languages/trans_addons.php:296
 msgid "qom"
 msgstr "قم"
 
-#: includes/languages/trans_addon.php:147
-#: includes/languages/trans_addons.php:325
+#: includes/languages/trans_addon.php:147 includes/languages/trans_addons.php:325
 msgid "Login Successfully"
 msgstr "با موفقیت وارد سیستم شدید"
 
-#: includes/languages/trans_addon.php:148
-#: includes/languages/trans_addons.php:326
+#: includes/languages/trans_addon.php:148 includes/languages/trans_addons.php:326
 msgid "Login failed!"
 msgstr "ورود به سیستم ناموفق بود!"
 
-#: includes/languages/trans_addon.php:149
-#: includes/languages/trans_addons.php:327
+#: includes/languages/trans_addon.php:149 includes/languages/trans_addons.php:327
 msgid "Mobile or password is incorrect"
 msgstr "موبایل یا کلمه عبور اشتباه است"
 
-#: includes/languages/trans_addon.php:150
-#: includes/languages/trans_addons.php:328
+#: includes/languages/trans_addon.php:150 includes/languages/trans_addons.php:328
 msgid "Please forward this message to administrator"
 msgstr "لطفا این پیغام را برای مدیر سیستم ارسال کنید"
 
-#: includes/languages/trans_addon.php:151
-#: includes/languages/trans_addons.php:330
+#: includes/languages/trans_addon.php:151 includes/languages/trans_addons.php:330
 msgid "Assign keywords to your posts using tags"
 msgstr ""
 "از عبارات کلیدی برای تعریف کلیدواژه ها و ارتباط آن به نوشته های استفاده کنید"
 
-#: includes/languages/trans_addon.php:152
-#: includes/languages/trans_addons.php:331
+#: includes/languages/trans_addon.php:152 includes/languages/trans_addons.php:331
 msgid "Use categories to define sections of your site and group related posts"
 msgstr "از دسته ها برای تعریف بخش های سایت و دسته بندی نوشته ها استفاده کنید"
 
-#: includes/languages/trans_addon.php:153
-#: includes/languages/trans_addons.php:333
+#: includes/languages/trans_addon.php:153 includes/languages/trans_addons.php:333
 msgid "Use posts to share your news in specefic category"
 msgstr "از نوشته ها برای انتشار اخبار در موضوعات دلخواه استفاده کنید"
 
-#: includes/languages/trans_addon.php:154
-#: includes/languages/trans_addons.php:334
+#: includes/languages/trans_addon.php:154 includes/languages/trans_addons.php:334
 msgid "Use pages to share your static content"
 msgstr "از برگه ها برای انتشار مطالب ثابت استفاده کنید"
 
-#: includes/languages/trans_addon.php:155
-#: includes/languages/trans_addons.php:336
+#: includes/languages/trans_addon.php:155 includes/languages/trans_addons.php:336
 msgid "page"
 msgstr "صفحه"
 
-#: includes/languages/trans_addon.php:157
-#: includes/languages/trans_addons.php:340
+#: includes/languages/trans_addon.php:157 includes/languages/trans_addons.php:340
 msgid "tag"
 msgstr "کلیدواژه"
 
-#: includes/languages/trans_addon.php:158
-#: includes/languages/trans_addons.php:341
+#: includes/languages/trans_addon.php:158 includes/languages/trans_addons.php:341
 msgid "category"
 msgstr "دسته"
 
-#: includes/languages/trans_addon.php:159
-#: includes/languages/trans_addons.php:346
+#: includes/languages/trans_addon.php:159 includes/languages/trans_addons.php:346
 msgid "attachment"
 msgstr "ضمیمه"
 
-#: includes/languages/trans_addon.php:161
-#: includes/languages/trans_addons.php:126
+#: includes/languages/trans_addon.php:161 includes/languages/trans_addons.php:126
 msgid "Edit"
 msgstr "ویرایش"
 
-#: includes/languages/trans_addon.php:162
-#: includes/languages/trans_addons.php:350 includes/languages/trans_twig.php:160
+#: includes/languages/trans_addon.php:162 includes/languages/trans_addons.php:350
+#: includes/languages/trans_twig.php:155
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
 #: includes/languages/trans_addons.php:6
 msgid "Write your tag and press enter to add new keyword to content"
-msgstr ""
-"کلیدواژه‌ی مورد نظر خود را نوشته و با فشردن انتر آن را به مطلب اضافه کنید"
+msgstr "کلیدواژه‌ی مورد نظر خود را نوشته و با فشردن انتر آن را به مطلب اضافه کنید"
 
 #: includes/languages/trans_addons.php:8
 msgid "Search"
@@ -1473,27 +1403,27 @@ msgstr "جستجو"
 msgid "Work with Ermile in your own language"
 msgstr "ارمایل را با زبان خود تجربه کنید"
 
-#: includes/languages/trans_addons.php:14 includes/languages/trans_twig.php:268
+#: includes/languages/trans_addons.php:14 includes/languages/trans_twig.php:231
 #: includes/languages/twig_translation.php:20
 msgid "Click here for recovery your password"
 msgstr "برای بازیابی کلمه عبور کلیک کنید"
 
-#: includes/languages/trans_addons.php:15 includes/languages/trans_twig.php:269
+#: includes/languages/trans_addons.php:15 includes/languages/trans_twig.php:232
 #: includes/languages/twig_translation.php:21
 msgid "Can't access your account?"
 msgstr "نمی توانید به حساب خود وارد شوید؟"
 
-#: includes/languages/trans_addons.php:16 includes/languages/trans_twig.php:270
+#: includes/languages/trans_addons.php:16 includes/languages/trans_twig.php:233
 #: includes/languages/twig_translation.php:22
 msgid "Don't have an account?"
 msgstr "اکانت ندارید؟"
 
-#: includes/languages/trans_addons.php:17 includes/languages/trans_twig.php:271
+#: includes/languages/trans_addons.php:17 includes/languages/trans_twig.php:234
 #: includes/languages/twig_translation.php:23
 msgid "Click here to create an account"
 msgstr "برای ساخت اکانت کلیک کنید"
 
-#: includes/languages/trans_addons.php:18 includes/languages/trans_twig.php:272
+#: includes/languages/trans_addons.php:18 includes/languages/trans_twig.php:235
 #: includes/languages/twig_translation.php:24
 msgid "Sign Up"
 msgstr "ثبت نام"
@@ -1564,8 +1494,7 @@ msgstr "تغییر گذرواژه"
 
 #: includes/languages/trans_addons.php:74
 msgid "We glad to working for you and hope you enjoy using our system"
-msgstr ""
-"ما از کار برای شما خوشحال بوده و امیدواریم شما نیز از سیستم ما لذت ببرید"
+msgstr "ما از کار برای شما خوشحال بوده و امیدواریم شما نیز از سیستم ما لذت ببرید"
 
 #: includes/languages/trans_addons.php:75
 msgid "Some right reserved"
@@ -1662,8 +1591,8 @@ msgstr "لیست سطوح‌دسترسی"
 #: includes/languages/trans_addons.php:109
 msgid "list of current permissions is listed here, for edit click on it"
 msgstr ""
-"لیست سطوح‌دسترسی فعلی در اینجا وجود دارد که با کلیک بر روی هر کدام می‌توانید آن "
-"را ویرایش کنید"
+"لیست سطوح‌دسترسی فعلی در اینجا وجود دارد که با کلیک بر روی هر کدام می‌توانید آن را "
+"ویرایش کنید"
 
 #: includes/languages/trans_addons.php:110
 msgid "delete permission"
@@ -1678,8 +1607,7 @@ msgid "Edit permission of"
 msgstr "ویرایش دسترسی به"
 
 #: includes/languages/trans_addons.php:119
-msgid ""
-"Allow or disallow user to access all part of service with full permission!"
+msgid "Allow or disallow user to access all part of service with full permission!"
 msgstr "اجازه یا عدم اجازه به کاربر برای دسترسی کامل به تمام بخش‌های سرویس!"
 
 #: includes/languages/trans_addons.php:120
@@ -1729,8 +1657,7 @@ msgstr "عنوان مطلب خود را در اینجا وارد کنید"
 #: includes/languages/trans_addons.php:136
 msgid "Url of your content appear here, click on it to view"
 msgstr ""
-"آدرس مطلب شما در این بخش نمایش داده می‌شود که با کلیک می‌توانید آن را مشاهده "
-"کنید"
+"آدرس مطلب شما در این بخش نمایش داده می‌شود که با کلیک می‌توانید آن را مشاهده کنید"
 
 #: includes/languages/trans_addons.php:137
 msgid "Check result"
@@ -1787,8 +1714,8 @@ msgstr "وضعیت"
 
 #: includes/languages/trans_addons.php:158
 msgid ""
-"All of content set as draft in default, for showing it to visitors you must "
-"set it to publish"
+"All of content set as draft in default, for showing it to visitors you must set "
+"it to publish"
 msgstr ""
 "تمام مطالب به صورت پیش فرض در حالت پیش نویس قرار می‌گیرند که شما برای انتشار و "
 "نمایش آن به بازدیدکنندگان باید وضعیت آن را به منتشرشده تغییر دهید"
@@ -1842,11 +1769,10 @@ msgid "Set featured image"
 msgstr "تنظیم تصویر شاخص"
 
 #: includes/languages/trans_addons.php:175
-msgid ""
-"You can see type of your file and click on image to direct access to file"
+msgid "You can see type of your file and click on image to direct access to file"
 msgstr ""
-"شما می‌توانید نوع فایل را دیده و با کلیک روی عکس آن، مستقیما به آن دسترسی "
-"داشته باشید"
+"شما می‌توانید نوع فایل را دیده و با کلیک روی عکس آن، مستقیما به آن دسترسی داشته "
+"باشید"
 
 #: includes/languages/trans_addons.php:176
 msgid "Click to view"
@@ -1877,8 +1803,7 @@ msgid ""
 "You can nest category under other category by making one the “Parent” of the "
 "other."
 msgstr ""
-"شما می‌توانید یک دسته را با کمک ویژگی والد به عنوان زیرشاخه دسته‌ای دیگر ثبت "
-"کنید."
+"شما می‌توانید یک دسته را با کمک ویژگی والد به عنوان زیرشاخه دسته‌ای دیگر ثبت کنید."
 
 #: includes/languages/trans_addons.php:195
 msgid "Data not exist!"
@@ -2154,8 +2079,7 @@ msgstr "لطفا عنوان را وارد کنید"
 
 #: includes/languages/trans_addons.php:332
 msgid "Use categories to define sections of your site and group related files"
-msgstr ""
-"از دسته‌بندی برای تعریف بخش‌های مختلف برای گروه‌بندی کردن فایل‌ها استفاده کنید"
+msgstr "از دسته‌بندی برای تعریف بخش‌های مختلف برای گروه‌بندی کردن فایل‌ها استفاده کنید"
 
 #: includes/languages/trans_addons.php:335
 msgid "Upload your media"
@@ -2164,8 +2088,8 @@ msgstr "برای بارگزاری فایل های شما"
 #: includes/languages/trans_addons.php:337
 msgid "If you want to change password enter it, else leave it blank"
 msgstr ""
-"در صورت تمایل به تغییر گذرواژه آن را وارد کنید،‌ در غیر این ‌صورت این فیلد را "
-"خالی بگذارید"
+"در صورت تمایل به تغییر گذرواژه آن را وارد کنید،‌ در غیر این ‌صورت این فیلد را خالی "
+"بگذارید"
 
 #: includes/languages/trans_addons.php:338
 msgid "Enter password within 5 to 40 character"
@@ -2311,7 +2235,7 @@ msgstr "شبکه‌های اجتماعی"
 msgid "socialnetwork"
 msgstr "شبکه‌اجتماعی"
 
-#: includes/languages/trans_addons.php:389 includes/languages/trans_twig.php:185
+#: includes/languages/trans_addons.php:389
 msgid "Description"
 msgstr "توضیح"
 
@@ -2319,7 +2243,7 @@ msgstr "توضیح"
 msgid "Title"
 msgstr "عنوان"
 
-#: includes/languages/trans_addons.php:391 includes/languages/trans_twig.php:184
+#: includes/languages/trans_addons.php:391
 msgid "Date"
 msgstr "تاریخ"
 
@@ -2406,8 +2330,8 @@ msgstr "سایت"
 #: includes/languages/trans_addons.php:413
 msgid "For multilanguage sites enter title in English and translate it"
 msgstr ""
-"برای سایت‌های چندزبانه، این بخش را به انگلیسی وارد نموده و توسط برنامه مترجم "
-"آن را به سایر زبان‌ها ترجمه کنید"
+"برای سایت‌های چندزبانه، این بخش را به انگلیسی وارد نموده و توسط برنامه مترجم آن "
+"را به سایر زبان‌ها ترجمه کنید"
 
 #: includes/languages/trans_addons.php:414
 msgid "main URL"
@@ -2702,8 +2626,7 @@ msgid "You can edit this permission"
 msgstr "در این قسمت شما می‌توانید دسترسی به این بخش را ویرایش کنید"
 
 #: includes/languages/trans_addons.php:502
-msgid ""
-"Define or edit user permissions to allow or block access to special pages"
+msgid "Define or edit user permissions to allow or block access to special pages"
 msgstr "تعریف یا ویرایش سطوح‌دسترسی برای اجازه یا ممنوع کردن دسترسی به صفحات خاص"
 
 #: includes/languages/trans_addons.php:503
@@ -2759,8 +2682,7 @@ msgid "We need your phone number to verifying your account."
 msgstr "ما برای اعتبارسنجی اکانت، نیاز به شماره موبایل شما داریم."
 
 #: includes/languages/trans_addons.php:516
-msgid ""
-"If you dont want share your number, we cant presenting our services to you!"
+msgid "If you dont want share your number, we cant presenting our services to you!"
 msgstr ""
 "اگر شما مایل به ارائه شماره خود نباشید، ما امکان سرویس‌دهی به شما را نداریم!"
 
@@ -2854,11 +2776,9 @@ msgid "<strong>Ermile</strong> Benefits"
 msgstr "مزایای <strong>ارمایل</strong>"
 
 #: includes/languages/trans_twig.php:15
-msgid ""
-"Choosing the best place as a job is most important for professional people."
+msgid "Choosing the best place as a job is most important for professional people."
 msgstr ""
-"انتخاب یک گزینه مناسب برای محل کار کردن، برای افراد متخصص و دقیق بسیار مهم "
-"است."
+"انتخاب یک گزینه مناسب برای محل کار کردن، برای افراد متخصص و دقیق بسیار مهم است."
 
 #: includes/languages/trans_twig.php:16
 msgid "Teamwork"
@@ -2866,11 +2786,10 @@ msgstr "کار گروهی"
 
 #: includes/languages/trans_twig.php:17
 msgid ""
-"Working as a team helps in quickly improvement of work and also easily "
-"figuring out a problem."
+"Working as a team helps in quickly improvement of work and also easily figuring "
+"out a problem."
 msgstr ""
-"گروهی کار کردن باعث سرعت گرفتن پیشرفت کارها و همچنین راحت‌تر حل شدن مشکلات "
-"می‌شود."
+"گروهی کار کردن باعث سرعت گرفتن پیشرفت کارها و همچنین راحت‌تر حل شدن مشکلات می‌شود."
 
 #: includes/languages/trans_twig.php:18
 msgid "Free working hours"
@@ -2878,11 +2797,11 @@ msgstr "ساعت کاری انعطاف‌پذیر"
 
 #: includes/languages/trans_twig.php:19
 msgid ""
-"There is no any restriction about working hours. You can work every day for "
-"the whole week including Fridays and holidays from morning till night."
+"There is no any restriction about working hours. You can work every day for the "
+"whole week including Fridays and holidays from morning till night."
 msgstr ""
-"هیچ محدودیتی برای ساعت کاری وجود ندارد! شما می‌توانید هر روز از هر ساعتی از "
-"صبح تا شب می‌توانید کار کنید."
+"هیچ محدودیتی برای ساعت کاری وجود ندارد! شما می‌توانید هر روز از هر ساعتی از صبح "
+"تا شب می‌توانید کار کنید."
 
 #: includes/languages/trans_twig.php:20
 msgid "Exciting work environment"
@@ -2893,8 +2812,8 @@ msgid ""
 "You can work with talented and friendly group of people in a cheerful and "
 "dynamic environment of Ermile"
 msgstr ""
-"محیط شاد و پویای ارمایل و همکاری با افراد شاداب باعث می‌شود شما از کار در این "
-"فضا لذت ببرید."
+"محیط شاد و پویای ارمایل و همکاری با افراد شاداب باعث می‌شود شما از کار در این فضا "
+"لذت ببرید."
 
 #: includes/languages/trans_twig.php:22
 msgid "Specialist Team"
@@ -2902,11 +2821,11 @@ msgstr "تیم متخصص"
 
 #: includes/languages/trans_twig.php:23
 msgid ""
-"Our experience that made of working with Specialist people cause perfect "
-"feeling in our team."
+"Our experience that made of working with Specialist people cause perfect feeling "
+"in our team."
 msgstr ""
-"کار کردن با تیم متخصص و با تجربه باعث رشد و پیشرفت سریع‌تر کارها و ایجاد حس "
-"خوب در تمام اعضا می‌شود."
+"کار کردن با تیم متخصص و با تجربه باعث رشد و پیشرفت سریع‌تر کارها و ایجاد حس خوب "
+"در تمام اعضا می‌شود."
 
 #: includes/languages/trans_twig.php:24
 msgid "Lofty goals"
@@ -2923,8 +2842,7 @@ msgid "A pleasant green environment"
 msgstr "محیط کاری سبز"
 
 #: includes/languages/trans_twig.php:27
-msgid ""
-"Your working environment will have a great impact and effect on your mind."
+msgid "Your working environment will have a great impact and effect on your mind."
 msgstr ""
 "محیطی که شما در آن مشغول به کار هستید تأثیر زیادی بر روحیه شما خواهد گذاشت. "
 
@@ -2961,21 +2879,21 @@ msgid ""
 "Motive is the major factor for any person to be successful in work and that "
 "demands enthusiastic, keen and eager people that can help us reach our goal"
 msgstr ""
-"انگیزه، محرک اصلی هر فرد برای پیش بردن کارهاست. ما نیز برای رسیدن به "
-"اهدافمان، نیاز به افراد با انگیزه داریم."
+"انگیزه، محرک اصلی هر فرد برای پیش بردن کارهاست. ما نیز برای رسیدن به اهدافمان، "
+"نیاز به افراد با انگیزه داریم."
 
 #: includes/languages/trans_twig.php:35
 msgid ""
 "Lofty projects need great thoughts and these great thoughts help us to reach "
 "valuable And huge goals."
 msgstr ""
-"پروژه‌‌های بزرگ، نیازمند فکرهای بزرگ هستند و فکرهای بزرگ به اهداف بزرگ و "
-"ارزشمند می‌اندیشند."
+"پروژه‌‌های بزرگ، نیازمند فکرهای بزرگ هستند و فکرهای بزرگ به اهداف بزرگ و ارزشمند "
+"می‌اندیشند."
 
 #: includes/languages/trans_twig.php:36
 msgid ""
-"And that demands enthusiastic, keen and eager people that can help us reach "
-"our goal"
+"And that demands enthusiastic, keen and eager people that can help us reach our "
+"goal"
 msgstr "ما نیز برای رسیدن به اهدافمان، نیاز به افراد با انگیزه داریم."
 
 #: includes/languages/trans_twig.php:37
@@ -2990,13 +2908,12 @@ msgstr ""
 msgid ""
 "Working as a teamwork in Ermile helps us to acquire more power to reach our "
 "great aims."
-msgstr ""
-"ما در ارمایل با کار گروهی به قدرت بیشتری برای رسیدن به اهداف بزرگ می‌رسیم."
+msgstr "ما در ارمایل با کار گروهی به قدرت بیشتری برای رسیدن به اهداف بزرگ می‌رسیم."
 
 #: includes/languages/trans_twig.php:39
 msgid ""
-"Having creative and self-starter colleagues helps us to step quickly towards "
-"our goals."
+"Having creative and self-starter colleagues helps us to step quickly towards our "
+"goals."
 msgstr ""
 "داشتن همکارانی خلاق و مبتکر باعث سرعت گرفتن ما برای رسیدن به اهدافمان می‌گردد."
 
@@ -3007,19 +2924,18 @@ msgstr ""
 
 #: includes/languages/trans_twig.php:41
 msgid ""
-"Age does not matter for us. Having the above qualities are enough to be a "
-"member of Email."
+"Age does not matter for us. Having the above qualities are enough to be a member "
+"of Email."
 msgstr ""
 "سن کارمندان برای ما اهمیتی ندارد. داشتن ویژگی‌های فوق برای اضافه شدن به جمع "
 "ارمایل کافی است."
 
 #: includes/languages/trans_twig.php:42
 msgid ""
-"Academic certificates are not important for us. Having a good and well "
-"knowledge about the related subject is enough for us."
+"Academic certificates are not important for us. Having a good and well knowledge "
+"about the related subject is enough for us."
 msgstr ""
-"مدرک تحصیلی برای ما مهم نیست داشتن تخصص و دانش در موضوع مربوطه برای ما کافی "
-"است."
+"مدرک تحصیلی برای ما مهم نیست داشتن تخصص و دانش در موضوع مربوطه برای ما کافی است."
 
 #: includes/languages/trans_twig.php:43
 msgid "Job opportunity in Ermile"
@@ -3114,10 +3030,8 @@ msgid "Be sure your CV must contain...!"
 msgstr "حتما می‌دانید رزومه باید...!"
 
 #: includes/languages/trans_twig.php:66
-msgid ""
-"Kindly mention your contact number properly so we can contact you easily."
-msgstr ""
-"اطلاعات تماس خود را ذکر کنید، تا برای تماس با شما مشکلی وجود نداشته باشد!"
+msgid "Kindly mention your contact number properly so we can contact you easily."
+msgstr "اطلاعات تماس خود را ذکر کنید، تا برای تماس با شما مشکلی وجود نداشته باشد!"
 
 #: includes/languages/trans_twig.php:67
 msgid "Don’t forget your social network links especially LinkedIn."
@@ -3125,22 +3039,22 @@ msgstr "لینک شبکه‌های اجتماعی خود، خصوصا لینکد
 
 #: includes/languages/trans_twig.php:68
 msgid ""
-"It’s better if your CV is in one page and be sure it should not be more than "
-"3 pages."
+"It’s better if your CV is in one page and be sure it should not be more than 3 "
+"pages."
 msgstr "بهتر است رزومه در یک صفحه تنظیم شود و در نهایت بیشتر از سه صفحه نشود!"
 
 #: includes/languages/trans_twig.php:69
 msgid ""
-"Writing about your experience and your skills in your CV helps us to check "
-"your CV properly and hastily."
+"Writing about your experience and your skills in your CV helps us to check your "
+"CV properly and hastily."
 msgstr ""
-"نوشتن سوابق‌کاری و مهارت‌هایتان در رزومه، به ما در بررسی بهتر و سریع‌تر رزومه "
-"شما کمک می‌کند!"
+"نوشتن سوابق‌کاری و مهارت‌هایتان در رزومه، به ما در بررسی بهتر و سریع‌تر رزومه شما "
+"کمک می‌کند!"
 
 #: includes/languages/trans_twig.php:70
 msgid ""
-"If you have any work experience, kindly provide complete information about it "
-"in your CV."
+"If you have any work experience, kindly provide complete information about it in "
+"your CV."
 msgstr "در صورت داشتن سابقه‌کار، آدرس یا نمونه‌ای از آن را در رزومه ذکر کنید!"
 
 #: includes/languages/trans_twig.php:71
@@ -3148,8 +3062,7 @@ msgid "Be sure to mention your personal information, picture and Interests."
 msgstr "اطلاعات شخصی، عکس و علایق خود را حتما ذکر کنید!"
 
 #: includes/languages/trans_twig.php:72
-msgid ""
-"Please note down your CV with a suitable font and it should be in pdf file."
+msgid "Please note down your CV with a suitable font and it should be in pdf file."
 msgstr "رزومه را با فونت مناسب بنویسید و فایل ارسالی حتما باید پی‌دی‌اف باشد!"
 
 #: includes/languages/trans_twig.php:75
@@ -3174,11 +3087,11 @@ msgstr "با ما تماس بگیرید"
 
 #: includes/languages/trans_twig.php:83
 msgid ""
-"Knowing your valuable comments about bugs and problems and more importantly "
-"your precious offers will help us in this way."
+"Knowing your valuable comments about bugs and problems and more importantly your "
+"precious offers will help us in this way."
 msgstr ""
-"دانستن نظرات ارزشمند شما درباره‌ی مشکلات و نواقص و صدالبته پیشنهادات "
-"گرانبهایتان از طریق فرم زیر سبب کمک به ما برای این مهم خواهد شد."
+"دانستن نظرات ارزشمند شما درباره‌ی مشکلات و نواقص و صدالبته پیشنهادات گرانبهایتان "
+"از طریق فرم زیر سبب کمک به ما برای این مهم خواهد شد."
 
 #: includes/languages/trans_twig.php:84
 msgid "Thank you for choosing us."
@@ -3186,13 +3099,13 @@ msgstr "از اینکه ما را انتخاب کردید، متشکریم."
 
 #: includes/languages/trans_twig.php:85
 msgid ""
-"We do our best to improve our quality. So, knowing your valuable comments "
-"about bugs and problems and more importantly your precious offers will help "
-"us in this way."
+"We do our best to improve our quality. So, knowing your valuable comments about "
+"bugs and problems and more importantly your precious offers will help us in this "
+"way."
 msgstr ""
 "تمام تلاش ما بر افزایش کیفیت است. دانستن نظرات ارزشمند شما درباره‌ی مشکلات و "
-"نواقص و صدالبته پیشنهادات گرانبهایتان از طریق فرم زیر سبب کمک به ما برای این "
-"مهم خواهد شد."
+"نواقص و صدالبته پیشنهادات گرانبهایتان از طریق فرم زیر سبب کمک به ما برای این مهم "
+"خواهد شد."
 
 #: includes/languages/trans_twig.php:86
 msgid "Full Name"
@@ -3242,7 +3155,7 @@ msgstr "اگر راه‌کاری مناسب برای مشکل خود نیافت�
 msgid "We can provide a wide range of enterprise services to you."
 msgstr "ما طیف گسترده‌ای از راه‌کارهای سازمانی را برای شما ارائه می‌دهیم."
 
-#: includes/languages/trans_twig.php:104 includes/mvc/view.php:11
+#: includes/languages/trans_twig.php:104
 msgid "As easy as ABC"
 msgstr "کاری نداره"
 
@@ -3251,11 +3164,9 @@ msgid "This is our slogan in Ermile."
 msgstr "این شعار ما در ارمایل است."
 
 #: includes/languages/trans_twig.php:106
-msgid ""
-"We belive that we can do anywork, without complexity, as soon as posible."
+msgid "We belive that we can do anywork, without complexity, as soon as posible."
 msgstr ""
-"معتقدیم، ما می‌تونیم هرکاری را انجام دهیم، بدون پیچیدگی و در کوتاه‌ترین زمان "
-"ممکن."
+"معتقدیم، ما می‌تونیم هرکاری را انجام دهیم، بدون پیچیدگی و در کوتاه‌ترین زمان ممکن."
 
 #: includes/languages/trans_twig.php:107
 msgid "Be easy and relax, we are do all works needed."
@@ -3272,11 +3183,11 @@ msgstr "از هرکسی در هرجایی بپرسید"
 #: includes/languages/trans_twig.php:111
 msgid ""
 "Focus on your question. Do not be too concerned about how to ask or analyze. "
-"Equipped with an integrated platform, Sarshomar has made it possible for you "
-"to ask your questions via any means."
+"Equipped with an integrated platform, Sarshomar has made it possible for you to "
+"ask your questions via any means."
 msgstr ""
-"روی سوال خود تمرکز کنید؛ دغدغه چطور پرسیدن و تحلیل کردن نداشته باشید. سرشمار "
-"با زیرساختی یکپارچه، امکان پرسیدن با هر ابزاری را برای شما فراهم کرده است."
+"روی سوال خود تمرکز کنید؛ دغدغه چطور پرسیدن و تحلیل کردن نداشته باشید. سرشمار با "
+"زیرساختی یکپارچه، امکان پرسیدن با هر ابزاری را برای شما فراهم کرده است."
 
 #: includes/languages/trans_twig.php:112
 msgid "Tejarak"
@@ -3288,12 +3199,11 @@ msgstr "به‌سادگی حضور و غیاب کنید و از گزارش‌ه�
 
 #: includes/languages/trans_twig.php:114
 msgid ""
-"Setup your dedicated and beautiful attendance system in less than a minute "
-"and have a real time and scrupulously monitoring on your business from "
-"anywhere."
+"Setup your dedicated and beautiful attendance system in less than a minute and "
+"have a real time and scrupulously monitoring on your business from anywhere."
 msgstr ""
-"سامانه‌ی حضور و غیاب اختصاصی و چشم‌نواز خودتان را در چند دقیقه راه‌اندازی کرده و "
-"از هرجایی بر کسب و کارتان نظارت <span>لحظه‌ای</span> و موشکافانه داشته باشید."
+"سامانه‌ی حضور و غیاب اختصاصی و چشم‌نواز خودتان را در چند دقیقه راه‌اندازی کرده و از "
+"هرجایی بر کسب و کارتان نظارت <span>لحظه‌ای</span> و موشکافانه داشته باشید."
 
 #: includes/languages/trans_twig.php:116
 msgid "Pioneer Schools Selection"
@@ -3301,11 +3211,11 @@ msgstr "انتخاب مدارس پیشگام"
 
 #: includes/languages/trans_twig.php:117
 msgid ""
-"Azvir provides complete and beautiful solutions for your school; Do all "
-"things easily and enjoy."
+"Azvir provides complete and beautiful solutions for your school; Do all things "
+"easily and enjoy."
 msgstr ""
-"ازویر، راه‌حلی کامل و زیبا را برای مدرسه ارائه می‌دهد؛ همه‌‌ی کارها را به‌سادگی "
-"انجام دهید و لذت ببرید."
+"ازویر، راه‌حلی کامل و زیبا را برای مدرسه ارائه می‌دهد؛ همه‌‌ی کارها را به‌سادگی انجام "
+"دهید و لذت ببرید."
 
 #: includes/languages/trans_twig.php:118
 msgid "What are you waiting for?"
@@ -3317,11 +3227,10 @@ msgstr "مطمئن نیستید چطور شروع کنید؟"
 
 #: includes/languages/trans_twig.php:120
 msgid ""
-"Tejarak is <span>free</span> to use as long as you want for teams of all "
-"sizes."
+"Tejarak is <span>free</span> to use as long as you want for teams of all sizes."
 msgstr ""
-"استفاده از تجارک برای هر مدتی که بخواهید و برای تیم‌های با هر تعداد عضوی که "
-"دارید <span>رایگان</span> است."
+"استفاده از تجارک برای هر مدتی که بخواهید و برای تیم‌های با هر تعداد عضوی که دارید "
+"<span>رایگان</span> است."
 
 #: includes/languages/trans_twig.php:121
 msgid "Not worries."
@@ -3361,11 +3270,11 @@ msgstr "مقیاس عظیم"
 
 #: includes/languages/trans_twig.php:130
 msgid ""
-"Our enterprise solution brings the power and utility of Ermile to large, "
-"complex organizations."
+"Our enterprise solution brings the power and utility of Ermile to large, complex "
+"organizations."
 msgstr ""
-"راه‌کارهای سازمانی ما قدرت و امکانات ارمایل را برای پروژه‌های بزرگ و پیچیده شما "
-"به ارمغان می‌آورد."
+"راه‌کارهای سازمانی ما قدرت و امکانات ارمایل را برای پروژه‌های بزرگ و پیچیده شما به "
+"ارمغان می‌آورد."
 
 #: includes/languages/trans_twig.php:140
 msgid "Some right reserved!"
@@ -3384,257 +3293,98 @@ msgid "Social Responsibility"
 msgstr "مسئولیت اجتماعی"
 
 #: includes/languages/trans_twig.php:148
-msgid "FAQ"
-msgstr "سوالات پرتکرار"
-
-#: includes/languages/trans_twig.php:149
 msgid "Enamad"
 msgstr "نماد اعتماد"
 
-#: includes/languages/trans_twig.php:150
-msgid "Benefits"
-msgstr "مزایا"
-
-#: includes/languages/trans_twig.php:151
-msgid "Pricing"
-msgstr "هزینه‌ها"
-
-#: includes/languages/trans_twig.php:152
+#: includes/languages/trans_twig.php:149
 msgid "Learn More"
 msgstr "بیشتر بدانید"
 
-#: includes/languages/trans_twig.php:153
+#: includes/languages/trans_twig.php:150
 msgid "Terms of Service"
 msgstr "شرایط استفاده"
 
-#: includes/languages/trans_twig.php:154
+#: includes/languages/trans_twig.php:151
 msgid "Privacy Policy"
 msgstr "حریم خصوصی"
 
-#: includes/languages/trans_twig.php:155
-msgid "Changelog"
-msgstr "پیشرفت پروژه"
-
-#: includes/languages/trans_twig.php:156
+#: includes/languages/trans_twig.php:152
 msgid "Support"
 msgstr "پشتیبانی"
 
-#: includes/languages/trans_twig.php:157
+#: includes/languages/trans_twig.php:153
 msgid "Contact"
 msgstr "تماس"
 
-#: includes/languages/trans_twig.php:158
-msgid "Logo"
-msgstr "لوگو"
-
-#: includes/languages/trans_twig.php:159
+#: includes/languages/trans_twig.php:154
 msgid "Proudly Made in IRAN"
 msgstr "با افتخار ساخت ایران"
 
-#: includes/languages/trans_twig.php:161
+#: includes/languages/trans_twig.php:156
 msgid "Admin Panel"
 msgstr "پنل ادمین"
 
-#: includes/languages/trans_twig.php:162
+#: includes/languages/trans_twig.php:157
 msgid "Exit Session"
 msgstr "خروج از نشست"
 
-#: includes/languages/trans_twig.php:163
+#: includes/languages/trans_twig.php:158
 msgid "Another Session"
 msgstr "نشست دیگر"
 
-#: includes/languages/trans_twig.php:166
+#: includes/languages/trans_twig.php:161
 msgid "+98 25 3650 5281"
 msgstr "۵۲۸۱ ۳۶۵۰ ۰۲۵"
 
-#: includes/languages/trans_twig.php:169
-msgid "About Tejarak"
-msgstr "درباره تجارک"
-
-#: includes/languages/trans_twig.php:170
-msgid ""
-"Tejarak have a set of simple and practical tools on a regular basis for "
-"modern businesses."
-msgstr ""
-"تجارک مجموعه ابزارهایی ساده و کاربردی را به‌صورت یکپارچه در اختیار کسب و "
-"کارهای مدرن و همینطور تجارت‌های سنتی مایل به حرکت به‌سوی تکنولوژی قرار می‌دهد."
-
-#: includes/languages/trans_twig.php:171
-msgid ""
-"Advancement of technology and development of Web-based business Cause Need "
-"new tools to resolve the daily needs and that’s the goal of making Tejarak."
-msgstr ""
-"با پیشرفت روزافزون تکنولوژی و گسترش کسب و کارهای مدرن مبتنی بر وب، احتیاج به "
-"ابزارهایی مدرن برای رفع نیازهای روزمره، جرقه‌ای برای تولد تجارک بود."
-
-#: includes/languages/trans_twig.php:172
-msgid ""
-"It’s good to know that in addition to the core services, features such as "
-"inventory and invoice will be added."
-msgstr ""
-"قابل توجه اینکه علاوه‌بر توسعه‌ی خدمات اصلی، بخش‌های کوچک‌تر و کاربردی در روند "
-"توسعه ازویر به آن افزوده خواهند شد."
-
-#: includes/languages/trans_twig.php:173
-msgid "Attendance system"
-msgstr "سرویس حضور و غیاب"
-
-#: includes/languages/trans_twig.php:174
-msgid ""
-"Attendance is so different in Tejarak. Beautiful and stylish design without "
-"requiring any hardware. Notification via social networks, Online reports and "
-"difference compared to other systems are the best feature of Tejarak."
-msgstr ""
-"هسته‌ی اصلی تجارک، سامانه حضور و غیاب متفاوت آن نسبت به نمونه‌های موجود است. "
-"طراحی مدرن و چشم‌نواز، بی‌نیاز به تهیه سخت‌افزار، اطلاع‌رسانی از طریق شبکه‌های "
-"اجتماعی، آنلاین و لحظه‌ای بودن گزارشات و مهم‌تر از همه تفاوت آن، از بارزترین "
-"مزایای سرویس حضور و غیاب تجارک است."
-
-#: includes/languages/trans_twig.php:175
-msgid "Daily report"
-msgstr "گزارش روزانه"
-
-#: includes/languages/trans_twig.php:176
-msgid ""
-"In many collections received daily reports of the employees is very "
-"important. On the other hands Employees reluctant to do that. In addition to "
-"the classical method, using social networks on Twitter and Daily Telegram "
-"reported in Tejarak possible to get there."
-msgstr ""
-"در اغلب مجموعه‌ها دریافت گزارش روزانه از کارکنان به‌عنوان بخشی مهم از "
-"برنامه‌ریزی سازمانی است. از طرفی به دلایل گوناگون کارکنان تمایل چندانی به این "
-"عمل ندارند. با به‌خدمت گرفتن شبکه‌های اجتماعی علاوه‌بر روش‌های کلاسیک ثبت گزارش "
-"روزانه، تجارک امکان دریافت گزارش کار را از طریق توییتر و تلگرام نیز امکان‌پذیر "
-"کرده و عملکردهای جدیدی را نیز ارائه می‌دهد."
-
-#: includes/languages/trans_twig.php:177
-msgid "Salary calculator"
-msgstr "محاسبه حقوق و دستمزد"
-
-#: includes/languages/trans_twig.php:178
-msgid ""
-"For many small business is very complex method of calculating monthly salary "
-"and they Need to have simpler method. In addition to supporting traditional "
-"methods, Tejarak provide monthly salary simple solutions to employees have "
-"modern and beautiful Payroll."
-msgstr ""
-"پیچیدگی‌های روش محاسبه حقوق و دستمزد ماهیانه در ایران، برای بسیاری از کسب و "
-"کارهای خرد دست و پاگیر بوده و نیاز به روش‌های ساده‌تری برای محاسبه سال‌هاست که "
-"نیاز بسیاری از کسب و کارهاست. تجارک علاوه بر پشتیبانی از روش‌های سنتی ولی سخت، "
-"راه‌حل‌هایی ساده برای حقوق ماهیانه کارکنان ارائه می‌دهد تا کارکنان امروزی، "
-"فیش‌های حقوقی مدرن و زیبا را هم تجربه کنند."
-
-#: includes/languages/trans_twig.php:181
-msgid "Change log of Tejarak"
-msgstr "پیشرفت پروژه تجارک"
-
-#: includes/languages/trans_twig.php:182
-msgid "We were born to do Best!"
-msgstr "ما برای انجام بهترین‌ها متولد شدیم!"
-
-#: includes/languages/trans_twig.php:183
-msgid "We are Developers, please wait!"
-msgstr "ما توسعه دهنده هستیم، صبور باشید!"
-
-#: includes/languages/trans_twig.php:186
-msgid "Version 1 of Tejarak is comming"
-msgstr "نسخه اول تجارک در حال آماده‌سازی است"
-
-#: includes/languages/trans_twig.php:187
-msgid "Beta version of Tejarak released"
-msgstr "نسخه بتای تجارک منتشر شد"
-
-#: includes/languages/trans_twig.php:188
-msgid "Finally Tejarak logo is accepted and we started branding"
-msgstr "بالاخره نشان‌واره‌ی تجارک پذیرفته شد و ما برندسازی خود را آغاز کردیم"
-
-#: includes/languages/trans_twig.php:189
-msgid "Alfa version of Tejarak released"
-msgstr "نسخه آلفای تجارک منتشر شد"
-
-#: includes/languages/trans_twig.php:190
-msgid ""
-"The name of project selected as Tejarak and <a href='http://Tejarak."
-"ir'>Tejarak.ir</a> domains registered."
-msgstr ""
-"نام تجارک برای این پروژه برگزیده شده و دامنه‌ی <a href='http://Tejarak."
-"ir'>Tejarak.ir</a> ثبت شد."
-
-#: includes/languages/trans_twig.php:193
+#: includes/languages/trans_twig.php:164
 msgid "Enterprise"
 msgstr "مشتریان سازمان"
 
-#: includes/languages/trans_twig.php:194
+#: includes/languages/trans_twig.php:165
 msgid "Have a headaches? We have soulutions. Be patient..."
 msgstr "سردرد دارید؟ ما راه‌حل‌هایی برای شما داریم. صبور باشید..."
 
-#: includes/languages/trans_twig.php:195
+#: includes/languages/trans_twig.php:166
 msgid ""
-"Big companies simply don’t work like small companies, and they don’t use "
-"Tejarak the same way either. That’s why there’s Enterprise."
+"Big companies simply don’t work like small companies, and they don’t use Tejarak "
+"the same way either. That’s why there’s Enterprise."
 msgstr ""
 "شرکت‌های بزرگ به آسانی شرکت‌های کوچک کار نمی‌کنند و از تجارک نیز به همان شکل "
 "استفاده نمی‌کنند. این دلیل راه‌اندازی بخش سازمانی ماست."
 
-#: includes/languages/trans_twig.php:198
-msgid "Tejarak Logo"
-msgstr "لوگوی تجارک"
-
-#: includes/languages/trans_twig.php:199
-msgid "Need know more about Tejarak Logo? Be patient..."
-msgstr "نیاز به دانستن بیشتر درباره لوگوی تجارک دارید؟ صبور باشید..."
-
-#: includes/languages/trans_twig.php:200
-msgid "Drawing logo"
-msgstr "ترسیم نشان‌واره"
-
-#: includes/languages/trans_twig.php:201
-msgid "Dowload our logo"
-msgstr "نشان‌واره‌ی ما را دریافت کنید"
-
-#: includes/languages/trans_twig.php:202
-msgid "Square"
-msgstr "مربع"
-
-#: includes/languages/trans_twig.php:203
-msgid "Circle"
-msgstr "دایره"
-
-#: includes/languages/trans_twig.php:206
+#: includes/languages/trans_twig.php:169
 msgid ""
 "We wish to assure you that our main concern is to secure your privacy and "
 "protect your information against impermissible access."
 msgstr ""
-"ما این اطمینان را به شما می‌دهیم که دغدغه‌ی ما، حفظ حریم‌خصوصی و محافظت از "
-"اطلاعات شما در برابر دسترسی‌های غیرمجاز هست."
+"ما این اطمینان را به شما می‌دهیم که دغدغه‌ی ما، حفظ حریم‌خصوصی و محافظت از اطلاعات "
+"شما در برابر دسترسی‌های غیرمجاز هست."
 
-#: includes/languages/trans_twig.php:207
+#: includes/languages/trans_twig.php:170
 msgid "What is Privacy?"
 msgstr "حریم‌خصوصی چیست؟"
 
-#: includes/languages/trans_twig.php:208
+#: includes/languages/trans_twig.php:171
 msgid ""
-"Privacy means that any individual is entitled to choose the information "
-"related to them, and selectively, share it with others."
+"Privacy means that any individual is entitled to choose the information related "
+"to them, and selectively, share it with others."
 msgstr ""
-"حریم‌خصوصی یعنی شخص بتواند اطلاعات مربوط به خود را مجزا کرده و به انتخاب خویش، "
-"در برابر دیگران آشکار کند."
+"حریم‌خصوصی یعنی شخص بتواند اطلاعات مربوط به خود را مجزا کرده و به انتخاب خویش، در "
+"برابر دیگران آشکار کند."
 
-#: includes/languages/trans_twig.php:209
+#: includes/languages/trans_twig.php:172
 msgid ""
-"privacy is so important for mental peace as well as a peaceful personality "
-"that some experts have considered invasion of privacy disrespectful to human "
-"dignity."
+"privacy is so important for mental peace as well as a peaceful personality that "
+"some experts have considered invasion of privacy disrespectful to human dignity."
 msgstr ""
-"حریم‌خصوصی برای آرامش روانی و شخصیتی، بسیار مهم است تا جایی‌که بعضی از "
-"صاحب‌نظران نقض آن را به عنوان یک اقدام توهین‌آمیز نسبت به شرافت بشری قلمداد "
-"کرده‌اند."
+"حریم‌خصوصی برای آرامش روانی و شخصیتی، بسیار مهم است تا جایی‌که بعضی از صاحب‌نظران "
+"نقض آن را به عنوان یک اقدام توهین‌آمیز نسبت به شرافت بشری قلمداد کرده‌اند."
 
-#: includes/languages/trans_twig.php:210
+#: includes/languages/trans_twig.php:173
 msgid "Controversies over the Invasion of Privacy"
 msgstr "جنجال‌های نقض حریم‌خصوصی"
 
-#: includes/languages/trans_twig.php:211
+#: includes/languages/trans_twig.php:174
 msgid ""
 "Within e-commerce, privacy has always been from among the most controversial "
 "topics and continues to be."
@@ -3642,105 +3392,105 @@ msgstr ""
 "حریم‌خصوصی در کسب‌و‌کارهای الکترونیکی همیشه یکی از بحث‌برانگیزترین موضوعات بوده و "
 "هست؛"
 
-#: includes/languages/trans_twig.php:212
+#: includes/languages/trans_twig.php:175
 msgid ""
 "Accordingly, formulating privacy policies is regarded as one of the crucial "
 "concerns of technology companies."
 msgstr ""
-"به همین دلیل، تعیین سیاست‌های حریم‌خصوصی جزء دغدغه‌های بسیار مهم شرکت‌های "
-"فناورانه محسوب می‌شود."
+"به همین دلیل، تعیین سیاست‌های حریم‌خصوصی جزء دغدغه‌های بسیار مهم شرکت‌های فناورانه "
+"محسوب می‌شود."
 
-#: includes/languages/trans_twig.php:213
+#: includes/languages/trans_twig.php:176
 msgid ""
-"Meanwhile, widespread controversies have been provoked over invasion of "
-"privacy in e-commerce so that, occasionally, the regulations have to be "
-"revised to eliminate the existing weaknesses."
+"Meanwhile, widespread controversies have been provoked over invasion of privacy "
+"in e-commerce so that, occasionally, the regulations have to be revised to "
+"eliminate the existing weaknesses."
 msgstr ""
-"در این میان جنجال‌هایی گسترده به‌خاطر نقض حریم‌خصوصی از کسب‌وکارهای الکترونیکی "
-"صورت گرفته است؛ به‌گونه‌ای که هرچند وقت یک‌بار مجبور هستند قوانین را بازبینی "
-"نموده تا حفره‌های موجود را رفع نمایند."
+"در این میان جنجال‌هایی گسترده به‌خاطر نقض حریم‌خصوصی از کسب‌وکارهای الکترونیکی صورت "
+"گرفته است؛ به‌گونه‌ای که هرچند وقت یک‌بار مجبور هستند قوانین را بازبینی نموده تا "
+"حفره‌های موجود را رفع نمایند."
 
-#: includes/languages/trans_twig.php:214
+#: includes/languages/trans_twig.php:177
 msgid "Privacy from Our Point of View"
 msgstr "حریم‌خصوصی از دیدگاه ما"
 
-#: includes/languages/trans_twig.php:215
+#: includes/languages/trans_twig.php:178
 msgid ""
 "Let us be straightforward! Cyberspace is not a safe location for personal "
 "information."
 msgstr "رو راست باشیم، فضای مجازی محل امنی برای اطلاعات خصوصی نیست."
 
-#: includes/languages/trans_twig.php:216
+#: includes/languages/trans_twig.php:179
 msgid ""
-"For that reason, Tejarak makes no request for important information of yours "
-"and allow to save some general information including age, gender, education, "
+"For that reason, Ermile makes no request for important information of yours and "
+"allow to save some general information including age, gender, education, "
 "interests, etc  is only for private use of your team or company."
 msgstr ""
-"به‌همین دلیل، تجارک درخواستی برای ثبت اطلاعات مهم شده نداشته و تنها اجازه ثبت "
-"برخی از اطلاعات عمومی شامل سن، جنسیت، مدرک تحصیلی، علاقمندی‌ها و ... را برای "
-"استفاده خصوصی در تیم یا شرکت شما می‌دهد."
+"به همین دلیل ارمایل بدون درخواست اطلاعات مهم شما را می سازد و اجازه می دهد برای "
+"نجات برخی از اطلاعات کلی از جمله سن، جنس، آموزش، منافع و غيره است تنها برای "
+"استفاده خصوصی از تیم و یا شرکت خود را."
 
-#: includes/languages/trans_twig.php:217
+#: includes/languages/trans_twig.php:180
 msgid ""
 "It is worth mentioning that recording the aforementioned points is totally "
 "voluntary."
 msgstr "لازم به توضیح است که ثبت موارد ذکرشده نیز به‌صورت کاملا اختیاری است."
 
-#: includes/languages/trans_twig.php:218
+#: includes/languages/trans_twig.php:181
 msgid ""
-"However, taking the nature of cyberspace into account, we should remember "
-"that offering an absolute assurance might not be possible."
+"However, taking the nature of cyberspace into account, we should remember that "
+"offering an absolute assurance might not be possible."
 msgstr ""
 "این را در نظر داشته باشید که با توجه به ماهیت فضای مجازی، ارائه تضمین صددرصدی "
 "به‌طور کل ممکن نیست."
 
-#: includes/languages/trans_twig.php:219
+#: includes/languages/trans_twig.php:182
 msgid ""
-"Assuring privacy and security, with that ideal concept we bear in mind, does "
-"not exist; and if somebody gives you an assurance of securing your privacy, "
-"he has certainly abused your trust."
+"Assuring privacy and security, with that ideal concept we bear in mind, does not "
+"exist; and if somebody gives you an assurance of securing your privacy, he has "
+"certainly abused your trust."
 msgstr ""
-"تضمین امنیت و حریم خصوصی به آن معنای آرمانی که ما در ذهن خود داریم وجود "
-"ندارد، و اگر کسی در دنیای مجازی، تضمین امنیت حریم‌خصوصی شما را بدهد قطعا از "
-"اعتماد شما سوءاستفاده کرده است."
+"تضمین امنیت و حریم خصوصی به آن معنای آرمانی که ما در ذهن خود داریم وجود ندارد، و "
+"اگر کسی در دنیای مجازی، تضمین امنیت حریم‌خصوصی شما را بدهد قطعا از اعتماد شما "
+"سوءاستفاده کرده است."
 
-#: includes/languages/trans_twig.php:220
+#: includes/languages/trans_twig.php:183
 msgid ""
-"Upon buying any digital or the so-called smart device, you have invaded your "
-"own privacy yourself."
+"Upon buying any digital or the so-called smart device, you have invaded your own "
+"privacy yourself."
 msgstr ""
-"شما با خرید هر دستگاه دیجیتالی یا به اصطلاح هوشمند، با دست خود حریم‌خصوصی‌تان "
-"را نقض کرده‌اید."
+"شما با خرید هر دستگاه دیجیتالی یا به اصطلاح هوشمند، با دست خود حریم‌خصوصی‌تان را "
+"نقض کرده‌اید."
 
-#: includes/languages/trans_twig.php:221
+#: includes/languages/trans_twig.php:184
 msgid ""
 "If you want your privacy not to be invaded, you should depart from technology "
 "and say goodbye to any digital and smart device."
 msgstr ""
-"اگر می‌خواهید این حریم‌خصوصی نقض نشود باید به‌طور کل از دنیای تکنولوژی فاصله "
-"بگیرید و با هر دستگاه دیجیتالی و هوشمندی خداحافظی کنید."
+"اگر می‌خواهید این حریم‌خصوصی نقض نشود باید به‌طور کل از دنیای تکنولوژی فاصله بگیرید "
+"و با هر دستگاه دیجیتالی و هوشمندی خداحافظی کنید."
 
-#: includes/languages/trans_twig.php:222
+#: includes/languages/trans_twig.php:185
 msgid ""
-"In fact, we have employed all updated technologies of the world to provide "
-"you with the maximum security."
+"In fact, we have employed all updated technologies of the world to provide you "
+"with the maximum security."
 msgstr ""
 "ما به‌لحاظ فنی تمام تکنولوژی‌های روز دنیا را به‌کار برده‌ایم تا امنیت حداکثری را "
 "برای شما به ارمغان بیاوریم."
 
-#: includes/languages/trans_twig.php:223
+#: includes/languages/trans_twig.php:186
 msgid ""
 "As the final remark, we wish to assure you that our main concern is to secure "
 "your privacy and protect your information against impermissible access."
 msgstr ""
-"در پایان، این اطمینان را به شما می‌دهیم که دغدغه‌ی ما، حفظ حریم‌خصوصی و محافظت "
-"از اطلاعات شما در برابر دسترسی‌های غیرمجاز هست."
+"در پایان، این اطمینان را به شما می‌دهیم که دغدغه‌ی ما، حفظ حریم‌خصوصی و محافظت از "
+"اطلاعات شما در برابر دسترسی‌های غیرمجاز هست."
 
-#: includes/languages/trans_twig.php:226
-msgid "Tejarak Social Responsibility"
-msgstr "مسئولیت اجتماعی تجارک"
+#: includes/languages/trans_twig.php:189
+msgid "Ermile Social Responsibility"
+msgstr "مسئولیت اجتماعی ارمایل"
 
-#: includes/languages/trans_twig.php:227
+#: includes/languages/trans_twig.php:190
 msgid ""
 "Social responsibility refers to our role in maintaining, caring about and "
 "helping our society, while having set as its goal a responsibility-centered "
@@ -3749,104 +3499,103 @@ msgstr ""
 "مسئولیت اجتماعی به نقش ما در جهت حفظ، مراقبت و کمک به جامعه‌ای که در آن هستیم "
 "اشاره می‌کند و هدف آن کسب‌وکار مسئولانه‌ی همراه با تولید ثروت است."
 
-#: includes/languages/trans_twig.php:228
+#: includes/languages/trans_twig.php:191
 msgid ""
-"The issue of the social responsibility of organizations and corporations "
-"towards the society is from among the important issues being focused on in "
-"recent years."
+"The issue of the social responsibility of organizations and corporations towards "
+"the society is from among the important issues being focused on in recent years."
 msgstr ""
-"موضوع مسئولیت اجتماعی سازمان‌ها و شرکت‌ها نسبت به جامعه از جمله موضوعات مهمی "
-"است که در سال‌های اخیر مورد اهمیت قرار گرفته است."
+"موضوع مسئولیت اجتماعی سازمان‌ها و شرکت‌ها نسبت به جامعه از جمله موضوعات مهمی است "
+"که در سال‌های اخیر مورد اهمیت قرار گرفته است."
 
-#: includes/languages/trans_twig.php:229
+#: includes/languages/trans_twig.php:192
 msgid ""
 "The social responsibility of organizations relates to the organization's "
-"responsibility towards society, human beings and the environment in which "
-"they are active."
+"responsibility towards society, human beings and the environment in which they "
+"are active."
 msgstr ""
-"مسئولیت اجتماعی سازمان‌ها مرتبط با مسئولیت سازمان در برابر جامعه، انسان‌ها و "
-"محیطی است که در آن فعالیت می‌کند. این مسئولیت فراتر از قوانین مرسوم و منافع "
-"مالی سازمان بوده و پیشرفت منافع اجتماعی را دنبال می‌کند."
+"مسئولیت اجتماعی سازمان‌ها مرتبط با مسئولیت سازمان در برابر جامعه، انسان‌ها و محیطی "
+"است که در آن فعالیت می‌کند. این مسئولیت فراتر از قوانین مرسوم و منافع مالی سازمان "
+"بوده و پیشرفت منافع اجتماعی را دنبال می‌کند."
 
-#: includes/languages/trans_twig.php:230
-msgid "Tejarak's Social Responsibilities"
-msgstr "مسئولیت‌های اجتماعی تجارک"
+#: includes/languages/trans_twig.php:193
+msgid "Ermile's Social Responsibilities"
+msgstr "مسئولیت‌های اجتماعی ارمایل"
 
-#: includes/languages/trans_twig.php:231
+#: includes/languages/trans_twig.php:194
 msgid ""
-"Based on the mentioned definitions of social responsibility, Tejarak "
-"considers itself committed to society. Accordingly, besides attempting to "
-"offer creative and effective services, Tejarak has invariably had social "
-"responsibility as one of its most important missions and, God willing, will "
-"continue to do so."
+"Based on the mentioned definitions of social responsibility, Ermile considers "
+"itself committed to society. Accordingly, besides attempting to offer creative "
+"and effective services, Ermile has invariably had social responsibility as one "
+"of its most important missions and, God willing, will continue to do so."
 msgstr ""
-"براساس تعاریفی که از مسئولیت اجتماعی شد، تجارک نیز خود را در قبال جامعه متعهد "
-"دانسته و در کنار تلاش جهت ارائه خدمات خلاقانه و اثربخش، همواره مسئولیت "
-"اجتماعی از مهم‌ترین ماموریت‌های تجارک بوده و به‌امیدخدا خواهد بود."
+"براساس تعاریف یاد شده مسئولیت اجتماعی ارمایل  خود را متعهد به جامعه می‌داند. بر "
+"این اساس، علاوه بر اقدام به ارائه خدمات موثر و خلاق ارمایل همواره از مسئولیت‌های "
+"اجتماعی به عنوان یکی از مهم ترین ماموریت و آن، خواست خدا را داشته است، به کار "
+"خود ادامه خواهد داد."
 
-#: includes/languages/trans_twig.php:232
+#: includes/languages/trans_twig.php:195
 msgid "Environmentalist"
 msgstr "دوست‌دار محیط‌زیست"
 
-#: includes/languages/trans_twig.php:233
+#: includes/languages/trans_twig.php:196
 msgid ""
-"In spite of technological advancements, paper usage is unfortunately "
-"preferred to modern ways. One of Tejarak's objectives is trying to change "
-"this habit and contribute to the elimination of paper from the routine life "
-"and, therefore, to save the environment."
+"In spite of technological advancements, paper usage is unfortunately preferred "
+"to modern ways. One of Ermile's objectives is trying to change this habit and "
+"contribute to the elimination of paper from the routine life and, therefore, to "
+"save the environment."
 msgstr ""
-"با وجود پیشرفت تکنولوژی، متاسفانه همچنان علاقه به استفاده از کاغذ قابل "
-"پذیرش‌تر از روش‌های مدرن است؛ یکی از اهداف تجارک تلاش برای تغییر این عادت و کمک "
-"به حذف کاغذ از زندگی روزمره و درنتیجه حفظ محیط‌زیست است."
+"با وجود پیشرفت های تکنولوژیکی استفاده کاغذ متاسفانه مورد نظر به روش مدرن است. "
+"یکی از اهداف ارمایل است تلاش برای تغییر این عادت و کمک به حذف کاغذ از زندگی "
+"معمول و بنابراین، به نجات محیط زیست."
 
-#: includes/languages/trans_twig.php:234
+#: includes/languages/trans_twig.php:197
 msgid ""
 "Accordingly, with the aim of total elimination of paper use as well as "
-"electronic presentation of services, Tejarak has taken significant steps "
-"towards environmentalism. Be informed about Tejarak's paper-saving quantity."
+"electronic presentation of services, Ermile has taken significant steps towards "
+"environmentalism. Be informed about Ermile's paper-saving quantity."
 msgstr ""
-"تجارک با حذف صددرصدی استفاده از کاغذ و ارائه خدمات به صورت الکترونیکی توانسته "
-"اقدامی مهم در زمینه حفظ محیط‌زیست داشته باشد. از میزان صرفه‌جویی تجارک در مصرف "
+"ارمایل با حذف صددرصدی استفاده از کاغذ و ارائه خدمات به صورت الکترونیکی توانسته "
+"اقدامی مهم در زمینه حفظ محیط‌زیست داشته باشد. از میزان صرفه‌جویی ارمایل در مصرف "
 "کاغذ آگاه شوید."
 
-#: includes/languages/trans_twig.php:235
+#: includes/languages/trans_twig.php:198
 msgid "Philanthropist Activities"
 msgstr "فعالیت‌های خیرخواهانه"
 
-#: includes/languages/trans_twig.php:236
+#: includes/languages/trans_twig.php:199
 msgid ""
-"One of the most valuable resources of charity organizations is the voluntary "
-"and active participation of the individuals who, without any expectations, "
-"provide them with their skillfulness and capital."
+"One of the most valuable resources of charity organizations is the voluntary and "
+"active participation of the individuals who, without any expectations, provide "
+"them with their skillfulness and capital."
 msgstr ""
-"یکی از ارزشمندترین سرمایه‌‌ی سازمان‌های خیریه، فعالیت و مشارکت داوطلبانه افرادی "
-"است که مهارت و سرمایه خود را بدون هیچ چشم‌داشتی در اختیار آن‌ها قرار می‌دهند."
+"یکی از ارزشمندترین سرمایه‌‌ی سازمان‌های خیریه، فعالیت و مشارکت داوطلبانه افرادی است "
+"که مهارت و سرمایه خود را بدون هیچ چشم‌داشتی در اختیار آن‌ها قرار می‌دهند."
 
-#: includes/languages/trans_twig.php:237
+#: includes/languages/trans_twig.php:200
 msgid ""
-"Tejarak as well, with regard to its contribution to philanthropist "
-"activities, will honorably provide them with its services free of charge. To "
-"make use of these services, send your identity documents along with your "
-"request to Tejarak's support center."
+"Ermile as well, with regard to its contribution to philanthropist activities, "
+"will honorably provide them with its services free of charge. To make use of "
+"these services, send your identity documents along with your request to Ermile's "
+"support center."
 msgstr ""
-"تجارک نیز با توجه به ماموریت خود در راستای کمک به فعالیت‌های خیرخواهانه، خدمات "
-"خود را با افتخار و به‌صورت رایگان دراختیار آنان قرار می‌دهد. برای استفاده از "
-"این خدمات، درخواست خود را همراه با مدارک احراز هویت به مرکز پشتیبانی تجارک "
-"ارسال نمایید."
+"ارمایل نیز با توجه به ماموریت خود در راستای کمک به فعالیت‌های خیرخواهانه، خدمات "
+"خود را با افتخار و به‌صورت رایگان دراختیار آنان قرار می‌دهد. برای استفاده از این "
+"خدمات، درخواست خود را همراه با مدارک احراز هویت به مرکز پشتیبانی ارمایل ارسال "
+"نمایید."
 
-#: includes/languages/trans_twig.php:238
+#: includes/languages/trans_twig.php:201
 msgid "Recruiting Motivated Staff"
 msgstr "بکارگیری نیروهای باانگیزه"
 
-#: includes/languages/trans_twig.php:239
+#: includes/languages/trans_twig.php:202
 msgid ""
-"An outstanding characteristic of any organization is its specialized and "
-"highly motivated staff, playing a vital role in growth and development."
+"An outstanding characteristic of any organization is its specialized and highly "
+"motivated staff, playing a vital role in growth and development."
 msgstr ""
 "ویژگی چشم‌گیر و بارز هر سازمانی وجود نیروی‌ انسانی باانگیزه و متخصص است که نقشی "
 "بنیادین در رشد و توسعه دارند."
 
-#: includes/languages/trans_twig.php:240
+#: includes/languages/trans_twig.php:203
 msgid ""
 "By the same token, we are always looking for creative and motivated Iranian "
 "youths in order to make the best and be effective in cooperation with them."
@@ -3854,190 +3603,181 @@ msgstr ""
 "ما هم در این راستا و برای خدمت به سرزمین‌مان، به دنبال جوانان ایرانی خلاق و "
 "باانگیزه هستیم تا با کمک هم برترین‌ها را بسازیم و اثرگذار باشیم."
 
-#: includes/languages/trans_twig.php:241
+#: includes/languages/trans_twig.php:204
 msgid "Join us and grow in a different location."
 msgstr "به ما بپیوندید و در مکانی متفاوت رشد کنید."
 
-#: includes/languages/trans_twig.php:242
+#: includes/languages/trans_twig.php:205
 msgid "Customer Care and Complete Satisfaction"
 msgstr "مشتری‌مداری و کسب رضایت کامل"
 
-#: includes/languages/trans_twig.php:243
+#: includes/languages/trans_twig.php:206
 msgid ""
-"Attracting people's participation as well as having their valuable presence "
-"has always been a great honor for Tejarak and to appreciate your support, in "
-"return, Tejarak presents services to promote customer satisfaction."
+"Attracting people's participation as well as having their valuable presence has "
+"always been a great honor for Ermile and to appreciate your support, in return, "
+"Ermile presents services to promote customer satisfaction."
 msgstr ""
 "جلب مشارکت مردم و حضور ارزشمند آنان در تجارک باعث افتخار ما بوده و به‌منظور "
-"قدردانی از این حمایت، تجارک نیز خدمات متقابلی را برای افزایش رضایت مشتریان "
-"خود ارائه می‌کند."
+"قدردانی از این حمایت، ارمایل نیز خدمات متقابلی را برای افزایش رضایت مشتریان خود "
+"ارائه می‌کند."
 
-#: includes/languages/trans_twig.php:244
+#: includes/languages/trans_twig.php:207
 msgid ""
 "These services are presented in different time intervals and are aimed at "
 "costomer care mission and appreciation of your valuable presence."
 msgstr ""
-"این خدمات در بازه‌های زمانی متفاوت ارائه‌شده و در راستای ماموریت مشتری‌مداری و "
-"ارج نهادن به این حضور گرانبها می‌باشد."
+"این خدمات در بازه‌های زمانی متفاوت ارائه‌شده و در راستای ماموریت مشتری‌مداری و ارج "
+"نهادن به این حضور گرانبها می‌باشد."
 
-#: includes/languages/trans_twig.php:247
+#: includes/languages/trans_twig.php:210
 msgid "Terms of Service Agreement"
 msgstr "توافق‌نامه استفاده از سرویس"
 
-#: includes/languages/trans_twig.php:248
+#: includes/languages/trans_twig.php:211
 msgid ""
 "Tejarak acts upon international rules, depends on the countries receiving its "
 "services and renders its activities within this framework."
 msgstr ""
-"تجارک مطابق قوانین بین‌الملل و وابسته به کشورهای دریافت‌کننده خدمات بوده و در "
-"این چارچوب فعالیت می‌نماید."
+"تجارک مطابق قوانین بین‌الملل و وابسته به کشورهای دریافت‌کننده خدمات بوده و در این "
+"چارچوب فعالیت می‌نماید."
 
-#: includes/languages/trans_twig.php:249
+#: includes/languages/trans_twig.php:212
 msgid ""
-"Utilizing Tejarak's services means the acceptance of and commitment to "
-"observing all the tenors of this agreement."
+"Utilizing Tejarak's services means the acceptance of and commitment to observing "
+"all the tenors of this agreement."
 msgstr ""
 "استفاده از خدمات تجارک به منزله‌ پذیرش و تعهد به رعایت تمام مفاد مندرج در این "
 "توافق‌نامه است."
 
-#: includes/languages/trans_twig.php:250
+#: includes/languages/trans_twig.php:213
 msgid ""
 "It is worth mentioning that due to the insecurity of cyberspace, you should "
 "never post your vital information on either Tejarak or any other services!"
 msgstr ""
-"لازم به یادآوری‌ست که با توجه به ناامن بودن فضای ‌مجازی، نه تنها در تجارک بلکه "
-"در هیچ سرویس دیگری، اطلاعات حیاتی خود را منتشر نکنید!"
+"لازم به یادآوری‌ست که با توجه به ناامن بودن فضای ‌مجازی، نه تنها در تجارک بلکه در "
+"هیچ سرویس دیگری، اطلاعات حیاتی خود را منتشر نکنید!"
 
-#: includes/languages/trans_twig.php:251
+#: includes/languages/trans_twig.php:214
 msgid ""
 "User's personal information is strictly confidential in our service. Tejarak "
-"preserves the information as encoded and will not under any conditions "
-"transfer it to another person."
+"preserves the information as encoded and will not under any conditions transfer "
+"it to another person."
 msgstr ""
 "اطلاعات شخصی کاربران در این سرویس به‌صورت کاملا محرمانه می‌باشد و تجارک این "
-"اطلاعات را به صورت کدشده نگه‌داری کرده و تحت هیچ شرایطی آن‌را به غیر واگذار "
-"نخواهد کرد."
+"اطلاعات را به صورت کدشده نگه‌داری کرده و تحت هیچ شرایطی آن‌را به غیر واگذار نخواهد "
+"کرد."
 
-#: includes/languages/trans_twig.php:252
+#: includes/languages/trans_twig.php:215
 msgid ""
 "In case there is a request for receiving user's information by the competent "
-"authorities, according to the country the user lives in, Tejarak will "
-"cooperate with them only upon receiving the judicial order issued by the "
-"country submitting the request."
+"authorities, according to the country the user lives in, Tejarak will cooperate "
+"with them only upon receiving the judicial order issued by the country "
+"submitting the request."
 msgstr ""
 "با توجه به کشور محل سکونت کاربر، درصورت درخواست مراجع دارای صلاحیت به دریافت "
 "اطلاعات‌کاربری، تجارک تنها پس از دریافت حکم قضایی کشور درخواست کننده، توانایی "
 "همکاری با آنان را خواهد داشت."
 
-#: includes/languages/trans_twig.php:253
+#: includes/languages/trans_twig.php:216
 msgid ""
 "Tejarak will not offer any guarantee as to the quality of the products or "
-"services presented by the teams and will not accept any responsibility in "
-"this regard!"
+"services presented by the teams and will not accept any responsibility in this "
+"regard!"
 msgstr ""
 "تجارک هیچگونه ضمانتی در مورد کیفیت محصولات یا خدمات ارائه شده توسط تیم‌ها را "
 "نمی‌پذیرد و مسئولیتی در قبال آن ندارد!"
 
-#: includes/languages/trans_twig.php:254
+#: includes/languages/trans_twig.php:217
 msgid ""
-"Users should assume responsibility for any harm, both material and "
-"immaterial, caused by direct, indirect or penal factors and due to their "
-"utilization of this service; and, Tejarak bears no responsibility accordingly."
+"Users should assume responsibility for any harm, both material and immaterial, "
+"caused by direct, indirect or penal factors and due to their utilization of this "
+"service; and, Tejarak bears no responsibility accordingly."
 msgstr ""
-"خسارت‌های‌ مادی و معنوی ناشی از عوامل مستقیم، غیرمستقیم و کیفری، در قبال "
-"استفاده از این سرویس برعهده کاربران بوده و تجارک هیچ‌گونه مسئولیتی دراین‌باره "
-"ندارد."
+"خسارت‌های‌ مادی و معنوی ناشی از عوامل مستقیم، غیرمستقیم و کیفری، در قبال استفاده "
+"از این سرویس برعهده کاربران بوده و تجارک هیچ‌گونه مسئولیتی دراین‌باره ندارد."
 
-#: includes/languages/trans_twig.php:255
+#: includes/languages/trans_twig.php:218
 msgid ""
-"Tejarak accepts no responsibility, under any conditions, for the harms caused "
-"by users' mutual trust in each other or by the disclosure of information by "
-"users."
+"Tejarak accepts no responsibility, under any conditions, for the harms caused by "
+"users' mutual trust in each other or by the disclosure of information by users."
 msgstr ""
 "تحت هیچ شرایطی تجارک مسئولیت خسارت‌های وارده در اثر اعتماد و اتکاء اعضاء به "
 "یکدیگر و فاش‌شدن اطلاعات توسط کاربر را نمی‌پذیرد."
 
-#: includes/languages/trans_twig.php:256
+#: includes/languages/trans_twig.php:219
 msgid ""
-"Tejarak will do its best to protect both the users' information and the "
-"service; however, regarding the lack of certainty within the cyberspace, it "
-"will not assume any responsibility for the loss of the information entered on "
-"the service."
+"Tejarak will do its best to protect both the users' information and the service; "
+"however, regarding the lack of certainty within the cyberspace, it will not "
+"assume any responsibility for the loss of the information entered on the service."
 msgstr ""
 "تجارک تمام تلاش خود را برای محافظت از اطلاعات کاربران و سرویس می‌نماید؛ ولی با "
-"توجه به عدم قطعیت در فضای مجازی، مسئولیتی در مورد از بين رفتن اطلاعات "
-"قرارگرفته بر روی سرویس نخواهد پذیرفت."
+"توجه به عدم قطعیت در فضای مجازی، مسئولیتی در مورد از بين رفتن اطلاعات قرارگرفته "
+"بر روی سرویس نخواهد پذیرفت."
 
-#: includes/languages/trans_twig.php:257
+#: includes/languages/trans_twig.php:220
 msgid ""
 "We will publicize our information and news only via Tejarak's formal website. "
-"Accordingly, those who publicize any attributed news and claims, within "
-"social media and networks, must assume the responsibility and Tejarak will "
-"not assume any responsibility."
+"Accordingly, those who publicize any attributed news and claims, within social "
+"media and networks, must assume the responsibility and Tejarak will not assume "
+"any responsibility."
 msgstr ""
 "اخبار و اطلاعات ما تنها از طریق وب‌سایت رسمی تجارک منتشر می‌شود. مسئولیت هرگونه "
-"خبر و ادعای نسبت‌داده‌شده در رسانه‌ها و شبکه‌های اجتماعی به عهده منتشرکننده آن "
-"بوده و تجارک مسئولیتی در قبال آن ندارد."
+"خبر و ادعای نسبت‌داده‌شده در رسانه‌ها و شبکه‌های اجتماعی به عهده منتشرکننده آن بوده "
+"و تجارک مسئولیتی در قبال آن ندارد."
 
-#: includes/languages/trans_twig.php:258
+#: includes/languages/trans_twig.php:221
 msgid ""
 "Tejarak will bear no responsibility for whatsoever messages sent to users, "
 "including those indicating winning a lottery, and all our information "
 "dissemination will be through the ways of Tejarak's contact with users."
 msgstr ""
 "تجارک هیچ مسئولیتی در مقابل پیام‌های ارسالی مبنی بر برنده‌شدن در قرعه‌کشی یا هر "
-"پیام دیگری نداشته و تمام اطلاع‌رسانی‌های ما از طریق روش‌های برقراری ارتباط کاربر "
-"با تجارک خواهد بود."
+"پیام دیگری نداشته و تمام اطلاع‌رسانی‌های ما از طریق روش‌های برقراری ارتباط کاربر با "
+"تجارک خواهد بود."
 
-#: includes/languages/trans_twig.php:259
+#: includes/languages/trans_twig.php:222
 msgid ""
-"Any misuse of Tejarak's trade name is prohibited and will be suable by making "
-"a complaint to the legal competent authorities."
+"Any misuse of Tejarak's trade name is prohibited and will be suable by making a "
+"complaint to the legal competent authorities."
 msgstr ""
-"هرگونه سوءاستفاده از نام تجاری تجارک ممنوع بوده و از طریق شکایت به مراجع "
-"قانونی دارای صلاحیت، قابل پیگرد خواهد بود."
+"هرگونه سوءاستفاده از نام تجاری تجارک ممنوع بوده و از طریق شکایت به مراجع قانونی "
+"دارای صلاحیت، قابل پیگرد خواهد بود."
 
-#: includes/languages/trans_twig.php:260
+#: includes/languages/trans_twig.php:223
 msgid ""
 "Furthermore, this agreement, under the name Terms and Conditions, will be "
-"available and observable, in all pages of the website. Users will be "
-"responsible for a lack of information on the most recent changes."
+"available and observable, in all pages of the website. Users will be responsible "
+"for a lack of information on the most recent changes."
 msgstr ""
-"هم‌چنین این توافق‌نامه در تمام صفحات وب‌سایت با عنوان شرایط و قوانین موجود و "
-"قابل مشاهده است. مسئولیت عدم کسب اطلاع از آخرین تغییرات برعهده کاربر خواهد "
-"بود."
+"هم‌چنین این توافق‌نامه در تمام صفحات وب‌سایت با عنوان شرایط و قوانین موجود و قابل "
+"مشاهده است. مسئولیت عدم کسب اطلاع از آخرین تغییرات برعهده کاربر خواهد بود."
 
-#: includes/languages/trans_twig.php:261
+#: includes/languages/trans_twig.php:224
 msgid ""
 "It should be mentioned that in case there would be any modifications in the "
-"above-mentioned tenors, an updated version will be available for the public, "
-"and as well, all the users will be informed."
+"above-mentioned tenors, an updated version will be available for the public, and "
+"as well, all the users will be informed."
 msgstr ""
 "لازم به ذکر است که درصورت هرگونه تغییر در مفاد ذکر شده، نسخه به‌روزشده آن در "
 "دسترس عموم قرار خواهد گرفت و به اطلاع تمام کاربران خواهد رسید."
 
-#: includes/languages/trans_twig.php:264
-#: includes/languages/twig_translation.php:14
+#: includes/languages/trans_twig.php:227 includes/languages/twig_translation.php:14
 msgid "Ermile is our brand"
 msgstr "ارمایل نام برند ماست"
 
-#: includes/languages/trans_twig.php:265
-#: includes/languages/twig_translation.php:15
+#: includes/languages/trans_twig.php:228 includes/languages/twig_translation.php:15
 msgid "Experience our service in your language"
 msgstr "سرویس های ما را با زبان اصلی خودتان تجربه کنید"
 
-#: includes/languages/trans_twig.php:279
-#: includes/languages/twig_translation.php:31
+#: includes/languages/trans_twig.php:242 includes/languages/twig_translation.php:31
 msgid "terms of service"
 msgstr "قوانین استفاده"
 
-#: includes/languages/trans_twig.php:280
-#: includes/languages/twig_translation.php:32
+#: includes/languages/trans_twig.php:243 includes/languages/twig_translation.php:32
 msgid "by signing up, you agree to the"
 msgstr "با ثبت نام شما موافق هستید با"
 
-#: includes/languages/trans_twig.php:286
-#: includes/languages/twig_translation.php:38
+#: includes/languages/trans_twig.php:249 includes/languages/twig_translation.php:38
 msgid "receive message callback!"
 msgstr "دریافت پیامک"
 
@@ -4077,9 +3817,209 @@ msgstr "ذخیره پیش نویس"
 msgid "Ermile contain a new tools for each one"
 msgstr "ارمایل دارای ابزارهایی برای خود شماست"
 
+#: includes/mvc/view.php:11
+msgid "As easy as ABC is our slogan!"
+msgstr "کاری نداره شعار ماست!"
+
 #: includes/mvc/view.php:13
 msgid "Ermile is inteligent"
 msgstr "ارمایل باهوش است!"
+
+#~ msgid "We could'nt save the contact"
+#~ msgstr "مشکلی در ذخیره‌سازی مخاطب پیش آمد"
+
+#~ msgid "FAQ"
+#~ msgstr "سوالات پرتکرار"
+
+#~ msgid "Benefits"
+#~ msgstr "مزایا"
+
+#~ msgid "Pricing"
+#~ msgstr "هزینه‌ها"
+
+#~ msgid "Changelog"
+#~ msgstr "پیشرفت پروژه"
+
+#~ msgid "Logo"
+#~ msgstr "لوگو"
+
+#~ msgid "About Tejarak"
+#~ msgstr "درباره تجارک"
+
+#~ msgid ""
+#~ "Tejarak have a set of simple and practical tools on a regular basis for "
+#~ "modern businesses."
+#~ msgstr ""
+#~ "تجارک مجموعه ابزارهایی ساده و کاربردی را به‌صورت یکپارچه در اختیار کسب و "
+#~ "کارهای مدرن و همینطور تجارت‌های سنتی مایل به حرکت به‌سوی تکنولوژی قرار می‌دهد."
+
+#~ msgid ""
+#~ "Advancement of technology and development of Web-based business Cause Need "
+#~ "new tools to resolve the daily needs and that’s the goal of making Tejarak."
+#~ msgstr ""
+#~ "با پیشرفت روزافزون تکنولوژی و گسترش کسب و کارهای مدرن مبتنی بر وب، احتیاج به "
+#~ "ابزارهایی مدرن برای رفع نیازهای روزمره، جرقه‌ای برای تولد تجارک بود."
+
+#~ msgid ""
+#~ "It’s good to know that in addition to the core services, features such as "
+#~ "inventory and invoice will be added."
+#~ msgstr ""
+#~ "قابل توجه اینکه علاوه‌بر توسعه‌ی خدمات اصلی، بخش‌های کوچک‌تر و کاربردی در روند "
+#~ "توسعه ازویر به آن افزوده خواهند شد."
+
+#~ msgid "Attendance system"
+#~ msgstr "سرویس حضور و غیاب"
+
+#~ msgid ""
+#~ "Attendance is so different in Tejarak. Beautiful and stylish design without "
+#~ "requiring any hardware. Notification via social networks, Online reports and "
+#~ "difference compared to other systems are the best feature of Tejarak."
+#~ msgstr ""
+#~ "هسته‌ی اصلی تجارک، سامانه حضور و غیاب متفاوت آن نسبت به نمونه‌های موجود است. "
+#~ "طراحی مدرن و چشم‌نواز، بی‌نیاز به تهیه سخت‌افزار، اطلاع‌رسانی از طریق شبکه‌های "
+#~ "اجتماعی، آنلاین و لحظه‌ای بودن گزارشات و مهم‌تر از همه تفاوت آن، از بارزترین "
+#~ "مزایای سرویس حضور و غیاب تجارک است."
+
+#~ msgid "Daily report"
+#~ msgstr "گزارش روزانه"
+
+#~ msgid ""
+#~ "In many collections received daily reports of the employees is very "
+#~ "important. On the other hands Employees reluctant to do that. In addition to "
+#~ "the classical method, using social networks on Twitter and Daily Telegram "
+#~ "reported in Tejarak possible to get there."
+#~ msgstr ""
+#~ "در اغلب مجموعه‌ها دریافت گزارش روزانه از کارکنان به‌عنوان بخشی مهم از "
+#~ "برنامه‌ریزی سازمانی است. از طرفی به دلایل گوناگون کارکنان تمایل چندانی به این "
+#~ "عمل ندارند. با به‌خدمت گرفتن شبکه‌های اجتماعی علاوه‌بر روش‌های کلاسیک ثبت گزارش "
+#~ "روزانه، تجارک امکان دریافت گزارش کار را از طریق توییتر و تلگرام نیز امکان‌پذیر "
+#~ "کرده و عملکردهای جدیدی را نیز ارائه می‌دهد."
+
+#~ msgid "Salary calculator"
+#~ msgstr "محاسبه حقوق و دستمزد"
+
+#~ msgid ""
+#~ "For many small business is very complex method of calculating monthly salary "
+#~ "and they Need to have simpler method. In addition to supporting traditional "
+#~ "methods, Tejarak provide monthly salary simple solutions to employees have "
+#~ "modern and beautiful Payroll."
+#~ msgstr ""
+#~ "پیچیدگی‌های روش محاسبه حقوق و دستمزد ماهیانه در ایران، برای بسیاری از کسب و "
+#~ "کارهای خرد دست و پاگیر بوده و نیاز به روش‌های ساده‌تری برای محاسبه سال‌هاست که "
+#~ "نیاز بسیاری از کسب و کارهاست. تجارک علاوه بر پشتیبانی از روش‌های سنتی ولی سخت، "
+#~ "راه‌حل‌هایی ساده برای حقوق ماهیانه کارکنان ارائه می‌دهد تا کارکنان امروزی، "
+#~ "فیش‌های حقوقی مدرن و زیبا را هم تجربه کنند."
+
+#~ msgid "Change log of Tejarak"
+#~ msgstr "پیشرفت پروژه تجارک"
+
+#~ msgid "We were born to do Best!"
+#~ msgstr "ما برای انجام بهترین‌ها متولد شدیم!"
+
+#~ msgid "We are Developers, please wait!"
+#~ msgstr "ما توسعه دهنده هستیم، صبور باشید!"
+
+#~ msgid "Version 1 of Tejarak is comming"
+#~ msgstr "نسخه اول تجارک در حال آماده‌سازی است"
+
+#~ msgid "Beta version of Tejarak released"
+#~ msgstr "نسخه بتای تجارک منتشر شد"
+
+#~ msgid "Finally Tejarak logo is accepted and we started branding"
+#~ msgstr "بالاخره نشان‌واره‌ی تجارک پذیرفته شد و ما برندسازی خود را آغاز کردیم"
+
+#~ msgid "Alfa version of Tejarak released"
+#~ msgstr "نسخه آلفای تجارک منتشر شد"
+
+#~ msgid ""
+#~ "The name of project selected as Tejarak and <a href='http://Tejarak."
+#~ "ir'>Tejarak.ir</a> domains registered."
+#~ msgstr ""
+#~ "نام تجارک برای این پروژه برگزیده شده و دامنه‌ی <a href='http://Tejarak."
+#~ "ir'>Tejarak.ir</a> ثبت شد."
+
+#~ msgid "Tejarak Logo"
+#~ msgstr "لوگوی تجارک"
+
+#~ msgid "Need know more about Tejarak Logo? Be patient..."
+#~ msgstr "نیاز به دانستن بیشتر درباره لوگوی تجارک دارید؟ صبور باشید..."
+
+#~ msgid "Drawing logo"
+#~ msgstr "ترسیم نشان‌واره"
+
+#~ msgid "Dowload our logo"
+#~ msgstr "نشان‌واره‌ی ما را دریافت کنید"
+
+#~ msgid "Square"
+#~ msgstr "مربع"
+
+#~ msgid "Circle"
+#~ msgstr "دایره"
+
+#~ msgid ""
+#~ "For that reason, Tejarak makes no request for important information of yours "
+#~ "and allow to save some general information including age, gender, education, "
+#~ "interests, etc  is only for private use of your team or company."
+#~ msgstr ""
+#~ "به‌همین دلیل، تجارک درخواستی برای ثبت اطلاعات مهم شده نداشته و تنها اجازه ثبت "
+#~ "برخی از اطلاعات عمومی شامل سن، جنسیت، مدرک تحصیلی، علاقمندی‌ها و ... را برای "
+#~ "استفاده خصوصی در تیم یا شرکت شما می‌دهد."
+
+#~ msgid "Tejarak Social Responsibility"
+#~ msgstr "مسئولیت اجتماعی تجارک"
+
+#~ msgid "Tejarak's Social Responsibilities"
+#~ msgstr "مسئولیت‌های اجتماعی تجارک"
+
+#~ msgid ""
+#~ "Based on the mentioned definitions of social responsibility, Tejarak "
+#~ "considers itself committed to society. Accordingly, besides attempting to "
+#~ "offer creative and effective services, Tejarak has invariably had social "
+#~ "responsibility as one of its most important missions and, God willing, will "
+#~ "continue to do so."
+#~ msgstr ""
+#~ "براساس تعاریفی که از مسئولیت اجتماعی شد، تجارک نیز خود را در قبال جامعه متعهد "
+#~ "دانسته و در کنار تلاش جهت ارائه خدمات خلاقانه و اثربخش، همواره مسئولیت "
+#~ "اجتماعی از مهم‌ترین ماموریت‌های تجارک بوده و به‌امیدخدا خواهد بود."
+
+#~ msgid ""
+#~ "In spite of technological advancements, paper usage is unfortunately "
+#~ "preferred to modern ways. One of Tejarak's objectives is trying to change "
+#~ "this habit and contribute to the elimination of paper from the routine life "
+#~ "and, therefore, to save the environment."
+#~ msgstr ""
+#~ "با وجود پیشرفت تکنولوژی، متاسفانه همچنان علاقه به استفاده از کاغذ قابل "
+#~ "پذیرش‌تر از روش‌های مدرن است؛ یکی از اهداف تجارک تلاش برای تغییر این عادت و کمک "
+#~ "به حذف کاغذ از زندگی روزمره و درنتیجه حفظ محیط‌زیست است."
+
+#~ msgid ""
+#~ "Accordingly, with the aim of total elimination of paper use as well as "
+#~ "electronic presentation of services, Tejarak has taken significant steps "
+#~ "towards environmentalism. Be informed about Tejarak's paper-saving quantity."
+#~ msgstr ""
+#~ "تجارک با حذف صددرصدی استفاده از کاغذ و ارائه خدمات به صورت الکترونیکی توانسته "
+#~ "اقدامی مهم در زمینه حفظ محیط‌زیست داشته باشد. از میزان صرفه‌جویی تجارک در مصرف "
+#~ "کاغذ آگاه شوید."
+
+#~ msgid ""
+#~ "Tejarak as well, with regard to its contribution to philanthropist "
+#~ "activities, will honorably provide them with its services free of charge. To "
+#~ "make use of these services, send your identity documents along with your "
+#~ "request to Tejarak's support center."
+#~ msgstr ""
+#~ "تجارک نیز با توجه به ماموریت خود در راستای کمک به فعالیت‌های خیرخواهانه، خدمات "
+#~ "خود را با افتخار و به‌صورت رایگان دراختیار آنان قرار می‌دهد. برای استفاده از "
+#~ "این خدمات، درخواست خود را همراه با مدارک احراز هویت به مرکز پشتیبانی تجارک "
+#~ "ارسال نمایید."
+
+#~ msgid ""
+#~ "Attracting people's participation as well as having their valuable presence "
+#~ "has always been a great honor for Tejarak and to appreciate your support, in "
+#~ "return, Tejarak presents services to promote customer satisfaction."
+#~ msgstr ""
+#~ "جلب مشارکت مردم و حضور ارزشمند آنان در تجارک باعث افتخار ما بوده و به‌منظور "
+#~ "قدردانی از این حمایت، تجارک نیز خدمات متقابلی را برای افزایش رضایت مشتریان "
+#~ "خود ارائه می‌کند."
 
 #~ msgid "About Ermile"
 #~ msgstr "درباره ارمایل"

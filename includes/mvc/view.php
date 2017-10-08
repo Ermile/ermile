@@ -8,7 +8,7 @@ class view extends \lib\mvc\view
 		// set default value for site properties
 		$this->data->site['title']   = T_("Ermile");
 		$this->data->site['desc']    = T_("Ermile contain a new tools for each one");
-		$this->data->site['slogan']  = T_("As easy as ABC");
+		$this->data->site['slogan']  = T_("As easy as ABC is our slogan!");
 
 		$this->data->page['desc']    = T_("Ermile is inteligent");
 

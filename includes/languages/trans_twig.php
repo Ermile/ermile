@@ -109,7 +109,7 @@ private function transtext()
 	echo T_("Sarshomar");                                                             // Line 80
 	echo T_("Ask Anyone Anywhere");                                                   // Line 60
 	echo T_("Focus on your question. Do not be too concerned about how to ask or analyze. Equipped with an integrated platform, Sarshomar has made it possible for you to ask your questions via any means.");// Line 61
-	echo T_("Tejarak");                                                               // Line 22
+	echo T_("Tejarak");                                                               // Line 74
 	echo T_("Do attendance easily and enjoy real time reports");                      // Line 75
 	echo T_("Setup your dedicated and beautiful attendance system in less than a minute and have a real time and scrupulously monitoring on your business from anywhere.");// Line 76
 	echo T_("Azvir");                                                                 // Line 100
@@ -144,63 +144,26 @@ private function transtext()
 	echo T_("About");                                                                 // Line 6
 	echo T_("Press and Media");                                                       // Line 7
 	echo T_("Careers");                                                               // Line 8
-	echo T_("Social Responsibility");                                                 // Line 9
-	echo T_("FAQ");                                                                   // Line 37
-	echo T_("Enamad");                                                                // Line 16
-	echo T_("Benefits");                                                              // Line 23
-	echo T_("Pricing");                                                               // Line 24
-	echo T_("Learn More");                                                            // Line 28
-	echo T_("Terms of Service");                                                      // Line 29
+	echo T_("Social Responsibility");                                                 // Line 24
+	echo T_("Enamad");                                                                // Line 15
+	echo T_("Learn More");                                                            // Line 21
+	echo T_("Terms of Service");                                                      // Line 22
 	echo T_("Privacy Policy");                                                        // Line 3
-	echo T_("Changelog");                                                             // Line 31
 	echo T_("Support");                                                               // Line 14
-	echo T_("Contact");                                                               // Line 36
-	echo T_("Logo");                                                                  // Line 38
-	echo T_("Proudly Made in IRAN");                                                  // Line 52
-	echo T_("Control Panel");                                                         // Line 59
+	echo T_("Contact");                                                               // Line 29
+	echo T_("Proudly Made in IRAN");                                                  // Line 43
+	echo T_("Control Panel");                                                         // Line 50
 	echo T_("Admin Panel");                                                           // Line 20
-	echo T_("Exit Session");                                                          // Line 61
-	echo T_("Another Session");                                                       // Line 62
+	echo T_("Exit Session");                                                          // Line 52
+	echo T_("Another Session");                                                       // Line 53
 
 	//----------------------------------------------------content\template\header.html
 	echo T_("+98 25 3650 5281");                                                      // Line 14
-
-	//----------------------------------------------content\template\static\about.html
-	echo T_("About Tejarak");                                                         // Line 3
-	echo T_("Tejarak have a set of simple and practical tools on a regular basis for modern businesses.");// Line 13
-	echo T_("Advancement of technology and development of Web-based business Cause Need new tools to resolve the daily needs and that’s the goal of making Tejarak.");// Line 13
-	echo T_("It’s good to know that in addition to the core services, features such as inventory and invoice will be added.");// Line 15
-	echo T_("Attendance system");                                                     // Line 17
-	echo T_("Attendance is so different in Tejarak. Beautiful and stylish design without requiring any hardware. Notification via social networks, Online reports and difference compared to other systems are the best feature of Tejarak.");// Line 18
-	echo T_("Daily report");                                                          // Line 20
-	echo T_("In many collections received daily reports of the employees is very important. On the other hands Employees reluctant to do that. In addition to the classical method, using social networks on Twitter and Daily Telegram reported in Tejarak possible to get there.");// Line 21
-	echo T_("Salary calculator");                                                     // Line 23
-	echo T_("For many small business is very complex method of calculating monthly salary and they Need to have simpler method. In addition to supporting traditional methods, Tejarak provide monthly salary simple solutions to employees have modern and beautiful Payroll.");// Line 24
-
-	//------------------------------------------content\template\static\changelog.html
-	echo T_("Change log of Tejarak");                                                 // Line 3
-	echo T_("We were born to do Best!");                                              // Line 53
-	echo T_("We are Developers, please wait!");                                       // Line 20
-	echo T_("Date");                                                                  // Line 15
-	echo T_("Description");                                                           // Line 16
-	echo T_("Version 1 of Tejarak is comming");                                       // Line 26
-	echo T_("Beta version of Tejarak released");                                      // Line 31
-	echo T_("Finally Tejarak logo is accepted and we started branding");              // Line 38
-	echo T_("Alfa version of Tejarak released");                                      // Line 44
-	echo T_("The name of project selected as Tejarak and <a href='http://Tejarak.ir'>Tejarak.ir</a> domains registered.");// Line 48
 
 	//-----------------------------------------content\template\static\enterprise.html
 	echo T_("Enterprise");                                                            // Line 3
 	echo T_("Have a headaches? We have soulutions. Be patient...");                   // Line 6
 	echo T_("Big companies simply don’t work like small companies, and they don’t use Tejarak the same way either. That’s why there’s Enterprise.");// Line 14
-
-	//-----------------------------------------------content\template\static\logo.html
-	echo T_("Tejarak Logo");                                                          // Line 3
-	echo T_("Need know more about Tejarak Logo? Be patient...");                      // Line 6
-	echo T_("Drawing logo");                                                          // Line 12
-	echo T_("Dowload our logo");                                                      // Line 79
-	echo T_("Square");                                                                // Line 80
-	echo T_("Circle");                                                                // Line 114
 
 	//--------------------------------------------content\template\static\privacy.html
 	echo T_("We wish to assure you that our main concern is to secure your privacy and protect your information against impermissible access.");// Line 6
@@ -213,7 +176,7 @@ private function transtext()
 	echo T_("Meanwhile, widespread controversies have been provoked over invasion of privacy in e-commerce so that, occasionally, the regulations have to be revised to eliminate the existing weaknesses.");// Line 18
 	echo T_("Privacy from Our Point of View");                                        // Line 20
 	echo T_("Let us be straightforward! Cyberspace is not a safe location for personal information.");// Line 21
-	echo T_("For that reason, Tejarak makes no request for important information of yours and allow to save some general information including age, gender, education, interests, etc  is only for private use of your team or company.");// Line 22
+	echo T_("For that reason, Ermile makes no request for important information of yours and allow to save some general information including age, gender, education, interests, etc  is only for private use of your team or company.");// Line 22
 	echo T_("It is worth mentioning that recording the aforementioned points is totally voluntary.");// Line 22
 	echo T_("However, taking the nature of cyberspace into account, we should remember that offering an absolute assurance might not be possible.");// Line 23
 	echo T_("Assuring privacy and security, with that ideal concept we bear in mind, does not exist; and if somebody gives you an assurance of securing your privacy, he has certainly abused your trust.");// Line 23
@@ -223,24 +186,24 @@ private function transtext()
 	echo T_("As the final remark, we wish to assure you that our main concern is to secure your privacy and protect your information against impermissible access.");// Line 26
 
 	//------------------------------content\template\static\social-responsibility.html
-	echo T_("Tejarak Social Responsibility");                                         // Line 3
+	echo T_("Ermile Social Responsibility");                                          // Line 3
 	echo T_("Social responsibility refers to our role in maintaining, caring about and helping our society, while having set as its goal a responsibility-centered enterprise along with wealth production.");// Line 13
 	echo T_("The issue of the social responsibility of organizations and corporations towards the society is from among the important issues being focused on in recent years.");// Line 15
 	echo T_("The social responsibility of organizations relates to the organization's responsibility towards society, human beings and the environment in which they are active.");// Line 15
-	echo T_("Tejarak's Social Responsibilities");                                     // Line 17
-	echo T_("Based on the mentioned definitions of social responsibility, Tejarak considers itself committed to society. Accordingly, besides attempting to offer creative and effective services, Tejarak has invariably had social responsibility as one of its most important missions and, God willing, will continue to do so.");// Line 18
+	echo T_("Ermile's Social Responsibilities");                                      // Line 17
+	echo T_("Based on the mentioned definitions of social responsibility, Ermile considers itself committed to society. Accordingly, besides attempting to offer creative and effective services, Ermile has invariably had social responsibility as one of its most important missions and, God willing, will continue to do so.");// Line 18
 	echo T_("Environmentalist");                                                      // Line 20
-	echo T_("In spite of technological advancements, paper usage is unfortunately preferred to modern ways. One of Tejarak's objectives is trying to change this habit and contribute to the elimination of paper from the routine life and, therefore, to save the environment.");// Line 21
-	echo T_("Accordingly, with the aim of total elimination of paper use as well as electronic presentation of services, Tejarak has taken significant steps towards environmentalism. Be informed about Tejarak's paper-saving quantity.");// Line 22
+	echo T_("In spite of technological advancements, paper usage is unfortunately preferred to modern ways. One of Ermile's objectives is trying to change this habit and contribute to the elimination of paper from the routine life and, therefore, to save the environment.");// Line 21
+	echo T_("Accordingly, with the aim of total elimination of paper use as well as electronic presentation of services, Ermile has taken significant steps towards environmentalism. Be informed about Ermile's paper-saving quantity.");// Line 22
 	echo T_("Philanthropist Activities");                                             // Line 24
 	echo T_("One of the most valuable resources of charity organizations is the voluntary and active participation of the individuals who, without any expectations, provide them with their skillfulness and capital.");// Line 25
-	echo T_("Tejarak as well, with regard to its contribution to philanthropist activities, will honorably provide them with its services free of charge. To make use of these services, send your identity documents along with your request to Tejarak's support center.");// Line 26
+	echo T_("Ermile as well, with regard to its contribution to philanthropist activities, will honorably provide them with its services free of charge. To make use of these services, send your identity documents along with your request to Ermile's support center.");// Line 26
 	echo T_("Recruiting Motivated Staff");                                            // Line 28
 	echo T_("An outstanding characteristic of any organization is its specialized and highly motivated staff, playing a vital role in growth and development.");// Line 29
 	echo T_("By the same token, we are always looking for creative and motivated Iranian youths in order to make the best and be effective in cooperation with them.");// Line 29
 	echo T_("Join us and grow in a different location.");                             // Line 29
 	echo T_("Customer Care and Complete Satisfaction");                               // Line 32
-	echo T_("Attracting people's participation as well as having their valuable presence has always been a great honor for Tejarak and to appreciate your support, in return, Tejarak presents services to promote customer satisfaction.");// Line 33
+	echo T_("Attracting people's participation as well as having their valuable presence has always been a great honor for Ermile and to appreciate your support, in return, Ermile presents services to promote customer satisfaction.");// Line 33
 	echo T_("These services are presented in different time intervals and are aimed at costomer care mission and appreciation of your valuable presence.");// Line 33
 
 	//----------------------------------------------content\template\static\terms.html
