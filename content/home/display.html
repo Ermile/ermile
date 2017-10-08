@@ -5,11 +5,13 @@
 
  {{block('topHomepage')}}
 
+ {{block('meeting')}}
 
  {{block('abc')}}
  {{block('sarshomar')}}
  {{block('tejarak')}}
  {{block('azvir')}}
+ {{block('table')}}
 
 
  {{block('enterprise')}}
@@ -23,6 +25,20 @@
    <h2>{%trans "Software Solution Designer"%}</h2>
    <h3>{%trans "If you are not finded a solution for your problem, call us."%} {%trans "We can provide a wide range of enterprise services to you."%}</h3>
   </div>
+ </div>
+{%endblock%}
+
+
+{%block meeting%}
+ <div id='meeting'>
+    <img src='{{url.static}}images/homepage/meeting.jpg' alt='{{site.desc}}'>
+ </div>
+{%endblock%}
+
+
+{%block table%}
+ <div id='table'>
+    <img src='{{url.static}}images/homepage/ermile_table.jpg' alt='{{site.desc}}'>
  </div>
 {%endblock%}
 
