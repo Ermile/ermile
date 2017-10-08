@@ -1,0 +1,56 @@
+{%extends display.main%}
+
+{%set pageTitle%}{%trans "Change log of Tejarak"%}{%endset%}
+
+{%set pageDesc%}
+{%trans "We were born to do Best!"%} | {%trans "We are Developers, please wait!"%}
+{%endset%}
+
+
+
+{%block page%}
+
+   <div class="tbl p dtc">
+    <div class="f th">
+     <div class="c2 ar">{%trans "Date"%}</div>
+     <div class="c">{%trans "Description"%}</div>
+    </div>
+    <div class="f">
+     <div class="c2 ar">...</div>
+     <div class="c">{%trans "We are Developers, please wait!"%}</div>
+    </div>
+    <!-- next version ? -->
+
+    <div class="f">
+     <div class="c2 ar">{{"2017-07-01" | tdate("j F Y")}}</div>
+     <div class="c">{%trans "Version 1 of Tejarak is comming"%}</div>
+    </div>
+
+    <div class="f">
+     <div class="c2 ar">{{"2017-06-27" | tdate("j F Y")}}</div>
+     <div class="c">{%trans "Beta version of Tejarak released"%}</div>
+    </div>
+
+{%if false%}
+
+    <div class="f">
+     <div class="c2 ar">{{"2017-02-09" | tdate("j F Y")}}</div>
+     <div class="c">{%trans "Finally Tejarak logo is accepted and we started branding"%}</div>
+    </div>
+{%endif%}
+
+    <div class="f">
+     <div class="c2 ar">{{"2016-10-01" | tdate("j F Y")}}</div>
+     <div class="c">{%trans "Alfa version of Tejarak released"%}</div>
+    </div>
+    <div class="f">
+     <div class="c2 ar">{{"2014-06-08" | tdate("j F Y")}}</div>
+     <div class="c">{%trans "The name of project selected as Tejarak and <a href='http://Tejarak.ir'>Tejarak.ir</a> domains registered."%}</div>
+    </div>
+
+    <div class="f">
+     <div class="c2 ar">...</div>
+     <div class="c">{%trans "We were born to do Best!"%}</div>
+    </div>
+   </div>
+{%endblock%}

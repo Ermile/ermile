@@ -1,0 +1,40 @@
+{%extends display.mvc%}
+
+{%use 'content/main/header-social.html'%}
+
+{%set siftalCSS%}off{%endset%}
+
+{%block head_css%}
+{%set codeUrl%}{%if url.tld == 'dev'%}http://code.ermile.dev/{%else%}https://code.ermile.com/{%endif%}{%endset%}
+{%endblock%}
+
+{%block body%}
+{%include template.header%}
+ <div class="wrapper" data-xhr='wrapper'>
+{%block content%}
+  <div class="page-block">
+   <div class="cn">
+{%block pageTitle%}
+    <div class="tile">
+     <h2>{{pageTitle}}</h2>
+     <h3>{{pageDesc}}</h3>
+    </div>
+{%endblock%}
+   </div>
+  </div>
+  <div class="pc">
+   <div class="cn">
+{%block page%}{%endblock%}
+   </div>
+  </div>
+{%block pageExtra%}{%endblock%}
+{%endblock%}
+ </div>
+{%include template.footer%}
+
+
+{%set introOption%}
+.setOptions({ 'nextLabel': '{%trans "Next →"%}', 'prevLabel': '{%trans "← Back"%}', 'skipLabel': '{%trans "Skip"%}', 'doneLabel': '{%trans "Done"%}', 'showStepNumbers': 'false', 'showProgress': 'true' })
+{%endset%}
+
+{%endblock%}

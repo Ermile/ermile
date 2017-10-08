@@ -1,21 +1,31 @@
 {%extends display.mvc%}
-{%block content%}
-  <section>
-    <div class="topic blue1">
-      <div class="row Slogan">
-        <h2>Default</h2>
-      </div>
-      <div class="body">
-        <div class="row">
-          <div class="span7"></div>
-          <div class="span5">
-            <div class="desc">
-              {{post.content}}
-            </div>
 
-          </div>
-        </div>
-      </div>
-    </div>
+
+{%block content%}
+ <div class="container">
+  <header>
+   <h1><a href="{{url.base}}" data-direct class="hint--right hint--info" data-hint="{{site.desc}}">{{site.title}}</a></h1>
+
+   <nav class="breadcrumb unselectable" data-xhr="breadcrumb" tabindex='-1' data-step='4' data-intro='{%trans "View your current location and navigate to parent of it"%}' data-position='bottom'>
+{%block breadcrumb%}
+   {{breadcrumb(null, true) | raw}}
+{%endblock%}
+   </nav>
+  </header>
+
+  <section data-xhr="page-content">
+{%block page_content%}
+   <h2>{{post.title}}</h2>
+   <div class="content">{{post.content |raw}}</div>
+   <nav id="page-nav">
+    <a href="{{nav.prev.url}}" id="nav-prev">{{nav.prev.title}}</a>
+    <a href="{{nav.next.url}}" id="nav-next">{{nav.next.title}}</a>
+   </nav>
+{%endblock%}
   </section>
+
+  <footer>
+    {%trans "Some right reserved!"%}
+  </footer>
+ </div>
 {%endblock%}

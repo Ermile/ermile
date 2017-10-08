@@ -1,20 +1,31 @@
-{%extends display.home%}
+{%extends display.main%}
 
-{%block article%}
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.9222715295373!2d50.884069915550675!3d34.631404494433475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f93bc8773e6f7b5%3A0xc7376f2f87852216!2z2LPYsdi02YXYp9ix!5e0!3m2!1sen!2sir!4v1483090313738" width="100%" height="200px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowfullscreen style="border:0"></iframe>
-<p>{%trans%}Ermile is ready for future...{%endtrans%}</p>
-<p>{%trans%}Maybe tomorrow you hear more about our works!{%endtrans%}</p>
+{%set pageTitle%}{%trans "About Tejarak"%}{%endset%}
 
-{%set linkTld %}{%if site.currentlang == 'fa'%}ir{%else%}com{%endif%}{%endset%}
-{%set linkProtocol %}{%if site.currentlang == 'fa'%}http{%else%}https{%endif%}{%endset%}
+{%set pageDesc%}
+{%trans "Tejarak have a set of simple and practical tools on a regular basis for modern businesses."%}
+{%endset%}
 
-<p>
-	<a href="{{linkProtocol}}://talambar.{{linkTld}}">{%trans%}Talambar{%endtrans%}</a>,
-	<a href="http://jibres.{{linkTld}}">{%trans%}Jibres{%endtrans%}</a>,
-	<a href="{{linkProtocol}}://azvir.{{linkTld}}">{%trans%}Azvir{%endtrans%}</a>,
-	<a href="{{linkProtocol}}://sarshomar.{{linkTld}}">{%trans%}Sarshomar{%endtrans%}</a>,
-	<a href="http://saloos.ir">{%trans%}Saloos{%endtrans%}</a>,
-	<a href="{{linkProtocol}}://deadbrowser.{{linkTld}}">{%trans%}DeadBrowser{%endtrans%}</a>
-</p>
-<p>{%trans%}#614, Omranieh, Moallem St, Qom, Iran{%endtrans%} {%trans%}+98 25 3773 5183{%endtrans%}</p>
+{%block page%}
+
+   <div class="pa">
+
+    <p>{%trans "Advancement of technology and development of Web-based business Cause Need new tools to resolve the daily needs and that’s the goal of making Tejarak."%} {%trans "Tejarak have a set of simple and practical tools on a regular basis for modern businesses."%}</p>
+
+    <p class="em">{%trans "It’s good to know that in addition to the core services, features such as inventory and invoice will be added."%}</p>
+
+    <h2>{%trans "Attendance system"%}</h2>
+    <p>{%trans "Attendance is so different in Tejarak. Beautiful and stylish design without requiring any hardware. Notification via social networks, Online reports and difference compared to other systems are the best feature of Tejarak."%}</p>
+
+    <h2>{%trans "Daily report"%}</h2>
+    <p>{%trans "In many collections received daily reports of the employees is very important. On the other hands Employees reluctant to do that. In addition to the classical method, using social networks on Twitter and Daily Telegram reported in Tejarak possible to get there."%}</p>
+
+    <h2>{%trans "Salary calculator"%}</h2>
+    <p>{%trans "For many small business is very complex method of calculating monthly salary and they Need to have simpler method. In addition to supporting traditional methods, Tejarak provide monthly salary simple solutions to employees have modern and beautiful Payroll."%}</p>
+
+   </div>
+
+
+
+
 {%endblock%}

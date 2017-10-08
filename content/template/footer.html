@@ -1,0 +1,66 @@
+ <footer id='tfooter'>
+  <div class="cn">
+
+   <nav class="f top">
+    <a class="cauto link_home" href="{{url.base}}">{%trans "Home"%}</a>
+    <a class="cauto" href="{{url.base}}/about">{%trans "About"%}</a>
+    <a class="cauto hide" href="{{url.base}}/press">{%trans "Press and Media"%}</a>
+    <a class="cauto" href="{%if site.currentlang =='fa'%}https://ermile.com/fa{%else%}https://ermile.com{%endif%}/careers" target="_blank">{%trans "Careers"%}</a>
+    <a class="cauto" href="{{url.base}}/social-responsibility">{%trans "Social Responsibility"%}</a>
+    <a class="cauto" href="{{url.base}}/help/faq">{%trans "FAQ"%}</a>
+   </nav>
+
+   <div class="f middle">
+{%if site.currentlang =='fa'%}
+    <nav class="cauto enamad">
+     <a href="#enamad"><img src="{{url.static}}images/cert/enamad2.png" alt='{%trans "Enamad"%}' onclick='window.open("https://trustseal.enamad.ir/Verify.aspx?id=61968&p=hwmbnbpdjzpghwmbaqgw", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")'></a>
+    </nav>
+{%endif%}
+
+
+   <nav class="c3 s12">
+     <h4>{%trans "Tejarak"%}</h4>
+      <a href="{{url.base}}/benefits">{%trans "Benefits"%}</a>
+      <a href="{{url.base}}/pricing">{%trans "Pricing"%}</a>
+    </nav>
+
+    <nav class="c3 s12">
+     <h4>{%trans "Learn More"%}</h4>
+      <a href="{{url.base}}/terms">{%trans "Terms of Service"%}</a>
+      <a href="{{url.base}}/privacy">{%trans "Privacy Policy"%}</a>
+      <a href="{{url.base}}/changelog">{%trans "Changelog"%}</a>
+    </nav>
+
+    <nav class="c3 s12">
+     <h4>{%trans "Support"%}</h4>
+      <a href="{{url.base}}/contact">{%trans "Contact"%}</a>
+      <a href="{{url.base}}/help/faq">{%trans "FAQ"%}</a>
+      <a href="{{url.base}}/logo">{%trans "Logo"%}</a>
+    </nav>
+
+{%if true%}
+    <div class="c s12 os">
+     {%include template.social%}
+    </div>
+{%endif%}
+
+   </div>
+
+   <div class="f bottom">
+    <div class="c s6">{{langList({'html':true})}}</div>
+    <div class="cauto "><span>{{footer_stat}}</span></div>
+    <div class="c s6 love"><a href="{%if site.currentlang =='fa'%}https://ermile.com/fa{%else%}https://ermile.com{%endif%}" target="_blank">{%trans "Proudly Made in IRAN"%}</a></div>
+   </div>
+
+  </div>
+
+{%if perm('cp') or main_account or perm('admin:everyone_login:view')%}
+  <div id="xaccess">
+{%if perm('cp') and false%}<a href="{{url.base}}/cp" data-direct>{%trans "Control Panel"%}</a>{%endif%}
+{%if perm('admin')%}<a href="{{url.base}}/a">{%trans "Admin Panel"%}</a>{%endif%}
+{%if main_account %}<a href="{{url.base}}/enter?mobile={{main_mobile}}&referer={{url.full}}" data-direct>{%trans "Exit Session"%}</a>{%endif%}
+{%if perm('admin:everyone_login:view') %}<a href="{{url.base}}/enter" data-direct>{%trans "Another Session"%}</a>{%endif%}
+  </div>
+{%endif%}
+
+ </footer>

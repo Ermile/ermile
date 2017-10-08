@@ -8,7 +8,7 @@ class view extends \lib\mvc\view
 		// set default value for site properties
 		$this->data->site['title']   = T_("Ermile");
 		$this->data->site['desc']    = T_("Ermile contain a new tools for each one");
-		$this->data->site['slogan']  = T_("One account to access all service");
+		$this->data->site['slogan']  = T_("As easy as ABC");
 
 		$this->data->page['desc']    = T_("Ermile is inteligent");
 
@@ -26,6 +26,10 @@ class view extends \lib\mvc\view
 		// $this->include->datatable    = null;
 		// $this->include->telinput     = null;
 		// $this->include->editor       = null;
+
+		$this->data->template['social']      = 'content/template/social.html';
+		$this->data->template['share']       = 'content/template/share.html';
+
 	}
 }
 ?>

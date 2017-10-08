@@ -1,38 +1,140 @@
-{%extends display.mvc%}
-
-{%block header%}
-<header>
- <img id="logo" src="{{url.static}}images/ermile.png" alt="">
- <h1>{{site.title}}</h1>
- <h2>{{site.desc}}</h2>
-</header>
-{%endblock%}
+{%extends display.main%}
 
 
 {%block content%}
-<nav data-xhr='nav'>
-{%block nav%}
- <a href="{{url.base}}" title="Ermile Homepage" {%if module =='home'%}class="active"{%endif%}>{%trans "Home"%}</a>
- <a href="{{url.base}}/about" title='{%trans "About Ermile"%}' {%if module =='about'%}class="active"{%endif%}>{%trans "About"%}</a>
- <a href="{{url.base}}/mission" title='{%trans "Ermile Missions"%}' {%if module =='mission'%}class="active"{%endif%}>{%trans "Mission"%}</a>
- <a href="{{url.base}}/vision" title='{%trans "Ermile Visions"%}' {%if module =='vision'%}class="active"{%endif%}>{%trans "Vision"%}</a>
- <a href="{{url.base}}/careers" title='{%trans "Ermile Careers"%}' {%if module =='careers'%}class="active"{%endif%} data-direct>{%trans "Careers"%}</a>
-{%endblock%}
-</nav>
 
-<div data-xhr='article' class="container main">
-{%block article%}{%endblock%}
-</div>
+ {{block('topHomepage')}}
+
+
+ {{block('sync')}}
+ {{block('everyteam')}}
+ {{block('enterprise')}}
+ {{block('tryRegister')}}
+
 {%endblock%}
 
 
-{%block footer%}
-<footer>
-  <div class="container">
-    <div class="hint--right" data-hint='{{site.desc}}'>
-      <span>&copy; {{'now'|date('Y')}}</span> <a href="{{url.root}}" class="roll-link"><span data-title="{{site.title}}">{{site.title}}</span></a>
-    </div>
-    {{langList({'html':true, 'class':"float-right"})}}
+{%block topHomepage%}
+ <div class="tile" id='firstView'>
+  <div class="cn">
+   <h2>{%trans "Do attendance easily and enjoy real time reports"%}</h2>
+   <h3>{%trans "Setup your dedicated and beautiful attendance system in less than a minute and have a <span>real time</span> and scrupulously monitoring on your business from anywhere"%}</h3>
+   {{block('getStarted')}}
   </div>
-</footer>
+ </div>
 {%endblock%}
+
+
+
+{%block getStarted%}
+{%if login.id%}
+{%else%}
+ <div class="getStarted">
+  <form class="f" action="{{url.base}}/enter" method="get" data-action>
+   <input type="text" name="param-team" class="c s12" placeholder='{%trans "Enter your team name"%}'>
+   <button class="c s12">{%trans "Get Started"%}</button>
+  </form>
+  <p>{%trans "Try Tejarak FREE;) no credit, no risk!"%}</p>
+ </div>
+{%endif%}
+{%endblock%}
+
+
+{%block tryRegister%}
+ {%if login.id%}
+ {%else%}
+ <div class="tile" id='notReady'>
+  <div class="cn">
+   <h2>{%trans "What are you waiting for?"%}</h2>
+   <h3>{%trans "Not sure how to start?"%} {%trans "Tejarak is <span>free</span> to use as long as you want for teams of all sizes."%} {%trans "Not worries."%}</h3>
+   <h3>
+   <a href="{{url.base}}/enter" data-direct class="btn">{%trans "FREE ticket to Enter to the 21st century!"%}</a>
+   </h3>
+   <h4>{%trans "You can easily upgrade to "%} <a href='{{url.base}}/pricing'>{%trans "our paid plans"%}</a>{%trans ", which offer more features and controls."%}</h4>
+  </div>
+ </div>
+ {%endif%}
+{%endblock%}
+
+
+
+
+{%block sync%}
+ <div class="tile" id='everythingSync'>
+  <div class="cn f fix">
+   <div class="c m12 s12">
+    <h2>{%trans "Wherever You Go"%} </h2>
+    <h3>{%trans "Enjoy your travels and do not be too concerned about control attendance in your business."%} {%trans "Everything is in sync."%}</h3>
+    <h3>{%trans "In addition of website, without need to install app, check real time reports of staffs status from messengers like <span>Telegram</span>, SMS, email in your mobile."%} {%trans "Anywhere, from sitting on the chair of management to sitting on the beach!"%}</h3>
+   </div>
+
+   <div class='x3 c4 m12 s12'>
+    <svg version="1.1" id="rest_on_beach" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+     <g class='bed'>
+      <path style="fill:#F4E6CE;" d="M52.125,27.875L52.125,27.875c-1.167-1.167-3.076-1.167-4.243,0L31.757,44H4.037c-1.65,0-3,1.35-3,3 c0,1.65,1.35,3,3,3h28c1.172,0,2.255-0.333,3.118-0.912l16.971-16.971C53.292,30.951,53.292,29.042,52.125,27.875z"/>
+      <polyline style="fill:none;stroke:#7F6E5D;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" points="1,53 36,53 59,30"/>
+      <line style="fill:none;stroke:#7F6E5D;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="59" y1="57" x2="46" y2="44"/>
+      <path style="fill:#CB8252;stroke:#7F6E5D;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M57.513,56H1v-3h54 l2.655,2.655C57.783,55.783,57.692,56,57.513,56z"/>
+     </g>
+     <g class='sun {% if browser.moz_data[0] == "firefox"%}{%else%}spiny{%endif%} '>
+      <circle style="fill:#F29C1F;stroke:#F0C419;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" cx="17" cy="13" r="7"/>
+      <line style="fill:none;stroke:#F0C419;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="17" y1="6" x2="17" y2="3"/>
+      <line style="fill:none;stroke:#F0C419;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="17" y1="23" x2="17" y2="20"/>
+      <line style="fill:none;stroke:#F0C419;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="24" y1="13" x2="27" y2="13"/>
+      <line style="fill:none;stroke:#F0C419;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="7" y1="13" x2="10" y2="13"/>
+      <line style="fill:none;stroke:#F0C419;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="12.05" y1="8.05" x2="9.929" y2="5.929"/>
+      <line style="fill:none;stroke:#F0C419;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="24.071" y1="20.071" x2="21.9" y2="17.95"/>
+      <line style="fill:none;stroke:#F0C419;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="21.95" y1="8.05" x2="24.071" y2="5.929"/>
+      <line style="fill:none;stroke:#F0C419;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="9.929" y1="20.071" x2="12.05" y2="17.95"/>
+     </g>
+      <g class='umbrella'>
+       <path style="fill:#81CCB8;stroke:#81CCB8;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;" d="M38.966,7.914 c-1.49-0.86-3.403-0.414-4.231,1.021c3.452-5.979,10.847-7.594,16.825-4.142s8.277,10.664,4.825,16.642 c0.828-1.435,0.259-3.315-1.231-4.175c-1.49-0.86-3.37-0.395-4.198,1.04c0.828-1.435,0.292-3.295-1.198-4.156 c-1.49-0.86-3.37-0.394-4.198,1.04c0.828-1.435,0.292-3.295-1.198-4.156s-3.37-0.394-4.198,1.04 C40.992,10.634,40.456,8.774,38.966,7.914z"/>
+       <path style="fill:#546A79;" d="M31.757,44l0.741-0.741l14.128-27.806c0.25-0.492,0.054-1.095-0.438-1.345 c-0.493-0.248-1.095-0.053-1.345,0.438l-14.734,29c-0.074,0.146-0.098,0.3-0.097,0.453H31.757z"/>
+      </g>
+    </svg>
+   </div>
+
+  </div>
+ </div>
+{%endblock%}
+
+
+{%block everyteam%}
+ <div class="tile" id='anyTeam'>
+  <div class="cn f fix">
+   <picture class="cauto m12 s12">
+    <source srcset="{{url.static}}images/homepage/preview-any-team.jpg" media="(min-width: 500px)">
+    <img src="{{url.static}}images/homepage/preview-any-team.jpg" alt='{%trans "Ermile Preview"%}'>
+   </picture>
+
+   <div class="c m12 s12">
+    <h2>{%trans "Work With Any Team"%}</h2>
+    <h3>{%trans "For each work need attendance use Tejarak!"%} {%trans "Your business, a side project and anywhere you need to control traffic and add some organized."%}</h3>
+   </div>
+  </div>
+ </div>
+{%endblock%}
+
+
+{%block enterpriseold%}
+ <div class="tile" id='offer-enterprise'>
+  <div class="cn">
+   <h3>{%trans "Is your team interested in deploying?"%} {%trans "We can help."%}</h3>
+   <a href="{{url.base}}/enterprise" class="btn">{%trans "Get in Touch"%}</a>
+  </div>
+ </div>
+{%endblock%}
+
+
+{%block enterprise%}
+ <div class="tile" id='offer-enterprise'>
+  <div class="cn">
+   <h2>{%trans "All of the above, at Enterprise scale"%}</h2>
+   <h3>{%trans "Enterprise plan brings the power and utility of Tejarak to large, complex organizations."%}</h3>
+   <a href="{{url.base}}/enterprise" class="btn">{%trans "Get in Touch"%}</a>
+  </div>
+ </div>
+{%endblock%}
+
+
+

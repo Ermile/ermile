@@ -3,19 +3,26 @@ namespace content\home;
 
 class view extends \mvc\view
 {
-	public function options()
+	function config()
 	{
-		// $this->include->css_main    = null;
-		$this->include->fontawesome = true;
+		$this->data->bodyclass = 'unselectable vflex';
+		// $this->include->js     = false;
 
-		$this->data->bodyclass  = 'unselectable';
+		$this->data->page['title']   = $this->data->site['title'] . ' | '. $this->data->site['slogan'];
+		$this->data->page['special'] = true;
+	}
 
-    if($this->data->module == 'careers')
-    {
-      $this->include->css = false;
-      $this->include->js = false;
 
-    }
+	/**
+	 * [pushState description]
+	 * @return [type] [description]
+	 */
+	function pushState()
+	{
+		// if($this->module() !== 'home')
+		// {
+		// 	$this->data->display['mvc']     = "content/home/layout-xhr.html";
+		// }
 	}
 }
 ?>

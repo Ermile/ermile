@@ -1,0 +1,76 @@
+{%extends display.main%}
+
+{%set pageTitle%}{%trans "Contact Us"%}{%endset%}
+
+
+{%set pageDesc%}
+{%trans "Knowing your valuable comments about bugs and problems and more importantly your precious offers will help us in this way."%}
+{%endset%}
+
+{%block page%}
+
+ <div class="f content p">
+  <div class="c6 s12">
+   <p>{%trans "Thank you for choosing us."%}<br/>{%trans "We do our best to improve our quality. So, knowing your valuable comments about bugs and problems and more importantly your precious offers will help us in this way."%}</p>
+   <form method="post" data-clear class="dft">
+   {%if login%}
+   {%else%}
+    <div class="f pab">
+     <label class="c2" for="name">{%trans "Name"%}</label>
+     <input class="c" type="text" name="name" id="name" placeholder='{%trans "Full Name"%}' maxlength='40'>
+    </div>
+    <div class="f pab">
+     <label class="c2" for="mobile">{%trans "Mobile"%}</label>
+     <input class="c en" type="tel" name="mobile" id="mobile" placeholder='98 912 333 4444' maxlength="17" autocomplete="off" data-validity='{%trans "Please enter valid mobile number. `:val` is incorrect"%}'>
+    </div>
+    <div class="f pab">
+     <label class="c2" for="email">{%trans "Email"%}</label>
+     <input class="c en" type="email" name="email" id="email" placeholder='mail@example.com' maxlength='40'>
+    </div>
+   {%endif%}
+    <div class="f pab">
+     <label class="c2" for="content">{%trans "Message"%} *</label>
+     <textarea class="c textarea" name="content" placeholder='{%trans "Your Message"%}' minlength="5" maxlength="1000" data-resizable></textarea>
+    </div>
+    <div class="f pab">
+     <div class="c2"></div>
+     <button type="submit" name="submit-contact" class="c btn try submit-contact">{%trans "Send"%}</button>
+    </div>
+
+   </form>
+  </div>
+
+
+  <div class="c4 s12 os bg-white pas">
+     <h3>{%trans "How to contact us"%}</h3>
+    <div class="contact-data">
+
+       <address class="vcard">
+        <div class="email ltr">info@ermile.com</div>
+        <a class="tel ltr" href="tel:+982536505281">{{"(+98) 25" | fitNumber}} {{"3650 5281" | fitNumber}}</a>
+        <a class="tel ltr" href="tel:+982128422590">{{"(+98) 21" | fitNumber}} {{"2842 2590" | fitNumber}}</a>
+        <div class="author author_name hide"><span class="fn">{%trans "ermile"%}</span></div>
+        <div class="adr">
+{%if site.currentlang =='en'%}
+          <div class="extended-address">{%trans "Ermile, Floor2, Yas Building"%}</div>
+          <div class="street-address">{%trans "1st alley, Haft-e-tir St"%}</div>
+          <div class="locality">{%trans "Qom"%}</div>
+          <div class="country-name">{%trans "Iran"%}</div>
+{%else%}
+          <div class="country-name">{%trans "Iran"%}</div>
+          <div class="locality">{%trans "Qom"%}</div>
+          <div class="street-address">{%trans "1st alley, Haft-e-tir St"%}</div>
+          <div class="extended-address">{%trans "Floor2, Yas Building"%}</div>
+{%endif%}
+          <div class="postal-code">{{"37196-17541" | fitNumber }}</div>
+        </div>
+       </address>
+    </div>
+    <a href="https://goo.gl/maps/LzrNWxaaqWx" target="_blank" class="map">
+     <img src="{{url.static}}images/map.png">
+    </a>
+
+  </div>
+
+ </div>
+{%endblock%}
