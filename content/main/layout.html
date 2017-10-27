@@ -5,7 +5,7 @@
 {%set siftalCSS%}off{%endset%}
 
 {%block head_css%}
-{%set codeUrl%}{%if url.tld == 'dev'%}http://code.ermile.dev/{%else%}https://code.ermile.com/{%endif%}{%endset%}
+ <link rel="stylesheet" href="{{url.static}}/css/ermile.css?v=10.3.0">
 {%endblock%}
 
 {%block body%}

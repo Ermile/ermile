@@ -1,9 +1,9 @@
 <?php
 namespace mvc;
 
-class view extends \lib\mvc\view
+class view extends \lib\view
 {
-	function _construct()
+	function project()
 	{
 		// set default value for site properties
 		$this->data->site['title']   = T_("Ermile");
@@ -18,7 +18,7 @@ class view extends \lib\mvc\view
 
 
 		// default value for includes. if you use one of the files set it true
-		// $this->include->css_main     = true;
+		$this->include->css_main     = false;
 		// $this->include->js_main      = true;
 		// $this->include->css          = true;
 		// $this->include->js           = true;
@@ -26,6 +26,8 @@ class view extends \lib\mvc\view
 		// $this->include->datatable    = null;
 		// $this->include->telinput     = null;
 		// $this->include->editor       = null;
+		$this->include->css_ermile       = false;
+
 
 		$this->data->template['social']      = 'content/template/social.html';
 		$this->data->template['share']       = 'content/template/share.html';

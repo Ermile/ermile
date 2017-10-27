@@ -2,8 +2,8 @@
 namespace mvc;
 use \lib\router;
 
-class controller extends \lib\mvc\controller
+class controller extends \lib\controller
 {
-	
+
 }
 ?>
