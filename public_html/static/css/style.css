@@ -261,6 +261,8 @@ picture{display:block;}
 #offer-enterprise-small h3, #offer-enterprise-small h4{padding:0 5%;color:#fff}
 #offer-enterprise-small .btn{padding:0 5em;}
 #plans{background-color:#eee}
+#meeting img{display:block;}
+#table img{display:block;}
 
 /*#plans{*/
   /*background-image:url(../images/pattern/confectionary.png);*/
