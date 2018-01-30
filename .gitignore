@@ -5,11 +5,16 @@ desktop.ini
 *tg.json
 *.me.*
 /public_html/files
+/content/cronjob/*.txt
 /public_html/sitemap
 /public_html/sitemap.xml
-/includes/cls/database/backup
-/includes/cls/database/log
+
+/includes/database/backup
+/includes/database/log
+/includes/database/version
+
 *sftp-config.json
+*.me.php
 
 .sass-cache
 *.css.map
