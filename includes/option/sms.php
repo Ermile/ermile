@@ -7,8 +7,8 @@ self::$sms['kavenegar']['apikey'] = '783067644A597A41716F3734755A683152736F66737
 self::$sms['kavenegar']['debug']  = null;
 self::$sms['kavenegar']['line']   = '10006660066600';
 self::$sms['kavenegar']['iran']   = true;
-self::$sms['kavenegar']['header'] = 'Jibres';
-self::$sms['kavenegar']['footer'] = 'Jibres.com';
+self::$sms['kavenegar']['header'] = 'Ermile';
+self::$sms['kavenegar']['footer'] = 'Ermile.com';
 self::$sms['kavenegar']['one']    = true;
 
 
