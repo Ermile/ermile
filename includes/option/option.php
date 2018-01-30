@@ -47,6 +47,10 @@ self::$config['domain_name']                  = 'ermile';
 self::$config['main_site']                    = 'https://ermile.com';
 
 
+self::$config['enter']['verify_telegram'] = false;
+self::$config['enter']['verify_sms']      = true;
+self::$config['enter']['verify_call']     = true;
+self::$config['enter']['verify_sendsms']  = false;
 
 
 
