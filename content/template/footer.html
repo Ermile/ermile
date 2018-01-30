@@ -3,8 +3,10 @@
 
    <nav class="f top">
     <a class="cauto link_home" href="{{url.base}}">{%trans "Home"%}</a>
+{%if false%}
     <a class="cauto hide" href="{{url.base}}/about">{%trans "About"%}</a>
     <a class="cauto hide" href="{{url.base}}/press">{%trans "Press and Media"%}</a>
+{%endif%}
     <a class="cauto" href="{%if site.currentlang =='fa'%}https://ermile.com/fa{%else%}https://ermile.com{%endif%}/careers" target="_blank">{%trans "Careers"%}</a>
     <a class="cauto" href="{{url.base}}/social-responsibility">{%trans "Social Responsibility"%}</a>
    </nav>
