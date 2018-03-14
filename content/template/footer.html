@@ -51,7 +51,7 @@
   <div id="xaccess">
 {%if perm('cp') and false%}<a href="{{url.base}}/cp" data-direct>{%trans "Control Panel"%}</a>{%endif%}
 {%if perm('admin')%}<a href="{{url.base}}/a">{%trans "Admin Panel"%}</a>{%endif%}
-{%if main_account %}<a href="{{url.base}}/enter?mobile={{main_mobile}}&referer={{url.full}}" data-direct>{%trans "Exit Session"%}</a>{%endif%}
+{%if main_account %}<a href="{{url.base}}/enter?mobile={{main_mobile}}&referer={{url.pwd}}" data-direct>{%trans "Exit Session"%}</a>{%endif%}
 {%if perm('admin:everyone_login:view') %}<a href="{{url.base}}/enter" data-direct>{%trans "Another Session"%}</a>{%endif%}
   </div>
 {%endif%}
