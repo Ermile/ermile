@@ -8,9 +8,9 @@ class model extends \mvc\model
 
 	public function post_careers()
 	{
-		$name   = \lib\utility::post("name");
-		$number = \lib\utility::post("number");
-		$type   = \lib\utility::post("type");
+		$name   = \lib\request::post("name");
+		$number = \lib\request::post("number");
+		$type   = \lib\request::post("type");
 
 		if($type != 'php' && $type != 'js' && $type != 'graphic')
 		{
@@ -120,7 +120,7 @@ class model extends \mvc\model
 						'name'   => $name,
 						'fileRawName'   => $fileRawName,
 						'date'   => date("Y-m-d H:i:s", filemtime(self::$url. '/'. $file)),
-						'url'    => \lib\router::$base. '/files/careers/'. $file
+						'url'    => \lib\url::site(). '/files/careers/'. $file
 		            ];
 		        }
 		        closedir($dh);
