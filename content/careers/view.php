@@ -10,7 +10,7 @@ class view extends \mvc\view
 
 		$this->data->bodyclass  = 'unselectable';
 
-	    if($this->data->module == 'careers')
+	    if(\lib\url::module() == 'careers')
 	    {
 			$this->include->css = false;
 			$this->include->js  = false;
@@ -22,6 +22,6 @@ class view extends \mvc\view
 		$this->data->file_list = $_args->api_callback;
 	}
 
-	
+
 }
 ?>
