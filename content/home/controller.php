@@ -52,7 +52,7 @@ class controller extends \mvc\controller
 			return false;
 		}
 		// if on homepage return false
-		$url = \lib\router::get_url();
+		$url = \lib\url::directory();
 		if(!$url)
 		{
 			return false;

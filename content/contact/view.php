@@ -5,7 +5,7 @@ class view extends \mvc\view
 {
 	function config()
 	{
-		if($this->module() === 'home')
+		if(\lib\url::module() === null)
 		{
 			$this->include->js_main      = true;
 		}
