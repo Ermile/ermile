@@ -1,8 +1,6 @@
 <?php
 namespace content\careers;
-use \lib\debug;
-use \lib\utility;
-use \lib\utility\upload\check as upload;
+
 
 class model extends \mvc\model
 {
@@ -10,25 +8,25 @@ class model extends \mvc\model
 
 	public function post_careers()
 	{
-		$name   = utility::post("name");
-		$number = utility::post("number");
-		$type   = utility::post("type");
+		$name   = \lib\utility::post("name");
+		$number = \lib\utility::post("number");
+		$type   = \lib\utility::post("type");
 
 		if($type != 'php' && $type != 'js' && $type != 'graphic')
 		{
-			return debug::error(T_("Type not found"));
+			return \lib\debug::error(T_("Type not found"));
 		}
 		if(!$number)
 		{
-			return debug::error(T_("Contact number not set"));
+			return \lib\debug::error(T_("Contact number not set"));
 		}
 		if(!is_numeric($number))
 		{
-			return debug::error(T_("Contact number must be number"));
+			return \lib\debug::error(T_("Contact number must be number"));
 		}
 		if(strlen($number) != 11)
 		{
-			return debug::error(T_("Contact number must 11 character"));
+			return \lib\debug::error(T_("Contact number must 11 character"));
 		}
 
 		if(strlen($name) > 30)
@@ -36,22 +34,22 @@ class model extends \mvc\model
 			$name = substr($name, 0, 30);
 		}
 
-		if(!utility::files("file"))
+		if(!\lib\utility::files("file"))
 		{
-			return debug::error(T_("You must upload a CV file"));
+			return \lib\debug::error(T_("You must upload a CV file"));
 		}
 
 		$url = self::$url;
-		if(!utility\file::exists($url))
+		if(!\lib\utility\file::exists($url))
 		{
-			utility\file::makeDir($url);
+			\lib\utility\file::makeDir($url);
 		}
 		$url = $url. '/';
 		$url .= $type. '_'. $number. '_';
-		$url .= utility\filter::slug($name). '_';
-		$url .= '['.utility\filter::slug(utility::files("file")['name']).']';
+		$url .= \lib\utility\filter::slug($name). '_';
+		$url .= '['.\lib\utility\filter::slug(\lib\utility::files("file")['name']).']';
 
-		$path = utility\file::getName(utility::files("file")['name']);
+		$path = \lib\utility\file::getName(\lib\utility::files("file")['name']);
 		$path = explode('.', $path);
 		$path = end($path);
 
@@ -59,21 +57,21 @@ class model extends \mvc\model
 		// if(in_array($path, $extentionsDisallow))
 		if($path !== 'pdf')
 		{
-			return debug::error(T_("Can not upload this file! only PDF:/"));
+			return \lib\debug::error(T_("Can not upload this file! only PDF:/"));
 		}
 
 		$url = str_replace('-'. $path, '', $url);
 		$url .= '.'. $path;
 
-		if(isset(utility::files("file")['tmp_name']))
+		if(isset(\lib\utility::files("file")['tmp_name']))
 		{
-			if(move_uploaded_file(utility::files("file")['tmp_name'], $url))
+			if(move_uploaded_file(\lib\utility::files("file")['tmp_name'], $url))
 			{
-				return debug::true(T_("Thank you. Wait for our call"));
+				return \lib\debug::true(T_("Thank you. Wait for our call"));
 			}
 			else
 			{
-				return debug::true(T_("We could not upload CV file"));
+				return \lib\debug::true(T_("We could not upload CV file"));
 			}
 		}
 	}
