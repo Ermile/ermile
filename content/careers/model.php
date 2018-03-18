@@ -34,7 +34,7 @@ class model extends \mvc\model
 			$name = substr($name, 0, 30);
 		}
 
-		if(!\lib\utility::files("file"))
+		if(!\lib\request::files("file"))
 		{
 			return \lib\debug::error(T_("You must upload a CV file"));
 		}
@@ -47,9 +47,9 @@ class model extends \mvc\model
 		$url = $url. '/';
 		$url .= $type. '_'. $number. '_';
 		$url .= \lib\utility\filter::slug($name). '_';
-		$url .= '['.\lib\utility\filter::slug(\lib\utility::files("file")['name']).']';
+		$url .= '['.\lib\utility\filter::slug(\lib\request::files("file")['name']).']';
 
-		$path = \lib\utility\file::getName(\lib\utility::files("file")['name']);
+		$path = \lib\utility\file::getName(\lib\request::files("file")['name']);
 		$path = explode('.', $path);
 		$path = end($path);
 
@@ -63,9 +63,9 @@ class model extends \mvc\model
 		$url = str_replace('-'. $path, '', $url);
 		$url .= '.'. $path;
 
-		if(isset(\lib\utility::files("file")['tmp_name']))
+		if(isset(\lib\request::files("file")['tmp_name']))
 		{
-			if(move_uploaded_file(\lib\utility::files("file")['tmp_name'], $url))
+			if(move_uploaded_file(\lib\request::files("file")['tmp_name'], $url))
 			{
 				return \lib\debug::true(T_("Thank you. Wait for our call"));
 			}
