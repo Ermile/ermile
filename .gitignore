@@ -12,6 +12,7 @@ desktop.ini
 /includes/database/backup
 /includes/database/log
 /includes/database/version
+/includes/log
 
 *sftp-config.json
 *.me.php
