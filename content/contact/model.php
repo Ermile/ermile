@@ -108,19 +108,19 @@ class model extends \mvc\model
 
 
 		$url    = root. 'content/contact/allCommentJson';
-		// if(!\lib\utility\file::exists($url))
+		// if(!\lib\file::exists($url))
 		// {
-		// 	\lib\utility\file::makeDir($url, null, true);
+		// 	\lib\file::makeDir($url, null, true);
 		// }
 		// $url .= 'total_userteam.txt';
-		if(!\lib\utility\file::exists($url))
+		if(!\lib\file::exists($url))
 		{
-			\lib\utility\file::write($url, json_encode($args, JSON_UNESCAPED_UNICODE). "\n");
+			\lib\file::write($url, json_encode($args, JSON_UNESCAPED_UNICODE). "\n");
 		}
 
 		else
 		{
-			\lib\utility\file::append($url, json_encode($args, JSON_UNESCAPED_UNICODE). "\n");
+			\lib\file::append($url, json_encode($args, JSON_UNESCAPED_UNICODE). "\n");
 
 		}
 
