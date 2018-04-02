@@ -19,15 +19,6 @@ class view extends \lib\view
 
 		// default value for includes. if you use one of the files set it true
 		$this->include->css_main     = false;
-		// $this->include->js_main      = true;
-		// $this->include->css          = true;
-		// $this->include->js           = true;
-		// $this->include->fontawesome  = null;
-		// $this->include->datatable    = null;
-		// $this->include->telinput     = null;
-		// $this->include->editor       = null;
-		$this->include->css_ermile       = false;
-
 
 		$this->data->template['social']      = 'content/template/social.html';
 		$this->data->template['share']       = 'content/template/share.html';
