@@ -13,16 +13,8 @@ class view extends \lib\view
 		$this->data->page['desc']    = T_("Ermile is inteligent");
 
 
-		// if you need to set a class for body element in html add in this value
-		// $this->data->bodyclass      = null;
-
-
-		// default value for includes. if you use one of the files set it true
-		$this->include->css_main     = false;
-
 		$this->data->template['social']      = 'content/template/social.html';
 		$this->data->template['share']       = 'content/template/share.html';
-
 	}
 }
 ?>
