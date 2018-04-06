@@ -40,16 +40,16 @@ class model extends \mvc\model
 		}
 
 		$url = self::$url;
-		if(!\lib\file::exists($url))
+		if(!\dash\file::exists($url))
 		{
-			\lib\file::makeDir($url);
+			\dash\file::makeDir($url);
 		}
 		$url = $url. '/';
 		$url .= $type. '_'. $number. '_';
 		$url .= \lib\utility\filter::slug($name). '_';
 		$url .= '['.\lib\utility\filter::slug(\dash\request::files("file")['name']).']';
 
-		$path = \lib\file::getName(\dash\request::files("file")['name']);
+		$path = \dash\file::getName(\dash\request::files("file")['name']);
 		$path = explode('.', $path);
 		$path = end($path);
 
