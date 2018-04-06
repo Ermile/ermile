@@ -9,7 +9,7 @@ class view extends \mvc\view
 
 		$this->data->bodyclass  = 'unselectable';
 
-	    if(\lib\url::module() == 'careers')
+	    if(\dash\url::module() == 'careers')
 	    {
 			$this->include->css = false;
 			$this->include->js  = false;

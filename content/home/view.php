@@ -19,7 +19,7 @@ class view extends \mvc\view
 	 */
 	function pushState()
 	{
-		// if(\lib\url::module() !== null)
+		// if(\dash\url::module() !== null)
 		// {
 		// 	$this->data->display['mvc']     = "content/home/layout-xhr.html";
 		// }

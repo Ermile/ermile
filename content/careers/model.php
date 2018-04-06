@@ -120,7 +120,7 @@ class model extends \mvc\model
 						'name'   => $name,
 						'fileRawName'   => $fileRawName,
 						'date'   => date("Y-m-d H:i:s", filemtime(self::$url. '/'. $file)),
-						'url'    => \lib\url::site(). '/files/careers/'. $file
+						'url'    => \dash\url::site(). '/files/careers/'. $file
 		            ];
 		        }
 		        closedir($dh);
