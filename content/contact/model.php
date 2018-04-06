@@ -39,7 +39,7 @@ class model extends \mvc\model
 				$displayname = \dash\request::post("name");
 			}
 			// get email from user login session
-			$email = \lib\db\users::get_email($user_id);
+			$email = \dash\db\users::get_email($user_id);
 			// user not set users email, we get email from contact form
 			if(!$email)
 			{
@@ -77,14 +77,14 @@ class model extends \mvc\model
 		// 	if(\lib\utility\filter::mobile($mobile))
 		// 	{
 		// 		// check existing mobile
-		// 		$exists_user = \lib\db\users::get_by_mobile($mobile);
+		// 		$exists_user = \dash\db\users::get_by_mobile($mobile);
 		// 		// register if the mobile is valid
 		// 		if(!$exists_user || empty($exists_user))
 		// 		{
 		// 			// signup user by site_guest
-		// 			$user_id = \lib\db\users::signup(['mobile' => $mobile ,'type' => 'inspection', 'port' => 'site_guest']);
+		// 			$user_id = \dash\db\users::signup(['mobile' => $mobile ,'type' => 'inspection', 'port' => 'site_guest']);
 		// 			// save log by caller 'user:send:contact:register:by:mobile'
-		// 			\lib\db\logs::set('user:send:contact:register:by:mobile', $user_id, $log_meta);
+		// 			\dash\db\logs::set('user:send:contact:register:by:mobile', $user_id, $log_meta);
 		// 		}
 		// 	}
 		// }
@@ -92,7 +92,7 @@ class model extends \mvc\model
 		// check content
 		if($content == '')
 		{
-			\lib\db\logs::set('user:send:contact:empty:message', $user_id, $log_meta);
+			\dash\db\logs::set('user:send:contact:empty:message', $user_id, $log_meta);
 			\lib\debug::error(T_("Please try type something!"), "content");
 			return false;
 		}
@@ -124,7 +124,7 @@ class model extends \mvc\model
 
 		}
 
-		// \lib\db\logs::set('user:send:contact', $user_id, $log_meta);
+		// \dash\db\logs::set('user:send:contact', $user_id, $log_meta);
 		\lib\debug::true(T_("Thank You For contacting us"));
 
 	}
