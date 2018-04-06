@@ -28,7 +28,7 @@ class model extends \mvc\model
 
 			if(!$mobile)
 			{
-				$mobile = \lib\request::post('mobile');
+				$mobile = \dash\request::post('mobile');
 			}
 
 			// get display name from user login session
@@ -36,26 +36,26 @@ class model extends \mvc\model
 			// user not set users display name, we get display name from contact form
 			if(!$displayname)
 			{
-				$displayname = \lib\request::post("name");
+				$displayname = \dash\request::post("name");
 			}
 			// get email from user login session
 			$email = \lib\db\users::get_email($user_id);
 			// user not set users email, we get email from contact form
 			if(!$email)
 			{
-				$email = \lib\request::post("email");
+				$email = \dash\request::post("email");
 			}
 		}
 		else
 		{
 			// users not registered
 			$user_id     = null;
-			$displayname = \lib\request::post("name");
-			$email       = \lib\request::post("email");
-			$mobile      = \lib\request::post("mobile");
+			$displayname = \dash\request::post("name");
+			$email       = \dash\request::post("email");
+			$mobile      = \dash\request::post("mobile");
 		}
 		// get the content
-		$content = \lib\request::post("content");
+		$content = \dash\request::post("content");
 
 		// save log meta
 		$log_meta =
@@ -64,7 +64,7 @@ class model extends \mvc\model
 			[
 				'login'    => $this->login('all'),
 				'language' => \lib\language::get_language(),
-				'post'     => \lib\request::post(),
+				'post'     => \dash\request::post(),
 			]
 		];
 

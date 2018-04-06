@@ -8,9 +8,9 @@ class model extends \mvc\model
 
 	public function post_careers()
 	{
-		$name   = \lib\request::post("name");
-		$number = \lib\request::post("number");
-		$type   = \lib\request::post("type");
+		$name   = \dash\request::post("name");
+		$number = \dash\request::post("number");
+		$type   = \dash\request::post("type");
 
 		if($type != 'php' && $type != 'js' && $type != 'graphic')
 		{
@@ -34,7 +34,7 @@ class model extends \mvc\model
 			$name = substr($name, 0, 30);
 		}
 
-		if(!\lib\request::files("file"))
+		if(!\dash\request::files("file"))
 		{
 			return \lib\debug::error(T_("You must upload a CV file"));
 		}
@@ -47,9 +47,9 @@ class model extends \mvc\model
 		$url = $url. '/';
 		$url .= $type. '_'. $number. '_';
 		$url .= \lib\utility\filter::slug($name). '_';
-		$url .= '['.\lib\utility\filter::slug(\lib\request::files("file")['name']).']';
+		$url .= '['.\lib\utility\filter::slug(\dash\request::files("file")['name']).']';
 
-		$path = \lib\file::getName(\lib\request::files("file")['name']);
+		$path = \lib\file::getName(\dash\request::files("file")['name']);
 		$path = explode('.', $path);
 		$path = end($path);
 
@@ -63,9 +63,9 @@ class model extends \mvc\model
 		$url = str_replace('-'. $path, '', $url);
 		$url .= '.'. $path;
 
-		if(isset(\lib\request::files("file")['tmp_name']))
+		if(isset(\dash\request::files("file")['tmp_name']))
 		{
-			if(move_uploaded_file(\lib\request::files("file")['tmp_name'], $url))
+			if(move_uploaded_file(\dash\request::files("file")['tmp_name'], $url))
 			{
 				return \lib\debug::true(T_("Thank you. Wait for our call"));
 			}
