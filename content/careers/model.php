@@ -46,8 +46,8 @@ class model extends \mvc\model
 		}
 		$url = $url. '/';
 		$url .= $type. '_'. $number. '_';
-		$url .= \lib\utility\filter::slug($name). '_';
-		$url .= '['.\lib\utility\filter::slug(\dash\request::files("file")['name']).']';
+		$url .= \dash\utility\filter::slug($name). '_';
+		$url .= '['.\dash\utility\filter::slug(\dash\request::files("file")['name']).']';
 
 		$path = \dash\file::getName(\dash\request::files("file")['name']);
 		$path = explode('.', $path);

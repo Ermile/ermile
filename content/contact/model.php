@@ -74,7 +74,7 @@ class model extends \mvc\model
 		// if($mobile && !$this->login())
 		// {
 		// 	// check valid mobile
-		// 	if(\lib\utility\filter::mobile($mobile))
+		// 	if(\dash\utility\filter::mobile($mobile))
 		// 	{
 		// 		// check existing mobile
 		// 		$exists_user = \dash\db\users::get_by_mobile($mobile);
