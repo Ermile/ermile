@@ -63,7 +63,7 @@ class model extends \mvc\model
 			'meta' =>
 			[
 				'login'    => $this->login('all'),
-				'language' => \lib\language::get_language(),
+				'language' => \dash\language::get_language(),
 				'post'     => \dash\request::post(),
 			]
 		];
