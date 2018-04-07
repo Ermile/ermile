@@ -2,13 +2,13 @@
   <div class="cn">
 
    <nav class="f top">
-    <a class="cauto link_home" href="{{url.base}}">{%trans "Home"%}</a>
+    <a class="cauto link_home" href="{{url.here}}">{%trans "Home"%}</a>
 {%if false%}
-    <a class="cauto hide" href="{{url.base}}/about">{%trans "About"%}</a>
-    <a class="cauto hide" href="{{url.base}}/press">{%trans "Press and Media"%}</a>
+    <a class="cauto hide" href="{{url.here}}/about">{%trans "About"%}</a>
+    <a class="cauto hide" href="{{url.here}}/press">{%trans "Press and Media"%}</a>
 {%endif%}
     <a class="cauto" href="{%if site.currentlang =='fa'%}https://ermile.com/fa{%else%}https://ermile.com{%endif%}/careers" target="_blank">{%trans "Careers"%}</a>
-    <a class="cauto" href="{{url.base}}/social-responsibility">{%trans "Social Responsibility"%}</a>
+    <a class="cauto" href="{{url.here}}/social-responsibility">{%trans "Social Responsibility"%}</a>
    </nav>
 
    <div class="f middle">
@@ -21,14 +21,14 @@
 
     <nav class="c3 s12">
      <h4>{%trans "Learn More"%}</h4>
-      <a href="{{url.base}}/terms">{%trans "Terms of Service"%}</a>
-      <a href="{{url.base}}/privacy">{%trans "Privacy Policy"%}</a>
-      <a href="{{url.base}}/social-responsibility">{%trans "Social Responsibility"%}</a>
+      <a href="{{url.here}}/terms">{%trans "Terms of Service"%}</a>
+      <a href="{{url.here}}/privacy">{%trans "Privacy Policy"%}</a>
+      <a href="{{url.here}}/social-responsibility">{%trans "Social Responsibility"%}</a>
     </nav>
 
     <nav class="c3 s12">
      <h4>{%trans "Support"%}</h4>
-      <a href="{{url.base}}/contact">{%trans "Contact"%}</a>
+      <a href="{{url.here}}/contact">{%trans "Contact"%}</a>
     </nav>
 
 {%if true%}
@@ -49,10 +49,10 @@
 
 {%if perm('cp') or main_account or perm('admin:everyone_login:view')%}
   <div id="xaccess">
-{%if perm('cp') and false%}<a href="{{url.base}}/cp" data-direct>{%trans "Control Panel"%}</a>{%endif%}
-{%if perm('admin')%}<a href="{{url.base}}/a">{%trans "Admin Panel"%}</a>{%endif%}
-{%if main_account %}<a href="{{url.base}}/enter?mobile={{main_mobile}}&referer={{url.pwd}}" data-direct>{%trans "Exit Session"%}</a>{%endif%}
-{%if perm('admin:everyone_login:view') %}<a href="{{url.base}}/enter" data-direct>{%trans "Another Session"%}</a>{%endif%}
+{%if perm('cp') and false%}<a href="{{url.here}}/cp" data-direct>{%trans "Control Panel"%}</a>{%endif%}
+{%if perm('admin')%}<a href="{{url.here}}/a">{%trans "Admin Panel"%}</a>{%endif%}
+{%if main_account %}<a href="{{url.here}}/enter?mobile={{main_mobile}}&referer={{url.pwd}}" data-direct>{%trans "Exit Session"%}</a>{%endif%}
+{%if perm('admin:everyone_login:view') %}<a href="{{url.here}}/enter" data-direct>{%trans "Another Session"%}</a>{%endif%}
   </div>
 {%endif%}
 
