@@ -67,7 +67,7 @@ class controller extends \mvc\controller
 		if(preg_match("/^([a-zA-Z0-9]+)(|\/([a-zA-Z0-9]+))$/", $url, $split))
 		{
 			// @check
-			\lib\engine\main::controller_set('content\\hours\\controller');
+			\dash\engine\main::controller_set('content\\hours\\controller');
 			return;
 		}
 	}
