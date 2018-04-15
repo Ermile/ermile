@@ -1,28 +1,14 @@
 <?php
 namespace content\home;
 
-class view extends \mvc\view
+class view
 {
-	function config()
+	public static function config()
 	{
-		$this->data->bodyclass = 'unselectable vflex';
-		// $this->include->js     = false;
-
-		$this->data->page['title']   = $this->data->site['title'] . ' | '. $this->data->site['slogan'];
-		$this->data->page['special'] = true;
+		\dash\data::bodyclass('unselectable vflex');
+		\dash\data::page_title(\dash\data::site_title() . ' | '. \dash\data::site_slogan());
+		\dash\data::page_special(true);
 	}
 
-
-	/**
-	 * [pushState description]
-	 * @return [type] [description]
-	 */
-	function pushState()
-	{
-		// if(\dash\url::module() !== null)
-		// {
-		// 	$this->data->display['mvc']     = "content/home/layout-xhr.html";
-		// }
-	}
 }
 ?>

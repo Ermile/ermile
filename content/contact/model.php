@@ -2,7 +2,7 @@
 namespace content\contact;
 
 
-class model extends \mvc\model
+class model
 {
 
 	// log callers
@@ -16,15 +16,15 @@ class model extends \mvc\model
 	/**
 	 * save contact form
 	 */
-	public function post_contact()
+	public static function post()
 	{
 		// check login
-		if($this->login())
+		if(\dash\user::login())
 		{
-			$user_id = $this->login("id");
+			$user_id = \dash\user::login("id");
 
 			// get mobile from user login session
-			$mobile = $this->login('mobile');
+			$mobile = \dash\user::login('mobile');
 
 			if(!$mobile)
 			{
@@ -32,7 +32,7 @@ class model extends \mvc\model
 			}
 
 			// get display name from user login session
-			$displayname = $this->login("displayname");
+			$displayname = \dash\user::login("displayname");
 			// user not set users display name, we get display name from contact form
 			if(!$displayname)
 			{
@@ -62,38 +62,18 @@ class model extends \mvc\model
 		[
 			'meta' =>
 			[
-				'login'    => $this->login('all'),
+				'login'    => \dash\user::login('all'),
 				'language' => \dash\language::get_language(),
 				'post'     => \dash\request::post(),
 			]
 		];
 
-		// /**
-		//  * register user if set mobile and not register
-		//  */
-		// if($mobile && !$this->login())
-		// {
-		// 	// check valid mobile
-		// 	if(\dash\utility\filter::mobile($mobile))
-		// 	{
-		// 		// check existing mobile
-		// 		$exists_user = \dash\db\users::get_by_mobile($mobile);
-		// 		// register if the mobile is valid
-		// 		if(!$exists_user || empty($exists_user))
-		// 		{
-		// 			// signup user by site_guest
-		// 			$user_id = \dash\db\users::signup(['mobile' => $mobile ,'type' => 'inspection', 'port' => 'site_guest']);
-		// 			// save log by caller 'user:send:contact:register:by:mobile'
-		// 			\dash\db\logs::set('user:send:contact:register:by:mobile', $user_id, $log_meta);
-		// 		}
-		// 	}
-		// }
 
 		// check content
 		if($content == '')
 		{
 			\dash\db\logs::set('user:send:contact:empty:message', $user_id, $log_meta);
-			\lib\debug::error(T_("Please try type something!"), "content");
+			\dash\notif::error(T_("Please try type something!"), "content");
 			return false;
 		}
 		// ready to insert comments
@@ -106,13 +86,8 @@ class model extends \mvc\model
 			'user_id' => $user_id
 		];
 
-
 		$url    = root. 'content/contact/allCommentJson';
-		// if(!\dash\file::exists($url))
-		// {
-		// 	\dash\file::makeDir($url, null, true);
-		// }
-		// $url .= 'total_userteam.txt';
+
 		if(!\dash\file::exists($url))
 		{
 			\dash\file::write($url, json_encode($args, JSON_UNESCAPED_UNICODE). "\n");
@@ -125,7 +100,7 @@ class model extends \mvc\model
 		}
 
 		// \dash\db\logs::set('user:send:contact', $user_id, $log_meta);
-		\lib\debug::true(T_("Thank You For contacting us"));
+		\dash\notif::ok(T_("Thank You For contacting us"));
 
 	}
 }

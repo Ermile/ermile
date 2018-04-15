@@ -2,11 +2,12 @@
 namespace content\careers;
 
 
-class model extends \mvc\model
+class model
 {
 	public static $url = root.'public_html/files/careers';
 
-	public function post_careers()
+
+	public static function post()
 	{
 		$name   = \dash\request::post("name");
 		$number = \dash\request::post("number");
@@ -14,19 +15,19 @@ class model extends \mvc\model
 
 		if($type != 'php' && $type != 'js' && $type != 'graphic')
 		{
-			return \lib\debug::error(T_("Type not found"));
+			return \dash\notif::error(T_("Type not found"));
 		}
 		if(!$number)
 		{
-			return \lib\debug::error(T_("Contact number not set"));
+			return \dash\notif::error(T_("Contact number not set"));
 		}
 		if(!is_numeric($number))
 		{
-			return \lib\debug::error(T_("Contact number must be number"));
+			return \dash\notif::error(T_("Contact number must be number"));
 		}
 		if(strlen($number) != 11)
 		{
-			return \lib\debug::error(T_("Contact number must 11 character"));
+			return \dash\notif::error(T_("Contact number must 11 character"));
 		}
 
 		if(strlen($name) > 30)
@@ -36,7 +37,12 @@ class model extends \mvc\model
 
 		if(!\dash\request::files("file"))
 		{
-			return \lib\debug::error(T_("You must upload a CV file"));
+			return \dash\notif::error(T_("You must upload a CV file"));
+		}
+
+		if(!\dash\file::exists(root. 'public_html/files'))
+		{
+			\dash\file::makeDir(root. 'public_html/files');
 		}
 
 		$url = self::$url;
@@ -57,77 +63,24 @@ class model extends \mvc\model
 		// if(in_array($path, $extentionsDisallow))
 		if($path !== 'pdf')
 		{
-			return \lib\debug::error(T_("Can not upload this file! only PDF:/"));
+			return \dash\notif::error(T_("Can not upload this file! only PDF:/"));
 		}
 
 		$url = str_replace('-'. $path, '', $url);
 		$url .= '.'. $path;
 
+		// var_dump($url, \dash\request::files("file")['tmp_name']);exit();
 		if(isset(\dash\request::files("file")['tmp_name']))
 		{
-			if(move_uploaded_file(\dash\request::files("file")['tmp_name'], $url))
+			if(@move_uploaded_file(\dash\request::files("file")['tmp_name'], $url))
 			{
-				return \lib\debug::true(T_("Thank you. Wait for our call"));
+				return \dash\notif::ok(T_("Thank you. Wait for our call"));
 			}
 			else
 			{
-				return \lib\debug::true(T_("We could not upload CV file"));
+				return \dash\notif::warn(T_("We could not upload CV file"));
 			}
 		}
-	}
-
-	public function get_list($_args)
-	{
-		$file_list = [];
-		if (is_dir(self::$url))
-		{
-		    if ($dh = opendir(self::$url))
-		    {
-		        while (($file = readdir($dh)) !== false)
-		        {
-		        	if($file == '.' || $file == '..')
-		        	{
-		        		continue;
-		        	}
-		        	$split = explode("_", $file);
-		        	$type = null;
-		        	if(isset($split[0]))
-		        	{
-		        		$type = $split[0];
-		        	}
-		        	$number = null;
-		        	if(isset($split[1]))
-		        	{
-		        		$number = $split[1];
-		        	}
-		        	$name = null;
-		        	if(isset($split[2]))
-		        	{
-		        		$name = $split[2];
-		        	}
-		        	$fileRawName = null;
-		        	if(isset($split[3]))
-		        	{
-		        		$fileRawName = $split[3];
-		        	}
-
-
-		            $file_list[] =
-		            [
-						'file'   => $file,
-						'type'   => $type,
-						'number' => $number,
-						'name'   => $name,
-						'fileRawName'   => $fileRawName,
-						'date'   => date("Y-m-d H:i:s", filemtime(self::$url. '/'. $file)),
-						'url'    => \dash\url::site(). '/files/careers/'. $file
-		            ];
-		        }
-		        closedir($dh);
-		    }
-		}
-		return $file_list;
-
 	}
 }
 ?>

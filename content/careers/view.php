@@ -1,26 +1,77 @@
 <?php
 namespace content\careers;
 
-class view extends \mvc\view
+class view
 {
-	public function options()
+	public static function config()
 	{
-		$this->include->fontawesome = true;
+		\dash\data::include_fontawesome(true);
 
-		$this->data->bodyclass  = 'unselectable';
+		\dash\data::bodyclass('unselectable');
 
 	    if(\dash\url::module() == 'careers')
 	    {
-			$this->include->css = false;
-			$this->include->js  = false;
+			\dash\data::include_css(false);
+			\dash\data::include_js(false);
 	    }
+
+		\dash\data::fileList(self::get_list());
 	}
 
-	public function view_list($_args)
+
+	public static function get_list()
 	{
-		$this->data->file_list = $_args->api_callback;
-	}
+		$file_list = [];
+		if (is_dir(\content\careers\model::$url))
+		{
+		    if ($dh = opendir(\content\careers\model::$url))
+		    {
+		        while (($file = readdir($dh)) !== false)
+		        {
+		        	if($file == '.' || $file == '..')
+		        	{
+		        		continue;
+		        	}
+		        	$split = explode("_", $file);
+		        	$type = null;
+		        	if(isset($split[0]))
+		        	{
+		        		$type = $split[0];
+		        	}
+		        	$number = null;
+		        	if(isset($split[1]))
+		        	{
+		        		$number = $split[1];
+		        	}
+		        	$name = null;
+		        	if(isset($split[2]))
+		        	{
+		        		$name = $split[2];
+		        	}
+		        	$fileRawName = null;
+		        	if(isset($split[3]))
+		        	{
+		        		$fileRawName = $split[3];
+		        	}
 
+
+		            $file_list[] =
+		            [
+						'file'   => $file,
+						'type'   => $type,
+						'number' => $number,
+						'name'   => $name,
+						'fileRawName'   => $fileRawName,
+						'date'   => date("Y-m-d H:i:s", filemtime(\content\careers\model::$url. '/'. $file)),
+						'url'    => \dash\url::site(). '/files/careers/'. $file
+		            ];
+		        }
+		        closedir($dh);
+		    }
+		}
+		return $file_list;
+
+	}
 
 }
 ?>

@@ -1,12 +1,12 @@
 <?php
 namespace content\contact;
 
-class view extends \mvc\view
+class view
 {
-	function config()
+	public static function config()
 	{
-		$this->data->page['title'] = \dash\url::module();
-		$this->data->bodyclass     = 'unselectable vflex';
+		\dash\data::page_title(\dash\url::module());
+		\dash\data::bodyclass('unselectable vflex');
 	}
 }
 ?>
