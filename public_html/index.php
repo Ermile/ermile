@@ -4,7 +4,12 @@
 **/
 
 // if Saloos exist, require it else show related error message
-if ( file_exists( '../../dash/autoload.php') )
+
+if ( file_exists( '../dash/autoload.php') )
+{
+	require_once( '../dash/autoload.php');
+}
+elseif ( file_exists( '../../dash/autoload.php') )
 {
 	require_once( '../../dash/autoload.php');
 }

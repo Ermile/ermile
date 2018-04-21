@@ -19,3 +19,5 @@ desktop.ini
 
 .sass-cache
 *.css.map
+
+/dash
