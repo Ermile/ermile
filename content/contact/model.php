@@ -58,22 +58,12 @@ class model
 		$content = \dash\request::post("content");
 
 		// save log meta
-		$log_meta =
-		[
-			'meta' =>
-			[
-				'login'    => \dash\user::login('all'),
-				'language' => \dash\language::get_language(),
-				'post'     => \dash\request::post(),
-			]
-		];
 
 
 		// check content
 		if($content == '')
 		{
-			\dash\db\logs::set('user:send:contact:empty:message', $user_id, $log_meta);
-			\dash\notif::error(T_("Please try type something!"), "content");
+			\dash\db\logs::set('user:send:contact:empty:message', $user_id);			\dash\notif::error(T_("Please try type something!"), "content");
 			return false;
 		}
 		// ready to insert comments
@@ -99,7 +89,8 @@ class model
 
 		}
 
-		// \dash\db\logs::set('user:send:contact', $user_id, $log_meta);
+
+		// \dash\db\logs::set('user:send:contact', $user_id);
 		\dash\notif::ok(T_("Thank You For contacting us"));
 
 	}
