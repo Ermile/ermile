@@ -28,16 +28,16 @@
 
 {%block content%}
 
-  {%if file_list%}
-    {{block('list')}}
+  {%if fileList%}
+    {{block('mylist')}}
   {%else%}
     {{block('careers')}}
   {%endif%}
 {%endblock%}
 
-{%block list%}
+{%block mylist%}
 <ul class="careers-get-list">
- {%for key, value in file_list%}
+ {%for key, value in fileList%}
  <li>
    <div class="item-user">
     <a href="{{value.url}}"><i class="fa fa-file-pdf-o"></i></a> <span>{{value.name}}</span>
