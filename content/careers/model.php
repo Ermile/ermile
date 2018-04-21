@@ -15,19 +15,23 @@ class model
 
 		if($type != 'php' && $type != 'js' && $type != 'graphic')
 		{
-			return \dash\notif::error(T_("Type not found"));
+			\dash\notif::error(T_("Type not found"));
+			return false;
 		}
 		if(!$number)
 		{
-			return \dash\notif::error(T_("Contact number not set"));
+			\dash\notif::error(T_("Contact number not set"));
+			return false;
 		}
 		if(!is_numeric($number))
 		{
-			return \dash\notif::error(T_("Contact number must be number"));
+			\dash\notif::error(T_("Contact number must be number"));
+			return false;
 		}
 		if(strlen($number) != 11)
 		{
-			return \dash\notif::error(T_("Contact number must 11 character"));
+			\dash\notif::error(T_("Contact number must 11 character"));
+			return false;
 		}
 
 		if(strlen($name) > 30)
@@ -37,7 +41,8 @@ class model
 
 		if(!\dash\request::files("file"))
 		{
-			return \dash\notif::error(T_("You must upload a CV file"));
+			\dash\notif::error(T_("You must upload a CV file"));
+			return false;
 		}
 
 		if(!\dash\file::exists(root. 'public_html/files'))
@@ -63,7 +68,8 @@ class model
 		// if(in_array($path, $extentionsDisallow))
 		if($path !== 'pdf')
 		{
-			return \dash\notif::error(T_("Can not upload this file! only PDF:/"));
+			\dash\notif::error(T_("Can not upload this file! only PDF:/"));
+			return false;
 		}
 
 		$url = str_replace('-'. $path, '', $url);
@@ -74,11 +80,11 @@ class model
 		{
 			if(@move_uploaded_file(\dash\request::files("file")['tmp_name'], $url))
 			{
-				return \dash\notif::ok(T_("Thank you. Wait for our call"));
+				\dash\notif::ok(T_("Thank you. Wait for our call"));
 			}
 			else
 			{
-				return \dash\notif::warn(T_("We could not upload CV file"));
+				\dash\notif::warn(T_("We could not upload CV file"));
 			}
 		}
 	}

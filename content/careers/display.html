@@ -126,11 +126,7 @@
   </div>
  </div>
 
-<div class="video">
- <video playsinline autoplay loop id="bgvid" class="videos">
-  <source src="{{url.site}}/static/careers/videos/amfm-timelaps1.mp4" type="video/mp4">
- </video>
-</div>
+
  <div class="contract-process">
   <h2>{%trans "Steps to join Ermile"%}</h2>
   <div class="container">
@@ -317,7 +313,20 @@
         <a class="hide" href=""><img src="{{url.site}}/static/careers/images/svg/linkedin.svg" alt="linkedin.svg"></a>
         <a href="https://plus.google.com/105803126785718623954" target="_blank"><img src="{{url.site}}/static/careers/images/svg/google-plus.svg" alt="google-plus"></a>
         <a href="https://telegram.me/ermile" target="_blank"><img src="{{url.site}}/static/careers/images/svg/telegram.svg" alt="telegram.svg"></a>
-        <p>{%trans "#614, Omranieh, Moallem St, Qom, Iran"%}</p>
+        <p>
+        {%if lang.current =='en'%}
+          {%trans "Ermile, Floor2, Yas Building"%},
+          {%trans "1st alley, Haft-e-tir St"%},
+          {%trans "Qom"%},
+          {%trans "Iran"%}
+        {%else%}
+          {%trans "Iran"%}،
+          {%trans "Qom"%}،
+          {%trans "1st alley, Haft-e-tir St"%}،
+          {%trans "Floor2, Yas Building"%}
+        {%endif%}
+        </p>
+
         <p class="phone-links"><a href="mailto:info@ermile.com">info@ermile.com<img src="{{url.site}}/static/careers/images/svg/envelope.svg" alt="envelope.svg"></a></p>
         <p class="phone-links"><a href="tel:02537735183">{%trans "+98 25 3773 5183"%}<img src="{{url.site}}/static/careers/images/svg/phone-call.svg" alt="phone-call.svg"></a></p>
        </div>
