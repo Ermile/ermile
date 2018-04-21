@@ -21,7 +21,7 @@ class model
 		// check login
 		if(\dash\user::login())
 		{
-			$user_id = \dash\user::login("id");
+			$user_id = \dash\user::id();
 
 			// get mobile from user login session
 			$mobile = \dash\user::login('mobile');
@@ -58,12 +58,42 @@ class model
 		$content = \dash\request::post("content");
 
 		// save log meta
+		$log_meta =
+		[
+			'meta' =>
+			[
+				'login'    => \dash\user::login('all'),
+				'language' => \dash\language::current(),
+				'post'     => \dash\request::post(),
+			]
+		];
 
+		/**
+		 * register user if set mobile and not register
+		 */
+		if($mobile && !\dash\user::login())
+		{
+			// check valid mobile
+			if(\dash\utility\filter::mobile($mobile))
+			{
+				// check existing mobile
+				$exists_user = \dash\db\users::get_by_mobile($mobile);
+				// register if the mobile is valid
+				if(!$exists_user || empty($exists_user))
+				{
+					// signup user by site_guest
+					$user_id = \dash\db\users::signup(['mobile' => $mobile ,'type' => 'inspection', 'port' => 'site_guest']);
+					// save log by caller 'user:send:contact:register:by:mobile'
+					\dash\db\logs::set('user:send:contact:register:by:mobile', $user_id, $log_meta);
+				}
+			}
+		}
 
 		// check content
 		if($content == '')
 		{
-			\dash\db\logs::set('user:send:contact:empty:message', $user_id);			\dash\notif::error(T_("Please try type something!"), "content");
+			\dash\db\logs::set('user:send:contact:empty:message', $user_id, $log_meta);
+			\dash\notif::error(T_("Please try type something!"), "content");
 			return false;
 		}
 		// ready to insert comments
@@ -73,25 +103,28 @@ class model
 			'email'   => $email,
 			'type'    => 'comment',
 			'content' => $content,
-			'user_id' => $user_id
+			'user_id'         => $user_id
 		];
-
-		$url    = root. 'content/contact/allCommentJson';
-
-		if(!\dash\file::exists($url))
+		// insert comments
+		$result = \dash\db\comments::insert($args);
+		if($result)
 		{
-			\dash\file::write($url, json_encode($args, JSON_UNESCAPED_UNICODE). "\n");
-		}
+			// $mail =
+			// [
+			// 	'from'    => 'info@azvir.com',
+			// 	'to'      => 'info@azvir.com',
+			// 	'subject' => 'contact',
+			// 	'body'    => $content,
+			// ];
+			// \dash\mail::send($mail);
 
+			\dash\db\logs::set('user:send:contact', $user_id, $log_meta);
+			\dash\notif::ok(T_("Thank You For contacting us"));
+		}
 		else
 		{
-			\dash\file::append($url, json_encode($args, JSON_UNESCAPED_UNICODE). "\n");
-
+			\dash\db\logs::set('user:send:contact:fail', $user_id, $log_meta);
+			\dash\notif::error(T_("We could'nt save the contact"));
 		}
-
-
-		// \dash\db\logs::set('user:send:contact', $user_id);
-		\dash\notif::ok(T_("Thank You For contacting us"));
-
 	}
 }
