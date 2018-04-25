@@ -384,7 +384,7 @@ body{background-color:#ddd;}
 #setup .dbox{width:500px;min-height:300px;margin-bottom:1em}
 #setup h2{margin-bottom:1em;text-align:center;}
 #setup h3{font-size:1.6rem;font-weight:normal;line-height:1.6;margin-bottom:1em}
-#setup h3 label{display:inherit;text-align}
+#setup h3 label{display:inherit;}
 #setup .logo{display:block;max-width:5em;margin:0 auto 4em;-webkit-animation-name:spin;animation-name:spin;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-timing-function:cubic-bezier(.43, .84, .61, .14);animation-timing-function:cubic-bezier(.43, .84, .61, .14);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
 #setup .logo img{display:block}
 #setup .setup-step{text-align:center;padding:2em 0}
