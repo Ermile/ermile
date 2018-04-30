@@ -15,7 +15,10 @@ class view
 			\dash\data::include_js(false);
 	    }
 
-		\dash\data::fileList(self::get_list());
+		if(\dash\url::child() === 'get' && \dash\url::subchild() === null)
+		{
+			\dash\data::fileList(self::get_list());
+		}
 	}
 
 
