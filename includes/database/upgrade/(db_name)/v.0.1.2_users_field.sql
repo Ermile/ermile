@@ -1,0 +1,11 @@
+ALTER TABLE `users` ADD `website`   varchar(200)  NULL DEFAULT NULL;
+ALTER TABLE `users` ADD `facebook`  varchar(200)  NULL DEFAULT NULL;
+ALTER TABLE `users` ADD `twitter`   varchar(200)  NULL DEFAULT NULL;
+ALTER TABLE `users` ADD `instagram` varchar(200)  NULL DEFAULT NULL;
+ALTER TABLE `users` ADD `linkedin`  varchar(200)  NULL DEFAULT NULL;
+ALTER TABLE `users` ADD `gmail`     varchar(200)  NULL DEFAULT NULL;
+ALTER TABLE `users` ADD `sidebar`   bit(1)  NULL DEFAULT NULL;
+ALTER TABLE `users` ADD `firstname` varchar(100)  NULL DEFAULT NULL;
+ALTER TABLE `users` ADD `lastname`  varchar(100)  NULL DEFAULT NULL;
+ALTER TABLE `users` ADD `bio`       text CHARACTER  SET utf8mb4 NULL DEFAULT NULL;
+ALTER TABLE `users` DROP `fullname`;
