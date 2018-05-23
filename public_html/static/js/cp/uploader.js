@@ -11,7 +11,7 @@
 
 // $(function()
 // {
-route('*', function()
+function pushStateFinal()
 {
   var ul = $('#form_uploader ul');
   $('#drop a').unbind('click.uploader');
@@ -81,7 +81,7 @@ route('*', function()
           // Append edit url
           tpl.find('span').append(response.edit);
           // Add the HTML to the UL element
-          data.context = tpl.appendTo(ul);          
+          data.context = tpl.appendTo(ul);
         }
 
       });
@@ -150,5 +150,5 @@ route('*', function()
 
     return (bytes / 1000).toFixed(2) + ' KB';
   }
+}
 
-});
