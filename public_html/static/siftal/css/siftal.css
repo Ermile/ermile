@@ -1854,8 +1854,12 @@ progress.xl, meter.xl {
   opacity: 0.7;
   background-color: #f7f7f7;
   color: #444;
-  transition: opacity 0.3s;
+  transition-duration: 0.3s;
+  transition-property: opacity, background-color, box-shadow, border;
   user-select: none; }
+
+.tbox:hover {
+  border-color: #fff; }
 
 .rtl .tbox {
   padding: 1em 1.5em 1em 7em; }
@@ -1904,7 +1908,11 @@ progress.xl, meter.xl {
   background-color: #fff;
   color: #555;
   position: relative;
-  transition: opacity 0.3s; }
+  transition-duration: 0.3s;
+  transition-property: opacity, background-color, box-shadow, border; }
+
+.cbox .simple {
+  border-bottom-color: transparent; }
 
 .cbox h1 {
   font-size: 1.5em; }
@@ -1931,7 +1939,7 @@ progress.xl, meter.xl {
   transition: 0.3s border-color;
   color: #777; }
 
-.cbox:hover h2, .cbox:hover h3, .cbox:hover h4 {
+.cbox h2:hover, .cbox h3:hover, .cbox h4:hover {
   border-bottom-color: #80c0d0; }
 
 .cbox h2 [class^="sf-"]:before, .cbox h2 [class*=" sf-"]:before {
@@ -3555,7 +3563,9 @@ img.mini {
   margin: 0 0.2em;
   min-width: 1.2em;
   text-align: center;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  transition-duration: 0.3s;
+  transition-property: opacity, background-color, color; }
 
 [data-icon]:before {
   font-family: "siftal", "tahoma" !important;
@@ -10278,10 +10288,13 @@ body:not(.tippy-touch) .tippy-popper[x-placement=left] .tippy-tooltip[data-anima
   z-index: 10; }
 
 select.ui.dropdown {
-  height: 38px;
+  height: 36px;
   padding: 0.5em;
+  padding: 5px 1em;
+  color: rgba(191, 191, 191, 0.87);
   border: 1px solid rgba(34, 36, 38, 0.15);
-  visibility: visible; }
+  visibility: visible;
+  -webkit-appearance: none; }
 
 .ui.selection.dropdown > .search.icon,
 .ui.selection.dropdown > .delete.icon,
@@ -10453,7 +10466,7 @@ select.ui.dropdown {
   position: relative;
   left: 1px;
   z-index: 3;
-  line-height: 25px; }
+  line-height: 24px; }
 
 /* Search Selection */
 .ui.search.selection.dropdown > input.search {
@@ -12357,6 +12370,10 @@ body.enter.bg15 {
 .enter form .flex label:hover {
   background-color: rgba(0, 0, 0, 0.3); }
 
+.enter form .flex label i {
+  margin: 0;
+  display: block; }
+
 .enter form .flex input {
   padding: 0 1em;
   line-height: 50px;
@@ -12398,17 +12415,17 @@ body.enter.bg15 {
 
 /* custom style for some inputs*/
 .enter form #emobile label {
-  padding: 10px 0; }
-
-.enter form #eramz label, .enter form #eramzNew label {
   font-size: 2em;
-  line-height: 1.9em; }
+  line-height: 50px; }
 
-.enter form #eramz input[type="text"], .enter form #eramzNew input[type="text"] {
-  font-size: 0.5em; }
-
-.enter form #eusername label {
-  padding: 10px 0; }
+.enter form #eramz label,
+.enter form #eramzNew label,
+.enter form #displaynameBox label,
+.enter form #eramz input[type="text"],
+.enter form #eusername label,
+.enter form #eramzNew input[type="text"] {
+  font-size: 1.5em;
+  line-height: 50px; }
 
 .enter form #email, .enter form #emailNew {
   font-size: 0.8em; }
@@ -12479,13 +12496,13 @@ body.enter.bg15 {
 .enter #eMethods a:focus {
   opacity: 0.7; }
 
-.enter #eMethods a svg {
+.enter #eMethods a i {
   width: 40px;
   height: 40px;
   min-width: 40px;
   float: left;
-  margin-right: 1em;
-  padding: 5px; }
+  margin: 0 10px 0 0;
+  font-size: 2.5em; }
 
 .enter #eMethods a span {
   display: block;
@@ -12500,17 +12517,16 @@ body.enter.bg15 {
   background-color: rgba(0, 0, 0, 0.8);
   display: none; }
 
-.enter.rtl #eMethods a svg {
+.enter.rtl #eMethods a i {
   float: right;
-  margin-left: 1em;
-  margin-right: initial; }
+  margin: 0 0 0 10px; }
 
 .enter #eMethods #ebgoogle {
   min-width: 150px; }
 
-.enter #eMethods #ebgoogle svg {
-  background-color: #eee;
-  padding: 0; }
+.enter #eMethods #ebgoogle i {
+  background-color: #DD4B39;
+  padding-top: 3px; }
 
 .enter #eMethods #ebmobile {
   min-width: 150px; }
@@ -12528,7 +12544,7 @@ body.enter.bg15 {
   min-width: 120px; }
 
 .enter.rtl #eMethods #ebusername {
-  min-width: 130px; }
+  min-width: 160px; }
 
 /*langlist*/
 .enter .langlist {
@@ -12665,7 +12681,8 @@ span.input {
   padding: 8px 1em;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
+  transition-duration: 0.3s;
+  transition-property: opacity, background-color, color, border;
   border-radius: 0.25rem;
   outline: none;
   -ms-flex: 1 1 auto;
@@ -12993,6 +13010,9 @@ input[name="website"] {
 .rtl .check1 label::after {
   left: 0;
   right: 13px; }
+
+.check1.red input:checked + label::before {
+  background-color: #da4041; }
 
 .switch1 {
   overflow: hidden;
@@ -18017,6 +18037,32 @@ body.siftal.loading-page #sidebar .avatar:before {
     display: none !important; } }
 /* Design for print */
 @media print {
+  body {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none;
+    color: #000;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility; }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  tr {
+    page-break-inside: avoid; }
+
+  textarea {
+    overflow: auto; }
+
+  body.siftal {
+    background-color: transparent; }
+
   .siftal > #sidebar {
     display: none; }
 
@@ -18032,8 +18078,23 @@ body.siftal.loading-page #sidebar .avatar:before {
   .superAdmin {
     display: none; }
 
-  .xaccess {
-    display: none; } }
+  #xaccess {
+    display: none; }
+
+  .iziToast-wrapper {
+    display: none; }
+
+  video {
+    display: none; }
+
+  audio {
+    display: none; }
+
+  .p0 {
+    display: none; }
+
+  .pBlock {
+    display: block; } }
 svg.barcodePrev {
   height: 70px; }
 
