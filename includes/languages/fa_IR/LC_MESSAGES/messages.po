@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile - Persian\n"
-"POT-Creation-Date: 2018-05-23 18:17+0430\n"
-"PO-Revision-Date: 2018-05-23 18:17+0430\n"
-"Last-Translator: Reza <rm.biqarar@gmail.com>\n"
+"POT-Creation-Date: 2018-08-09 12:17+0430\n"
+"PO-Revision-Date: 2018-08-09 12:17+0430\n"
+"Last-Translator: Javad <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-Basepath: ../../../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -50,18 +50,6 @@ msgstr "سپاسگزاریم. منتظر تماس ما بمانید"
 #: content/careers/model.php:87
 msgid "We could not upload CV file"
 msgstr "ما نمی‌توانیم فایل شما را آپلود کنیم"
-
-#: content/contact/model.php:96
-msgid "Please try type something!"
-msgstr "لطفا تلاشی برای تایپ داشته باشید!"
-
-#: content/contact/model.php:122
-msgid "Thank You For contacting us"
-msgstr "از تماس شما متشکریم"
-
-#: content/contact/model.php:127
-msgid "We could'nt save the contact"
-msgstr "مشکلی در ذخیره‌سازی مخاطب پیش آمد"
 
 #: content/view.php:9 includes/languages/static_translation.php:21
 #: includes/languages/trans_dash.php:324
@@ -590,15 +578,15 @@ msgstr "ارسال"
 
 #: includes/languages/trans_dash.php:89
 msgid "Template"
-msgstr ""
+msgstr "قالب"
 
 #: includes/languages/trans_dash.php:90
 msgid "No template"
-msgstr ""
+msgstr "بدون الگو"
 
 #: includes/languages/trans_dash.php:91
 msgid "Show"
-msgstr ""
+msgstr "نمایش"
 
 #: includes/languages/trans_dash.php:94
 msgid "User"
@@ -606,7 +594,7 @@ msgstr "کاربر"
 
 #: includes/languages/trans_dash.php:98
 msgid "List of template sms"
-msgstr ""
+msgstr "لیست الگوهای پیامک"
 
 #: includes/languages/trans_dash.php:99 includes/languages/trans_project.php:12
 msgid "Name"
@@ -614,7 +602,7 @@ msgstr "نام"
 
 #: includes/languages/trans_dash.php:100
 msgid "Template text"
-msgstr ""
+msgstr "متن الگو"
 
 #: includes/languages/trans_dash.php:101
 msgid "Edit"
@@ -630,27 +618,27 @@ msgstr "افزودن"
 
 #: includes/languages/trans_dash.php:105
 msgid "Template name"
-msgstr ""
+msgstr "نام الگو"
 
 #: includes/languages/trans_dash.php:106
 msgid "Template Name"
-msgstr ""
+msgstr "نام الگو"
 
 #: includes/languages/trans_dash.php:107
 msgid "Template Text"
-msgstr ""
+msgstr "متن الگو"
 
 #: includes/languages/trans_dash.php:110
 msgid "Users mobile"
-msgstr ""
+msgstr "تلفن همراه کاربر"
 
 #: includes/languages/trans_dash.php:111
 msgid "Every mobile in one line"
-msgstr ""
+msgstr "هر شماره همراه در یک خط"
 
 #: includes/languages/trans_dash.php:112
 msgid "What do you want to send to this users?"
-msgstr ""
+msgstr "چه پیامی را میخواهید به این کاربران ارسال کنید؟"
 
 #: includes/languages/trans_dash.php:113
 msgid "Group"
@@ -658,11 +646,11 @@ msgstr ""
 
 #: includes/languages/trans_dash.php:114
 msgid "No group"
-msgstr ""
+msgstr "بدون گروه"
 
 #: includes/languages/trans_dash.php:117
 msgid "Your sms panel balance"
-msgstr ""
+msgstr "بالانس مالی پنل پیامک شما"
 
 #: includes/languages/trans_dash.php:118
 msgid "Toman"
@@ -670,11 +658,11 @@ msgstr "تومان"
 
 #: includes/languages/trans_dash.php:119
 msgid "Send quick"
-msgstr ""
+msgstr "ارسال سریع"
 
 #: includes/languages/trans_dash.php:120
 msgid "Group send"
-msgstr ""
+msgstr "ارسال گروهی"
 
 #: includes/languages/trans_dash.php:123 includes/languages/trans_project.php:16
 msgid "Email"
@@ -689,22 +677,23 @@ msgid ""
 "The permission name should be unique and contain only alphanameric characters and "
 "underscores"
 msgstr ""
+"نام سطح دسترسی باید منحصر به فرد باشد و فقط شامل کاراکتر‌های الفبا و زیر خط باشد"
 
 #: includes/languages/trans_dash.php:130
 msgid "Name of your permission"
-msgstr ""
+msgstr "نام سطح دسترسی شما"
 
 #: includes/languages/trans_dash.php:131
 msgid "Label"
-msgstr ""
+msgstr "برچسب"
 
 #: includes/languages/trans_dash.php:132
 msgid "The permission label is used to represent your permission in user management"
-msgstr ""
+msgstr "برچسب سطح دسترسی برای نشان دادن آن در بخش مدیریت استفاده می‌شود"
 
 #: includes/languages/trans_dash.php:133
 msgid "Label of your permission"
-msgstr ""
+msgstr "برچسب سطح دسترسی شما"
 
 #: includes/languages/trans_dash.php:134
 msgid "Save"
@@ -712,35 +701,35 @@ msgstr "ذخیره"
 
 #: includes/languages/trans_dash.php:139
 msgid "Permission title"
-msgstr ""
+msgstr "عنوان سطح‌دسترسی"
 
 #: includes/languages/trans_dash.php:140
 msgid "Customized"
-msgstr ""
+msgstr "سفارشی سازی شده"
 
 #: includes/languages/trans_dash.php:141
 msgid "Need double check permission for some sensitive permissions"
-msgstr ""
+msgstr "نیازمند بررسی دوگانه برای برخی از سطوح دسترسی حساس"
 
 #: includes/languages/trans_dash.php:142
 msgid "Do hard check and need to enter again"
-msgstr ""
+msgstr "بررسی سخت و نیاز به ورود مجدد به سیستم"
 
 #: includes/languages/trans_dash.php:143
 msgid "Count of user in permission"
-msgstr ""
+msgstr "تعداد کاربران با این سطح دسترسی"
 
 #: includes/languages/trans_dash.php:144
 msgid "Remove this permission if not need"
-msgstr ""
+msgstr "اگر به این سطح دسترسی نیازی نداری آن را حذف کنید"
 
 #: includes/languages/trans_dash.php:145
 msgid "No user"
-msgstr ""
+msgstr "بدون کاربر"
 
 #: includes/languages/trans_dash.php:146
 msgid "Click to show list of user by this permission"
-msgstr ""
+msgstr "برای نمایش لیست افراد با این سطح دسترسی کلیک کنید"
 
 #: includes/languages/trans_dash.php:151
 msgid "Page"
@@ -756,23 +745,23 @@ msgstr "کلیدواژه‌ها"
 
 #: includes/languages/trans_dash.php:156
 msgid "Author"
-msgstr ""
+msgstr "نویسنده"
 
 #: includes/languages/trans_dash.php:157
 msgid "Website"
-msgstr ""
+msgstr "وب‌سایت"
 
 #: includes/languages/trans_dash.php:158
 msgid "Submitted on"
-msgstr ""
+msgstr "ارسال شده در"
 
 #: includes/languages/trans_dash.php:159
 msgid "Updated on"
-msgstr ""
+msgstr "بروزرسانی در"
 
 #: includes/languages/trans_dash.php:160
 msgid "Current status"
-msgstr ""
+msgstr "وضعیت فعلی"
 
 #: includes/languages/trans_dash.php:161
 msgid "Status"
@@ -784,19 +773,19 @@ msgstr "تایید"
 
 #: includes/languages/trans_dash.php:163
 msgid "Awaiting"
-msgstr ""
+msgstr "در انتظار"
 
 #: includes/languages/trans_dash.php:164
 msgid "Unapprove"
-msgstr ""
+msgstr "تایید نشده"
 
 #: includes/languages/trans_dash.php:165
 msgid "Trash"
-msgstr ""
+msgstr "زباله‌دان"
 
 #: includes/languages/trans_dash.php:166
 msgid "Spam"
-msgstr ""
+msgstr "هرزنامه"
 
 #: includes/languages/trans_dash.php:167
 msgid "Update"
@@ -816,11 +805,11 @@ msgstr "دیدگاه"
 
 #: includes/languages/trans_dash.php:173
 msgid "Upvote"
-msgstr ""
+msgstr "رای مثبت"
 
 #: includes/languages/trans_dash.php:174
 msgid "Downvote"
-msgstr ""
+msgstr "رای منفی"
 
 #: includes/languages/trans_dash.php:175
 msgid "Date"
@@ -828,15 +817,15 @@ msgstr "تاریخ"
 
 #: includes/languages/trans_dash.php:176
 msgid "Without name"
-msgstr ""
+msgstr "بدون نام"
 
 #: includes/languages/trans_dash.php:177
 msgid "Visitor detail"
-msgstr ""
+msgstr "جزئیات بازدیدکننده"
 
 #: includes/languages/trans_dash.php:178
 msgid "Created on"
-msgstr ""
+msgstr "ساخته شده در"
 
 #: includes/languages/trans_dash.php:179
 msgid "Clear filters"
@@ -860,51 +849,51 @@ msgstr "با افزودن رکورد جدید تلاشی برای شروع دا�
 
 #: includes/languages/trans_dash.php:186
 msgid "Name and Global Details"
-msgstr ""
+msgstr "نام و جزئیات عمومی"
 
 #: includes/languages/trans_dash.php:187
 msgid "Email and Social Networks"
-msgstr ""
+msgstr "رایانامه و شبکه‌های اجتماعی"
 
 #: includes/languages/trans_dash.php:188
 msgid "Security and Enter"
-msgstr ""
+msgstr "امنیت و ورود"
 
 #: includes/languages/trans_dash.php:189
 msgid "Improve User Experience"
-msgstr ""
+msgstr "بهبود تجربه کاربری"
 
 #: includes/languages/trans_dash.php:190
 msgid "Two step verification"
-msgstr ""
+msgstr "ورود دو مرحله ای"
 
 #: includes/languages/trans_dash.php:191
 msgid "Show sidebar"
-msgstr ""
+msgstr "نمایش نوار کناری"
 
 #: includes/languages/trans_dash.php:192
 msgid "Default language"
-msgstr ""
+msgstr "زبان پیشفرض"
 
 #: includes/languages/trans_dash.php:193
 msgid "Select one item"
-msgstr ""
+msgstr "یکی از موارد را انتخاب کنید"
 
 #: includes/languages/trans_dash.php:194
 msgid "like"
-msgstr ""
+msgstr "پسندیدن"
 
 #: includes/languages/trans_dash.php:195
 msgid "Enter a valid website from 3 to 40 character"
-msgstr ""
+msgstr "وبسایت معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: includes/languages/trans_dash.php:196
 msgid "Instagram"
-msgstr ""
+msgstr "اینستاگرام"
 
 #: includes/languages/trans_dash.php:197
 msgid "Enter a valid instagram from 3 to 40 character"
-msgstr ""
+msgstr "شناسه اینستاگرام معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: includes/languages/trans_dash.php:198
 msgid "Facebook"
@@ -912,7 +901,7 @@ msgstr "فیس‌بوک"
 
 #: includes/languages/trans_dash.php:199
 msgid "Enter a valid facebook from 3 to 40 character"
-msgstr ""
+msgstr "شناسه فیس‌بوک معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: includes/languages/trans_dash.php:200
 msgid "Twitter"
@@ -920,7 +909,7 @@ msgstr "توییتر"
 
 #: includes/languages/trans_dash.php:201
 msgid "Enter a valid twitter from 3 to 40 character"
-msgstr ""
+msgstr "شناسه تویتر معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: includes/languages/trans_dash.php:202
 msgid "Linkedin"
@@ -928,31 +917,31 @@ msgstr "لینکدین"
 
 #: includes/languages/trans_dash.php:203
 msgid "Enter a valid linkedin from 3 to 40 character"
-msgstr ""
+msgstr "شناسه لینکدین معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: includes/languages/trans_dash.php:204
 msgid "Gmail"
-msgstr ""
+msgstr "جیمیل"
 
 #: includes/languages/trans_dash.php:205
 msgid "Like"
-msgstr ""
+msgstr "لایک"
 
 #: includes/languages/trans_dash.php:206
 msgid "Firstname"
-msgstr ""
+msgstr "نام "
 
 #: includes/languages/trans_dash.php:207
 msgid "Enter a valid firstname from 3 to 40 character"
-msgstr ""
+msgstr "نام معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: includes/languages/trans_dash.php:208
 msgid "Lastname"
-msgstr ""
+msgstr "نام‌خانوادگی"
 
 #: includes/languages/trans_dash.php:209
 msgid "Enter a valid lastname from 3 to 40 character"
-msgstr ""
+msgstr "نام خانوادگی معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: includes/languages/trans_dash.php:210
 msgid "Username"
@@ -960,11 +949,11 @@ msgstr "نام‌کاربری"
 
 #: includes/languages/trans_dash.php:211
 msgid "Enter a valid username from 3 to 40 character"
-msgstr ""
+msgstr "نام کاربری معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: includes/languages/trans_dash.php:212
 msgid "Nick name"
-msgstr ""
+msgstr "لقب"
 
 #: includes/languages/trans_dash.php:213
 msgid "Title"
@@ -972,7 +961,7 @@ msgstr "عنوان"
 
 #: includes/languages/trans_dash.php:214
 msgid "Enter a valid title from 3 to 40 character"
-msgstr ""
+msgstr "لطفا عنوانی صحیح بین ۳ تا ۴۰ حرف وارد کنید"
 
 #: includes/languages/trans_dash.php:215
 msgid "Type"
@@ -980,7 +969,7 @@ msgstr "نوع"
 
 #: includes/languages/trans_dash.php:216
 msgid "Enter a valid type from 3 to 40 character"
-msgstr ""
+msgstr "نوع معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: includes/languages/trans_dash.php:217
 msgid "Birthday"
@@ -988,7 +977,7 @@ msgstr "تاریخ تولد"
 
 #: includes/languages/trans_dash.php:218
 msgid "Bio"
-msgstr ""
+msgstr "زندگی‌نامه"
 
 #: includes/languages/trans_dash.php:219
 msgid "Display name"
@@ -996,11 +985,11 @@ msgstr "نام برای نمایش"
 
 #: includes/languages/trans_dash.php:220
 msgid "Enter a valid displayname from 3 to 40 character"
-msgstr ""
+msgstr "نام نمایشی معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: includes/languages/trans_dash.php:221
 msgid "Like 09120123456"
-msgstr ""
+msgstr "مثل 0912 012 3456"
 
 #: includes/languages/trans_dash.php:222
 msgid "Gender"
@@ -1024,15 +1013,15 @@ msgstr "غیر فعال"
 
 #: includes/languages/trans_dash.php:227
 msgid "Removed"
-msgstr ""
+msgstr "حذف شده"
 
 #: includes/languages/trans_dash.php:228
 msgid "Filter"
-msgstr ""
+msgstr "مسدود شده"
 
 #: includes/languages/trans_dash.php:229
 msgid "Unreachable"
-msgstr ""
+msgstr "غیر قابل دسترسی"
 
 #: includes/languages/trans_dash.php:230
 msgid "Permission"
@@ -1040,7 +1029,7 @@ msgstr "سطح دسترسی"
 
 #: includes/languages/trans_dash.php:231
 msgid "No permission"
-msgstr ""
+msgstr "بدون سطح دسترسی"
 
 #: includes/languages/trans_dash.php:232
 msgid "Password"
@@ -1048,11 +1037,11 @@ msgstr "کلمه عبور"
 
 #: includes/languages/trans_dash.php:233
 msgid "Enter to change pass"
-msgstr ""
+msgstr "برای تغییر کلمه عبور آن را وارد کنید"
 
 #: includes/languages/trans_dash.php:234
 msgid "Password was set, enter to change it!"
-msgstr ""
+msgstr "کلمه عبور تنظیم شده است، برای تغییر آن کلمه عبور را وارد کنید!"
 
 #: includes/languages/trans_dash.php:235
 msgid "Password not set, enter  to set it!"
@@ -1060,11 +1049,11 @@ msgstr ""
 
 #: includes/languages/trans_dash.php:236
 msgid "Confirm password"
-msgstr ""
+msgstr "تایید رمز عبور"
 
 #: includes/languages/trans_dash.php:237
 msgid "Require to change current password"
-msgstr ""
+msgstr "برای تغییر کلمه عبور فعلی الزامی است"
 
 #: includes/languages/trans_dash.php:238
 msgid "Save all"
@@ -1076,55 +1065,55 @@ msgstr "نام برای نمایش عمومی"
 
 #: includes/languages/trans_dash.php:242
 msgid "Created date"
-msgstr ""
+msgstr "تاریخ ایجاد"
 
 #: includes/languages/trans_dash.php:243
 msgid "Last Modified"
-msgstr ""
+msgstr "آخرین به‌روز رسانی"
 
 #: includes/languages/trans_dash.php:244
 msgid "Mr"
-msgstr ""
+msgstr "آقای"
 
 #: includes/languages/trans_dash.php:245
 msgid "Mrs"
-msgstr ""
+msgstr "خانم"
 
 #: includes/languages/trans_dash.php:246
 msgid "Password is set"
-msgstr ""
+msgstr "کلمه عبور تنظیم شده است"
 
 #: includes/languages/trans_dash.php:247
 msgid "Password is not set!"
-msgstr ""
+msgstr "کلمه عبور تنظیم نشده است!"
 
 #: includes/languages/trans_dash.php:248
 msgid "Two step verification in enabled"
-msgstr ""
+msgstr "ورود دو مرحله ای فعال است"
 
 #: includes/languages/trans_dash.php:249
 msgid "Two step verification in disable"
-msgstr ""
+msgstr "ورود دو مرحله ای غیر فعال است"
 
 #: includes/languages/trans_dash.php:250
 msgid "Try to start with add new user!"
-msgstr ""
+msgstr "با افزودن کاربر جدید تلاشی برای شروع داشته باشید!"
 
 #: includes/languages/trans_dash.php:251
 msgid "All :Members"
-msgstr ""
+msgstr "تمامی :Experts"
 
 #: includes/languages/trans_dash.php:252
 msgid ":Experts"
-msgstr ""
+msgstr ":Experts"
 
 #: includes/languages/trans_dash.php:253
 msgid ":Teachers"
-msgstr ""
+msgstr ":Teachers"
 
 #: includes/languages/trans_dash.php:254
 msgid "Students"
-msgstr ""
+msgstr "دانش آموزان"
 
 #: includes/languages/trans_dash.php:257
 msgid "Slug"
@@ -1164,31 +1153,31 @@ msgstr "با افزودن رکورد جدید تلاشی برای شروع دا�
 
 #: includes/languages/trans_dash.php:268
 msgid "Backup Project"
-msgstr ""
+msgstr "پشتیبان‌گیری از پروژه"
 
 #: includes/languages/trans_dash.php:269
 msgid "You can create backup now"
-msgstr ""
+msgstr "شما می‌توانید هم اکنون یک فایل پشتیبانی از اطلاعات خود داشته باشید"
 
 #: includes/languages/trans_dash.php:270
 msgid "Please wait This operation may take a few minutes"
-msgstr ""
+msgstr "لطفا صبر کنید. این عملیات ممکن است چند دقیقه طول بکشد"
 
 #: includes/languages/trans_dash.php:271
 msgid "Backup now"
-msgstr ""
+msgstr "هم اکنون فایل پشتیبانی تهیه کنید!"
 
 #: includes/languages/trans_dash.php:272
 msgid "Sise"
-msgstr ""
+msgstr "سایز"
 
 #: includes/languages/trans_dash.php:273
 msgid "Download"
-msgstr ""
+msgstr "دانلود"
 
 #: includes/languages/trans_dash.php:274
 msgid "No backup was found"
-msgstr ""
+msgstr "هیچ فایل پشتیبانی یافت نشد"
 
 #: includes/languages/trans_dash.php:277 includes/languages/trans_project.php:182
 msgid "Control Panel"
@@ -1284,7 +1273,7 @@ msgstr "پسوند مجاز JPG، PNG حداکثر ۱۰۰۰ کیلوبایت"
 
 #: includes/languages/trans_dash.php:304
 msgid "Click to download"
-msgstr ""
+msgstr "برای دانلود کلیک کنید"
 
 #: includes/languages/trans_dash.php:305
 msgid "Video"
@@ -1292,7 +1281,7 @@ msgstr ""
 
 #: includes/languages/trans_dash.php:306
 msgid "MP3"
-msgstr ""
+msgstr "ام‌پی‌تری"
 
 #: includes/languages/trans_dash.php:307
 msgid "PDF"
@@ -1300,7 +1289,7 @@ msgstr ""
 
 #: includes/languages/trans_dash.php:308
 msgid "Without preview"
-msgstr ""
+msgstr "بدون پیش‌نمایش"
 
 #: includes/languages/trans_dash.php:312
 msgid "News"
@@ -1328,11 +1317,11 @@ msgstr "پیامک"
 
 #: includes/languages/trans_dash.php:320
 msgid "Quick send"
-msgstr ""
+msgstr "ارسال سریع"
 
 #: includes/languages/trans_dash.php:321
 msgid "Templates"
-msgstr ""
+msgstr "الگوها"
 
 #: includes/languages/trans_dash.php:322
 msgid "Powered by"
@@ -1620,43 +1609,43 @@ msgstr "ورود به جیبرس"
 
 #: includes/languages/trans_dash.php:394
 msgid "Toggle side bar"
-msgstr ""
+msgstr "تغییر وضعیت نوار کناری"
 
 #: includes/languages/trans_dash.php:395
 msgid "You can save side bar status"
-msgstr ""
+msgstr "شما می‌توانید وضعیت نوار کناری را تغییر دهید"
 
 #: includes/languages/trans_dash.php:396
 msgid "Are your need side bar?"
-msgstr ""
+msgstr "شما نیاز به نمایش نوار کناری دارید؟"
 
 #: includes/languages/trans_dash.php:399
 msgid "Auto hide sidebar"
-msgstr ""
+msgstr "مخفی شدن خودکار نوار کناری"
 
 #: includes/languages/trans_dash.php:400
 msgid "To change your password"
-msgstr ""
+msgstr "برای تغییر کلمه عبور خود"
 
 #: includes/languages/trans_dash.php:401
 msgid "Click here"
-msgstr ""
+msgstr "اینجا کلیک کنید"
 
 #: includes/languages/trans_dash.php:402
 msgid "Delete your account"
-msgstr ""
+msgstr "حذف حساب کاربری خود"
 
 #: includes/languages/trans_dash.php:405
 msgid "YOUR API KEY"
-msgstr ""
+msgstr "کلید اتصال شما"
 
 #: includes/languages/trans_dash.php:406
 msgid "GENERATE NEW API KEY"
-msgstr ""
+msgstr "ساخت کلید اتصال جدید"
 
 #: includes/languages/trans_dash.php:407
 msgid "Get new API KEY"
-msgstr ""
+msgstr "دریافت کلید اتصال جدید"
 
 #: includes/languages/trans_dash.php:410
 msgid "Profile"
@@ -1736,7 +1725,7 @@ msgstr "فاکتور"
 
 #: includes/languages/trans_dash.php:433
 msgid "You are not have payment history yet!"
-msgstr ""
+msgstr "هیچ تراکنش مالی برای شما یافت نشد"
 
 #: includes/languages/trans_dash.php:436
 msgid "plan"
@@ -1752,7 +1741,7 @@ msgstr "اعضاء‌ فعال"
 
 #: includes/languages/trans_dash.php:439
 msgid "You are not have billing detail yet!"
-msgstr ""
+msgstr "هیچ تراکنش مالی برای شما یافت نشد"
 
 #: includes/languages/trans_dash.php:444
 msgid "Info"
@@ -1768,7 +1757,7 @@ msgstr "نمایش اطلاعات پی‌اچ‌پی"
 
 #: includes/languages/trans_dash.php:449
 msgid "Test coding function"
-msgstr ""
+msgstr "بررسی تابع کدینگ"
 
 #: includes/languages/trans_dash.php:450
 msgid "String or Number"
@@ -1852,11 +1841,11 @@ msgstr "خیر"
 
 #: includes/languages/trans_dash.php:481
 msgid "Search in :dbtabless"
-msgstr ""
+msgstr "جستجو..."
 
 #: includes/languages/trans_dash.php:482
 msgid "Try to start with add new :dbtables!"
-msgstr ""
+msgstr "با افزودن رکورد جدید تلاشی برای شروع داشته باشید!"
 
 #: includes/languages/trans_dash.php:485
 msgid "Change permission of user"
@@ -1908,7 +1897,7 @@ msgstr "افزودن"
 
 #: includes/languages/trans_dash.php:501
 msgid "Search in :transactionss"
-msgstr ""
+msgstr "جستجو در تراکنش‌ها"
 
 #: includes/languages/trans_dash.php:502
 msgid "Budget before"
@@ -1928,7 +1917,7 @@ msgstr "اعتبارسنجی"
 
 #: includes/languages/trans_dash.php:506
 msgid "Try to start with add new :transactions!"
-msgstr ""
+msgstr "با افزودن رکورد جدید تلاشی برای شروع داشته باشید!"
 
 #: includes/languages/trans_dash.php:509
 msgid "logitems Detail"
@@ -1968,7 +1957,7 @@ msgstr "تاریخ‌ایجاد"
 
 #: includes/languages/trans_dash.php:520
 msgid "Click to show all logs by this logitems"
-msgstr ""
+msgstr "کلیک کنید تا تمامی لاگ‌هایی که با این عنوان ثبت شده است نمایش داده شود"
 
 #: includes/languages/trans_dash.php:523
 msgid "id"
@@ -2000,7 +1989,7 @@ msgstr "اگر چیزی در مورد این صفحه نمی‌دانید، آن
 
 #: includes/languages/trans_dash.php:532
 msgid "Submit this form carefully"
-msgstr ""
+msgstr "این را با احتیاط بفشارید"
 
 #: includes/languages/trans_dash.php:533
 msgid "Dash"
@@ -2008,11 +1997,11 @@ msgstr "دش"
 
 #: includes/languages/trans_dash.php:534
 msgid "Press it if you are sure!"
-msgstr ""
+msgstr "اگر مطمئن هستید، بفشارید!"
 
 #: includes/languages/trans_dash.php:535
 msgid "Update All"
-msgstr ""
+msgstr "بروزرسانی همه"
 
 #: includes/languages/trans_dash.php:536
 msgid "Last update"
@@ -2020,27 +2009,27 @@ msgstr ""
 
 #: includes/languages/trans_dash.php:537
 msgid "Current Version"
-msgstr ""
+msgstr "نسخه فعلی"
 
 #: includes/languages/trans_dash.php:538
 msgid "Commits"
-msgstr ""
+msgstr "کامیت‌ها"
 
 #: includes/languages/trans_dash.php:539
 msgid "Do it if you know it"
-msgstr ""
+msgstr "اگر می‌دانید انجامش دهید"
 
 #: includes/languages/trans_dash.php:540
 msgid "Update Dash Repository"
-msgstr ""
+msgstr "بروزرسانی مخزن دش"
 
 #: includes/languages/trans_dash.php:541
 msgid "Dash Engine Location"
-msgstr ""
+msgstr "محل قرارگیری موتور دش"
 
 #: includes/languages/trans_dash.php:542
 msgid "Update Repository"
-msgstr ""
+msgstr "بروزرسانی مخزن"
 
 #: includes/languages/trans_dash.php:543
 msgid "Project database"
@@ -2048,7 +2037,7 @@ msgstr ""
 
 #: includes/languages/trans_dash.php:544
 msgid "Addon Database"
-msgstr ""
+msgstr "دیتابیس افزونه"
 
 #: includes/languages/trans_dash.php:545
 msgid "Upgrade"
@@ -2068,7 +2057,7 @@ msgstr "تایید"
 
 #: includes/languages/trans_dash.php:551
 msgid "Run cronjob for this service"
-msgstr ""
+msgstr "اجرای کرون جاب برای این سرویس"
 
 #: includes/languages/trans_dash.php:554
 msgid "Tools"
@@ -2197,55 +2186,55 @@ msgstr "کلید"
 
 #: includes/languages/trans_dash.php:595
 msgid "Backup database"
-msgstr ""
+msgstr "پشتیبان گیری پایگاه داده"
 
 #: includes/languages/trans_dash.php:596
 msgid "Back"
-msgstr ""
+msgstr "بازگشت"
 
 #: includes/languages/trans_dash.php:597
 msgid "File is empty"
-msgstr ""
+msgstr "فایل خالی است"
 
 #: includes/languages/trans_dash.php:598
 msgid "Database info"
-msgstr ""
+msgstr "اطلاعات دیتابیس"
 
 #: includes/languages/trans_dash.php:599
 msgid "Show Auto backup log file"
-msgstr ""
+msgstr "نمایش لاگ پشتیبان گیری‌های خود کار"
 
 #: includes/languages/trans_dash.php:600
 msgid "You have another database for logs"
-msgstr ""
+msgstr "شما یک دیتابیس دیگر هم برای لاگ‌ها دارید"
 
 #: includes/languages/trans_dash.php:601
 msgid "Click for create backup from log database"
-msgstr ""
+msgstr "برای پشتیبان‌گیری از دیتابیس لاگ‌ها کلیک کنید"
 
 #: includes/languages/trans_dash.php:602
 msgid "Auto backup"
-msgstr ""
+msgstr "پشتیبان گیری خودکار"
 
 #: includes/languages/trans_dash.php:603
 msgid "Start backup every"
-msgstr ""
+msgstr "شروع عملیات پشتیبان گیری هر"
 
 #: includes/languages/trans_dash.php:604
 msgid "Year"
-msgstr ""
+msgstr "سال"
 
 #: includes/languages/trans_dash.php:605
 msgid "Month"
-msgstr ""
+msgstr "ماه"
 
 #: includes/languages/trans_dash.php:606
 msgid "Week"
-msgstr ""
+msgstr "هفته"
 
 #: includes/languages/trans_dash.php:607
 msgid "Day"
-msgstr ""
+msgstr "روز"
 
 #: includes/languages/trans_dash.php:608
 msgid "hour"
@@ -2253,67 +2242,67 @@ msgstr "ساعت"
 
 #: includes/languages/trans_dash.php:609
 msgid "Start backup at time"
-msgstr ""
+msgstr "شروع عملیات پشتیبان گیری در ساعت"
 
 #: includes/languages/trans_dash.php:610
 msgid "Life time of old backup"
-msgstr ""
+msgstr "طل عمر فایل های پشتیبان گیری قبلی"
 
 #: includes/languages/trans_dash.php:611
 msgid "2 years"
-msgstr ""
+msgstr "دو سال"
 
 #: includes/languages/trans_dash.php:612
 msgid "one year"
-msgstr ""
+msgstr "یک سال"
 
 #: includes/languages/trans_dash.php:613
 msgid "6 months"
-msgstr ""
+msgstr "شش ماه"
 
 #: includes/languages/trans_dash.php:614
 msgid "3 months"
-msgstr ""
+msgstr "سه ماه"
 
 #: includes/languages/trans_dash.php:615
 msgid "2 months"
-msgstr ""
+msgstr "دو ماه"
 
 #: includes/languages/trans_dash.php:616
 msgid "one month"
-msgstr ""
+msgstr "یک ماه"
 
 #: includes/languages/trans_dash.php:617
 msgid "one week"
-msgstr ""
+msgstr "یک هفته"
 
 #: includes/languages/trans_dash.php:618
 msgid "2 weeks"
-msgstr ""
+msgstr "۲ هفته"
 
 #: includes/languages/trans_dash.php:619
 msgid "one day"
-msgstr ""
+msgstr "یک روز"
 
 #: includes/languages/trans_dash.php:620
 msgid "3 days"
-msgstr ""
+msgstr "۳ روز"
 
 #: includes/languages/trans_dash.php:621
 msgid "5 days"
-msgstr ""
+msgstr "۵ روز"
 
 #: includes/languages/trans_dash.php:624
 msgid "System master controll"
-msgstr ""
+msgstr "مدیریت فنی سیستم"
 
 #: includes/languages/trans_dash.php:625
 msgid "Raw table"
-msgstr ""
+msgstr "جدول‌های خام"
 
 #: includes/languages/trans_dash.php:626
 msgid "Cronjob"
-msgstr ""
+msgstr "کرون جاب"
 
 #: includes/languages/trans_dash.php:627
 msgid "Log items"
@@ -2325,11 +2314,11 @@ msgstr "آگاه سازی ها"
 
 #: includes/languages/trans_dash.php:629
 msgid "Short URL"
-msgstr ""
+msgstr "لینک کوتاه"
 
 #: includes/languages/trans_dash.php:630
 msgid "Send notify"
-msgstr ""
+msgstr "ارسال پیام"
 
 #: includes/languages/trans_dash.php:631
 msgid "Sample"
@@ -2405,7 +2394,7 @@ msgstr "ترجمه"
 
 #: includes/languages/trans_dash.php:659
 msgid "Extract All trans func"
-msgstr ""
+msgstr "استخراج توابع ترجمه  در دش و پروژه جاری"
 
 #: includes/languages/trans_dash.php:660
 msgid "Extract twig trans func in current project"
@@ -2497,15 +2486,15 @@ msgstr "سلام"
 
 #: includes/languages/trans_dash.php:686
 msgid "Click to toggle sidebar status"
-msgstr ""
+msgstr "برای تغییر وضعیت منوی کناری کلیک کنید"
 
 #: includes/languages/trans_dash.php:687
 msgid "Show side menu"
-msgstr ""
+msgstr "نمایش منوی کناری"
 
 #: includes/languages/trans_dash.php:688
 msgid "View website"
-msgstr ""
+msgstr "مشاهده وب‌سایت"
 
 #: includes/languages/trans_dash.php:689
 msgid "Work in your language"
@@ -2517,11 +2506,11 @@ msgstr "مکان فعلی خود را دیده و به مکان‌های وال�
 
 #: includes/languages/trans_dash.php:694
 msgid "You are supervisor!"
-msgstr ""
+msgstr "شما مدیر فنی سیستم هستید!"
 
 #: includes/languages/trans_dash.php:695
 msgid "Enter with another user"
-msgstr ""
+msgstr "ورود با کاربر دیگر"
 
 #: includes/languages/trans_dash.php:700
 msgid "Please enter valid mobile number"
@@ -2601,7 +2590,7 @@ msgstr "نام‌کاربری معتبری بین ۴ تا ۵۰ کاراکتر و
 
 #: includes/languages/trans_dash.php:719
 msgid "Delete Account"
-msgstr ""
+msgstr "حذف حساب‌کاربری"
 
 #: includes/languages/trans_dash.php:720
 msgid "Go and check it"
@@ -3706,6 +3695,15 @@ msgid ""
 msgstr ""
 "راه‌کارهای سازمانی ما قدرت و امکانات ارمایل را برای پروژه‌های بزرگ و پیچیده شما به "
 "ارمغان می‌آورد."
+
+#~ msgid "Please try type something!"
+#~ msgstr "لطفا تلاشی برای تایپ داشته باشید!"
+
+#~ msgid "Thank You For contacting us"
+#~ msgstr "از تماس شما متشکریم"
+
+#~ msgid "We could'nt save the contact"
+#~ msgstr "مشکلی در ذخیره‌سازی مخاطب پیش آمد"
 
 #~ msgid "click here to login to your account"
 #~ msgstr "برای ورود به اکانت خود کلیک کنید"
