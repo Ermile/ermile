@@ -1,5 +1,5 @@
 <?php
-
+require_once('social.php');
 
 /**
 @ In the name Of Allah
