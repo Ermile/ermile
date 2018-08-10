@@ -360,8 +360,6 @@ pre {
   /* CSS2 */
   white-space: pre-wrap;
   /* CSS 2.1 */
-  white-space: pre-line;
-  /* CSS 3 (and 2.1 as well, actually) */
   word-wrap: break-word;
   /* IE */
   display: block;
@@ -1391,29 +1389,24 @@ a.badge.danger {
 /* breadcrumb */
 .breadcrumb {
   padding: 5px 1em;
-  display: inline;
+  display: inline-block;
   line-height: 30px;
   height: 30px;
   outline: none; }
 
 .breadcrumb a {
   font-size: 1em;
-  line-height: 1.5em;
-  color: #99a0aa;
+  line-height: 20px;
   float: left;
-  font-weight: 700;
+  font-weight: 500;
   transition: 0.3s; }
 
-.breadcrumb a:hover {
-  color: #656d78; }
-
 .breadcrumb a:last-child {
-  color: #656d78; }
+  font-weight: 900; }
 
 .breadcrumb > a + a:before {
   font-family: "siftal";
   content: "\63";
-  color: #99a0aa;
   padding: 0px 8px;
   float: left; }
 
@@ -1433,20 +1426,15 @@ a.badge.danger {
 .breadcrumb2 a {
   font-size: 1em;
   line-height: 20px;
-  color: #99a0aa;
   float: left;
-  font-weight: 700;
+  font-weight: 500;
   transition: 0.3s; }
 
-.breadcrumb2 a:hover {
-  color: #656d78; }
-
 .breadcrumb2 a:last-child {
-  color: #656d78; }
+  font-weight: 900; }
 
 .breadcrumb2 > a + a:before {
   content: "/";
-  color: #99a0aa;
   padding: 0px 8px;
   float: left; }
 
@@ -3663,6 +3651,9 @@ body.errorPage {
   width: 100%;
   height: 100%;
   overflow: hidden; }
+
+body.errorPage.s20 {
+  background-color: #102060; }
 
 body.errorPage.s50 {
   background-color: #750700; }
@@ -12210,7 +12201,9 @@ body.enter.bg15 {
   margin: 0 auto;
   transition: 0.3s;
   overflow: hidden;
-  text-align: center; }
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 2px; }
 
 .enter #enter .logo span {
   display: none !important; }
@@ -15429,6 +15422,18 @@ body .w500 {
   width: 500px;
   max-width: 100%; }
 
+body .we50 {
+  min-width: 50px;
+  width: 50px; }
+
+body .we70 {
+  min-width: 70px;
+  width: 70px; }
+
+body .we80 {
+  min-width: 80px;
+  width: 80px; }
+
 body .we100 {
   min-width: 100px;
   width: 100px; }
@@ -16543,7 +16548,8 @@ body.siftal.loading-page #sidebar .avatar:before {
   transition: background-color 0.3s;
   cursor: pointer;
   max-width: 300px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  line-height: 1.5em; }
 
 .siftal #sidebar ul > li > a > i {
   font-size: 1.2em;
@@ -16587,6 +16593,19 @@ body.siftal.loading-page #sidebar .avatar:before {
 .siftal #sidebar ul > li > a.weAreHere {
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff; }
+
+.siftal.ltr #sidebar #ermileBadge {
+  padding-right: 0; }
+
+.siftal.rtl #sidebar #ermileBadge {
+  padding-left: 0; }
+
+.siftal #sidebar hr {
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  border-top-color: #777;
+  border-top-color: rgba(255, 255, 255, 0.2); }
 
 /* footer */
 .siftal footer {
