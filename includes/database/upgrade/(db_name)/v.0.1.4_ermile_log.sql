@@ -125,3 +125,12 @@ ADD CONSTRAINT `visitors_agents` FOREIGN KEY (`agent_id`) REFERENCES `agents` (`
 ADD CONSTRAINT `visitors_services` FOREIGN KEY (`service_id`) REFERENCES `services` (`id`) ON UPDATE CASCADE,
 ADD CONSTRAINT `visitors_urls` FOREIGN KEY (`url_id`) REFERENCES `urls` (`id`) ON UPDATE CASCADE,
 ADD CONSTRAINT `visitors_urls_referer` FOREIGN KEY (`url_idreferer`) REFERENCES `urls` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+
+
+ALTER TABLE `telegrams` ADD `send2` mediumtext CHARACTER SET utf8mb4;
+ALTER TABLE `telegrams` ADD `response2` mediumtext CHARACTER SET utf8mb4;
+
+ALTER TABLE `telegrams` ADD `send3` mediumtext CHARACTER SET utf8mb4;
+ALTER TABLE `telegrams` ADD `response3` mediumtext CHARACTER SET utf8mb4;
+
