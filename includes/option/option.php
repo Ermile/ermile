@@ -5,6 +5,13 @@ require_once('social.php');
 @ In the name Of Allah
 * The base configurations of the ermile.
 */
+
+if(!defined('db_log_name'))
+{
+	define('db_log_name', 'ermile_log');
+}
+
+
 self::$language =
 [
 	'default' => 'fa',
