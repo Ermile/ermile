@@ -16,6 +16,9 @@ self::$language =
 self::$url['tld']                   = 'com';
 self::$url['protocol']              = 'https';
 
+self::$config['site']['title']  = "Ermile";
+self::$config['site']['desc']   = "Ermile contain a new tools for each one";
+self::$config['site']['slogan'] = "As easy as ABC is our slogan!";
 
 /**
  * call kavenegar template
