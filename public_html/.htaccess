@@ -12,11 +12,6 @@ Options -Indexes
 </IfModule>
 
 # -----------------------------------------------------
-<IfModule mod_headers.c>
-	Header set X-Powered-By "Baravak"
-	Header set Version "1.0.0-dev"
-	Header set Edited-By "Javad:)"
-</IfModule>
 AddDefaultCharset "Content-Type: text/html; charset=UTF-8"
 
 <FilesMatch "index\.php$">
