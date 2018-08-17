@@ -48,7 +48,7 @@ class twigTransTerms
 	echo T_("Billing");                                                               // Line 37
 
 	//----------------------------------------------addons\content_account\layout.html
-	echo T_("Dashboard");                                                             // Line 70
+	echo T_("Dashboard");                                                             // Line 69
 
 	//-------------------------------------addons\content_account\profile\display.html
 	echo T_("Name and Global Details");                                               // Line 12
@@ -102,16 +102,28 @@ class twigTransTerms
 	echo T_("Permission");                                                            // Line 24
 	echo T_("No permission");                                                         // Line 269
 	echo T_("Email");                                                                 // Line 108
-	echo T_("To change your password");                                               // Line 280
-	echo T_("Click here");                                                            // Line 280
-	echo T_("Delete your account");                                                   // Line 285
+	echo T_("To change your password");                                               // Line 258
+	echo T_("Click here");                                                            // Line 258
+	echo T_("Delete your account");                                                   // Line 263
 	echo T_("Confirm password");                                                      // Line 296
 	echo T_("Require to change current password");                                    // Line 296
 	echo T_("Password was set, enter to change it!");                                 // Line 298
-	echo T_("Password not set, enter to set it!");                                    // Line 294
+	echo T_("Password not set, enter to set it!");                                    // Line 272
 	echo T_("Add");                                                                   // Line 53
 	echo T_("Save");                                                                  // Line 13
 	echo T_("Save all");                                                              // Line 324
+
+	//-------------------------------addons\content_account\profile\other\display.html
+
+	//------------------------------------addons\content_account\profile\pagestep.html
+	echo T_("General");                                                               // Line 13
+	echo T_("Security");                                                              // Line 23
+	echo T_("Social network");                                                        // Line 33
+	echo T_("Other");                                                                 // Line 42
+
+	//----------------------------addons\content_account\profile\security\display.html
+
+	//------------------------------addons\content_account\profile\social\display.html
 
 	//-----------------------------------------addons\content_account\ref\display.html
 	echo T_("Referral Program");                                                      // Line 11
@@ -311,10 +323,10 @@ class twigTransTerms
 	echo T_("Without Parent");                                                        // Line 132
 	echo T_("Choose category for posts is fix url of post relative and help people find it better.");// Line 143
 	echo T_("Choose category of post");                                               // Line 145
-	echo T_("Click on special tags to use this depending on your website design");    // Line 85
-	echo T_("Tag");                                                                   // Line 94
+	echo T_("Click on special tags to use this depending on your website design");    // Line 163
+	echo T_("Tag");                                                                   // Line 86
 	echo T_("Add tag manually to link articles togethers");                           // Line 175
-	echo T_("Tag keywords...");                                                       // Line 98
+	echo T_("Tag keywords...");                                                       // Line 90
 	echo T_("Add tag");                                                               // Line 177
 	echo T_("Featured Image");                                                        // Line 185
 	echo T_("allowed extentions jpg, png. Max 1000Kb");                               // Line 188
@@ -523,7 +535,7 @@ class twigTransTerms
 	echo T_("Tools");                                                                 // Line 7
 	echo T_("Transactions");                                                          // Line 8
 	echo T_("Log items");                                                             // Line 101
-	echo T_("Logs");                                                                  // Line 9
+	echo T_("Logs");                                                                  // Line 26
 	echo T_("Notifications");                                                         // Line 131
 	echo T_("Short URL");                                                             // Line 142
 	echo T_("Send notify");                                                           // Line 153
@@ -620,6 +632,32 @@ class twigTransTerms
 	echo T_("Run");                                                                   // Line 15
 	echo T_("Encode");                                                                // Line 24
 	echo T_("Decode");                                                                // Line 28
+
+	//------------------------------------------addons\content_su\tg\home\display.html
+	echo T_("Webhook");                                                               // Line 28
+	echo T_("Send message");                                                          // Line 35
+	echo T_("Send photo");                                                            // Line 41
+
+	//-------------------------------------------addons\content_su\tg\log\display.html
+	echo T_("You are not starting yet!");                                             // Line 130
+
+	//-----------------------------------addons\content_su\tg\sendmessage\display.html
+	echo T_("Chat id or username");                                                   // Line 7
+	echo T_("Unique identifier for the target chat or username of the target channel (in the format @channelusername)");// Line 8
+	echo T_("Message");                                                               // Line 11
+	echo T_("Text of the message to be sent");                                        // Line 23
+	echo T_("Last request");                                                          // Line 24
+
+	//-------------------------------------addons\content_su\tg\sendphoto\display.html
+	echo T_("File URL");                                                              // Line 12
+	echo T_("pass an HTTP URL as a String for Telegram to get a photo from the Internet");// Line 13
+	echo T_("Caption");                                                               // Line 22
+
+	//---------------------------------------addons\content_su\tg\webhook\display.html
+	echo T_("HTTPS url to send updates to. Use an empty string to remove webhook integration");// Line 8
+	echo T_("Max Connections");                                                       // Line 12
+	echo T_("Defaults to 40");                                                        // Line 13
+	echo T_("Set Webhook");                                                           // Line 16
 
 	//--------------------------------------------addons\content_su\tools\display.html
 	echo T_("You can use our tools");                                                 // Line 6
@@ -730,18 +768,19 @@ class twigTransTerms
 	echo T_("Close ticket");                                                          // Line 23
 	echo T_("Creator");                                                               // Line 32
 	echo T_("Save tag");                                                              // Line 49
-	echo T_("Add tag manually to link tickets togethers");                            // Line 97
+	echo T_("Add tag manually to link tickets togethers");                            // Line 89
 
 	//------------------------------------------addons\includes\html\display-dash.html
 	echo T_("Edit your profile");                                                     // Line 54
 	echo T_("Avatar of you");                                                         // Line 56
 	echo T_("Default Avatar");                                                        // Line 58
-	echo T_("Hello");                                                                 // Line 64
-	echo T_("Click to toggle sidebar status");                                        // Line 75
-	echo T_("View website");                                                          // Line 93
-	echo T_("Work in your language");                                                 // Line 97
+	echo T_("Hello");                                                                 // Line 61
+	echo T_("Click to toggle sidebar status");                                        // Line 74
+	echo T_("View website");                                                          // Line 92
+	echo T_("Work in your language");                                                 // Line 96
 	echo T_("Logout");                                                                // Line 105
-	echo T_("View your current location and navigate to parent of it");               // Line 114
+	echo T_("You are entered as");                                                    // Line 105
+	echo T_("View your current location and navigate to parent of it");               // Line 115
 
 	//----------------------------------addons\includes\html\display-enter-blocks.html
 	echo T_("Please enter valid mobile number");                                      // Line 16
