@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile - Persian\n"
-"POT-Creation-Date: 2018-09-23 17:22+0330\n"
-"PO-Revision-Date: 2018-09-23 17:24+0330\n"
+"POT-Creation-Date: 2018-09-23 19:26+0330\n"
+"PO-Revision-Date: 2018-09-23 19:29+0330\n"
 "Last-Translator: Javad <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -192,7 +192,7 @@ msgstr "داشبورد سیستم مدیریت محتوا"
 #: dash/addons/content_cp/posts/edit/controller.php:12
 #: dash/addons/content_cp/posts/edit/view.php:13
 #: dash/addons/content_support/message/edit/view.php:23
-#: dash/addons/content_support/ticket/show/view.php:21
+#: dash/addons/content_support/ticket/show/view.php:21 dash/lib/app/posts.php:118
 msgid "Invalid id"
 msgstr "شناسه نامعتبر"
 
@@ -255,7 +255,7 @@ msgstr "همچنین نظر خاص را اضافه یا ویرایش کنید."
 #: dash/addons/content_cp/log/home/view.php:13
 #: dash/addons/content_cp/posts/home/view.php:58
 #: dash/addons/content_cp/sms/template/view.php:15
-#: dash/addons/content_cp/terms/view.php:52
+#: dash/addons/content_cp/terms/view.php:61
 #: dash/addons/content_cp/visitor/datalist/view.php:13
 #: dash/addons/content_su/tg/log/view.php:14
 msgid "Back to dashboard"
@@ -378,7 +378,7 @@ msgstr "پست ها می توانند شامل کلیدی و دسته بندی �
 
 #: dash/addons/content_cp/posts/add/view.php:26
 #: dash/addons/content_cp/posts/edit/view.php:38
-#: dash/addons/content_cp/posts/edit/view.php:74
+#: dash/addons/content_cp/posts/edit/view.php:75
 msgid "Back to list of posts"
 msgstr "بازگشت به لیست نوشته‌ها"
 
@@ -395,22 +395,22 @@ msgstr "اضافه کردن صفحه استاتیک جدید مانند دربا
 msgid "Back to list of pages"
 msgstr "بازگشت به لیست برگه‌ها"
 
-#: dash/addons/content_cp/posts/add/view.php:48
+#: dash/addons/content_cp/posts/add/view.php:49
 msgid "Add new help"
 msgstr "افزودن راهنمایی جدید"
 
-#: dash/addons/content_cp/posts/add/view.php:49
+#: dash/addons/content_cp/posts/add/view.php:50
 msgid "Add new article to help center or new faq."
 msgstr "افزودن سوال متداول یا مقاله‌ای جدید به مرکز راهنمایی."
 
-#: dash/addons/content_cp/posts/add/view.php:50
-#: dash/addons/content_cp/posts/edit/view.php:60
+#: dash/addons/content_cp/posts/add/view.php:51
+#: dash/addons/content_cp/posts/edit/view.php:61
 #: dash/addons/content_cp/posts/home/view.php:42
 msgid "Back to list of helps"
 msgstr "بازگشت به لیست مرکز راهنمایی"
 
 #: dash/addons/content_cp/posts/edit/view.php:34
-#: dash/addons/content_cp/posts/edit/view.php:73
+#: dash/addons/content_cp/posts/edit/view.php:74
 msgid "Edit post"
 msgstr "ویرایش نوشته"
 
@@ -424,11 +424,11 @@ msgstr ""
 msgid "Edit page"
 msgstr "ویرایش برگه"
 
-#: dash/addons/content_cp/posts/edit/view.php:59
+#: dash/addons/content_cp/posts/edit/view.php:60
 msgid "Edit help"
 msgstr "ویرایش مرکز راهنمایی"
 
-#: dash/addons/content_cp/posts/edit/view.php:61
+#: dash/addons/content_cp/posts/edit/view.php:62
 msgid "Helps can contain keyword and category with title and descriptions."
 msgstr ""
 "مقالات مرکز راهنمایی می‌توانند شامل کلیدواژه و دسته‌بندی همراه با عنوان و شرح باشند."
@@ -572,23 +572,23 @@ msgstr "شناسه عبارت نامعتبر است"
 msgid "Term id not found"
 msgstr "شناسه عبارت یافت نشد"
 
-#: dash/addons/content_cp/terms/model.php:46
+#: dash/addons/content_cp/terms/model.php:51
 msgid "Data successfully removed"
 msgstr "اطلاعات با موفقیت حذف شد"
 
-#: dash/addons/content_cp/terms/model.php:58
+#: dash/addons/content_cp/terms/model.php:63
 msgid "This term or tag used in post and can not delete it!"
 msgstr "این عبارت در خبر ها استفاده شده و امکان حذف آن وجود ندارد!"
 
-#: dash/addons/content_cp/terms/model.php:79
+#: dash/addons/content_cp/terms/model.php:84
 msgid "Invalid tag color"
 msgstr "رنگ تگ نادرست"
 
-#: dash/addons/content_cp/terms/model.php:150
+#: dash/addons/content_cp/terms/model.php:169
 msgid "Term successfully edited"
 msgstr "ترم با موفقیت بروزرسانی شد"
 
-#: dash/addons/content_cp/terms/model.php:163
+#: dash/addons/content_cp/terms/model.php:182
 msgid "Term successfully added"
 msgstr "عبارت با موفقیت اضافه شد"
 
@@ -614,6 +614,7 @@ msgid "Check categories and add or edit some new category"
 msgstr "دسته بندی ها را بررسی کنید و برخی از دسته های جدید را اضافه یا ویرایش کنید"
 
 #: dash/addons/content_cp/terms/view.php:30 dash/addons/content_cp/terms/view.php:38
+#: dash/addons/content_cp/terms/view.php:47
 #: dash/addons/includes/languages/trans_dash.php:204
 #: dash/addons/includes/languages/trans_static.php:977
 #: ermile/includes/languages/trans_dash.php:196
@@ -621,17 +622,18 @@ msgid "Tags"
 msgstr "کلیدواژه‌ها"
 
 #: dash/addons/content_cp/terms/view.php:31 dash/addons/content_cp/terms/view.php:39
+#: dash/addons/content_cp/terms/view.php:48
 msgid "Check tags and add or edit some new tag"
 msgstr "برچسب ها را بررسی کنید و برخی از برچسب های جدید را اضافه یا ویرایش کنید"
 
-#: dash/addons/content_cp/terms/view.php:100
+#: dash/addons/content_cp/terms/view.php:110
 #: dash/addons/includes/languages/trans_dash.php:218
 #: dash/addons/includes/languages/trans_static.php:112
 #: ermile/includes/languages/trans_dash.php:210
 msgid "Search"
 msgstr "جستجو"
 
-#: dash/addons/content_cp/terms/view.php:118
+#: dash/addons/content_cp/terms/view.php:128
 msgid "Id not found"
 msgstr "کد یافت نشد"
 
@@ -2876,7 +2878,7 @@ msgstr "برخی از حقوق محفوظ است!"
 #: dash/addons/includes/languages/trans_dash.php:256
 #: dash/addons/includes/languages/trans_static.php:58
 #: dash/addons/includes/languages/trans_static.php:175 dash/lib/engine/view.php:77
-#: dash/lib/social/telegram/commands/ermile.php:158 ermile/content/view.php:9
+#: dash/lib/social/telegram/commands/ermile.php:169 ermile/content/view.php:9
 #: ermile/includes/languages/static_translation.php:21
 #: ermile/includes/languages/trans_dash.php:251
 msgid "Ermile"
@@ -3314,7 +3316,7 @@ msgstr "متن الگو"
 
 #: dash/addons/includes/languages/trans_dash.php:366
 #: dash/addons/includes/languages/trans_static.php:90
-#: dash/lib/social/telegram/commands/ermile.php:279
+#: dash/lib/social/telegram/commands/ermile.php:290
 #: ermile/includes/languages/static_translation.php:55
 #: ermile/includes/languages/trans_dash.php:362
 msgid "Cancel"
@@ -5195,7 +5197,7 @@ msgid "iran"
 msgstr "ایران"
 
 #: dash/addons/includes/languages/trans_static.php:63
-#: dash/lib/social/telegram/commands/ermile.php:152
+#: dash/lib/social/telegram/commands/ermile.php:163
 #: ermile/includes/languages/trans_project.php:73
 msgid "Qom"
 msgstr "قم"
@@ -8442,6 +8444,7 @@ msgid "supportDeleteTicket"
 msgstr "توانایی حذف تیکت"
 
 #: dash/addons/includes/languages/trans_static.php:1005
+#: dash/addons/includes/languages/trans_static.php:1043
 msgid "supportTicketAnswer"
 msgstr "توانایی پاسخ به تیکت‌ها"
 
@@ -8494,6 +8497,142 @@ msgid ""
 msgstr ""
 "شما یک تیکت جدیدی از طرف :displayname  دارید \n"
 " ببینید :link"
+
+#: dash/addons/includes/languages/trans_static.php:1020
+msgid "cpTagHelpView"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1021
+msgid "cpTagHelpAdd"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1022
+msgid "cpTagHelpEdit"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1023
+msgid "cpTagHelpDelete"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1024
+msgid "cpTagSupportView"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1025
+msgid "cpTagSupportAdd"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1026
+msgid "cpTagSupportEdit"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1027
+msgid "cpTagSupportDelete"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1028
+msgid "cpHelpCenterView"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1029
+msgid "cpHelpCenterViewAll"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1030
+msgid "cpHelpCenterAdd"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1031
+msgid "cpHelpCenterEdit"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1032
+msgid "cpHelpCenterEditStatus"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1033
+msgid "cpHelpCenterEditPublished"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1034
+msgid "cpHelpCenterEditForOthers"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1035
+msgid "cpHelpCenterDelete"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1036
+msgid "cpHelpCenterDeleteForOthers"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1037
+msgid "cpEmailTemplateView"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1038
+msgid "cpEmailTemplateEdit"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1039
+msgid "supportTicketReport"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1040
+msgid "supportTicketShowLog"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1041
+msgid "supportTicketManage"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1042
+msgid "supportTicketManageSubdomain"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1044
+msgid "supportEditMessage"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1045
+msgid "supportDeleteMessage"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1046
+msgid "supportTicketShowMobile"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1047
+msgid "supportTicketAssignTag"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1048
+msgid "supportTicketAddNote"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1049
+msgid "supportTicketSignature"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1050
+msgid "supportTicketClose"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1051
+msgid "supportTicketReOpen"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1052
+msgid "supportTicketDelete"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1053
+msgid "supportTicketShowLastVisitor"
+msgstr ""
+
+#: dash/addons/includes/languages/trans_static.php:1054
+msgid "cpVisitorView"
+msgstr ""
 
 #: dash/lib/app/comment.php:79 dash/lib/app/ticket.php:90
 msgid "This text is duplicate and you are sended something like this before!"
@@ -8643,108 +8782,120 @@ msgstr "این فایل در گالری تصاویر فعلی موجود است"
 msgid "Invalid gallery id"
 msgstr "شناسه گالری تصاویر اشتباه است"
 
-#: dash/lib/app/posts.php:118
+#: dash/lib/app/posts.php:129
+msgid "This help center is published. And you can not edit it!"
+msgstr ""
+
+#: dash/lib/app/posts.php:139
 msgid "This post is published. And you can not edit it!"
 msgstr "این خبر منتشر شده و شما نمی‌توانید آن را حذف کنید!"
 
-#: dash/lib/app/posts.php:130
+#: dash/lib/app/posts.php:155 dash/lib/app/posts.php:165
 msgid "This is not your post. And you can not edit it!"
 msgstr "این خبر شما نیست و شما نمی‌توانید آن را حذف کنید!"
 
-#: dash/lib/app/posts.php:141 dash/lib/app/posts.php:147 dash/lib/app/term.php:91
+#: dash/lib/app/posts.php:176 dash/lib/app/posts.php:182 dash/lib/app/term.php:91
 #: dash/lib/app/term.php:97
 msgid "Invalid parameter language"
 msgstr "پارامتر زبان نامعتبر است"
 
-#: dash/lib/app/posts.php:154
+#: dash/lib/app/posts.php:189
 msgid "Title of posts can not be null"
 msgstr "عنوان پست نمی تواند خالی باشد"
 
-#: dash/lib/app/posts.php:160
+#: dash/lib/app/posts.php:195
 msgid "Please set the title less than 100 character"
 msgstr "لطفا عنوان پست را کمتر از ۱۰۰ حرف وارد کنید"
 
-#: dash/lib/app/posts.php:167
+#: dash/lib/app/posts.php:202
 msgid "Please set the excerpt less than 300 character"
 msgstr "لطفا چکیده متن را کمتر از ۳۰۰ حرف وارد کنید"
 
-#: dash/lib/app/posts.php:174
+#: dash/lib/app/posts.php:209
 msgid "Please set the subtitle less than 300 character"
 msgstr "لطفا زیر عنوان را کمتر از ۳۰۰ حرف وارد کنید"
 
-#: dash/lib/app/posts.php:181
+#: dash/lib/app/posts.php:216
 msgid "Please set the slug less than 100 character"
 msgstr "لطفا نامک را کمتر از ۱۰۰ حرف وارد کنید"
 
-#: dash/lib/app/posts.php:203
+#: dash/lib/app/posts.php:238
 msgid "Duplicate slug"
 msgstr "نامک تکراری است"
 
-#: dash/lib/app/posts.php:211
+#: dash/lib/app/posts.php:246
 msgid "Please set the url less than 100 character"
 msgstr "لطفا آدرس را کمتر از ۱۰۰ حرف وارد کنید"
 
-#: dash/lib/app/posts.php:223
+#: dash/lib/app/posts.php:258
 msgid "This text is too large!"
 msgstr "متن خیلی طولانی است!"
 
-#: dash/lib/app/posts.php:229
+#: dash/lib/app/posts.php:264
 msgid "Please set the type less than 100 character"
 msgstr "لطفا نوع را کمتر از ۱۰۰ حرف وارد کنید"
 
-#: dash/lib/app/posts.php:247 dash/lib/app/user.php:97
+#: dash/lib/app/posts.php:282 dash/lib/app/user.php:97
 msgid "Invalid parameter status"
 msgstr "پارامتر وضعیت نامعتبر است"
 
-#: dash/lib/app/posts.php:257
+#: dash/lib/app/posts.php:293
+msgid "You can not delete help center"
+msgstr ""
+
+#: dash/lib/app/posts.php:301
 msgid "You can not delete page"
 msgstr "شما نمی‌توانید این صفحه را حذف کنید"
 
-#: dash/lib/app/posts.php:264
+#: dash/lib/app/posts.php:310
 msgid "You can not delete post"
 msgstr "شما نمی توانید خبر را حذف کنید"
 
-#: dash/lib/app/posts.php:274
+#: dash/lib/app/posts.php:324
+msgid "This is not your help center. And you can not delete it!"
+msgstr ""
+
+#: dash/lib/app/posts.php:334
 msgid "This is not your post. And you can not delete it!"
 msgstr "این خبر شما نیست و شما نمی‌توانید آن را حذف کنید!"
 
-#: dash/lib/app/posts.php:291
+#: dash/lib/app/posts.php:353
 msgid "Invalid parameter parent"
 msgstr "پارامتر والد نامعتبر است"
 
-#: dash/lib/app/posts.php:298
+#: dash/lib/app/posts.php:360
 msgid "Parent post not found"
 msgstr "پست والد یافت نشد"
 
-#: dash/lib/app/posts.php:306
+#: dash/lib/app/posts.php:368
 msgid "Can not set page as parent of self!"
 msgstr "نمی‌توانید صفحه‌ای را به‌عنوان والد خودش ثبت کنید!"
 
-#: dash/lib/app/posts.php:354
+#: dash/lib/app/posts.php:416
 msgid "Invalid parameter publishdate"
 msgstr "تاریخ انتشار پست اشتباه است"
 
-#: dash/lib/app/posts.php:374
+#: dash/lib/app/posts.php:436
 msgid "Invalid publish time"
 msgstr "تاریخ انتشار نادرست"
 
-#: dash/lib/app/posts.php:404
+#: dash/lib/app/posts.php:466
 msgid "Category setting for better access is suggested"
 msgstr "تنظیم دسته‌بندی برای دسترسی مناسب‌تر توصیه می‌شود"
 
-#: dash/lib/app/posts.php:419
+#: dash/lib/app/posts.php:481
 msgid "Invalid slug"
 msgstr "نامک اشتباه است"
 
-#: dash/lib/app/posts.php:531
+#: dash/lib/app/posts.php:611
 msgid "Some :type is wrong"
 msgstr "برخی از :type اشتباه هستند"
 
-#: dash/lib/app/posts/add.php:73
+#: dash/lib/app/posts/add.php:78
 msgid "No way to insert post"
 msgstr "هیچ راهی برای افزودن پست وجود ندارد"
 
-#: dash/lib/app/posts/add.php:111
+#: dash/lib/app/posts/add.php:122
 msgid "Post successfuly added"
 msgstr "پست با موفقیت اضافه شد"
 
@@ -8756,7 +8907,7 @@ msgstr "شما دسترسی لازم را برای ویرایش این پست ن
 msgid "Invalid posts id"
 msgstr "شناسه پست اشتباه است"
 
-#: dash/lib/app/posts/edit.php:130
+#: dash/lib/app/posts/edit.php:134
 msgid "Post successfully updated"
 msgstr "پست با موفقیت به روز رسانی شد"
 
@@ -9169,60 +9320,64 @@ msgstr "تست بات <b>:name</b> در :site"
 msgid "Booom"
 msgstr "بوووم"
 
-#: dash/lib/social/telegram/commands/ermile.php:117
-#: dash/lib/social/telegram/commands/ermile.php:269
+#: dash/lib/social/telegram/commands/ermile.php:128
+#: dash/lib/social/telegram/commands/ermile.php:280
 msgid "Haloo"
 msgstr "سلووو"
 
-#: dash/lib/social/telegram/commands/ermile.php:118
+#: dash/lib/social/telegram/commands/ermile.php:129
 msgid "We are so glad to meet you."
 msgstr "از ملاقات با شما خوشحالیم."
 
-#: dash/lib/social/telegram/commands/ermile.php:120
+#: dash/lib/social/telegram/commands/ermile.php:131
 msgid "Made by @Ermile"
 msgstr "ساخت ارمایل @Ermile"
 
-#: dash/lib/social/telegram/commands/ermile.php:137 ermile/content/view.php:12
+#: dash/lib/social/telegram/commands/ermile.php:148 ermile/content/view.php:12
 msgid "Ermile is inteligent"
 msgstr "ارمایل باهوش است!"
 
-#: dash/lib/social/telegram/commands/ermile.php:152
+#: dash/lib/social/telegram/commands/ermile.php:163
 #: ermile/includes/languages/trans_project.php:71
 msgid "Ermile, Floor2, Yas Building"
 msgstr "ساختمان یاس، طبقه دوم، ارمایل"
 
-#: dash/lib/social/telegram/commands/ermile.php:152
+#: dash/lib/social/telegram/commands/ermile.php:163
 #: ermile/includes/languages/trans_project.php:72
 msgid "1st alley, Haft-e-tir St"
 msgstr "خیابان هفت تیر، کوچه یکم"
 
-#: dash/lib/social/telegram/commands/ermile.php:152
+#: dash/lib/social/telegram/commands/ermile.php:163
 msgid "IRAN"
 msgstr "ایران"
 
-#: dash/lib/social/telegram/commands/ermile.php:160
+#: dash/lib/social/telegram/commands/ermile.php:171
 msgid "We are happy to see you!"
 msgstr "از دیدنتون خوشحالیم!"
 
-#: dash/lib/social/telegram/commands/ermile.php:270
+#: dash/lib/social/telegram/commands/ermile.php:281
 msgid "You can connect your telegram with your mobile number in our service."
 msgstr ""
 "شما می‌توانید در سرویس ما تلگرام خود را به حساب کاربری روی شماره موبایل خود متصل "
 "کنید."
 
-#: dash/lib/social/telegram/commands/ermile.php:271
+#: dash/lib/social/telegram/commands/ermile.php:282
 msgid "Also you can do it anytime you need with /register command."
 msgstr ""
 "هم‌چنین هر زمانی که مایل باشید می‌توانید از طریق دستور /register این کار را انجام "
 "دهید."
 
-#: dash/lib/social/telegram/commands/ermile.php:278
+#: dash/lib/social/telegram/commands/ermile.php:289
 msgid "Register with mobile"
 msgstr "ثبت‌نام با موبایل"
 
-#: dash/lib/social/telegram/commands/ermile.php:279
+#: dash/lib/social/telegram/commands/ermile.php:290
 msgid "Help"
 msgstr "راهنمایی"
+
+#: dash/lib/social/telegram/commands/ermile.php:304
+msgid "Please choose your language"
+msgstr "لطفا زبان خود را انتخاب کنید"
 
 #: dash/lib/social/telegram/commands/menu.php:69
 #: ermile/includes/languages/static_translation.php:82
@@ -9272,7 +9427,31 @@ msgstr "سپاسگزاریم"
 msgid "New feedback"
 msgstr "بازخورد"
 
-#: dash/lib/social/telegram/exec.php:22 dash/lib/social/telegram/tg.php:40
+#: dash/lib/social/telegram/commands/step_ticket.php:35
+msgid "We can give your ticket easily in via telegram"
+msgstr ""
+
+#: dash/lib/social/telegram/commands/step_ticket.php:36
+msgid "Please enter your ticket title"
+msgstr "لطفا عنوان تیکت خود را وارد کنید."
+
+#: dash/lib/social/telegram/commands/step_ticket.php:56
+msgid "Ticket title is saved."
+msgstr "عنوان تیکت ذخیره شد."
+
+#: dash/lib/social/telegram/commands/step_ticket.php:57
+msgid "Please wrote your problem"
+msgstr "لطفا مشکل خود را شرح دهید"
+
+#: dash/lib/social/telegram/commands/step_ticket.php:74
+msgid "Your ticket is successfully saved."
+msgstr "تیکت شما با موفقیت ذخیره شد."
+
+#: dash/lib/social/telegram/commands/step_ticket.php:75
+msgid "We try to answer to you as soon as posible."
+msgstr "ما سعی می کنیم تا در اسرع وقت به شما پاسخ دهیم."
+
+#: dash/lib/social/telegram/exec.php:22 dash/lib/social/telegram/tg.php:41
 msgid "Telegram is off!"
 msgstr "تلگراف خاموش است!"
 
@@ -9308,11 +9487,7 @@ msgstr "چرا نام خانوادگی شما متفاوت است!"
 msgid "Registration failed!"
 msgstr "ثبت‌نام ناموفق!"
 
-#: dash/lib/social/telegram/user.php:162
-msgid "Please choose your language"
-msgstr "لطفا زبان خود را انتخاب کنید"
-
-#: dash/lib/social/telegram/user.php:178
+#: dash/lib/social/telegram/user.php:180
 msgid "Your language was successfully set to :lang."
 msgstr "زبان شما به :lang تغییر یافت."
 
