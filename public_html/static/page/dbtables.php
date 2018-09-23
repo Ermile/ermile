@@ -1,1 +1,0 @@
-/home/javad/Desktop/ermile/includes/cls/database/dbtables.php

@@ -1,1 +1,0 @@
-/home/javad/Desktop/ermile/includes/languages/twig_extractor.php
