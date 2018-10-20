@@ -68,15 +68,15 @@ class twigTransTerms
 	echo T_("If you have any work experience, kindly provide complete information about it in your CV.");// Line 294
 	echo T_("Be sure to mention your personal information, picture and Interests.");  // Line 295
 	echo T_("Please note down your CV with a suitable font and it should be in pdf file.");// Line 296
-	echo T_("Ermile, Floor2, Yas Building");                                          // Line 54
-	echo T_("1st alley, Haft-e-tir St");                                              // Line 61
-	echo T_("Qom");                                                                   // Line 60
-	echo T_("Iran");                                                                  // Line 59
-	echo T_("Floor2, Yas Building");                                                  // Line 62
+	echo T_("Ermile, Floor2, Yas Building");                                          // Line 55
+	echo T_("1st alley, Haft-e-tir St");                                              // Line 62
+	echo T_("Qom");                                                                   // Line 61
+	echo T_("Iran");                                                                  // Line 60
+	echo T_("Floor2, Yas Building");                                                  // Line 63
 	echo T_("+98 25 3773 5183");                                                      // Line 331
 	echo T_("Kindly register your Information");                                      // Line 349
-	echo T_("Name");                                                                  // Line 19
-	echo T_("Mobile");                                                                // Line 23
+	echo T_("Name");                                                                  // Line 20
+	echo T_("Mobile");                                                                // Line 24
 	echo T_("Upload CV");                                                             // Line 354
 	echo T_("Send your Information");                                                 // Line 356
 
@@ -85,15 +85,15 @@ class twigTransTerms
 	echo T_("Knowing your valuable comments about bugs and problems and more importantly your precious offers will help us in this way.");// Line 7
 	echo T_("Thank you for choosing us.");                                            // Line 14
 	echo T_("We do our best to improve our quality. So, knowing your valuable comments about bugs and problems and more importantly your precious offers will help us in this way.");// Line 14
-	echo T_("Full Name");                                                             // Line 20
-	echo T_("Please enter valid mobile number. `:val` is incorrect");                 // Line 24
-	echo T_("Email");                                                                 // Line 27
-	echo T_("Message");                                                               // Line 32
-	echo T_("Your Message");                                                          // Line 33
-	echo T_("Send");                                                                  // Line 37
-	echo T_("How to contact us");                                                     // Line 45
-	echo T_("ermile");                                                                // Line 51
-	echo T_("on map");                                                                // Line 69
+	echo T_("Full Name");                                                             // Line 21
+	echo T_("Please enter valid mobile number. `:val` is incorrect");                 // Line 25
+	echo T_("Email");                                                                 // Line 28
+	echo T_("Message");                                                               // Line 33
+	echo T_("Your Message");                                                          // Line 34
+	echo T_("Send");                                                                  // Line 38
+	echo T_("How to contact us");                                                     // Line 46
+	echo T_("ermile");                                                                // Line 52
+	echo T_("on map");                                                                // Line 70
 
 	//-------------------------------------------------------content\home\display.html
 	echo T_("Software Solution Designer");                                            // Line 25
@@ -334,13 +334,9 @@ class twigTransTerms
 
 	//---------------------public_html\static\siftal\fonts\siftal\icons-reference.html
 
-	//------------------------------------public_html\static\siftal\js\amcharts.min.js
-
-	//-----------------------------------public_html\static\siftal\js\amcharts3.min.js
-
-	//-----------------------------------public_html\static\siftal\js\amcharts4.min.js
-
 	//--------------------------------------public_html\static\siftal\js\error_page.js
+
+	//-----------------------public_html\static\siftal\js\highcharts\highcharts.min.js
 
 	//-----------------------------------public_html\static\siftal\js\highlight.min.js
 
