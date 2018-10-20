@@ -863,11 +863,14 @@ class twigTransTerms
 	echo T_("Ticket Subject");                                                        // Line 8
 	echo T_("Subject of your ticket");                                                // Line 10
 	echo T_("Set title will help us answer quickly");                                 // Line 10
-	echo T_("Attachment");                                                            // Line 22
-	echo T_("Max size");                                                              // Line 22
-	echo T_("Submit a ticket");                                                       // Line 28
-	echo T_("Send new message");                                                      // Line 40
-	echo T_("Add note");                                                              // Line 36
+	echo T_("Attachment");                                                            // Line 21
+	echo T_("Max size");                                                              // Line 21
+	echo T_("Send notify about your answer to creator of ticket");                    // Line 30
+	echo T_("Via sms to");                                                            // Line 32
+	echo T_("Via telegram");                                                          // Line 36
+	echo T_("Submit a ticket");                                                       // Line 44
+	echo T_("Send new message");                                                      // Line 56
+	echo T_("Add note");                                                              // Line 52
 
 	//---------------------------------addons\content_support\ticket\home\display.html
 	echo T_("Active tickets");                                                        // Line 92
