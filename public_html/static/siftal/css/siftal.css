@@ -18479,6 +18479,9 @@ body.siftal .cbox table {
   background-color: #444;
   color: #ddd; }
 
+.siftal[data-in="su"] .input {
+  color: #777; }
+
 .siftal[data-in="su"] .input input {
   background-color: #000;
   color: #eee; }
@@ -18489,6 +18492,13 @@ body.siftal .cbox table {
 .siftal[data-in="su"] .select {
   background-color: #000;
   color: #eee; }
+
+.siftal[data-in="su"] .txt {
+  background-color: #000;
+  color: #bbb; }
+
+.siftal[data-in="su"] .txt:hover {
+  border-color: #777; }
 
 .siftal[data-in="su"] .switch1 label:first-of-type {
   background-color: #444; }
