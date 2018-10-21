@@ -2141,15 +2141,29 @@ progress.xl, meter.xl {
 
 .tbl1.v3 thead {
   font-size: 1em;
+  text-transform: uppercase; }
+
+.tbl1.v3 thead tr {
   color: #00ad5f;
-  text-transform: uppercase;
   background-color: #393939; }
 
-.tbl1.v3 tr {
+.tbl1.v3 tbody tr {
   background-color: #222; }
 
-.tbl1.v3 tr:hover {
+.tbl1.v3 tbody tr:hover {
   background-color: #333; }
+
+.tbl1.v3 tbody tr th {
+  color: #aaa; }
+
+.tbl1.v3 tbody tr a {
+  color: #bbb; }
+
+.tbl1.v3 tbody tr a:hover {
+  color: #ccc; }
+
+.tbl1.v3 tbody tr a:focus {
+  color: #ddd; }
 
 /*================================================================== [ v4 ]*/
 .tbl1.v4 thead {
@@ -18422,6 +18436,85 @@ body.siftal .cbox table {
 
 .siftal form #email {
   direction: ltr; }
+
+.siftal[data-in="su"] {
+  background-color: #333; }
+
+.siftal[data-in="su"] .dashHead {
+  background-color: #111;
+  box-shadow: 0 1px 5px rgba(255, 255, 255, 0.2); }
+
+.siftal[data-in="su"] .tbox {
+  background-color: #111;
+  color: #bbb; }
+
+.siftal[data-in="su"] .tbox:hover {
+  border-color: #444; }
+
+.siftal[data-in="su"] .tbox .badge.light {
+  background-color: #555;
+  color: #bbb; }
+
+.siftal[data-in="su"] .cbox {
+  background-color: #222;
+  color: #aaa; }
+
+.siftal[data-in="su"] .dcard {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #aaa; }
+
+.siftal[data-in="su"] .chart rect.highcharts-background {
+  fill: #111; }
+
+.siftal[data-in="su"] .chart rect.highcharts-button-box {
+  fill: #222; }
+
+.siftal[data-in="su"] .chart path.highcharts-axis-line {
+  stroke: #000; }
+
+.siftal[data-in="su"] .chart path.highcharts-grid-line {
+  stroke: #000; }
+
+.siftal[data-in="su"] .msg {
+  background-color: #444;
+  color: #ddd; }
+
+.siftal[data-in="su"] .input input {
+  background-color: #000;
+  color: #eee; }
+
+.siftal[data-in="su"] .input .addon:not(.btn) {
+  color: #bbb; }
+
+.siftal[data-in="su"] .select {
+  background-color: #000;
+  color: #eee; }
+
+.siftal[data-in="su"] .switch1 label:first-of-type {
+  background-color: #444; }
+
+.siftal[data-in="su"] .input input:focus, .siftal[data-in="su"] .input.focus input {
+  border-color: #777; }
+
+.siftal[data-in="su"] .select:focus, .siftal[data-in="su"] .select.focus {
+  border-color: #777; }
+
+.siftal[data-in="su"] .btn {
+  background-color: #333;
+  color: #ccc; }
+
+.siftal[data-in="su"] .dark.outline {
+  color: #ccc; }
+
+.siftal[data-in="su"] .pagination {
+  background-color: #000; }
+
+.siftal[data-in="su"] .pagination a {
+  color: #ccc; }
+
+.siftal[data-in="su"] .pagination a:link:hover {
+  color: #eee;
+  background-color: #333; }
 
 /* header */
 .siftal .dashHead {
