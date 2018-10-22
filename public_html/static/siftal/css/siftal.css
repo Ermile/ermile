@@ -18501,7 +18501,10 @@ body.siftal .cbox table {
   border-color: #777; }
 
 .siftal[data-in="su"] .switch1 label:first-of-type {
-  background-color: #444; }
+  background-color: #555; }
+
+.siftal[data-in="su"] .switch1 input:checked + label:first-of-type {
+  background-color: #225c8a; }
 
 .siftal[data-in="su"] .input input:focus, .siftal[data-in="su"] .input.focus input {
   border-color: #777; }
