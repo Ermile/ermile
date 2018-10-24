@@ -12,7 +12,7 @@ class twigTransTerms
 	echo T_("Postal code");                                                           // Line 91
 	echo T_("Phone");                                                                 // Line 198
 	echo T_("Mobile");                                                                // Line 24
-	echo T_("Edit");                                                                  // Line 315
+	echo T_("Edit");                                                                  // Line 316
 	echo T_("Firstname");                                                             // Line 152
 	echo T_("Lastname");                                                              // Line 161
 	echo T_("Name");                                                                  // Line 95
@@ -82,7 +82,7 @@ class twigTransTerms
 
 	//----------------------------------------------addons\content_account\layout.html
 	echo T_("Dashboard");                                                             // Line 83
-	echo T_("Support");                                                               // Line 49
+	echo T_("Support");                                                               // Line 50
 
 	//--------------------------------addons\content_account\notification\display.html
 	echo T_("Content");                                                               // Line 10
@@ -147,7 +147,7 @@ class twigTransTerms
 	echo T_("Save all");                                                              // Line 325
 
 	//-------------------------------addons\content_account\profile\other\display.html
-	echo T_("Remove");                                                                // Line 101
+	echo T_("Remove");                                                                // Line 102
 	echo T_("Your avatar");                                                           // Line 280
 
 	//------------------------------------addons\content_account\profile\pagestep.html
@@ -234,9 +234,9 @@ class twigTransTerms
 	echo T_("You can create backup now");                                             // Line 33
 	echo T_("Please wait This operation may take a few minutes");                     // Line 13
 	echo T_("Backup now");                                                            // Line 34
-	echo T_("Sise");                                                                  // Line 100
+	echo T_("Sise");                                                                  // Line 36
 	echo T_("Download");                                                              // Line 88
-	echo T_("No backup was found");                                                   // Line 107
+	echo T_("No backup was found");                                                   // Line 110
 
 	//----------------------------------------------addons\content_cp\cms\display.html
 	echo T_("Comments");                                                              // Line 51
@@ -302,21 +302,21 @@ class twigTransTerms
 	echo T_("Add new user");                                                          // Line 66
 	echo T_("SMS");                                                                   // Line 111
 	echo T_("Quick send");                                                            // Line 82
-	echo T_("Powered by");                                                            // Line 55
-	echo T_("Some right reserved");                                                   // Line 55
-	echo T_("Ermile");                                                                // Line 55
-	echo T_("Version");                                                               // Line 55
+	echo T_("Powered by");                                                            // Line 56
+	echo T_("Some right reserved");                                                   // Line 56
+	echo T_("Ermile");                                                                // Line 56
+	echo T_("Version");                                                               // Line 56
 
 	//-----------------------------------------addons\content_cp\log\home\display.html
 	echo T_("User");                                                                  // Line 54
 	echo T_("User id");                                                               // Line 77
 	echo T_("User logs");                                                             // Line 83
-	echo T_("User Profile");                                                          // Line 292
+	echo T_("User Profile");                                                          // Line 293
 	echo T_("Search by user session id");                                             // Line 84
 	echo T_("Guest");                                                                 // Line 89
 	echo T_("Subdomain");                                                             // Line 103
 	echo T_("Notification");                                                          // Line 109
-	echo T_("Telegram");                                                              // Line 110
+	echo T_("Telegram");                                                              // Line 44
 	echo T_("Url");                                                                   // Line 113
 	echo T_("Send to");                                                               // Line 117
 	echo T_("Date created");                                                          // Line 136
@@ -397,14 +397,14 @@ class twigTransTerms
 	echo T_("Choose category of post");                                               // Line 155
 	echo T_("Add new category");                                                      // Line 165
 	echo T_("Click on special tags to use this depending on your website design");    // Line 183
-	echo T_("Tag");                                                                   // Line 364
+	echo T_("Tag");                                                                   // Line 365
 	echo T_("Add tag manually to link articles togethers");                           // Line 195
-	echo T_("Tag keywords...");                                                       // Line 374
+	echo T_("Tag keywords...");                                                       // Line 375
 	echo T_("Add tag");                                                               // Line 197
 	echo T_("Featured Image");                                                        // Line 205
 	echo T_("allowed extentions jpg, png. Max 1000Kb");                               // Line 208
 	echo T_("Gallery");                                                               // Line 223
-	echo T_("Click to download");                                                     // Line 246
+	echo T_("Click to download");                                                     // Line 97
 	echo T_("Video");                                                                 // Line 236
 	echo T_("MP3");                                                                   // Line 242
 	echo T_("PDF");                                                                   // Line 88
@@ -629,25 +629,26 @@ class twigTransTerms
 	echo T_("You have another database for logs");                                    // Line 38
 	echo T_("Click for create backup from log database");                             // Line 38
 	echo T_("Auto backup");                                                           // Line 51
-	echo T_("Start backup every");                                                    // Line 128
-	echo T_("Year");                                                                  // Line 130
-	echo T_("Month");                                                                 // Line 131
-	echo T_("Week");                                                                  // Line 132
-	echo T_("Day");                                                                   // Line 133
-	echo T_("hour");                                                                  // Line 134
-	echo T_("Start backup at time");                                                  // Line 139
-	echo T_("Life time of old backup");                                               // Line 169
-	echo T_("2 years");                                                               // Line 171
-	echo T_("one year");                                                              // Line 172
-	echo T_("6 months");                                                              // Line 173
-	echo T_("3 months");                                                              // Line 174
-	echo T_("2 months");                                                              // Line 175
-	echo T_("one month");                                                             // Line 176
-	echo T_("one week");                                                              // Line 177
-	echo T_("2 weeks");                                                               // Line 178
-	echo T_("one day");                                                               // Line 179
-	echo T_("3 days");                                                                // Line 180
-	echo T_("5 days");                                                                // Line 181
+	echo T_("MB");                                                                    // Line 31
+	echo T_("Start backup every");                                                    // Line 131
+	echo T_("Year");                                                                  // Line 133
+	echo T_("Month");                                                                 // Line 134
+	echo T_("Week");                                                                  // Line 135
+	echo T_("Day");                                                                   // Line 136
+	echo T_("hour");                                                                  // Line 137
+	echo T_("Start backup at time");                                                  // Line 142
+	echo T_("Life time of old backup");                                               // Line 172
+	echo T_("2 years");                                                               // Line 174
+	echo T_("one year");                                                              // Line 175
+	echo T_("6 months");                                                              // Line 176
+	echo T_("3 months");                                                              // Line 177
+	echo T_("2 months");                                                              // Line 178
+	echo T_("one month");                                                             // Line 179
+	echo T_("one week");                                                              // Line 180
+	echo T_("2 weeks");                                                               // Line 181
+	echo T_("one day");                                                               // Line 182
+	echo T_("3 days");                                                                // Line 183
+	echo T_("5 days");                                                                // Line 184
 
 	//------------------------------------------addons\content_su\command\display.html
 	echo T_("Server password");                                                       // Line 8
@@ -701,7 +702,6 @@ class twigTransTerms
 	echo T_("Read More");                                                             // Line 7
 
 	//----------------------------------------------addons\content_su\log\display.html
-	echo T_("MB");                                                                    // Line 31
 
 	//---------------------------------------------addons\content_su\nano\display.html
 
@@ -735,7 +735,7 @@ class twigTransTerms
 	echo T_("Meta");                                                                  // Line 63
 	echo T_("ID");                                                                    // Line 141
 	echo T_("Telegram chatid");                                                       // Line 79
-	echo T_("User last visits");                                                      // Line 294
+	echo T_("User last visits");                                                      // Line 295
 	echo T_("Without hook");                                                          // Line 106
 	echo T_("With keyboard");                                                         // Line 115
 	echo T_("Without keyboard");                                                      // Line 115
@@ -883,7 +883,7 @@ class twigTransTerms
 	//---------------------------------addons\content_support\ticket\show\display.html
 	echo T_("If your problem is solved or do not need to track, please close this ticket by press below bottom.");// Line 20
 	echo T_("You can open it anytime you need.");                                     // Line 31
-	echo T_("Close ticket");                                                          // Line 339
+	echo T_("Close ticket");                                                          // Line 340
 	echo T_("This ticket is closed.");                                                // Line 31
 	echo T_("Also you can delete it if you do not need it.");                         // Line 31
 	echo T_("Delete ticket");                                                         // Line 36
@@ -899,11 +899,12 @@ class twigTransTerms
 	echo T_("Last seen");                                                             // Line 115
 	echo T_("Ticket No");                                                             // Line 141
 	echo T_("Last activity");                                                         // Line 146
-	echo T_("User tickets");                                                          // Line 291
-	echo T_("Before create ticket");                                                  // Line 297
-	echo T_("View attachment");                                                       // Line 309
-	echo T_("Add tag manually to link tickets togethers");                            // Line 373
-	echo T_("Current Time");                                                          // Line 388
+	echo T_("User tickets");                                                          // Line 292
+	echo T_("This visit detail");                                                     // Line 191
+	echo T_("Before create ticket");                                                  // Line 298
+	echo T_("View attachment");                                                       // Line 310
+	echo T_("Add tag manually to link tickets togethers");                            // Line 374
+	echo T_("Current Time");                                                          // Line 389
 
 	//----------------------------------addons\content_support\ticket\ticketTable.html
 	echo T_("Last active tickets");                                                   // Line 3
