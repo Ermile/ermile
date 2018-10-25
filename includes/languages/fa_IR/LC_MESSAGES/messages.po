@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile - Persian\n"
-"POT-Creation-Date: 2018-10-25 17:25+0330\n"
-"PO-Revision-Date: 2018-10-25 17:26+0330\n"
+"POT-Creation-Date: 2018-10-25 19:48+0330\n"
+"PO-Revision-Date: 2018-10-25 19:50+0330\n"
 "Last-Translator: Javad <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -3117,8 +3117,7 @@ msgstr "برخی از حقوق محفوظ است!"
 #: dash/addons/includes/languages/trans_dash.php:303
 #: dash/addons/includes/languages/trans_static.php:58
 #: dash/addons/includes/languages/trans_static.php:175 dash/lib/engine/view.php:78
-#: dash/lib/social/telegram/commands/ermile.php:153 ermile/content/view.php:9
-#: ermile/includes/languages/static_translation.php:21
+#: ermile/content/view.php:9 ermile/includes/languages/static_translation.php:21
 #: ermile/includes/languages/trans_dash.php:307
 msgid "Ermile"
 msgstr "ارمایل"
@@ -3659,10 +3658,10 @@ msgstr "متن الگو"
 
 #: dash/addons/includes/languages/trans_dash.php:438
 #: dash/addons/includes/languages/trans_static.php:90
-#: dash/lib/social/telegram/commands/ermile.php:271
-#: dash/lib/social/telegram/commands/step_ticketAnswer.php:32
+#: dash/lib/social/telegram/commands/ermile.php:302
+#: dash/lib/social/telegram/commands/step_ticketAnswer.php:42
 #: dash/lib/social/telegram/commands/step_ticketCreate.php:34
-#: dash/lib/social/telegram/step.php:218
+#: dash/lib/social/telegram/step.php:206
 #: ermile/includes/languages/static_translation.php:55
 #: ermile/includes/languages/trans_dash.php:9
 msgid "Cancel"
@@ -5472,6 +5471,7 @@ msgstr "نام کامل"
 
 #: dash/addons/includes/languages/trans_dash.php:947
 #: dash/addons/includes/languages/trans_static.php:409
+#: dash/lib/social/telegram/commands/ermile.php:50
 #: ermile/includes/languages/trans_dash.php:956
 msgid "email"
 msgstr "رایانامه"
@@ -5813,7 +5813,7 @@ msgid "iran"
 msgstr "ایران"
 
 #: dash/addons/includes/languages/trans_static.php:63
-#: dash/lib/social/telegram/commands/ermile.php:147
+#: dash/lib/social/telegram/commands/ermile.php:162
 #: ermile/includes/languages/trans_project.php:73
 msgid "Qom"
 msgstr "قم"
@@ -5849,6 +5849,7 @@ msgid "sign in"
 msgstr "ورود"
 
 #: dash/addons/includes/languages/trans_static.php:70
+#: dash/lib/social/telegram/commands/ermile.php:57
 #: ermile/includes/languages/static_translation.php:36
 msgid "signup"
 msgstr "ثبت نام"
@@ -5859,6 +5860,7 @@ msgid "sign up"
 msgstr "ثبت نام"
 
 #: dash/addons/includes/languages/trans_static.php:72
+#: dash/lib/social/telegram/commands/ermile.php:56
 #: ermile/includes/languages/static_translation.php:38
 msgid "register"
 msgstr "ثبت نام"
@@ -6363,6 +6365,7 @@ msgid "disable"
 msgstr "غیرفعال"
 
 #: dash/addons/includes/languages/trans_static.php:231
+#: dash/lib/social/telegram/commands/ermile.php:85
 msgid "help"
 msgstr "کمک"
 
@@ -6865,19 +6868,19 @@ msgid "We will thank you for this."
 msgstr "ما از این اقدام شما تشکر می‌کنیم."
 
 #: dash/addons/includes/languages/trans_static.php:395
-#: dash/lib/social/telegram/user.php:131 dash/lib/social/tg older -
+#: dash/lib/social/telegram/user.php:130 dash/lib/social/tg older -
 #: addons/log.php:361
 msgid "Your phone number registered successfully;)"
 msgstr "شماره موبایل شما با موفقیت ثبت شد;)"
 
 #: dash/addons/includes/languages/trans_static.php:396
-#: dash/lib/social/telegram/user.php:112 dash/lib/social/tg old/log.php:418 older -
+#: dash/lib/social/telegram/user.php:111 dash/lib/social/tg old/log.php:418 older -
 #: addons/log.php:369
 msgid "We dont need another users contact:?)"
 msgstr "ما به مخاطب سایر کاربران نیاز نداریم:؟)"
 
 #: dash/addons/includes/languages/trans_static.php:397
-#: dash/lib/social/telegram/user.php:103 dash/lib/social/tg old/log.php:426 older -
+#: dash/lib/social/telegram/user.php:102 dash/lib/social/tg old/log.php:426 older -
 #: addons/log.php:377
 msgid "We need mobile number!"
 msgstr "ما به شماره موبایل نیاز داریم!"
@@ -6911,6 +6914,7 @@ msgid "password"
 msgstr "گذرواژه"
 
 #: dash/addons/includes/languages/trans_static.php:408
+#: dash/lib/social/telegram/commands/ermile.php:47
 msgid "mobile"
 msgstr "موبایل"
 
@@ -6963,6 +6967,7 @@ msgid "unit_id"
 msgstr "کد واحد مالی"
 
 #: dash/addons/includes/languages/trans_static.php:423
+#: dash/lib/social/telegram/commands/ermile.php:24
 msgid "language"
 msgstr "زبان"
 
@@ -6971,6 +6976,7 @@ msgid "meta"
 msgstr "متا"
 
 #: dash/addons/includes/languages/trans_static.php:425
+#: dash/lib/social/telegram/commands/ermile.php:49
 msgid "website"
 msgstr "وب سایت"
 
@@ -8740,7 +8746,7 @@ msgid "removeadmin"
 msgstr "حذف مدیریت"
 
 #: dash/addons/includes/languages/trans_static.php:897
-#: dash/lib/social/telegram/step.php:217
+#: dash/lib/social/telegram/step.php:205
 msgid "cancel"
 msgstr "انصراف"
 
@@ -10283,27 +10289,27 @@ msgstr "ممنون که از من استفاده می‌کنید!"
 msgid "I'm Bot."
 msgstr "من بات هستم."
 
-#: dash/lib/social/telegram/answer.php:78
+#: dash/lib/social/telegram/answer.php:74
 msgid "Hey 😀"
 msgstr "سلام 😀"
 
-#: dash/lib/social/telegram/answer.php:79
+#: dash/lib/social/telegram/answer.php:75
 msgid "What's up?"
 msgstr "چه‌خبر؟"
 
-#: dash/lib/social/telegram/answer.php:80
+#: dash/lib/social/telegram/answer.php:76
 msgid "Tell me a joke!"
 msgstr "یه جوک برام بگو!"
 
-#: dash/lib/social/telegram/answer.php:81
+#: dash/lib/social/telegram/answer.php:77
 msgid "Surprise me!"
 msgstr "سورپرایزم کن!"
 
-#: dash/lib/social/telegram/answer.php:82
+#: dash/lib/social/telegram/answer.php:78
 msgid "How are you?"
 msgstr "حال شما چطوره؟"
 
-#: dash/lib/social/telegram/answer.php:83
+#: dash/lib/social/telegram/answer.php:79
 msgid "How old are you?"
 msgstr "چند سالتونه؟"
 
@@ -10311,62 +10317,147 @@ msgstr "چند سالتونه؟"
 msgid "Test <b>:name</b> bot on :site"
 msgstr "تست بات <b>:name</b> در :site"
 
-#: dash/lib/social/telegram/commands/ermile.php:114
-#: dash/lib/social/telegram/commands/ermile.php:261
+#: dash/lib/social/telegram/commands/ermile.php:18
+msgid "start"
+msgstr "شروع"
+
+#: dash/lib/social/telegram/commands/ermile.php:30
+msgid "about"
+msgstr "درباره "
+
+#: dash/lib/social/telegram/commands/ermile.php:31
+msgid "detail"
+msgstr "جزئیات"
+
+#: dash/lib/social/telegram/commands/ermile.php:37
+msgid "me"
+msgstr "من"
+
+#: dash/lib/social/telegram/commands/ermile.php:38
+msgid "whoami"
+msgstr "کیم"
+
+#: dash/lib/social/telegram/commands/ermile.php:43
+msgid "contact"
+msgstr "تماس"
+
+#: dash/lib/social/telegram/commands/ermile.php:44
+msgid "address"
+msgstr "آدرس"
+
+#: dash/lib/social/telegram/commands/ermile.php:45
+msgid "tel"
+msgstr "تلفن"
+
+#: dash/lib/social/telegram/commands/ermile.php:46
+msgid "telephone"
+msgstr "تلفن"
+
+#: dash/lib/social/telegram/commands/ermile.php:48
+msgid "phone"
+msgstr "تلفن"
+
+#: dash/lib/social/telegram/commands/ermile.php:110
+#: dash/lib/social/telegram/commands/ermile.php:292
 msgid "Haloo"
 msgstr "سلووو"
 
-#: dash/lib/social/telegram/commands/ermile.php:115
+#: dash/lib/social/telegram/commands/ermile.php:111
 msgid "We are so glad to meet you."
 msgstr "از ملاقات با شما خوشحالیم."
 
-#: dash/lib/social/telegram/commands/ermile.php:117
+#: dash/lib/social/telegram/commands/ermile.php:113
 msgid "Made by @Ermile"
 msgstr "ساخت ارمایل @Ermile"
 
-#: dash/lib/social/telegram/commands/ermile.php:133 ermile/content/view.php:12
-msgid "Ermile is inteligent"
-msgstr "ارمایل باهوش است!"
+#: dash/lib/social/telegram/commands/ermile.php:137
+#: dash/lib/social/telegram/commands/ermile.php:178
+msgid "Check website"
+msgstr "بررسی وب‌سایت"
 
-#: dash/lib/social/telegram/commands/ermile.php:147
+#: dash/lib/social/telegram/commands/ermile.php:143
+msgid "Read more about us"
+msgstr "درباره ما بیشتر بخوانید"
+
+#: dash/lib/social/telegram/commands/ermile.php:162
 #: ermile/includes/languages/trans_project.php:71
 msgid "Ermile, Floor2, Yas Building"
 msgstr "ساختمان یاس، طبقه دوم، ارمایل"
 
-#: dash/lib/social/telegram/commands/ermile.php:147
+#: dash/lib/social/telegram/commands/ermile.php:162
 #: ermile/includes/languages/trans_project.php:72
 msgid "1st alley, Haft-e-tir St"
 msgstr "خیابان هفت تیر، کوچه یکم"
 
-#: dash/lib/social/telegram/commands/ermile.php:147
+#: dash/lib/social/telegram/commands/ermile.php:162
 msgid "IRAN"
 msgstr "ایران"
 
-#: dash/lib/social/telegram/commands/ermile.php:155
+#: dash/lib/social/telegram/commands/ermile.php:171
 msgid "We are happy to see you!"
 msgstr "از دیدنتون خوشحالیم!"
 
+#: dash/lib/social/telegram/commands/ermile.php:184
+msgid "Submit new ticket"
+msgstr "ارسال تیکت جدید"
+
+#: dash/lib/social/telegram/commands/ermile.php:236
+msgid "We do not need contact of anothers!"
+msgstr ""
+
+#: dash/lib/social/telegram/commands/ermile.php:236
+msgid "You can share your contact by press on /register"
+msgstr "شما می‌توانید مخاطب خود را با فشردن روی /register با من به اشتراک بگذارید"
+
+#: dash/lib/social/telegram/commands/ermile.php:240
+msgid "We need mobile number to complete registeration process."
+msgstr "ما برای تکمیل فرآیند ثبت‌نام نیاز به شماره موبایل شما داریم."
+
+#: dash/lib/social/telegram/commands/ermile.php:246
+msgid "I don't have enough time for listening!"
+msgstr "من به اندازه کافی زمان برای گوش دادن به آهنگ ندارم!"
+
+#: dash/lib/social/telegram/commands/ermile.php:246
+msgid "Type for me:)"
+msgstr "برای من تایپ کنید!"
+
+#: dash/lib/social/telegram/commands/ermile.php:250
+msgid "Thanks for your kindness"
+msgstr "ممنون از محبتتون"
+
+#: dash/lib/social/telegram/commands/ermile.php:254
+msgid "I'm busy and i dont think have time to watch video!"
+msgstr "حسابی سرم شلوفه، فکر نکنم وقت فیلم دیدن باشه!"
+
+#: dash/lib/social/telegram/commands/ermile.php:258
+msgid "A long time until I want to recognize your voice!!"
+msgstr "خیلی مونده تا بخوام صدای شما رو تشخیص بدم!"
+
 #: dash/lib/social/telegram/commands/ermile.php:262
+msgid "I'm still not advanced enough!"
+msgstr "من هنوز اونقدر پیشرفته نشدم!"
+
+#: dash/lib/social/telegram/commands/ermile.php:293
 msgid "You can connect your telegram with your mobile number in our service."
 msgstr ""
 "شما می‌توانید در سرویس ما تلگرام خود را به حساب کاربری روی شماره موبایل خود متصل "
 "کنید."
 
-#: dash/lib/social/telegram/commands/ermile.php:263
+#: dash/lib/social/telegram/commands/ermile.php:294
 msgid "Also you can do it anytime you need with /register command."
 msgstr ""
 "هم‌چنین هر زمانی که مایل باشید می‌توانید از طریق دستور /register این کار را انجام "
 "دهید."
 
-#: dash/lib/social/telegram/commands/ermile.php:270
+#: dash/lib/social/telegram/commands/ermile.php:301
 msgid "Register with mobile"
 msgstr "ثبت‌نام با موبایل"
 
-#: dash/lib/social/telegram/commands/ermile.php:271
+#: dash/lib/social/telegram/commands/ermile.php:302
 msgid "Help"
 msgstr "راهنمایی"
 
-#: dash/lib/social/telegram/commands/ermile.php:284
+#: dash/lib/social/telegram/commands/ermile.php:315
 msgid "Please choose your language"
 msgstr "لطفا زبان خود را انتخاب کنید"
 
@@ -10384,8 +10475,12 @@ msgstr "بازخورد"
 msgid "Main menu"
 msgstr "منوی اصلی"
 
-#: dash/lib/social/telegram/commands/step_ticketAnswer.php:24
-#: dash/lib/social/telegram/commands/step_ticketAnswer.php:48
+#: dash/lib/social/telegram/commands/step_ticketAnswer.php:22
+msgid "Answer to ticket "
+msgstr "پاسخ به تیکت"
+
+#: dash/lib/social/telegram/commands/step_ticketAnswer.php:34
+#: dash/lib/social/telegram/commands/step_ticketAnswer.php:58
 msgid "Please wrote your answer"
 msgstr "لطفا پیام خود را بنویسید"
 
@@ -10419,11 +10514,15 @@ msgstr "/تیکت"
 msgid "ticket"
 msgstr "تیکت"
 
-#: dash/lib/social/telegram/commands/ticket.php:108
+#: dash/lib/social/telegram/commands/ticket.php:109
+msgid "Check ticket "
+msgstr "بررسی تیکت"
+
+#: dash/lib/social/telegram/commands/ticket.php:119
 msgid "We can't find detail of this ticket!"
 msgstr "ما نمی‌توانیم جزئیات این تیکت را بیابیم!"
 
-#: dash/lib/social/telegram/commands/ticket.php:130
+#: dash/lib/social/telegram/commands/ticket.php:141
 msgid "We need ticket number!"
 msgstr "ما به شماره تیکت نیاز داریم!"
 
@@ -10431,59 +10530,63 @@ msgstr "ما به شماره تیکت نیاز داریم!"
 msgid "Booom"
 msgstr "بوووم"
 
-#: dash/lib/social/telegram/exec.php:22 dash/lib/social/telegram/tg.php:43
+#: dash/lib/social/telegram/exec.php:23 dash/lib/social/telegram/tg.php:43
 msgid "Telegram is off!"
 msgstr "تلگراف خاموش است!"
 
-#: dash/lib/social/telegram/exec.php:27
+#: dash/lib/social/telegram/exec.php:28
 msgid "Method is not set!"
 msgstr "روش تنظیم نشده است!"
 
-#: dash/lib/social/telegram/exec.php:39
+#: dash/lib/social/telegram/exec.php:40
 msgid "Api key is not correct!"
 msgstr "کلید رابط برنامه‌نویسی صحیح نیست!"
 
-#: dash/lib/social/telegram/exec.php:54
+#: dash/lib/social/telegram/exec.php:53
+msgid "Maybe we have problem!"
+msgstr "شاید ما مشکلی داریم!"
+
+#: dash/lib/social/telegram/exec.php:67
 msgid "Curl failed to initialize"
 msgstr "سی‌یو‌آر‌ال ناموفق در مقداردهی اولیه"
 
-#: dash/lib/social/telegram/exec.php:90
+#: dash/lib/social/telegram/exec.php:103
 msgid "Empty server response"
 msgstr "پاسخ خالی از سرور"
 
-#: dash/lib/social/telegram/log.php:166
+#: dash/lib/social/telegram/log.php:167
 msgid "debug mode is off!"
 msgstr "حالت اشکال‌زدایی خاموش است!"
 
-#: dash/lib/social/telegram/step.php:269
+#: dash/lib/social/telegram/step.php:257
 msgid "Press enter valid value"
 msgstr "لطفا مقداری معتبر وارد کنید"
 
-#: dash/lib/social/telegram/step.php:274
+#: dash/lib/social/telegram/step.php:262
 msgid "Press another inappropirate key to exit from active process!"
 msgstr "با ورود مقدار نامعتبر دیگری از این فرآیند فعال خارج خواهد شد!"
 
-#: dash/lib/social/telegram/step.php:287
+#: dash/lib/social/telegram/step.php:276
 msgid "Cancel operation."
 msgstr "انصراف از عملیات."
 
-#: dash/lib/social/telegram/tg.php:155
+#: dash/lib/social/telegram/tg.php:156
 msgid "We are detect outdated message in hook."
 msgstr "ما پیام تاریخ گذشته در هوک یافتیم."
 
-#: dash/lib/social/telegram/user.php:119
+#: dash/lib/social/telegram/user.php:118
 msgid "Why your name is different!"
 msgstr "چرا نام شما متفاوت است!"
 
-#: dash/lib/social/telegram/user.php:123
+#: dash/lib/social/telegram/user.php:122
 msgid "Why your family is different!"
 msgstr "چرا نام خانوادگی شما متفاوت است!"
 
-#: dash/lib/social/telegram/user.php:136
+#: dash/lib/social/telegram/user.php:135
 msgid "Registration failed!"
 msgstr "ثبت‌نام ناموفق!"
 
-#: dash/lib/social/telegram/user.php:179
+#: dash/lib/social/telegram/user.php:178
 msgid "Your language was successfully set to :lang."
 msgstr "زبان شما به :lang تغییر یافت."
 
@@ -11127,6 +11230,10 @@ msgstr "ما نمی‌توانیم فایل شما را آپلود کنیم"
 #: ermile/content/view.php:10
 msgid "Ermile contain a new tools for each one"
 msgstr "ارمایل دارای ابزارهایی برای خود شماست"
+
+#: ermile/content/view.php:12
+msgid "Ermile is inteligent"
+msgstr "ارمایل باهوش است!"
 
 #: ermile/includes/languages/static_translation.php:6
 #: ermile/includes/languages/static_translation.php:92
@@ -15572,9 +15679,6 @@ msgstr ""
 
 #~ msgid "filepart"
 #~ msgstr "بخش های فایل"
-
-#~ msgid "start"
-#~ msgstr "شروع"
 
 #~ msgid "inprogress"
 #~ msgstr "در حال انجام"
