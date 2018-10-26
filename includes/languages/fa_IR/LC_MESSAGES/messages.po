@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ermile - Persian\n"
 "POT-Creation-Date: 2018-10-26 14:36+0330\n"
-"PO-Revision-Date: 2018-10-26 14:37+0330\n"
+"PO-Revision-Date: 2018-10-26 14:45+0330\n"
 "Last-Translator: Javad <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -5118,7 +5118,7 @@ msgstr "عنوان تیکت شما"
 #: dash/addons/includes/languages/trans_dash.php:863
 #: ermile/includes/languages/trans_dash.php:865
 msgid "Set title will help us answer quickly"
-msgstr "نتظیم عنوان تیکت به ما کمک می کند تا سریع تر پاسخگو باشیم"
+msgstr "تنظیم عنوان تیکت به ما کمک می کند تا سریع تر پاسخگو باشیم"
 
 #: dash/addons/includes/languages/trans_dash.php:864
 #: ermile/includes/languages/trans_dash.php:866
@@ -6374,7 +6374,7 @@ msgstr "غیرفعال"
 #: dash/lib/social/telegram/commands/ermile.php:96
 #: dash/lib/social/telegram/step.php:281
 msgid "help"
-msgstr "کمک"
+msgstr "راهنمایی"
 
 #: dash/addons/includes/languages/trans_static.php:232
 msgid "For multilanguage sites enter title in English and translate it"
