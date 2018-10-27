@@ -20183,7 +20183,14 @@ body.siftal .cbox table {
     display: none; }
 
   .pBlock {
-    display: block; } }
+    display: block; }
+
+  .tbl1.v1 thead {
+    color: #000;
+    background-color: #ccc; }
+
+  .tbl1 td {
+    color: #000; } }
 svg.barcodePrev {
   height: 70px; }
 
