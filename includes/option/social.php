@@ -18,14 +18,14 @@ self::$social['list']['aparat']                        = 'ermile';
 * TELEGRAM
 * t.me
 */
-self::$social['telegram']['status']                    = true;
-self::$social['telegram']['name']                      = 'ErmileBot';
-self::$social['telegram']['key']                       = null;
-self::$social['telegram']['bot']                       = null;
-self::$social['telegram']['hookFolder']                = null;
-self::$social['telegram']['hook']                      = null;
-self::$social['telegram']['debug']                     = null;
-self::$social['telegram']['channel']                   = null;
+
+self::$social['telegram']['status']     = true;
+self::$social['telegram']['bot']        = 'ErmileBot';
+self::$social['telegram']['hookFolder'] = 'ermile';
+self::$social['telegram']['token']      = '';
+self::$social['telegram']['debug']      = true;
+
+
 
 /**
 * FACEBOOK
