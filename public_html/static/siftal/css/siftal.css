@@ -9215,9 +9215,6 @@ li.sortable-placeholder {
   max-height: 600px;
   user-select: none; }
 
-.chart * {
-  font-family: IRANSans, Tahoma, sans-serif !important; }
-
 .chart .amcharts-chart-div > a {
   display: none !important; }
 
@@ -9239,6 +9236,14 @@ li.sortable-placeholder {
 .chart.x5 {
   min-height: 500px; }
 
+.highcharts-root {
+  font-family: IRANSans, Tahoma, sans-serif !important; }
+
+.highcharts-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 80px; }
+
 .highcharts-tooltip > span {
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid silver;
@@ -9255,8 +9260,9 @@ li.sortable-placeholder {
   display: inline-block;
   direction: ltr; }
 
-.highcharts-credits {
-  display: none; }
+.chart .chartServiceLogo {
+  y: calc(100% - 32px);
+  x: calc(100% - 32px); }
 
 [class^="spay-256-"] {
   background: url("../images/spay/spay256.png") no-repeat;
