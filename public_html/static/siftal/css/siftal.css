@@ -9240,9 +9240,7 @@ li.sortable-placeholder {
   font-family: IRANSans, Tahoma, sans-serif !important; }
 
 .highcharts-title {
-  font-weight: bold;
-  font-size: 14px;
-  margin-left: 80px; }
+  font-weight: bold; }
 
 .highcharts-tooltip > span {
   background: rgba(255, 255, 255, 0.85);
@@ -20170,6 +20168,12 @@ body.siftal .cbox table {
   .siftal .tbox .badge {
     display: none; }
 
+  .siftal .tbox.pictogram > span[class^="sf-"] {
+    font-size: 3em; }
+
+  .highcharts-button {
+    display: none; }
+
   .superAdmin {
     display: none; }
 
@@ -20183,6 +20187,9 @@ body.siftal .cbox table {
     display: none; }
 
   audio {
+    display: none; }
+
+  #nprogress {
     display: none; }
 
   .p0 {
