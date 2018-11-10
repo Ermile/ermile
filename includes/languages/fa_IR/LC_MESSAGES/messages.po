@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ermile - Persian\n"
 "POT-Creation-Date: 2018-11-10 19:32+0330\n"
-"PO-Revision-Date: 2018-11-10 19:32+0330\n"
+"PO-Revision-Date: 2018-11-10 19:33+0330\n"
 "Last-Translator: Javad Kakroudi <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -69,8 +69,7 @@ msgstr "جزئیات میزان استفاده"
 
 #: dash/addons/content_account/billing/detail/view.php:9
 msgid "Check your current usage and active user and price for this period of time."
-msgstr ""
-"بررسی میزان استفاده فعلی و تعداد اعضای فعال آن به‌همراه هزینه تا به این لحظه."
+msgstr "بررسی میزان استفاده فعلی و تعداد اعضای فعال آن به‌همراه هزینه تا به این لحظه."
 
 #: dash/addons/content_account/billing/invoice/view.php:8
 msgid "Invoice Detail"
@@ -125,14 +124,12 @@ msgstr "اطلاعات مالی"
 #: dash/addons/content_account/billing/view.php:11
 msgid "Check your balance, charge your account, and bill your invoices!"
 msgstr ""
-"موجودی حساب خود را چک کنید، حساب‌کاربری را شارژ کنید و فاکتورهای صادرشده را پرداخت "
-"کنید!"
+"موجودی حساب خود را چک کنید، حساب‌کاربری را شارژ کنید و فاکتورهای صادرشده را پرداخت کنید!"
 
 #: dash/addons/content_account/home/view.php:9
 #: dash/addons/content_cp/email/home/view.php:16
 #: dash/addons/content_cp/email/send/view.php:16
-#: dash/addons/content_cp/sms/group/view.php:16
-#: dash/addons/content_cp/sms/home/view.php:16
+#: dash/addons/content_cp/sms/group/view.php:16 dash/addons/content_cp/sms/home/view.php:16
 #: dash/addons/content_cp/sms/send/view.php:16
 #: dash/addons/content_cp/sms/verify/view.php:15
 #: dash/addons/content_cp/visitor/log/view.php:16
@@ -203,18 +200,15 @@ msgstr "لینوکس"
 msgid "Your change was saved"
 msgstr "تغییرات با موفقیت ذخیره شد"
 
-#: dash/addons/content_cp/backup/model.php:28
-#: dash/addons/content_cp/backup/model.php:80
+#: dash/addons/content_cp/backup/model.php:28 dash/addons/content_cp/backup/model.php:80
 msgid "Can not create backup"
 msgstr "نمی توانیم فایل پشتیبان را بسازیم"
 
-#: dash/addons/content_cp/backup/model.php:37
-#: dash/addons/content_su/backup/model.php:38
+#: dash/addons/content_cp/backup/model.php:37 dash/addons/content_su/backup/model.php:38
 msgid "File successfully deleted"
 msgstr "فایل با موفقیت حذف شد"
 
-#: dash/addons/content_cp/backup/model.php:44
-#: dash/addons/content_su/backup/model.php:45
+#: dash/addons/content_cp/backup/model.php:44 dash/addons/content_su/backup/model.php:45
 msgid "Dont!"
 msgstr "نکن عزیزم!"
 
@@ -238,9 +232,8 @@ msgstr "شناسه نامعتبر"
 
 #: dash/addons/content_cp/comments/edit/model.php:12
 #: dash/addons/content_cp/contact/edit/model.php:12
-#: dash/addons/content_support/ticket/show/model.php:100
-#: dash/lib/app/address.php:189 dash/lib/app/comment.php:250
-#: dash/lib/app/ticket.php:350
+#: dash/addons/content_support/ticket/show/model.php:100 dash/lib/app/address.php:189
+#: dash/lib/app/comment.php:250 dash/lib/app/ticket.php:350
 msgid "Invalid status"
 msgstr "وضعیت نامعتبر است"
 
@@ -261,8 +254,7 @@ msgstr "شما می‌توانید در صورت نیاز دیدگاه را وی
 #: dash/addons/content_cp/comments/edit/view.php:21
 #: dash/addons/content_cp/contact/edit/view.php:21
 msgid ""
-"This is often useful when you notice that a commenter has made a typographical "
-"error."
+"This is often useful when you notice that a commenter has made a typographical error."
 msgstr "اغلب برای مواردی که متوجه می‌شوید در یک دیدگاه نویسنده خطای تایپی دارد."
 
 #: dash/addons/content_cp/comments/edit/view.php:24
@@ -290,8 +282,7 @@ msgstr "همچنین نظر خاص را اضافه یا ویرایش کنید."
 #: dash/addons/content_cp/log/caller/view.php:13
 #: dash/addons/content_cp/log/home/view.php:13
 #: dash/addons/content_cp/posts/home/view.php:58
-#: dash/addons/content_cp/sms/template/view.php:15
-#: dash/addons/content_cp/terms/view.php:61
+#: dash/addons/content_cp/sms/template/view.php:15 dash/addons/content_cp/terms/view.php:61
 #: dash/addons/content_su/tg/log/view.php:14
 msgid "Back to dashboard"
 msgstr "بازگشت به داشبورد"
@@ -301,8 +292,7 @@ msgstr "بازگشت به داشبورد"
 #: dash/addons/content_cp/posts/home/view.php:71
 #: dash/addons/content_cp/users/home/view.php:23
 #: dash/addons/content_cp/visitor/log/view.php:23
-#: dash/addons/content_su/dbtables/view.php:22
-#: dash/addons/content_su/tg/log/view.php:22
+#: dash/addons/content_su/dbtables/view.php:22 dash/addons/content_su/tg/log/view.php:22
 #: dash/addons/content_su/transactions/view.php:22
 msgid "Search for :search"
 msgstr "جستجوی :search"
@@ -355,11 +345,9 @@ msgstr "تمام جزئیات وب‌سایت خود را در یک نگاه ب�
 #: dash/addons/content_cp/home/view.php:15
 msgid "You can manage all parts of site from cms and news until user and logs."
 msgstr ""
-"شما می‌توانید تمام بخش‌ها را از مدیریت محتوا و اخبار گرفته تا کاربران و لاگ را "
-"مدیریت کنید."
+"شما می‌توانید تمام بخش‌ها را از مدیریت محتوا و اخبار گرفته تا کاربران و لاگ را مدیریت کنید."
 
-#: dash/addons/content_cp/log/caller/view.php:9
-#: dash/addons/content_cp/log/home/view.php:9
+#: dash/addons/content_cp/log/caller/view.php:9 dash/addons/content_cp/log/home/view.php:9
 #: dash/addons/includes/languages/trans_dash.php:694
 #: ermile/includes/languages/trans_dash.php:697
 msgid "Log"
@@ -374,8 +362,7 @@ msgstr "بررسی لیست ردپاها و جستجو در آنها و فیلت
 msgid "Show log caller"
 msgstr "نمایش عناوین لاگ‌ها"
 
-#: dash/addons/content_cp/mycontact/view.php:9
-#: dash/addons/content_cp/mycontact/view.php:10
+#: dash/addons/content_cp/mycontact/view.php:9 dash/addons/content_cp/mycontact/view.php:10
 msgid "Comment Dashboard"
 msgstr "داشبورد دیدگاه‌ها"
 
@@ -476,8 +463,8 @@ msgstr "ویرایش نوشته"
 #: dash/addons/content_cp/posts/edit/view.php:35
 msgid "You can change everything, change url and add gallery or some other change"
 msgstr ""
-"شما می توانید همه چیز را تغییر دهید، تغییر آدرس و اضافه کردن گالری و یا برخی از "
-"تغییرات دیگر"
+"شما می توانید همه چیز را تغییر دهید، تغییر آدرس و اضافه کردن گالری و یا برخی از تغییرات "
+"دیگر"
 
 #: dash/addons/content_cp/posts/edit/view.php:49
 msgid "Edit page"
@@ -489,8 +476,7 @@ msgstr "ویرایش مرکز راهنمایی"
 
 #: dash/addons/content_cp/posts/edit/view.php:62
 msgid "Helps can contain keyword and category with title and descriptions."
-msgstr ""
-"مقالات مرکز راهنمایی می‌توانند شامل کلیدواژه و دسته‌بندی همراه با عنوان و شرح باشند."
+msgstr "مقالات مرکز راهنمایی می‌توانند شامل کلیدواژه و دسته‌بندی همراه با عنوان و شرح باشند."
 
 #: dash/addons/content_cp/posts/home/view.php:23
 #: dash/addons/includes/languages/trans_dash.php:240
@@ -503,8 +489,7 @@ msgstr "نوشته ها"
 
 #: dash/addons/content_cp/posts/home/view.php:24
 msgid "Check list of posts and search or filter in them to find your posts."
-msgstr ""
-"چک کردن لیست پست ها و جستجو یا فیلتر کردن در آنها برای پیدا کردن پست های خود."
+msgstr "چک کردن لیست پست ها و جستجو یا فیلتر کردن در آنها برای پیدا کردن پست های خود."
 
 #: dash/addons/content_cp/posts/home/view.php:24
 msgid "Also add or edit specefic post."
@@ -737,25 +722,23 @@ msgstr "تکرار کلمه عبور با کلمه عبور برابر نیست"
 
 #: dash/addons/content_cp/users/set/view.php:13
 msgid ""
-"You can add new user and after add with minimal data, we allow you to add extra "
-"detail of user."
+"You can add new user and after add with minimal data, we allow you to add extra detail "
+"of user."
 msgstr ""
-"شما می توانید کاربر جدید را اضافه کنید و پس از اضافه کردن اطلاعات کم، به شما "
-"اجازه می دهیم جزئیات بیشتری از کاربر اضافه کنید."
+"شما می توانید کاربر جدید را اضافه کنید و پس از اضافه کردن اطلاعات کم، به شما اجازه می "
+"دهیم جزئیات بیشتری از کاربر اضافه کنید."
 
 #: dash/addons/content_cp/users/set/view.php:18
 #: dash/addons/content_cp/users/view/view.php:18
 msgid "Back to list of users"
 msgstr "بازگشت به لیست کاربران"
 
-#: dash/addons/content_cp/users/set/view.php:42
-#: dash/addons/content_enter/home/model.php:45
+#: dash/addons/content_cp/users/set/view.php:42 dash/addons/content_enter/home/model.php:45
 #: dash/addons/content_su/sendnotify/model.php:30 dash/lib/app/address.php:316
 #: dash/lib/app/parent/add.php:50 dash/lib/app/parent/add.php:59
 #: dash/lib/app/parent/delete.php:35 dash/lib/app/parent/delete.php:114
 #: dash/lib/app/parent/get.php:35 dash/lib/app/parent/get.php:44
-#: dash/lib/app/posts/add.php:37 dash/lib/app/term.php:338
-#: dash/lib/app/user/add.php:54
+#: dash/lib/app/posts/add.php:37 dash/lib/app/term.php:338 dash/lib/app/user/add.php:54
 msgid "User not found"
 msgstr "کاربر یافت نشد"
 
@@ -765,8 +748,7 @@ msgstr "ویرایش پروفایل :val"
 
 #: dash/addons/content_cp/users/set/view.php:50
 msgid "Edit user detail and change all fields of this user, be careful!"
-msgstr ""
-"ویرایش اطلاعات کاربر و تغییر مقادیر این کاربر، در تغییر دقت لازم را به خرج دهید!"
+msgstr "ویرایش اطلاعات کاربر و تغییر مقادیر این کاربر، در تغییر دقت لازم را به خرج دهید!"
 
 #: dash/addons/content_cp/users/view/view.php:13
 msgid "User detail"
@@ -800,8 +782,7 @@ msgstr "نمودار بازدیدکنندگان"
 #: dash/addons/content_cp/visitor/log/view.php:10
 msgid "Check list of visitor and search or filter in them to find your visitor."
 msgstr ""
-"بررسی لیست بازدیدکنندگان و جستجو یا فیلتر کردن آنان برای یافتن بازدیدکننده "
-"موردنظر."
+"بررسی لیست بازدیدکنندگان و جستجو یا فیلتر کردن آنان برای یافتن بازدیدکننده موردنظر."
 
 #: dash/addons/content_cp/visitor/home/view.php:9
 #: dash/addons/content_cp/visitor/log/view.php:9
@@ -810,8 +791,7 @@ msgstr ""
 msgid "Visitor"
 msgstr "بازدیدکننده"
 
-#: dash/addons/content_enter/alert/view.php:9
-#: dash/addons/content_enter/alert/view.php:16
+#: dash/addons/content_enter/alert/view.php:9 dash/addons/content_enter/alert/view.php:16
 msgid "Alert!"
 msgstr "هشدار!"
 
@@ -1056,11 +1036,11 @@ msgstr "بازیابی گذرواژه"
 
 #: dash/addons/content_enter/pass/view.php:17
 msgid ""
-"If forget your password, Please enter new password. after pass verification your "
-"new password is usable."
+"If forget your password, Please enter new password. after pass verification your new "
+"password is usable."
 msgstr ""
-"اگر گذرواژه‌ی خود را فراموش کرده‌اید، مقدار جدیدی را وارد کنید. پس از تکمیل "
-"اعتبارسنجی، این گذرواژه قابل استفاده خواهد بود."
+"اگر گذرواژه‌ی خود را فراموش کرده‌اید، مقدار جدیدی را وارد کنید. پس از تکمیل اعتبارسنجی، "
+"این گذرواژه قابل استفاده خواهد بود."
 
 #: dash/addons/content_enter/pass/view.php:22
 #: dash/addons/includes/languages/trans_dash.php:961
@@ -1091,8 +1071,7 @@ msgstr "شما مجاز به ثبت نام تا ۱۰ دقیقه نیستید"
 #: dash/addons/content_enter/signup/model.php:32
 #: dash/addons/content_enter/username/model.php:11
 msgid "Your browser has sent a saved password. Delete it and continue"
-msgstr ""
-"مرورگر شما گذرواژه ذخیره شده ای را ارسال کرده است. آن را حذف کنید و ادامه دهید"
+msgstr "مرورگر شما گذرواژه ذخیره شده ای را ارسال کرده است. آن را حذف کنید و ادامه دهید"
 
 #: dash/addons/content_enter/signup/model.php:42
 msgid "Pleaes set mobile number"
@@ -1116,8 +1095,7 @@ msgstr "لطفا گذرواژه‌ی معتبری تنظیم کنید"
 
 #: dash/addons/content_enter/signup/model.php:79
 msgid "Please do not use your username as password. Never Ever!"
-msgstr ""
-"لطفا از نام‌کاربری خود به‌عنوان گذرواژه استفاده نکنید. نه اینجا و نه هیچ‌کجای دیگر!"
+msgstr "لطفا از نام‌کاربری خود به‌عنوان گذرواژه استفاده نکنید. نه اینجا و نه هیچ‌کجای دیگر!"
 
 #: dash/addons/content_enter/signup/model.php:85
 msgid "Please do not use your mobile in password!"
@@ -1134,8 +1112,7 @@ msgstr "این نام‌کاربری پیش از این گرفته شده است
 #: dash/addons/content_enter/signup/model.php:111
 msgid "This mobile is already signuped. You can login by this mobile"
 msgstr ""
-"این شماره تلفن‌همراه پیش از این ثبت‌نام کرده است. شما می‌توانید با این شماره وارد "
-"سیستم شوید"
+"این شماره تلفن‌همراه پیش از این ثبت‌نام کرده است. شما می‌توانید با این شماره وارد سیستم شوید"
 
 #: dash/addons/content_enter/signup/view.php:10
 msgid "Signup in :name"
@@ -1205,8 +1182,7 @@ msgstr "شناسه‌ی کاربری باید بزرگتر از ۵ کاراکت�
 msgid "You must set less than 50 character in username"
 msgstr "شناسه‌ی کاربری باید کمتر از ۵۵ کاراکتر باشد"
 
-#: dash/addons/content_enter/username/set/model.php:41
-#: dash/lib/utility/enter.php:1031
+#: dash/addons/content_enter/username/set/model.php:41 dash/lib/utility/enter.php:1031
 msgid "Your username was set"
 msgstr "نام کاربری شما ثبت شد"
 
@@ -1234,8 +1210,7 @@ msgstr "ما نمی‌توانیم شما را ثبت‌نام کنیم"
 
 #: dash/addons/content_enter/verify/later/model.php:40
 msgid "Invalid detail for signup!, Please try again"
-msgstr ""
-"ما اطلاعات اشتباهی از شما برای ثبت نام دریافت کرده ایم! لطفا مجددا تلاش کنید"
+msgstr "ما اطلاعات اشتباهی از شما برای ثبت نام دریافت کرده ایم! لطفا مجددا تلاش کنید"
 
 #: dash/addons/content_enter/verify/later/view.php:20
 #: dash/addons/content_enter/verify/sendsms/view.php:20
@@ -1274,8 +1249,8 @@ msgstr "لطفا هویت خود را تایید کنید."
 #: dash/addons/content_enter/verify/view.php:37
 msgid "We've sent the code via Telegram. Please enter the code below."
 msgstr ""
-"ما کد اعتبارسنجی را از طریق تلگرام برای شما ارسال کردیم. لطفا کد را در باکس پایین "
-"وارد کنید."
+"ما کد اعتبارسنجی را از طریق تلگرام برای شما ارسال کردیم. لطفا کد را در باکس پایین وارد "
+"کنید."
 
 #: dash/addons/content_enter/verify/view.php:41
 msgid "We trying to call you. be patient..."
@@ -1284,13 +1259,13 @@ msgstr "ما در حال تلاش برای تماس با شما هستیم و ت
 #: dash/addons/content_enter/verify/view.php:45
 msgid "Your verification code sended to your mobile number via sms. be patient..."
 msgstr ""
-"کد اعتبارسنجی از طریق پیامک به شماره شما ارسال شده است و بزودی به‌دست شما خواهد "
-"رسید. صبور باشید..."
+"کد اعتبارسنجی از طریق پیامک به شماره شما ارسال شده است و بزودی به‌دست شما خواهد رسید. "
+"صبور باشید..."
 
 #: dash/addons/content_enter/verify/view.php:49
 msgid ""
-"We can't send code to you with our existing methods! For the last chance of "
-"verify yourself you can send code to our number."
+"We can't send code to you with our existing methods! For the last chance of verify "
+"yourself you can send code to our number."
 msgstr ""
 "ما نتوانستیم از طریق روش‌های موجود کد را بدست شما برسانیم! به‌عنوان آخرین شانس برای "
 "اعتبارسنجی شما می‌توانید کد را به ما پیامک کنید."
@@ -1413,8 +1388,7 @@ msgstr "وضعیت گیت"
 msgid "Check file status on this project"
 msgstr "بررسی وضعیت فایل‌ها در این پروژه"
 
-#: dash/addons/content_su/home/view.php:8
-#: dash/addons/includes/languages/trans_dash.php:681
+#: dash/addons/content_su/home/view.php:8 dash/addons/includes/languages/trans_dash.php:681
 #: ermile/includes/languages/trans_dash.php:684
 msgid "Supervisor dashboard"
 msgstr "داشبورد مدیر فنی سیستم"
@@ -1471,8 +1445,7 @@ msgstr "فایل با موفقیت به روز رسانی شد"
 msgid "Can not write file"
 msgstr "ناتوان در نوشتن فایل"
 
-#: dash/addons/content_su/nano/view.php:8
-#: dash/addons/includes/languages/trans_dash.php:692
+#: dash/addons/content_su/nano/view.php:8 dash/addons/includes/languages/trans_dash.php:692
 #: ermile/includes/languages/trans_dash.php:695
 msgid "Nano"
 msgstr "نانو"
@@ -1499,13 +1472,11 @@ msgstr "بررسی ردپاها"
 msgid "Back to supervisor dashboard"
 msgstr "بازگشت به داشبورد مدیر فنی سیستم"
 
-#: dash/addons/content_su/tg/log/view.php:9
-#: dash/addons/content_su/tg/logshow/view.php:9
+#: dash/addons/content_su/tg/log/view.php:9 dash/addons/content_su/tg/logshow/view.php:9
 msgid "Telegram log"
 msgstr "ردپای تلگرام"
 
-#: dash/addons/content_su/tg/log/view.php:10
-#: dash/addons/content_su/tg/logshow/view.php:10
+#: dash/addons/content_su/tg/log/view.php:10 dash/addons/content_su/tg/logshow/view.php:10
 msgid "Check list of telegram and search or filter in them to find your telegram."
 msgstr "بررسی لیست تلگرام و جستجو و فیلتر در آنان."
 
@@ -1625,11 +1596,10 @@ msgid "Transactions list"
 msgstr "لیست تراکنش‌ها"
 
 #: dash/addons/content_su/transactions/view.php:11
-msgid ""
-"Check list of Transactions and search or filter in them to find your transactions."
+msgid "Check list of Transactions and search or filter in them to find your transactions."
 msgstr ""
-"لیست تراکنش‌ها را بررسی کنید و آنها را جستجو کنید یا فیلتر کنید تا پیوست های خود "
-"را پیدا کنید."
+"لیست تراکنش‌ها را بررسی کنید و آنها را جستجو کنید یا فیلتر کنید تا پیوست های خود را پیدا "
+"کنید."
 
 #: dash/addons/content_su/transactions/view.php:11
 msgid "Also add or edit specefic transactions."
@@ -1669,14 +1639,13 @@ msgstr "توکن دسترسی نامعتبر است!"
 msgid "Help center"
 msgstr "مرکز راهنما"
 
-#: dash/addons/content_support/home/view.php:10
-#: dash/addons/content_support/tag/view.php:11
+#: dash/addons/content_support/home/view.php:10 dash/addons/content_support/tag/view.php:11
 msgid ""
-"Easily manage your tickets and monitor or track them to get best answer until fix "
-"your problem"
+"Easily manage your tickets and monitor or track them to get best answer until fix your "
+"problem"
 msgstr ""
-"به‌سادگی تیکت‌های خود را مدیریت کنید و با مونیتور و رهگیری آن‌ها به بهترین پاسخ برای "
-"رفع مشکل خود برسید"
+"به‌سادگی تیکت‌های خود را مدیریت کنید و با مونیتور و رهگیری آن‌ها به بهترین پاسخ برای رفع "
+"مشکل خود برسید"
 
 #: dash/addons/content_support/home/view.php:13
 #: dash/addons/content_support/message/view.php:35
@@ -1734,11 +1703,11 @@ msgstr "سامانه پشتیبانی تیکت"
 
 #: dash/addons/content_support/message/view.php:11
 msgid ""
-"Easily manage your message and monitor or track them to get best answer until fix "
-"your problem"
+"Easily manage your message and monitor or track them to get best answer until fix your "
+"problem"
 msgstr ""
-"به‌سادگی پیام‌های تیکت‌های خود را مدیریت کنید و با مونیتور و رهگیری آن‌ها به بهترین "
-"پاسخ برای رفع مشکل خود برسید"
+"به‌سادگی پیام‌های تیکت‌های خود را مدیریت کنید و با مونیتور و رهگیری آن‌ها به بهترین پاسخ "
+"برای رفع مشکل خود برسید"
 
 #: dash/addons/content_support/tag/controller.php:18
 msgid "Invalid tag"
@@ -1756,8 +1725,7 @@ msgid "Your ticket was sended"
 msgstr "تیکت شما ارسال شد"
 
 #: dash/addons/content_support/ticket/add/view.php:9
-#: dash/addons/includes/languages/trans_static.php:1091
-#: dash/lib/app/log/msg/support.php:60
+#: dash/addons/includes/languages/trans_static.php:1091 dash/lib/app/log/msg/support.php:60
 #: dash/lib/social/telegram/commands/ermile.php:334
 msgid "Add new ticket"
 msgstr "افزودن تیکت جدید"
@@ -1905,8 +1873,7 @@ msgstr "این تیکت حل شده و به‌صورت خودکار در :time �
 msgid "If it's okay you can close it manually."
 msgstr "اگر مشکلی وجود ندارد شما می‌توانید آن را به‌صورت دستی ببندید."
 
-#: dash/addons/content_support/view.php:45
-#: dash/addons/includes/languages/trans_dash.php:82
+#: dash/addons/content_support/view.php:45 dash/addons/includes/languages/trans_dash.php:82
 #: ermile/includes/languages/trans_dash.php:85
 #: ermile/includes/languages/trans_project.php:149
 msgid "Support"
@@ -2652,27 +2619,25 @@ msgstr "دوستان خود را از طریق شبکه‌های اجتماعی 
 
 #: dash/addons/includes/languages/trans_dash.php:182
 #: ermile/includes/languages/trans_dash.php:186
-msgid ""
-"Share the referral rewards program with friends on Facebook, Twitter, or Email."
+msgid "Share the referral rewards program with friends on Facebook, Twitter, or Email."
 msgstr ""
-"برنامه معرفی را با دوستان خود در توئیتر، فیس‌بوک، تلگرام یا سایر شبکه‌های اجتماعی و "
-"ایمیل به اشتراک بگذارید."
+"برنامه معرفی را با دوستان خود در توئیتر، فیس‌بوک، تلگرام یا سایر شبکه‌های اجتماعی و ایمیل "
+"به اشتراک بگذارید."
 
 #: dash/addons/includes/languages/trans_dash.php:183
 #: ermile/includes/languages/trans_dash.php:187
 msgid "When they click on your post, we’ll know it was you who referred them."
 msgstr ""
-"زمانی که آن‌ها روی مطلب شما کلیک کردند، ما متوجه می‌شویم که شما آن‌ها را معرفی "
-"کرده‌اید."
+"زمانی که آن‌ها روی مطلب شما کلیک کردند، ما متوجه می‌شویم که شما آن‌ها را معرفی کرده‌اید."
 
 #: dash/addons/includes/languages/trans_dash.php:184
 #: ermile/includes/languages/trans_dash.php:188
 msgid ""
-"If someone forget to use your link, we allow to set your ref code as promo code "
-"in billing page!"
+"If someone forget to use your link, we allow to set your ref code as promo code in "
+"billing page!"
 msgstr ""
-"اگر هنگام ورود به سایت کسی فراموش کرد که از لینک شما استفاده کند، ما اجازه‌ی تنظیم "
-"کد شما را به عنوان کدتخفیف در صفحه مالی می‌دهیم!"
+"اگر هنگام ورود به سایت کسی فراموش کرد که از لینک شما استفاده کند، ما اجازه‌ی تنظیم کد شما "
+"را به عنوان کدتخفیف در صفحه مالی می‌دهیم!"
 
 #: dash/addons/includes/languages/trans_dash.php:185
 #: ermile/includes/languages/trans_dash.php:189
@@ -2683,18 +2648,16 @@ msgstr "دوستان شما وارد جیبرس شده و اعتبار دریا�
 #: ermile/includes/languages/trans_dash.php:190
 msgid "Your friend enter and receives $5 account credit."
 msgstr ""
-"دوستان شما وارد کانون فرهنگی حضرت خدیجه شده و ۱۰.۰۰۰  تومان اعتبار هدیه دریافت "
-"می‌کنند."
+"دوستان شما وارد کانون فرهنگی حضرت خدیجه شده و ۱۰.۰۰۰  تومان اعتبار هدیه دریافت می‌کنند."
 
 #: dash/addons/includes/languages/trans_dash.php:187
 #: ermile/includes/languages/trans_dash.php:191
 msgid ""
-"Anyone you refer to Jibres that enter using your unique referral link or your "
-"promo code will receive $5 in credit."
+"Anyone you refer to Jibres that enter using your unique referral link or your promo code "
+"will receive $5 in credit."
 msgstr ""
-"هرکسی که با کد منحصربفرد شما سایت را مشاده کرده و وارد جیبرس شود و یا کسانی که از "
-"کد تخفیف شما استفاده کنند، ۱۰.۰۰۰ تومان اعتبار هدیه برای کار با جیبرس دریافت "
-"خواهند کرد."
+"هرکسی که با کد منحصربفرد شما سایت را مشاده کرده و وارد جیبرس شود و یا کسانی که از کد "
+"تخفیف شما استفاده کنند، ۱۰.۰۰۰ تومان اعتبار هدیه برای کار با جیبرس دریافت خواهند کرد."
 
 #: dash/addons/includes/languages/trans_dash.php:188
 #: ermile/includes/languages/trans_dash.php:192
@@ -2709,21 +2672,21 @@ msgstr "جوایز جیبرس حداکثر ۷ روز کاری پس از تایی
 #: dash/addons/includes/languages/trans_dash.php:190
 #: ermile/includes/languages/trans_dash.php:194
 msgid ""
-"Amount of charge is depended on your friend total pay and after automatic "
-"calculation, system set your gift."
+"Amount of charge is depended on your friend total pay and after automatic calculation, "
+"system set your gift."
 msgstr ""
-"میزان شارژ بسته به مجموع پرداختی دوستان شما متفاوت بوده و پس از محاسبه خودکار، "
-"سیستم هدیه شما را منظور خواهد کرد."
+"میزان شارژ بسته به مجموع پرداختی دوستان شما متفاوت بوده و پس از محاسبه خودکار، سیستم "
+"هدیه شما را منظور خواهد کرد."
 
 #: dash/addons/includes/languages/trans_dash.php:191
 #: ermile/includes/languages/trans_dash.php:195
 msgid ""
-"We calculate your percentage until 6 month of your friend registration. Because "
-"of that it was your chance to convinced your friend to charge more!"
+"We calculate your percentage until 6 month of your friend registration. Because of that "
+"it was your chance to convinced your friend to charge more!"
 msgstr ""
-"شما ۶ ماه فرصت دارید تا مجموع پرداختی هر دوست معرفی شده را افزایش دهید. به‌همین "
-"دلیل، شما این زمان را خواهید داشت تا  پس از اطمینان دوستان از کیفیت سیستم، آنان "
-"را برای شارژ بیشتر متقاعد کنید!"
+"شما ۶ ماه فرصت دارید تا مجموع پرداختی هر دوست معرفی شده را افزایش دهید. به‌همین دلیل، شما "
+"این زمان را خواهید داشت تا  پس از اطمینان دوستان از کیفیت سیستم، آنان را برای شارژ بیشتر "
+"متقاعد کنید!"
 
 #: dash/addons/includes/languages/trans_dash.php:192
 #: ermile/includes/languages/trans_dash.php:196
@@ -2732,11 +2695,9 @@ msgstr "لینک خود را به اشتراک بگذارید"
 
 #: dash/addons/includes/languages/trans_dash.php:193
 #: ermile/includes/languages/trans_dash.php:197
-msgid ""
-"Copy your personal referral link and share it with your friends and followers."
+msgid "Copy your personal referral link and share it with your friends and followers."
 msgstr ""
-"لینک معرفی شخصی خود را کپی کنید و آن را با دوستان و دنبال‌کنندگان خود به اشتراک "
-"بگذارید."
+"لینک معرفی شخصی خود را کپی کنید و آن را با دوستان و دنبال‌کنندگان خود به اشتراک بگذارید."
 
 #: dash/addons/includes/languages/trans_dash.php:194
 #: ermile/includes/languages/trans_dash.php:198
@@ -3265,8 +3226,7 @@ msgstr "نامک"
 msgid ""
 "The permission name should be unique and contain only alphanameric characters and "
 "underscores"
-msgstr ""
-"نام سطح دسترسی باید منحصر به فرد باشد و فقط شامل کاراکتر‌های الفبا و زیر خط باشد"
+msgstr "نام سطح دسترسی باید منحصر به فرد باشد و فقط شامل کاراکتر‌های الفبا و زیر خط باشد"
 
 #: dash/addons/includes/languages/trans_dash.php:335
 #: ermile/includes/languages/trans_dash.php:339
@@ -3331,8 +3291,7 @@ msgstr "برای نمایش لیست افراد با این سطح دسترسی 
 #: dash/addons/includes/languages/trans_dash.php:353
 #: ermile/includes/languages/trans_dash.php:357
 msgid "First save as draft and do all checks, then publish."
-msgstr ""
-"ابتدا به صورت پیش نویس ذخیره کنید و پس از بررسی تمامی موارد آن را منتظر کنید"
+msgstr "ابتدا به صورت پیش نویس ذخیره کنید و پس از بررسی تمامی موارد آن را منتظر کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:354
 #: ermile/includes/languages/trans_dash.php:358
@@ -3382,11 +3341,10 @@ msgstr "عنوان را اینجا وارد کنید"
 #: dash/addons/includes/languages/trans_dash.php:370
 #: ermile/includes/languages/trans_dash.php:374
 msgid ""
-"Recommended being more than 40 character and appear at the beginning of page "
-"content"
+"Recommended being more than 40 character and appear at the beginning of page content"
 msgstr ""
-"توصیه می‌شود حداقل بیش از ۴۰ کاراکتر بوده و شامل بخشی از مطالب موجود در خطوط "
-"ابتدایی نوشته باشد"
+"توصیه می‌شود حداقل بیش از ۴۰ کاراکتر بوده و شامل بخشی از مطالب موجود در خطوط ابتدایی "
+"نوشته باشد"
 
 #: dash/addons/includes/languages/trans_dash.php:371
 #: ermile/includes/languages/trans_dash.php:375
@@ -3397,8 +3355,8 @@ msgstr "زیرنویس را اینجا وارد کنید"
 #: ermile/includes/languages/trans_dash.php:376
 msgid "Subtitle show under title and used on press websites"
 msgstr ""
-"زیرعنوان یا سوتیتر معمولا در زیر عنوان اصلی نمایش داده شده و برای سایت‌های خبری "
-"کاربرد دارد"
+"زیرعنوان یا سوتیتر معمولا در زیر عنوان اصلی نمایش داده شده و برای سایت‌های خبری کاربرد "
+"دارد"
 
 #: dash/addons/includes/languages/trans_dash.php:373
 #: ermile/includes/languages/trans_dash.php:377
@@ -3419,8 +3377,8 @@ msgstr "آدرس این نوشته"
 #: ermile/includes/languages/trans_dash.php:380
 msgid "You can change by set slug and category or parent for this post"
 msgstr ""
-"شما می‌توانید با تنظیم نامک بخش آخر آدرس و با تغییر دسته‌بندی در اخبار یا والد در "
-"صفحات آن را برای این صفحه سفارشی کنید"
+"شما می‌توانید با تنظیم نامک بخش آخر آدرس و با تغییر دسته‌بندی در اخبار یا والد در صفحات آن "
+"را برای این صفحه سفارشی کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:377
 #: ermile/includes/languages/trans_dash.php:381
@@ -3500,11 +3458,10 @@ msgstr "بدون والد"
 #: dash/addons/includes/languages/trans_dash.php:392
 #: ermile/includes/languages/trans_dash.php:396
 msgid ""
-"Choose category for posts is fix url of post relative and help people find it "
-"better."
+"Choose category for posts is fix url of post relative and help people find it better."
 msgstr ""
-"انتخاب دسته‌بندی برای نوشته منجر به تصحیح آدرس نوشته و ساختارمند کردن آن برای "
-"یافتن بهتر می‌گردد."
+"انتخاب دسته‌بندی برای نوشته منجر به تصحیح آدرس نوشته و ساختارمند کردن آن برای یافتن بهتر "
+"می‌گردد."
 
 #: dash/addons/includes/languages/trans_dash.php:393
 #: ermile/includes/languages/trans_dash.php:397
@@ -4714,8 +4671,8 @@ msgstr "کد گفتگو یا نام‌کاربری"
 #: dash/addons/includes/languages/trans_dash.php:748
 #: ermile/includes/languages/trans_dash.php:750
 msgid ""
-"Unique identifier for the target chat or username of the target channel (in the "
-"format @channelusername)"
+"Unique identifier for the target chat or username of the target channel (in the format "
+"@channelusername)"
 msgstr "شناسه منحصربه‌فرد برای ارسال پیام به شخص یا کانال در فرمت @نام_کاربری"
 
 #: dash/addons/includes/languages/trans_dash.php:749
@@ -4743,8 +4700,8 @@ msgstr "آدرس فایل"
 #: ermile/includes/languages/trans_dash.php:757
 msgid "pass an HTTP URL as a String for Telegram to get a photo from the Internet"
 msgstr ""
-"برای دریافت یک عکس از اینترنت یک نشانی اینترنتی HTTP را به عنوان یک رشته برای "
-"تلگرام منتقل کنید"
+"برای دریافت یک عکس از اینترنت یک نشانی اینترنتی HTTP را به عنوان یک رشته برای تلگرام "
+"منتقل کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:756
 #: ermile/includes/languages/trans_dash.php:758
@@ -4753,10 +4710,8 @@ msgstr "برچسب"
 
 #: dash/addons/includes/languages/trans_dash.php:759
 #: ermile/includes/languages/trans_dash.php:761
-msgid ""
-"HTTPS url to send updates to. Use an empty string to remove webhook integration"
-msgstr ""
-"آدرسی را برای به روزرسانی بفرستید. با فرستادن آدرس خالی وبهوک شما حذف خواهد شد"
+msgid "HTTPS url to send updates to. Use an empty string to remove webhook integration"
+msgstr "آدرسی را برای به روزرسانی بفرستید. با فرستادن آدرس خالی وبهوک شما حذف خواهد شد"
 
 #: dash/addons/includes/languages/trans_dash.php:760
 #: ermile/includes/languages/trans_dash.php:762
@@ -5193,11 +5148,10 @@ msgstr "ساعات"
 #: dash/addons/includes/languages/trans_dash.php:879
 #: ermile/includes/languages/trans_dash.php:884
 msgid ""
-"If your problem is solved or do not need to track, please close this ticket by "
-"press below bottom."
+"If your problem is solved or do not need to track, please close this ticket by press "
+"below bottom."
 msgstr ""
-"اگر مشکل شما حل شده و یا نیازی به رهگیری آن نیست، لطفا تیکت را با فشردن دکمه زیر "
-"ببندید."
+"اگر مشکل شما حل شده و یا نیازی به رهگیری آن نیست، لطفا تیکت را با فشردن دکمه زیر ببندید."
 
 #: dash/addons/includes/languages/trans_dash.php:880
 #: ermile/includes/languages/trans_dash.php:885
@@ -5237,14 +5191,12 @@ msgstr "این تیکت حذف شده است."
 #: dash/addons/includes/languages/trans_dash.php:887
 #: ermile/includes/languages/trans_dash.php:892
 msgid "You can change it to close condition if need to save it in history!"
-msgstr ""
-"شما می‌توانید برای نگهداری این تیکت در تاریخچه وضعیت آن را به بسته‌شده تغییر دهید!"
+msgstr "شما می‌توانید برای نگهداری این تیکت در تاریخچه وضعیت آن را به بسته‌شده تغییر دهید!"
 
 #: dash/addons/includes/languages/trans_dash.php:888
 #: ermile/includes/languages/trans_dash.php:893
 msgid "If your problem is not solved yet, please set this ticket as unsolved"
-msgstr ""
-"اگر مشکل مطرح شده همچنان باقی است، لطفا این تیکت را در حالت حل نشده قرار دهید"
+msgstr "اگر مشکل مطرح شده همچنان باقی است، لطفا این تیکت را در حالت حل نشده قرار دهید"
 
 #: dash/addons/includes/languages/trans_dash.php:889
 #: ermile/includes/languages/trans_dash.php:894
@@ -5356,8 +5308,7 @@ msgstr "آواتار شما"
 msgid "Default Avatar"
 msgstr "آواتار پیش‌فرض"
 
-#: dash/addons/includes/languages/trans_dash.php:919
-#: dash/lib/social/telegram/answer.php:54
+#: dash/addons/includes/languages/trans_dash.php:919 dash/lib/social/telegram/answer.php:54
 #: ermile/includes/languages/trans_dash.php:925
 msgid "Hello"
 msgstr "سلام"
@@ -5492,8 +5443,7 @@ msgstr "نام کامل"
 #: dash/addons/includes/languages/trans_static.php:409
 #: dash/lib/social/telegram/commands/ermile.php:66
 #: dash/lib/social/telegram/commands/ermileInline.php:49
-#: dash/lib/social/telegram/step.php:323
-#: ermile/includes/languages/trans_dash.php:956
+#: dash/lib/social/telegram/step.php:323 ermile/includes/languages/trans_dash.php:956
 msgid "email"
 msgstr "رایانامه"
 
@@ -5763,8 +5713,7 @@ msgstr "  "
 msgid "A few seconds ago"
 msgstr "چندثانیه پیش"
 
-#: dash/addons/includes/languages/trans_static.php:44
-#: dash/lib/utility/upload.php:113
+#: dash/addons/includes/languages/trans_static.php:44 dash/lib/utility/upload.php:113
 msgid "item"
 msgstr "آیتم"
 
@@ -5772,8 +5721,7 @@ msgstr "آیتم"
 msgid "empty"
 msgstr "خالی"
 
-#: dash/addons/includes/languages/trans_static.php:46
-#: dash/lib/utility/upload.php:118
+#: dash/addons/includes/languages/trans_static.php:46 dash/lib/utility/upload.php:118
 msgid "NaN"
 msgstr "-"
 
@@ -5871,8 +5819,7 @@ msgid "sign in"
 msgstr "ورود"
 
 #: dash/addons/includes/languages/trans_static.php:70
-#: dash/lib/social/telegram/commands/ermile.php:99
-#: dash/lib/social/telegram/step.php:325
+#: dash/lib/social/telegram/commands/ermile.php:99 dash/lib/social/telegram/step.php:325
 #: ermile/includes/languages/static_translation.php:36
 msgid "signup"
 msgstr "ثبت نام"
@@ -5883,8 +5830,7 @@ msgid "sign up"
 msgstr "ثبت نام"
 
 #: dash/addons/includes/languages/trans_static.php:72
-#: dash/lib/social/telegram/commands/ermile.php:98
-#: dash/lib/social/telegram/step.php:324
+#: dash/lib/social/telegram/commands/ermile.php:98 dash/lib/social/telegram/step.php:324
 #: ermile/includes/languages/static_translation.php:38
 msgid "register"
 msgstr "ثبت نام"
@@ -5894,8 +5840,7 @@ msgstr "ثبت نام"
 msgid "home"
 msgstr "خانه"
 
-#: dash/addons/includes/languages/trans_static.php:74
-#: dash/lib/engine/twigAddons.php:356
+#: dash/addons/includes/languages/trans_static.php:74 dash/lib/engine/twigAddons.php:356
 #: ermile/includes/languages/static_translation.php:41
 #: ermile/includes/languages/trans_project.php:140
 msgid "Home"
@@ -5906,8 +5851,7 @@ msgstr "صفحه نخست"
 msgid "homepage"
 msgstr "صفحه نخست"
 
-#: dash/addons/includes/languages/trans_static.php:76
-#: dash/lib/engine/twigAddons.php:341
+#: dash/addons/includes/languages/trans_static.php:76 dash/lib/engine/twigAddons.php:341
 #: ermile/includes/languages/static_translation.php:43
 msgid "Homepage"
 msgstr "صفحه نخست"
@@ -6054,8 +5998,7 @@ msgstr "لطفا عنوان را وارد کنید"
 
 #: dash/addons/includes/languages/trans_static.php:126
 msgid "Assign keywords to your posts using tags"
-msgstr ""
-"از عبارات کلیدی برای تعریف کلیدواژه ها و ارتباط آن به نوشته های استفاده کنید"
+msgstr "از عبارات کلیدی برای تعریف کلیدواژه ها و ارتباط آن به نوشته های استفاده کنید"
 
 #: dash/addons/includes/languages/trans_static.php:127
 msgid "Use categories to define sections of your site and group related posts"
@@ -6080,8 +6023,7 @@ msgstr "برای بارگزاری فایل های شما"
 #: dash/addons/includes/languages/trans_static.php:133
 msgid "If you want to change password enter it, else leave it blank"
 msgstr ""
-"در صورت تمایل به تغییر گذرواژه آن را وارد کنید،‌ در غیر این ‌صورت این فیلد را خالی "
-"بگذارید"
+"در صورت تمایل به تغییر گذرواژه آن را وارد کنید،‌ در غیر این ‌صورت این فیلد را خالی بگذارید"
 
 #: dash/addons/includes/languages/trans_static.php:134
 msgid "Enter password within 5 to 40 character"
@@ -6246,8 +6188,7 @@ msgstr "کتاب های خود را در این بخش وارد کنید"
 msgid "Duplicate - File exist"
 msgstr "تکراری - فایل وجود دارد"
 
-#: dash/addons/includes/languages/trans_static.php:185
-#: dash/lib/utility/upload.php:500
+#: dash/addons/includes/languages/trans_static.php:185 dash/lib/utility/upload.php:500
 msgid "Fail on tranfering file"
 msgstr "خطا در انتقال فایل"
 
@@ -6255,13 +6196,11 @@ msgstr "خطا در انتقال فایل"
 msgid "Error"
 msgstr "خطا"
 
-#: dash/addons/includes/languages/trans_static.php:187
-#: dash/lib/utility/upload/check.php:20
+#: dash/addons/includes/languages/trans_static.php:187 dash/lib/utility/upload/check.php:20
 msgid "Invalid parameters"
 msgstr "پارامتر اشتباه"
 
-#: dash/addons/includes/languages/trans_static.php:188
-#: dash/lib/utility/upload/check.php:32
+#: dash/addons/includes/languages/trans_static.php:188 dash/lib/utility/upload/check.php:32
 msgid "No file sent"
 msgstr "فایلی ارسال نشده"
 
@@ -6270,8 +6209,7 @@ msgstr "فایلی ارسال نشده"
 msgid "Exceeded filesize limit"
 msgstr "ظرفیت فایل بیش از حد مجاز"
 
-#: dash/addons/includes/languages/trans_static.php:190
-#: dash/lib/utility/upload/check.php:43
+#: dash/addons/includes/languages/trans_static.php:190 dash/lib/utility/upload/check.php:43
 msgid "Unknown errors"
 msgstr "خطای نامشخص"
 
@@ -6389,16 +6327,15 @@ msgid "disable"
 msgstr "غیرفعال"
 
 #: dash/addons/includes/languages/trans_static.php:231
-#: dash/lib/social/telegram/commands/ermile.php:124
-#: dash/lib/social/telegram/step.php:327
+#: dash/lib/social/telegram/commands/ermile.php:124 dash/lib/social/telegram/step.php:327
 msgid "help"
 msgstr "راهنمایی"
 
 #: dash/addons/includes/languages/trans_static.php:232
 msgid "For multilanguage sites enter title in English and translate it"
 msgstr ""
-"برای سایت‌های چندزبانه، این بخش را به انگلیسی وارد نموده و توسط برنامه مترجم آن را "
-"به سایر زبان‌ها ترجمه کنید"
+"برای سایت‌های چندزبانه، این بخش را به انگلیسی وارد نموده و توسط برنامه مترجم آن را به "
+"سایر زبان‌ها ترجمه کنید"
 
 #: dash/addons/includes/languages/trans_static.php:236
 msgid "main URL"
@@ -6971,8 +6908,7 @@ msgid "unit_id"
 msgstr "کد واحد مالی"
 
 #: dash/addons/includes/languages/trans_static.php:423
-#: dash/lib/social/telegram/commands/ermile.php:29
-#: dash/lib/social/telegram/step.php:313
+#: dash/lib/social/telegram/commands/ermile.php:29 dash/lib/social/telegram/step.php:313
 msgid "language"
 msgstr "زبان"
 
@@ -8537,7 +8473,7 @@ msgstr "جزایر جزر و مدی کوچک"
 
 #: dash/addons/includes/languages/trans_static.php:837
 msgid "uganda"
-msgstr "گوگولا"
+msgstr "اوگاندا"
 
 #: dash/addons/includes/languages/trans_static.php:838
 msgid "ukraine"
@@ -9139,13 +9075,13 @@ msgstr "ما یک ورودی جدید را مشاهده کردیم :displayname"
 #: dash/addons/includes/languages/trans_static.php:1016
 #: dash/addons/includes/languages/trans_static.php:1087
 msgid ""
-"If this was you, you can safely disregard this message. If you didn't do this, "
-"please change your password to help secure your account. Learn more about keeping "
-"your account secure."
+"If this was you, you can safely disregard this message. If you didn't do this, please "
+"change your password to help secure your account. Learn more about keeping your account "
+"secure."
 msgstr ""
-"اگر این شما هستید، می توانید با خیال راحت این پیام را نادیده بگیرید. اگر این کار "
-"را نکردید، لطفا گذرواژه خود را تغییر دهید تا امنیت حسابتان را تضمین کنید. درباره "
-"حفظ امنیت حساب کاربری بیشتر بدانید."
+"اگر این شما هستید، می توانید با خیال راحت این پیام را نادیده بگیرید. اگر این کار را "
+"نکردید، لطفا گذرواژه خود را تغییر دهید تا امنیت حسابتان را تضمین کنید. درباره حفظ امنیت "
+"حساب کاربری بیشتر بدانید."
 
 #: dash/addons/includes/languages/trans_static.php:1018
 #: dash/addons/includes/languages/trans_static.php:1078
@@ -9390,8 +9326,7 @@ msgstr ""
 
 #: dash/addons/includes/languages/trans_static.php:1083
 msgid "Add transaction :title whit :plus plus and :minus minus to :user_id"
-msgstr ""
-"افزایش تراکنش دستی با عنوان :title با افزودن :plus و کاهش :minus برای  :user_id"
+msgstr "افزایش تراکنش دستی با عنوان :title با افزودن :plus و کاهش :minus برای  :user_id"
 
 #: dash/addons/includes/languages/trans_static.php:1084
 msgid "The :user content"
@@ -9592,8 +9527,8 @@ msgstr "شما دسترسی لازم را برای ویرایش این نظر ن
 msgid "Please fill the content box"
 msgstr "لطفا باکس متن را پر کنید"
 
-#: dash/lib/app/comment.php:260 dash/lib/app/comment.php:267
-#: dash/lib/app/posts.php:20 dash/lib/app/posts.php:28
+#: dash/lib/app/comment.php:260 dash/lib/app/comment.php:267 dash/lib/app/posts.php:20
+#: dash/lib/app/posts.php:28
 msgid "Invalid post id"
 msgstr "شناسه پست اشتباه است"
 
@@ -9605,8 +9540,7 @@ msgstr "دیدگاه‌های این نوشته بسته است!"
 msgid "Title is out of range!"
 msgstr "عنوان خارج از محدوده است!"
 
-#: dash/lib/app/comment.php:294 dash/lib/app/term.php:168
-#: dash/lib/app/ticket.php:366
+#: dash/lib/app/comment.php:294 dash/lib/app/term.php:168 dash/lib/app/ticket.php:366
 msgid "Invalid parent"
 msgstr "شناسه والد اشتباه است"
 
@@ -9644,20 +9578,17 @@ msgid ":val add new ticket"
 msgstr ":val یک تیکت جدید ثبت کرد"
 
 #: dash/lib/app/log/msg/support.php:107 dash/lib/app/log/msg/support.php:201
-#: dash/lib/app/log/msg/support.php:286
-#: dash/lib/social/telegram/commands/ticket.php:95
+#: dash/lib/app/log/msg/support.php:286 dash/lib/social/telegram/commands/ticket.php:95
 msgid "Visit in site"
 msgstr "مشاهده در سایت"
 
 #: dash/lib/app/log/msg/support.php:113 dash/lib/app/log/msg/support.php:207
-#: dash/lib/app/log/msg/support.php:292
-#: dash/lib/social/telegram/commands/ticket.php:114
+#: dash/lib/app/log/msg/support.php:292 dash/lib/social/telegram/commands/ticket.php:114
 msgid "Check ticket"
 msgstr "بررسی تیکت"
 
 #: dash/lib/app/log/msg/support.php:119 dash/lib/app/log/msg/support.php:213
-#: dash/lib/app/log/msg/support.php:298
-#: dash/lib/social/telegram/commands/ticket.php:101
+#: dash/lib/app/log/msg/support.php:298 dash/lib/social/telegram/commands/ticket.php:101
 msgid "Answer"
 msgstr "پاسخ"
 
@@ -9716,8 +9647,7 @@ msgstr "عنوان دلخواه نمی‌تواند بیشتر از ۵۰ کار�
 #: dash/lib/app/parent/add.php:176
 msgid "Your request was sended to user, wait for answer user"
 msgstr ""
-"درخواست شما به کاربر ارسال شده است. منتظر بمانید تا جواب کاربر به درخواست شما "
-"مشخص شود"
+"درخواست شما به کاربر ارسال شده است. منتظر بمانید تا جواب کاربر به درخواست شما مشخص شود"
 
 #: dash/lib/app/parent/add.php:203
 msgid "Are you :title of this user?"
@@ -10413,23 +10343,19 @@ msgstr "همه را نمی‌توان از خود راضی  نگه داشت"
 msgid "Test <b>:name</b> bot on :site"
 msgstr "تست بات <b>:name</b> در :site"
 
-#: dash/lib/social/telegram/commands/ermile.php:22
-#: dash/lib/social/telegram/step.php:312
+#: dash/lib/social/telegram/commands/ermile.php:22 dash/lib/social/telegram/step.php:312
 msgid "start"
 msgstr "شروع"
 
-#: dash/lib/social/telegram/commands/ermile.php:35
-#: dash/lib/social/telegram/step.php:328
+#: dash/lib/social/telegram/commands/ermile.php:35 dash/lib/social/telegram/step.php:328
 msgid "menu"
 msgstr "منو"
 
-#: dash/lib/social/telegram/commands/ermile.php:37
-#: dash/lib/social/telegram/step.php:329
+#: dash/lib/social/telegram/commands/ermile.php:37 dash/lib/social/telegram/step.php:329
 msgid "mainmenu"
 msgstr "منوی‌اصلی"
 
-#: dash/lib/social/telegram/commands/ermile.php:39
-#: dash/lib/social/telegram/step.php:330
+#: dash/lib/social/telegram/commands/ermile.php:39 dash/lib/social/telegram/step.php:330
 msgid "return"
 msgstr "بازگشت"
 
@@ -10444,8 +10370,7 @@ msgstr "درباره"
 msgid "detail"
 msgstr "جزئیات"
 
-#: dash/lib/social/telegram/commands/ermile.php:53
-#: dash/lib/social/telegram/step.php:315
+#: dash/lib/social/telegram/commands/ermile.php:53 dash/lib/social/telegram/step.php:315
 msgid "me"
 msgstr "من"
 
@@ -10483,8 +10408,7 @@ msgstr "تلفن"
 msgid "phone"
 msgstr "تلفن"
 
-#: dash/lib/social/telegram/commands/ermile.php:100
-#: dash/lib/social/telegram/step.php:326
+#: dash/lib/social/telegram/commands/ermile.php:100 dash/lib/social/telegram/step.php:326
 msgid "sync"
 msgstr "همگام‌سازی"
 
@@ -10632,27 +10556,25 @@ msgstr "همگام‌سازی حساب‌کاربری"
 
 #: dash/lib/social/telegram/commands/ermile.php:424
 msgid ""
-"You can connect complete your registeration on :val from telegram by share your "
-"mobile number."
+"You can connect complete your registeration on :val from telegram by share your mobile "
+"number."
 msgstr ""
-"شما می‌توانید با به‌اشتراک‌گذاری شماره موبایل خود از طریق تلگرام ثبت‌نام خودتان را "
-"در :val کامل کنید."
+"شما می‌توانید با به‌اشتراک‌گذاری شماره موبایل خود از طریق تلگرام ثبت‌نام خودتان را در :val "
+"کامل کنید."
 
 #: dash/lib/social/telegram/commands/ermile.php:425
 msgid ""
-"By press share contact we get your mobile and after that you can use our website "
-"and your account is synced."
+"By press share contact we get your mobile and after that you can use our website and "
+"your account is synced."
 msgstr ""
-"با فشردن دکمه به‌اشتراک‌گذاری مخاطب خودتان،‌ تلگرام شماره موبایل شما را پس از کسب "
-"اجازه برای ما ارسال می‌کند و بدین ترتیب ما می‌توانیم حساب کاربری شما را همگام‌سازی "
-"کرده و اتصال آن را با وب‌سایت برقرار کنیم تا شما درآینده بتوانید با موبایل خود در ‌"
-"وب‌سایت هم وارد شوید."
+"با فشردن دکمه به‌اشتراک‌گذاری مخاطب خودتان،‌ تلگرام شماره موبایل شما را پس از کسب اجازه "
+"برای ما ارسال می‌کند و بدین ترتیب ما می‌توانیم حساب کاربری شما را همگام‌سازی کرده و اتصال "
+"آن را با وب‌سایت برقرار کنیم تا شما درآینده بتوانید با موبایل خود در ‌وب‌سایت هم وارد شوید."
 
 #: dash/lib/social/telegram/commands/ermile.php:426
 msgid "Also you can do it anytime you need with /register command."
 msgstr ""
-"هم‌چنین هر زمانی که مایل باشید می‌توانید از طریق دستور /register این کار را انجام "
-"دهید."
+"هم‌چنین هر زمانی که مایل باشید می‌توانید از طریق دستور /register این کار را انجام دهید."
 
 #: dash/lib/social/telegram/commands/ermile.php:433
 msgid "Register with mobile"
@@ -10702,8 +10624,8 @@ msgid ""
 "Knowing your valuable comments about bugs and problems and more importantly your "
 "precious offers will help us in this way."
 msgstr ""
-"دانستن نظرات ارزشمند شما درباره‌ی مشکلات و نواقص و صدالبته پیشنهادات گرانبهایتان "
-"از طریق فرم زیر سبب کمک به ما برای این مهم خواهد شد."
+"دانستن نظرات ارزشمند شما درباره‌ی مشکلات و نواقص و صدالبته پیشنهادات گرانبهایتان از طریق "
+"فرم زیر سبب کمک به ما برای این مهم خواهد شد."
 
 #: dash/lib/social/telegram/commands/step_ticketCreate.php:37
 msgid "Please wrote about your problem and describe it."
@@ -10905,8 +10827,8 @@ msgstr "گذرواژه باید کمتر از ۹۹ کاراکتر باشد"
 msgid "Not Work!"
 msgstr "کار نمیکند!"
 
-#: dash/lib/utility/git.php:139 dash/lib/utility/git.php:198
-#: dash/lib/utility/git.php:249 dash/lib/utility/git.php:299
+#: dash/lib/utility/git.php:139 dash/lib/utility/git.php:198 dash/lib/utility/git.php:249
+#: dash/lib/utility/git.php:299
 msgid "This location is not exist!"
 msgstr "این مکان وجود ندارد!"
 
@@ -10966,18 +10888,15 @@ msgid "Redirect to asanpardakht payment"
 msgstr "در حال انتقال به درگاه آسان پرداخت"
 
 #: dash/lib/utility/payment/pay/asanpardakht.php:136
-#: dash/lib/utility/payment/pay/irkish.php:125
-#: dash/lib/utility/payment/pay/mellat.php:134
+#: dash/lib/utility/payment/pay/irkish.php:125 dash/lib/utility/payment/pay/mellat.php:134
 msgid "Redirect"
 msgstr "انتقال"
 
-#: dash/lib/utility/payment/pay/irkish.php:33
-#: dash/lib/utility/payment/verify/irkish.php:30
+#: dash/lib/utility/payment/pay/irkish.php:33 dash/lib/utility/payment/verify/irkish.php:30
 msgid "The irkish payment on this service is locked"
 msgstr "پرداخت ایران کیش روی این سرویس قفل است"
 
-#: dash/lib/utility/payment/pay/irkish.php:40
-#: dash/lib/utility/payment/verify/irkish.php:37
+#: dash/lib/utility/payment/pay/irkish.php:40 dash/lib/utility/payment/verify/irkish.php:37
 msgid "The irkish payment merchantId not set"
 msgstr "کدمرچنت پرداخت ایران کیش تنظیم نشده است"
 
@@ -10989,18 +10908,15 @@ msgstr "پرداخت با روش پرداخت ایران کیش"
 msgid "Redirect to iran kish payment"
 msgstr "تغییر مسیر به روش پرداخت ایران کیش"
 
-#: dash/lib/utility/payment/pay/mellat.php:33
-#: dash/lib/utility/payment/verify/mellat.php:30
+#: dash/lib/utility/payment/pay/mellat.php:33 dash/lib/utility/payment/verify/mellat.php:30
 msgid "The mellat payment on this service is locked"
 msgstr "درگاه پرداخت ملت در این سیستم تعریف نشده است"
 
-#: dash/lib/utility/payment/pay/mellat.php:40
-#: dash/lib/utility/payment/verify/mellat.php:37
+#: dash/lib/utility/payment/pay/mellat.php:40 dash/lib/utility/payment/verify/mellat.php:37
 msgid "The mellat payment TerminalId not set"
 msgstr "شناسه ترمینال درگاه پرداخت ملت تنظیم نشده است"
 
-#: dash/lib/utility/payment/pay/mellat.php:47
-#: dash/lib/utility/payment/verify/mellat.php:44
+#: dash/lib/utility/payment/pay/mellat.php:47 dash/lib/utility/payment/verify/mellat.php:44
 msgid "The mellat payment UserName not set"
 msgstr "نام کاربری درگاه پرداخت ملت تنظیم نشده است"
 
@@ -11031,13 +10947,11 @@ msgstr "پرداخت با پارسیان"
 msgid "The parsian payment Token not set"
 msgstr "توکن برای پرداخت با پارسیان تنظیم نشده است"
 
-#: dash/lib/utility/payment/pay/payir.php:33
-#: dash/lib/utility/payment/verify/payir.php:30
+#: dash/lib/utility/payment/pay/payir.php:33 dash/lib/utility/payment/verify/payir.php:30
 msgid "The payir payment on this service is locked"
 msgstr "درگاه پی.آی‌آر در سرویس شما قفل شده است"
 
-#: dash/lib/utility/payment/pay/payir.php:40
-#: dash/lib/utility/payment/verify/payir.php:37
+#: dash/lib/utility/payment/pay/payir.php:40 dash/lib/utility/payment/verify/payir.php:37
 msgid "The payir payment api not set"
 msgstr "کلید اتصال به درگاه پرداخت یافت نشد"
 
@@ -11358,8 +11272,8 @@ msgstr "عملیات با موفقیت انجام شد"
 
 #: dash/lib/utility/payment/payment/zarinpal.php:145
 msgid ""
-"Payment operation was successfull and PatmentVerification of the transaction has "
-"already done"
+"Payment operation was successfull and PatmentVerification of the transaction has already "
+"done"
 msgstr "عملیات پرداخت با موفقیت انجام شد و تایید پرداخت تراکنش با موفقیت انجام شد"
 
 #: dash/lib/utility/payment/verify/asanpardakht.php:68
@@ -11694,11 +11608,11 @@ msgstr "همکار ما در ارمایل شوید"
 
 #: ermile/includes/languages/trans_project.php:10
 msgid ""
-"Ermile team which is made by young proficient people, pleasant environment, "
-"dynamic and energetic sincere motivate for those who are interested at co-operate."
+"Ermile team which is made by young proficient people, pleasant environment, dynamic and "
+"energetic sincere motivate for those who are interested at co-operate."
 msgstr ""
-"ارمایل با تیمی متشکل از متخصصان جوان و نخبه، با محیطی شاداب، پویا و صمیمی علاقمند "
-"به همکاری با متخصصان با ‌انگیزه است."
+"ارمایل با تیمی متشکل از متخصصان جوان و نخبه، با محیطی شاداب، پویا و صمیمی علاقمند به "
+"همکاری با متخصصان با ‌انگیزه است."
 
 #: ermile/includes/languages/trans_project.php:11
 msgid "Be a member of <strong>Ermile</strong>"
@@ -11710,8 +11624,7 @@ msgstr "مزایای <strong>ارمایل</strong>"
 
 #: ermile/includes/languages/trans_project.php:13
 msgid "Choosing the best place as a job is most important for professional people."
-msgstr ""
-"انتخاب یک گزینه مناسب برای محل کار کردن، برای افراد متخصص و دقیق بسیار مهم است."
+msgstr "انتخاب یک گزینه مناسب برای محل کار کردن، برای افراد متخصص و دقیق بسیار مهم است."
 
 #: ermile/includes/languages/trans_project.php:14
 msgid "Teamwork"
@@ -11719,10 +11632,9 @@ msgstr "کار گروهی"
 
 #: ermile/includes/languages/trans_project.php:15
 msgid ""
-"Working as a team helps in quickly improvement of work and also easily figuring "
-"out a problem."
-msgstr ""
-"گروهی کار کردن باعث سرعت گرفتن پیشرفت کارها و همچنین راحت‌تر حل شدن مشکلات می‌شود."
+"Working as a team helps in quickly improvement of work and also easily figuring out a "
+"problem."
+msgstr "گروهی کار کردن باعث سرعت گرفتن پیشرفت کارها و همچنین راحت‌تر حل شدن مشکلات می‌شود."
 
 #: ermile/includes/languages/trans_project.php:16
 msgid "Free working hours"
@@ -11730,11 +11642,11 @@ msgstr "ساعت کاری انعطاف‌پذیر"
 
 #: ermile/includes/languages/trans_project.php:17
 msgid ""
-"There is no any restriction about working hours. You can work every day for the "
-"whole week including Fridays and holidays from morning till night."
+"There is no any restriction about working hours. You can work every day for the whole "
+"week including Fridays and holidays from morning till night."
 msgstr ""
-"هیچ محدودیتی برای ساعت کاری وجود ندارد! شما می‌توانید هر روز از هر ساعتی از صبح تا "
-"شب می‌توانید کار کنید."
+"هیچ محدودیتی برای ساعت کاری وجود ندارد! شما می‌توانید هر روز از هر ساعتی از صبح تا شب "
+"می‌توانید کار کنید."
 
 #: ermile/includes/languages/trans_project.php:18
 msgid "Exciting work environment"
@@ -11745,8 +11657,8 @@ msgid ""
 "You can work with talented and friendly group of people in a cheerful and dynamic "
 "environment of Ermile"
 msgstr ""
-"محیط شاد و پویای ارمایل و همکاری با افراد شاداب باعث می‌شود شما از کار در این فضا "
-"لذت ببرید."
+"محیط شاد و پویای ارمایل و همکاری با افراد شاداب باعث می‌شود شما از کار در این فضا لذت "
+"ببرید."
 
 #: ermile/includes/languages/trans_project.php:20
 msgid "Specialist Team"
@@ -11754,20 +11666,18 @@ msgstr "تیم متخصص"
 
 #: ermile/includes/languages/trans_project.php:21
 msgid ""
-"Our experience that made of working with Specialist people cause perfect feeling "
-"in our team."
+"Our experience that made of working with Specialist people cause perfect feeling in our "
+"team."
 msgstr ""
-"کار کردن با تیم متخصص و با تجربه باعث رشد و پیشرفت سریع‌تر کارها و ایجاد حس خوب در "
-"تمام اعضا می‌شود."
+"کار کردن با تیم متخصص و با تجربه باعث رشد و پیشرفت سریع‌تر کارها و ایجاد حس خوب در تمام "
+"اعضا می‌شود."
 
 #: ermile/includes/languages/trans_project.php:22
 msgid "Lofty goals"
 msgstr "هدف های بزرگ"
 
 #: ermile/includes/languages/trans_project.php:23
-msgid ""
-"Having high and lofty goals are the main reasons for rapid progress of any "
-"company."
+msgid "Having high and lofty goals are the main reasons for rapid progress of any company."
 msgstr "داشتن هدف‌های بزرگ مهمترین عامل پیشرفت یک مجموعه است."
 
 #: ermile/includes/languages/trans_project.php:24
@@ -11776,16 +11686,14 @@ msgstr "محیط کاری سبز"
 
 #: ermile/includes/languages/trans_project.php:25
 msgid "Your working environment will have a great impact and effect on your mind."
-msgstr ""
-"محیطی که شما در آن مشغول به کار هستید تأثیر زیادی بر روحیه شما خواهد گذاشت. "
+msgstr "محیطی که شما در آن مشغول به کار هستید تأثیر زیادی بر روحیه شما خواهد گذاشت. "
 
 #: ermile/includes/languages/trans_project.php:26
 msgid ""
-"Green, beautiful and peaceful environment of Ermile makes you feel energetic, "
-"encouraged and at peace while you're at work."
+"Green, beautiful and peaceful environment of Ermile makes you feel energetic, encouraged "
+"and at peace while you're at work."
 msgstr ""
-"محیط کاری سبز و اداب و زیبای ارمایل باعث نشاط شما در هنگام حضور در محل کارتان "
-"می‌شود."
+"محیط کاری سبز و اداب و زیبای ارمایل باعث نشاط شما در هنگام حضور در محل کارتان می‌شود."
 
 #: ermile/includes/languages/trans_project.php:27
 msgid "Steps to join Ermile"
@@ -11809,66 +11717,59 @@ msgstr "قرارداد نهایی"
 
 #: ermile/includes/languages/trans_project.php:32
 msgid ""
-"Motive is the major factor for any person to be successful in work and that "
-"demands enthusiastic, keen and eager people that can help us reach our goal"
+"Motive is the major factor for any person to be successful in work and that demands "
+"enthusiastic, keen and eager people that can help us reach our goal"
 msgstr ""
-"انگیزه، محرک اصلی هر فرد برای پیش بردن کارهاست. ما نیز برای رسیدن به اهدافمان، "
-"نیاز به افراد با انگیزه داریم."
+"انگیزه، محرک اصلی هر فرد برای پیش بردن کارهاست. ما نیز برای رسیدن به اهدافمان، نیاز به "
+"افراد با انگیزه داریم."
 
 #: ermile/includes/languages/trans_project.php:33
 msgid ""
-"Lofty projects need great thoughts and these great thoughts help us to reach "
-"valuable And huge goals."
+"Lofty projects need great thoughts and these great thoughts help us to reach valuable "
+"And huge goals."
 msgstr ""
-"پروژه‌‌های بزرگ، نیازمند فکرهای بزرگ هستند و فکرهای بزرگ به اهداف بزرگ و ارزشمند "
-"می‌اندیشند."
+"پروژه‌‌های بزرگ، نیازمند فکرهای بزرگ هستند و فکرهای بزرگ به اهداف بزرگ و ارزشمند می‌اندیشند."
 
 #: ermile/includes/languages/trans_project.php:34
 msgid ""
-"And that demands enthusiastic, keen and eager people that can help us reach our "
-"goal"
+"And that demands enthusiastic, keen and eager people that can help us reach our goal"
 msgstr "ما نیز برای رسیدن به اهدافمان، نیاز به افراد با انگیزه داریم."
 
 #: ermile/includes/languages/trans_project.php:35
 msgid ""
-"We all are always trying to make Ermile’s working environment as a pleasant, "
-"energetic and successful place for our team."
+"We all are always trying to make Ermile’s working environment as a pleasant, energetic "
+"and successful place for our team."
 msgstr ""
-"همه‌ی ما همیشه سعی داریم که محیط کاری ارمایل یک محیط شاداب، پویا و بستر موفقیت "
-"اعضای تیم‌مان باشد."
+"همه‌ی ما همیشه سعی داریم که محیط کاری ارمایل یک محیط شاداب، پویا و بستر موفقیت اعضای "
+"تیم‌مان باشد."
 
 #: ermile/includes/languages/trans_project.php:36
 msgid ""
-"Working as a teamwork in Ermile helps us to acquire more power to reach our great "
-"aims."
+"Working as a teamwork in Ermile helps us to acquire more power to reach our great aims."
 msgstr "ما در ارمایل با کار گروهی به قدرت بیشتری برای رسیدن به اهداف بزرگ می‌رسیم."
 
 #: ermile/includes/languages/trans_project.php:37
 msgid ""
-"Having creative and self-starter colleagues helps us to step quickly towards our "
-"goals."
-msgstr ""
-"داشتن همکارانی خلاق و مبتکر باعث سرعت گرفتن ما برای رسیدن به اهدافمان می‌گردد."
+"Having creative and self-starter colleagues helps us to step quickly towards our goals."
+msgstr "داشتن همکارانی خلاق و مبتکر باعث سرعت گرفتن ما برای رسیدن به اهدافمان می‌گردد."
 
 #: ermile/includes/languages/trans_project.php:38
 msgid "Be a coworker who is ingenious cause us to do our project fast."
-msgstr ""
-"داشتن همکارانی خلاق و مبتکر باعث سرعت گرفتن ما برای رسیدن به اهدافمان می‌گردد."
+msgstr "داشتن همکارانی خلاق و مبتکر باعث سرعت گرفتن ما برای رسیدن به اهدافمان می‌گردد."
 
 #: ermile/includes/languages/trans_project.php:39
 msgid ""
-"Age does not matter for us. Having the above qualities are enough to be a member "
-"of Email."
+"Age does not matter for us. Having the above qualities are enough to be a member of "
+"Email."
 msgstr ""
-"سن کارمندان برای ما اهمیتی ندارد. داشتن ویژگی‌های فوق برای اضافه شدن به جمع ارمایل "
-"کافی است."
+"سن کارمندان برای ما اهمیتی ندارد. داشتن ویژگی‌های فوق برای اضافه شدن به جمع ارمایل کافی "
+"است."
 
 #: ermile/includes/languages/trans_project.php:40
 msgid ""
-"Academic certificates are not important for us. Having a good and well knowledge "
-"about the related subject is enough for us."
-msgstr ""
-"مدرک تحصیلی برای ما مهم نیست داشتن تخصص و دانش در موضوع مربوطه برای ما کافی است."
+"Academic certificates are not important for us. Having a good and well knowledge about "
+"the related subject is enough for us."
+msgstr "مدرک تحصیلی برای ما مهم نیست داشتن تخصص و دانش در موضوع مربوطه برای ما کافی است."
 
 #: ermile/includes/languages/trans_project.php:41
 msgid "Job opportunity in Ermile"
@@ -11972,22 +11873,19 @@ msgstr "لینک شبکه‌های اجتماعی خود، خصوصا لینکد
 
 #: ermile/includes/languages/trans_project.php:66
 msgid ""
-"It’s better if your CV is in one page and be sure it should not be more than 3 "
-"pages."
+"It’s better if your CV is in one page and be sure it should not be more than 3 pages."
 msgstr "بهتر است رزومه در یک صفحه تنظیم شود و در نهایت بیشتر از سه صفحه نشود!"
 
 #: ermile/includes/languages/trans_project.php:67
 msgid ""
-"Writing about your experience and your skills in your CV helps us to check your "
-"CV properly and hastily."
+"Writing about your experience and your skills in your CV helps us to check your CV "
+"properly and hastily."
 msgstr ""
-"نوشتن سوابق‌کاری و مهارت‌هایتان در رزومه، به ما در بررسی بهتر و سریع‌تر رزومه شما "
-"کمک می‌کند!"
+"نوشتن سوابق‌کاری و مهارت‌هایتان در رزومه، به ما در بررسی بهتر و سریع‌تر رزومه شما کمک می‌کند!"
 
 #: ermile/includes/languages/trans_project.php:68
 msgid ""
-"If you have any work experience, kindly provide complete information about it in "
-"your CV."
+"If you have any work experience, kindly provide complete information about it in your CV."
 msgstr "در صورت داشتن سابقه‌کار، آدرس یا نمونه‌ای از آن را در رزومه ذکر کنید!"
 
 #: ermile/includes/languages/trans_project.php:69
@@ -12016,13 +11914,11 @@ msgstr "ارسال اطلاعات"
 
 #: ermile/includes/languages/trans_project.php:87
 msgid ""
-"We do our best to improve our quality. So, knowing your valuable comments about "
-"bugs and problems and more importantly your precious offers will help us in this "
-"way."
+"We do our best to improve our quality. So, knowing your valuable comments about bugs and "
+"problems and more importantly your precious offers will help us in this way."
 msgstr ""
-"تمام تلاش ما بر افزایش کیفیت است. دانستن نظرات ارزشمند شما درباره‌ی مشکلات و نواقص "
-"و صدالبته پیشنهادات گرانبهایتان از طریق فرم زیر سبب کمک به ما برای این مهم خواهد "
-"شد."
+"تمام تلاش ما بر افزایش کیفیت است. دانستن نظرات ارزشمند شما درباره‌ی مشکلات و نواقص و "
+"صدالبته پیشنهادات گرانبهایتان از طریق فرم زیر سبب کمک به ما برای این مهم خواهد شد."
 
 #: ermile/includes/languages/trans_project.php:94
 msgid "How to contact us"
@@ -12042,8 +11938,7 @@ msgstr "این شعار ما در ارمایل است."
 
 #: ermile/includes/languages/trans_project.php:103
 msgid "We belive that we can do anywork, without complexity, as soon as posible."
-msgstr ""
-"معتقدیم، ما می‌توانیم هرکاری را انجام دهیم، بدون پیچیدگی و در کوتاه‌ترین زمان ممکن."
+msgstr "معتقدیم، ما می‌توانیم هرکاری را انجام دهیم، بدون پیچیدگی و در کوتاه‌ترین زمان ممکن."
 
 #: ermile/includes/languages/trans_project.php:104
 msgid "Be easy and relax, we are do all works needed."
@@ -12059,12 +11954,12 @@ msgstr "از هرکسی در هرجایی بپرسید"
 
 #: ermile/includes/languages/trans_project.php:108
 msgid ""
-"Focus on your question. Do not be too concerned about how to ask or analyze. "
-"Equipped with an integrated platform, Sarshomar has made it possible for you to "
-"ask your questions via any means."
+"Focus on your question. Do not be too concerned about how to ask or analyze. Equipped "
+"with an integrated platform, Sarshomar has made it possible for you to ask your "
+"questions via any means."
 msgstr ""
-"روی سوال خود تمرکز کنید؛ دغدغه چطور پرسیدن و تحلیل کردن نداشته باشید. سرشمار با "
-"زیرساختی یکپارچه، امکان پرسیدن با هر ابزاری را برای شما فراهم کرده است."
+"روی سوال خود تمرکز کنید؛ دغدغه چطور پرسیدن و تحلیل کردن نداشته باشید. سرشمار با زیرساختی "
+"یکپارچه، امکان پرسیدن با هر ابزاری را برای شما فراهم کرده است."
 
 #: ermile/includes/languages/trans_project.php:109
 msgid "Tejarak"
@@ -12076,11 +11971,11 @@ msgstr "به‌سادگی حضور و غیاب کنید و از گزارش‌ه�
 
 #: ermile/includes/languages/trans_project.php:111
 msgid ""
-"Setup your dedicated and beautiful attendance system in less than a minute and "
-"have a real time and scrupulously monitoring on your business from anywhere."
+"Setup your dedicated and beautiful attendance system in less than a minute and have a "
+"real time and scrupulously monitoring on your business from anywhere."
 msgstr ""
-"سامانه‌ی حضور و غیاب اختصاصی و چشم‌نواز خودتان را در چند دقیقه راه‌اندازی کرده و از "
-"هرجایی بر کسب و کارتان نظارت <span>لحظه‌ای</span> و موشکافانه داشته باشید."
+"سامانه‌ی حضور و غیاب اختصاصی و چشم‌نواز خودتان را در چند دقیقه راه‌اندازی کرده و از هرجایی "
+"بر کسب و کارتان نظارت <span>لحظه‌ای</span> و موشکافانه داشته باشید."
 
 #: ermile/includes/languages/trans_project.php:113
 msgid "Pioneer Schools Selection"
@@ -12088,11 +11983,11 @@ msgstr "انتخاب مدارس پیشگام"
 
 #: ermile/includes/languages/trans_project.php:114
 msgid ""
-"Azvir provides complete and beautiful solutions for your school; Do all things "
-"easily and enjoy."
+"Azvir provides complete and beautiful solutions for your school; Do all things easily "
+"and enjoy."
 msgstr ""
-"ازویر، راه‌حلی کامل و زیبا را برای مدرسه ارائه می‌دهد؛ همه‌‌ی کارها را به‌سادگی انجام "
-"دهید و لذت ببرید."
+"ازویر، راه‌حلی کامل و زیبا را برای مدرسه ارائه می‌دهد؛ همه‌‌ی کارها را به‌سادگی انجام دهید و "
+"لذت ببرید."
 
 #: ermile/includes/languages/trans_project.php:115
 msgid "What are you waiting for?"
@@ -12103,8 +11998,7 @@ msgid "Not sure how to start?"
 msgstr "مطمئن نیستید چطور شروع کنید؟"
 
 #: ermile/includes/languages/trans_project.php:117
-msgid ""
-"Tejarak is <span>free</span> to use as long as you want for teams of all sizes."
+msgid "Tejarak is <span>free</span> to use as long as you want for teams of all sizes."
 msgstr ""
 "استفاده از تجارک برای هر مدتی که بخواهید و برای تیم‌های با هر تعداد عضوی که دارید "
 "<span>رایگان</span> است."
@@ -12150,8 +12044,8 @@ msgid ""
 "Our enterprise solution brings the power and utility of Ermile to large, complex "
 "organizations."
 msgstr ""
-"راه‌کارهای سازمانی ما قدرت و امکانات ارمایل را برای پروژه‌های بزرگ و پیچیده شما به "
-"ارمغان می‌آورد."
+"راه‌کارهای سازمانی ما قدرت و امکانات ارمایل را برای پروژه‌های بزرگ و پیچیده شما به ارمغان "
+"می‌آورد."
 
 #: ermile/includes/languages/trans_project.php:130
 msgid "Next →"
@@ -12231,19 +12125,19 @@ msgstr "سردرد دارید؟ ما راه‌حل‌هایی برای شما د
 
 #: ermile/includes/languages/trans_project.php:163
 msgid ""
-"Big companies simply don’t work like small companies, and they don’t use Tejarak "
-"the same way either. That’s why there’s Enterprise."
+"Big companies simply don’t work like small companies, and they don’t use Tejarak the "
+"same way either. That’s why there’s Enterprise."
 msgstr ""
 "شرکت‌های بزرگ به آسانی شرکت‌های کوچک کار نمی‌کنند و از تجارک نیز به همان شکل استفاده "
 "نمی‌کنند. این دلیل راه‌اندازی بخش سازمانی ماست."
 
 #: ermile/includes/languages/trans_project.php:166
 msgid ""
-"We wish to assure you that our main concern is to secure your privacy and protect "
-"your information against impermissible access."
+"We wish to assure you that our main concern is to secure your privacy and protect your "
+"information against impermissible access."
 msgstr ""
-"ما این اطمینان را به شما می‌دهیم که دغدغه‌ی ما، حفظ حریم‌خصوصی و محافظت از اطلاعات "
-"شما در برابر دسترسی‌های غیرمجاز هست."
+"ما این اطمینان را به شما می‌دهیم که دغدغه‌ی ما، حفظ حریم‌خصوصی و محافظت از اطلاعات شما در "
+"برابر دسترسی‌های غیرمجاز هست."
 
 #: ermile/includes/languages/trans_project.php:167
 msgid "What is Privacy?"
@@ -12251,19 +12145,19 @@ msgstr "حریم‌خصوصی چیست؟"
 
 #: ermile/includes/languages/trans_project.php:168
 msgid ""
-"Privacy means that any individual is entitled to choose the information related "
-"to them, and selectively, share it with others."
+"Privacy means that any individual is entitled to choose the information related to them, "
+"and selectively, share it with others."
 msgstr ""
-"حریم‌خصوصی یعنی شخص بتواند اطلاعات مربوط به خود را مجزا کرده و به انتخاب خویش، در "
-"برابر دیگران آشکار کند."
+"حریم‌خصوصی یعنی شخص بتواند اطلاعات مربوط به خود را مجزا کرده و به انتخاب خویش، در برابر "
+"دیگران آشکار کند."
 
 #: ermile/includes/languages/trans_project.php:169
 msgid ""
-"privacy is so important for mental peace as well as a peaceful personality that "
-"some experts have considered invasion of privacy disrespectful to human dignity."
+"privacy is so important for mental peace as well as a peaceful personality that some "
+"experts have considered invasion of privacy disrespectful to human dignity."
 msgstr ""
-"حریم‌خصوصی برای آرامش روانی و شخصیتی، بسیار مهم است تا جایی‌که بعضی از صاحب‌نظران "
-"نقض آن را به عنوان یک اقدام توهین‌آمیز نسبت به شرافت بشری قلمداد کرده‌اند."
+"حریم‌خصوصی برای آرامش روانی و شخصیتی، بسیار مهم است تا جایی‌که بعضی از صاحب‌نظران نقض آن را "
+"به عنوان یک اقدام توهین‌آمیز نسبت به شرافت بشری قلمداد کرده‌اند."
 
 #: ermile/includes/languages/trans_project.php:170
 msgid "Controversies over the Invasion of Privacy"
@@ -12271,28 +12165,27 @@ msgstr "جنجال‌های نقض حریم‌خصوصی"
 
 #: ermile/includes/languages/trans_project.php:171
 msgid ""
-"Within e-commerce, privacy has always been from among the most controversial "
-"topics and continues to be."
-msgstr ""
-"حریم‌خصوصی در کسب‌و‌کارهای الکترونیکی همیشه یکی از بحث‌برانگیزترین موضوعات بوده و هست؛"
+"Within e-commerce, privacy has always been from among the most controversial topics and "
+"continues to be."
+msgstr "حریم‌خصوصی در کسب‌و‌کارهای الکترونیکی همیشه یکی از بحث‌برانگیزترین موضوعات بوده و هست؛"
 
 #: ermile/includes/languages/trans_project.php:172
 msgid ""
-"Accordingly, formulating privacy policies is regarded as one of the crucial "
-"concerns of technology companies."
+"Accordingly, formulating privacy policies is regarded as one of the crucial concerns of "
+"technology companies."
 msgstr ""
-"به همین دلیل، تعیین سیاست‌های حریم‌خصوصی جزء دغدغه‌های بسیار مهم شرکت‌های فناورانه "
-"محسوب می‌شود."
+"به همین دلیل، تعیین سیاست‌های حریم‌خصوصی جزء دغدغه‌های بسیار مهم شرکت‌های فناورانه محسوب "
+"می‌شود."
 
 #: ermile/includes/languages/trans_project.php:173
 msgid ""
-"Meanwhile, widespread controversies have been provoked over invasion of privacy "
-"in e-commerce so that, occasionally, the regulations have to be revised to "
-"eliminate the existing weaknesses."
+"Meanwhile, widespread controversies have been provoked over invasion of privacy in e-"
+"commerce so that, occasionally, the regulations have to be revised to eliminate the "
+"existing weaknesses."
 msgstr ""
-"در این میان جنجال‌هایی گسترده به‌خاطر نقض حریم‌خصوصی از کسب‌وکارهای الکترونیکی صورت "
-"گرفته است؛ به‌گونه‌ای که هرچند وقت یک‌بار مجبور هستند قوانین را بازبینی نموده تا "
-"حفره‌های موجود را رفع نمایند."
+"در این میان جنجال‌هایی گسترده به‌خاطر نقض حریم‌خصوصی از کسب‌وکارهای الکترونیکی صورت گرفته "
+"است؛ به‌گونه‌ای که هرچند وقت یک‌بار مجبور هستند قوانین را بازبینی نموده تا حفره‌های موجود را "
+"رفع نمایند."
 
 #: ermile/includes/languages/trans_project.php:174
 msgid "Privacy from Our Point of View"
@@ -12300,75 +12193,72 @@ msgstr "حریم‌خصوصی از دیدگاه ما"
 
 #: ermile/includes/languages/trans_project.php:175
 msgid ""
-"Let us be straightforward! Cyberspace is not a safe location for personal "
-"information."
+"Let us be straightforward! Cyberspace is not a safe location for personal information."
 msgstr "رو راست باشیم، فضای مجازی محل امنی برای اطلاعات خصوصی نیست."
 
 #: ermile/includes/languages/trans_project.php:176
 msgid ""
-"For that reason, Ermile makes no request for important information of yours and "
-"allow to save some general information including age, gender, education, "
-"interests, etc  is only for private use of your team or company."
+"For that reason, Ermile makes no request for important information of yours and allow to "
+"save some general information including age, gender, education, interests, etc  is only "
+"for private use of your team or company."
 msgstr ""
-"به همین دلیل ارمایل بدون درخواست اطلاعات مهم شما را می سازد و اجازه می دهد برای "
-"نجات برخی از اطلاعات کلی از جمله سن، جنس، آموزش، منافع و غيره است تنها برای "
-"استفاده خصوصی از تیم و یا شرکت خود را."
+"به همین دلیل ارمایل بدون درخواست اطلاعات مهم شما را می سازد و اجازه می دهد برای نجات "
+"برخی از اطلاعات کلی از جمله سن، جنس، آموزش، منافع و غيره است تنها برای استفاده خصوصی از "
+"تیم و یا شرکت خود را."
 
 #: ermile/includes/languages/trans_project.php:177
 msgid ""
-"It is worth mentioning that recording the aforementioned points is totally "
-"voluntary."
+"It is worth mentioning that recording the aforementioned points is totally voluntary."
 msgstr "لازم به توضیح است که ثبت موارد ذکرشده نیز به‌صورت کاملا اختیاری است."
 
 #: ermile/includes/languages/trans_project.php:178
 msgid ""
-"However, taking the nature of cyberspace into account, we should remember that "
-"offering an absolute assurance might not be possible."
+"However, taking the nature of cyberspace into account, we should remember that offering "
+"an absolute assurance might not be possible."
 msgstr ""
-"این را در نظر داشته باشید که با توجه به ماهیت فضای مجازی، ارائه تضمین صددرصدی "
-"به‌طور کل ممکن نیست."
+"این را در نظر داشته باشید که با توجه به ماهیت فضای مجازی، ارائه تضمین صددرصدی به‌طور کل "
+"ممکن نیست."
 
 #: ermile/includes/languages/trans_project.php:179
 msgid ""
-"Assuring privacy and security, with that ideal concept we bear in mind, does not "
-"exist; and if somebody gives you an assurance of securing your privacy, he has "
-"certainly abused your trust."
+"Assuring privacy and security, with that ideal concept we bear in mind, does not exist; "
+"and if somebody gives you an assurance of securing your privacy, he has certainly abused "
+"your trust."
 msgstr ""
-"تضمین امنیت و حریم خصوصی به آن معنای آرمانی که ما در ذهن خود داریم وجود ندارد، و "
-"اگر کسی در دنیای مجازی، تضمین امنیت حریم‌خصوصی شما را بدهد قطعا از اعتماد شما "
-"سوءاستفاده کرده است."
+"تضمین امنیت و حریم خصوصی به آن معنای آرمانی که ما در ذهن خود داریم وجود ندارد، و اگر کسی "
+"در دنیای مجازی، تضمین امنیت حریم‌خصوصی شما را بدهد قطعا از اعتماد شما سوءاستفاده کرده است."
 
 #: ermile/includes/languages/trans_project.php:180
 msgid ""
-"Upon buying any digital or the so-called smart device, you have invaded your own "
-"privacy yourself."
+"Upon buying any digital or the so-called smart device, you have invaded your own privacy "
+"yourself."
 msgstr ""
-"شما با خرید هر دستگاه دیجیتالی یا به اصطلاح هوشمند، با دست خود حریم‌خصوصی‌تان را "
-"نقض کرده‌اید."
+"شما با خرید هر دستگاه دیجیتالی یا به اصطلاح هوشمند، با دست خود حریم‌خصوصی‌تان را نقض "
+"کرده‌اید."
 
 #: ermile/includes/languages/trans_project.php:181
 msgid ""
-"If you want your privacy not to be invaded, you should depart from technology and "
-"say goodbye to any digital and smart device."
+"If you want your privacy not to be invaded, you should depart from technology and say "
+"goodbye to any digital and smart device."
 msgstr ""
-"اگر می‌خواهید این حریم‌خصوصی نقض نشود باید به‌طور کل از دنیای تکنولوژی فاصله بگیرید "
-"و با هر دستگاه دیجیتالی و هوشمندی خداحافظی کنید."
+"اگر می‌خواهید این حریم‌خصوصی نقض نشود باید به‌طور کل از دنیای تکنولوژی فاصله بگیرید و با هر "
+"دستگاه دیجیتالی و هوشمندی خداحافظی کنید."
 
 #: ermile/includes/languages/trans_project.php:182
 msgid ""
-"In fact, we have employed all updated technologies of the world to provide you "
-"with the maximum security."
+"In fact, we have employed all updated technologies of the world to provide you with the "
+"maximum security."
 msgstr ""
-"ما به‌لحاظ فنی تمام تکنولوژی‌های روز دنیا را به‌کار برده‌ایم تا امنیت حداکثری را برای "
-"شما به ارمغان بیاوریم."
+"ما به‌لحاظ فنی تمام تکنولوژی‌های روز دنیا را به‌کار برده‌ایم تا امنیت حداکثری را برای شما به "
+"ارمغان بیاوریم."
 
 #: ermile/includes/languages/trans_project.php:183
 msgid ""
-"As the final remark, we wish to assure you that our main concern is to secure "
-"your privacy and protect your information against impermissible access."
+"As the final remark, we wish to assure you that our main concern is to secure your "
+"privacy and protect your information against impermissible access."
 msgstr ""
-"در پایان، این اطمینان را به شما می‌دهیم که دغدغه‌ی ما، حفظ حریم‌خصوصی و محافظت از "
-"اطلاعات شما در برابر دسترسی‌های غیرمجاز هست."
+"در پایان، این اطمینان را به شما می‌دهیم که دغدغه‌ی ما، حفظ حریم‌خصوصی و محافظت از اطلاعات "
+"شما در برابر دسترسی‌های غیرمجاز هست."
 
 #: ermile/includes/languages/trans_project.php:186
 msgid "Ermile Social Responsibility"
@@ -12376,30 +12266,29 @@ msgstr "مسئولیت اجتماعی ارمایل"
 
 #: ermile/includes/languages/trans_project.php:187
 msgid ""
-"Social responsibility refers to our role in maintaining, caring about and helping "
-"our society, while having set as its goal a responsibility-centered enterprise "
-"along with wealth production."
+"Social responsibility refers to our role in maintaining, caring about and helping our "
+"society, while having set as its goal a responsibility-centered enterprise along with "
+"wealth production."
 msgstr ""
-"مسئولیت اجتماعی به نقش ما در جهت حفظ، مراقبت و کمک به جامعه‌ای که در آن هستیم "
-"اشاره می‌کند و هدف آن کسب‌وکار مسئولانه‌ی همراه با تولید ثروت است."
+"مسئولیت اجتماعی به نقش ما در جهت حفظ، مراقبت و کمک به جامعه‌ای که در آن هستیم اشاره می‌کند "
+"و هدف آن کسب‌وکار مسئولانه‌ی همراه با تولید ثروت است."
 
 #: ermile/includes/languages/trans_project.php:188
 msgid ""
-"The issue of the social responsibility of organizations and corporations towards "
-"the society is from among the important issues being focused on in recent years."
+"The issue of the social responsibility of organizations and corporations towards the "
+"society is from among the important issues being focused on in recent years."
 msgstr ""
-"موضوع مسئولیت اجتماعی سازمان‌ها و شرکت‌ها نسبت به جامعه از جمله موضوعات مهمی است که "
-"در سال‌های اخیر مورد اهمیت قرار گرفته است."
+"موضوع مسئولیت اجتماعی سازمان‌ها و شرکت‌ها نسبت به جامعه از جمله موضوعات مهمی است که در "
+"سال‌های اخیر مورد اهمیت قرار گرفته است."
 
 #: ermile/includes/languages/trans_project.php:189
 msgid ""
-"The social responsibility of organizations relates to the organization's "
-"responsibility towards society, human beings and the environment in which they "
-"are active."
+"The social responsibility of organizations relates to the organization's responsibility "
+"towards society, human beings and the environment in which they are active."
 msgstr ""
-"مسئولیت اجتماعی سازمان‌ها مرتبط با مسئولیت سازمان در برابر جامعه، انسان‌ها و محیطی "
-"است که در آن فعالیت می‌کند. این مسئولیت فراتر از قوانین مرسوم و منافع مالی سازمان "
-"بوده و پیشرفت منافع اجتماعی را دنبال می‌کند."
+"مسئولیت اجتماعی سازمان‌ها مرتبط با مسئولیت سازمان در برابر جامعه، انسان‌ها و محیطی است که "
+"در آن فعالیت می‌کند. این مسئولیت فراتر از قوانین مرسوم و منافع مالی سازمان بوده و پیشرفت "
+"منافع اجتماعی را دنبال می‌کند."
 
 #: ermile/includes/languages/trans_project.php:190
 msgid "Ermile's Social Responsibilities"
@@ -12407,15 +12296,14 @@ msgstr "مسئولیت‌های اجتماعی ارمایل"
 
 #: ermile/includes/languages/trans_project.php:191
 msgid ""
-"Based on the mentioned definitions of social responsibility, Ermile considers "
-"itself committed to society. Accordingly, besides attempting to offer creative "
-"and effective services, Ermile has invariably had social responsibility as one of "
-"its most important missions and, God willing, will continue to do so."
+"Based on the mentioned definitions of social responsibility, Ermile considers itself "
+"committed to society. Accordingly, besides attempting to offer creative and effective "
+"services, Ermile has invariably had social responsibility as one of its most important "
+"missions and, God willing, will continue to do so."
 msgstr ""
-"براساس تعاریف یاد شده مسئولیت اجتماعی ارمایل  خود را متعهد به جامعه می‌داند. بر "
-"این اساس، علاوه بر اقدام به ارائه خدمات موثر و خلاق ارمایل همواره از مسئولیت‌های "
-"اجتماعی به عنوان یکی از مهم ترین ماموریت و آن، خواست خدا را داشته است، به کار خود "
-"ادامه خواهد داد."
+"براساس تعاریف یاد شده مسئولیت اجتماعی ارمایل  خود را متعهد به جامعه می‌داند. بر این اساس، "
+"علاوه بر اقدام به ارائه خدمات موثر و خلاق ارمایل همواره از مسئولیت‌های اجتماعی به عنوان "
+"یکی از مهم ترین ماموریت و آن، خواست خدا را داشته است، به کار خود ادامه خواهد داد."
 
 #: ermile/includes/languages/trans_project.php:192
 msgid "Environmentalist"
@@ -12423,24 +12311,22 @@ msgstr "دوست‌دار محیط‌زیست"
 
 #: ermile/includes/languages/trans_project.php:193
 msgid ""
-"In spite of technological advancements, paper usage is unfortunately preferred to "
-"modern ways. One of Ermile's objectives is trying to change this habit and "
-"contribute to the elimination of paper from the routine life and, therefore, to "
-"save the environment."
+"In spite of technological advancements, paper usage is unfortunately preferred to modern "
+"ways. One of Ermile's objectives is trying to change this habit and contribute to the "
+"elimination of paper from the routine life and, therefore, to save the environment."
 msgstr ""
-"با وجود پیشرفت های تکنولوژیکی استفاده کاغذ متاسفانه مورد نظر به روش مدرن است. یکی "
-"از اهداف ارمایل است تلاش برای تغییر این عادت و کمک به حذف کاغذ از زندگی معمول و "
-"بنابراین، به نجات محیط زیست."
+"با وجود پیشرفت های تکنولوژیکی استفاده کاغذ متاسفانه مورد نظر به روش مدرن است. یکی از "
+"اهداف ارمایل است تلاش برای تغییر این عادت و کمک به حذف کاغذ از زندگی معمول و بنابراین، "
+"به نجات محیط زیست."
 
 #: ermile/includes/languages/trans_project.php:194
 msgid ""
 "Accordingly, with the aim of total elimination of paper use as well as electronic "
-"presentation of services, Ermile has taken significant steps towards "
-"environmentalism. Be informed about Ermile's paper-saving quantity."
+"presentation of services, Ermile has taken significant steps towards environmentalism. "
+"Be informed about Ermile's paper-saving quantity."
 msgstr ""
-"ارمایل با حذف صددرصدی استفاده از کاغذ و ارائه خدمات به صورت الکترونیکی توانسته "
-"اقدامی مهم در زمینه حفظ محیط‌زیست داشته باشد. از میزان صرفه‌جویی ارمایل در مصرف "
-"کاغذ آگاه شوید."
+"ارمایل با حذف صددرصدی استفاده از کاغذ و ارائه خدمات به صورت الکترونیکی توانسته اقدامی "
+"مهم در زمینه حفظ محیط‌زیست داشته باشد. از میزان صرفه‌جویی ارمایل در مصرف کاغذ آگاه شوید."
 
 #: ermile/includes/languages/trans_project.php:195
 msgid "Philanthropist Activities"
@@ -12448,24 +12334,22 @@ msgstr "فعالیت‌های خیرخواهانه"
 
 #: ermile/includes/languages/trans_project.php:196
 msgid ""
-"One of the most valuable resources of charity organizations is the voluntary and "
-"active participation of the individuals who, without any expectations, provide "
-"them with their skillfulness and capital."
+"One of the most valuable resources of charity organizations is the voluntary and active "
+"participation of the individuals who, without any expectations, provide them with their "
+"skillfulness and capital."
 msgstr ""
-"یکی از ارزشمندترین سرمایه‌‌ی سازمان‌های خیریه، فعالیت و مشارکت داوطلبانه افرادی است "
-"که مهارت و سرمایه خود را بدون هیچ چشم‌داشتی در اختیار آن‌ها قرار می‌دهند."
+"یکی از ارزشمندترین سرمایه‌‌ی سازمان‌های خیریه، فعالیت و مشارکت داوطلبانه افرادی است که "
+"مهارت و سرمایه خود را بدون هیچ چشم‌داشتی در اختیار آن‌ها قرار می‌دهند."
 
 #: ermile/includes/languages/trans_project.php:197
 msgid ""
-"Ermile as well, with regard to its contribution to philanthropist activities, "
-"will honorably provide them with its services free of charge. To make use of "
-"these services, send your identity documents along with your request to Ermile's "
-"support center."
+"Ermile as well, with regard to its contribution to philanthropist activities, will "
+"honorably provide them with its services free of charge. To make use of these services, "
+"send your identity documents along with your request to Ermile's support center."
 msgstr ""
-"ارمایل نیز با توجه به ماموریت خود در راستای کمک به فعالیت‌های خیرخواهانه، خدمات "
-"خود را با افتخار و به‌صورت رایگان دراختیار آنان قرار می‌دهد. برای استفاده از این "
-"خدمات، درخواست خود را همراه با مدارک احراز هویت به مرکز پشتیبانی ارمایل ارسال "
-"نمایید."
+"ارمایل نیز با توجه به ماموریت خود در راستای کمک به فعالیت‌های خیرخواهانه، خدمات خود را با "
+"افتخار و به‌صورت رایگان دراختیار آنان قرار می‌دهد. برای استفاده از این خدمات، درخواست خود "
+"را همراه با مدارک احراز هویت به مرکز پشتیبانی ارمایل ارسال نمایید."
 
 #: ermile/includes/languages/trans_project.php:198
 msgid "Recruiting Motivated Staff"
@@ -12476,16 +12360,16 @@ msgid ""
 "An outstanding characteristic of any organization is its specialized and highly "
 "motivated staff, playing a vital role in growth and development."
 msgstr ""
-"ویژگی چشم‌گیر و بارز هر سازمانی وجود نیروی‌ انسانی باانگیزه و متخصص است که نقشی "
-"بنیادین در رشد و توسعه دارند."
+"ویژگی چشم‌گیر و بارز هر سازمانی وجود نیروی‌ انسانی باانگیزه و متخصص است که نقشی بنیادین در "
+"رشد و توسعه دارند."
 
 #: ermile/includes/languages/trans_project.php:200
 msgid ""
-"By the same token, we are always looking for creative and motivated Iranian "
-"youths in order to make the best and be effective in cooperation with them."
+"By the same token, we are always looking for creative and motivated Iranian youths in "
+"order to make the best and be effective in cooperation with them."
 msgstr ""
-"ما هم در این راستا و برای خدمت به سرزمین‌مان، به دنبال جوانان ایرانی خلاق و "
-"باانگیزه هستیم تا با کمک هم برترین‌ها را بسازیم و اثرگذار باشیم."
+"ما هم در این راستا و برای خدمت به سرزمین‌مان، به دنبال جوانان ایرانی خلاق و باانگیزه "
+"هستیم تا با کمک هم برترین‌ها را بسازیم و اثرگذار باشیم."
 
 #: ermile/includes/languages/trans_project.php:201
 msgid "Join us and grow in a different location."
@@ -12497,21 +12381,20 @@ msgstr "مشتری‌مداری و کسب رضایت کامل"
 
 #: ermile/includes/languages/trans_project.php:203
 msgid ""
-"Attracting people's participation as well as having their valuable presence has "
-"always been a great honor for Ermile and to appreciate your support, in return, "
-"Ermile presents services to promote customer satisfaction."
+"Attracting people's participation as well as having their valuable presence has always "
+"been a great honor for Ermile and to appreciate your support, in return, Ermile presents "
+"services to promote customer satisfaction."
 msgstr ""
-"جلب مشارکت مردم و حضور ارزشمند آنان در تجارک باعث افتخار ما بوده و به‌منظور "
-"قدردانی از این حمایت، ارمایل نیز خدمات متقابلی را برای افزایش رضایت مشتریان خود "
-"ارائه می‌کند."
+"جلب مشارکت مردم و حضور ارزشمند آنان در تجارک باعث افتخار ما بوده و به‌منظور قدردانی از "
+"این حمایت، ارمایل نیز خدمات متقابلی را برای افزایش رضایت مشتریان خود ارائه می‌کند."
 
 #: ermile/includes/languages/trans_project.php:204
 msgid ""
-"These services are presented in different time intervals and are aimed at "
-"costomer care mission and appreciation of your valuable presence."
+"These services are presented in different time intervals and are aimed at costomer care "
+"mission and appreciation of your valuable presence."
 msgstr ""
-"این خدمات در بازه‌های زمانی متفاوت ارائه‌شده و در راستای ماموریت مشتری‌مداری و ارج "
-"نهادن به این حضور گرانبها می‌باشد."
+"این خدمات در بازه‌های زمانی متفاوت ارائه‌شده و در راستای ماموریت مشتری‌مداری و ارج نهادن به "
+"این حضور گرانبها می‌باشد."
 
 #: ermile/includes/languages/trans_project.php:207
 msgid "Terms of Service Agreement"
@@ -12519,130 +12402,126 @@ msgstr "توافق‌نامه استفاده از سرویس"
 
 #: ermile/includes/languages/trans_project.php:208
 msgid ""
-"Tejarak acts upon international rules, depends on the countries receiving its "
-"services and renders its activities within this framework."
+"Tejarak acts upon international rules, depends on the countries receiving its services "
+"and renders its activities within this framework."
 msgstr ""
-"تجارک مطابق قوانین بین‌الملل و وابسته به کشورهای دریافت‌کننده خدمات بوده و در این "
-"چارچوب فعالیت می‌نماید."
+"تجارک مطابق قوانین بین‌الملل و وابسته به کشورهای دریافت‌کننده خدمات بوده و در این چارچوب "
+"فعالیت می‌نماید."
 
 #: ermile/includes/languages/trans_project.php:209
 msgid ""
-"Utilizing Tejarak's services means the acceptance of and commitment to observing "
-"all the tenors of this agreement."
+"Utilizing Tejarak's services means the acceptance of and commitment to observing all the "
+"tenors of this agreement."
 msgstr ""
-"استفاده از خدمات تجارک به منزله‌ پذیرش و تعهد به رعایت تمام مفاد مندرج در این "
-"توافق‌نامه است."
+"استفاده از خدمات تجارک به منزله‌ پذیرش و تعهد به رعایت تمام مفاد مندرج در این توافق‌نامه "
+"است."
 
 #: ermile/includes/languages/trans_project.php:210
 msgid ""
-"It is worth mentioning that due to the insecurity of cyberspace, you should never "
-"post your vital information on either Tejarak or any other services!"
+"It is worth mentioning that due to the insecurity of cyberspace, you should never post "
+"your vital information on either Tejarak or any other services!"
 msgstr ""
-"لازم به یادآوری‌ست که با توجه به ناامن بودن فضای ‌مجازی، نه تنها در تجارک بلکه در "
-"هیچ سرویس دیگری، اطلاعات حیاتی خود را منتشر نکنید!"
+"لازم به یادآوری‌ست که با توجه به ناامن بودن فضای ‌مجازی، نه تنها در تجارک بلکه در هیچ "
+"سرویس دیگری، اطلاعات حیاتی خود را منتشر نکنید!"
 
 #: ermile/includes/languages/trans_project.php:211
 msgid ""
-"User's personal information is strictly confidential in our service. Tejarak "
-"preserves the information as encoded and will not under any conditions transfer "
-"it to another person."
+"User's personal information is strictly confidential in our service. Tejarak preserves "
+"the information as encoded and will not under any conditions transfer it to another "
+"person."
 msgstr ""
-"اطلاعات شخصی کاربران در این سرویس به‌صورت کاملا محرمانه می‌باشد و تجارک این اطلاعات "
-"را به صورت کدشده نگه‌داری کرده و تحت هیچ شرایطی آن‌را به غیر واگذار نخواهد کرد."
+"اطلاعات شخصی کاربران در این سرویس به‌صورت کاملا محرمانه می‌باشد و تجارک این اطلاعات را به "
+"صورت کدشده نگه‌داری کرده و تحت هیچ شرایطی آن‌را به غیر واگذار نخواهد کرد."
 
 #: ermile/includes/languages/trans_project.php:212
 msgid ""
 "In case there is a request for receiving user's information by the competent "
-"authorities, according to the country the user lives in, Tejarak will cooperate "
-"with them only upon receiving the judicial order issued by the country submitting "
-"the request."
+"authorities, according to the country the user lives in, Tejarak will cooperate with "
+"them only upon receiving the judicial order issued by the country submitting the request."
 msgstr ""
 "با توجه به کشور محل سکونت کاربر، درصورت درخواست مراجع دارای صلاحیت به دریافت "
-"اطلاعات‌کاربری، تجارک تنها پس از دریافت حکم قضایی کشور درخواست کننده، توانایی "
-"همکاری با آنان را خواهد داشت."
+"اطلاعات‌کاربری، تجارک تنها پس از دریافت حکم قضایی کشور درخواست کننده، توانایی همکاری با "
+"آنان را خواهد داشت."
 
 #: ermile/includes/languages/trans_project.php:213
 msgid ""
-"Tejarak will not offer any guarantee as to the quality of the products or "
-"services presented by the teams and will not accept any responsibility in this "
-"regard!"
+"Tejarak will not offer any guarantee as to the quality of the products or services "
+"presented by the teams and will not accept any responsibility in this regard!"
 msgstr ""
-"تجارک هیچگونه ضمانتی در مورد کیفیت محصولات یا خدمات ارائه شده توسط تیم‌ها را "
-"نمی‌پذیرد و مسئولیتی در قبال آن ندارد!"
+"تجارک هیچگونه ضمانتی در مورد کیفیت محصولات یا خدمات ارائه شده توسط تیم‌ها را نمی‌پذیرد و "
+"مسئولیتی در قبال آن ندارد!"
 
 #: ermile/includes/languages/trans_project.php:214
 msgid ""
-"Users should assume responsibility for any harm, both material and immaterial, "
-"caused by direct, indirect or penal factors and due to their utilization of this "
-"service; and, Tejarak bears no responsibility accordingly."
+"Users should assume responsibility for any harm, both material and immaterial, caused by "
+"direct, indirect or penal factors and due to their utilization of this service; and, "
+"Tejarak bears no responsibility accordingly."
 msgstr ""
-"خسارت‌های‌ مادی و معنوی ناشی از عوامل مستقیم، غیرمستقیم و کیفری، در قبال استفاده از "
-"این سرویس برعهده کاربران بوده و تجارک هیچ‌گونه مسئولیتی دراین‌باره ندارد."
+"خسارت‌های‌ مادی و معنوی ناشی از عوامل مستقیم، غیرمستقیم و کیفری، در قبال استفاده از این "
+"سرویس برعهده کاربران بوده و تجارک هیچ‌گونه مسئولیتی دراین‌باره ندارد."
 
 #: ermile/includes/languages/trans_project.php:215
 msgid ""
-"Tejarak accepts no responsibility, under any conditions, for the harms caused by "
-"users' mutual trust in each other or by the disclosure of information by users."
+"Tejarak accepts no responsibility, under any conditions, for the harms caused by users' "
+"mutual trust in each other or by the disclosure of information by users."
 msgstr ""
-"تحت هیچ شرایطی تجارک مسئولیت خسارت‌های وارده در اثر اعتماد و اتکاء اعضاء به یکدیگر "
-"و فاش‌شدن اطلاعات توسط کاربر را نمی‌پذیرد."
+"تحت هیچ شرایطی تجارک مسئولیت خسارت‌های وارده در اثر اعتماد و اتکاء اعضاء به یکدیگر و "
+"فاش‌شدن اطلاعات توسط کاربر را نمی‌پذیرد."
 
 #: ermile/includes/languages/trans_project.php:216
 msgid ""
 "Tejarak will do its best to protect both the users' information and the service; "
-"however, regarding the lack of certainty within the cyberspace, it will not "
-"assume any responsibility for the loss of the information entered on the service."
+"however, regarding the lack of certainty within the cyberspace, it will not assume any "
+"responsibility for the loss of the information entered on the service."
 msgstr ""
-"تجارک تمام تلاش خود را برای محافظت از اطلاعات کاربران و سرویس می‌نماید؛ ولی با "
-"توجه به عدم قطعیت در فضای مجازی، مسئولیتی در مورد از بين رفتن اطلاعات قرارگرفته "
-"بر روی سرویس نخواهد پذیرفت."
+"تجارک تمام تلاش خود را برای محافظت از اطلاعات کاربران و سرویس می‌نماید؛ ولی با توجه به "
+"عدم قطعیت در فضای مجازی، مسئولیتی در مورد از بين رفتن اطلاعات قرارگرفته بر روی سرویس "
+"نخواهد پذیرفت."
 
 #: ermile/includes/languages/trans_project.php:217
 msgid ""
 "We will publicize our information and news only via Tejarak's formal website. "
-"Accordingly, those who publicize any attributed news and claims, within social "
-"media and networks, must assume the responsibility and Tejarak will not assume "
-"any responsibility."
+"Accordingly, those who publicize any attributed news and claims, within social media and "
+"networks, must assume the responsibility and Tejarak will not assume any responsibility."
 msgstr ""
-"اخبار و اطلاعات ما تنها از طریق وب‌سایت رسمی تجارک منتشر می‌شود. مسئولیت هرگونه خبر "
-"و ادعای نسبت‌داده‌شده در رسانه‌ها و شبکه‌های اجتماعی به عهده منتشرکننده آن بوده و "
-"تجارک مسئولیتی در قبال آن ندارد."
+"اخبار و اطلاعات ما تنها از طریق وب‌سایت رسمی تجارک منتشر می‌شود. مسئولیت هرگونه خبر و "
+"ادعای نسبت‌داده‌شده در رسانه‌ها و شبکه‌های اجتماعی به عهده منتشرکننده آن بوده و تجارک "
+"مسئولیتی در قبال آن ندارد."
 
 #: ermile/includes/languages/trans_project.php:218
 msgid ""
-"Tejarak will bear no responsibility for whatsoever messages sent to users, "
-"including those indicating winning a lottery, and all our information "
-"dissemination will be through the ways of Tejarak's contact with users."
+"Tejarak will bear no responsibility for whatsoever messages sent to users, including "
+"those indicating winning a lottery, and all our information dissemination will be "
+"through the ways of Tejarak's contact with users."
 msgstr ""
-"تجارک هیچ مسئولیتی در مقابل پیام‌های ارسالی مبنی بر برنده‌شدن در قرعه‌کشی یا هر پیام "
-"دیگری نداشته و تمام اطلاع‌رسانی‌های ما از طریق روش‌های برقراری ارتباط کاربر با تجارک "
-"خواهد بود."
+"تجارک هیچ مسئولیتی در مقابل پیام‌های ارسالی مبنی بر برنده‌شدن در قرعه‌کشی یا هر پیام دیگری "
+"نداشته و تمام اطلاع‌رسانی‌های ما از طریق روش‌های برقراری ارتباط کاربر با تجارک خواهد بود."
 
 #: ermile/includes/languages/trans_project.php:219
 msgid ""
 "Any misuse of Tejarak's trade name is prohibited and will be suable by making a "
 "complaint to the legal competent authorities."
 msgstr ""
-"هرگونه سوءاستفاده از نام تجاری تجارک ممنوع بوده و از طریق شکایت به مراجع قانونی "
-"دارای صلاحیت، قابل پیگرد خواهد بود."
+"هرگونه سوءاستفاده از نام تجاری تجارک ممنوع بوده و از طریق شکایت به مراجع قانونی دارای "
+"صلاحیت، قابل پیگرد خواهد بود."
 
 #: ermile/includes/languages/trans_project.php:220
 msgid ""
-"Furthermore, this agreement, under the name Terms and Conditions, will be "
-"available and observable, in all pages of the website. Users will be responsible "
-"for a lack of information on the most recent changes."
+"Furthermore, this agreement, under the name Terms and Conditions, will be available and "
+"observable, in all pages of the website. Users will be responsible for a lack of "
+"information on the most recent changes."
 msgstr ""
-"هم‌چنین این توافق‌نامه در تمام صفحات وب‌سایت با عنوان شرایط و قوانین موجود و قابل "
-"مشاهده است. مسئولیت عدم کسب اطلاع از آخرین تغییرات برعهده کاربر خواهد بود."
+"هم‌چنین این توافق‌نامه در تمام صفحات وب‌سایت با عنوان شرایط و قوانین موجود و قابل مشاهده "
+"است. مسئولیت عدم کسب اطلاع از آخرین تغییرات برعهده کاربر خواهد بود."
 
 #: ermile/includes/languages/trans_project.php:221
 msgid ""
 "It should be mentioned that in case there would be any modifications in the above-"
-"mentioned tenors, an updated version will be available for the public, and as "
-"well, all the users will be informed."
+"mentioned tenors, an updated version will be available for the public, and as well, all "
+"the users will be informed."
 msgstr ""
-"لازم به ذکر است که درصورت هرگونه تغییر در مفاد ذکر شده، نسخه به‌روزشده آن در دسترس "
-"عموم قرار خواهد گرفت و به اطلاع تمام کاربران خواهد رسید."
+"لازم به ذکر است که درصورت هرگونه تغییر در مفاد ذکر شده، نسخه به‌روزشده آن در دسترس عموم "
+"قرار خواهد گرفت و به اطلاع تمام کاربران خواهد رسید."
 
 #~ msgid "Haloo"
 #~ msgstr "سلووو"
@@ -12664,8 +12543,7 @@ msgstr ""
 
 #~ msgid "You can connect your telegram with your mobile number in our service."
 #~ msgstr ""
-#~ "شما می‌توانید در سرویس ما تلگرام خود را به حساب کاربری روی شماره موبایل خود "
-#~ "متصل کنید."
+#~ "شما می‌توانید در سرویس ما تلگرام خود را به حساب کاربری روی شماره موبایل خود متصل کنید."
 
 #~ msgid "Start"
 #~ msgstr "شروع"
@@ -13059,8 +12937,7 @@ msgstr ""
 
 #~ msgid "allowed extentions jpg, png (gif for bussiness plans). Max 500Kb"
 #~ msgstr ""
-#~ "پسوندهای مجاز jpg و png هستند‌(‌gif برای پلن‌های تجاری). حداکثر حجم مجاز ۵۰۰ "
-#~ "کیلوبایت"
+#~ "پسوندهای مجاز jpg و png هستند‌(‌gif برای پلن‌های تجاری). حداکثر حجم مجاز ۵۰۰ کیلوبایت"
 
 #~ msgid "National code"
 #~ msgstr "کد ملی"
@@ -13153,8 +13030,7 @@ msgstr ""
 #~ msgstr "لطفا عدد <b>2015</b> را به شماره زیر پیامک کنید"
 
 #~ msgid "Then wait we receive your message and verificate your account"
-#~ msgstr ""
-#~ "ما در انتظار پیامک شما بوده و پس از دریافت اکانت را برایتان فعال خواهیم کردیم"
+#~ msgstr "ما در انتظار پیامک شما بوده و پس از دریافت اکانت را برایتان فعال خواهیم کردیم"
 
 #~ msgid "Welcome to Saloos control panel."
 #~ msgstr "به کنترل پنل سالوس خوش آمدید."
@@ -13172,8 +13048,7 @@ msgstr ""
 #~ msgstr "محتوای نوشته خود را در این بخش وارد کنید"
 
 #~ msgid "If excerpt is empty we get it automatically from content"
-#~ msgstr ""
-#~ "اگر چیکده را خالی بگذارید ما آن را به صورت اتوماتیک از روی محتوا خواهیم گرفت"
+#~ msgstr "اگر چیکده را خالی بگذارید ما آن را به صورت اتوماتیک از روی محتوا خواهیم گرفت"
 
 #~ msgid "Summaries of your content that can be used as page description."
 #~ msgstr "چکیده ای از محتوا که به عنوان توضیحات صفحه استفاده خواهد شد."
@@ -13188,24 +13063,23 @@ msgstr ""
 #~ msgstr "تفاوت بین نوشته و برگه در چیست؟"
 
 #~ msgid ""
-#~ "Pages are similar to Posts in that they have a title, body text, and "
-#~ "associated metadata, but they are different in that they are not part of the "
-#~ "chronological blog stream, kind of like permanent posts."
+#~ "Pages are similar to Posts in that they have a title, body text, and associated "
+#~ "metadata, but they are different in that they are not part of the chronological blog "
+#~ "stream, kind of like permanent posts."
 #~ msgstr ""
-#~ "برگه ها در عنوان، متن و سایر ویژگی ها شبیه به نوشته ها هستند، اما تفاوت اصلی "
-#~ "آن ها در این است که به مانند نوشته ها دارای جریان زمانی دنباله دار نیستند، در "
-#~ "حقیقت شبیه به یک پست دائمی هستند."
+#~ "برگه ها در عنوان، متن و سایر ویژگی ها شبیه به نوشته ها هستند، اما تفاوت اصلی آن ها در "
+#~ "این است که به مانند نوشته ها دارای جریان زمانی دنباله دار نیستند، در حقیقت شبیه به یک "
+#~ "پست دائمی هستند."
 
 #~ msgid "Pages are not categorized or tagged, but can have a hierarchy."
-#~ msgstr ""
-#~ "برگه ها نمیتوانند دسته بندی شوند ولی میتوانند خود دارای ساختار درختی باشند."
+#~ msgstr "برگه ها نمیتوانند دسته بندی شوند ولی میتوانند خود دارای ساختار درختی باشند."
 
 #~ msgid ""
 #~ "You can nest Pages under other Pages by making one the “Parent” of the other, "
 #~ "creating a group of Pages."
 #~ msgstr ""
-#~ "شما می توانید یک برگه را با کمک ویژگی والد به عنوان زیرشاخته برگه ای دیگر ثبت "
-#~ "کنید و به این شکل گروهی از برگه ها بسازید."
+#~ "شما می توانید یک برگه را با کمک ویژگی والد به عنوان زیرشاخته برگه ای دیگر ثبت کنید و "
+#~ "به این شکل گروهی از برگه ها بسازید."
 
 #~ msgid "Enter slug here"
 #~ msgstr "نامک را در اینجا وارد کنید"
@@ -13226,20 +13100,20 @@ msgstr ""
 #~ msgstr "تفاوت بین دسته ها و کلیدواژه ها در چیست؟"
 
 #~ msgid ""
-#~ "Normally, tags are ad-hoc keywords that identify important information in your "
-#~ "post (names, subjects, etc) that may or may not recur in other posts, while "
-#~ "categories are pre-determined sections."
+#~ "Normally, tags are ad-hoc keywords that identify important information in your post "
+#~ "(names, subjects, etc) that may or may not recur in other posts, while categories are "
+#~ "pre-determined sections."
 #~ msgstr ""
-#~ "به طول معمول، کلیدواژه ها عبارات تک کاربره ای برای شناسایی اطلاعات مهم در "
-#~ "نوشته شما مانند نام، موضوع یا .. هستند که امکان تکرار آن ها در سایر نوشته ها "
-#~ "مشخص نیست، این در حالی است که دسته ها از قبل مشخص شده هستند."
+#~ "به طول معمول، کلیدواژه ها عبارات تک کاربره ای برای شناسایی اطلاعات مهم در نوشته شما "
+#~ "مانند نام، موضوع یا .. هستند که امکان تکرار آن ها در سایر نوشته ها مشخص نیست، این در "
+#~ "حالی است که دسته ها از قبل مشخص شده هستند."
 
 #~ msgid ""
-#~ "If you think of your site like a book, the categories are like the Table of "
-#~ "Contents and the tags are like the terms in the index."
+#~ "If you think of your site like a book, the categories are like the Table of Contents "
+#~ "and the tags are like the terms in the index."
 #~ msgstr ""
-#~ "اگر سایت را مانند یک کتاب فرض کنید، دسته ها مثل فهرست مطالب و کلیدواژه ها مثل "
-#~ "عبارات خاص در ایندکس هستند."
+#~ "اگر سایت را مانند یک کتاب فرض کنید، دسته ها مثل فهرست مطالب و کلیدواژه ها مثل عبارات "
+#~ "خاص در ایندکس هستند."
 
 #~ msgid "Extract twig trans func in saloos addon"
 #~ msgstr "بیرون کشیدن متن های قابل ترجمه توئیگ از افزونه‌های سالوس"
@@ -13326,22 +13200,22 @@ msgstr ""
 #~ msgstr "استایلی باورنکردنی!"
 
 #~ msgid ""
-#~ "Definitions aren't limited to just buttons on a page. Siftal's components "
-#~ "allow several distinct types of definitions: elements, collections, views, "
-#~ "modules and behaviors which cover the gamut of interface design."
+#~ "Definitions aren't limited to just buttons on a page. Siftal's components allow "
+#~ "several distinct types of definitions: elements, collections, views, modules and "
+#~ "behaviors which cover the gamut of interface design."
 #~ msgstr ""
-#~ "تعاریف فقط به دکمه‌های یک صفحه محدود نمی‌شوند. اجزای سیفتال اجازه میدهد تا چندین "
-#~ "نوع از تعاریف مختلفی از جمله عناصر، مجموعه‌ها، نمایش‌ها، ماژول‌ها و رفتارها در "
-#~ "محدوده طراحی رابط قرار گیرند."
+#~ "تعاریف فقط به دکمه‌های یک صفحه محدود نمی‌شوند. اجزای سیفتال اجازه میدهد تا چندین نوع از "
+#~ "تعاریف مختلفی از جمله عناصر، مجموعه‌ها، نمایش‌ها، ماژول‌ها و رفتارها در محدوده طراحی "
+#~ "رابط قرار گیرند."
 
 #~ msgid ""
-#~ "For improved cross-browser rendering, we use <a href='sample/reset'>special "
-#~ "reset</a> to correct inconsistencies across browsers and devices while "
-#~ "providing slightly more opinionated resets to common HTML elements."
+#~ "For improved cross-browser rendering, we use <a href='sample/reset'>special reset</a> "
+#~ "to correct inconsistencies across browsers and devices while providing slightly more "
+#~ "opinionated resets to common HTML elements."
 #~ msgstr ""
-#~ "برای بهبود رندر متقابل مرورگر‌ها، ما از <a href='sample/reset'> تنظیم مجدد ویژه "
-#~ "</a> برای اصلاح ناسازگاری بین مرورگرها و دستگاه‌ها استفاده می‌کنیم و در عین حال "
-#~ "تنظیم مجدد تنظیمات نسبت به عناصر HTML معمول را بیشتر میکند."
+#~ "برای بهبود رندر متقابل مرورگر‌ها، ما از <a href='sample/reset'> تنظیم مجدد ویژه </a> "
+#~ "برای اصلاح ناسازگاری بین مرورگرها و دستگاه‌ها استفاده می‌کنیم و در عین حال تنظیم مجدد "
+#~ "تنظیمات نسبت به عناصر HTML معمول را بیشتر میکند."
 
 #~ msgid "Button"
 #~ msgstr "دکمه"
@@ -13467,8 +13341,7 @@ msgstr ""
 #~ msgstr "123دوست"
 
 #~ msgid "Ermile requested permission to transfer <b>Tejarak</b> team to you"
-#~ msgstr ""
-#~ "ارمایل در خواست اجازه انتقال تیم به <b>کانون فرهنگی حضرت خدیجه</b> را داد"
+#~ msgstr "ارمایل در خواست اجازه انتقال تیم به <b>کانون فرهنگی حضرت خدیجه</b> را داد"
 
 #~ msgid "Decline"
 #~ msgstr "رد‌کردن"
@@ -13536,19 +13409,18 @@ msgstr ""
 #~ msgid "Badges"
 #~ msgstr "نشان"
 
-#~ msgid ""
-#~ "Documentation and examples for badges, our small count and labeling component."
+#~ msgid "Documentation and examples for badges, our small count and labeling component."
 #~ msgstr "مستندات و نمونه‌های برای نشان‌ها‌، شمار کوچک ما و اجزاء برچسب زده‌شده‌‌."
 
 #~ msgid "Examples"
 #~ msgstr "مثال‌ها"
 
 #~ msgid ""
-#~ "Badges scale to match the size of the immediate parent element by using "
-#~ "relative font sizing and <code class='code1'>em</code> units."
+#~ "Badges scale to match the size of the immediate parent element by using relative font "
+#~ "sizing and <code class='code1'>em</code> units."
 #~ msgstr ""
-#~ "مقیاس مدال‌ها برای مطابقت با اندازه اصلی عنصر با استفاده از اندازه فونت نسبی و "
-#~ "واحد <code class='code1'>em</code> صورت می‌گیرد."
+#~ "مقیاس مدال‌ها برای مطابقت با اندازه اصلی عنصر با استفاده از اندازه فونت نسبی و واحد "
+#~ "<code class='code1'>em</code> صورت می‌گیرد."
 
 #~ msgid "Example heading"
 #~ msgstr "عنوان نمونه"
@@ -13558,8 +13430,7 @@ msgstr ""
 
 #~ msgid "Badges can be used as part of links or buttons to provide a counter."
 #~ msgstr ""
-#~ "مدال‌ها را می‌توان بعنوان بخشی از پیوندها یا دکمه‌ها برای ارائه شمارنده استفاده "
-#~ "کرد."
+#~ "مدال‌ها را می‌توان بعنوان بخشی از پیوندها یا دکمه‌ها برای ارائه شمارنده استفاده کرد."
 
 #~ msgid "5"
 #~ msgstr "5"
@@ -13568,10 +13439,8 @@ msgstr ""
 #~ msgstr "متغیرهای متنی"
 
 #~ msgid ""
-#~ "Add any of the below mentioned modifier classes to change the appearance of a "
-#~ "badge."
-#~ msgstr ""
-#~ "هر یک از کلاس‌های اصلاح کننده زیر را اضافه کنید تا ظاهر یک نشان را تغییر دهید."
+#~ "Add any of the below mentioned modifier classes to change the appearance of a badge."
+#~ msgstr "هر یک از کلاس‌های اصلاح کننده زیر را اضافه کنید تا ظاهر یک نشان را تغییر دهید."
 
 #~ msgid "Rounded badge"
 #~ msgstr "علامت گرد"
@@ -13580,20 +13449,18 @@ msgstr ""
 #~ "Use the <code class='code1'>.rounded</code> modifier class to make badges more "
 #~ "rounded (with a larger border-radius and additional horizontal padding)."
 #~ msgstr ""
-#~ "استفاده از‌این کلاس : <code class='code1'>.rounded</code> اشیاء را به منظور‌ "
-#~ "ایجاد مدال گرد می‌کند ‌(‌با شعاع گردی بالاتر (border-radius) و فاصله داخلی افقی "
-#~ "بیشتر‌)."
+#~ "استفاده از‌این کلاس : <code class='code1'>.rounded</code> اشیاء را به منظور‌ ایجاد مدال "
+#~ "گرد می‌کند ‌(‌با شعاع گردی بالاتر (border-radius) و فاصله داخلی افقی بیشتر‌)."
 
 #~ msgid "Links"
 #~ msgstr "لینک‌ها"
 
 #~ msgid ""
-#~ "Using the <code class='code1'>.badge</code> classes with the <code "
-#~ "class='code1'>&lt;a&gt;</code> element quickly provide actionable badges with "
-#~ "hover and focus states."
+#~ "Using the <code class='code1'>.badge</code> classes with the <code class='code1'>&lt;"
+#~ "a&gt;</code> element quickly provide actionable badges with hover and focus states."
 #~ msgstr ""
-#~ "استفاده از : <code class='code1'>.badge</code> کلاس با اسم : <code "
-#~ "class='code1'>&lt;a&gt;</code> به سرعت حالت‌های شناور و متمرکز را تنظیم می‌کند."
+#~ "استفاده از : <code class='code1'>.badge</code> کلاس با اسم : <code class='code1'>&lt;"
+#~ "a&gt;</code> به سرعت حالت‌های شناور و متمرکز را تنظیم می‌کند."
 
 #~ msgid "Barcode"
 #~ msgstr "بارکد"
@@ -13619,12 +13486,11 @@ msgstr ""
 #~ msgid ""
 #~ "Siftal's box provide a flexible and extensible content container for title and "
 #~ "contents."
-#~ msgstr ""
-#~ "جعبه‌ها (box) در سیفتال انعطاف و گسترش بذیری برای عنوان و محتوا را ارائه می‌دهند."
+#~ msgstr "جعبه‌ها (box) در سیفتال انعطاف و گسترش بذیری برای عنوان و محتوا را ارائه می‌دهند."
 
 #~ msgid ""
-#~ "You can use elements of this page in all part of site and mix them with "
-#~ "another elements."
+#~ "You can use elements of this page in all part of site and mix them with another "
+#~ "elements."
 #~ msgstr ""
 #~ "می‌توانید از عناصر‌این صفحه در تمام قسمت‌های سایت استفاده کنید و آنها را با عناصر "
 #~ "دیگر‌ترکیب کنید."
@@ -13636,8 +13502,8 @@ msgstr ""
 #~ "Indicate the current page's location within a navigational hierarchy that "
 #~ "automatically adds separators via CSS."
 #~ msgstr ""
-#~ "محل مکان فعلی را در سلسله مراتب ناوبری نشان می‌دهد که به طور خودکار جدا "
-#~ "کننده‌هایی از طریق سی‌اس‌اس اضافه میکند."
+#~ "محل مکان فعلی را در سلسله مراتب ناوبری نشان می‌دهد که به طور خودکار جدا کننده‌هایی از "
+#~ "طریق سی‌اس‌اس اضافه میکند."
 
 #~ msgid "Separators are automatically added in CSS through ::before and content."
 #~ msgstr "جداساز‌ها به صورت خودکار اضافه‌شده اند از طریق ‌سی‌اس‌اس‌ ::before و محتوا."
@@ -13652,18 +13518,18 @@ msgstr ""
 #~ "Use Siftal's custom button styles for actions in forms, dialogs, and more with "
 #~ "support for multiple sizes, states, and more."
 #~ msgstr ""
-#~ "استایل‌های سفارشی سیفتال برای اقدامات در فرم‌ها و گفتگوها و‌‌.‌.. با پشتیبانی از "
-#~ "سایز‌ها و حالت‌های مختلف و... استفاده کنید."
+#~ "استایل‌های سفارشی سیفتال برای اقدامات در فرم‌ها و گفتگوها و‌‌.‌.. با پشتیبانی از سایز‌ها و "
+#~ "حالت‌های مختلف و... استفاده کنید."
 
 #~ msgid "Simple Examples"
 #~ msgstr "مثال ساده"
 
 #~ msgid ""
-#~ "Siftal includes several predefined button styles, each serving its own "
-#~ "semantic purpose, with a few extras thrown in for more control."
+#~ "Siftal includes several predefined button styles, each serving its own semantic "
+#~ "purpose, with a few extras thrown in for more control."
 #~ msgstr ""
-#~ "سیفتال عبارت است از : دکمه‌های با استایل‌های از پیش تعریف‌شده‌، هر سرویس برای "
-#~ "انجام کار خواصی تعیین‌شده به همراه جزئیات اضافه‌تر."
+#~ "سیفتال عبارت است از : دکمه‌های با استایل‌های از پیش تعریف‌شده‌، هر سرویس برای انجام کار "
+#~ "خواصی تعیین‌شده به همراه جزئیات اضافه‌تر."
 
 #~ msgid "Default Btn"
 #~ msgstr "دکمه پیش‌فرض"
@@ -13675,31 +13541,28 @@ msgstr ""
 #~ msgstr "تگ‌های دکمه"
 
 #~ msgid ""
-#~ "The <code class='code1'>.btn</code> classes are designed to be used with the "
-#~ "<code class='code1'>&lt;button&gt;</code> element. However, you can also use "
-#~ "these classes on <code class='code1'>&lt;a&gt;</code> or <code "
-#~ "class='code1'>&lt;input&gt;</code> elements (though some browsers may apply a "
-#~ "slightly different rendering)."
+#~ "The <code class='code1'>.btn</code> classes are designed to be used with the <code "
+#~ "class='code1'>&lt;button&gt;</code> element. However, you can also use these classes "
+#~ "on <code class='code1'>&lt;a&gt;</code> or <code class='code1'>&lt;input&gt;</code> "
+#~ "elements (though some browsers may apply a slightly different rendering)."
 #~ msgstr ""
-#~ "کلاس‌های <code class='code1'>.btn</code> برای استفاده با عنصر <code "
-#~ "class='code1'>&lt;button&gt;</code> طراحی‌شده اند. با‌این حال، شما می‌توانید "
-#~ "از‌این کلاس‌ها در عناصر <code class='code1'>&lt;input&gt;</code> یا <code "
-#~ "class='code1'>&lt;a&gt;</code> استفاده کنید (اگر چه در برخی از مرورگرها رندر "
-#~ "کمی‌متفاوت است)."
+#~ "کلاس‌های <code class='code1'>.btn</code> برای استفاده با عنصر <code class='code1'>&lt;"
+#~ "button&gt;</code> طراحی‌شده اند. با‌این حال، شما می‌توانید از‌این کلاس‌ها در عناصر <code "
+#~ "class='code1'>&lt;input&gt;</code> یا <code class='code1'>&lt;a&gt;</code> استفاده "
+#~ "کنید (اگر چه در برخی از مرورگرها رندر کمی‌متفاوت است)."
 
 #~ msgid ""
-#~ "When using button classes on <code class='code1'>&lt;a&gt;</code> elements "
-#~ "that are used to trigger in-page functionality (like collapsing content), "
-#~ "rather than linking to new pages or sections within the current page, these "
-#~ "links should be given a <code class='code1'>role='button'</code> to "
-#~ "appropriately convey their purpose to assistive technologies such as screen "
-#~ "readers."
+#~ "When using button classes on <code class='code1'>&lt;a&gt;</code> elements that are "
+#~ "used to trigger in-page functionality (like collapsing content), rather than linking "
+#~ "to new pages or sections within the current page, these links should be given a <code "
+#~ "class='code1'>role='button'</code> to appropriately convey their purpose to assistive "
+#~ "technologies such as screen readers."
 #~ msgstr ""
-#~ "هنگام استفاده از کلاسهای دکمه در عناصر<code class='code1'>&lt;a&gt;</code> که "
-#~ "برای فعال‌کردن قابلیت صفحه در صفحه (مانند محو شدن محتوا) استفاده می‌شود، به جای "
-#~ "پیوند دادن به صفحات یا بخش‌های جدید در صفحه فعلی،‌این پیوندها باید کد <code "
-#~ "class='code1'>role='button'</code> را به درستی با منظور خود و به فن آوری‌های "
-#~ "جانبی مانند خوانندگان صفحه نمایش منتقل‌کند."
+#~ "هنگام استفاده از کلاسهای دکمه در عناصر<code class='code1'>&lt;a&gt;</code> که برای "
+#~ "فعال‌کردن قابلیت صفحه در صفحه (مانند محو شدن محتوا) استفاده می‌شود، به جای پیوند دادن "
+#~ "به صفحات یا بخش‌های جدید در صفحه فعلی،‌این پیوندها باید کد <code "
+#~ "class='code1'>role='button'</code> را به درستی با منظور خود و به فن آوری‌های جانبی "
+#~ "مانند خوانندگان صفحه نمایش منتقل‌کند."
 
 #~ msgid "Link!"
 #~ msgstr "لینک!"
@@ -13708,13 +13571,13 @@ msgstr ""
 #~ msgstr "دکمه‌های خارجی"
 
 #~ msgid ""
-#~ "In need of a button, but not the hefty background colors they bring? Replace "
-#~ "the default modifier classes with the <code class='code1'>.outline</code> ones "
-#~ "to remove all background images and colors on any button."
+#~ "In need of a button, but not the hefty background colors they bring? Replace the "
+#~ "default modifier classes with the <code class='code1'>.outline</code> ones to remove "
+#~ "all background images and colors on any button."
 #~ msgstr ""
-#~ "به یک دکمه نیاز دارید اما رنگ پس زمینه کثیفی را به ارمغان میاورد‌؟  کلاس‌های "
-#~ "اصلاح کننده پیش فرض را با کد‌های <code class='code1'>.outline</code>  جایگزین "
-#~ "کنید تا تمام تصاویر و رنگ‌های پس‌زمینه بر روی هر دکمه حذف شوند."
+#~ "به یک دکمه نیاز دارید اما رنگ پس زمینه کثیفی را به ارمغان میاورد‌؟  کلاس‌های اصلاح "
+#~ "کننده پیش فرض را با کد‌های <code class='code1'>.outline</code>  جایگزین کنید تا تمام "
+#~ "تصاویر و رنگ‌های پس‌زمینه بر روی هر دکمه حذف شوند."
 
 #~ msgid "Inverted"
 #~ msgstr "معکوس"
@@ -13722,10 +13585,8 @@ msgstr ""
 #~ msgid "A button can be formatted to appear on dark backgrounds"
 #~ msgstr "یک دکمه می‌تواند تغییر کنید تا در زمینه‌های تاریک استفاده‌شود"
 
-#~ msgid ""
-#~ "Fancy larger or smaller buttons? Add .btn-lg or .btn-sm for additional sizes."
-#~ msgstr ""
-#~ "دکمه‌های بزرگتر یا کوچکتر با اضافه‌کردن .btn-lg or .btn-sm برای‌ اندازه‌های اضافی."
+#~ msgid "Fancy larger or smaller buttons? Add .btn-lg or .btn-sm for additional sizes."
+#~ msgstr "دکمه‌های بزرگتر یا کوچکتر با اضافه‌کردن .btn-lg or .btn-sm برای‌ اندازه‌های اضافی."
 
 #~ msgid "Extra small xs"
 #~ msgstr "بسیار کوچک xs"
@@ -13752,36 +13613,36 @@ msgstr ""
 #~ msgstr "حالت فعال"
 
 #~ msgid ""
-#~ "Buttons will appear pressed (with a darker background) when active. There’s no "
-#~ "need to add a class to <code class='code1'>&lt;button&gt;</code>s as they use "
-#~ "a pseudo-class. However, you can still force the same active appearance with ."
-#~ "active should you need to replicate the state programmatically."
+#~ "Buttons will appear pressed (with a darker background) when active. There’s no need "
+#~ "to add a class to <code class='code1'>&lt;button&gt;</code>s as they use a pseudo-"
+#~ "class. However, you can still force the same active appearance with .active should "
+#~ "you need to replicate the state programmatically."
 #~ msgstr ""
-#~ "هنگامی‌که دکمه فشرده‌ می‌شود (درپس‌زمینه سیاه) در حالت فعال. شما نیاز‌ندارید که "
-#~ "کلاسی را به <code class='code1'>&lt;button&gt;</code>‌ها اضافه کنید چون از یک "
-#~ "کلاس <code>pseudo</code> استفاده می‌کند.با این حال شما می‌توانید همان ظاهر‌ را با "
-#~ "<code>.active</code> فعال‌تر کنید نیازی نیست حالت را دوباره برنامه‌نویسی کنید."
+#~ "هنگامی‌که دکمه فشرده‌ می‌شود (درپس‌زمینه سیاه) در حالت فعال. شما نیاز‌ندارید که کلاسی را "
+#~ "به <code class='code1'>&lt;button&gt;</code>‌ها اضافه کنید چون از یک کلاس "
+#~ "<code>pseudo</code> استفاده می‌کند.با این حال شما می‌توانید همان ظاهر‌ را با <code>."
+#~ "active</code> فعال‌تر کنید نیازی نیست حالت را دوباره برنامه‌نویسی کنید."
 
 #~ msgid "Disabled state"
 #~ msgstr "حالت غیرفعال"
 
 #~ msgid ""
-#~ "Make buttons look inactive by adding the disabled boolean attribute to any "
-#~ "<code class='code1'>&lt;button&gt;</code> element."
+#~ "Make buttons look inactive by adding the disabled boolean attribute to any <code "
+#~ "class='code1'>&lt;button&gt;</code> element."
 #~ msgstr ""
-#~ "با اضافه‌کردن خاصیبت boolean false به هر یک از عناصر <code class='code1'>&lt;"
-#~ "button&gt;</code> غیرفعال می‌شوند."
+#~ "با اضافه‌کردن خاصیبت boolean false به هر یک از عناصر <code class='code1'>&lt;button&gt;"
+#~ "</code> غیرفعال می‌شوند."
 
 #~ msgid ""
-#~ "Disabled buttons using the <code class='code1'>&lt;a&gt;</code> element behave "
-#~ "a bit different because <code class='code1'>&lt;a&gt;</code>s don’t support "
-#~ "the <code class='code1'>disabled</code> attribute, so you must add the <code "
-#~ "class='code1'>.disabled</code> class to make it visually appear disabled."
+#~ "Disabled buttons using the <code class='code1'>&lt;a&gt;</code> element behave a bit "
+#~ "different because <code class='code1'>&lt;a&gt;</code>s don’t support the <code "
+#~ "class='code1'>disabled</code> attribute, so you must add the <code class='code1'>."
+#~ "disabled</code> class to make it visually appear disabled."
 #~ msgstr ""
-#~ "دکمه‌های غیرفعال با استفاده از عناصر <code class='code1'>&lt;a&gt;</code> "
-#~ "کمی‌متفاوت عمل می‌کنند زیرا  <code class='code1'>&lt;a&gt;</code>ها از صفت <code "
-#~ "class='code1'>disabled</code> پشتیبانی نمی‌کنند، پس شما باید کلاس <code "
-#~ "class='code1'>.disabled</code> را اضافه کنید تا به‌صورت کامل غیرفعال‌شود."
+#~ "دکمه‌های غیرفعال با استفاده از عناصر <code class='code1'>&lt;a&gt;</code> کمی‌متفاوت "
+#~ "عمل می‌کنند زیرا  <code class='code1'>&lt;a&gt;</code>ها از صفت <code "
+#~ "class='code1'>disabled</code> پشتیبانی نمی‌کنند، پس شما باید کلاس <code class='code1'>."
+#~ "disabled</code> را اضافه کنید تا به‌صورت کامل غیرفعال‌شود."
 
 #~ msgid "disabled"
 #~ msgstr "غیرفعال"
@@ -13796,33 +13657,31 @@ msgstr ""
 #~ msgstr "لینک هشدار عملکرد"
 
 #~ msgid ""
-#~ "The <code class='code1'>.disabled</code> class uses <code "
-#~ "class='code1'>pointer-events: none</code> to try to disable the link "
-#~ "functionality of <code class='code1'>&lt;a&gt;</code>s, but that CSS property "
-#~ "is not yet standardized. In addition, even in browsers that do support <code "
-#~ "class='code1'>pointer-events: none</code>, keyboard navigation remains "
-#~ "unaffected, meaning that sighted keyboard users and users of assistive "
-#~ "technologies will still be able to activate these links. So to be safe, add a "
-#~ "<code class='code1'>tabindex='-1'</code> attribute on these links (to prevent "
-#~ "them from receiving keyboard focus) and use custom JavaScript to disable their "
-#~ "functionality."
+#~ "The <code class='code1'>.disabled</code> class uses <code class='code1'>pointer-"
+#~ "events: none</code> to try to disable the link functionality of <code "
+#~ "class='code1'>&lt;a&gt;</code>s, but that CSS property is not yet standardized. In "
+#~ "addition, even in browsers that do support <code class='code1'>pointer-events: none</"
+#~ "code>, keyboard navigation remains unaffected, meaning that sighted keyboard users "
+#~ "and users of assistive technologies will still be able to activate these links. So to "
+#~ "be safe, add a <code class='code1'>tabindex='-1'</code> attribute on these links (to "
+#~ "prevent them from receiving keyboard focus) and use custom JavaScript to disable "
+#~ "their functionality."
 #~ msgstr ""
-#~ "کلاس : <code class='code1'>.disabled</code> از <code class='code1'>pointer-"
-#~ "events: none</code> استفاده می‌کند تا توابع لینک را در  <code class='code1'> "
-#~ "&lt;a&gt; </code>  غیرفعال‌کند اما آن ویژگی‌های سی‌اس‌اس استاندارد نیستند. هر زمان "
-#~ "در مرورگر از<code class='code1'>pointer-events: none</code> پشتیبانی‌کند، "
-#~ "مکان‌نمای صفحه‌کلید باقی می‌ماند، به این معنی که کاربران با صفحه‌کلید می‌توانند این "
-#~ "لینک‌ها را فعال کنند. پس مطمئن باشید با اضافه‌کردن صفت <code "
-#~ "class='code1'>tabindex='-1'</code>  بر روی لینک‌های خود(برای جلوگیری از دریافت "
-#~ "فوکوس صفحه کلید) و همچنین از یکسری قابلیت‌های جاوا‌اسکریپت برای غیرفعال‌کردن این "
-#~ "رویداد‌ها استفاده می‌کند."
+#~ "کلاس : <code class='code1'>.disabled</code> از <code class='code1'>pointer-events: "
+#~ "none</code> استفاده می‌کند تا توابع لینک را در  <code class='code1'> &lt;a&gt; </"
+#~ "code>  غیرفعال‌کند اما آن ویژگی‌های سی‌اس‌اس استاندارد نیستند. هر زمان در مرورگر از<code "
+#~ "class='code1'>pointer-events: none</code> پشتیبانی‌کند، مکان‌نمای صفحه‌کلید باقی می‌ماند، "
+#~ "به این معنی که کاربران با صفحه‌کلید می‌توانند این لینک‌ها را فعال کنند. پس مطمئن باشید "
+#~ "با اضافه‌کردن صفت <code class='code1'>tabindex='-1'</code>  بر روی لینک‌های خود(برای "
+#~ "جلوگیری از دریافت فوکوس صفحه کلید) و همچنین از یکسری قابلیت‌های جاوا‌اسکریپت برای "
+#~ "غیرفعال‌کردن این رویداد‌ها استفاده می‌کند."
 
 #~ msgid ""
-#~ "Easily extend form controls by adding text, buttons, or button groups on "
-#~ "either side of textual inputs."
+#~ "Easily extend form controls by adding text, buttons, or button groups on either side "
+#~ "of textual inputs."
 #~ msgstr ""
-#~ "به راحتی کنترلر‌های فرم را با اضافه‌کردن متن‌، دکمه‌ها یا گروه‌های دکمه‌ای در هر دو "
-#~ "طرف از ورودی‌های متنی گسترش دهید."
+#~ "به راحتی کنترلر‌های فرم را با اضافه‌کردن متن‌، دکمه‌ها یا گروه‌های دکمه‌ای در هر دو طرف از "
+#~ "ورودی‌های متنی گسترش دهید."
 
 #~ msgid "Simple Examples with input element"
 #~ msgstr "مثال ساده با عنصر‌های وروردی"
@@ -13941,9 +13800,7 @@ msgstr ""
 #~ msgid "Crop"
 #~ msgstr "بریدن"
 
-#~ msgid ""
-#~ "complete example of crop in modal and show preview after that with default "
-#~ "image"
+#~ msgid "complete example of crop in modal and show preview after that with default image"
 #~ msgstr "نمونه‌های کاملی از برش در مدل و پیشنمایش بعد از آن به همراه تصویر پیشفرض"
 
 #~ msgid "Datalist element of HTML5 forms is pretty cool!"
@@ -14022,8 +13879,7 @@ msgstr ""
 #~ msgstr "ددلاین"
 
 #~ msgid "Siftal's deadline provide a simple box to show title and remain date."
-#~ msgstr ""
-#~ "سیفتال ددلاین باکس ساده‌ای را برای نمایش عنوان و زمان باقی‌مانده ارائه می‌دهد."
+#~ msgstr "سیفتال ددلاین باکس ساده‌ای را برای نمایش عنوان و زمان باقی‌مانده ارائه می‌دهد."
 
 #~ msgid "Sample Deadline"
 #~ msgstr "ددلاین ساده"
@@ -14045,14 +13901,12 @@ msgstr ""
 
 #~ msgid "one row will divide to the number of parts, if you just set class='c'"
 #~ msgstr ""
-#~ "یک ردیف به تعداد قطعات تقسیم می‌شود، اگر شما فقط <code>class = 'c'</code> را "
-#~ "تنظیم کنید"
+#~ "یک ردیف به تعداد قطعات تقسیم می‌شود، اگر شما فقط <code>class = 'c'</code> را تنظیم کنید"
 
-#~ msgid ""
-#~ "on large screens if you just set class='x', it will take the x class ratio"
+#~ msgid "on large screens if you just set class='x', it will take the x class ratio"
 #~ msgstr ""
-#~ "در صفحه نمایش‌های بزرگ اگر ست کنید : <code>class='x',</code> کلاس‌ها را نسبت به "
-#~ "کلاس x خواهد گرفت"
+#~ "در صفحه نمایش‌های بزرگ اگر ست کنید : <code>class='x',</code> کلاس‌ها را نسبت به کلاس x "
+#~ "خواهد گرفت"
 
 #~ msgid "three equal parts"
 #~ msgstr "سه قسمت مساوی"
@@ -14166,11 +14020,11 @@ msgstr ""
 #~ msgstr "خداحافظ"
 
 #~ msgid ""
-#~ "Provide contextual feedback messages for typical user actions with the handful "
-#~ "of available and flexible alert messages."
+#~ "Provide contextual feedback messages for typical user actions with the handful of "
+#~ "available and flexible alert messages."
 #~ msgstr ""
-#~ "فراهم کننده متنی بازخورد متن برای اقدامات معمولی کاربر به همراه تعداد انگشت "
-#~ "شماری از دسترسی و پیغام‌های هشدار انعطاف پذیر‌‌."
+#~ "فراهم کننده متنی بازخورد متن برای اقدامات معمولی کاربر به همراه تعداد انگشت شماری از "
+#~ "دسترسی و پیغام‌های هشدار انعطاف پذیر‌‌."
 
 #~ msgid "This is a primary message or alert. check it out!"
 #~ msgstr "این یک پیام یا هشدار اصلی است. آنرا بررسی کنید!"
@@ -14227,11 +14081,11 @@ msgstr ""
 #~ msgstr "رنگ لینک"
 
 #~ msgid ""
-#~ "Use the <code class='code1'>.link</code> utility class to quickly provide "
-#~ "matching colored links within any alert."
+#~ "Use the <code class='code1'>.link</code> utility class to quickly provide matching "
+#~ "colored links within any alert."
 #~ msgstr ""
-#~ "با استفاده از کلاس : <code class='code1'>.link</code> به سرعت لینک‌های رنگی را "
-#~ "در هر هشدار استفاده کنید."
+#~ "با استفاده از کلاس : <code class='code1'>.link</code> به سرعت لینک‌های رنگی را در هر "
+#~ "هشدار استفاده کنید."
 
 #~ msgid "This is a primary alert with"
 #~ msgstr "این یک هشدار اصلی همراه"
@@ -14277,19 +14131,18 @@ msgstr ""
 #~ msgstr "آفرین!"
 
 #~ msgid ""
-#~ "Aww yeah, you successfully read this important alert message. This example "
-#~ "text is going to run a bit longer so that you can see how spacing within an "
-#~ "alert works with this kind of content."
+#~ "Aww yeah, you successfully read this important alert message. This example text is "
+#~ "going to run a bit longer so that you can see how spacing within an alert works with "
+#~ "this kind of content."
 #~ msgstr ""
-#~ "اوه بله شما موفق به خواندن‌این پیام مهم شدید.این یک متن مثال است تا بتوانید "
-#~ "ببینید فاصله در یک هشدار با‌این محتوا چگونه کار می‌کند."
+#~ "اوه بله شما موفق به خواندن‌این پیام مهم شدید.این یک متن مثال است تا بتوانید ببینید "
+#~ "فاصله در یک هشدار با‌این محتوا چگونه کار می‌کند."
 
 #~ msgid ""
-#~ "Whenever you need to, be sure to use margin utilities to keep things nice and "
-#~ "tidy."
+#~ "Whenever you need to, be sure to use margin utilities to keep things nice and tidy."
 #~ msgstr ""
-#~ "هر زمان که نیاز دارید مطمئن از ابزار‌های حاشیه‌ای (margin) استفاده کنیدتا چیزها "
-#~ "را زیباتر و منظم‌تر نگه‌دارید."
+#~ "هر زمان که نیاز دارید مطمئن از ابزار‌های حاشیه‌ای (margin) استفاده کنیدتا چیزها را "
+#~ "زیباتر و منظم‌تر نگه‌دارید."
 
 #~ msgid "Compact"
 #~ msgstr "فشرده"
@@ -14297,8 +14150,7 @@ msgstr ""
 #~ msgid "A message can only take up the width of its content."
 #~ msgstr "یک پیام تنها می‌تواند به اندازه عرض محتوای آن باشد."
 
-#~ msgid ""
-#~ "Aww yeah, you successfully read this important alert message. Sign up now!"
+#~ msgid "Aww yeah, you successfully read this important alert message. Sign up now!"
 #~ msgstr "اوه بله شما موفق به خواندن‌این پیام مهم شدید‌‌. همین الان ثبت‌نام کنید!"
 
 #~ msgid "Another type of usage"
@@ -14494,28 +14346,27 @@ msgstr ""
 #~ msgstr "این عنوان ۶ است"
 
 #~ msgid ""
-#~ "Documentation and examples for showing pagination to indicate a series of "
-#~ "related content exists across multiple pages."
+#~ "Documentation and examples for showing pagination to indicate a series of related "
+#~ "content exists across multiple pages."
 #~ msgstr ""
-#~ "مستندات و نمونه‌هایی برای نشان دادن صفحه بندی برای نمایش یک سری از محتوای مرتبط "
-#~ "که در چند صفحه وجود دارد."
+#~ "مستندات و نمونه‌هایی برای نشان دادن صفحه بندی برای نمایش یک سری از محتوای مرتبط که در "
+#~ "چند صفحه وجود دارد."
 
 #~ msgid "Overview"
 #~ msgstr "بررسی اجمالی"
 
 #~ msgid ""
-#~ "We use a large block of connected links for our pagination, making links hard "
-#~ "to miss and easily scalable—all while providing large hit areas. Pagination is "
-#~ "built with list HTML elements so screen readers can announce the number of "
-#~ "available links. Use a wrapping <nav> element to identify it as a navigation "
-#~ "section to screen readers and other assistive technologies."
+#~ "We use a large block of connected links for our pagination, making links hard to miss "
+#~ "and easily scalable—all while providing large hit areas. Pagination is built with "
+#~ "list HTML elements so screen readers can announce the number of available links. Use "
+#~ "a wrapping <nav> element to identify it as a navigation section to screen readers and "
+#~ "other assistive technologies."
 #~ msgstr ""
-#~ "ما از یک بلوک بزرگ از لینک‌های متصل برای صفحه بندی ما استفاده می‌کنیم، که باعث "
-#~ "میشود لینک‌ها به راحتی قابل دسترسی است و به راحتی مقیاس پذیر باشند - در حالی که "
-#~ "اماده یک کلیک هستند.صفحه بندی با عناصر لیست در اچ‌تی‌ام‌ال‌5 ساخته‌شده اند‌، "
-#~ "بنابر‌این خوانندگان میتوانند تعداد لینک‌های موجود دار اعلام کنند‌‌. از یک "
-#~ "عنصر<nav> استفاده کنید تا آنرا به عنوان بخش ناوبری برای نمایش به خوانندگان و "
-#~ "سایر تکنیک‌ها شناسایی کنید‌‌."
+#~ "ما از یک بلوک بزرگ از لینک‌های متصل برای صفحه بندی ما استفاده می‌کنیم، که باعث میشود "
+#~ "لینک‌ها به راحتی قابل دسترسی است و به راحتی مقیاس پذیر باشند - در حالی که اماده یک "
+#~ "کلیک هستند.صفحه بندی با عناصر لیست در اچ‌تی‌ام‌ال‌5 ساخته‌شده اند‌، بنابر‌این خوانندگان "
+#~ "میتوانند تعداد لینک‌های موجود دار اعلام کنند‌‌. از یک عنصر<nav> استفاده کنید تا آنرا به "
+#~ "عنوان بخش ناوبری برای نمایش به خوانندگان و سایر تکنیک‌ها شناسایی کنید‌‌."
 
 #~ msgid "A pagination can use in many colors"
 #~ msgstr "یک صفحه بندی می‌تواند از تعداد زیادی رنگ استفاده‌کند‌‌"
@@ -14527,11 +14378,11 @@ msgstr ""
 #~ msgstr "مستندات و نمونه‌هایی برای استفاده از نوار پیشرفت در سیفتال."
 
 #~ msgid ""
-#~ "Siftal use html progress and meter and have some styles on them, each serving "
-#~ "its own semantic purpose"
+#~ "Siftal use html progress and meter and have some styles on them, each serving its own "
+#~ "semantic purpose"
 #~ msgstr ""
-#~ "سیفتال از نوار پیشرفت اچ‌تی‌ام‌ال و متر و برخی استایل‌های همراه استفاده می‌کند‌، هر "
-#~ "سرویس برای منظور خواصی استفاده میشد‌‌"
+#~ "سیفتال از نوار پیشرفت اچ‌تی‌ام‌ال و متر و برخی استایل‌های همراه استفاده می‌کند‌، هر سرویس "
+#~ "برای منظور خواصی استفاده میشد‌‌"
 
 #~ msgid "Meter"
 #~ msgstr "متر"
@@ -14561,12 +14412,11 @@ msgstr ""
 #~ msgstr "سی‌اس‌اس ریست"
 
 #~ msgid ""
-#~ "Reset, a collection of element-specific CSS changes in a single file, "
-#~ "kickstart Siftal to provide an elegant, consistent, and simple baseline to "
-#~ "build upon."
+#~ "Reset, a collection of element-specific CSS changes in a single file, kickstart "
+#~ "Siftal to provide an elegant, consistent, and simple baseline to build upon."
 #~ msgstr ""
-#~ "بازنشانی، مجموعه‌ای از ‌سی‌اس‌اس‌‌های خاص را در یک فایل واحد تغییر می‌دهد‌، kickstart "
-#~ "سیفتال برای ارائه‌ای زیبا‌، استوار و پایه‌ای ساده بر ساختن."
+#~ "بازنشانی، مجموعه‌ای از ‌سی‌اس‌اس‌‌های خاص را در یک فایل واحد تغییر می‌دهد‌، kickstart سیفتال "
+#~ "برای ارائه‌ای زیبا‌، استوار و پایه‌ای ساده بر ساختن."
 
 #~ msgid "should have sans-serif font family (opinionated)"
 #~ msgstr "باید دارای فونت sans-serif باشد (احتیاط)"
@@ -14589,8 +14439,7 @@ msgstr ""
 #~ msgid "dummy anchor"
 #~ msgstr "لنگر جلعی"
 
-#~ msgid ""
-#~ "should not have a focus outline when both focused and hovered (opinionated)"
+#~ msgid "should not have a focus outline when both focused and hovered (opinionated)"
 #~ msgstr "باید زمانی که هر دو متمرکز و شناور باشد، تمرکز نداشته باشند (احتیاط)"
 
 #~ msgid "should have a dotted bottom border"
@@ -14660,18 +14509,17 @@ msgstr ""
 #~ msgstr "باید اسکرول را هنگامیکه محتوا برای ابعاد زیاد است حرکت دهد‌‌"
 
 #~ msgid ""
-#~ " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo "
-#~ "ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me."
+#~ " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget "
+#~ "dolor. Aenean massa. Cum sociis natoque penatibus et me."
 #~ msgstr ""
-#~ " لورم ‌ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از "
-#~ "طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله."
+#~ " لورم ‌ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان "
+#~ "گرافیک است. چاپگرها و متون بلکه روزنامه و مجله."
 
 #~ msgid ""
-#~ "should render <code>em</code>-unit preformatted text at the same absolute size "
-#~ "as normal text"
+#~ "should render <code>em</code>-unit preformatted text at the same absolute size as "
+#~ "normal text"
 #~ msgstr ""
-#~ "باید متن <code> em </ code> با همان اندازه مطلق به عنوان متن معمولی قالب بندی "
-#~ "شود"
+#~ "باید متن <code> em </ code> با همان اندازه مطلق به عنوان متن معمولی قالب بندی شود"
 
 #~ msgid "should inherit <code>color</code> from ancestor"
 #~ msgstr "باید <code>color</code> را از بقیه اجزاء به ارث ببرد"
@@ -14710,8 +14558,7 @@ msgstr ""
 #~ msgstr "نباید فاصله درونی(padding) داشته باشد"
 
 #~ msgid ""
-#~ "should display a default cursor for the decrement button's click target in "
-#~ "Chrome"
+#~ "should display a default cursor for the decrement button's click target in Chrome"
 #~ msgstr "باید یک مکان‌نمای پیشفرض برای کاهش دکمه‌های در کروم"
 
 #~ msgid "should not have a cancel button in Safari or Chrome"
@@ -14807,33 +14654,29 @@ msgstr ""
 #~ msgid "Grey"
 #~ msgstr "خاکستری"
 
-#~ msgid ""
-#~ "A step shows the completion status of an activity in a series of activities"
+#~ msgid "A step shows the completion status of an activity in a series of activities"
 #~ msgstr "یک گام وضعیت کامل شدن یک فعالیت را در یک سری از فعالیت‌ها نشان می‌دهد"
 
 #~ msgid "A table's colors can be changed"
 #~ msgstr "رنگ جداول می‌تواند تغییر‌کند"
 
 #~ msgid ""
-#~ "Similar to colored tables, use one of modifier classes to make rows appear "
-#~ "colored."
+#~ "Similar to colored tables, use one of modifier classes to make rows appear colored."
 #~ msgstr ""
-#~ "مانند جداول رنگی‌، از یکی از کلاس‌های تعیین کننده استفاده کنید تا سطر‌ها رنگی "
-#~ "باشد."
+#~ "مانند جداول رنگی‌، از یکی از کلاس‌های تعیین کننده استفاده کنید تا سطر‌ها رنگی باشد."
 
 #~ msgid ""
-#~ "Add <code class='code1'>.bordered</code> for borders on all sides of the table "
-#~ "and cells."
+#~ "Add <code class='code1'>.bordered</code> for borders on all sides of the table and "
+#~ "cells."
 #~ msgstr ""
-#~ "کلاس : <code class='code1'>.bordered</code> را برای اضافه‌کردن حاشیه به تمام "
-#~ "جداول و سلول‌ها اضافه کنید."
+#~ "کلاس : <code class='code1'>.bordered</code> را برای اضافه‌کردن حاشیه به تمام جداول و "
+#~ "سلول‌ها اضافه کنید."
 
 #~ msgid "Only add <code class='code1'>.responsive</code> to table."
 #~ msgstr "تنها با افزودن کلاس <code class='code1'>.responsive</code> به جدول."
 
 #~ msgid ""
-#~ "A table may sometimes need to be more compact to make more rows visible at a "
-#~ "time"
+#~ "A table may sometimes need to be more compact to make more rows visible at a time"
 #~ msgstr "گاهی اوقات ممکن است یک جدول برای جمع‌کردن ردیف‌های بیشتر در یک زمان باشد"
 
 #~ msgid "A table may sometimes need to be more padded for legibility"
@@ -14846,11 +14689,11 @@ msgstr ""
 #~ msgstr "گاهی ممکن است یک جدول بزرگ باشد"
 
 #~ msgid ""
-#~ "Add <code class='code1'>data-sort=desc|asc</code> to table header for add icon "
-#~ "of sorting"
+#~ "Add <code class='code1'>data-sort=desc|asc</code> to table header for add icon of "
+#~ "sorting"
 #~ msgstr ""
-#~ "کد : <code class='code1'>data-sort=desc|asc</code> را برای اضافه‌کردن‌ایکن مرتب "
-#~ "سازی به عنوان جدول اضافه کنید"
+#~ "کد : <code class='code1'>data-sort=desc|asc</code> را برای اضافه‌کردن‌ایکن مرتب سازی به "
+#~ "عنوان جدول اضافه کنید"
 
 #~ msgid "@evazzadeh"
 #~ msgstr "@evazzadeh"
@@ -14886,37 +14729,33 @@ msgstr ""
 #~ msgstr "Gruntfile.js"
 
 #~ msgid "A textarea can be used to allow for extended user input."
-#~ msgstr ""
-#~ "برای اجازه دادن به ورودی بیشتر از سمت کاربر می‌توان از یک ‌مکان‌متن‌ استفاده کرد‌‌."
+#~ msgstr "برای اجازه دادن به ورودی بیشتر از سمت کاربر می‌توان از یک ‌مکان‌متن‌ استفاده کرد‌‌."
 
 #~ msgid "To specify an approximate text area size use the rows attribute."
-#~ msgstr ""
-#~ "برای مشخص‌کردن اندازه تغریبی متن در ‌مکان‌متن‌ از ویژگی ردیف (row) اضافه کنید."
+#~ msgstr "برای مشخص‌کردن اندازه تغریبی متن در ‌مکان‌متن‌ از ویژگی ردیف (row) اضافه کنید."
 
 #~ msgid "vcard"
 #~ msgstr "کارت"
 
 #~ msgid ""
-#~ "Siftal's cards provide a flexible and extensible content container with "
-#~ "multiple variants and options."
+#~ "Siftal's cards provide a flexible and extensible content container with multiple "
+#~ "variants and options."
 #~ msgstr ""
-#~ "کارت‌های سیفتال انعطاف و گسترش پذیری محتوا به همراه گزینه‌ها و تنظیمات را ارائه "
-#~ "می‌دهند."
+#~ "کارت‌های سیفتال انعطاف و گسترش پذیری محتوا به همراه گزینه‌ها و تنظیمات را ارائه می‌دهند."
 
 #~ msgid ""
 #~ "A card is a flexible and extensible content container. It includes options for "
-#~ "headers and footers, a wide variety of content, contextual background colors, "
-#~ "and powerful display options."
+#~ "headers and footers, a wide variety of content, contextual background colors, and "
+#~ "powerful display options."
 #~ msgstr "کارت یک مخزن با محتوای قابل انعطاف و توسعه پذیر است."
 
 #~ msgid ""
-#~ "Cards are built with as little markup and styles as possible, but still manage "
-#~ "to deliver a ton of control and customization. Built with flexbox, they offer "
-#~ "easy alignment and mix well with other  components."
+#~ "Cards are built with as little markup and styles as possible, but still manage to "
+#~ "deliver a ton of control and customization. Built with flexbox, they offer easy "
+#~ "alignment and mix well with other  components."
 #~ msgstr ""
-#~ "کارت‌ها با امکان نشانه‌گذاری و استایل‌های کوچک ساخته‌شده‌اند اما هنوز امکان کنترل و "
-#~ "سفارشی سازی راه دارد‌‌. ساخته‌شده با flexbox‌، اغلب هماهنگی و ‌ترکیب خوبی با اجزای "
-#~ "دیگر دارند‌‌."
+#~ "کارت‌ها با امکان نشانه‌گذاری و استایل‌های کوچک ساخته‌شده‌اند اما هنوز امکان کنترل و سفارشی "
+#~ "سازی راه دارد‌‌. ساخته‌شده با flexbox‌، اغلب هماهنگی و ‌ترکیب خوبی با اجزای دیگر دارند‌‌."
 
 #~ msgid "10h"
 #~ msgstr "10 ساعت"
@@ -14928,11 +14767,11 @@ msgstr ""
 #~ msgstr "۱هزار لایک"
 
 #~ msgid ""
-#~ "Cards are designed to be flexible to your content. content blocks can include "
-#~ "any custom elements related to your content."
+#~ "Cards are designed to be flexible to your content. content blocks can include any "
+#~ "custom elements related to your content."
 #~ msgstr ""
-#~ "کارت‌ها طراحی‌شده اند تا محتوای شما انعطاف پذیر باشند. بلوک‌های محتوا می‌تواند "
-#~ "شامل هر عنصر سفارشی مربوط به محتوای شما باشند."
+#~ "کارت‌ها طراحی‌شده اند تا محتوای شما انعطاف پذیر باشند. بلوک‌های محتوا می‌تواند شامل هر "
+#~ "عنصر سفارشی مربوط به محتوای شما باشند."
 
 #~ msgid "Accept"
 #~ msgstr "تایید"
@@ -14944,21 +14783,18 @@ msgstr ""
 #~ msgstr "دوست"
 
 #~ msgid ""
-#~ "Javad is a CEO and founder of Ermile and start developing Siftal from 2017 and "
-#~ "hope to write documentaion for it!"
+#~ "Javad is a CEO and founder of Ermile and start developing Siftal from 2017 and hope "
+#~ "to write documentaion for it!"
 #~ msgstr ""
-#~ "جواد مدیرعامل و بنیان گذار ارمایل است و از سال 2017 شروع به توسعه سیفتال کرده "
-#~ "و امیدواریم برای آن مستندسازی کنیم!"
+#~ "جواد مدیرعامل و بنیان گذار ارمایل است و از سال 2017 شروع به توسعه سیفتال کرده و "
+#~ "امیدواریم برای آن مستندسازی کنیم!"
 
 #~ msgid "Reza is a back-end developer of Ermile."
 #~ msgstr "رضا توسعه دهنده بک-اند در ارمایل است."
 
-#~ msgid ""
-#~ "Hasan is a full-stack developer of Ermile and always trying to be in "
-#~ "classrooms!"
+#~ msgid "Hasan is a full-stack developer of Ermile and always trying to be in classrooms!"
 #~ msgstr ""
-#~ "حسن صالحی یک توسعه دهنده کامل در ارمایل است که همیشه سعی می‌کند در کلاس درس "
-#~ "آموزش دهد!"
+#~ "حسن صالحی یک توسعه دهنده کامل در ارمایل است که همیشه سعی می‌کند در کلاس درس آموزش دهد!"
 
 #~ msgid "A card can contain content metadata."
 #~ msgstr "یک کارت می‌تواند شامل متادیتا(metadata)باشد."
@@ -14979,8 +14815,8 @@ msgstr ""
 #~ msgstr "مراکز آموزشی"
 
 #~ msgid ""
-#~ "A card can be formatted so that the entire contents link to another page. Also "
-#~ "a card can contain contain links as images, headers, or inside content."
+#~ "A card can be formatted so that the entire contents link to another page. Also a card "
+#~ "can contain contain links as images, headers, or inside content."
 #~ msgstr ""
 #~ "کارت را می‌توان تغییر داد تا تمام محتوا به صفحه دیگری منتقل شود.همچنین یک کارت "
 #~ "می‌تواندشامل لینک‌ها به عنوان عکس،عنوان،ویا محتوای درونی باشد."
@@ -15383,8 +15219,8 @@ msgstr ""
 
 #~ msgid "list of current permissions is listed here, for edit click on it"
 #~ msgstr ""
-#~ "لیست سطوح‌دسترسی فعلی در اینجا وجود دارد که با کلیک بر روی هر کدام می‌توانید آن "
-#~ "را ویرایش کنید"
+#~ "لیست سطوح‌دسترسی فعلی در اینجا وجود دارد که با کلیک بر روی هر کدام می‌توانید آن را "
+#~ "ویرایش کنید"
 
 #~ msgid "delete permission"
 #~ msgstr "حذف سطح‌دسترسی"
@@ -15395,8 +15231,7 @@ msgstr ""
 #~ msgid "Edit permission of"
 #~ msgstr "ویرایش دسترسی به"
 
-#~ msgid ""
-#~ "Allow or disallow user to access all part of service with full permission!"
+#~ msgid "Allow or disallow user to access all part of service with full permission!"
 #~ msgstr "اجازه یا عدم اجازه به کاربر برای دسترسی کامل به تمام بخش‌های سرویس!"
 
 #~ msgid "Allow or disallow user to view all part of service"
@@ -15424,8 +15259,7 @@ msgstr ""
 #~ msgstr "عنوان مطلب خود را در اینجا وارد کنید"
 
 #~ msgid "Url of your content appear here, click on it to view"
-#~ msgstr ""
-#~ "آدرس مطلب شما در این بخش نمایش داده می‌شود که با کلیک می‌توانید آن را مشاهده کنید"
+#~ msgstr "آدرس مطلب شما در این بخش نمایش داده می‌شود که با کلیک می‌توانید آن را مشاهده کنید"
 
 #~ msgid "Check result"
 #~ msgstr "بررسی نتیجه"
@@ -15436,12 +15270,11 @@ msgstr ""
 #~ msgid "View list of tags"
 #~ msgstr "مشاهده لیست کلیدواژه‌ها"
 
-#~ msgid ""
-#~ "Set slug of content for better addressing in your site and increase SEO rate"
+#~ msgid "Set slug of content for better addressing in your site and increase SEO rate"
 #~ msgstr ""
-#~ "نامک همان آدرس صفحه در آدرس بار مرورگر است. با تنظیم نامک برای نوشته خود به "
-#~ "بهبود وضعیت آدرس‌دهی و افزایش رنک سئو کمک کنید. در صورتی که شما نامک را وارد "
-#~ "نکنید ما آن را خودمان خواهیم ساخت"
+#~ "نامک همان آدرس صفحه در آدرس بار مرورگر است. با تنظیم نامک برای نوشته خود به بهبود "
+#~ "وضعیت آدرس‌دهی و افزایش رنک سئو کمک کنید. در صورتی که شما نامک را وارد نکنید ما آن را "
+#~ "خودمان خواهیم ساخت"
 
 #~ msgid "show short URL of this content"
 #~ msgstr "نمایش آدرس کوتاه برای این نوشته"
@@ -15453,15 +15286,14 @@ msgstr ""
 #~ msgstr "از این کدکوتاه شده در مطالب خود استفاده کنید"
 
 #~ msgid "Set language of your content to show only in this language"
-#~ msgstr ""
-#~ "با تنظیم زبان مربوط به این مطلب آن را فقط در زبان انتخاب شده نمایش خواهیم داد"
+#~ msgstr "با تنظیم زبان مربوط به این مطلب آن را فقط در زبان انتخاب شده نمایش خواهیم داد"
 
 #~ msgid ""
-#~ "All of content set as draft in default, for showing it to visitors you must "
-#~ "set it to publish"
+#~ "All of content set as draft in default, for showing it to visitors you must set it to "
+#~ "publish"
 #~ msgstr ""
-#~ "تمام مطالب به صورت پیش فرض در حالت پیش نویس قرار می‌گیرند که شما برای انتشار و "
-#~ "نمایش آن به بازدیدکنندگان باید وضعیت آن را به منتشرشده تغییر دهید"
+#~ "تمام مطالب به صورت پیش فرض در حالت پیش نویس قرار می‌گیرند که شما برای انتشار و نمایش "
+#~ "آن به بازدیدکنندگان باید وضعیت آن را به منتشرشده تغییر دهید"
 
 #~ msgid "Submit Changes"
 #~ msgstr "ارسال تغییرات"
@@ -15498,8 +15330,7 @@ msgstr ""
 
 #~ msgid "You can see type of your file and click on image to direct access to file"
 #~ msgstr ""
-#~ "شما می‌توانید نوع فایل را دیده و با کلیک روی عکس آن، مستقیما به آن دسترسی داشته "
-#~ "باشید"
+#~ "شما می‌توانید نوع فایل را دیده و با کلیک روی عکس آن، مستقیما به آن دسترسی داشته باشید"
 
 #~ msgid "Click to view"
 #~ msgstr "برای مشاهده کلیک کنید"
@@ -15520,11 +15351,9 @@ msgstr ""
 #~ msgstr "برای مشاهده نتیجه کلیک کنید"
 
 #~ msgid ""
-#~ "You can nest category under other category by making one the “Parent” of the "
-#~ "other."
+#~ "You can nest category under other category by making one the “Parent” of the other."
 #~ msgstr ""
-#~ "شما می‌توانید یک دسته را با کمک ویژگی والد به عنوان زیرشاخه دسته‌ای دیگر ثبت "
-#~ "کنید."
+#~ "شما می‌توانید یک دسته را با کمک ویژگی والد به عنوان زیرشاخه دسته‌ای دیگر ثبت کنید."
 
 #~ msgid "Edit your profile data"
 #~ msgstr "اطلاعات پروفایل خود را ویرایش کنید"
@@ -15605,65 +15434,65 @@ msgstr ""
 #~ "Tejarak have a set of simple and practical tools on a regular basis for modern "
 #~ "businesses."
 #~ msgstr ""
-#~ "تجارک مجموعه ابزارهایی ساده و کاربردی را به‌صورت یکپارچه در اختیار کسب و کارهای "
-#~ "مدرن و همینطور تجارت‌های سنتی مایل به حرکت به‌سوی تکنولوژی قرار می‌دهد."
+#~ "تجارک مجموعه ابزارهایی ساده و کاربردی را به‌صورت یکپارچه در اختیار کسب و کارهای مدرن و "
+#~ "همینطور تجارت‌های سنتی مایل به حرکت به‌سوی تکنولوژی قرار می‌دهد."
 
 #~ msgid ""
-#~ "Advancement of technology and development of Web-based business Cause Need new "
-#~ "tools to resolve the daily needs and that’s the goal of making Tejarak."
+#~ "Advancement of technology and development of Web-based business Cause Need new tools "
+#~ "to resolve the daily needs and that’s the goal of making Tejarak."
 #~ msgstr ""
 #~ "با پیشرفت روزافزون تکنولوژی و گسترش کسب و کارهای مدرن مبتنی بر وب، احتیاج به "
 #~ "ابزارهایی مدرن برای رفع نیازهای روزمره، جرقه‌ای برای تولد تجارک بود."
 
 #~ msgid ""
-#~ "It’s good to know that in addition to the core services, features such as "
-#~ "inventory and invoice will be added."
+#~ "It’s good to know that in addition to the core services, features such as inventory "
+#~ "and invoice will be added."
 #~ msgstr ""
-#~ "قابل توجه اینکه علاوه‌بر توسعه‌ی خدمات اصلی، بخش‌های کوچک‌تر و کاربردی در روند "
-#~ "توسعه ازویر به آن افزوده خواهند شد."
+#~ "قابل توجه اینکه علاوه‌بر توسعه‌ی خدمات اصلی، بخش‌های کوچک‌تر و کاربردی در روند توسعه "
+#~ "ازویر به آن افزوده خواهند شد."
 
 #~ msgid "Attendance system"
 #~ msgstr "سرویس حضور و غیاب"
 
 #~ msgid ""
-#~ "Attendance is so different in Tejarak. Beautiful and stylish design without "
-#~ "requiring any hardware. Notification via social networks, Online reports and "
-#~ "difference compared to other systems are the best feature of Tejarak."
+#~ "Attendance is so different in Tejarak. Beautiful and stylish design without requiring "
+#~ "any hardware. Notification via social networks, Online reports and difference "
+#~ "compared to other systems are the best feature of Tejarak."
 #~ msgstr ""
-#~ "هسته‌ی اصلی تجارک، سامانه حضور و غیاب متفاوت آن نسبت به نمونه‌های موجود است. "
-#~ "طراحی مدرن و چشم‌نواز، بی‌نیاز به تهیه سخت‌افزار، اطلاع‌رسانی از طریق شبکه‌های "
-#~ "اجتماعی، آنلاین و لحظه‌ای بودن گزارشات و مهم‌تر از همه تفاوت آن، از بارزترین "
-#~ "مزایای سرویس حضور و غیاب تجارک است."
+#~ "هسته‌ی اصلی تجارک، سامانه حضور و غیاب متفاوت آن نسبت به نمونه‌های موجود است. طراحی مدرن "
+#~ "و چشم‌نواز، بی‌نیاز به تهیه سخت‌افزار، اطلاع‌رسانی از طریق شبکه‌های اجتماعی، آنلاین و "
+#~ "لحظه‌ای بودن گزارشات و مهم‌تر از همه تفاوت آن، از بارزترین مزایای سرویس حضور و غیاب "
+#~ "تجارک است."
 
 #~ msgid "Daily report"
 #~ msgstr "گزارش روزانه"
 
 #~ msgid ""
-#~ "In many collections received daily reports of the employees is very important. "
-#~ "On the other hands Employees reluctant to do that. In addition to the "
-#~ "classical method, using social networks on Twitter and Daily Telegram reported "
-#~ "in Tejarak possible to get there."
+#~ "In many collections received daily reports of the employees is very important. On the "
+#~ "other hands Employees reluctant to do that. In addition to the classical method, "
+#~ "using social networks on Twitter and Daily Telegram reported in Tejarak possible to "
+#~ "get there."
 #~ msgstr ""
 #~ "در اغلب مجموعه‌ها دریافت گزارش روزانه از کارکنان به‌عنوان بخشی مهم از برنامه‌ریزی "
-#~ "سازمانی است. از طرفی به دلایل گوناگون کارکنان تمایل چندانی به این عمل ندارند. "
-#~ "با به‌خدمت گرفتن شبکه‌های اجتماعی علاوه‌بر روش‌های کلاسیک ثبت گزارش روزانه، تجارک "
-#~ "امکان دریافت گزارش کار را از طریق توییتر و تلگرام نیز امکان‌پذیر کرده و "
-#~ "عملکردهای جدیدی را نیز ارائه می‌دهد."
+#~ "سازمانی است. از طرفی به دلایل گوناگون کارکنان تمایل چندانی به این عمل ندارند. با "
+#~ "به‌خدمت گرفتن شبکه‌های اجتماعی علاوه‌بر روش‌های کلاسیک ثبت گزارش روزانه، تجارک امکان "
+#~ "دریافت گزارش کار را از طریق توییتر و تلگرام نیز امکان‌پذیر کرده و عملکردهای جدیدی را "
+#~ "نیز ارائه می‌دهد."
 
 #~ msgid "Salary calculator"
 #~ msgstr "محاسبه حقوق و دستمزد"
 
 #~ msgid ""
-#~ "For many small business is very complex method of calculating monthly salary "
-#~ "and they Need to have simpler method. In addition to supporting traditional "
-#~ "methods, Tejarak provide monthly salary simple solutions to employees have "
-#~ "modern and beautiful Payroll."
+#~ "For many small business is very complex method of calculating monthly salary and they "
+#~ "Need to have simpler method. In addition to supporting traditional methods, Tejarak "
+#~ "provide monthly salary simple solutions to employees have modern and beautiful "
+#~ "Payroll."
 #~ msgstr ""
-#~ "پیچیدگی‌های روش محاسبه حقوق و دستمزد ماهیانه در ایران، برای بسیاری از کسب و "
-#~ "کارهای خرد دست و پاگیر بوده و نیاز به روش‌های ساده‌تری برای محاسبه سال‌هاست که "
-#~ "نیاز بسیاری از کسب و کارهاست. تجارک علاوه بر پشتیبانی از روش‌های سنتی ولی سخت، "
-#~ "راه‌حل‌هایی ساده برای حقوق ماهیانه کارکنان ارائه می‌دهد تا کارکنان امروزی، فیش‌های "
-#~ "حقوقی مدرن و زیبا را هم تجربه کنند."
+#~ "پیچیدگی‌های روش محاسبه حقوق و دستمزد ماهیانه در ایران، برای بسیاری از کسب و کارهای خرد "
+#~ "دست و پاگیر بوده و نیاز به روش‌های ساده‌تری برای محاسبه سال‌هاست که نیاز بسیاری از کسب و "
+#~ "کارهاست. تجارک علاوه بر پشتیبانی از روش‌های سنتی ولی سخت، راه‌حل‌هایی ساده برای حقوق "
+#~ "ماهیانه کارکنان ارائه می‌دهد تا کارکنان امروزی، فیش‌های حقوقی مدرن و زیبا را هم تجربه "
+#~ "کنند."
 
 #~ msgid "Change log of Tejarak"
 #~ msgstr "پیشرفت پروژه تجارک"
@@ -15687,11 +15516,11 @@ msgstr ""
 #~ msgstr "نسخه آلفای تجارک منتشر شد"
 
 #~ msgid ""
-#~ "The name of project selected as Tejarak and <a href='http://Tejarak."
-#~ "ir'>Tejarak.ir</a> domains registered."
+#~ "The name of project selected as Tejarak and <a href='http://Tejarak.ir'>Tejarak.ir</"
+#~ "a> domains registered."
 #~ msgstr ""
-#~ "نام تجارک برای این پروژه برگزیده شده و دامنه‌ی <a href='http://Tejarak."
-#~ "ir'>Tejarak.ir</a> ثبت شد."
+#~ "نام تجارک برای این پروژه برگزیده شده و دامنه‌ی <a href='http://Tejarak.ir'>Tejarak.ir</"
+#~ "a> ثبت شد."
 
 #~ msgid "Tejarak Logo"
 #~ msgstr "لوگوی تجارک"
@@ -15712,13 +15541,13 @@ msgstr ""
 #~ msgstr "دایره"
 
 #~ msgid ""
-#~ "For that reason, Tejarak makes no request for important information of yours "
-#~ "and allow to save some general information including age, gender, education, "
-#~ "interests, etc  is only for private use of your team or company."
+#~ "For that reason, Tejarak makes no request for important information of yours and "
+#~ "allow to save some general information including age, gender, education, interests, "
+#~ "etc  is only for private use of your team or company."
 #~ msgstr ""
-#~ "به‌همین دلیل، تجارک درخواستی برای ثبت اطلاعات مهم شده نداشته و تنها اجازه ثبت "
-#~ "برخی از اطلاعات عمومی شامل سن، جنسیت، مدرک تحصیلی، علاقمندی‌ها و ... را برای "
-#~ "استفاده خصوصی در تیم یا شرکت شما می‌دهد."
+#~ "به‌همین دلیل، تجارک درخواستی برای ثبت اطلاعات مهم شده نداشته و تنها اجازه ثبت برخی از "
+#~ "اطلاعات عمومی شامل سن، جنسیت، مدرک تحصیلی، علاقمندی‌ها و ... را برای استفاده خصوصی در "
+#~ "تیم یا شرکت شما می‌دهد."
 
 #~ msgid "Tejarak Social Responsibility"
 #~ msgstr "مسئولیت اجتماعی تجارک"
@@ -15727,53 +15556,50 @@ msgstr ""
 #~ msgstr "مسئولیت‌های اجتماعی تجارک"
 
 #~ msgid ""
-#~ "Based on the mentioned definitions of social responsibility, Tejarak considers "
-#~ "itself committed to society. Accordingly, besides attempting to offer creative "
-#~ "and effective services, Tejarak has invariably had social responsibility as "
-#~ "one of its most important missions and, God willing, will continue to do so."
+#~ "Based on the mentioned definitions of social responsibility, Tejarak considers itself "
+#~ "committed to society. Accordingly, besides attempting to offer creative and effective "
+#~ "services, Tejarak has invariably had social responsibility as one of its most "
+#~ "important missions and, God willing, will continue to do so."
 #~ msgstr ""
-#~ "براساس تعاریفی که از مسئولیت اجتماعی شد، تجارک نیز خود را در قبال جامعه متعهد "
-#~ "دانسته و در کنار تلاش جهت ارائه خدمات خلاقانه و اثربخش، همواره مسئولیت اجتماعی "
-#~ "از مهم‌ترین ماموریت‌های تجارک بوده و به‌امیدخدا خواهد بود."
+#~ "براساس تعاریفی که از مسئولیت اجتماعی شد، تجارک نیز خود را در قبال جامعه متعهد دانسته "
+#~ "و در کنار تلاش جهت ارائه خدمات خلاقانه و اثربخش، همواره مسئولیت اجتماعی از مهم‌ترین "
+#~ "ماموریت‌های تجارک بوده و به‌امیدخدا خواهد بود."
 
 #~ msgid ""
-#~ "In spite of technological advancements, paper usage is unfortunately preferred "
-#~ "to modern ways. One of Tejarak's objectives is trying to change this habit and "
-#~ "contribute to the elimination of paper from the routine life and, therefore, "
-#~ "to save the environment."
+#~ "In spite of technological advancements, paper usage is unfortunately preferred to "
+#~ "modern ways. One of Tejarak's objectives is trying to change this habit and "
+#~ "contribute to the elimination of paper from the routine life and, therefore, to save "
+#~ "the environment."
 #~ msgstr ""
-#~ "با وجود پیشرفت تکنولوژی، متاسفانه همچنان علاقه به استفاده از کاغذ قابل پذیرش‌تر "
-#~ "از روش‌های مدرن است؛ یکی از اهداف تجارک تلاش برای تغییر این عادت و کمک به حذف "
-#~ "کاغذ از زندگی روزمره و درنتیجه حفظ محیط‌زیست است."
+#~ "با وجود پیشرفت تکنولوژی، متاسفانه همچنان علاقه به استفاده از کاغذ قابل پذیرش‌تر از "
+#~ "روش‌های مدرن است؛ یکی از اهداف تجارک تلاش برای تغییر این عادت و کمک به حذف کاغذ از "
+#~ "زندگی روزمره و درنتیجه حفظ محیط‌زیست است."
 
 #~ msgid ""
-#~ "Accordingly, with the aim of total elimination of paper use as well as "
-#~ "electronic presentation of services, Tejarak has taken significant steps "
-#~ "towards environmentalism. Be informed about Tejarak's paper-saving quantity."
+#~ "Accordingly, with the aim of total elimination of paper use as well as electronic "
+#~ "presentation of services, Tejarak has taken significant steps towards "
+#~ "environmentalism. Be informed about Tejarak's paper-saving quantity."
 #~ msgstr ""
-#~ "تجارک با حذف صددرصدی استفاده از کاغذ و ارائه خدمات به صورت الکترونیکی توانسته "
-#~ "اقدامی مهم در زمینه حفظ محیط‌زیست داشته باشد. از میزان صرفه‌جویی تجارک در مصرف "
-#~ "کاغذ آگاه شوید."
+#~ "تجارک با حذف صددرصدی استفاده از کاغذ و ارائه خدمات به صورت الکترونیکی توانسته اقدامی "
+#~ "مهم در زمینه حفظ محیط‌زیست داشته باشد. از میزان صرفه‌جویی تجارک در مصرف کاغذ آگاه شوید."
 
 #~ msgid ""
-#~ "Tejarak as well, with regard to its contribution to philanthropist activities, "
-#~ "will honorably provide them with its services free of charge. To make use of "
-#~ "these services, send your identity documents along with your request to "
-#~ "Tejarak's support center."
+#~ "Tejarak as well, with regard to its contribution to philanthropist activities, will "
+#~ "honorably provide them with its services free of charge. To make use of these "
+#~ "services, send your identity documents along with your request to Tejarak's support "
+#~ "center."
 #~ msgstr ""
-#~ "تجارک نیز با توجه به ماموریت خود در راستای کمک به فعالیت‌های خیرخواهانه، خدمات "
-#~ "خود را با افتخار و به‌صورت رایگان دراختیار آنان قرار می‌دهد. برای استفاده از این "
-#~ "خدمات، درخواست خود را همراه با مدارک احراز هویت به مرکز پشتیبانی تجارک ارسال "
-#~ "نمایید."
+#~ "تجارک نیز با توجه به ماموریت خود در راستای کمک به فعالیت‌های خیرخواهانه، خدمات خود را "
+#~ "با افتخار و به‌صورت رایگان دراختیار آنان قرار می‌دهد. برای استفاده از این خدمات، "
+#~ "درخواست خود را همراه با مدارک احراز هویت به مرکز پشتیبانی تجارک ارسال نمایید."
 
 #~ msgid ""
-#~ "Attracting people's participation as well as having their valuable presence "
-#~ "has always been a great honor for Tejarak and to appreciate your support, in "
-#~ "return, Tejarak presents services to promote customer satisfaction."
+#~ "Attracting people's participation as well as having their valuable presence has "
+#~ "always been a great honor for Tejarak and to appreciate your support, in return, "
+#~ "Tejarak presents services to promote customer satisfaction."
 #~ msgstr ""
-#~ "جلب مشارکت مردم و حضور ارزشمند آنان در تجارک باعث افتخار ما بوده و به‌منظور "
-#~ "قدردانی از این حمایت، تجارک نیز خدمات متقابلی را برای افزایش رضایت مشتریان خود "
-#~ "ارائه می‌کند."
+#~ "جلب مشارکت مردم و حضور ارزشمند آنان در تجارک باعث افتخار ما بوده و به‌منظور قدردانی از "
+#~ "این حمایت، تجارک نیز خدمات متقابلی را برای افزایش رضایت مشتریان خود ارائه می‌کند."
 
 #~ msgid "About Ermile"
 #~ msgstr "درباره ارمایل"
@@ -15833,12 +15659,12 @@ msgstr ""
 #~ msgstr "ربات"
 
 #~ msgid ""
-#~ "There is no any restriction about working hours. The working hours are "
-#~ "flexible enough for anyone to work easily. You can work every day for the "
-#~ "whole week including Fridays and holidays from morning till night."
+#~ "There is no any restriction about working hours. The working hours are flexible "
+#~ "enough for anyone to work easily. You can work every day for the whole week including "
+#~ "Fridays and holidays from morning till night."
 #~ msgstr ""
-#~ "هیچ محدودیتی برای ساعت کاری وجود ندارد. هر روز هفته حتی جمعه ها و تعطیلات رسمی "
-#~ "از صبح تا شب می‌توانید در محیط شرکت حضور داشته باشید."
+#~ "هیچ محدودیتی برای ساعت کاری وجود ندارد. هر روز هفته حتی جمعه ها و تعطیلات رسمی از صبح "
+#~ "تا شب می‌توانید در محیط شرکت حضور داشته باشید."
 
 #~ msgid "A pleasant green environment for work"
 #~ msgstr "محیط کاری سبز"
