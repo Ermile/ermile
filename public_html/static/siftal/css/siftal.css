@@ -2085,9 +2085,6 @@ progress.xl, meter.xl {
 .rtl .tbl1 tr th:first-of-type, .rtl .tbl1 tr td:first-of-type {
   padding-right: 3rem; }
 
-.tbl1 td a {
-  word-break: break-all; }
-
 .tbl1.txtC th, .tbl1.txtC td {
   text-align: center; }
 
@@ -2506,17 +2503,18 @@ progress.xl, meter.xl {
   line-height: 1.3; }
 
 .tbox.pictogram > span[class^="sf-"] {
-  font-size: 5em;
+  font-size: 4em;
   transition: color 0.1s;
   position: absolute;
   line-height: 50px;
   top: 50%;
   right: 10px;
-  margin-top: -30px;
+  margin-top: -0.5em;
   color: #aaa; }
 
 .tbox.pictogram > span[class^="sf-"]:before {
-  vertical-align: -webkit-baseline-middle; }
+  vertical-align: -webkit-baseline-middle;
+  display: block; }
 
 .rtl .tbox.pictogram > span[class^="sf-"] {
   right: initial;
