@@ -645,7 +645,11 @@ address {
   font-size: 2em;
   margin: 0;
   line-height: 30px;
-  transition: 0.3s; }
+  transition: 0.3s;
+  max-width: 170px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
 
 #ermileBadge h2:hover {
   color: #fff; }
@@ -655,7 +659,11 @@ address {
   font-size: 1em;
   margin: 0;
   line-height: 20px;
-  transition: 0.3s; }
+  transition: 0.3s;
+  max-width: 170px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
 
 #ermileBadge h3:hover {
   color: #fff; }
@@ -20010,11 +20018,15 @@ body.siftal .cbox table {
 
 .siftal .dashHead h1 span {
   padding: 0 0.5em;
-  font-weight: bold; }
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 300px; }
 
 /* header flex */
 .siftal .dashHead i {
-  padding: 0 1.5em;
+  padding: 0;
   cursor: pointer;
   transition-duration: 0.3s;
   transition-property: color, background-color;
@@ -20099,6 +20111,28 @@ body.siftal .cbox table {
   border-radius: 50%;
   margin: 5px; }
 
+.siftal .dashHead .notification[data-new]:after {
+  content: "\2a";
+  font-family: "siftal","tahoma" !important;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #f02020;
+  font-size: 1.1em;
+  animation: pulseNotificationHeart 0.7s infinite ease-in-out; }
+
+.siftal .dashHead .notification[data-new] .sf-bell {
+  font-size: 1.3em;
+  transition: 0.1s; }
+
+@keyframes pulseNotificationHeart {
+  0% {
+    opacity: .7; }
+  80% {
+    opacity: .9;
+    transform: scale(1.4); }
+  100% {
+    opacity: .7; } }
 /* sidebar */
 .siftal #sidebar .scr {
   overflow: hidden;
@@ -20174,7 +20208,10 @@ body.siftal .cbox table {
 .siftal #sidebar figure figcaption {
   max-width: 100%;
   margin: 0 auto;
-  padding: 1em 0; }
+  padding: 1em 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
 
 .siftal #sidebar .menu {
   overflow-y: auto; }
@@ -21398,6 +21435,9 @@ body.siftal .cbox table {
 
   .siftal .dashHead h1 a {
     padding: 0; }
+
+  .siftal .dashHead h1 a span {
+    max-width: 120px; }
 
   .siftal .wrapper {
     padding: 2em 1em; }
