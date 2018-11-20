@@ -19965,6 +19965,9 @@ body.siftal .cbox table {
 .tbl1.openable th.date, .tbl1.openable td.date {
   width: 150px; }
 
+.tbl1.openable th.via, .tbl1.openable td.via {
+  width: 75px; }
+
 .tbl1.openable td.type i {
   background-color: #eee;
   padding: 5px;
@@ -19995,8 +19998,13 @@ body.siftal .cbox table {
 .tbl1.openable tbody tr[data-open] td.subject .title {
   white-space: normal; }
 
-.tbl1.openable tbody tr td .sendVia {
-  margin-top: 0.5em; }
+.tbl1.openable tbody tr td.via i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #eee;
+  border-radius: 30%;
+  display: inline-block; }
 
 /* header */
 .siftal .dashHead {
