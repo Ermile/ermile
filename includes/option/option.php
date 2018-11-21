@@ -1,5 +1,6 @@
 <?php
 require_once('social.php');
+require_once('sms.php');
 
 /**
 @ In the name Of Allah
@@ -20,7 +21,7 @@ self::$language =
 /**
  * system default lanuage
  */
-self::$url['tld']        = 'com';
+// self::$url['tld']        = 'com';
 self::$url['protocol']   = 'https';
 self::$config['visitor'] = true;
 
