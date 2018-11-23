@@ -2956,6 +2956,7 @@ img.mini {
 .mini .vcard {
   width: 150px;
   min-width: 150px;
+  max-width: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -moz-inline-flex;
@@ -3235,6 +3236,19 @@ img.mini {
     box-shadow: 0 0 0 0.5em rgba(204, 169, 44, 0); }
   100% {
     box-shadow: 0 0 0 0 rgba(204, 169, 44, 0); } }
+.vcard .mini .vcard {
+  min-width: auto;
+  margin: 0; }
+
+.vcard .mini .vcard .content .header {
+  margin: 0;
+  height: 25px;
+  line-height: 25px; }
+
+.vcard .mini .vcard .content .btn {
+  height: 35px;
+  line-height: 31px; }
+
 .icard {
   background-color: #fff;
   color: #777;
@@ -20261,6 +20275,9 @@ body.siftal .cbox table {
 
 .siftal #sidebar .menu {
   overflow-y: auto; }
+
+[data-debugger] .siftal #sidebar figure .avatar:before {
+  border-color: #f69900; }
 
 #sidebar .toggleClean {
   position: absolute;
