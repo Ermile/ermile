@@ -6,35 +6,11 @@ class model
 {
 	public static function post()
 	{
-
-		if(\dash\request::post('checktoken'))
+		$domain = \dash\request::post('domain');
+		if($domain)
 		{
-			$token   = \dash\request::post('token');
-			$project = \dash\request::post('project');
-			$file    = self::file_addr();
-			$get     = @file_get_contents($file);
-			if(isset($get[$project]))
-			{
-				if(isset($get[$project]['token']))
-				{
-					if($get[$project]['token'] === $token)
-					{
-						\dash\code::jsonBoom(['ok' => true]);
-					}
-				}
-			}
-			\dash\code::jsonBoom(['ok' => false]);
+			self::send_request($domain);
 		}
-		else
-		{
-
-			$domain = \dash\request::post('domain');
-			if($domain)
-			{
-				self::send_request($domain);
-			}
-		}
-
 	}
 
 	private static function generate_verification_code($_domain)

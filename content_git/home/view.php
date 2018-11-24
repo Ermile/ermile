@@ -27,16 +27,33 @@ class view
 	private static function project_list()
 	{
 		$list = [];
-		$list[] = 'http://jibres.local';
-		$list[] = 'http://azvir.local';
-		$list[] = 'http://tejarak.local';
-		$list[] = 'http://qhkarimeh.local';
-		$list[] = 'http://iranquran.local';
-		$list[] = 'http://khadije.local';
-		$list[] = 'http://ermile.local';
-		$list[] = 'http://taraztax.local';
-		// $list[] = 'http://iranpresidents.com';
-		// $list[] = 'http://deadbrowser.com';
+		if(\dash\url::isLocal())
+		{
+			$list[] = 'http://jibres.local';
+			$list[] = 'http://azvir.local';
+			$list[] = 'http://tejarak.local';
+			$list[] = 'http://qhkarimeh.local';
+			$list[] = 'http://iranquran.local';
+			$list[] = 'http://khadije.local';
+			$list[] = 'http://ermile.local';
+			$list[] = 'http://taraztax.local';
+			// $list[] = 'http://iranpresidents.com';
+			// $list[] = 'http://deadbrowser.com';
+
+		}
+		else
+		{
+			$list[] = 'https://jibres.com';
+			$list[] = 'https://azvir.com';
+			$list[] = 'https://tejarak.com';
+			$list[] = 'https://ermile.com';
+			$list[] = 'https://qhkarimeh.ir';
+			$list[] = 'https://iranquran.ir';
+			$list[] = 'https://khadije.com';
+			$list[] = 'https://taraztax.ir';
+			$list[] = 'https://iranpresidents.com';
+			$list[] = 'https://deadbrowser.com';
+		}
 		return $list;
 	}
 
