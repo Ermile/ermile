@@ -71,7 +71,15 @@ class model
 
 	private static function send_request($_domain)
 	{
-		$url            = $_domain. '/hook/gitdetail';
+		if(\dash\url::isLocal())
+		{
+			$protocol = 'http://';
+		}
+		else
+		{
+			$protocol = 'https://';
+		}
+		$url            = $protocol. $_domain. '/hook/gitdetail';
 		$token          = self::generate_verification_code($_domain);
 		$field          = [];
 		$field['token'] = $token;
