@@ -1,0 +1,42 @@
+{%extends display.main%}
+
+
+{%block pageContent%}
+
+<div class="cbox">
+	{%for key, value in projectsList%}
+	<div class="f">
+
+	  <div class="c5 s12">
+	    <a class="dcard x2 txtC" >
+	      <img src="{{value.logo}}" alt='{{value.sitetitle}}' class="w100">
+	      <h1>{{value.sitetitle}}</h1>
+	    </a>
+	  </div>
+
+	  <div class="c4 s12">
+
+	  	<div class="dcard x2 f">
+
+		  	<div class="">{%trans "Last update"%} {{value.projectVersion | dt("human", 'month')}}</div>
+
+		  	<div class="">{%trans "Project database"%} {{value.dbVersion | fitNumber(false)}}</div>
+
+		  	<div class="">{%trans "Addon Database"%} {{value.dbVersionAddon | fitNumber(false)}}</div>
+
+	  	</div>
+
+	  </div>
+
+	  <div class="c3">
+	  	<div class="dcard x2">
+		  	<form method="post">
+		  		<button class="btn hauto block ">{%trans "Update git repository"%}</button>
+		  	</form>
+	  	</div>
+	  </div>
+
+	</div>
+	{%endfor%}
+</div>
+{%endblock%}
