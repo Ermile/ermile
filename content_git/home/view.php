@@ -17,7 +17,7 @@ class view
 		$project_detail = [];
 		foreach ($list as $key => $value)
 		{
-			$project_detail[] = self::get_detail($value);
+			$project_detail[$value] = self::get_detail($value);
 		}
 
 		return $project_detail;
