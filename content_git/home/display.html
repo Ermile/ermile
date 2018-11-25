@@ -18,11 +18,15 @@
 
 	  	<div class="dcard x2 f">
 
-		  	<div class="">{%trans "Last update"%} {{value.projectVersion | dt("human", 'month')}}</div>
+		  	<div class="">{%trans "Last update"%} <b>{{value.lastUpdateTime | date("Y-m-d H:i:s") | dt("human", 'year')}}</b></div>
 
-		  	<div class="">{%trans "Project database"%} {{value.dbVersion | fitNumber(false)}}</div>
+		  	<div class="">{%trans "Project database"%} <b>{{value.dbVersion | fitNumber(false)}}</b></div>
 
-		  	<div class="">{%trans "Addon Database"%} {{value.dbVersionAddon | fitNumber(false)}}</div>
+		  	<div class="">{%trans "Addon Database"%} <b>{{value.dbVersionAddon | fitNumber(false)}}</b></div>
+
+			  	<div class="progress" data-percent='{{value.left}}'>
+			    	<div class="bar"></div>
+			  	</div>
 
 	  	</div>
 

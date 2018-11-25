@@ -17,7 +17,43 @@ class view
 		$project_detail = [];
 		foreach ($list as $key => $value)
 		{
-			$project_detail[$value] = self::get_detail($value);
+			$temp = self::get_detail($value);
+			if(isset($temp['lastUpdateTime']))
+			{
+				$time = intval($temp['lastUpdateTime']);
+			}
+			else
+			{
+				$time = time() - (365*24*60*60);
+			}
+
+			$date1 = date_create(date("Y-m-d", $time));
+			$date2 = date_create(date("Y-m-d"));
+			$diff  = date_diff($date1,$date2);
+			if($diff->m || $diff->y)
+			{
+				$diff = 10;
+			}
+			else
+			{
+
+				$diff  = $diff->d;
+
+				if($diff > 10)
+				{
+					$diff = 10;
+				}
+			}
+
+			$diff = 10 - $diff;
+
+			$left = ($diff * 100)/ 10;
+
+
+			$temp['left'] = $left;
+
+			$project_detail[$value] = $temp;
+
 		}
 
 		return $project_detail;

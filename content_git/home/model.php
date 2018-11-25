@@ -10,6 +10,7 @@ class model
 		if($domain)
 		{
 			self::send_request($domain);
+			\dash\notif::ok(T_("Update request sended"));
 		}
 	}
 
