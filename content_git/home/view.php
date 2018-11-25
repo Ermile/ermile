@@ -61,11 +61,9 @@ class view
 	private static function get_detail($_domain)
 	{
 		$url = $_domain. '/hook/gitdetail';
-		$response = file_get_contents($url);
+		$response = @file_get_contents($url);
 		$response = json_decode($response, true);
-
 		return $response;
-
 	}
 }
 ?>

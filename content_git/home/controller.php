@@ -20,7 +20,14 @@ class controller
 				{
 					if($get[$project]['token'] === $token)
 					{
-						\dash\code::jsonBoom(['ok' => true]);
+						if(isset($get[$project]['time']))
+						{
+							$time = $get[$project]['time'];
+							if(time() - intval($time) < 30)
+							{
+								\dash\code::jsonBoom(['ok' => true]);
+							}
+						}
 					}
 				}
 			}
