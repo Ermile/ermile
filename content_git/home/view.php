@@ -81,6 +81,7 @@ class view
 		{
 			$list[] = 'https://jibres.com';
 			$list[] = 'https://azvir.com';
+			$list[] = 'https://sarshomar.com';
 			$list[] = 'https://tejarak.com';
 			$list[] = 'https://ermile.com';
 			$list[] = 'https://qhkarimeh.ir';
