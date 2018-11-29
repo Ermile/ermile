@@ -16636,6 +16636,91 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   -webkit-transform: translate(50%, 50%);
   transform: translate(50%, 50%); }
 
+.radio3 {
+  padding: 0;
+  position: relative; }
+
+.radio3 input {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  opacity: 0; }
+
+.radio3 label {
+  display: block;
+  padding: 7px 10px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.3s;
+  background-color: #f6f8fa;
+  min-width: 50px;
+  height: 36px;
+  border-radius: 0.25rem;
+  border: 1px solid transparent; }
+
+.radio3 label::before {
+  content: '';
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  transition: 0.3s;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+
+.radio3 label::after {
+  content: '';
+  position: absolute;
+  left: 23px;
+  top: 16px;
+  background-color: #fff;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white,4px 0 0 white,4px -2px 0 white,4px -4px 0 white,4px -6px 0 white,4px -8px 0 #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: 0.1s; }
+
+.radio3 label:hover::before {
+  border-color: rgba(0, 0, 0, 0.2); }
+
+.radio3 input:checked + label {
+  border-color: #2080d0; }
+
+.radio3 input:checked + label::after {
+  opacity: 1; }
+
+.radio3 input:checked + label::before {
+  background-color: #4090d0;
+  border-color: transparent; }
+
+.radio3 input:not(:checked):focus + label::before {
+  border-color: rgba(128, 192, 208, 0.9); }
+
+.radio3 input:checked:focus + label::before {
+  opacity: 0.7; }
+
+.radio3 input:disabled + label {
+  color: #bbb;
+  cursor: auto; }
+
+.radio3 input:disabled + label::before {
+  background-color: #ddd; }
+
+.rtl .radio3 label::before {
+  margin-right: 0;
+  margin-left: 10px; }
+
+.rtl .radio3 label::after {
+  left: 0;
+  right: 23px; }
+
 .radioGateway {
   padding: 0.5em;
   position: relative;
@@ -16680,91 +16765,6 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 
 .radioGateway input:active + label {
   transform: translateY(5px); }
-
-.radioGender {
-  padding: 0;
-  position: relative; }
-
-.radioGender input {
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  z-index: -1;
-  width: 0;
-  height: 0;
-  opacity: 0; }
-
-.radioGender label {
-  display: block;
-  padding: 7px 10px;
-  position: relative;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: 0.3s;
-  background-color: #f6f8fa;
-  min-width: 50px;
-  height: 36px;
-  border-radius: 0.25rem;
-  border: 1px solid transparent; }
-
-.radioGender label::before {
-  content: '';
-  margin-right: 10px;
-  display: inline-block;
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
-  transition: 0.3s;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1); }
-
-.radioGender label::after {
-  content: '';
-  position: absolute;
-  left: 23px;
-  top: 16px;
-  background-color: #fff;
-  width: 2px;
-  height: 2px;
-  box-shadow: 2px 0 0 white,4px 0 0 white,4px -2px 0 white,4px -4px 0 white,4px -6px 0 white,4px -8px 0 #fff;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  opacity: 0;
-  transition: 0.1s; }
-
-.radioGender label:hover::before {
-  border-color: rgba(0, 0, 0, 0.2); }
-
-.radioGender input:checked + label {
-  border-color: #2080d0; }
-
-.radioGender input:checked + label::after {
-  opacity: 1; }
-
-.radioGender input:checked + label::before {
-  background-color: #4090d0;
-  border-color: transparent; }
-
-.radioGender input:not(:checked):focus + label::before {
-  border-color: rgba(128, 192, 208, 0.9); }
-
-.radioGender input:checked:focus + label::before {
-  opacity: 0.7; }
-
-.radioGender input:disabled + label {
-  color: #bbb;
-  cursor: auto; }
-
-.radioGender input:disabled + label::before {
-  background-color: #ddd; }
-
-.rtl .radioGender label::before {
-  margin-right: 0;
-  margin-left: 10px; }
-
-.rtl .radioGender label::after {
-  left: 0;
-  right: 23px; }
 
 .radioRating .rateBox {
   display: inline-block;
