@@ -20179,6 +20179,50 @@ body.siftal .cbox table {
   border-radius: 30%;
   display: inline-block; }
 
+.siftal .alerty2-popup .langlist {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #ccc; }
+
+.siftal .alerty2-popup .langlist a {
+  border: 1px solid #eee;
+  padding: 0.5em 1em;
+  margin: 0 3px;
+  transition: 0.3s;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  -moz-box-flex: 1;
+  flex-grow: 1;
+  max-width: 100%; }
+
+.siftal .alerty2-popup .langlist a.active {
+  border-color: #5cb85c; }
+
+.siftal .alerty2-popup .langlist a.active::after {
+  content: "\6f";
+  display: inline-block;
+  color: #5cb85c;
+  font-family: siftal;
+  padding: 0 5px;
+  float: right;
+  vertical-align: bottom; }
+
+.siftal.rtl .alerty2-popup .langlist a.active::after {
+  float: left; }
+
+.siftal .alerty2-popup .langlist a:hover {
+  border-color: #ccc; }
+
+.siftal .alerty2-popup .langlist a:focus {
+  border-color: #aaa; }
+
+.siftal .alerty2-popup .langlist a:active {
+  border-color: #777; }
+
 /* header */
 .siftal .dashHead {
   height: 50px;
