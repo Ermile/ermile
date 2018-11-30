@@ -857,6 +857,9 @@ a:active {
   flex-grow: 1;
   max-width: 100%; }
 
+.f > .transition {
+  transition: 0.3s; }
+
 .f > .cauto {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
@@ -15276,6 +15279,28 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end, body.alerty2-no-back
 
 [data-kerkere-icon="open"]::before {
   content: "" !important; }
+
+[data-copy] {
+  position: relative; }
+
+[data-copy]::after {
+  position: absolute;
+  display: block;
+  content: "copied";
+  font-size: 0.9em;
+  line-height: 2em;
+  padding: 0 1em;
+  color: #fff;
+  background-color: #777;
+  border-radius: 0.25rem;
+  opacity: 0;
+  transition: 0.2s; }
+
+.copied[data-copy] {
+  overflow: visible !important; }
+
+.copied[data-copy]::after {
+  opacity: 1; }
 
 body.enter {
   min-height: 100%; }
