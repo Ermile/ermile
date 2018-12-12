@@ -21885,6 +21885,9 @@ body.siftal .cbox table {
   textarea {
     overflow: auto; }
 
+  .alerty2-container {
+    display: none !important; }
+
   body.siftal {
     background-color: transparent; }
 
