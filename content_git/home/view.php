@@ -86,6 +86,7 @@ class view
 			$list[] = 'https://ermile.com';
 			$list[] = 'https://qhkarimeh.ir';
 			$list[] = 'https://iranquran.ir';
+			$list[] = 'https://nazr.ermile.com';
 			$list[] = 'https://khadije.com';
 			$list[] = 'https://taraztax.ir';
 			$list[] = 'https://iranpresidents.com';
