@@ -15,7 +15,7 @@
    </nav>
 
    <nav data-xhr="header-profile" class="cauto flex os">
-    <div class="vm"><span class="sf-globe"></span>{{langList({'html':true, 'all2':true})}}</div>
+    <div class="vm"><span class="sf-globe"></span>{{langList({'html':true, 'all2':true}) | raw}}</div>
 {%if login.id%}
     <a href="{{url.here}}/cp" data-direct class="btn">{%trans "Admin Panel"%}</a>
 {%else%}
