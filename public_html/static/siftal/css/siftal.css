@@ -2246,7 +2246,8 @@ progress.xl, meter.xl {
 /*================================================================== [ v5 ]*/
 .tbl1.v5 {
   border-collapse: separate;
-  border-spacing: 0 1rem; }
+  border-spacing: 0 1rem;
+  padding: 0 1rem; }
 
 .tbl1.v5 thead {
   font-size: 1em;
@@ -3258,7 +3259,8 @@ img.mini {
     box-shadow: 0 0 0 0 rgba(204, 169, 44, 0); } }
 .vcard .mini .vcard {
   min-width: auto;
-  margin: 0; }
+  margin: 0;
+  width: 100%; }
 
 .vcard .mini .vcard .content .header {
   margin: 0;
@@ -21813,6 +21815,23 @@ body.siftal .cbox table {
     display: block !important;
     padding-top: 0.25em !important;
     padding-bottom: 0.25em !important;
+    border: none !important;
+    background-color: transparent !important; }
+
+  .tbl1 td.collapsing.sauto, .tbl1 th.collapsing.sauto {
+    white-space: initial; }
+
+  .tbl1.responsive tr {
+    width: auto !important;
+    display: block !important;
+    border-top: 1px solid rgba(30, 30, 30, 0.1);
+    padding-top: 0.8em;
+    padding-bottom: 0.8em; }
+
+  .tbl1.responsive th, .tbl1.responsive td {
+    width: auto !important;
+    display: block !important;
+    padding: 0.25em 1em !important;
     border: none !important;
     background-color: transparent !important; }
 
