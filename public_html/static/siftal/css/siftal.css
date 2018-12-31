@@ -10298,7 +10298,7 @@ body:not(.tippy-touch) .tippy-popper[x-placement=left] .tippy-tooltip[data-anima
   height: 0;
   opacity: 0; }
 
-/*!
+/*
  * # Semantic UI 2.3.3 - Transition
  * http://github.com/semantic-org/semantic-ui/
  *
@@ -16682,7 +16682,8 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 
 .radio3 {
   padding: 0;
-  position: relative; }
+  position: relative;
+  min-width: 80px; }
 
 .radio3 input {
   padding: 0;
@@ -16704,7 +16705,8 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   min-width: 50px;
   height: 36px;
   border-radius: 0.25rem;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  white-space: nowrap; }
 
 .radio3 label::before {
   content: '';
