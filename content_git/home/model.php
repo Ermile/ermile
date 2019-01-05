@@ -72,7 +72,7 @@ class model
 
 	private static function send_request($_domain)
 	{
-		$url            = $_domain. '/hook/gitdetail';
+		$url            = $_domain. '/api/v5/git';
 		$token          = self::generate_verification_code($_domain);
 		$field          = [];
 		$field['token'] = $token;

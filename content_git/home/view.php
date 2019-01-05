@@ -98,7 +98,7 @@ class view
 
 	private static function get_detail($_domain)
 	{
-		$url = $_domain. '/hook/gitdetail';
+		$url = $_domain. '/api/v5/git';
 		$response = @file_get_contents($url);
 		$response = json_decode($response, true);
 		return $response;
