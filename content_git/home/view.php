@@ -89,8 +89,8 @@ class view
 			$list[] = 'https://nazr.ermile.com';
 			$list[] = 'https://khadije.com';
 			$list[] = 'https://taraztax.ir';
-			$list[] = 'https://iranpresidents.com';
-			$list[] = 'https://deadbrowser.com';
+			// $list[] = 'https://iranpresidents.com';
+			// $list[] = 'https://deadbrowser.com';
 		}
 		return $list;
 	}
