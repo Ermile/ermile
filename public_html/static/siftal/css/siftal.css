@@ -15822,7 +15822,8 @@ body.enter.bg15 {
   color: #fff;
   background-color: #000;
   transition: 0.3s;
-  opacity: 0.3; }
+  opacity: 0.3;
+  margin: 0 0.5em; }
 
 .enter .langlist a:hover {
   opacity: 0.6; }
@@ -15880,16 +15881,43 @@ body.enter.bg15 {
     opacity: 1; }
   100% {
     opacity: 0; } }
+[data-app] .enter .langlist {
+  display: none; }
+
+[data-app] .enter #enter {
+  margin-bottom: 10px; }
+
 /* responsive design*/
 @media all and (max-width: 767px) {
   .enter #enter {
     min-width: 300px;
-    padding: 20px 20px;
+    min-height: 300px;
+    padding: 10px 20px;
     width: 50%;
     margin-bottom: 40px; }
 
+  .enter form .flex {
+    margin: 0.5em 0;
+    height: 40px; }
+
   .enter .langlist {
-    position: absolute; } }
+    position: absolute; }
+
+  .enter #eMethods a {
+    height: 30px;
+    line-height: 30px; }
+
+  .enter form .flex label {
+    line-height: 40px; }
+
+  .enter form #eramz label, .enter form #eramzNew label, .enter form #displaynameBox label, .enter form #eusername label {
+    line-height: 40px; }
+
+  .enter form .flex button {
+    padding: 5px 10px; }
+
+  .enter form .flex input {
+    line-height: 40px; } }
 /* Design for print */
 @media print {
   .enter footer {
