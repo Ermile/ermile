@@ -15884,8 +15884,9 @@ body.enter.bg15 {
 @media all and (max-width: 767px) {
   .enter #enter {
     min-width: 300px;
-    padding: 40px 20px;
-    width: 50%; }
+    padding: 20px 20px;
+    width: 50%;
+    margin-bottom: 40px; }
 
   .enter .langlist {
     position: absolute; } }
