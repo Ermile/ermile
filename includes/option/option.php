@@ -21,9 +21,11 @@ self::$language =
 /**
  * system default lanuage
  */
-// self::$url['tld']        = 'com';
-self::$url['protocol']   = 'https';
-// self::$config['visitor'] = true;
+
+// self::$url['protocol']       = 'https';
+self::$url['root']           = 'ermile';
+// self::$url['tld']            = 'com';
+
 
 self::$config['site']['title']  = "Ermile";
 self::$config['site']['desc']   = "Ermile contain a new tools for each one";
