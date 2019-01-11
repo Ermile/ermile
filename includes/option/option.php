@@ -22,7 +22,7 @@ self::$language =
  * system default lanuage
  */
 
-// self::$url['protocol']       = 'https';
+self::$url['protocol']       = 'https';
 self::$url['root']           = 'ermile';
 // self::$url['tld']            = 'com';
 
