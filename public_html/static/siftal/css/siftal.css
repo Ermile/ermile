@@ -1748,6 +1748,23 @@ progress.xl, meter.xl {
   transition: color .4s ease;
   line-height: 2em; }
 
+.progress > .label {
+  position: absolute;
+  width: 100%;
+  font-size: 1.2em;
+  line-height: 2em;
+  top: 100%;
+  right: auto;
+  left: 0;
+  bottom: auto;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 700;
+  text-shadow: none;
+  margin-top: .2em;
+  text-align: center;
+  -webkit-transition: color .4s ease;
+  transition: color .4s ease; }
+
 @-webkit-keyframes progress-active {
   0% {
     opacity: .3;
@@ -15294,10 +15311,10 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end, body.alerty2-no-back
   vertical-align: middle; }
 
 [data-kerkere-icon="open"]::before {
-  content: "" !important; }
+  content: "\e0c0"; }
 
 [data-kerkere-icon="close"]::before {
-  content: "" !important; }
+  content: "\e0c2"; }
 
 .rtl [data-kerkere-icon="close"]::before {
   content: "\e0c1"; }
