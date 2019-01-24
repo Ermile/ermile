@@ -4,6 +4,13 @@
 {%block pageContent%}
 
 <div class="">
+	{%if url.tld == 'local'%}
+	<div class="cbox">
+		<div data-confirm data-data='{"extractTrans": 1}' class="msg primary txtB txtC">{%trans "Translation"%}</div>
+	</div>
+
+	{%endif%}
+
 	{%for key, value in projectsList%}
 	<div class="f">
 

@@ -6,6 +6,16 @@ class model
 {
 	public static function post()
 	{
+		if(\dash\url::isLocal() && \dash\request::post('extractTrans'))
+		{
+			$list = \content_git\home\view::project_list();
+			foreach ($list as $key => $value)
+			{
+				@file_get_contents($value. '/api/v5/git/trans');
+			}
+			\dash\notif::ok("All trans extracted");
+		}
+
 		$domain = \dash\request::post('domain');
 		if($domain)
 		{

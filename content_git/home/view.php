@@ -60,7 +60,7 @@ class view
 	}
 
 
-	private static function project_list()
+	public static function project_list()
 	{
 		$list = [];
 		if(\dash\url::isLocal())
@@ -73,6 +73,8 @@ class view
 			$list[] = 'http://khadije.local';
 			$list[] = 'http://ermile.local';
 			$list[] = 'http://taraztax.local';
+			$list[] = 'http://sarshomar.local';
+			$list[] = 'http://karimehdonate.local';
 			// $list[] = 'http://iranpresidents.com';
 			// $list[] = 'http://deadbrowser.com';
 

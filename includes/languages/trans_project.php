@@ -5,6 +5,7 @@ class twigTransTerms
  {
 
 	//---------------------------------------------------content_git/home/display.html
+	echo T_("Translation");                                                           // Line 9
 	echo T_("Last update");                                                           // Line 21
 	echo T_("Project database");                                                      // Line 23
 	echo T_("Addon Database");                                                        // Line 25
