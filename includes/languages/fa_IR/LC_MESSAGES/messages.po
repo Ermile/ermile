@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile - Persian\n"
-"POT-Creation-Date: 2019-01-23 15:56+0330\n"
-"PO-Revision-Date: 2019-01-23 15:56+0330\n"
+"POT-Creation-Date: 2019-01-24 22:10+0330\n"
+"PO-Revision-Date: 2019-01-24 22:13+0330\n"
 "Last-Translator: Javad Kakroudi <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -390,7 +390,7 @@ msgstr "شناسه نامعتبر"
 #: dash/addons/content_cp/contact/edit/model.php:12
 #: dash/addons/content_support/ticket/show/model.php:144
 #: dash/lib/app/address.php:189 dash/lib/app/comment.php:259
-#: dash/lib/app/ticket.php:351 dash/lib/app/user.php:387
+#: dash/lib/app/ticket.php:351 dash/lib/app/user.php:391
 msgid "Invalid status"
 msgstr "وضعیت نامعتبر است"
 
@@ -439,7 +439,7 @@ msgstr "همچنین نظر خاص را اضافه یا ویرایش کنید."
 #: dash/addons/content_cp/contact/edit/controller.php:11
 #: dash/addons/content_cp/contact/home/view.php:11
 #: dash/addons/content_support/ticket/contact_ticket/model.php:161
-#: ermile/includes/languages/trans_project.php:230
+#: ermile/includes/languages/trans_project.php:231
 msgid "Contact Us"
 msgstr "با ما تماس بگیرید"
 
@@ -463,7 +463,7 @@ msgstr "بررسی تغییرات اطلاعات در روز جاری"
 #: dash/addons/includes/languages/trans_dash.php:775
 #: dash/addons/includes/languages/trans_static.php:149
 #: ermile/includes/languages/trans_dash.php:250
-#: ermile/includes/languages/trans_project.php:148
+#: ermile/includes/languages/trans_project.php:149
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
@@ -1063,8 +1063,8 @@ msgid "Alert!"
 msgstr "هشدار!"
 
 #: dash/addons/content_enter/alert/view.php:16
-#: dash/addons/content_enter/verify/model.php:36 dash/lib/utility/enter.php:839
-#: dash/lib/utility/enter.php:850 dash/lib/utility/enter.php:857
+#: dash/addons/content_enter/verify/model.php:36 dash/lib/utility/enter.php:856
+#: dash/lib/utility/enter.php:867 dash/lib/utility/enter.php:874
 msgid "What are you doing?"
 msgstr "اینجا چیکار می‌کنی عزیز جان!؟"
 
@@ -1216,6 +1216,14 @@ msgstr "لطفا نام‌کاربری یا موبایل یا رایانامه �
 msgid "Username not found"
 msgstr "نام کاربری یافت نشد"
 
+#: dash/addons/content_enter/home/model.php:157
+msgid "Are you want to signup?"
+msgstr "آیا می‌خواهید ثبت‌نام کنید"
+
+#: dash/addons/content_enter/home/model.php:158
+msgid "Click to signup"
+msgstr "برای ثبت‌نام کلیک کنید"
+
 #: dash/addons/content_enter/home/view.php:11
 msgid "Enter to :name"
 msgstr "ورود به :name"
@@ -1283,7 +1291,7 @@ msgstr "گذرواژه‌ی اشتباه، دوباره تلاش کنید"
 
 #: dash/addons/content_enter/pass/recovery/model.php:29
 #: dash/addons/includes/languages/trans_dash.php:517
-#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:14
+#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:16
 #: ermile/includes/languages/trans_dash.php:349
 msgid "Enter"
 msgstr "ورود"
@@ -1455,7 +1463,7 @@ msgid "You must set less than 50 character in username"
 msgstr "شناسه‌ی کاربری باید کمتر از ۵۵ کاراکتر باشد"
 
 #: dash/addons/content_enter/username/set/model.php:41
-#: dash/lib/utility/enter.php:1030
+#: dash/lib/utility/enter.php:1047
 msgid "Your username was set"
 msgstr "نام کاربری شما ثبت شد"
 
@@ -2220,7 +2228,7 @@ msgstr "اگر مشکلی وجود ندارد شما می‌توانید آن ر
 #: dash/lib/app/log/caller/ticket/ticket_answerTicketAlertSend.php:14
 #: dash/lib/app/log/caller/ticket/ticket_seeTicket.php:13
 #: ermile/includes/languages/trans_dash.php:23
-#: ermile/includes/languages/trans_project.php:145
+#: ermile/includes/languages/trans_project.php:146
 msgid "Support"
 msgstr "پشتیبانی"
 
@@ -2279,7 +2287,7 @@ msgstr "شماره تلفن"
 #: dash/addons/includes/languages/trans_dash.php:14
 #: dash/addons/includes/languages/trans_static.php:166
 #: ermile/includes/languages/trans_dash.php:127
-#: ermile/includes/languages/trans_project.php:236
+#: ermile/includes/languages/trans_project.php:237
 msgid "Mobile"
 msgstr "موبایل"
 
@@ -2301,7 +2309,7 @@ msgstr "نام‌خانوادگی"
 
 #: dash/addons/includes/languages/trans_dash.php:18
 #: ermile/includes/languages/trans_dash.php:329
-#: ermile/includes/languages/trans_project.php:234
+#: ermile/includes/languages/trans_project.php:235
 msgid "Name"
 msgstr "نام"
 
@@ -2836,7 +2844,7 @@ msgstr "بدون سطح دسترسی"
 #: dash/addons/includes/languages/trans_static.php:945
 #: dash/addons/includes/languages/trans_static.php:987
 #: ermile/includes/languages/trans_dash.php:128
-#: ermile/includes/languages/trans_project.php:238
+#: ermile/includes/languages/trans_project.php:239
 msgid "Email"
 msgstr "رایانامه"
 
@@ -3698,7 +3706,7 @@ msgstr "دسته‌بندی‌ها"
 #: dash/addons/includes/languages/trans_dash.php:354
 #: dash/lib/social/telegram/commands/ermile.php:528
 #: ermile/includes/languages/trans_dash.php:245
-#: ermile/includes/languages/trans_project.php:146
+#: ermile/includes/languages/trans_project.php:147
 msgid "Contact"
 msgstr "تماس"
 
@@ -4096,7 +4104,7 @@ msgstr "مایل به ارسال چه چیزی به این کاربر هستید
 
 #: dash/addons/includes/languages/trans_dash.php:460
 #: ermile/includes/languages/trans_dash.php:558
-#: ermile/includes/languages/trans_project.php:241
+#: ermile/includes/languages/trans_project.php:242
 msgid "Send"
 msgstr "ارسال"
 
@@ -4351,7 +4359,7 @@ msgstr "اطلاعات تماس"
 
 #: dash/addons/includes/languages/trans_dash.php:542
 #: ermile/includes/languages/trans_dash.php:586
-#: ermile/includes/languages/trans_project.php:239
+#: ermile/includes/languages/trans_project.php:240
 msgid "Message"
 msgstr "پیام"
 
@@ -4397,7 +4405,7 @@ msgstr "کدملی ده رقمی"
 
 #: dash/addons/includes/languages/trans_dash.php:551
 #: ermile/includes/languages/trans_dash.php:598
-#: ermile/includes/languages/trans_project.php:8
+#: ermile/includes/languages/trans_project.php:9
 msgid "Last update"
 msgstr "آخرین به‌روزرسانی"
 
@@ -5557,13 +5565,13 @@ msgstr "بروزرسانی مخزن"
 
 #: dash/addons/includes/languages/trans_dash.php:911
 #: ermile/includes/languages/trans_dash.php:1165
-#: ermile/includes/languages/trans_project.php:9
+#: ermile/includes/languages/trans_project.php:10
 msgid "Project database"
 msgstr "دیتابیس پروژه"
 
 #: dash/addons/includes/languages/trans_dash.php:912
 #: ermile/includes/languages/trans_dash.php:1166
-#: ermile/includes/languages/trans_project.php:10
+#: ermile/includes/languages/trans_project.php:11
 msgid "Addon Database"
 msgstr "دیتابیس افزونه"
 
@@ -5599,19 +5607,19 @@ msgstr "لینک کوتاه"
 
 #: dash/addons/includes/languages/trans_dash.php:921
 #: ermile/includes/languages/trans_dash.php:555
-#: ermile/includes/languages/trans_project.php:235
+#: ermile/includes/languages/trans_project.php:236
 msgid "Full Name"
 msgstr "نام کامل"
 
 #: dash/addons/includes/languages/trans_dash.php:922
 #: ermile/includes/languages/trans_dash.php:556
-#: ermile/includes/languages/trans_project.php:237
+#: ermile/includes/languages/trans_project.php:238
 msgid "Please enter valid mobile number. `:val` is incorrect"
 msgstr "لطفا شماره موبایل معتبری وارد کنید. :val اشتباه است"
 
 #: dash/addons/includes/languages/trans_dash.php:923
 #: ermile/includes/languages/trans_dash.php:557
-#: ermile/includes/languages/trans_project.php:240
+#: ermile/includes/languages/trans_project.php:241
 msgid "Your Message"
 msgstr "پیام شما"
 
@@ -6036,7 +6044,7 @@ msgstr "وارد شوید تا تجربه بهتری داشته باشید"
 
 #: dash/addons/includes/languages/trans_dash.php:1033
 #: ermile/includes/languages/trans_dash.php:272
-#: ermile/includes/languages/trans_project.php:154
+#: ermile/includes/languages/trans_project.php:155
 msgid "View your current location and navigate to parent of it"
 msgstr "مکان فعلی خود را دیده و به مکان‌های والد آن منتقل شوید"
 
@@ -6665,7 +6673,7 @@ msgstr "برای بروزرسانی باید حداقل یک فیلد را تغ�
 
 #: dash/addons/includes/languages/trans_static.php:59
 #: ermile/includes/languages/static_translation.php:22
-#: ermile/includes/languages/trans_project.php:243
+#: ermile/includes/languages/trans_project.php:244
 msgid "ermile"
 msgstr "ارمایل"
 
@@ -6675,7 +6683,7 @@ msgstr "با افتخار ساخت ایران"
 
 #: dash/addons/includes/languages/trans_static.php:61
 #: ermile/includes/languages/static_translation.php:29
-#: ermile/includes/languages/trans_project.php:247
+#: ermile/includes/languages/trans_project.php:248
 msgid "Iran"
 msgstr "ایران"
 
@@ -6687,7 +6695,7 @@ msgstr "ایران"
 #: dash/addons/includes/languages/trans_static.php:63
 #: dash/lib/social/telegram/commands/ermile.php:240
 #: dash/lib/social/telegram/commands/ermileInline.php:111
-#: ermile/includes/languages/trans_project.php:246
+#: ermile/includes/languages/trans_project.php:247
 msgid "Qom"
 msgstr "قم"
 
@@ -6748,7 +6756,7 @@ msgstr "خانه"
 #: dash/addons/includes/languages/trans_static.php:74
 #: dash/lib/engine/twigAddons.php:236
 #: ermile/includes/languages/static_translation.php:41
-#: ermile/includes/languages/trans_project.php:136
+#: ermile/includes/languages/trans_project.php:137
 msgid "Home"
 msgstr "صفحه نخست"
 
@@ -10291,7 +10299,7 @@ msgstr "لطفا آدرس را کمتر از ۳۰۰ حرف وارد کنید"
 msgid "Please set subdomain less than 50 character"
 msgstr "لطفا زیردامنه را کمتر از ۵۰ حرف وارد کنید"
 
-#: dash/lib/app/address.php:161 dash/lib/app/user.php:113
+#: dash/lib/app/address.php:161 dash/lib/app/user.php:117
 msgid "Invalid mobile"
 msgstr "شماره‌ی تلفن همراه نامعتبر است"
 
@@ -10386,23 +10394,27 @@ msgstr "ناتوان در آپلود، به دلیل نام آپلود انتخ�
 msgid "Can not upload file. undefined error"
 msgstr "ناتوان در آپلود فایل. خطای تعریف نشده"
 
-#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:12
+#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:14
 msgid "Verification code"
 msgstr "کد اعتبارسنجی"
 
-#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:17
+#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:21
+msgid "The verification code has been sent to you"
+msgstr "کد اعتبارسنجی برای شما ارسال شده است"
+
+#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:25
 msgid "Your verification code is :mycode"
 msgstr "کد فعال‌سازی شما :mycode"
 
-#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:21
+#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:31
 msgid "The validation code is made to enter your account"
 msgstr "کد اعتبار سنجی برای ورود به حساب کاربری شما ساخته شده است"
 
-#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:23
+#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:33
 msgid "Be careful! if you did not request this code"
 msgstr "مراقب باشید! اگر این کد را درخواست نکردید"
 
-#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:25
+#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:35
 msgid ""
 "Perhaps someone has entered your password correctly and intends to login to your "
 "account!"
@@ -10410,15 +10422,15 @@ msgstr ""
 "شاید کسی رمز ورود شما را به درستی وارد کرده و قصد ورود به حساب کاربری شما را "
 "داشته باشد!"
 
-#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:26
+#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:36
 msgid "here"
 msgstr "اینجا"
 
-#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:28
+#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:38
 msgid "You can see your active sessions :val"
 msgstr "شما می‌توانید نشست‌های فعال خود را :val ببینید"
 
-#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:30
+#: dash/lib/app/log/caller/enter/enter_VerificationCode.php:40
 msgid "Or change your password more securely."
 msgstr "یا برای امنیت بیشتر کلمه عبور خود را تغییر دهید."
 
@@ -10893,171 +10905,171 @@ msgstr "هیچ راهی برای ثبت ترم وجود ندارد"
 msgid "Can not access to edit term"
 msgstr "دسترسی لازم برای ویرایش ترم وجود ندارد"
 
-#: dash/lib/app/user.php:106
+#: dash/lib/app/user.php:109
 msgid "Mobile is required"
 msgstr "موبایل الزامی است"
 
-#: dash/lib/app/user.php:125 dash/lib/app/user.php:132
+#: dash/lib/app/user.php:129 dash/lib/app/user.php:136
 msgid "Plese set firstname less than 100 character"
 msgstr "طول رشته نام باید کمتر از ۱۰۰ کاراکتر باشد"
 
-#: dash/lib/app/user.php:139
+#: dash/lib/app/user.php:143
 msgid "Invalid father"
 msgstr "نام پدر نامعتبر"
 
-#: dash/lib/app/user.php:146
+#: dash/lib/app/user.php:150
 msgid "Invalid nationality"
 msgstr "ملیت نادرست"
 
-#: dash/lib/app/user.php:153
+#: dash/lib/app/user.php:157
 msgid "Invalid nationalcode syntax"
 msgstr "ساختار کدملی نامعتبر است"
 
-#: dash/lib/app/user.php:163
+#: dash/lib/app/user.php:167
 msgid "Invalid pasportcode"
 msgstr "شماره گذرنامه نامعتبر"
 
-#: dash/lib/app/user.php:188
+#: dash/lib/app/user.php:192
 msgid "Invalid pasportdate"
 msgstr "تاریخ گذرنامه نامعتبر"
 
-#: dash/lib/app/user.php:203
+#: dash/lib/app/user.php:207
 msgid "Invalid gender"
 msgstr "جنسیت نامعتبر"
 
-#: dash/lib/app/user.php:210
+#: dash/lib/app/user.php:214
 msgid "Invalid marital"
 msgstr "وضعیت تاهل نامعتبر"
 
-#: dash/lib/app/user.php:217
+#: dash/lib/app/user.php:221
 msgid "Please set website less than 100 character"
 msgstr "لطفا آدرس را کمتر از ۱۰۰ حرف وارد کنید"
 
-#: dash/lib/app/user.php:224
+#: dash/lib/app/user.php:228
 msgid "Please set instagram less than 100 character"
 msgstr "لطفا شناسه اینستاگرام را کمتر از ۱۰۰ حرف وارد کنید"
 
-#: dash/lib/app/user.php:231
+#: dash/lib/app/user.php:235
 msgid "Please set linkedin less than 100 character"
 msgstr "لطفا شناسه لینک‌دین را کمتر از ۱۰۰ حرف وارد کنید"
 
-#: dash/lib/app/user.php:238
+#: dash/lib/app/user.php:242
 msgid "Please set facebook less than 100 character"
 msgstr "لطفا شناسه فیس‌بوک را کمتر از ۱۰۰ حرف وارد کنید"
 
-#: dash/lib/app/user.php:245
+#: dash/lib/app/user.php:249
 msgid "Please set twitter less than 100 character"
 msgstr "لطفا شناسه تویتر را کمتر از ۱۰۰ حرف وارد کنید"
 
-#: dash/lib/app/user.php:269 dash/lib/app/user.php:275
+#: dash/lib/app/user.php:273 dash/lib/app/user.php:279
 msgid "Invalid shcode"
 msgstr "شماره شناسنامه نامعتبر"
 
-#: dash/lib/app/user.php:287
+#: dash/lib/app/user.php:291
 msgid "Invalid birthcity"
 msgstr "محل تولد نامعتبر"
 
-#: dash/lib/app/user.php:300
+#: dash/lib/app/user.php:304
 msgid "Invalid religion"
 msgstr "مذهب نامعتبر"
 
-#: dash/lib/app/user.php:313
+#: dash/lib/app/user.php:317
 msgid "Invalid avatar"
 msgstr "آواتار نامعتبر"
 
-#: dash/lib/app/user.php:320
+#: dash/lib/app/user.php:324
 msgid "Invalid education"
 msgstr "تحصیلات نامعتبر"
 
-#: dash/lib/app/user.php:333
+#: dash/lib/app/user.php:337
 msgid "Invalid educationcourse"
 msgstr "رشته تحصیلی نامعتبر"
 
-#: dash/lib/app/user.php:345
+#: dash/lib/app/user.php:349
 msgid "Invalid issue place"
 msgstr "محل صدور اشتباه"
 
-#: dash/lib/app/user.php:368
+#: dash/lib/app/user.php:372
 msgid "Invalid email"
 msgstr "رایانامه اشتباه"
 
-#: dash/lib/app/user.php:380
+#: dash/lib/app/user.php:384
 msgid "Invalid phone"
 msgstr "شماره تلفن‌همراه نامعتبر"
 
-#: dash/lib/app/user.php:414
+#: dash/lib/app/user.php:418
 msgid "Permission is incorrect"
 msgstr "مجوز نادرست است"
 
-#: dash/lib/app/user.php:452
+#: dash/lib/app/user.php:456
 msgid "Plase set password larger than 6 character"
 msgstr "لطفا کلمه‌ عبور را بزرگتر از ۶ حرف وارد کنید"
 
-#: dash/lib/app/user.php:467
+#: dash/lib/app/user.php:471
 msgid "Plase set title less than 100 character"
 msgstr "لطفا عنوان را کمتر از ۱۰۰ حرف وارد کنید"
 
-#: dash/lib/app/user.php:474
+#: dash/lib/app/user.php:478
 msgid "Plase set bio less than 100 character"
 msgstr "لطفا زندگینامه را کمتر از ۱۰۰ کاراکتر وارد کنید"
 
-#: dash/lib/app/user.php:481
+#: dash/lib/app/user.php:485
 msgid "Plase set displayname less than 100 character"
 msgstr "لطفا نام را کمتر از ۱۰۰ حرف وارد کنید"
 
-#: dash/lib/app/user.php:489
+#: dash/lib/app/user.php:493
 msgid "Language is incorrect"
 msgstr "زبان نادرست است"
 
-#: dash/lib/app/user.php:498
+#: dash/lib/app/user.php:502
 msgid "Username must have at least 5 character"
 msgstr "شناسه‌ی کاربری باید بزرگتر از ۵ کاراکتر باشد"
 
-#: dash/lib/app/user.php:504
+#: dash/lib/app/user.php:508
 msgid "Please set the username less than 50 character"
 msgstr "شناسه‌ی کاربری جدید باید کمتر از ۵۰ کاراکتر باشد"
 
-#: dash/lib/app/user.php:510
+#: dash/lib/app/user.php:514
 msgid "Only [A-Za-z0-9_-] can use in username"
 msgstr "شما باید فقط از حروف و اعداد لاتین در نام کاربری استفاده کنید"
 
-#: dash/lib/app/user.php:516
+#: dash/lib/app/user.php:520
 msgid "You must use a one character from [A-Za-z] in the username"
 msgstr "شما باید حتما از یک حرف لاتین در نام کاربری استفاده کنید"
 
-#: dash/lib/app/user.php:532
+#: dash/lib/app/user.php:536
 msgid "Duplicate username"
 msgstr "نام کاربری تکراری است! لطفا یک نام کاربری دیگر انتخاب کنید"
 
-#: dash/lib/app/user.php:549
+#: dash/lib/app/user.php:553
 msgid "Invalid parameter tgstatus"
 msgstr "پارامتر وضعیت تلگرام اشتباه است"
 
-#: dash/lib/app/user.php:557
+#: dash/lib/app/user.php:561
 msgid "You must set the type less than 50 character"
 msgstr "نوع باید کمتر از 50 کاراکتر باشد"
 
-#: dash/lib/app/user.php:566
+#: dash/lib/app/user.php:570
 msgid "Parent is incorrect"
 msgstr "والدین نادرست است"
 
-#: dash/lib/app/user.php:581
+#: dash/lib/app/user.php:585
 msgid "Pin is incorrect"
 msgstr "پین نادرست است"
 
-#: dash/lib/app/user.php:589
+#: dash/lib/app/user.php:593
 msgid "Ref is incorrect"
 msgstr "مرجع نادرست است"
 
-#: dash/lib/app/user.php:597
+#: dash/lib/app/user.php:601
 msgid "Unit id is incorrect"
 msgstr "کد واحد مالی نادرست است"
 
-#: dash/lib/app/user.php:898
+#: dash/lib/app/user.php:903
 msgid "Can not remove user by permission"
 msgstr "نمی‌توانید کاربری که داری سطح دسترسی هست را حذف کنید"
 
-#: dash/lib/app/user.php:904
+#: dash/lib/app/user.php:909
 msgid "This user was removed"
 msgstr "این کاربر قبلا حذف شده است"
 
@@ -11110,7 +11122,7 @@ msgid "we can't find database service!"
 msgstr "ما نمی‌توانیم سرویس دیتابیس را بیابیم!"
 
 #: dash/lib/db/mysql/tools/connect.php:104 dash/lib/db/mysql/tools/connect.php:116
-#: dash/lib/db/mysql/tools/connect.php:160
+#: dash/lib/db/mysql/tools/connect.php:161
 msgid "Please contact administrator!"
 msgstr "لطفا با مدیر سامانه تماس بگیرید!"
 
@@ -11118,7 +11130,7 @@ msgstr "لطفا با مدیر سامانه تماس بگیرید!"
 msgid "We can't connect to database service!"
 msgstr "ما نمی‌توانیم به سرویس دیتابیس متصل شویم!"
 
-#: dash/lib/db/mysql/tools/connect.php:160
+#: dash/lib/db/mysql/tools/connect.php:161
 msgid "We can't connect to correct database!"
 msgstr "ما نمی‌توانیم به دیتابیس صحیح متصل شویم!"
 
@@ -11174,11 +11186,11 @@ msgstr "ما صفحه‌ای که به‌دنبال آن هستید را نمی�
 msgid "As easy as ABC is our slogan!"
 msgstr "کاری نداره شعار ماست!"
 
-#: dash/lib/engine/view.php:96 ermile/includes/languages/trans_project.php:255
+#: dash/lib/engine/view.php:96 ermile/includes/languages/trans_project.php:256
 msgid "If you are not finded a solution for your problem, call us."
 msgstr "اگر راه‌کاری مناسب برای مشکل خود نیافته‌اید، با ما تماس بگیرید."
 
-#: dash/lib/engine/view.php:97 ermile/includes/languages/trans_project.php:254
+#: dash/lib/engine/view.php:97 ermile/includes/languages/trans_project.php:255
 msgid "Software Solution Designer"
 msgstr "ارائه‌دهنده‌ی راه‌کارهای مدرن نرم‌افزاری"
 
@@ -11512,13 +11524,13 @@ msgstr "درباره ما بیشتر بخوانید"
 
 #: dash/lib/social/telegram/commands/ermile.php:240
 #: dash/lib/social/telegram/commands/ermileInline.php:111
-#: ermile/includes/languages/trans_project.php:244
+#: ermile/includes/languages/trans_project.php:245
 msgid "Ermile, Floor2, Yas Building"
 msgstr "ساختمان یاس، طبقه دوم، ارمایل"
 
 #: dash/lib/social/telegram/commands/ermile.php:240
 #: dash/lib/social/telegram/commands/ermileInline.php:111
-#: ermile/includes/languages/trans_project.php:245
+#: ermile/includes/languages/trans_project.php:246
 msgid "1st alley, Haft-e-tir St"
 msgstr "خیابان هفت تیر، کوچه یکم"
 
@@ -11576,7 +11588,7 @@ msgstr "همگام‌سازی با وب‌سایت"
 #: dash/lib/social/telegram/commands/ermile.php:528
 #: dash/lib/social/telegram/commands/ermileInline.php:76
 #: ermile/includes/languages/static_translation.php:82
-#: ermile/includes/languages/trans_project.php:137
+#: ermile/includes/languages/trans_project.php:138
 msgid "About"
 msgstr "درباره"
 
@@ -11717,12 +11729,12 @@ msgid "Ask from support"
 msgstr "از پشتیبانی بپرس"
 
 #: dash/lib/social/telegram/commands/step_ticketCreate.php:35
-#: ermile/includes/languages/trans_project.php:232
+#: ermile/includes/languages/trans_project.php:233
 msgid "Thank you for choosing us."
 msgstr "از اینکه ما را انتخاب کردید، متشکریم."
 
 #: dash/lib/social/telegram/commands/step_ticketCreate.php:36
-#: ermile/includes/languages/trans_project.php:231
+#: ermile/includes/languages/trans_project.php:232
 msgid ""
 "Knowing your valuable comments about bugs and problems and more importantly your "
 "precious offers will help us in this way."
@@ -11878,51 +11890,51 @@ msgstr "عملیات کلادفلر از طریق ای‌پی‌آی با موف
 msgid "The api Cloudflare opration faild"
 msgstr "عملیات کلادفلر از طریق ای‌پی‌آی با موفقیت ناموفق بود"
 
-#: dash/lib/utility/enter.php:777
+#: dash/lib/utility/enter.php:794
 msgid "Please fill the verification code"
 msgstr "لطفا کد اعتبارسنجی را وارد کنید"
 
-#: dash/lib/utility/enter.php:786
+#: dash/lib/utility/enter.php:803
 msgid "What happend? the code is number. you try to send string!?"
 msgstr "چی شده؟ کد باید عددی باشد. شما چطوری دارین متن وارد میکنید!؟"
 
-#: dash/lib/utility/enter.php:807
+#: dash/lib/utility/enter.php:824
 msgid "System error, try again"
 msgstr "خطای سیستم، دوباره تلاش کنید"
 
-#: dash/lib/utility/enter.php:831
+#: dash/lib/utility/enter.php:848
 msgid "Your sms not deliver to us!"
 msgstr "پیامک شما بدست ما نرسیده است!"
 
-#: dash/lib/utility/enter.php:875
+#: dash/lib/utility/enter.php:892
 msgid "Invalid code, try again"
 msgstr "کد اشتباه، دوباره تلاش کنید"
 
-#: dash/lib/utility/enter.php:942
+#: dash/lib/utility/enter.php:959
 msgid "Your username was removed"
 msgstr "نام کاربری شما حذف شد"
 
-#: dash/lib/utility/enter.php:1035
+#: dash/lib/utility/enter.php:1052
 msgid "Your username was change"
 msgstr "نام کاربری شما تغییر یافت"
 
-#: dash/lib/utility/enter.php:1098
+#: dash/lib/utility/enter.php:1115
 msgid "Your two-step verification is now active for your account"
 msgstr "ورود دو مرحله ای هم اکنون برای حساب کاربری شما فعال است"
 
-#: dash/lib/utility/enter.php:1124
+#: dash/lib/utility/enter.php:1141
 msgid "Your two-step verification is now deactive for your account"
 msgstr "ورود دو مرحله ای هم اکنون برای حساب کاربری شما غیر فعال است"
 
-#: dash/lib/utility/enter.php:1147
+#: dash/lib/utility/enter.php:1164
 msgid "Your password was changed"
 msgstr "کلمه عبور شما تغییر یافت"
 
-#: dash/lib/utility/enter.php:1318
+#: dash/lib/utility/enter.php:1335
 msgid "You must set 6 character and large in password"
 msgstr "گذرواژه باید حداقل ۶ کاراکتر باشد"
 
-#: dash/lib/utility/enter.php:1328
+#: dash/lib/utility/enter.php:1345
 msgid "You must set less than 99 character in password"
 msgstr "گذرواژه باید کمتر از ۹۹ کاراکتر باشد"
 
@@ -12519,7 +12531,7 @@ msgstr "ارمایل دارای ابزارهایی برای خود شماست"
 msgid "Ermile is inteligent"
 msgstr "ارمایل باهوش است!"
 
-#: ermile/content_git/home/model.php:13
+#: ermile/content_git/home/model.php:23
 msgid "Update request sended"
 msgstr "درخواست شما ارسال شد"
 
@@ -12617,12 +12629,12 @@ msgid "Jibres"
 msgstr "جیبرس"
 
 #: ermile/includes/languages/static_translation.php:89
-#: ermile/includes/languages/trans_project.php:267
+#: ermile/includes/languages/trans_project.php:268
 msgid "Azvir"
 msgstr "ازویر"
 
 #: ermile/includes/languages/static_translation.php:90
-#: ermile/includes/languages/trans_project.php:261
+#: ermile/includes/languages/trans_project.php:262
 msgid "Sarshomar"
 msgstr "سرشمار"
 
@@ -12667,7 +12679,7 @@ msgid "#614, Omranieh, Moallem St, Qom, Iran"
 msgstr "ایران، قم، خیابان معلم، مجتمع عمرانیه، واحد ۶۱۴"
 
 #: ermile/includes/languages/static_translation.php:102
-#: ermile/includes/languages/trans_project.php:348
+#: ermile/includes/languages/trans_project.php:349
 msgid "+98 25 3773 5183"
 msgstr "۵۱۸۳ ۳۷۷۳ ۰۲۵"
 
@@ -12855,71 +12867,75 @@ msgstr "بدون نام کاربری"
 msgid "Copy mobile"
 msgstr "کپی موبایل"
 
-#: ermile/includes/languages/trans_project.php:11
+#: ermile/includes/languages/trans_project.php:8
+msgid "Translation"
+msgstr "ترجمه"
+
+#: ermile/includes/languages/trans_project.php:12
 msgid "Update git repository"
 msgstr "مخازن گیت پروژه را به روزرسانی کرد"
 
-#: ermile/includes/languages/trans_project.php:138
+#: ermile/includes/languages/trans_project.php:139
 msgid "Press and Media"
 msgstr "مطبوعات و رسانه‌ها"
 
-#: ermile/includes/languages/trans_project.php:139
+#: ermile/includes/languages/trans_project.php:140
 msgid "Careers"
 msgstr "فرصت‌های شغلی"
 
-#: ermile/includes/languages/trans_project.php:140
+#: ermile/includes/languages/trans_project.php:141
 msgid "Social Responsibility"
 msgstr "مسئولیت اجتماعی"
 
-#: ermile/includes/languages/trans_project.php:141
+#: ermile/includes/languages/trans_project.php:142
 msgid "Enamad"
 msgstr "نماد اعتماد"
 
-#: ermile/includes/languages/trans_project.php:142
+#: ermile/includes/languages/trans_project.php:143
 msgid "Learn More"
 msgstr "بیشتر بدانید"
 
-#: ermile/includes/languages/trans_project.php:143
+#: ermile/includes/languages/trans_project.php:144
 msgid "Terms of Service"
 msgstr "شرایط استفاده"
 
-#: ermile/includes/languages/trans_project.php:144
+#: ermile/includes/languages/trans_project.php:145
 msgid "Privacy Policy"
 msgstr "حریم خصوصی"
 
-#: ermile/includes/languages/trans_project.php:147
+#: ermile/includes/languages/trans_project.php:148
 msgid "Proudly Made in IRAN"
 msgstr "با افتخار ساخت ایران"
 
-#: ermile/includes/languages/trans_project.php:149
+#: ermile/includes/languages/trans_project.php:150
 msgid "Admin Panel"
 msgstr "پنل ادمین"
 
-#: ermile/includes/languages/trans_project.php:150
+#: ermile/includes/languages/trans_project.php:151
 msgid "Exit Session"
 msgstr "خروج از نشست"
 
-#: ermile/includes/languages/trans_project.php:151
+#: ermile/includes/languages/trans_project.php:152
 msgid "Another Session"
 msgstr "نشست دیگر"
 
-#: ermile/includes/languages/trans_project.php:155
+#: ermile/includes/languages/trans_project.php:156
 msgid "Some right reserved!"
 msgstr "برخی از حقوق محفوظ است!"
 
-#: ermile/includes/languages/trans_project.php:158
+#: ermile/includes/languages/trans_project.php:159
 msgid "+98 25 3650 5281"
 msgstr "۵۲۸۱ ۳۶۵۰ ۰۲۵"
 
-#: ermile/includes/languages/trans_project.php:161
+#: ermile/includes/languages/trans_project.php:162
 msgid "Enterprise"
 msgstr "مشتریان سازمان"
 
-#: ermile/includes/languages/trans_project.php:162
+#: ermile/includes/languages/trans_project.php:163
 msgid "Have a headaches? We have soulutions. Be patient..."
 msgstr "سردرد دارید؟ ما راه‌حل‌هایی برای شما داریم. صبور باشید..."
 
-#: ermile/includes/languages/trans_project.php:163
+#: ermile/includes/languages/trans_project.php:164
 msgid ""
 "Big companies simply don’t work like small companies, and they don’t use Tejarak "
 "the same way either. That’s why there’s Enterprise."
@@ -12927,7 +12943,7 @@ msgstr ""
 "شرکت‌های بزرگ به آسانی شرکت‌های کوچک کار نمی‌کنند و از تجارک نیز به همان شکل استفاده "
 "نمی‌کنند. این دلیل راه‌اندازی بخش سازمانی ماست."
 
-#: ermile/includes/languages/trans_project.php:166
+#: ermile/includes/languages/trans_project.php:167
 msgid ""
 "We wish to assure you that our main concern is to secure your privacy and protect "
 "your information against impermissible access."
@@ -12935,11 +12951,11 @@ msgstr ""
 "ما این اطمینان را به شما می‌دهیم که دغدغه‌ی ما، حفظ حریم‌خصوصی و محافظت از اطلاعات "
 "شما در برابر دسترسی‌های غیرمجاز هست."
 
-#: ermile/includes/languages/trans_project.php:167
+#: ermile/includes/languages/trans_project.php:168
 msgid "What is Privacy?"
 msgstr "حریم‌خصوصی چیست؟"
 
-#: ermile/includes/languages/trans_project.php:168
+#: ermile/includes/languages/trans_project.php:169
 msgid ""
 "Privacy means that any individual is entitled to choose the information related "
 "to them, and selectively, share it with others."
@@ -12947,7 +12963,7 @@ msgstr ""
 "حریم‌خصوصی یعنی شخص بتواند اطلاعات مربوط به خود را مجزا کرده و به انتخاب خویش، در "
 "برابر دیگران آشکار کند."
 
-#: ermile/includes/languages/trans_project.php:169
+#: ermile/includes/languages/trans_project.php:170
 msgid ""
 "privacy is so important for mental peace as well as a peaceful personality that "
 "some experts have considered invasion of privacy disrespectful to human dignity."
@@ -12955,18 +12971,18 @@ msgstr ""
 "حریم‌خصوصی برای آرامش روانی و شخصیتی، بسیار مهم است تا جایی‌که بعضی از صاحب‌نظران "
 "نقض آن را به عنوان یک اقدام توهین‌آمیز نسبت به شرافت بشری قلمداد کرده‌اند."
 
-#: ermile/includes/languages/trans_project.php:170
+#: ermile/includes/languages/trans_project.php:171
 msgid "Controversies over the Invasion of Privacy"
 msgstr "جنجال‌های نقض حریم‌خصوصی"
 
-#: ermile/includes/languages/trans_project.php:171
+#: ermile/includes/languages/trans_project.php:172
 msgid ""
 "Within e-commerce, privacy has always been from among the most controversial "
 "topics and continues to be."
 msgstr ""
 "حریم‌خصوصی در کسب‌و‌کارهای الکترونیکی همیشه یکی از بحث‌برانگیزترین موضوعات بوده و هست؛"
 
-#: ermile/includes/languages/trans_project.php:172
+#: ermile/includes/languages/trans_project.php:173
 msgid ""
 "Accordingly, formulating privacy policies is regarded as one of the crucial "
 "concerns of technology companies."
@@ -12974,7 +12990,7 @@ msgstr ""
 "به همین دلیل، تعیین سیاست‌های حریم‌خصوصی جزء دغدغه‌های بسیار مهم شرکت‌های فناورانه "
 "محسوب می‌شود."
 
-#: ermile/includes/languages/trans_project.php:173
+#: ermile/includes/languages/trans_project.php:174
 msgid ""
 "Meanwhile, widespread controversies have been provoked over invasion of privacy "
 "in e-commerce so that, occasionally, the regulations have to be revised to "
@@ -12984,17 +13000,17 @@ msgstr ""
 "گرفته است؛ به‌گونه‌ای که هرچند وقت یک‌بار مجبور هستند قوانین را بازبینی نموده تا "
 "حفره‌های موجود را رفع نمایند."
 
-#: ermile/includes/languages/trans_project.php:174
+#: ermile/includes/languages/trans_project.php:175
 msgid "Privacy from Our Point of View"
 msgstr "حریم‌خصوصی از دیدگاه ما"
 
-#: ermile/includes/languages/trans_project.php:175
+#: ermile/includes/languages/trans_project.php:176
 msgid ""
 "Let us be straightforward! Cyberspace is not a safe location for personal "
 "information."
 msgstr "رو راست باشیم، فضای مجازی محل امنی برای اطلاعات خصوصی نیست."
 
-#: ermile/includes/languages/trans_project.php:176
+#: ermile/includes/languages/trans_project.php:177
 msgid ""
 "For that reason, Ermile makes no request for important information of yours and "
 "allow to save some general information including age, gender, education, "
@@ -13004,13 +13020,13 @@ msgstr ""
 "نجات برخی از اطلاعات کلی از جمله سن، جنس، آموزش، منافع و غيره است تنها برای "
 "استفاده خصوصی از تیم و یا شرکت خود را."
 
-#: ermile/includes/languages/trans_project.php:177
+#: ermile/includes/languages/trans_project.php:178
 msgid ""
 "It is worth mentioning that recording the aforementioned points is totally "
 "voluntary."
 msgstr "لازم به توضیح است که ثبت موارد ذکرشده نیز به‌صورت کاملا اختیاری است."
 
-#: ermile/includes/languages/trans_project.php:178
+#: ermile/includes/languages/trans_project.php:179
 msgid ""
 "However, taking the nature of cyberspace into account, we should remember that "
 "offering an absolute assurance might not be possible."
@@ -13018,7 +13034,7 @@ msgstr ""
 "این را در نظر داشته باشید که با توجه به ماهیت فضای مجازی، ارائه تضمین صددرصدی "
 "به‌طور کل ممکن نیست."
 
-#: ermile/includes/languages/trans_project.php:179
+#: ermile/includes/languages/trans_project.php:180
 msgid ""
 "Assuring privacy and security, with that ideal concept we bear in mind, does not "
 "exist; and if somebody gives you an assurance of securing your privacy, he has "
@@ -13028,7 +13044,7 @@ msgstr ""
 "اگر کسی در دنیای مجازی، تضمین امنیت حریم‌خصوصی شما را بدهد قطعا از اعتماد شما "
 "سوءاستفاده کرده است."
 
-#: ermile/includes/languages/trans_project.php:180
+#: ermile/includes/languages/trans_project.php:181
 msgid ""
 "Upon buying any digital or the so-called smart device, you have invaded your own "
 "privacy yourself."
@@ -13036,7 +13052,7 @@ msgstr ""
 "شما با خرید هر دستگاه دیجیتالی یا به اصطلاح هوشمند، با دست خود حریم‌خصوصی‌تان را "
 "نقض کرده‌اید."
 
-#: ermile/includes/languages/trans_project.php:181
+#: ermile/includes/languages/trans_project.php:182
 msgid ""
 "If you want your privacy not to be invaded, you should depart from technology and "
 "say goodbye to any digital and smart device."
@@ -13044,7 +13060,7 @@ msgstr ""
 "اگر می‌خواهید این حریم‌خصوصی نقض نشود باید به‌طور کل از دنیای تکنولوژی فاصله بگیرید "
 "و با هر دستگاه دیجیتالی و هوشمندی خداحافظی کنید."
 
-#: ermile/includes/languages/trans_project.php:182
+#: ermile/includes/languages/trans_project.php:183
 msgid ""
 "In fact, we have employed all updated technologies of the world to provide you "
 "with the maximum security."
@@ -13052,7 +13068,7 @@ msgstr ""
 "ما به‌لحاظ فنی تمام تکنولوژی‌های روز دنیا را به‌کار برده‌ایم تا امنیت حداکثری را برای "
 "شما به ارمغان بیاوریم."
 
-#: ermile/includes/languages/trans_project.php:183
+#: ermile/includes/languages/trans_project.php:184
 msgid ""
 "As the final remark, we wish to assure you that our main concern is to secure "
 "your privacy and protect your information against impermissible access."
@@ -13060,11 +13076,11 @@ msgstr ""
 "در پایان، این اطمینان را به شما می‌دهیم که دغدغه‌ی ما، حفظ حریم‌خصوصی و محافظت از "
 "اطلاعات شما در برابر دسترسی‌های غیرمجاز هست."
 
-#: ermile/includes/languages/trans_project.php:186
+#: ermile/includes/languages/trans_project.php:187
 msgid "Terms of Service Agreement"
 msgstr "توافق‌نامه استفاده از سرویس"
 
-#: ermile/includes/languages/trans_project.php:187
+#: ermile/includes/languages/trans_project.php:188
 msgid ""
 "Tejarak acts upon international rules, depends on the countries receiving its "
 "services and renders its activities within this framework."
@@ -13072,7 +13088,7 @@ msgstr ""
 "تجارک مطابق قوانین بین‌الملل و وابسته به کشورهای دریافت‌کننده خدمات بوده و در این "
 "چارچوب فعالیت می‌نماید."
 
-#: ermile/includes/languages/trans_project.php:188
+#: ermile/includes/languages/trans_project.php:189
 msgid ""
 "Utilizing Tejarak's services means the acceptance of and commitment to observing "
 "all the tenors of this agreement."
@@ -13080,7 +13096,7 @@ msgstr ""
 "استفاده از خدمات تجارک به منزله‌ پذیرش و تعهد به رعایت تمام مفاد مندرج در این "
 "توافق‌نامه است."
 
-#: ermile/includes/languages/trans_project.php:189
+#: ermile/includes/languages/trans_project.php:190
 msgid ""
 "It is worth mentioning that due to the insecurity of cyberspace, you should never "
 "post your vital information on either Tejarak or any other services!"
@@ -13088,7 +13104,7 @@ msgstr ""
 "لازم به یادآوری‌ست که با توجه به ناامن بودن فضای ‌مجازی، نه تنها در تجارک بلکه در "
 "هیچ سرویس دیگری، اطلاعات حیاتی خود را منتشر نکنید!"
 
-#: ermile/includes/languages/trans_project.php:190
+#: ermile/includes/languages/trans_project.php:191
 msgid ""
 "User's personal information is strictly confidential in our service. Tejarak "
 "preserves the information as encoded and will not under any conditions transfer "
@@ -13097,7 +13113,7 @@ msgstr ""
 "اطلاعات شخصی کاربران در این سرویس به‌صورت کاملا محرمانه می‌باشد و تجارک این اطلاعات "
 "را به صورت کدشده نگه‌داری کرده و تحت هیچ شرایطی آن‌را به غیر واگذار نخواهد کرد."
 
-#: ermile/includes/languages/trans_project.php:191
+#: ermile/includes/languages/trans_project.php:192
 msgid ""
 "In case there is a request for receiving user's information by the competent "
 "authorities, according to the country the user lives in, Tejarak will cooperate "
@@ -13108,7 +13124,7 @@ msgstr ""
 "اطلاعات‌کاربری، تجارک تنها پس از دریافت حکم قضایی کشور درخواست کننده، توانایی "
 "همکاری با آنان را خواهد داشت."
 
-#: ermile/includes/languages/trans_project.php:192
+#: ermile/includes/languages/trans_project.php:193
 msgid ""
 "Tejarak will not offer any guarantee as to the quality of the products or "
 "services presented by the teams and will not accept any responsibility in this "
@@ -13117,7 +13133,7 @@ msgstr ""
 "تجارک هیچگونه ضمانتی در مورد کیفیت محصولات یا خدمات ارائه شده توسط تیم‌ها را "
 "نمی‌پذیرد و مسئولیتی در قبال آن ندارد!"
 
-#: ermile/includes/languages/trans_project.php:193
+#: ermile/includes/languages/trans_project.php:194
 msgid ""
 "Users should assume responsibility for any harm, both material and immaterial, "
 "caused by direct, indirect or penal factors and due to their utilization of this "
@@ -13126,7 +13142,7 @@ msgstr ""
 "خسارت‌های‌ مادی و معنوی ناشی از عوامل مستقیم، غیرمستقیم و کیفری، در قبال استفاده از "
 "این سرویس برعهده کاربران بوده و تجارک هیچ‌گونه مسئولیتی دراین‌باره ندارد."
 
-#: ermile/includes/languages/trans_project.php:194
+#: ermile/includes/languages/trans_project.php:195
 msgid ""
 "Tejarak accepts no responsibility, under any conditions, for the harms caused by "
 "users' mutual trust in each other or by the disclosure of information by users."
@@ -13134,7 +13150,7 @@ msgstr ""
 "تحت هیچ شرایطی تجارک مسئولیت خسارت‌های وارده در اثر اعتماد و اتکاء اعضاء به یکدیگر "
 "و فاش‌شدن اطلاعات توسط کاربر را نمی‌پذیرد."
 
-#: ermile/includes/languages/trans_project.php:195
+#: ermile/includes/languages/trans_project.php:196
 msgid ""
 "Tejarak will do its best to protect both the users' information and the service; "
 "however, regarding the lack of certainty within the cyberspace, it will not "
@@ -13144,7 +13160,7 @@ msgstr ""
 "توجه به عدم قطعیت در فضای مجازی، مسئولیتی در مورد از بين رفتن اطلاعات قرارگرفته "
 "بر روی سرویس نخواهد پذیرفت."
 
-#: ermile/includes/languages/trans_project.php:196
+#: ermile/includes/languages/trans_project.php:197
 msgid ""
 "We will publicize our information and news only via Tejarak's formal website. "
 "Accordingly, those who publicize any attributed news and claims, within social "
@@ -13155,7 +13171,7 @@ msgstr ""
 "و ادعای نسبت‌داده‌شده در رسانه‌ها و شبکه‌های اجتماعی به عهده منتشرکننده آن بوده و "
 "تجارک مسئولیتی در قبال آن ندارد."
 
-#: ermile/includes/languages/trans_project.php:197
+#: ermile/includes/languages/trans_project.php:198
 msgid ""
 "Tejarak will bear no responsibility for whatsoever messages sent to users, "
 "including those indicating winning a lottery, and all our information "
@@ -13165,7 +13181,7 @@ msgstr ""
 "دیگری نداشته و تمام اطلاع‌رسانی‌های ما از طریق روش‌های برقراری ارتباط کاربر با تجارک "
 "خواهد بود."
 
-#: ermile/includes/languages/trans_project.php:198
+#: ermile/includes/languages/trans_project.php:199
 msgid ""
 "Any misuse of Tejarak's trade name is prohibited and will be suable by making a "
 "complaint to the legal competent authorities."
@@ -13173,7 +13189,7 @@ msgstr ""
 "هرگونه سوءاستفاده از نام تجاری تجارک ممنوع بوده و از طریق شکایت به مراجع قانونی "
 "دارای صلاحیت، قابل پیگرد خواهد بود."
 
-#: ermile/includes/languages/trans_project.php:199
+#: ermile/includes/languages/trans_project.php:200
 msgid ""
 "Furthermore, this agreement, under the name Terms and Conditions, will be "
 "available and observable, in all pages of the website. Users will be responsible "
@@ -13182,7 +13198,7 @@ msgstr ""
 "هم‌چنین این توافق‌نامه در تمام صفحات وب‌سایت با عنوان شرایط و قوانین موجود و قابل "
 "مشاهده است. مسئولیت عدم کسب اطلاع از آخرین تغییرات برعهده کاربر خواهد بود."
 
-#: ermile/includes/languages/trans_project.php:200
+#: ermile/includes/languages/trans_project.php:201
 msgid ""
 "It should be mentioned that in case there would be any modifications in the above-"
 "mentioned tenors, an updated version will be available for the public, and as "
@@ -13191,11 +13207,11 @@ msgstr ""
 "لازم به ذکر است که درصورت هرگونه تغییر در مفاد ذکر شده، نسخه به‌روزشده آن در دسترس "
 "عموم قرار خواهد گرفت و به اطلاع تمام کاربران خواهد رسید."
 
-#: ermile/includes/languages/trans_project.php:203
+#: ermile/includes/languages/trans_project.php:204
 msgid "Ermile Social Responsibility"
 msgstr "مسئولیت اجتماعی ارمایل"
 
-#: ermile/includes/languages/trans_project.php:204
+#: ermile/includes/languages/trans_project.php:205
 msgid ""
 "Social responsibility refers to our role in maintaining, caring about and helping "
 "our society, while having set as its goal a responsibility-centered enterprise "
@@ -13204,7 +13220,7 @@ msgstr ""
 "مسئولیت اجتماعی به نقش ما در جهت حفظ، مراقبت و کمک به جامعه‌ای که در آن هستیم "
 "اشاره می‌کند و هدف آن کسب‌وکار مسئولانه‌ی همراه با تولید ثروت است."
 
-#: ermile/includes/languages/trans_project.php:205
+#: ermile/includes/languages/trans_project.php:206
 msgid ""
 "The issue of the social responsibility of organizations and corporations towards "
 "the society is from among the important issues being focused on in recent years."
@@ -13212,7 +13228,7 @@ msgstr ""
 "موضوع مسئولیت اجتماعی سازمان‌ها و شرکت‌ها نسبت به جامعه از جمله موضوعات مهمی است که "
 "در سال‌های اخیر مورد اهمیت قرار گرفته است."
 
-#: ermile/includes/languages/trans_project.php:206
+#: ermile/includes/languages/trans_project.php:207
 msgid ""
 "The social responsibility of organizations relates to the organization's "
 "responsibility towards society, human beings and the environment in which they "
@@ -13222,11 +13238,11 @@ msgstr ""
 "است که در آن فعالیت می‌کند. این مسئولیت فراتر از قوانین مرسوم و منافع مالی سازمان "
 "بوده و پیشرفت منافع اجتماعی را دنبال می‌کند."
 
-#: ermile/includes/languages/trans_project.php:207
+#: ermile/includes/languages/trans_project.php:208
 msgid "Ermile's Social Responsibilities"
 msgstr "مسئولیت‌های اجتماعی ارمایل"
 
-#: ermile/includes/languages/trans_project.php:208
+#: ermile/includes/languages/trans_project.php:209
 msgid ""
 "Based on the mentioned definitions of social responsibility, Ermile considers "
 "itself committed to society. Accordingly, besides attempting to offer creative "
@@ -13238,11 +13254,11 @@ msgstr ""
 "اجتماعی به عنوان یکی از مهم ترین ماموریت و آن، خواست خدا را داشته است، به کار خود "
 "ادامه خواهد داد."
 
-#: ermile/includes/languages/trans_project.php:209
+#: ermile/includes/languages/trans_project.php:210
 msgid "Environmentalist"
 msgstr "دوست‌دار محیط‌زیست"
 
-#: ermile/includes/languages/trans_project.php:210
+#: ermile/includes/languages/trans_project.php:211
 msgid ""
 "In spite of technological advancements, paper usage is unfortunately preferred to "
 "modern ways. One of Ermile's objectives is trying to change this habit and "
@@ -13253,7 +13269,7 @@ msgstr ""
 "از اهداف ارمایل است تلاش برای تغییر این عادت و کمک به حذف کاغذ از زندگی معمول و "
 "بنابراین، به نجات محیط زیست."
 
-#: ermile/includes/languages/trans_project.php:211
+#: ermile/includes/languages/trans_project.php:212
 msgid ""
 "Accordingly, with the aim of total elimination of paper use as well as electronic "
 "presentation of services, Ermile has taken significant steps towards "
@@ -13263,11 +13279,11 @@ msgstr ""
 "اقدامی مهم در زمینه حفظ محیط‌زیست داشته باشد. از میزان صرفه‌جویی ارمایل در مصرف "
 "کاغذ آگاه شوید."
 
-#: ermile/includes/languages/trans_project.php:212
+#: ermile/includes/languages/trans_project.php:213
 msgid "Philanthropist Activities"
 msgstr "فعالیت‌های خیرخواهانه"
 
-#: ermile/includes/languages/trans_project.php:213
+#: ermile/includes/languages/trans_project.php:214
 msgid ""
 "One of the most valuable resources of charity organizations is the voluntary and "
 "active participation of the individuals who, without any expectations, provide "
@@ -13276,7 +13292,7 @@ msgstr ""
 "یکی از ارزشمندترین سرمایه‌‌ی سازمان‌های خیریه، فعالیت و مشارکت داوطلبانه افرادی است "
 "که مهارت و سرمایه خود را بدون هیچ چشم‌داشتی در اختیار آن‌ها قرار می‌دهند."
 
-#: ermile/includes/languages/trans_project.php:214
+#: ermile/includes/languages/trans_project.php:215
 msgid ""
 "Ermile as well, with regard to its contribution to philanthropist activities, "
 "will honorably provide them with its services free of charge. To make use of "
@@ -13288,11 +13304,11 @@ msgstr ""
 "خدمات، درخواست خود را همراه با مدارک احراز هویت به مرکز پشتیبانی ارمایل ارسال "
 "نمایید."
 
-#: ermile/includes/languages/trans_project.php:215
+#: ermile/includes/languages/trans_project.php:216
 msgid "Recruiting Motivated Staff"
 msgstr "بکارگیری نیروهای باانگیزه"
 
-#: ermile/includes/languages/trans_project.php:216
+#: ermile/includes/languages/trans_project.php:217
 msgid ""
 "An outstanding characteristic of any organization is its specialized and highly "
 "motivated staff, playing a vital role in growth and development."
@@ -13300,7 +13316,7 @@ msgstr ""
 "ویژگی چشم‌گیر و بارز هر سازمانی وجود نیروی‌ انسانی باانگیزه و متخصص است که نقشی "
 "بنیادین در رشد و توسعه دارند."
 
-#: ermile/includes/languages/trans_project.php:217
+#: ermile/includes/languages/trans_project.php:218
 msgid ""
 "By the same token, we are always looking for creative and motivated Iranian "
 "youths in order to make the best and be effective in cooperation with them."
@@ -13308,15 +13324,15 @@ msgstr ""
 "ما هم در این راستا و برای خدمت به سرزمین‌مان، به دنبال جوانان ایرانی خلاق و "
 "باانگیزه هستیم تا با کمک هم برترین‌ها را بسازیم و اثرگذار باشیم."
 
-#: ermile/includes/languages/trans_project.php:218
+#: ermile/includes/languages/trans_project.php:219
 msgid "Join us and grow in a different location."
 msgstr "به ما بپیوندید و در مکانی متفاوت رشد کنید."
 
-#: ermile/includes/languages/trans_project.php:219
+#: ermile/includes/languages/trans_project.php:220
 msgid "Customer Care and Complete Satisfaction"
 msgstr "مشتری‌مداری و کسب رضایت کامل"
 
-#: ermile/includes/languages/trans_project.php:220
+#: ermile/includes/languages/trans_project.php:221
 msgid ""
 "Attracting people's participation as well as having their valuable presence has "
 "always been a great honor for Ermile and to appreciate your support, in return, "
@@ -13326,7 +13342,7 @@ msgstr ""
 "قدردانی از این حمایت، ارمایل نیز خدمات متقابلی را برای افزایش رضایت مشتریان خود "
 "ارائه می‌کند."
 
-#: ermile/includes/languages/trans_project.php:221
+#: ermile/includes/languages/trans_project.php:222
 msgid ""
 "These services are presented in different time intervals and are aimed at "
 "costomer care mission and appreciation of your valuable presence."
@@ -13334,23 +13350,23 @@ msgstr ""
 "این خدمات در بازه‌های زمانی متفاوت ارائه‌شده و در راستای ماموریت مشتری‌مداری و ارج "
 "نهادن به این حضور گرانبها می‌باشد."
 
-#: ermile/includes/languages/trans_project.php:224
+#: ermile/includes/languages/trans_project.php:225
 msgid "Next →"
 msgstr "→ بعدی"
 
-#: ermile/includes/languages/trans_project.php:225
+#: ermile/includes/languages/trans_project.php:226
 msgid "← Back"
 msgstr "قبلی ←"
 
-#: ermile/includes/languages/trans_project.php:226
+#: ermile/includes/languages/trans_project.php:227
 msgid "Skip"
 msgstr "خروج"
 
-#: ermile/includes/languages/trans_project.php:227
+#: ermile/includes/languages/trans_project.php:228
 msgid "Done"
 msgstr "اتمام"
 
-#: ermile/includes/languages/trans_project.php:233
+#: ermile/includes/languages/trans_project.php:234
 msgid ""
 "We do our best to improve our quality. So, knowing your valuable comments about "
 "bugs and problems and more importantly your precious offers will help us in this "
@@ -13360,44 +13376,44 @@ msgstr ""
 "و صدالبته پیشنهادات گرانبهایتان از طریق فرم زیر سبب کمک به ما برای این مهم خواهد "
 "شد."
 
-#: ermile/includes/languages/trans_project.php:242
+#: ermile/includes/languages/trans_project.php:243
 msgid "How to contact us"
 msgstr "نحوه‌ی تماس با ما"
 
-#: ermile/includes/languages/trans_project.php:248
+#: ermile/includes/languages/trans_project.php:249
 msgid "Floor2, Yas Building"
 msgstr "ساختمان یاس، طبقه دوم"
 
-#: ermile/includes/languages/trans_project.php:249
+#: ermile/includes/languages/trans_project.php:250
 msgid "on map"
 msgstr "روی نقشه"
 
-#: ermile/includes/languages/trans_project.php:256
+#: ermile/includes/languages/trans_project.php:257
 msgid "We can provide a wide range of enterprise services to you."
 msgstr "ما طیف گسترده‌ای از راه‌کارهای سازمانی را برای شما ارائه می‌دهیم."
 
-#: ermile/includes/languages/trans_project.php:257
+#: ermile/includes/languages/trans_project.php:258
 msgid "This is our slogan in Ermile."
 msgstr "این شعار ما در ارمایل است."
 
-#: ermile/includes/languages/trans_project.php:258
+#: ermile/includes/languages/trans_project.php:259
 msgid "We belive that we can do anywork, without complexity, as soon as posible."
 msgstr ""
 "معتقدیم، ما می‌توانیم هرکاری را انجام دهیم، بدون پیچیدگی و در کوتاه‌ترین زمان ممکن."
 
-#: ermile/includes/languages/trans_project.php:259
+#: ermile/includes/languages/trans_project.php:260
 msgid "Be easy and relax, we are do all works needed."
 msgstr "ما تمام کارهای لازم را برای شما انجام می‌دهیم، در آرامش و آسوده باشید."
 
-#: ermile/includes/languages/trans_project.php:260
+#: ermile/includes/languages/trans_project.php:261
 msgid "Ermile do anywork"
 msgstr "ارمایل هر کاری را انجام می‌دهد"
 
-#: ermile/includes/languages/trans_project.php:262
+#: ermile/includes/languages/trans_project.php:263
 msgid "Ask Anyone Anywhere"
 msgstr "از هرکسی در هرجایی بپرسید"
 
-#: ermile/includes/languages/trans_project.php:263
+#: ermile/includes/languages/trans_project.php:264
 msgid ""
 "Focus on your question. Do not be too concerned about how to ask or analyze. "
 "Equipped with an integrated platform, Sarshomar has made it possible for you to "
@@ -13406,15 +13422,15 @@ msgstr ""
 "روی سوال خود تمرکز کنید؛ دغدغه چطور پرسیدن و تحلیل کردن نداشته باشید. سرشمار با "
 "زیرساختی یکپارچه، امکان پرسیدن با هر ابزاری را برای شما فراهم کرده است."
 
-#: ermile/includes/languages/trans_project.php:264
+#: ermile/includes/languages/trans_project.php:265
 msgid "Tejarak"
 msgstr "تجارک"
 
-#: ermile/includes/languages/trans_project.php:265
+#: ermile/includes/languages/trans_project.php:266
 msgid "Do attendance easily and enjoy real time reports"
 msgstr "به‌سادگی حضور و غیاب کنید و از گزارش‌های آنلاین لذت ببرید"
 
-#: ermile/includes/languages/trans_project.php:266
+#: ermile/includes/languages/trans_project.php:267
 msgid ""
 "Setup your dedicated and beautiful attendance system in less than a minute and "
 "have a real time and scrupulously monitoring on your business from anywhere."
@@ -13422,11 +13438,11 @@ msgstr ""
 "سامانه‌ی حضور و غیاب اختصاصی و چشم‌نواز خودتان را در چند دقیقه راه‌اندازی کرده و از "
 "هرجایی بر کسب و کارتان نظارت <span>لحظه‌ای</span> و موشکافانه داشته باشید."
 
-#: ermile/includes/languages/trans_project.php:268
+#: ermile/includes/languages/trans_project.php:269
 msgid "Pioneer Schools Selection"
 msgstr "انتخاب مدارس پیشگام"
 
-#: ermile/includes/languages/trans_project.php:269
+#: ermile/includes/languages/trans_project.php:270
 msgid ""
 "Azvir provides complete and beautiful solutions for your school; Do all things "
 "easily and enjoy."
@@ -13434,58 +13450,58 @@ msgstr ""
 "ازویر، راه‌حلی کامل و زیبا را برای مدرسه ارائه می‌دهد؛ همه‌‌ی کارها را به‌سادگی انجام "
 "دهید و لذت ببرید."
 
-#: ermile/includes/languages/trans_project.php:270
+#: ermile/includes/languages/trans_project.php:271
 msgid "What are you waiting for?"
 msgstr "منتظر چی هستید!؟"
 
-#: ermile/includes/languages/trans_project.php:271
+#: ermile/includes/languages/trans_project.php:272
 msgid "Not sure how to start?"
 msgstr "مطمئن نیستید چطور شروع کنید؟"
 
-#: ermile/includes/languages/trans_project.php:272
+#: ermile/includes/languages/trans_project.php:273
 msgid ""
 "Tejarak is <span>free</span> to use as long as you want for teams of all sizes."
 msgstr ""
 "استفاده از تجارک برای هر مدتی که بخواهید و برای تیم‌های با هر تعداد عضوی که دارید "
 "<span>رایگان</span> است."
 
-#: ermile/includes/languages/trans_project.php:273
+#: ermile/includes/languages/trans_project.php:274
 msgid "Not worries."
 msgstr "نگران نباشید."
 
-#: ermile/includes/languages/trans_project.php:274
+#: ermile/includes/languages/trans_project.php:275
 msgid "FREE ticket to Enter to the 21st century!"
 msgstr "بلیط رایگان ورود به قرن بیست و یکم!"
 
-#: ermile/includes/languages/trans_project.php:275
+#: ermile/includes/languages/trans_project.php:276
 msgid "You can easily upgrade to "
 msgstr "شما به‌سادگی می‌توانید پلن خود را به"
 
-#: ermile/includes/languages/trans_project.php:276
+#: ermile/includes/languages/trans_project.php:277
 msgid "our paid plans"
 msgstr "پلن‌های بالاتر ما"
 
-#: ermile/includes/languages/trans_project.php:277
+#: ermile/includes/languages/trans_project.php:278
 msgid ", which offer more features and controls."
 msgstr " ارتقا دهید تا از امکانات و کنترل‌های بیشتر برخوردار شوید."
 
-#: ermile/includes/languages/trans_project.php:278
+#: ermile/includes/languages/trans_project.php:279
 msgid "Is your team interested in deploying?"
 msgstr "آیا به مزایای تجارک برای سازمان خود علاقمند شدید؟"
 
-#: ermile/includes/languages/trans_project.php:279
+#: ermile/includes/languages/trans_project.php:280
 msgid "We can help."
 msgstr "ما می‌توانیم به شما کمک کنیم."
 
-#: ermile/includes/languages/trans_project.php:280
+#: ermile/includes/languages/trans_project.php:281
 msgid "Get in Touch"
 msgstr "با ما در تماس باشید"
 
-#: ermile/includes/languages/trans_project.php:281
+#: ermile/includes/languages/trans_project.php:282
 msgid "Enterprise scale"
 msgstr "مقیاس عظیم"
 
-#: ermile/includes/languages/trans_project.php:282
+#: ermile/includes/languages/trans_project.php:283
 msgid ""
 "Our enterprise solution brings the power and utility of Ermile to large, complex "
 "organizations."
@@ -13493,15 +13509,15 @@ msgstr ""
 "راه‌کارهای سازمانی ما قدرت و امکانات ارمایل را برای پروژه‌های بزرگ و پیچیده شما به "
 "ارمغان می‌آورد."
 
-#: ermile/includes/languages/trans_project.php:285
+#: ermile/includes/languages/trans_project.php:286
 msgid "Ermile Jobs"
 msgstr "فرصت‌های شغلی ارمایل"
 
-#: ermile/includes/languages/trans_project.php:286
+#: ermile/includes/languages/trans_project.php:287
 msgid "Be a member of Ermile"
 msgstr "همکار ما در ارمایل شوید"
 
-#: ermile/includes/languages/trans_project.php:287
+#: ermile/includes/languages/trans_project.php:288
 msgid ""
 "Ermile team which is made by young proficient people, pleasant environment, "
 "dynamic and energetic sincere motivate for those who are interested at co-operate."
@@ -13509,35 +13525,35 @@ msgstr ""
 "ارمایل با تیمی متشکل از متخصصان جوان و نخبه، با محیطی شاداب، پویا و صمیمی علاقمند "
 "به همکاری با متخصصان با ‌انگیزه است."
 
-#: ermile/includes/languages/trans_project.php:288
+#: ermile/includes/languages/trans_project.php:289
 msgid "Be a member of <strong>Ermile</strong>"
 msgstr "همکار ما در <strong>ارمایل</strong> شوید"
 
-#: ermile/includes/languages/trans_project.php:289
+#: ermile/includes/languages/trans_project.php:290
 msgid "<strong>Ermile</strong> Benefits"
 msgstr "مزایای <strong>ارمایل</strong>"
 
-#: ermile/includes/languages/trans_project.php:290
+#: ermile/includes/languages/trans_project.php:291
 msgid "Choosing the best place as a job is most important for professional people."
 msgstr ""
 "انتخاب یک گزینه مناسب برای محل کار کردن، برای افراد متخصص و دقیق بسیار مهم است."
 
-#: ermile/includes/languages/trans_project.php:291
+#: ermile/includes/languages/trans_project.php:292
 msgid "Teamwork"
 msgstr "کار گروهی"
 
-#: ermile/includes/languages/trans_project.php:292
+#: ermile/includes/languages/trans_project.php:293
 msgid ""
 "Working as a team helps in quickly improvement of work and also easily figuring "
 "out a problem."
 msgstr ""
 "گروهی کار کردن باعث سرعت گرفتن پیشرفت کارها و همچنین راحت‌تر حل شدن مشکلات می‌شود."
 
-#: ermile/includes/languages/trans_project.php:293
+#: ermile/includes/languages/trans_project.php:294
 msgid "Free working hours"
 msgstr "ساعت کاری انعطاف‌پذیر"
 
-#: ermile/includes/languages/trans_project.php:294
+#: ermile/includes/languages/trans_project.php:295
 msgid ""
 "There is no any restriction about working hours. You can work every day for the "
 "whole week including Fridays and holidays from morning till night."
@@ -13545,11 +13561,11 @@ msgstr ""
 "هیچ محدودیتی برای ساعت کاری وجود ندارد! شما می‌توانید هر روز از هر ساعتی از صبح تا "
 "شب می‌توانید کار کنید."
 
-#: ermile/includes/languages/trans_project.php:295
+#: ermile/includes/languages/trans_project.php:296
 msgid "Exciting work environment"
 msgstr "محیط کاری شاد"
 
-#: ermile/includes/languages/trans_project.php:296
+#: ermile/includes/languages/trans_project.php:297
 msgid ""
 "You can work with talented and friendly group of people in a cheerful and dynamic "
 "environment of Ermile"
@@ -13557,11 +13573,11 @@ msgstr ""
 "محیط شاد و پویای ارمایل و همکاری با افراد شاداب باعث می‌شود شما از کار در این فضا "
 "لذت ببرید."
 
-#: ermile/includes/languages/trans_project.php:297
+#: ermile/includes/languages/trans_project.php:298
 msgid "Specialist Team"
 msgstr "تیم متخصص"
 
-#: ermile/includes/languages/trans_project.php:298
+#: ermile/includes/languages/trans_project.php:299
 msgid ""
 "Our experience that made of working with Specialist people cause perfect feeling "
 "in our team."
@@ -13569,26 +13585,26 @@ msgstr ""
 "کار کردن با تیم متخصص و با تجربه باعث رشد و پیشرفت سریع‌تر کارها و ایجاد حس خوب در "
 "تمام اعضا می‌شود."
 
-#: ermile/includes/languages/trans_project.php:299
+#: ermile/includes/languages/trans_project.php:300
 msgid "Lofty goals"
 msgstr "هدف های بزرگ"
 
-#: ermile/includes/languages/trans_project.php:300
+#: ermile/includes/languages/trans_project.php:301
 msgid ""
 "Having high and lofty goals are the main reasons for rapid progress of any "
 "company."
 msgstr "داشتن هدف‌های بزرگ مهمترین عامل پیشرفت یک مجموعه است."
 
-#: ermile/includes/languages/trans_project.php:301
+#: ermile/includes/languages/trans_project.php:302
 msgid "A pleasant green environment"
 msgstr "محیط کاری سبز"
 
-#: ermile/includes/languages/trans_project.php:302
+#: ermile/includes/languages/trans_project.php:303
 msgid "Your working environment will have a great impact and effect on your mind."
 msgstr ""
 "محیطی که شما در آن مشغول به کار هستید تأثیر زیادی بر روحیه شما خواهد گذاشت. "
 
-#: ermile/includes/languages/trans_project.php:303
+#: ermile/includes/languages/trans_project.php:304
 msgid ""
 "Green, beautiful and peaceful environment of Ermile makes you feel energetic, "
 "encouraged and at peace while you're at work."
@@ -13596,27 +13612,27 @@ msgstr ""
 "محیط کاری سبز و اداب و زیبای ارمایل باعث نشاط شما در هنگام حضور در محل کارتان "
 "می‌شود."
 
-#: ermile/includes/languages/trans_project.php:304
+#: ermile/includes/languages/trans_project.php:305
 msgid "Steps to join Ermile"
 msgstr "مراحل پیوستن به ارمایل"
 
-#: ermile/includes/languages/trans_project.php:305
+#: ermile/includes/languages/trans_project.php:306
 msgid "Send CV"
 msgstr "ارسال رزومه"
 
-#: ermile/includes/languages/trans_project.php:306
+#: ermile/includes/languages/trans_project.php:307
 msgid "Initial Interview"
 msgstr "بررسی و مصاحبه اولیه"
 
-#: ermile/includes/languages/trans_project.php:307
+#: ermile/includes/languages/trans_project.php:308
 msgid "Specialized Interview"
 msgstr "مصاحبه تخصصی"
 
-#: ermile/includes/languages/trans_project.php:308
+#: ermile/includes/languages/trans_project.php:309
 msgid "Final agreement"
 msgstr "قرارداد نهایی"
 
-#: ermile/includes/languages/trans_project.php:309
+#: ermile/includes/languages/trans_project.php:310
 msgid ""
 "Motive is the major factor for any person to be successful in work and that "
 "demands enthusiastic, keen and eager people that can help us reach our goal"
@@ -13624,7 +13640,7 @@ msgstr ""
 "انگیزه، محرک اصلی هر فرد برای پیش بردن کارهاست. ما نیز برای رسیدن به اهدافمان، "
 "نیاز به افراد با انگیزه داریم."
 
-#: ermile/includes/languages/trans_project.php:310
+#: ermile/includes/languages/trans_project.php:311
 msgid ""
 "Lofty projects need great thoughts and these great thoughts help us to reach "
 "valuable And huge goals."
@@ -13632,13 +13648,13 @@ msgstr ""
 "پروژه‌‌های بزرگ، نیازمند فکرهای بزرگ هستند و فکرهای بزرگ به اهداف بزرگ و ارزشمند "
 "می‌اندیشند."
 
-#: ermile/includes/languages/trans_project.php:311
+#: ermile/includes/languages/trans_project.php:312
 msgid ""
 "And that demands enthusiastic, keen and eager people that can help us reach our "
 "goal"
 msgstr "ما نیز برای رسیدن به اهدافمان، نیاز به افراد با انگیزه داریم."
 
-#: ermile/includes/languages/trans_project.php:312
+#: ermile/includes/languages/trans_project.php:313
 msgid ""
 "We all are always trying to make Ermile’s working environment as a pleasant, "
 "energetic and successful place for our team."
@@ -13646,25 +13662,25 @@ msgstr ""
 "همه‌ی ما همیشه سعی داریم که محیط کاری ارمایل یک محیط شاداب، پویا و بستر موفقیت "
 "اعضای تیم‌مان باشد."
 
-#: ermile/includes/languages/trans_project.php:313
+#: ermile/includes/languages/trans_project.php:314
 msgid ""
 "Working as a teamwork in Ermile helps us to acquire more power to reach our great "
 "aims."
 msgstr "ما در ارمایل با کار گروهی به قدرت بیشتری برای رسیدن به اهداف بزرگ می‌رسیم."
 
-#: ermile/includes/languages/trans_project.php:314
+#: ermile/includes/languages/trans_project.php:315
 msgid ""
 "Having creative and self-starter colleagues helps us to step quickly towards our "
 "goals."
 msgstr ""
 "داشتن همکارانی خلاق و مبتکر باعث سرعت گرفتن ما برای رسیدن به اهدافمان می‌گردد."
 
-#: ermile/includes/languages/trans_project.php:315
+#: ermile/includes/languages/trans_project.php:316
 msgid "Be a coworker who is ingenious cause us to do our project fast."
 msgstr ""
 "داشتن همکارانی خلاق و مبتکر باعث سرعت گرفتن ما برای رسیدن به اهدافمان می‌گردد."
 
-#: ermile/includes/languages/trans_project.php:316
+#: ermile/includes/languages/trans_project.php:317
 msgid ""
 "Age does not matter for us. Having the above qualities are enough to be a member "
 "of Email."
@@ -13672,120 +13688,120 @@ msgstr ""
 "سن کارمندان برای ما اهمیتی ندارد. داشتن ویژگی‌های فوق برای اضافه شدن به جمع ارمایل "
 "کافی است."
 
-#: ermile/includes/languages/trans_project.php:317
+#: ermile/includes/languages/trans_project.php:318
 msgid ""
 "Academic certificates are not important for us. Having a good and well knowledge "
 "about the related subject is enough for us."
 msgstr ""
 "مدرک تحصیلی برای ما مهم نیست داشتن تخصص و دانش در موضوع مربوطه برای ما کافی است."
 
-#: ermile/includes/languages/trans_project.php:318
+#: ermile/includes/languages/trans_project.php:319
 msgid "Job opportunity in Ermile"
 msgstr "فرصت‌های شغلی در ارمایل"
 
-#: ermile/includes/languages/trans_project.php:319
+#: ermile/includes/languages/trans_project.php:320
 msgid "PHP developer"
 msgstr "متخصص پی‌اچ‌پی"
 
-#: ermile/includes/languages/trans_project.php:320
+#: ermile/includes/languages/trans_project.php:321
 msgid "JavaScript developer"
 msgstr "برنامه‌نویس جاوااسکریپت"
 
-#: ermile/includes/languages/trans_project.php:321
+#: ermile/includes/languages/trans_project.php:322
 msgid "Graphic Designer"
 msgstr "طراح گرافیک"
 
-#: ermile/includes/languages/trans_project.php:322
+#: ermile/includes/languages/trans_project.php:323
 msgid "Expert in PHP and ability to analyze the codes"
 msgstr "مسلط به پی‌اچ‌پی و توان تحلیل کد"
 
-#: ermile/includes/languages/trans_project.php:323
+#: ermile/includes/languages/trans_project.php:324
 msgid "Familiar with some PHP frameworks"
 msgstr "آشنا با چند فریم‌ورک‌های پی‌اچ‌پی"
 
-#: ermile/includes/languages/trans_project.php:324
+#: ermile/includes/languages/trans_project.php:325
 msgid "Familiar with OOP and MVC"
 msgstr "آشنا با برنامه‌نویسی شی‌گرا و ام‌وی‌سی"
 
-#: ermile/includes/languages/trans_project.php:325
+#: ermile/includes/languages/trans_project.php:326
 msgid "Familiar with database"
 msgstr "آشنا به دیتابیس"
 
-#: ermile/includes/languages/trans_project.php:326
+#: ermile/includes/languages/trans_project.php:327
 msgid "Familiar with Git"
 msgstr "آشنا به گیت"
 
-#: ermile/includes/languages/trans_project.php:327
+#: ermile/includes/languages/trans_project.php:328
 msgid "Creative and systematic"
 msgstr "خلاق و منظم"
 
-#: ermile/includes/languages/trans_project.php:328
+#: ermile/includes/languages/trans_project.php:329
 msgid "Fall in love with Documentation"
 msgstr "علاقمند به تهیه مستندات"
 
-#: ermile/includes/languages/trans_project.php:329
+#: ermile/includes/languages/trans_project.php:330
 msgid "Send cv"
 msgstr "ارسال رزومه"
 
-#: ermile/includes/languages/trans_project.php:330
+#: ermile/includes/languages/trans_project.php:331
 msgid "Expert in Html, Css, JavaScript and ability to analyze codes"
 msgstr "مسلط به اچ‌تی‌ام‌ال و سی‌اس‌اس و جاوااسکریپت و توان تحلیل کد"
 
-#: ermile/includes/languages/trans_project.php:331
+#: ermile/includes/languages/trans_project.php:332
 msgid "Familiar with JavaScript frameworks"
 msgstr "آشنا با فریم‌ورک‌های جاوااسکریپت"
 
-#: ermile/includes/languages/trans_project.php:332
+#: ermile/includes/languages/trans_project.php:333
 msgid "Familiar with UX"
 msgstr "آشنا به تجربه‌کاربری"
 
-#: ermile/includes/languages/trans_project.php:333
+#: ermile/includes/languages/trans_project.php:334
 msgid "Ability of designing professionally(Logo and illustration)"
 msgstr "قدرت طراحی با دست عالی(لوگو و تصویرسازی)"
 
-#: ermile/includes/languages/trans_project.php:334
+#: ermile/includes/languages/trans_project.php:335
 msgid "Familiar with Adobe Photoshop"
 msgstr "آشنایی به نرم‌افزار ادوبی فتوشاپ"
 
-#: ermile/includes/languages/trans_project.php:335
+#: ermile/includes/languages/trans_project.php:336
 msgid "Familiar with Adobe Illustrator"
 msgstr "آشنایی به نرم‌افزار ادوبی ایلاستریتر"
 
-#: ermile/includes/languages/trans_project.php:336
+#: ermile/includes/languages/trans_project.php:337
 msgid "Familiar with essential traditional Iranian and Islamic art"
 msgstr "آشنا با مبانی هنرهای سنتی ایرانی و اسلامی"
 
-#: ermile/includes/languages/trans_project.php:337
+#: ermile/includes/languages/trans_project.php:338
 msgid "Familiar with graphic basics"
 msgstr "آشنا با مبانی گرافیک"
 
-#: ermile/includes/languages/trans_project.php:338
+#: ermile/includes/languages/trans_project.php:339
 msgid "Familiar with web and user interface"
 msgstr "آشنا با وب و رابط‌کاربری"
 
-#: ermile/includes/languages/trans_project.php:339
+#: ermile/includes/languages/trans_project.php:340
 msgid "Familiar with color"
 msgstr "آشنا به رنگ"
 
-#: ermile/includes/languages/trans_project.php:340
+#: ermile/includes/languages/trans_project.php:341
 msgid "Be sure your CV must contain...!"
 msgstr "حتما می‌دانید رزومه باید...!"
 
-#: ermile/includes/languages/trans_project.php:341
+#: ermile/includes/languages/trans_project.php:342
 msgid "Kindly mention your contact number properly so we can contact you easily."
 msgstr "اطلاعات تماس خود را ذکر کنید، تا برای تماس با شما مشکلی وجود نداشته باشد!"
 
-#: ermile/includes/languages/trans_project.php:342
+#: ermile/includes/languages/trans_project.php:343
 msgid "Don’t forget your social network links especially LinkedIn."
 msgstr "لینک شبکه‌های اجتماعی خود، خصوصا لینکداین برای حرفه‌ای‌ها فراموش نشود!"
 
-#: ermile/includes/languages/trans_project.php:343
+#: ermile/includes/languages/trans_project.php:344
 msgid ""
 "It’s better if your CV is in one page and be sure it should not be more than 3 "
 "pages."
 msgstr "بهتر است رزومه در یک صفحه تنظیم شود و در نهایت بیشتر از سه صفحه نشود!"
 
-#: ermile/includes/languages/trans_project.php:344
+#: ermile/includes/languages/trans_project.php:345
 msgid ""
 "Writing about your experience and your skills in your CV helps us to check your "
 "CV properly and hastily."
@@ -13793,29 +13809,29 @@ msgstr ""
 "نوشتن سوابق‌کاری و مهارت‌هایتان در رزومه، به ما در بررسی بهتر و سریع‌تر رزومه شما "
 "کمک می‌کند!"
 
-#: ermile/includes/languages/trans_project.php:345
+#: ermile/includes/languages/trans_project.php:346
 msgid ""
 "If you have any work experience, kindly provide complete information about it in "
 "your CV."
 msgstr "در صورت داشتن سابقه‌کار، آدرس یا نمونه‌ای از آن را در رزومه ذکر کنید!"
 
-#: ermile/includes/languages/trans_project.php:346
+#: ermile/includes/languages/trans_project.php:347
 msgid "Be sure to mention your personal information, picture and Interests."
 msgstr "اطلاعات شخصی، عکس و علایق خود را حتما ذکر کنید!"
 
-#: ermile/includes/languages/trans_project.php:347
+#: ermile/includes/languages/trans_project.php:348
 msgid "Please note down your CV with a suitable font and it should be in pdf file."
 msgstr "رزومه را با فونت مناسب بنویسید و فایل ارسالی حتما باید پی‌دی‌اف باشد!"
 
-#: ermile/includes/languages/trans_project.php:349
+#: ermile/includes/languages/trans_project.php:350
 msgid "Kindly register your Information"
 msgstr "لطفا اطلاعات خود را وارد کنید"
 
-#: ermile/includes/languages/trans_project.php:350
+#: ermile/includes/languages/trans_project.php:351
 msgid "Upload CV"
 msgstr "بارگذاری رزومه"
 
-#: ermile/includes/languages/trans_project.php:351
+#: ermile/includes/languages/trans_project.php:352
 msgid "Send your Information"
 msgstr "ارسال اطلاعات"
 
