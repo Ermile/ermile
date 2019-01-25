@@ -7768,9 +7768,9 @@ iframe.gMap {
     width: 100vw;
     height: 100vh;
     top: 0 !important;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
     overflow: hidden;
     transition: all 1s; }
 
