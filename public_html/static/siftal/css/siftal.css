@@ -1333,10 +1333,13 @@ a:active {
   border: 1px solid transparent;
   border-radius: 0.25rem;
   min-height: 1em;
-  line-height: 1.25;
+  line-height: 1.5;
   opacity: 0.7;
   background-color: #f7f7f7;
   color: #333; }
+
+.rtl .msg {
+  line-height: 2; }
 
 .msg:empty {
   display: none; }
@@ -2067,6 +2070,9 @@ progress.xl, meter.xl {
   line-height: 1.4;
   margin-bottom: 1em;
   border-collapse: collapse; }
+
+.rtl .tbl1 {
+  line-height: 2; }
 
 .tbl1.cbox {
   display: table;
@@ -16499,7 +16505,8 @@ input[type="number"]::-webkit-outer-spin-button {
   position: relative;
   cursor: pointer;
   padding: 0;
-  display: inline-block; }
+  display: inline-block;
+  line-height: 20px; }
 
 .check1 label::before {
   content: '';
@@ -16511,6 +16518,9 @@ input[type="number"]::-webkit-outer-spin-button {
   transition: 0.3s;
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.1); }
+
+.msg .check1 label::before {
+  border-color: #333; }
 
 .check1 label::after {
   content: '';
