@@ -20822,6 +20822,10 @@ body.siftal .cbox table {
   font-size: 1.2em;
   margin-bottom: 1em; }
 
+.siftal #sidebar ul.sidenavService {
+  font-size: 1.2em;
+  margin-bottom: 1em; }
+
 .siftal #sidebar ul > li {
   color: #d5d5d5; }
 
@@ -20997,13 +21001,18 @@ body.siftal .cbox table {
 .payTicket .topBox .price {
   display: inline-block;
   vertical-align: middle;
-  font-size: 120px;
-  line-height: 150px;
+  font-size: 30px;
+  line-height: 120px;
   overflow: hidden;
-  height: 120px; }
+  height: 120px;
+  transition: 0.2s; }
 
 .payTicket .topBox .unit {
-  display: inline-block; }
+  display: block;
+  position: absolute;
+  bottom: 0.5em;
+  left: 0.5em;
+  font-size: 1.5em; }
 
 .payTicket .breakLine {
   width: 20px;
