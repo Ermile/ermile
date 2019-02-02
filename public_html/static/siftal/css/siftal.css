@@ -15353,7 +15353,7 @@ body.redirecting {
   min-height: 100%; }
 
 body.redirecting .detail {
-  font-family: tahoma, 'Open Sans';
+  font-family: IRANSans,"Segoe UI",Helvetica,sans-serif;
   font-weight: 600;
   font-size: 12px;
   width: 300px;
@@ -15364,8 +15364,15 @@ body.redirecting .detail h1 {
   text-transform: uppercase;
   font-weight: 700; }
 
+[lang="fa"] body.redirecting .detail h1 {
+  direction: rtl; }
+
 body.redirecting .detail h2 {
-  font-size: 0.9em; }
+  font-size: 0.9em;
+  font-weight: 100; }
+
+body.redirecting .detail h2 a {
+  font-weight: 100; }
 
 body.redirecting .jet {
   position: relative;
