@@ -269,7 +269,7 @@ class twigTransTerms
 	echo T_("Your notifications");                                                    // Line 149
 	echo T_("Click to check your profile");                                           // Line 151
 	echo T_("Account");                                                               // Line 154
-	echo T_("Logout");                                                                // Line 155
+	echo T_("Logout");                                                                // Line 19
 	echo T_("You really want to go?");                                                // Line 156
 	echo T_("We are waiting for you to come back:)");                                 // Line 157
 	echo T_("Enter to have better experience");                                       // Line 168
@@ -423,8 +423,10 @@ class twigTransTerms
 	echo T_("Update google mail");                                                    // Line 14
 	echo T_("Don't change");                                                          // Line 16
 
-	//------------------------------------------addons/content_enter/home/display.html
+	//-------------------------------------------addons/content_enter/app/display.html
 	echo T_("You");                                                                   // Line 5
+
+	//------------------------------------------addons/content_enter/home/display.html
 
 	//---------------------------------------addons/content_enter/twostep/display.html
 	echo T_("Two-step login is now active for you.");                                 // Line 9
@@ -466,7 +468,7 @@ class twigTransTerms
 	//----------------------------------------------addons/content_support/layout.html
 	echo T_("Support Dashboard");                                                     // Line 8
 	echo T_("New Ticket");                                                            // Line 14
-	echo T_("All");                                                                   // Line 16
+	echo T_("All");                                                                   // Line 678
 	echo T_("Awaiting answer");                                                       // Line 20
 	echo T_("Answered");                                                              // Line 24
 	echo T_("Unsolved");                                                              // Line 33
@@ -617,21 +619,22 @@ class twigTransTerms
 	echo T_("Education Course");                                                      // Line 46
 
 	//---------------------------------addons/content_crm/member/security/display.html
-	echo T_("User have chatid");                                                      // Line 37
-	echo T_("Remove chatid");                                                         // Line 39
-	echo T_("chatid");                                                                // Line 43
-	echo T_("Delete user");                                                           // Line 52
+	echo T_("Delete user");                                                           // Line 35
 	echo T_("Are you sure to delete this user?");                                     // Line 140
 	echo T_("Delete");                                                                // Line 253
+	echo T_("User have chatid");                                                      // Line 52
+	echo T_("Remove chatid");                                                         // Line 56
+	echo T_("chatid");                                                                // Line 64
+	echo T_("User have android");                                                     // Line 76
 	echo T_("Default language");                                                      // Line 44
 	echo T_("Select one item");                                                       // Line 46
 	echo T_("Permission");                                                            // Line 96
 	echo T_("No permission");                                                         // Line 276
 	echo T_("Username");                                                              // Line 156
 	echo T_("Enter a valid username from 3 to 40 character");                         // Line 180
-	echo T_("Enter to change pass");                                                  // Line 112
+	echo T_("Enter to change pass");                                                  // Line 138
 	echo T_("Password was set, enter to change it!");                                 // Line 307
-	echo T_("Password not set, enter  to set it!");                                   // Line 123
+	echo T_("Password not set, enter  to set it!");                                   // Line 149
 	echo T_("Confirm password");                                                      // Line 305
 	echo T_("Require to change current password");                                    // Line 305
 	echo T_("Show sidebar");                                                          // Line 34
@@ -692,60 +695,57 @@ class twigTransTerms
 	echo T_("Married");                                                               // Line 160
 
 	//-------------------------------------addons/content_crm/member/home/display.html
-	echo T_("Advance result");                                                        // Line 42
+	echo T_("Advance result");                                                        // Line 43
 	echo T_("Show");                                                                  // Line 48
-	echo T_("Display Name");                                                          // Line 82
-	echo T_("Created date");                                                          // Line 100
-	echo T_("Last Modified");                                                         // Line 103
-	echo T_("Mr");                                                                    // Line 121
-	echo T_("Mrs");                                                                   // Line 121
-	echo T_("Password is set");                                                       // Line 137
-	echo T_("Password is not set!");                                                  // Line 137
-	echo T_("Two step verification in enabled");                                      // Line 138
-	echo T_("Two step verification in disable");                                      // Line 138
-	echo T_("Have chatid");                                                           // Line 390
-	echo T_("Have not chatid");                                                       // Line 397
-	echo T_("Have email");                                                            // Line 496
-	echo T_("Have not email");                                                        // Line 503
-	echo T_("Try to start with add new user!");                                       // Line 187
-	echo T_("Filter by username");                                                    // Line 217
-	echo T_("Filter by avatar");                                                      // Line 222
-	echo T_("Filter by displayname");                                                 // Line 227
-	echo T_("Filter by mobile");                                                      // Line 232
-	echo T_("Filter by email");                                                       // Line 237
-	echo T_("Filter by password");                                                    // Line 242
-	echo T_("Filter by twostep");                                                     // Line 247
-	echo T_("Filter by permission");                                                  // Line 252
-	echo T_("Filter by chatid");                                                      // Line 257
-	echo T_("Filter by language");                                                    // Line 262
-	echo T_("Filter by android_uniquecode");                                          // Line 267
-	echo T_("Filter by duplicate");                                                   // Line 273
-	echo T_("Clear filter");                                                          // Line 282
-	echo T_("Apply");                                                                 // Line 283
-	echo T_("Have duplicate mobile");                                                 // Line 296
-	echo T_("Have duplicate email");                                                  // Line 303
-	echo T_("Have duplicate username");                                               // Line 310
-	echo T_("Have duplicate chatid");                                                 // Line 317
-	echo T_("Have duplicate android_uniquecode");                                     // Line 324
-	echo T_("Have android_uniquecode");                                               // Line 338
-	echo T_("Have not android_uniquecode");                                           // Line 345
-	echo T_("Non");                                                                   // Line 617
-	echo T_("Have language");                                                         // Line 364
-	echo T_("Have not language");                                                     // Line 371
-	echo T_("Have permission");                                                       // Line 416
-	echo T_("Have not permission");                                                   // Line 423
-	echo T_("Have twostep");                                                          // Line 442
-	echo T_("Have not twostep");                                                      // Line 449
-	echo T_("Have password");                                                         // Line 469
-	echo T_("Have not password");                                                     // Line 476
-	echo T_("Have mobile");                                                           // Line 523
-	echo T_("Have not mobile");                                                       // Line 530
-	echo T_("Have displayname");                                                      // Line 549
-	echo T_("Have not displayname");                                                  // Line 556
-	echo T_("Have avatar");                                                           // Line 575
-	echo T_("Have not avatar");                                                       // Line 582
-	echo T_("Have username");                                                         // Line 603
-	echo T_("Have not username");                                                     // Line 610
+	echo T_("Display Name");                                                          // Line 83
+	echo T_("Created date");                                                          // Line 101
+	echo T_("Last Modified");                                                         // Line 104
+	echo T_("Mr");                                                                    // Line 122
+	echo T_("Mrs");                                                                   // Line 122
+	echo T_("Password is set");                                                       // Line 138
+	echo T_("Password is not set!");                                                  // Line 138
+	echo T_("Two step verification in enabled");                                      // Line 139
+	echo T_("Two step verification in disable");                                      // Line 139
+	echo T_("Have chatid");                                                           // Line 370
+	echo T_("Have not chatid");                                                       // Line 140
+	echo T_("Have email");                                                            // Line 470
+	echo T_("Have not email");                                                        // Line 477
+	echo T_("Try to start with add new user!");                                       // Line 188
+	echo T_("Filter by mobile");                                                      // Line 217
+	echo T_("Filter by username");                                                    // Line 222
+	echo T_("Filter by email");                                                       // Line 227
+	echo T_("Filter by chatid");                                                      // Line 232
+	echo T_("Filter by android_uniquecode");                                          // Line 237
+	echo T_("Filter by avatar");                                                      // Line 242
+	echo T_("Filter by displayname");                                                 // Line 247
+	echo T_("Filter by password");                                                    // Line 252
+	echo T_("Filter by twostep");                                                     // Line 257
+	echo T_("Filter by permission");                                                  // Line 262
+	echo T_("Filter by language");                                                    // Line 267
+	echo T_("Filter by duplicate");                                                   // Line 274
+	echo T_("Clear filter");                                                          // Line 283
+	echo T_("Apply");                                                                 // Line 284
+	echo T_("Have duplicate mobile");                                                 // Line 297
+	echo T_("Have duplicate email");                                                  // Line 304
+	echo T_("Have duplicate username");                                               // Line 311
+	echo T_("Have android_uniquecode");                                               // Line 325
+	echo T_("Non");                                                                   // Line 591
+	echo T_("Have language");                                                         // Line 344
+	echo T_("Have not language");                                                     // Line 351
+	echo T_("Have permission");                                                       // Line 390
+	echo T_("Have not permission");                                                   // Line 397
+	echo T_("Have twostep");                                                          // Line 416
+	echo T_("Have not twostep");                                                      // Line 423
+	echo T_("Have password");                                                         // Line 443
+	echo T_("Have not password");                                                     // Line 450
+	echo T_("Have mobile");                                                           // Line 497
+	echo T_("Have not mobile");                                                       // Line 504
+	echo T_("Have displayname");                                                      // Line 523
+	echo T_("Have not displayname");                                                  // Line 530
+	echo T_("Have avatar");                                                           // Line 549
+	echo T_("Have not avatar");                                                       // Line 556
+	echo T_("Have username");                                                         // Line 577
+	echo T_("Have not username");                                                     // Line 584
 
 	//-----------------------------------addons/content_crm/member/glance/display.html
 	echo T_("Log");                                                                   // Line 105

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile - Persian\n"
-"POT-Creation-Date: 2019-02-02 16:58+0330\n"
-"PO-Revision-Date: 2019-02-02 16:58+0330\n"
+"POT-Creation-Date: 2019-02-05 17:34+0330\n"
+"PO-Revision-Date: 2019-02-05 17:34+0330\n"
 "Last-Translator: Javad Kakroudi <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -215,18 +215,18 @@ msgid "All other session terminated"
 msgstr "تمام دسترسی‌های دیگر مسدود شد"
 
 #: dash/addons/content_account/profile/security/model.php:80
-#: dash/addons/content_crm/member/security/model.php:79
+#: dash/addons/content_crm/member/security/model.php:95
 msgid "Session terminated"
 msgstr "این روش ورود مسدود شد"
 
 #: dash/addons/content_account/profile/security/view.php:71
-#: dash/addons/content_crm/member/security/view.php:57
+#: dash/addons/content_crm/member/security/view.php:66
 #: dash/addons/includes/languages/trans_static.php:346
 msgid "Windows"
 msgstr "ویندوز"
 
 #: dash/addons/content_account/profile/security/view.php:75
-#: dash/addons/content_crm/member/security/view.php:61
+#: dash/addons/content_crm/member/security/view.php:70
 #: dash/addons/includes/languages/trans_static.php:347
 msgid "Linux"
 msgstr "لینوکس"
@@ -234,6 +234,89 @@ msgstr "لینوکس"
 #: dash/addons/content_account/view/model.php:20
 msgid "Your change was saved"
 msgstr "تغییرات با موفقیت ذخیره شد"
+
+#: dash/addons/content_api/v5/enter/controller.php:48
+#: dash/addons/content_api/v5/enter/controller.php:109
+msgid "Verification code not set"
+msgstr "کد اعتبارسنجی ارسال نشده است"
+
+#: dash/addons/content_api/v5/enter/controller.php:62
+#: dash/addons/content_api/v5/enter/controller.php:172
+msgid "Can not signup this mobile"
+msgstr "ما نمی توانیم این موبایل را ثبت کنیم"
+
+#: dash/addons/content_api/v5/enter/controller.php:81
+msgid "No verifycation code sended to this phone number"
+msgstr "هیچ کد اعتبارسنجی به این شماره ارسال نشده است"
+
+#: dash/addons/content_api/v5/enter/controller.php:103
+msgid "Invalid code"
+msgstr "کد اشتباه است"
+
+#: dash/addons/content_api/v5/enter/controller.php:115
+msgid "Verification code was expired"
+msgstr "کد اعتبارسنجی منقضی شده است"
+
+#: dash/addons/content_api/v5/enter/controller.php:121
+#: dash/addons/content_api/v5/enter/controller.php:127
+msgid "Verification code not found"
+msgstr "کد اعتبارسنجی یافت نشد"
+
+#: dash/addons/content_api/v5/enter/controller.php:150
+msgid "Code ok"
+msgstr "کد صحیح است"
+
+#: dash/addons/content_api/v5/enter/controller.php:230
+msgid "The verification code sended to phone number"
+msgstr "کد اعتبار سنجی به این شماره تلفن ارسال شد"
+
+#: dash/addons/content_api/v5/enter/controller.php:235
+msgid "A verification code was sended to user"
+msgstr "کد اعتبارسنجی به کاربر ارسال شده است"
+
+#: dash/addons/content_api/v5/enter/controller.php:263
+msgid "Invalid user_code and user_token"
+msgstr "کد شناسایی کاربر و توکن کاربر باهم تطابق ندارند"
+
+#: dash/addons/content_api/v5/enter/controller.php:269
+msgid "This method was not supported"
+msgstr "این متود پشتیبانی نمی‌شود"
+
+#: dash/addons/content_api/v5/enter/controller.php:324
+#: dash/addons/content_enter/callback/model.php:56
+#: dash/addons/content_enter/callback/model.php:139
+msgid "Mobile not set"
+msgstr "موبایل تنظیم نشده است"
+
+#: dash/addons/content_api/v5/enter/controller.php:331
+#: dash/addons/content_enter/app/model.php:23 dash/lib/app/address.php:161
+#: dash/lib/app/user.php:234
+msgid "Invalid mobile"
+msgstr "شماره‌ی تلفن همراه نامعتبر است"
+
+#: dash/addons/content_api/v5/enter/controller.php:338
+msgid "User code not set"
+msgstr "کد کاربر ارسال نشده است"
+
+#: dash/addons/content_api/v5/enter/controller.php:345
+msgid "Invalid user_code"
+msgstr "کد کاربر اشتباه است"
+
+#: dash/addons/content_api/v5/enter/controller.php:353
+msgid "User token not set"
+msgstr "توکن کاربر ارسال نشده است"
+
+#: dash/addons/content_api/v5/enter/controller.php:359
+msgid "Invalid user_token"
+msgstr "توکن کاربر معتبر نیست"
+
+#: dash/addons/content_api/v5/enter/controller.php:368
+msgid "Invalid verify_code"
+msgstr "کد اعتبارسنجی معتبر نیست"
+
+#: dash/addons/content_api/v5/enter/controller.php:376
+msgid "Verification code is out of range"
+msgstr "کد اعتبارسنجی خارج از محدوده مجاز است"
 
 #: dash/addons/content_cp/attachment/add/model.php:17
 #: dash/addons/content_cp/posts/main/model.php:21
@@ -388,7 +471,7 @@ msgstr "داشبورد سیستم مدیریت محتوا"
 #: dash/addons/content_cp/posts/edit/controller.php:12
 #: dash/addons/content_cp/posts/edit/view.php:13
 #: dash/addons/content_support/message/edit/view.php:23
-#: dash/addons/content_support/ticket/show/view.php:42 dash/lib/app/posts.php:153
+#: dash/addons/content_support/ticket/show/view.php:47 dash/lib/app/posts.php:153
 msgid "Invalid id"
 msgstr "شناسه نامعتبر"
 
@@ -396,7 +479,7 @@ msgstr "شناسه نامعتبر"
 #: dash/addons/content_cp/contact/edit/model.php:12
 #: dash/addons/content_support/ticket/show/model.php:144
 #: dash/lib/app/address.php:189 dash/lib/app/comment.php:259
-#: dash/lib/app/ticket.php:489 dash/lib/app/user.php:508
+#: dash/lib/app/ticket.php:486 dash/lib/app/user.php:508
 #: dash/lib/app/user_telegram.php:96
 msgid "Invalid status"
 msgstr "وضعیت نامعتبر است"
@@ -703,7 +786,7 @@ msgstr "نمایش عناوین لاگ‌ها"
 #: dash/addons/content_crm/member/add/view.php:10
 #: dash/addons/content_crm/member/home/view.php:28
 #: dash/addons/includes/languages/trans_dash.php:471
-#: ermile/includes/languages/trans_dash.php:573
+#: ermile/includes/languages/trans_dash.php:575
 msgid "Add new user"
 msgstr "افزودن کاربر جدید"
 
@@ -747,7 +830,7 @@ msgstr "اجازه تنظیم یا تغییر نماد اعضا"
 
 #: dash/addons/content_crm/member/billing/view.php:9
 #: dash/addons/includes/languages/trans_dash.php:82
-#: ermile/includes/languages/trans_dash.php:609
+#: ermile/includes/languages/trans_dash.php:611
 msgid "Billing"
 msgstr "مالی"
 
@@ -797,7 +880,7 @@ msgid "you can edit detail of member"
 msgstr "شما می‌توانید اطلاعات این عضو را ویرایش کنید"
 
 #: dash/addons/content_crm/member/glance/model.php:17
-#: dash/addons/content_crm/member/security/model.php:59
+#: dash/addons/content_crm/member/security/model.php:71
 msgid "User removed"
 msgstr "کاربر حذف شده"
 
@@ -923,7 +1006,7 @@ msgstr "نوه"
 #: dash/addons/includes/languages/trans_dash.php:477
 #: dash/lib/app/log/caller/notif/notif_text.php:10
 #: dash/lib/app/log/caller/notif/notif_text.php:11
-#: ermile/includes/languages/trans_dash.php:613
+#: ermile/includes/languages/trans_dash.php:615
 msgid "Notification"
 msgstr "آگاهسازی"
 
@@ -935,15 +1018,19 @@ msgstr "اجازه تنظیم آگاه‌سازی برای کاربر"
 msgid "You can not set your permission less than admin!"
 msgstr "شما نمی‌توانید سطح دسترسی خود را پایین تر از مدیریت قرار دهید!"
 
-#: dash/addons/content_crm/member/security/model.php:68
+#: dash/addons/content_crm/member/security/model.php:60
+msgid "Chatid save"
+msgstr "شناسه چت ذخیره شد"
+
+#: dash/addons/content_crm/member/security/model.php:83
 msgid "Chatid removed"
 msgstr "شناسه تلگرام حذف شد"
 
-#: dash/addons/content_crm/member/security/model.php:93
+#: dash/addons/content_crm/member/security/model.php:109
 msgid "Please set repassword"
 msgstr "لطفا تکرار کلمه عبور را وارد کنید"
 
-#: dash/addons/content_crm/member/security/model.php:99
+#: dash/addons/content_crm/member/security/model.php:115
 msgid "Password not match whit repassword"
 msgstr "تکرار کلمه عبور با کلمه عبور برابر نیست"
 
@@ -999,7 +1086,7 @@ msgstr "شناسه تنظیم نشده است"
 #: dash/addons/includes/languages/trans_dash.php:466
 #: dash/addons/includes/languages/trans_static.php:209
 #: dash/addons/includes/languages/trans_static.php:985
-#: ermile/includes/languages/trans_dash.php:574
+#: ermile/includes/languages/trans_dash.php:576
 msgid "Permissions"
 msgstr "سطح دسترسی ها"
 
@@ -1083,8 +1170,8 @@ msgid "Alert!"
 msgstr "هشدار!"
 
 #: dash/addons/content_enter/alert/view.php:16
-#: dash/addons/content_enter/verify/model.php:36 dash/lib/utility/enter.php:868
-#: dash/lib/utility/enter.php:879 dash/lib/utility/enter.php:886
+#: dash/addons/content_enter/verify/model.php:36 dash/lib/utility/enter.php:899
+#: dash/lib/utility/enter.php:910 dash/lib/utility/enter.php:917
 msgid "What are you doing?"
 msgstr "اینجا چیکار می‌کنی عزیز جان!؟"
 
@@ -1093,6 +1180,24 @@ msgstr "اینجا چیکار می‌کنی عزیز جان!؟"
 #: dash/addons/includes/languages/trans_static.php:546
 msgid "OK"
 msgstr "تایید"
+
+#: dash/addons/content_enter/app/model.php:41
+#: dash/addons/content_enter/home/model.php:113
+#: dash/addons/content_support/ticket/contact_ticket/model.php:26
+msgid "You hit our maximum try limit."
+msgstr "شما حداکثر تلاش خود را انجام دادید."
+
+#: dash/addons/content_enter/app/model.php:41
+#: dash/addons/content_enter/home/model.php:113
+#: dash/addons/content_support/ticket/contact_ticket/model.php:26
+msgid "Try again later!"
+msgstr "بعدا مجددا تلاش کنید!"
+
+#: dash/addons/content_enter/app/model.php:64
+#: dash/addons/content_enter/verify/later/model.php:36
+#: dash/addons/content_enter/verify/model.php:80
+msgid "We can not signup you"
+msgstr "ما نمی‌توانیم شما را ثبت‌نام کنیم"
 
 #: dash/addons/content_enter/ban/view.php:9
 msgid "You are Banned!!"
@@ -1118,11 +1223,6 @@ msgstr "سرویس اشتباه"
 msgid "Message is empty"
 msgstr "پیام خالی است"
 
-#: dash/addons/content_enter/callback/model.php:56
-#: dash/addons/content_enter/callback/model.php:139
-msgid "Mobile not set"
-msgstr "موبایل تنظیم نشده است"
-
 #: dash/addons/content_enter/callback/model.php:82
 msgid "Log not found"
 msgstr "لاگ یافت نشد"
@@ -1139,13 +1239,13 @@ msgstr "ثبت نام شما کامل شد"
 msgid "User signup by sms"
 msgstr "کاربر با ارسال پیامک ثبت نام شد"
 
-#: dash/addons/content_enter/controller.php:22
+#: dash/addons/content_enter/controller.php:24
 #: dash/addons/content_support/ticket/add/model.php:76
 #: dash/addons/content_support/ticket/contact_ticket/model.php:55
 msgid "Your cookies may have been blocked"
 msgstr "احتمالا کوکی‌های شما بلاک شده است"
 
-#: dash/addons/content_enter/controller.php:22
+#: dash/addons/content_enter/controller.php:24
 #: dash/addons/content_support/ticket/add/model.php:76
 #: dash/addons/content_support/ticket/contact_ticket/model.php:55
 msgid "You need to enable cookie for usign this service"
@@ -1213,19 +1313,9 @@ msgstr "موبایل یافت نشد"
 #: dash/lib/app/parent/delete.php:35 dash/lib/app/parent/delete.php:114
 #: dash/lib/app/parent/get.php:35 dash/lib/app/parent/get.php:44
 #: dash/lib/app/posts/add.php:37 dash/lib/app/term.php:338
-#: dash/lib/app/user/add.php:55 dash/lib/app/user_telegram.php:164
+#: dash/lib/app/user/add.php:55
 msgid "User not found"
 msgstr "کاربر یافت نشد"
-
-#: dash/addons/content_enter/home/model.php:113
-#: dash/addons/content_support/ticket/contact_ticket/model.php:26
-msgid "You hit our maximum try limit."
-msgstr "شما حداکثر تلاش خود را انجام دادید."
-
-#: dash/addons/content_enter/home/model.php:113
-#: dash/addons/content_support/ticket/contact_ticket/model.php:26
-msgid "Try again later!"
-msgstr "بعدا مجددا تلاش کنید!"
 
 #: dash/addons/content_enter/home/model.php:131
 msgid "Please set the username or mobile or email"
@@ -1312,6 +1402,7 @@ msgstr "گذرواژه‌ی اشتباه، دوباره تلاش کنید"
 #: dash/addons/content_enter/pass/recovery/model.php:29
 #: dash/addons/includes/languages/trans_dash.php:517
 #: dash/lib/app/log/caller/enter/enter_VerificationCode.php:16
+#: dash/lib/app/log/caller/enter/enter_apiverificationcode.php:16
 #: ermile/includes/languages/trans_dash.php:352
 msgid "Enter"
 msgstr "ورود"
@@ -1437,7 +1528,7 @@ msgstr "ورود دو مرحله ای هم اکنون برای حساب کارب
 
 #: dash/addons/content_enter/twostep/view.php:14
 #: dash/addons/includes/languages/trans_dash.php:104
-#: ermile/includes/languages/trans_dash.php:644
+#: ermile/includes/languages/trans_dash.php:647
 msgid "Two step verification"
 msgstr "ورود دو مرحله ای"
 
@@ -1483,7 +1574,7 @@ msgid "You must set less than 50 character in username"
 msgstr "شناسه‌ی کاربری باید کمتر از ۵۵ کاراکتر باشد"
 
 #: dash/addons/content_enter/username/set/model.php:41
-#: dash/lib/utility/enter.php:1059
+#: dash/lib/utility/enter.php:1090
 msgid "Your username was set"
 msgstr "نام کاربری شما ثبت شد"
 
@@ -1503,11 +1594,6 @@ msgstr "با نام کاربری وارد :name شوید"
 #: dash/addons/content_enter/verify/model.php:71
 msgid "We can not find your detail to signup"
 msgstr "ما اطلاعات شما را برای ثبت نام پیدا نکردیم"
-
-#: dash/addons/content_enter/verify/later/model.php:36
-#: dash/addons/content_enter/verify/model.php:80
-msgid "We can not signup you"
-msgstr "ما نمی‌توانیم شما را ثبت‌نام کنیم"
 
 #: dash/addons/content_enter/verify/later/model.php:47
 msgid "Invalid detail for signup!, Please try again"
@@ -1529,18 +1615,22 @@ msgid "Verify code in local is :code"
 msgstr "کد فعال‌سازی در سیستم محلی :code است"
 
 #: dash/addons/content_enter/verify/sms/model.php:51
+#: dash/lib/app/log/caller/enter/enter_apiverificationcode.php:72
 msgid "Your verification code is :code "
 msgstr "کد فعال سازی شما  :code "
 
 #: dash/addons/content_enter/verify/telegram/model.php:52
+#: dash/lib/app/log/caller/enter/enter_apiverificationcode.php:92
 msgid "Your login code is :code"
 msgstr "کد ورود شما :code است"
 
 #: dash/addons/content_enter/verify/telegram/model.php:53
+#: dash/lib/app/log/caller/enter/enter_apiverificationcode.php:93
 msgid "This code can be used to log in to your account. Do not give it to anyone!"
 msgstr "این کد برای ورود به حساب‌کاربری‌تان استفاده می‌شود. آن را به سایرین ندهید!"
 
 #: dash/addons/content_enter/verify/telegram/model.php:54
+#: dash/lib/app/log/caller/enter/enter_apiverificationcode.php:94
 msgid "If you didn't request this code, ignore this message."
 msgstr "اگر شما درخواست کد را نداده‌اید،‌ این کد را نادیده بگیرید."
 
@@ -1592,29 +1682,29 @@ msgstr "این درخواست برای غیر فعال سازی ورود دو م
 msgid "This is request of delete account!"
 msgstr "این درخواست برای حذف حساب کاربری است!"
 
-#: dash/addons/content_enter/verify/view.php:105
+#: dash/addons/content_enter/verify/view.php:107
 msgid "This is request of account recovery."
 msgstr "این درخواست برای بازیابی حساب کاربری است."
 
-#: dash/addons/content_enter/verify/view.php:113
+#: dash/addons/content_enter/verify/view.php:115
 msgid "This is request of change password."
 msgstr "این درخواست برای تغییر گذرواژه است."
 
-#: dash/addons/content_enter/verify/view.php:118
+#: dash/addons/content_enter/verify/view.php:120
 #: dash/addons/includes/languages/trans_dash.php:70
 #: ermile/includes/languages/trans_dash.php:902
 msgid "Verify"
 msgstr "اعتبارسنجی"
 
-#: dash/addons/content_enter/verify/view.php:123
+#: dash/addons/content_enter/verify/view.php:125
 msgid "Verify by Call"
 msgstr "اعتبارسنجی با تماس"
 
-#: dash/addons/content_enter/verify/view.php:127
+#: dash/addons/content_enter/verify/view.php:129
 msgid "Verify via Telegram"
 msgstr "اعتبارسنجی با تلگرام"
 
-#: dash/addons/content_enter/verify/view.php:131
+#: dash/addons/content_enter/verify/view.php:133
 msgid "verify with SMS"
 msgstr "تایید با پیامک"
 
@@ -1786,7 +1876,7 @@ msgstr "ویرایش برخی از فایل های سرور"
 
 #: dash/addons/content_su/tg/home/view.php:8
 #: dash/addons/includes/languages/trans_dash.php:478
-#: ermile/includes/languages/trans_dash.php:516
+#: ermile/includes/languages/trans_dash.php:518
 msgid "Telegram"
 msgstr "تلگرام"
 
@@ -2026,10 +2116,10 @@ msgstr "بازگشت به لیست تیکت‌ها"
 #: dash/addons/content_support/ticket/show/model.php:64
 #: dash/addons/content_support/ticket/show/model.php:129
 #: dash/addons/content_support/ticket/show/model.php:253
-#: dash/addons/content_support/ticket/show/view.php:48
-#: dash/addons/content_support/ticket/show/view.php:76
-#: dash/addons/content_support/ticket/show/view.php:252
-#: dash/addons/content_support/ticket/show/view.php:259
+#: dash/addons/content_support/ticket/show/view.php:53
+#: dash/addons/content_support/ticket/show/view.php:81
+#: dash/addons/content_support/ticket/show/view.php:257
+#: dash/addons/content_support/ticket/show/view.php:264
 msgid "Ticket not found"
 msgstr "تیکتی یافت نشد"
 
@@ -2082,7 +2172,7 @@ msgstr "نمی‌توانید دو لینک را در یک پیام ارسال �
 #: dash/addons/includes/languages/trans_dash.php:969
 #: dash/addons/includes/languages/trans_static.php:1091
 #: dash/lib/social/telegram/commands/ermile.php:334
-#: ermile/includes/languages/trans_dash.php:531
+#: ermile/includes/languages/trans_dash.php:533
 msgid "Add new ticket"
 msgstr "افزودن تیکت جدید"
 
@@ -2160,7 +2250,7 @@ msgstr "بازگشت به پنل پشتیبانی"
 
 #: dash/addons/content_support/ticket/home/view.php:85
 #: dash/addons/includes/languages/trans_dash.php:941
-#: ermile/includes/languages/trans_dash.php:474
+#: ermile/includes/languages/trans_dash.php:476
 msgid "Open tickets"
 msgstr "تیکت‌های باز"
 
@@ -2174,7 +2264,7 @@ msgstr "تیکت‌های حل نشده"
 
 #: dash/addons/content_support/ticket/home/view.php:101
 #: dash/addons/includes/languages/trans_dash.php:991
-#: ermile/includes/languages/trans_dash.php:504
+#: ermile/includes/languages/trans_dash.php:506
 msgid "Solved ticket"
 msgstr "ثبت به عنوان حل شده"
 
@@ -2267,11 +2357,11 @@ msgstr "بررسی جزئیات تیکت شما"
 msgid "We try to answer to you as soon as posibble."
 msgstr "ما سعی می کنیم تا در اسرع وقت به شما پاسخ دهیم."
 
-#: dash/addons/content_support/ticket/show/view.php:65
+#: dash/addons/content_support/ticket/show/view.php:70
 msgid "This ticket closed automatically on :time because it marked as solved."
 msgstr "این تیکت حل شده و به‌صورت خودکار در :time بسته خواهد شد."
 
-#: dash/addons/content_support/ticket/show/view.php:65
+#: dash/addons/content_support/ticket/show/view.php:70
 msgid "If it's okay you can close it manually."
 msgstr "اگر مشکلی وجود ندارد شما می‌توانید آن را به‌صورت دستی ببندید."
 
@@ -2293,8 +2383,8 @@ msgid "Support dashboard"
 msgstr "پیشخوان پشتیبانی"
 
 #: dash/addons/content_support/view.php:63
-#: dash/addons/includes/languages/trans_dash.php:556 dash/lib/app/ticket.php:176
-#: ermile/includes/languages/trans_dash.php:610
+#: dash/addons/includes/languages/trans_dash.php:556 dash/lib/app/ticket.php:173
+#: ermile/includes/languages/trans_dash.php:612
 msgid "Ticket"
 msgstr "تیکت"
 
@@ -2336,7 +2426,7 @@ msgid "Postal code"
 msgstr "کد پستی"
 
 #: dash/addons/includes/languages/trans_dash.php:13
-#: ermile/includes/languages/trans_dash.php:601
+#: ermile/includes/languages/trans_dash.php:603
 msgid "Phone"
 msgstr "شماره تلفن"
 
@@ -2397,7 +2487,7 @@ msgid "Fax"
 msgstr "فکس"
 
 #: dash/addons/includes/languages/trans_dash.php:27
-#: ermile/includes/languages/trans_dash.php:612
+#: ermile/includes/languages/trans_dash.php:614
 msgid "Address"
 msgstr "آدرس"
 
@@ -2431,7 +2521,7 @@ msgid "Company name"
 msgstr "نام شرکت"
 
 #: dash/addons/includes/languages/trans_dash.php:34
-#: ermile/includes/languages/trans_dash.php:627
+#: ermile/includes/languages/trans_dash.php:630
 msgid "Select one item"
 msgstr "یکی از موارد را انتخاب کنید"
 
@@ -2446,7 +2536,7 @@ msgid "Disable"
 msgstr "غیرفعال"
 
 #: dash/addons/includes/languages/trans_dash.php:37
-#: ermile/includes/languages/trans_dash.php:640
+#: ermile/includes/languages/trans_dash.php:643
 msgid "Removed"
 msgstr "حذف شده"
 
@@ -2464,7 +2554,7 @@ msgstr "ذخیره"
 #: dash/addons/includes/languages/trans_dash.php:40
 #: dash/addons/includes/languages/trans_static.php:92
 #: ermile/includes/languages/static_translation.php:57
-#: ermile/includes/languages/trans_dash.php:625
+#: ermile/includes/languages/trans_dash.php:624
 msgid "Delete"
 msgstr "حذف"
 
@@ -2554,7 +2644,7 @@ msgid "Your credit"
 msgstr "اعتبار شما"
 
 #: dash/addons/includes/languages/trans_dash.php:64
-#: ermile/includes/languages/trans_dash.php:653
+#: ermile/includes/languages/trans_dash.php:656
 msgid "Billing History"
 msgstr "تاریخچه پرداخت‌ها"
 
@@ -2572,17 +2662,17 @@ msgstr "تاریخ"
 
 #: dash/addons/includes/languages/trans_dash.php:67
 #: dash/addons/includes/languages/trans_static.php:116
-#: ermile/includes/languages/trans_dash.php:654
+#: ermile/includes/languages/trans_dash.php:657
 msgid "Value"
 msgstr "مقدار"
 
 #: dash/addons/includes/languages/trans_dash.php:68
-#: ermile/includes/languages/trans_dash.php:655
+#: ermile/includes/languages/trans_dash.php:658
 msgid "Budget After"
 msgstr "بودجه"
 
 #: dash/addons/includes/languages/trans_dash.php:69
-#: ermile/includes/languages/trans_dash.php:656
+#: ermile/includes/languages/trans_dash.php:659
 msgid "Invoice"
 msgstr "فاکتور"
 
@@ -2620,7 +2710,7 @@ msgstr "تعداد"
 #: dash/addons/includes/languages/trans_dash.php:81
 #: dash/addons/includes/languages/trans_static.php:102
 #: dash/addons/includes/languages/trans_static.php:385 dash/lib/engine/view.php:299
-#: ermile/includes/languages/trans_dash.php:608
+#: ermile/includes/languages/trans_dash.php:610
 msgid "Profile"
 msgstr "پروفایل"
 
@@ -2675,7 +2765,7 @@ msgid "Name and Global Details"
 msgstr "نام و جزئیات عمومی"
 
 #: dash/addons/includes/languages/trans_dash.php:101
-#: ermile/includes/languages/trans_dash.php:660
+#: ermile/includes/languages/trans_dash.php:663
 msgid "Email and Social Networks"
 msgstr "رایانامه و شبکه‌های اجتماعی"
 
@@ -2690,12 +2780,12 @@ msgid "Improve User Experience"
 msgstr "بهبود تجربه کاربری"
 
 #: dash/addons/includes/languages/trans_dash.php:105
-#: ermile/includes/languages/trans_dash.php:637
+#: ermile/includes/languages/trans_dash.php:640
 msgid "Show sidebar"
 msgstr "نمایش نوار کناری"
 
 #: dash/addons/includes/languages/trans_dash.php:106
-#: ermile/includes/languages/trans_dash.php:626
+#: ermile/includes/languages/trans_dash.php:629
 msgid "Default language"
 msgstr "زبان پیشفرض"
 
@@ -2707,53 +2797,53 @@ msgid "Website"
 msgstr "وب‌سایت"
 
 #: dash/addons/includes/languages/trans_dash.php:108
-#: ermile/includes/languages/trans_dash.php:661
+#: ermile/includes/languages/trans_dash.php:664
 msgid "like"
 msgstr "پسندیدن"
 
 #: dash/addons/includes/languages/trans_dash.php:109
-#: ermile/includes/languages/trans_dash.php:662
+#: ermile/includes/languages/trans_dash.php:665
 msgid "Enter a valid website from 3 to 40 character"
 msgstr "وب‌سایت معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:110
-#: ermile/includes/languages/trans_dash.php:663
+#: ermile/includes/languages/trans_dash.php:666
 msgid "Instagram"
 msgstr "اینستاگرام"
 
 #: dash/addons/includes/languages/trans_dash.php:111
-#: ermile/includes/languages/trans_dash.php:664
+#: ermile/includes/languages/trans_dash.php:667
 msgid "Enter a valid instagram from 3 to 40 character"
 msgstr "شناسه اینستاگرام معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:112
-#: ermile/includes/languages/trans_dash.php:665
+#: ermile/includes/languages/trans_dash.php:668
 msgid "Facebook"
 msgstr "فیس‌بوک"
 
 #: dash/addons/includes/languages/trans_dash.php:113
-#: ermile/includes/languages/trans_dash.php:666
+#: ermile/includes/languages/trans_dash.php:669
 msgid "Enter a valid facebook from 3 to 40 character"
 msgstr "شناسه فیس‌بوک معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:114
-#: ermile/includes/languages/trans_dash.php:667
+#: ermile/includes/languages/trans_dash.php:670
 msgid "Twitter"
 msgstr "توییتر"
 
 #: dash/addons/includes/languages/trans_dash.php:115
-#: ermile/includes/languages/trans_dash.php:668
+#: ermile/includes/languages/trans_dash.php:671
 msgid "Enter a valid twitter from 3 to 40 character"
 msgstr "شناسه تویتر معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:116
 #: dash/addons/includes/languages/trans_static.php:255
-#: ermile/includes/languages/trans_dash.php:669
+#: ermile/includes/languages/trans_dash.php:672
 msgid "Linkedin"
 msgstr "لینکدین"
 
 #: dash/addons/includes/languages/trans_dash.php:117
-#: ermile/includes/languages/trans_dash.php:670
+#: ermile/includes/languages/trans_dash.php:673
 msgid "Enter a valid linkedin from 3 to 40 character"
 msgstr "شناسه لینکدین معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
@@ -2763,7 +2853,7 @@ msgid "Gmail"
 msgstr "جیمیل"
 
 #: dash/addons/includes/languages/trans_dash.php:119
-#: ermile/includes/languages/trans_dash.php:602
+#: ermile/includes/languages/trans_dash.php:604
 msgid "Like"
 msgstr "لایک"
 
@@ -2778,17 +2868,17 @@ msgid "Enter a valid lastname from 3 to 40 character"
 msgstr "نام خانوادگی معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:122
-#: ermile/includes/languages/trans_dash.php:630
+#: ermile/includes/languages/trans_dash.php:633
 msgid "Username"
 msgstr "نام‌کاربری"
 
 #: dash/addons/includes/languages/trans_dash.php:123
-#: ermile/includes/languages/trans_dash.php:631
+#: ermile/includes/languages/trans_dash.php:634
 msgid "Enter a valid username from 3 to 40 character"
 msgstr "نام کاربری معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:124
-#: ermile/includes/languages/trans_dash.php:682
+#: ermile/includes/languages/trans_dash.php:685
 msgid "Nick name"
 msgstr "لقب"
 
@@ -2808,17 +2898,17 @@ msgid "Enter a valid type from 3 to 40 character"
 msgstr "نوع معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:128
-#: ermile/includes/languages/trans_dash.php:686
+#: ermile/includes/languages/trans_dash.php:689
 msgid "Birthday"
 msgstr "تاریخ تولد"
 
 #: dash/addons/includes/languages/trans_dash.php:129
-#: ermile/includes/languages/trans_dash.php:671
+#: ermile/includes/languages/trans_dash.php:674
 msgid "Bio"
 msgstr "زندگی‌نامه"
 
 #: dash/addons/includes/languages/trans_dash.php:130
-#: ermile/includes/languages/trans_dash.php:683
+#: ermile/includes/languages/trans_dash.php:686
 msgid "Display name"
 msgstr "نام برای نمایش"
 
@@ -2828,27 +2918,27 @@ msgid "Enter a valid displayname from 3 to 40 character"
 msgstr "نام نمایشی معتبری بین ۳ و ۴۰ حرف وارد کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:132
-#: ermile/includes/languages/trans_dash.php:592
+#: ermile/includes/languages/trans_dash.php:594
 msgid "Like 09120123456"
 msgstr "مثل 0912 012 3456"
 
 #: dash/addons/includes/languages/trans_dash.php:133
-#: ermile/includes/languages/trans_dash.php:687
+#: ermile/includes/languages/trans_dash.php:690
 msgid "Gender"
 msgstr "جنسیت"
 
 #: dash/addons/includes/languages/trans_dash.php:134
-#: ermile/includes/languages/trans_dash.php:688
+#: ermile/includes/languages/trans_dash.php:691
 msgid "Male"
 msgstr "مرد"
 
 #: dash/addons/includes/languages/trans_dash.php:135
-#: ermile/includes/languages/trans_dash.php:689
+#: ermile/includes/languages/trans_dash.php:692
 msgid "Female"
 msgstr "زن"
 
 #: dash/addons/includes/languages/trans_dash.php:136
-#: ermile/includes/languages/trans_dash.php:638
+#: ermile/includes/languages/trans_dash.php:641
 msgid "Active"
 msgstr "فعال"
 
@@ -2859,27 +2949,27 @@ msgid "Awaiting"
 msgstr "در انتظار"
 
 #: dash/addons/includes/languages/trans_dash.php:138
-#: ermile/includes/languages/trans_dash.php:639
+#: ermile/includes/languages/trans_dash.php:642
 msgid "Deactive"
 msgstr "غیر فعال"
 
 #: dash/addons/includes/languages/trans_dash.php:139
-#: ermile/includes/languages/trans_dash.php:641
+#: ermile/includes/languages/trans_dash.php:644
 msgid "Filter"
 msgstr "مسدود شده"
 
 #: dash/addons/includes/languages/trans_dash.php:140
-#: ermile/includes/languages/trans_dash.php:642
+#: ermile/includes/languages/trans_dash.php:645
 msgid "Unreachable"
 msgstr "غیر قابل دسترسی"
 
 #: dash/addons/includes/languages/trans_dash.php:141
-#: ermile/includes/languages/trans_dash.php:628
+#: ermile/includes/languages/trans_dash.php:631
 msgid "Permission"
 msgstr "سطح دسترسی"
 
 #: dash/addons/includes/languages/trans_dash.php:142
-#: ermile/includes/languages/trans_dash.php:629
+#: ermile/includes/languages/trans_dash.php:632
 msgid "No permission"
 msgstr "بدون سطح دسترسی"
 
@@ -2899,17 +2989,17 @@ msgid "Delete your account"
 msgstr "حذف حساب کاربری خود"
 
 #: dash/addons/includes/languages/trans_dash.php:147
-#: ermile/includes/languages/trans_dash.php:635
+#: ermile/includes/languages/trans_dash.php:638
 msgid "Confirm password"
 msgstr "تایید رمز عبور"
 
 #: dash/addons/includes/languages/trans_dash.php:148
-#: ermile/includes/languages/trans_dash.php:636
+#: ermile/includes/languages/trans_dash.php:639
 msgid "Require to change current password"
 msgstr "برای تغییر کلمه عبور فعلی الزامی است"
 
 #: dash/addons/includes/languages/trans_dash.php:149
-#: ermile/includes/languages/trans_dash.php:633
+#: ermile/includes/languages/trans_dash.php:636
 msgid "Password was set, enter to change it!"
 msgstr "کلمه عبور تنظیم شده است، برای تغییر آن کلمه عبور را وارد کنید!"
 
@@ -2939,12 +3029,12 @@ msgid "About you"
 msgstr "درباره شما"
 
 #: dash/addons/includes/languages/trans_dash.php:159
-#: ermile/includes/languages/trans_dash.php:611
+#: ermile/includes/languages/trans_dash.php:613
 msgid "Security"
 msgstr "امنیتی"
 
 #: dash/addons/includes/languages/trans_dash.php:160
-#: ermile/includes/languages/trans_dash.php:590
+#: ermile/includes/languages/trans_dash.php:592
 msgid "Social network"
 msgstr "شبکه اجتماعی"
 
@@ -2974,12 +3064,12 @@ msgid "To active it"
 msgstr "برای فعال‌سازی آن"
 
 #: dash/addons/includes/languages/trans_dash.php:168
-#: ermile/includes/languages/trans_dash.php:643
+#: ermile/includes/languages/trans_dash.php:646
 msgid "Save remember session"
 msgstr "ورود من را به خاطر بسپار"
 
 #: dash/addons/includes/languages/trans_dash.php:169
-#: ermile/includes/languages/trans_dash.php:645
+#: ermile/includes/languages/trans_dash.php:648
 msgid "Active sessions"
 msgstr "ورودهای فعال"
 
@@ -2989,12 +3079,12 @@ msgid "Terminate all other sessions"
 msgstr "مسدودسازی تمام دسترسی‌های دیگر"
 
 #: dash/addons/includes/languages/trans_dash.php:171
-#: ermile/includes/languages/trans_dash.php:646
+#: ermile/includes/languages/trans_dash.php:649
 msgid "Browser"
 msgstr "مرورگر"
 
 #: dash/addons/includes/languages/trans_dash.php:172
-#: ermile/includes/languages/trans_dash.php:647
+#: ermile/includes/languages/trans_dash.php:650
 msgid "Operation System"
 msgstr "سیستم‌عامل"
 
@@ -3004,17 +3094,17 @@ msgid "IP"
 msgstr "آی‌پی"
 
 #: dash/addons/includes/languages/trans_dash.php:174
-#: ermile/includes/languages/trans_dash.php:648
+#: ermile/includes/languages/trans_dash.php:651
 msgid "Date login"
 msgstr "تاریخ ورود به سیستم"
 
 #: dash/addons/includes/languages/trans_dash.php:175
-#: ermile/includes/languages/trans_dash.php:649
+#: ermile/includes/languages/trans_dash.php:652
 msgid "Current session"
 msgstr "نشست فعلی"
 
 #: dash/addons/includes/languages/trans_dash.php:176
-#: ermile/includes/languages/trans_dash.php:650
+#: ermile/includes/languages/trans_dash.php:653
 msgid "Terminate"
 msgstr "مسدودسازی"
 
@@ -3724,7 +3814,7 @@ msgstr "کلیدواژه‌های پشتیبانی"
 
 #: dash/addons/includes/languages/trans_dash.php:349
 #: dash/addons/includes/languages/trans_static.php:1119
-#: ermile/includes/languages/trans_dash.php:571
+#: ermile/includes/languages/trans_dash.php:573
 msgid "CRM"
 msgstr "مدیریت ارتباط با مشتریان"
 
@@ -4138,7 +4228,7 @@ msgid "What do you want to send to this user?"
 msgstr "مایل به ارسال چه چیزی به این کاربر هستید؟"
 
 #: dash/addons/includes/languages/trans_dash.php:460
-#: ermile/includes/languages/trans_dash.php:560
+#: ermile/includes/languages/trans_dash.php:562
 #: ermile/includes/languages/trans_project.php:242
 msgid "Send"
 msgstr "ارسال"
@@ -4147,7 +4237,7 @@ msgstr "ارسال"
 #: dash/addons/includes/languages/trans_static.php:100
 #: dash/addons/includes/languages/trans_static.php:984
 #: ermile/includes/languages/static_translation.php:68
-#: ermile/includes/languages/trans_dash.php:572
+#: ermile/includes/languages/trans_dash.php:574
 msgid "Users"
 msgstr "کاربران"
 
@@ -4164,12 +4254,12 @@ msgstr "کنترل‌پنل"
 #: dash/addons/includes/languages/trans_dash.php:472
 #: dash/addons/includes/languages/trans_static.php:944
 #: dash/addons/includes/languages/trans_static.php:986
-#: ermile/includes/languages/trans_dash.php:575
+#: ermile/includes/languages/trans_dash.php:577
 msgid "SMS"
 msgstr "پیامک"
 
 #: dash/addons/includes/languages/trans_dash.php:473
-#: ermile/includes/languages/trans_dash.php:576
+#: ermile/includes/languages/trans_dash.php:578
 msgid "Quick send"
 msgstr "ارسال سریع"
 
@@ -4214,73 +4304,73 @@ msgid "All trash log"
 msgstr "تمامی بازدیدکنندگان حذف شده"
 
 #: dash/addons/includes/languages/trans_dash.php:488
-#: ermile/includes/languages/trans_dash.php:679
+#: ermile/includes/languages/trans_dash.php:682
 msgid "Set your avatar"
 msgstr "تصویر پروفایل خود را تنظیم کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:491
-#: ermile/includes/languages/trans_dash.php:657
+#: ermile/includes/languages/trans_dash.php:660
 msgid "The user have not payment history yet!"
 msgstr "هیچ تراکنش مالی برای کاربر یافت نشد!"
 
 #: dash/addons/includes/languages/trans_dash.php:496
-#: ermile/includes/languages/trans_dash.php:488
+#: ermile/includes/languages/trans_dash.php:490
 msgid "Add note"
 msgstr "افزودن یادداشت"
 
 #: dash/addons/includes/languages/trans_dash.php:497
-#: ermile/includes/languages/trans_dash.php:581
+#: ermile/includes/languages/trans_dash.php:583
 msgid "Write your note about user."
 msgstr "یادداشت خود را درباره کاربر بنویسید."
 
 #: dash/addons/includes/languages/trans_dash.php:498
-#: ermile/includes/languages/trans_dash.php:582
+#: ermile/includes/languages/trans_dash.php:584
 msgid ""
 "Something like calls, favorites, hobbits, special approach or something else."
 msgstr "هرچیزی مثل تماس‌ها، علاقمندی‌ها، سلایق، برخوردهای خاص یا هر چیز دیگری."
 
 #: dash/addons/includes/languages/trans_dash.php:499
-#: ermile/includes/languages/trans_dash.php:583
+#: ermile/includes/languages/trans_dash.php:585
 msgid "Add new note"
 msgstr "افزودن یادداشت جدید"
 
 #: dash/addons/includes/languages/trans_dash.php:502
-#: ermile/includes/languages/trans_dash.php:616
+#: ermile/includes/languages/trans_dash.php:618
 msgid "Education detail"
 msgstr "تحصیلات"
 
 #: dash/addons/includes/languages/trans_dash.php:503
-#: ermile/includes/languages/trans_dash.php:589
+#: ermile/includes/languages/trans_dash.php:591
 msgid "Education"
 msgstr "تحصیلات"
 
 #: dash/addons/includes/languages/trans_dash.php:504
-#: ermile/includes/languages/trans_dash.php:617
+#: ermile/includes/languages/trans_dash.php:619
 msgid "Education Course"
 msgstr "رشته تحصیلی"
 
 #: dash/addons/includes/languages/trans_dash.php:507
-#: ermile/includes/languages/trans_dash.php:684
+#: ermile/includes/languages/trans_dash.php:687
 msgid "Last name"
 msgstr "نام‌خانوادگی"
 
 #: dash/addons/includes/languages/trans_dash.php:508
-#: ermile/includes/languages/trans_dash.php:685
+#: ermile/includes/languages/trans_dash.php:688
 msgid "Father name"
 msgstr "نام پدر"
 
 #: dash/addons/includes/languages/trans_dash.php:509
-#: ermile/includes/languages/trans_dash.php:690
+#: ermile/includes/languages/trans_dash.php:693
 msgid "Marital"
 msgstr "وضعیت تاهل"
 
 #: dash/addons/includes/languages/trans_dash.php:510
-#: ermile/includes/languages/trans_dash.php:691
+#: ermile/includes/languages/trans_dash.php:694
 msgid "Single"
 msgstr "مجرد"
 
 #: dash/addons/includes/languages/trans_dash.php:511
-#: ermile/includes/languages/trans_dash.php:692
+#: ermile/includes/languages/trans_dash.php:695
 msgid "Married"
 msgstr "متاهل"
 
@@ -4300,54 +4390,54 @@ msgid "Send SMS"
 msgstr "ارسال پیامک"
 
 #: dash/addons/includes/languages/trans_dash.php:520
-#: ermile/includes/languages/trans_dash.php:697
+#: ermile/includes/languages/trans_dash.php:700
 msgid "Display Name"
 msgstr "نام برای نمایش عمومی"
 
 #: dash/addons/includes/languages/trans_dash.php:522
-#: ermile/includes/languages/trans_dash.php:698
+#: ermile/includes/languages/trans_dash.php:701
 msgid "Created date"
 msgstr "تاریخ ایجاد"
 
 #: dash/addons/includes/languages/trans_dash.php:523
-#: ermile/includes/languages/trans_dash.php:699
+#: ermile/includes/languages/trans_dash.php:702
 msgid "Last Modified"
 msgstr "آخرین به‌روز رسانی"
 
 #: dash/addons/includes/languages/trans_dash.php:524 dash/lib/app.php:359
 #: dash/lib/app.php:360 dash/lib/app/user.php:155 dash/lib/user.php:198
-#: ermile/includes/languages/trans_dash.php:700
+#: ermile/includes/languages/trans_dash.php:703
 msgid "Mr"
 msgstr "آقای"
 
 #: dash/addons/includes/languages/trans_dash.php:525 dash/lib/app.php:364
 #: dash/lib/app.php:365 dash/lib/app/user.php:159 dash/lib/user.php:202
-#: ermile/includes/languages/trans_dash.php:701
+#: ermile/includes/languages/trans_dash.php:704
 msgid "Mrs"
 msgstr "خانم"
 
 #: dash/addons/includes/languages/trans_dash.php:526
-#: ermile/includes/languages/trans_dash.php:702
+#: ermile/includes/languages/trans_dash.php:705
 msgid "Password is set"
 msgstr "کلمه عبور تنظیم شده است"
 
 #: dash/addons/includes/languages/trans_dash.php:527
-#: ermile/includes/languages/trans_dash.php:703
+#: ermile/includes/languages/trans_dash.php:706
 msgid "Password is not set!"
 msgstr "کلمه عبور تنظیم نشده است!"
 
 #: dash/addons/includes/languages/trans_dash.php:528
-#: ermile/includes/languages/trans_dash.php:704
+#: ermile/includes/languages/trans_dash.php:707
 msgid "Two step verification in enabled"
 msgstr "ورود دو مرحله ای فعال است"
 
 #: dash/addons/includes/languages/trans_dash.php:529
-#: ermile/includes/languages/trans_dash.php:705
+#: ermile/includes/languages/trans_dash.php:708
 msgid "Two step verification in disable"
 msgstr "ورود دو مرحله ای غیر فعال است"
 
 #: dash/addons/includes/languages/trans_dash.php:530
-#: ermile/includes/languages/trans_dash.php:710
+#: ermile/includes/languages/trans_dash.php:713
 msgid "Try to start with add new user!"
 msgstr "با افزودن کاربر جدید تلاشی برای شروع داشته باشید!"
 
@@ -4372,131 +4462,131 @@ msgid "National card photo"
 msgstr "تصویر کارت ملی"
 
 #: dash/addons/includes/languages/trans_dash.php:539
-#: ermile/includes/languages/trans_dash.php:586
+#: ermile/includes/languages/trans_dash.php:588
 msgid "General Detail"
 msgstr "جزئیات عمومی"
 
 #: dash/addons/includes/languages/trans_dash.php:540
-#: ermile/includes/languages/trans_dash.php:587
+#: ermile/includes/languages/trans_dash.php:589
 msgid "Identification detail"
 msgstr "جزئیات شناسنامه‌ای"
 
 #: dash/addons/includes/languages/trans_dash.php:541
-#: ermile/includes/languages/trans_dash.php:588
+#: ermile/includes/languages/trans_dash.php:590
 msgid "Contact information"
 msgstr "اطلاعات تماس"
 
-#: dash/addons/includes/languages/trans_dash.php:542 dash/lib/app/ticket.php:185
-#: ermile/includes/languages/trans_dash.php:591
+#: dash/addons/includes/languages/trans_dash.php:542 dash/lib/app/ticket.php:182
+#: ermile/includes/languages/trans_dash.php:593
 #: ermile/includes/languages/trans_project.php:240
 msgid "Message"
 msgstr "پیام"
 
 #: dash/addons/includes/languages/trans_dash.php:543
-#: ermile/includes/languages/trans_dash.php:593
+#: ermile/includes/languages/trans_dash.php:595
 msgid "Like abc@example.com"
 msgstr "مثل abc@example.com"
 
 #: dash/addons/includes/languages/trans_dash.php:544
-#: ermile/includes/languages/trans_dash.php:594
+#: ermile/includes/languages/trans_dash.php:596
 msgid "Nationality"
 msgstr "ملیت"
 
 #: dash/addons/includes/languages/trans_dash.php:545
-#: ermile/includes/languages/trans_dash.php:595
+#: ermile/includes/languages/trans_dash.php:597
 msgid "Choose your nationality"
 msgstr "ملیت را انتخاب کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:546
-#: ermile/includes/languages/trans_dash.php:596
+#: ermile/includes/languages/trans_dash.php:598
 msgid "Passport id"
 msgstr "شماره گذرنامه"
 
 #: dash/addons/includes/languages/trans_dash.php:547
-#: ermile/includes/languages/trans_dash.php:597
+#: ermile/includes/languages/trans_dash.php:599
 msgid "Passport expire date"
 msgstr "تاریخ انقضای گذرنامه"
 
 #: dash/addons/includes/languages/trans_dash.php:548
-#: ermile/includes/languages/trans_dash.php:598
+#: ermile/includes/languages/trans_dash.php:600
 msgid "Id number"
 msgstr "شماره شناسنامه"
 
 #: dash/addons/includes/languages/trans_dash.php:549
-#: ermile/includes/languages/trans_dash.php:599
+#: ermile/includes/languages/trans_dash.php:601
 msgid "National Id"
 msgstr "کد ملی"
 
 #: dash/addons/includes/languages/trans_dash.php:550
-#: ermile/includes/languages/trans_dash.php:600
+#: ermile/includes/languages/trans_dash.php:602
 msgid "10 digit national code"
 msgstr "کدملی ده رقمی"
 
 #: dash/addons/includes/languages/trans_dash.php:551
-#: ermile/includes/languages/trans_dash.php:603
+#: ermile/includes/languages/trans_dash.php:605
 #: ermile/includes/languages/trans_project.php:9
 msgid "Last update"
 msgstr "آخرین به‌روزرسانی"
 
 #: dash/addons/includes/languages/trans_dash.php:552
-#: ermile/includes/languages/trans_dash.php:604
+#: ermile/includes/languages/trans_dash.php:606
 msgid "Joined to serivce on"
 msgstr "پیوستن به سامانه در"
 
 #: dash/addons/includes/languages/trans_dash.php:553
-#: ermile/includes/languages/trans_dash.php:605
+#: ermile/includes/languages/trans_dash.php:607
 msgid "The user was blocked"
 msgstr "کاربر مسدود شده است"
 
 #: dash/addons/includes/languages/trans_dash.php:554
-#: ermile/includes/languages/trans_dash.php:606
+#: ermile/includes/languages/trans_dash.php:608
 msgid "The user was removed"
 msgstr "کاربر حذف شده است!"
 
 #: dash/addons/includes/languages/trans_dash.php:555
-#: ermile/includes/languages/trans_dash.php:607
+#: ermile/includes/languages/trans_dash.php:609
 msgid "Glance"
 msgstr "نگاه اجمالی"
 
 #: dash/addons/includes/languages/trans_dash.php:559
-#: ermile/includes/languages/trans_dash.php:620
+#: ermile/includes/languages/trans_dash.php:625
 msgid "User have chatid"
 msgstr "کاربر دارای شناسه تلگرام است"
 
 #: dash/addons/includes/languages/trans_dash.php:560
-#: ermile/includes/languages/trans_dash.php:621
+#: ermile/includes/languages/trans_dash.php:626
 msgid "Remove chatid"
 msgstr "حذف شناسه تلگرام"
 
 #: dash/addons/includes/languages/trans_dash.php:561
 #: dash/addons/includes/languages/trans_static.php:410
-#: ermile/includes/languages/trans_dash.php:622
+#: ermile/includes/languages/trans_dash.php:627
 msgid "chatid"
 msgstr "شناسه چت"
 
 #: dash/addons/includes/languages/trans_dash.php:562
-#: ermile/includes/languages/trans_dash.php:632
+#: ermile/includes/languages/trans_dash.php:635
 msgid "Enter to change pass"
 msgstr "برای تغییر کلمه عبور آن را وارد کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:563
-#: ermile/includes/languages/trans_dash.php:634
+#: ermile/includes/languages/trans_dash.php:637
 msgid "Password not set, enter  to set it!"
 msgstr "گذرواژه تنظیم نشده است، برای تنظیم آن وارد شوید!"
 
 #: dash/addons/includes/languages/trans_dash.php:568
-#: ermile/includes/languages/trans_dash.php:674
+#: ermile/includes/languages/trans_dash.php:677
 msgid "User ticket"
 msgstr "تیکت‌های کاربر"
 
 #: dash/addons/includes/languages/trans_dash.php:569
 #: dash/addons/includes/languages/trans_static.php:1114
-#: ermile/includes/languages/trans_dash.php:473
+#: ermile/includes/languages/trans_dash.php:475
 msgid "Solved"
 msgstr "حل شده"
 
 #: dash/addons/includes/languages/trans_dash.php:570
-#: ermile/includes/languages/trans_dash.php:542
+#: ermile/includes/languages/trans_dash.php:544
 msgid "Last modified on"
 msgstr "آخرین به‌روزرسانی در"
 
@@ -4589,7 +4679,7 @@ msgid "No template"
 msgstr "بدون الگو"
 
 #: dash/addons/includes/languages/trans_dash.php:596
-#: ermile/includes/languages/trans_dash.php:696
+#: ermile/includes/languages/trans_dash.php:699
 msgid "Show"
 msgstr "نمایش"
 
@@ -4750,47 +4840,47 @@ msgid "You"
 msgstr "شما"
 
 #: dash/addons/includes/languages/trans_dash.php:658
-#: ermile/includes/languages/trans_dash.php:436
+#: ermile/includes/languages/trans_dash.php:438
 msgid "You are logined ;)"
 msgstr "شما وارد سیستم هستید;)"
 
 #: dash/addons/includes/languages/trans_dash.php:659
-#: ermile/includes/languages/trans_dash.php:437
+#: ermile/includes/languages/trans_dash.php:439
 msgid "Be patient or"
 msgstr "صبور باشید یا"
 
 #: dash/addons/includes/languages/trans_dash.php:660
-#: ermile/includes/languages/trans_dash.php:438
+#: ermile/includes/languages/trans_dash.php:440
 msgid "click here!"
 msgstr "اینجا کلیک کنید!"
 
 #: dash/addons/includes/languages/trans_dash.php:663
-#: ermile/includes/languages/trans_dash.php:444
+#: ermile/includes/languages/trans_dash.php:446
 msgid "Can't access your account?"
 msgstr "نمی توانید به حساب خود وارد شوید؟"
 
 #: dash/addons/includes/languages/trans_dash.php:666
-#: ermile/includes/languages/trans_dash.php:441
+#: ermile/includes/languages/trans_dash.php:443
 msgid "Remembered your password?"
 msgstr "کلمه عبور خود را به خاطر آوردید!؟"
 
 #: dash/addons/includes/languages/trans_dash.php:669
-#: ermile/includes/languages/trans_dash.php:430
+#: ermile/includes/languages/trans_dash.php:432
 msgid "Two-step login is now active for you."
 msgstr "ورود دو مرحله ای برای حساب کاربری شما فعال است"
 
 #: dash/addons/includes/languages/trans_dash.php:670
-#: ermile/includes/languages/trans_dash.php:431
+#: ermile/includes/languages/trans_dash.php:433
 msgid "Deactive two-step"
 msgstr "غیرفعال‌سازی ورود دومرحله‌ای"
 
 #: dash/addons/includes/languages/trans_dash.php:671
-#: ermile/includes/languages/trans_dash.php:432
+#: ermile/includes/languages/trans_dash.php:434
 msgid "Two-step login is now deactive for you."
 msgstr "ورود دو مرحله ای برای حساب کاربری شما غیر فعال است"
 
 #: dash/addons/includes/languages/trans_dash.php:672
-#: ermile/includes/languages/trans_dash.php:433
+#: ermile/includes/languages/trans_dash.php:435
 msgid "Active two-step"
 msgstr "فعال‌سازی ورود دو مرحله‌ای"
 
@@ -4800,52 +4890,52 @@ msgid "Remove username"
 msgstr "حذف نام کاربری"
 
 #: dash/addons/includes/languages/trans_dash.php:678
-#: ermile/includes/languages/trans_dash.php:452
+#: ermile/includes/languages/trans_dash.php:454
 msgid "Send code in your Telegram"
 msgstr "ارسال کد در تلگرام شما"
 
 #: dash/addons/includes/languages/trans_dash.php:679
-#: ermile/includes/languages/trans_dash.php:453
+#: ermile/includes/languages/trans_dash.php:455
 msgid "Send code as sms to your phone"
 msgstr "ارسال کد از طریق پیامک به تلفن‌همراه شما"
 
 #: dash/addons/includes/languages/trans_dash.php:680
-#: ermile/includes/languages/trans_dash.php:454
+#: ermile/includes/languages/trans_dash.php:456
 msgid "Call you to send code"
 msgstr "تماس با شما برای ارسال کد"
 
 #: dash/addons/includes/languages/trans_dash.php:681
-#: ermile/includes/languages/trans_dash.php:455
+#: ermile/includes/languages/trans_dash.php:457
 msgid "You send code to us and we check it"
 msgstr "شما کد را برای ما ارسال کنید و ما چک کنیم"
 
 #: dash/addons/includes/languages/trans_dash.php:682
-#: ermile/includes/languages/trans_dash.php:456
+#: ermile/includes/languages/trans_dash.php:458
 msgid "Send code in your email"
 msgstr "ارسال کد به رایانامه شما"
 
 #: dash/addons/includes/languages/trans_dash.php:683
-#: ermile/includes/languages/trans_dash.php:449
+#: ermile/includes/languages/trans_dash.php:451
 msgid "Verify later"
 msgstr "بعدا تایید می‌کنم"
 
 #: dash/addons/includes/languages/trans_dash.php:686
-#: ermile/includes/languages/trans_dash.php:459
+#: ermile/includes/languages/trans_dash.php:461
 msgid "We can not find any way to send verification code to you!"
 msgstr "ما راهی برای ارسال کد به شما نیافتیم!"
 
 #: dash/addons/includes/languages/trans_dash.php:689
-#: ermile/includes/languages/trans_dash.php:447
+#: ermile/includes/languages/trans_dash.php:449
 msgid "You must confirm your mobile in the future"
 msgstr "شما باید اکانت خود را در آینده تایید کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:690
-#: ermile/includes/languages/trans_dash.php:448
+#: ermile/includes/languages/trans_dash.php:450
 msgid "Verify now"
 msgstr "هم اکنون تایید می‌کنم"
 
 #: dash/addons/includes/languages/trans_dash.php:693
-#: ermile/includes/languages/trans_dash.php:462
+#: ermile/includes/languages/trans_dash.php:464
 msgid "You must set a mobile or email to continue"
 msgstr "برای ادامه شما باید تلفن‌همراه یا رایانامه را وارد کنید"
 
@@ -5615,212 +5705,212 @@ msgid "Submit"
 msgstr "تایید"
 
 #: dash/addons/includes/languages/trans_dash.php:918
-#: ermile/includes/languages/trans_dash.php:555
+#: ermile/includes/languages/trans_dash.php:557
 msgid "In this section"
 msgstr "در این بخش"
 
 #: dash/addons/includes/languages/trans_dash.php:919
-#: ermile/includes/languages/trans_dash.php:556
+#: ermile/includes/languages/trans_dash.php:558
 msgid "For share via social networks"
 msgstr "برای به‌اشتراک‌گذاری از طریق شبکه‌های اجتماعی"
 
 #: dash/addons/includes/languages/trans_dash.php:920
-#: ermile/includes/languages/trans_dash.php:519
+#: ermile/includes/languages/trans_dash.php:521
 msgid "Short link"
 msgstr "لینک کوتاه"
 
 #: dash/addons/includes/languages/trans_dash.php:921
-#: ermile/includes/languages/trans_dash.php:557
+#: ermile/includes/languages/trans_dash.php:559
 #: ermile/includes/languages/trans_project.php:236
 msgid "Full Name"
 msgstr "نام کامل"
 
 #: dash/addons/includes/languages/trans_dash.php:922
-#: ermile/includes/languages/trans_dash.php:558
+#: ermile/includes/languages/trans_dash.php:560
 #: ermile/includes/languages/trans_project.php:238
 msgid "Please enter valid mobile number. `:val` is incorrect"
 msgstr "لطفا شماره موبایل معتبری وارد کنید. :val اشتباه است"
 
 #: dash/addons/includes/languages/trans_dash.php:923
-#: ermile/includes/languages/trans_dash.php:559
+#: ermile/includes/languages/trans_dash.php:561
 #: ermile/includes/languages/trans_project.php:241
 msgid "Your Message"
 msgstr "پیام شما"
 
 #: dash/addons/includes/languages/trans_dash.php:926
-#: ermile/includes/languages/trans_dash.php:546
+#: ermile/includes/languages/trans_dash.php:548
 msgid "Search result"
 msgstr "نتیجه جستجو"
 
 #: dash/addons/includes/languages/trans_dash.php:927
-#: ermile/includes/languages/trans_dash.php:547
+#: ermile/includes/languages/trans_dash.php:549
 msgid "No result found!"
 msgstr "نتیجه‌ای یافت نشد!"
 
 #: dash/addons/includes/languages/trans_dash.php:928
-#: ermile/includes/languages/trans_dash.php:548
+#: ermile/includes/languages/trans_dash.php:550
 msgid "Search our knowledge base..."
 msgstr "جستجو در پایگاه دانش ما..."
 
 #: dash/addons/includes/languages/trans_dash.php:929
-#: ermile/includes/languages/trans_dash.php:549
+#: ermile/includes/languages/trans_dash.php:551
 msgid "Frequently Asked Questions"
 msgstr "سوالات متداول"
 
 #: dash/addons/includes/languages/trans_dash.php:930
-#: ermile/includes/languages/trans_dash.php:550
+#: ermile/includes/languages/trans_dash.php:552
 msgid "Random Articles"
 msgstr "مقالات تصادفی"
 
 #: dash/addons/includes/languages/trans_dash.php:931
-#: ermile/includes/languages/trans_dash.php:551
+#: ermile/includes/languages/trans_dash.php:553
 msgid "Can't find what you're looking for?"
 msgstr "نمی‌توانید آنچه را به‌دنبالش هستید بیابید؟"
 
 #: dash/addons/includes/languages/trans_dash.php:932
-#: ermile/includes/languages/trans_dash.php:552
+#: ermile/includes/languages/trans_dash.php:554
 msgid "Contact the legendary support team right now."
 msgstr "همین الان با تیم پشتیبانی افسانه‌ای ما تماس بگیرید"
 
 #: dash/addons/includes/languages/trans_dash.php:935
-#: ermile/includes/languages/trans_dash.php:467
+#: ermile/includes/languages/trans_dash.php:469
 msgid "Support Dashboard"
 msgstr "داشبورد پشتیبانی"
 
 #: dash/addons/includes/languages/trans_dash.php:936
 #: dash/addons/includes/languages/trans_static.php:1110
-#: ermile/includes/languages/trans_dash.php:468
+#: ermile/includes/languages/trans_dash.php:470
 msgid "New Ticket"
 msgstr "تیکت جدید"
 
 #: dash/addons/includes/languages/trans_dash.php:937
-#: ermile/includes/languages/trans_dash.php:469
+#: ermile/includes/languages/trans_dash.php:471
 msgid "All"
 msgstr "همه"
 
 #: dash/addons/includes/languages/trans_dash.php:938
-#: ermile/includes/languages/trans_dash.php:470
+#: ermile/includes/languages/trans_dash.php:472
 msgid "Awaiting answer"
 msgstr "در انتظار پاسخ"
 
 #: dash/addons/includes/languages/trans_dash.php:939
 #: dash/addons/includes/languages/trans_static.php:993
-#: ermile/includes/languages/trans_dash.php:471
+#: ermile/includes/languages/trans_dash.php:473
 msgid "Answered"
 msgstr "پاسخ داده شده"
 
 #: dash/addons/includes/languages/trans_dash.php:940
-#: ermile/includes/languages/trans_dash.php:472
+#: ermile/includes/languages/trans_dash.php:474
 msgid "Unsolved"
 msgstr "حل نشده"
 
 #: dash/addons/includes/languages/trans_dash.php:942
-#: ermile/includes/languages/trans_dash.php:475
+#: ermile/includes/languages/trans_dash.php:477
 msgid "Archived"
 msgstr "بایگانی‌شده"
 
 #: dash/addons/includes/languages/trans_dash.php:945
-#: ermile/includes/languages/trans_dash.php:563
+#: ermile/includes/languages/trans_dash.php:565
 msgid "Open new ticket!"
 msgstr "باز کردن تیکت جدید!"
 
 #: dash/addons/includes/languages/trans_dash.php:948
-#: ermile/includes/languages/trans_dash.php:566
+#: ermile/includes/languages/trans_dash.php:568
 msgid "Content"
 msgstr "محتوا"
 
 #: dash/addons/includes/languages/trans_dash.php:953
-#: ermile/includes/languages/trans_dash.php:522
+#: ermile/includes/languages/trans_dash.php:524
 msgid "Please log in if you need to store this ticket and track it in the future"
 msgstr "لطفا برای ذخیره و پیگیری‌های بعدی این تیکت وارد سیستم شوید"
 
 #: dash/addons/includes/languages/trans_dash.php:956
-#: ermile/includes/languages/trans_dash.php:478
+#: ermile/includes/languages/trans_dash.php:480
 msgid "Ticket Subject"
 msgstr "موضوع تیکت"
 
 #: dash/addons/includes/languages/trans_dash.php:957
-#: ermile/includes/languages/trans_dash.php:479
+#: ermile/includes/languages/trans_dash.php:481
 msgid "Subject of your ticket"
 msgstr "عنوان تیکت شما"
 
 #: dash/addons/includes/languages/trans_dash.php:958
-#: ermile/includes/languages/trans_dash.php:480
+#: ermile/includes/languages/trans_dash.php:482
 msgid "Set title will help us answer quickly"
 msgstr "تنظیم عنوان تیکت به ما کمک می کند تا سریع تر پاسخگو باشیم"
 
 #: dash/addons/includes/languages/trans_dash.php:959
-#: ermile/includes/languages/trans_dash.php:481
+#: ermile/includes/languages/trans_dash.php:483
 msgid "Please write your message"
 msgstr "لطفا پیام خود را بنویسید"
 
 #: dash/addons/includes/languages/trans_dash.php:960
-#: ermile/includes/languages/trans_dash.php:482
+#: ermile/includes/languages/trans_dash.php:484
 msgid "Max size"
 msgstr "حداکثر اندازه"
 
 #: dash/addons/includes/languages/trans_dash.php:961
-#: ermile/includes/languages/trans_dash.php:483
+#: ermile/includes/languages/trans_dash.php:485
 msgid "Send notify about your answer to creator of ticket"
 msgstr "سازنده تیکت را در جریان پاسخ شما قرار دهیم"
 
 #: dash/addons/includes/languages/trans_dash.php:962
-#: ermile/includes/languages/trans_dash.php:484
+#: ermile/includes/languages/trans_dash.php:486
 msgid "Via sms to"
 msgstr "از طریق پیامک به"
 
 #: dash/addons/includes/languages/trans_dash.php:963
-#: ermile/includes/languages/trans_dash.php:485
+#: ermile/includes/languages/trans_dash.php:487
 msgid "Via telegram"
 msgstr "از طریق تلگرام"
 
 #: dash/addons/includes/languages/trans_dash.php:964
-#: ermile/includes/languages/trans_dash.php:486
+#: ermile/includes/languages/trans_dash.php:488
 msgid "Submit a ticket"
 msgstr "ارسال تیکت"
 
 #: dash/addons/includes/languages/trans_dash.php:965
-#: ermile/includes/languages/trans_dash.php:487
+#: ermile/includes/languages/trans_dash.php:489
 msgid "Send new message"
 msgstr "ارسال پیام جدید"
 
 #: dash/addons/includes/languages/trans_dash.php:968
-#: ermile/includes/languages/trans_dash.php:530
+#: ermile/includes/languages/trans_dash.php:532
 msgid "No ticket was found"
 msgstr "تیکتی یافت نشد"
 
 #: dash/addons/includes/languages/trans_dash.php:970
-#: ermile/includes/languages/trans_dash.php:532
+#: ermile/includes/languages/trans_dash.php:534
 msgid "Active tickets"
 msgstr "تیکت‌های فعال"
 
 #: dash/addons/includes/languages/trans_dash.php:971
-#: ermile/includes/languages/trans_dash.php:533
+#: ermile/includes/languages/trans_dash.php:535
 msgid "Replies"
 msgstr "پاسخ‌ها"
 
 #: dash/addons/includes/languages/trans_dash.php:972
-#: ermile/includes/languages/trans_dash.php:534
+#: ermile/includes/languages/trans_dash.php:536
 msgid "Avg. First Response"
 msgstr "میانگین اولین پاسخگویی"
 
 #: dash/addons/includes/languages/trans_dash.php:973
-#: ermile/includes/languages/trans_dash.php:535
+#: ermile/includes/languages/trans_dash.php:537
 msgid "Minute"
 msgstr "دقیقه"
 
 #: dash/addons/includes/languages/trans_dash.php:974
-#: ermile/includes/languages/trans_dash.php:536
+#: ermile/includes/languages/trans_dash.php:538
 msgid "Avg. Time to Archive"
 msgstr "میانگین زمان بایگانی‌شدن"
 
 #: dash/addons/includes/languages/trans_dash.php:975
-#: ermile/includes/languages/trans_dash.php:537
+#: ermile/includes/languages/trans_dash.php:539
 msgid "Hours"
 msgstr "ساعات"
 
 #: dash/addons/includes/languages/trans_dash.php:978
-#: ermile/includes/languages/trans_dash.php:491
+#: ermile/includes/languages/trans_dash.php:493
 msgid ""
 "If your problem is solved or do not need to track, please close this ticket by "
 "press below bottom."
@@ -5829,162 +5919,162 @@ msgstr ""
 "ببندید."
 
 #: dash/addons/includes/languages/trans_dash.php:979
-#: ermile/includes/languages/trans_dash.php:492
+#: ermile/includes/languages/trans_dash.php:494
 msgid "You can open it anytime you need."
 msgstr "شما می‌توانید تیکت را هر زمانی که مایل بودید مجدد باز کنید."
 
 #: dash/addons/includes/languages/trans_dash.php:980
-#: ermile/includes/languages/trans_dash.php:493
+#: ermile/includes/languages/trans_dash.php:495
 msgid "Close ticket"
 msgstr "بستن تیکت"
 
 #: dash/addons/includes/languages/trans_dash.php:981
-#: ermile/includes/languages/trans_dash.php:494
+#: ermile/includes/languages/trans_dash.php:496
 msgid "This ticket is closed."
 msgstr "این تیکت بسته شده است."
 
 #: dash/addons/includes/languages/trans_dash.php:982
-#: ermile/includes/languages/trans_dash.php:495
+#: ermile/includes/languages/trans_dash.php:497
 msgid "Also you can delete it if you do not need it."
 msgstr "هم‌چنین در صورت عدم نیاز می‌توانید آن را حذف کنید."
 
 #: dash/addons/includes/languages/trans_dash.php:983
 #: dash/lib/app/log/caller/ticket/ticket_setDeleteTicket.php:8
-#: ermile/includes/languages/trans_dash.php:496
+#: ermile/includes/languages/trans_dash.php:498
 msgid "Delete ticket"
 msgstr "حذف تیکت"
 
 #: dash/addons/includes/languages/trans_dash.php:984
-#: ermile/includes/languages/trans_dash.php:497
+#: ermile/includes/languages/trans_dash.php:499
 msgid "Open it again"
 msgstr "دوباره بازش کن"
 
 #: dash/addons/includes/languages/trans_dash.php:985
-#: ermile/includes/languages/trans_dash.php:498
+#: ermile/includes/languages/trans_dash.php:500
 msgid "This is deleted ticket."
 msgstr "این تیکت حذف شده است."
 
 #: dash/addons/includes/languages/trans_dash.php:986
-#: ermile/includes/languages/trans_dash.php:499
+#: ermile/includes/languages/trans_dash.php:501
 msgid "You can change it to close condition if need to save it in history!"
 msgstr ""
 "شما می‌توانید برای نگهداری این تیکت در تاریخچه وضعیت آن را به بسته‌شده تغییر دهید!"
 
 #: dash/addons/includes/languages/trans_dash.php:987
-#: ermile/includes/languages/trans_dash.php:500
+#: ermile/includes/languages/trans_dash.php:502
 msgid "Not spam"
 msgstr "جفنگ نیست"
 
 #: dash/addons/includes/languages/trans_dash.php:988
-#: ermile/includes/languages/trans_dash.php:501
+#: ermile/includes/languages/trans_dash.php:503
 msgid "If your problem is not solved yet, please set this ticket as unsolved"
 msgstr ""
 "اگر مشکل مطرح شده همچنان باقی است، لطفا این تیکت را در حالت حل نشده قرار دهید"
 
 #: dash/addons/includes/languages/trans_dash.php:989
-#: ermile/includes/languages/trans_dash.php:502
+#: ermile/includes/languages/trans_dash.php:504
 msgid "Un Solved ticket"
 msgstr "ثبت به عنوان حل نشده"
 
 #: dash/addons/includes/languages/trans_dash.php:990
-#: ermile/includes/languages/trans_dash.php:503
+#: ermile/includes/languages/trans_dash.php:505
 msgid "If your problem is solved, please set this ticket as solved"
 msgstr "اگر مشکل مطرح حل شده است، لطفا این تیکت را در حالت حل شده قرار دهید"
 
 #: dash/addons/includes/languages/trans_dash.php:992
-#: ermile/includes/languages/trans_dash.php:505
+#: ermile/includes/languages/trans_dash.php:507
 msgid "Save tag"
 msgstr "ذخیره کلیدواژه"
 
 #: dash/addons/includes/languages/trans_dash.php:993
-#: ermile/includes/languages/trans_dash.php:506
+#: ermile/includes/languages/trans_dash.php:508
 msgid "Last seen"
 msgstr "آخرین بازدید"
 
 #: dash/addons/includes/languages/trans_dash.php:994
-#: ermile/includes/languages/trans_dash.php:507
+#: ermile/includes/languages/trans_dash.php:509
 msgid "Ticket No"
 msgstr "شماره تیکت"
 
 #: dash/addons/includes/languages/trans_dash.php:995
-#: ermile/includes/languages/trans_dash.php:508
+#: ermile/includes/languages/trans_dash.php:510
 msgid "Last activity"
 msgstr "آخرین فعالیت‌ها"
 
 #: dash/addons/includes/languages/trans_dash.php:996
-#: ermile/includes/languages/trans_dash.php:509
+#: ermile/includes/languages/trans_dash.php:511
 msgid "Subject of ticket"
 msgstr "عنوان تیکت"
 
 #: dash/addons/includes/languages/trans_dash.php:997
-#: ermile/includes/languages/trans_dash.php:510
+#: ermile/includes/languages/trans_dash.php:512
 msgid "Set the title to get faster"
 msgstr "برای دسترسی سریع‌تر عنوان را تنظیم کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:998
-#: ermile/includes/languages/trans_dash.php:511
+#: ermile/includes/languages/trans_dash.php:513
 msgid "User tickets"
 msgstr "تیکت‌های کاربر"
 
 #: dash/addons/includes/languages/trans_dash.php:999
-#: ermile/includes/languages/trans_dash.php:512
+#: ermile/includes/languages/trans_dash.php:514
 msgid "View attachment"
 msgstr "مشاهده ضمیمه"
 
 #: dash/addons/includes/languages/trans_dash.php:1000
-#: ermile/includes/languages/trans_dash.php:513
+#: ermile/includes/languages/trans_dash.php:515
 msgid "Add tag manually to link tickets togethers"
 msgstr "کلدواژه را به صورت دستی اضافه کنید تا تیکت‌ها را در کنار هم قرار دهید"
 
 #: dash/addons/includes/languages/trans_dash.php:1001
-#: ermile/includes/languages/trans_dash.php:514
+#: ermile/includes/languages/trans_dash.php:516
 msgid "Current Time"
 msgstr "زمان فعلی"
 
 #: dash/addons/includes/languages/trans_dash.php:1002
-#: ermile/includes/languages/trans_dash.php:515
+#: ermile/includes/languages/trans_dash.php:517
 msgid "Notification procedures"
 msgstr "روش‌های اطلاع‌رسانی"
 
 #: dash/addons/includes/languages/trans_dash.php:1003
-#: ermile/includes/languages/trans_dash.php:517
+#: ermile/includes/languages/trans_dash.php:519
 msgid "Do you know you can connect your account with our Telegram bot"
 msgstr "<b>آیا می‌دانید</b> می‌توانید حساب کاربری خود را به ربات تلگرام ما وصل کنید"
 
 #: dash/addons/includes/languages/trans_dash.php:1004
-#: ermile/includes/languages/trans_dash.php:518
+#: ermile/includes/languages/trans_dash.php:520
 msgid "Just need to start bot in Telegram and sync your account via /sync."
 msgstr ""
 "تنها کافی‌است ربات را شروع کرده و حساب خود را از طریق دستور /sync به وب‌سایت متصل "
 "کنید."
 
 #: dash/addons/includes/languages/trans_dash.php:1007
-#: ermile/includes/languages/trans_dash.php:540
+#: ermile/includes/languages/trans_dash.php:542
 msgid "Last active tickets"
 msgstr "آخرین تیکت‌های فعال"
 
 #: dash/addons/includes/languages/trans_dash.php:1008
-#: ermile/includes/languages/trans_dash.php:541
+#: ermile/includes/languages/trans_dash.php:543
 msgid "All Tickets"
 msgstr "همه تیکت‌ها"
 
 #: dash/addons/includes/languages/trans_dash.php:1009
-#: ermile/includes/languages/trans_dash.php:543
+#: ermile/includes/languages/trans_dash.php:545
 msgid "Active in this ticket"
 msgstr "فعال در این تیکت"
 
 #: dash/addons/includes/languages/trans_dash.php:1012
-#: ermile/includes/languages/trans_dash.php:525
+#: ermile/includes/languages/trans_dash.php:527
 msgid "My tickets"
 msgstr "تیکت‌های من"
 
 #: dash/addons/includes/languages/trans_dash.php:1013
-#: ermile/includes/languages/trans_dash.php:526
+#: ermile/includes/languages/trans_dash.php:528
 msgid "Manage tickets"
 msgstr "مدیریت تیکت"
 
 #: dash/addons/includes/languages/trans_dash.php:1014
-#: ermile/includes/languages/trans_dash.php:527
+#: ermile/includes/languages/trans_dash.php:529
 msgid "Manage all tickets"
 msgstr "مدیریت تمامی تیکت‌ها"
 
@@ -7761,12 +7851,12 @@ msgid "Your phone number registered successfully;)"
 msgstr "شماره موبایل شما با موفقیت ثبت شد;)"
 
 #: dash/addons/includes/languages/trans_static.php:396
-#: dash/lib/social/telegram/user.php:190
+#: dash/lib/social/telegram/user.php:196
 msgid "We dont need another users contact:?)"
 msgstr "ما به مخاطب سایر کاربران نیاز نداریم:؟)"
 
 #: dash/addons/includes/languages/trans_static.php:397
-#: dash/lib/social/telegram/user.php:181
+#: dash/lib/social/telegram/user.php:187
 msgid "We need mobile number!"
 msgstr "ما به شماره موبایل نیاز داریم!"
 
@@ -10331,10 +10421,6 @@ msgstr "لطفا آدرس را کمتر از ۳۰۰ حرف وارد کنید"
 msgid "Please set subdomain less than 50 character"
 msgstr "لطفا زیردامنه را کمتر از ۵۰ حرف وارد کنید"
 
-#: dash/lib/app/address.php:161 dash/lib/app/user.php:234
-msgid "Invalid mobile"
-msgstr "شماره‌ی تلفن همراه نامعتبر است"
-
 #: dash/lib/app/address.php:168
 msgid "Please set postcode less than 50 character"
 msgstr "کدپستی باید کمتر از ۵۰ کاراکتر باشد"
@@ -10364,23 +10450,23 @@ msgstr "شما دسترسی لازم برای حذف این آدرس را ندا
 msgid "Address removed"
 msgstr "آدرس حذف شد"
 
-#: dash/lib/app/comment.php:79 dash/lib/app/ticket.php:289
+#: dash/lib/app/comment.php:79 dash/lib/app/ticket.php:286
 msgid "This text is duplicate and you are sended something like this before!"
 msgstr "این متن تکراری است و شما قبلا چیزی شبیه این را ارسال کردید!"
 
-#: dash/lib/app/comment.php:96 dash/lib/app/ticket.php:310
+#: dash/lib/app/comment.php:96 dash/lib/app/ticket.php:307
 msgid "No way to add new data"
 msgstr "هیچ راهی برای افزودن اطلاعات وجود ندارد"
 
-#: dash/lib/app/comment.php:120 dash/lib/app/ticket.php:358
+#: dash/lib/app/comment.php:120 dash/lib/app/ticket.php:355
 msgid "Can not access to edit comment"
 msgstr "شما دسترسی لازم را برای ویرایش این نظر ندارید"
 
-#: dash/lib/app/comment.php:214 dash/lib/app/ticket.php:452
+#: dash/lib/app/comment.php:214 dash/lib/app/ticket.php:449
 msgid "Please fill the content box"
 msgstr "لطفا باکس متن را پر کنید"
 
-#: dash/lib/app/comment.php:252 dash/lib/app/ticket.php:496
+#: dash/lib/app/comment.php:252 dash/lib/app/ticket.php:493
 msgid "Invalid via"
 msgstr "پارامتر via اشتباه است"
 
@@ -10393,12 +10479,12 @@ msgstr "شناسه پست اشتباه است"
 msgid "Comment of this post is closed!"
 msgstr "دیدگاه‌های این نوشته بسته است!"
 
-#: dash/lib/app/comment.php:294 dash/lib/app/ticket.php:504
+#: dash/lib/app/comment.php:294 dash/lib/app/ticket.php:501
 msgid "Title is out of range!"
 msgstr "عنوان خارج از محدوده است!"
 
 #: dash/lib/app/comment.php:303 dash/lib/app/term.php:168
-#: dash/lib/app/ticket.php:512
+#: dash/lib/app/ticket.php:509
 msgid "Invalid parent"
 msgstr "شناسه والد اشتباه است"
 
@@ -10427,14 +10513,17 @@ msgid "Can not upload file. undefined error"
 msgstr "ناتوان در آپلود فایل. خطای تعریف نشده"
 
 #: dash/lib/app/log/caller/enter/enter_VerificationCode.php:14
+#: dash/lib/app/log/caller/enter/enter_apiverificationcode.php:14
 msgid "Verification code"
 msgstr "کد اعتبارسنجی"
 
 #: dash/lib/app/log/caller/enter/enter_VerificationCode.php:21
+#: dash/lib/app/log/caller/enter/enter_apiverificationcode.php:21
 msgid "The verification code has been sent to you"
 msgstr "کد اعتبارسنجی برای شما ارسال شده است"
 
 #: dash/lib/app/log/caller/enter/enter_VerificationCode.php:25
+#: dash/lib/app/log/caller/enter/enter_apiverificationcode.php:25
 msgid "Your verification code is :mycode"
 msgstr "کد فعال‌سازی شما :mycode"
 
@@ -10970,19 +11059,19 @@ msgstr "هیچ راهی برای ثبت ترم وجود ندارد"
 msgid "Can not access to edit term"
 msgstr "دسترسی لازم برای ویرایش ترم وجود ندارد"
 
-#: dash/lib/app/ticket.php:174
+#: dash/lib/app/ticket.php:171
 msgid "Count ticket"
 msgstr "تعداد تیکت"
 
-#: dash/lib/app/ticket.php:183
+#: dash/lib/app/ticket.php:180
 msgid "Count message"
 msgstr "تعداد پیام"
 
-#: dash/lib/app/ticket.php:192
+#: dash/lib/app/ticket.php:189
 msgid "Answer time"
 msgstr "زمان‌ پاسخ"
 
-#: dash/lib/app/ticket.php:194
+#: dash/lib/app/ticket.php:191
 msgid "Minutes"
 msgstr "دقیقه"
 
@@ -11127,10 +11216,6 @@ msgstr "شما باید حتما از یک حرف لاتین در نام کار�
 msgid "Duplicate username"
 msgstr "نام کاربری تکراری است! لطفا یک نام کاربری دیگر انتخاب کنید"
 
-#: dash/lib/app/user.php:670
-msgid "Invalid parameter tgstatus"
-msgstr "پارامتر وضعیت تلگرام اشتباه است"
-
 #: dash/lib/app/user.php:678
 msgid "You must set the type less than 50 character"
 msgstr "نوع باید کمتر از 50 کاراکتر باشد"
@@ -11183,7 +11268,7 @@ msgstr "شما دسترسی لازم برای ویرایش این کاربر ر�
 msgid "Duplicate email"
 msgstr "ایمیل تکراری است"
 
-#: dash/lib/app/user/edit.php:91
+#: dash/lib/app/user/edit.php:91 dash/lib/app/user_telegram.php:213
 msgid "Duplicate chatid"
 msgstr "شناسه تلگرام تکراری است"
 
@@ -11207,11 +11292,15 @@ msgstr "شناسه‌ی کاربری جدید باید کمتر از ۲۰۰ کا
 msgid "Invalid language"
 msgstr "مقدار رشته زبان اشتباه است"
 
-#: dash/lib/app/user_telegram.php:197
+#: dash/lib/app/user_telegram.php:160
+msgid "This user have not this chatid"
+msgstr "این کاربر این شناسه چت را ندارد"
+
+#: dash/lib/app/user_telegram.php:222
 msgid "No way to insert user_telegram"
 msgstr "هیچ راهی برای ثبت کاربر تلگرام وجود ندارد"
 
-#: dash/lib/app/user_telegram.php:273
+#: dash/lib/app/user_telegram.php:298
 msgid "Can not access to edit user_telegram"
 msgstr "شما دسترسی لازم برای ویرایش این کاربر تلگرام را ندارید"
 
@@ -11399,6 +11488,12 @@ msgstr "سطح دسترسی ذخیره شد"
 #: dash/lib/permission.php:629
 msgid "Permission denied"
 msgstr "دسترسی غیر مجاز"
+
+#: dash/lib/redirect_html.php:5 dash/lib/utility/pay/api/asanpardakht/go.php:79
+#: dash/lib/utility/pay/api/irkish/go.php:74
+#: dash/lib/utility/pay/api/mellat/go.php:89
+msgid "Redirect"
+msgstr "انتقال"
 
 #: dash/lib/redirect_html.php:33
 msgid "REDIRECTING ..."
@@ -11952,39 +12047,39 @@ msgstr "با ورود مقدار نامعتبر دیگری از این فرآی�
 msgid "We are detect outdated message in hook."
 msgstr "ما پیام تاریخ گذشته در هوک یافتیم."
 
-#: dash/lib/social/telegram/user.php:197
+#: dash/lib/social/telegram/user.php:203
 msgid "Why your name is different!"
 msgstr "چرا نام شما متفاوت است!"
 
-#: dash/lib/social/telegram/user.php:201
+#: dash/lib/social/telegram/user.php:207
 msgid "Why your family is different!"
 msgstr "چرا نام خانوادگی شما متفاوت است!"
 
-#: dash/lib/social/telegram/user.php:216
+#: dash/lib/social/telegram/user.php:222
 msgid "Enter in :val website"
 msgstr "ورود به وب‌سایت :val"
 
-#: dash/lib/social/telegram/user.php:225
+#: dash/lib/social/telegram/user.php:231
 msgid "Your phone number registered successfully"
 msgstr "شماره موبایل شما با موفقیت ثبت شد"
 
-#: dash/lib/social/telegram/user.php:225 dash/lib/social/telegram/user.php:230
+#: dash/lib/social/telegram/user.php:231 dash/lib/social/telegram/user.php:236
 msgid "Thank you."
 msgstr "متشکریم."
 
-#: dash/lib/social/telegram/user.php:230
+#: dash/lib/social/telegram/user.php:236
 msgid "We have your mobile before this!"
 msgstr "ما شماره موبایل شما را پیش از این داشتیم!"
 
-#: dash/lib/social/telegram/user.php:234
+#: dash/lib/social/telegram/user.php:240
 msgid "Registration failed!"
 msgstr "ثبت‌نام ناموفق!"
 
-#: dash/lib/social/telegram/user.php:286
+#: dash/lib/social/telegram/user.php:292
 msgid "Your language was successfully set to :lang."
 msgstr "زبان شما به :lang تغییر یافت."
 
-#: dash/lib/social/telegram/user.php:384
+#: dash/lib/social/telegram/user.php:390
 msgid "More detail"
 msgstr "جزئیات بیشتر"
 
@@ -12000,51 +12095,51 @@ msgstr "عملیات کلادفلر از طریق ای‌پی‌آی با موف
 msgid "The api Cloudflare opration faild"
 msgstr "عملیات کلادفلر از طریق ای‌پی‌آی با موفقیت ناموفق بود"
 
-#: dash/lib/utility/enter.php:806
+#: dash/lib/utility/enter.php:837
 msgid "Please fill the verification code"
 msgstr "لطفا کد اعتبارسنجی را وارد کنید"
 
-#: dash/lib/utility/enter.php:815
+#: dash/lib/utility/enter.php:846
 msgid "What happend? the code is number. you try to send string!?"
 msgstr "چی شده؟ کد باید عددی باشد. شما چطوری دارین متن وارد میکنید!؟"
 
-#: dash/lib/utility/enter.php:836
+#: dash/lib/utility/enter.php:867
 msgid "System error, try again"
 msgstr "خطای سیستم، دوباره تلاش کنید"
 
-#: dash/lib/utility/enter.php:860
+#: dash/lib/utility/enter.php:891
 msgid "Your sms not deliver to us!"
 msgstr "پیامک شما بدست ما نرسیده است!"
 
-#: dash/lib/utility/enter.php:904
+#: dash/lib/utility/enter.php:935
 msgid "Invalid code, try again"
 msgstr "کد اشتباه، دوباره تلاش کنید"
 
-#: dash/lib/utility/enter.php:971
+#: dash/lib/utility/enter.php:1002
 msgid "Your username was removed"
 msgstr "نام کاربری شما حذف شد"
 
-#: dash/lib/utility/enter.php:1064
+#: dash/lib/utility/enter.php:1095
 msgid "Your username was change"
 msgstr "نام کاربری شما تغییر یافت"
 
-#: dash/lib/utility/enter.php:1127
+#: dash/lib/utility/enter.php:1158
 msgid "Your two-step verification is now active for your account"
 msgstr "ورود دو مرحله ای هم اکنون برای حساب کاربری شما فعال است"
 
-#: dash/lib/utility/enter.php:1153
+#: dash/lib/utility/enter.php:1184
 msgid "Your two-step verification is now deactive for your account"
 msgstr "ورود دو مرحله ای هم اکنون برای حساب کاربری شما غیر فعال است"
 
-#: dash/lib/utility/enter.php:1176
+#: dash/lib/utility/enter.php:1207
 msgid "Your password was changed"
 msgstr "کلمه عبور شما تغییر یافت"
 
-#: dash/lib/utility/enter.php:1347
+#: dash/lib/utility/enter.php:1378
 msgid "You must set 6 character and large in password"
 msgstr "گذرواژه باید حداقل ۶ کاراکتر باشد"
 
-#: dash/lib/utility/enter.php:1357
+#: dash/lib/utility/enter.php:1388
 msgid "You must set less than 99 character in password"
 msgstr "گذرواژه باید کمتر از ۹۹ کاراکتر باشد"
 
@@ -12152,12 +12247,6 @@ msgstr "خطا در درگاه پرداخت با کد :result"
 #: dash/lib/utility/pay/api/asanpardakht/go.php:78
 msgid "Redirect to asanpardakht payment"
 msgstr "در حال انتقال به درگاه آسان پرداخت"
-
-#: dash/lib/utility/pay/api/asanpardakht/go.php:79
-#: dash/lib/utility/pay/api/irkish/go.php:74
-#: dash/lib/utility/pay/api/mellat/go.php:89
-msgid "Redirect"
-msgstr "انتقال"
 
 #: dash/lib/utility/pay/api/irkish/back.php:13
 #: dash/lib/utility/pay/api/irkish/go.php:13
@@ -12809,117 +12898,109 @@ msgstr "پنل مدیر فنی"
 msgid "Your Account"
 msgstr "حساب‌کاربری شما"
 
-#: ermile/includes/languages/trans_dash.php:623
+#: ermile/includes/languages/trans_dash.php:622
 msgid "Delete user"
 msgstr "حذف کاربر"
 
-#: ermile/includes/languages/trans_dash.php:624
+#: ermile/includes/languages/trans_dash.php:623
 msgid "Are you sure to delete this user?"
 msgstr "آیا از حذف این کاربر اطمینان دارید؟"
 
-#: ermile/includes/languages/trans_dash.php:695
+#: ermile/includes/languages/trans_dash.php:628
+msgid "User have android"
+msgstr "کاربر دارای شناسه اندروید است"
+
+#: ermile/includes/languages/trans_dash.php:698
 msgid "Advance result"
 msgstr "نتایج پیشرفته"
 
-#: ermile/includes/languages/trans_dash.php:706
+#: ermile/includes/languages/trans_dash.php:709
 msgid "Have chatid"
 msgstr "دارای شناسه چت"
 
-#: ermile/includes/languages/trans_dash.php:707
+#: ermile/includes/languages/trans_dash.php:710
 msgid "Have not chatid"
 msgstr "بدون شناسه چت"
 
-#: ermile/includes/languages/trans_dash.php:708
+#: ermile/includes/languages/trans_dash.php:711
 msgid "Have email"
 msgstr "دارای ایمیل"
 
-#: ermile/includes/languages/trans_dash.php:709
+#: ermile/includes/languages/trans_dash.php:712
 msgid "Have not email"
 msgstr "بدون ایمیل"
-
-#: ermile/includes/languages/trans_dash.php:711
-msgid "Filter by username"
-msgstr "فلیتر بر اساس نام کاربری"
-
-#: ermile/includes/languages/trans_dash.php:712
-msgid "Filter by avatar"
-msgstr "فلیتر بر اساس تصویر"
-
-#: ermile/includes/languages/trans_dash.php:713
-msgid "Filter by displayname"
-msgstr "فلیتر بر اساس نام"
 
 #: ermile/includes/languages/trans_dash.php:714
 msgid "Filter by mobile"
 msgstr "فلیتر بر اساس موبایل"
 
 #: ermile/includes/languages/trans_dash.php:715
+msgid "Filter by username"
+msgstr "فلیتر بر اساس نام کاربری"
+
+#: ermile/includes/languages/trans_dash.php:716
 msgid "Filter by email"
 msgstr "فلیتر بر اساس ایمیل"
 
-#: ermile/includes/languages/trans_dash.php:716
-msgid "Filter by password"
-msgstr "فلیتر بر اساس کلمه عبور"
-
 #: ermile/includes/languages/trans_dash.php:717
-msgid "Filter by twostep"
-msgstr "فلیتر بر اساس ورود دومرحله‌ای"
-
-#: ermile/includes/languages/trans_dash.php:718
-msgid "Filter by permission"
-msgstr "فلیتر بر اساس سطح دسترسی"
-
-#: ermile/includes/languages/trans_dash.php:719
 msgid "Filter by chatid"
 msgstr "فلیتر بر اساس شناسه چت"
 
-#: ermile/includes/languages/trans_dash.php:720
-msgid "Filter by language"
-msgstr "فلیتر بر اساس زبان"
-
-#: ermile/includes/languages/trans_dash.php:721
+#: ermile/includes/languages/trans_dash.php:718
 msgid "Filter by android_uniquecode"
 msgstr "فیتلر بر اساس شناسه اندروید"
 
+#: ermile/includes/languages/trans_dash.php:719
+msgid "Filter by avatar"
+msgstr "فلیتر بر اساس تصویر"
+
+#: ermile/includes/languages/trans_dash.php:720
+msgid "Filter by displayname"
+msgstr "فلیتر بر اساس نام"
+
+#: ermile/includes/languages/trans_dash.php:721
+msgid "Filter by password"
+msgstr "فلیتر بر اساس کلمه عبور"
+
 #: ermile/includes/languages/trans_dash.php:722
+msgid "Filter by twostep"
+msgstr "فلیتر بر اساس ورود دومرحله‌ای"
+
+#: ermile/includes/languages/trans_dash.php:723
+msgid "Filter by permission"
+msgstr "فلیتر بر اساس سطح دسترسی"
+
+#: ermile/includes/languages/trans_dash.php:724
+msgid "Filter by language"
+msgstr "فلیتر بر اساس زبان"
+
+#: ermile/includes/languages/trans_dash.php:725
 msgid "Filter by duplicate"
 msgstr "فیلتر بر اساس تکراری بودن"
 
-#: ermile/includes/languages/trans_dash.php:723
+#: ermile/includes/languages/trans_dash.php:726
 msgid "Clear filter"
 msgstr "پاک‌سازی فیلترها"
 
-#: ermile/includes/languages/trans_dash.php:724
+#: ermile/includes/languages/trans_dash.php:727
 msgid "Apply"
 msgstr "اعمال‌کردن"
 
-#: ermile/includes/languages/trans_dash.php:725
+#: ermile/includes/languages/trans_dash.php:728
 msgid "Have duplicate mobile"
 msgstr "دارای موبایل تکراری"
 
-#: ermile/includes/languages/trans_dash.php:726
+#: ermile/includes/languages/trans_dash.php:729
 msgid "Have duplicate email"
 msgstr "دارای ایمیل تکراری"
 
-#: ermile/includes/languages/trans_dash.php:727
+#: ermile/includes/languages/trans_dash.php:730
 msgid "Have duplicate username"
 msgstr "دارای نام کاربری تکراری"
 
-#: ermile/includes/languages/trans_dash.php:728
-msgid "Have duplicate chatid"
-msgstr "دارای شناسه تلگرام تکراری"
-
-#: ermile/includes/languages/trans_dash.php:729
-msgid "Have duplicate android_uniquecode"
-msgstr "دارای شناسه اندروید تکراری"
-
-#: ermile/includes/languages/trans_dash.php:730
+#: ermile/includes/languages/trans_dash.php:731
 msgid "Have android_uniquecode"
 msgstr "دارای شناسه اندروید"
-
-#: ermile/includes/languages/trans_dash.php:731
-msgid "Have not android_uniquecode"
-msgstr "بدون شناسه اندروید"
 
 #: ermile/includes/languages/trans_dash.php:732
 msgid "Non"
@@ -13980,6 +14061,18 @@ msgstr "بارگذاری رزومه"
 #: ermile/includes/languages/trans_project.php:352
 msgid "Send your Information"
 msgstr "ارسال اطلاعات"
+
+#~ msgid "Invalid parameter tgstatus"
+#~ msgstr "پارامتر وضعیت تلگرام اشتباه است"
+
+#~ msgid "Have duplicate chatid"
+#~ msgstr "دارای شناسه تلگرام تکراری"
+
+#~ msgid "Have duplicate android_uniquecode"
+#~ msgstr "دارای شناسه اندروید تکراری"
+
+#~ msgid "Have not android_uniquecode"
+#~ msgstr "بدون شناسه اندروید"
 
 #~ msgid "add new note ticket"
 #~ msgstr "یک یادداشت به تیک افزود"
