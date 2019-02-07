@@ -17622,11 +17622,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   padding-left: 0px !important; }
 
 .pTB0-f {
-  padding-top: 0px;
+  padding-top: 0px !important;
   padding-bottom: 0px !important; }
 
 .pLR0-f {
-  padding-left: 0px;
+  padding-left: 0px !important;
   padding-right: 0px !important; }
 
 .ltr .pRa0-f {
@@ -17692,11 +17692,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   padding-left: 1px !important; }
 
 .pTB1-f {
-  padding-top: 1px;
+  padding-top: 1px !important;
   padding-bottom: 1px !important; }
 
 .pLR1-f {
-  padding-left: 1px;
+  padding-left: 1px !important;
   padding-right: 1px !important; }
 
 .ltr .pRa1-f {
@@ -17762,11 +17762,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   padding-left: 2px !important; }
 
 .pTB2-f {
-  padding-top: 2px;
+  padding-top: 2px !important;
   padding-bottom: 2px !important; }
 
 .pLR2-f {
-  padding-left: 2px;
+  padding-left: 2px !important;
   padding-right: 2px !important; }
 
 .ltr .pRa2-f {
@@ -17832,11 +17832,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   padding-left: 3px !important; }
 
 .pTB3-f {
-  padding-top: 3px;
+  padding-top: 3px !important;
   padding-bottom: 3px !important; }
 
 .pLR3-f {
-  padding-left: 3px;
+  padding-left: 3px !important;
   padding-right: 3px !important; }
 
 .ltr .pRa3-f {
@@ -17902,11 +17902,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   padding-left: 5px !important; }
 
 .pTB5-f {
-  padding-top: 5px;
+  padding-top: 5px !important;
   padding-bottom: 5px !important; }
 
 .pLR5-f {
-  padding-left: 5px;
+  padding-left: 5px !important;
   padding-right: 5px !important; }
 
 .ltr .pRa5-f {
@@ -17972,11 +17972,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   padding-left: 10px !important; }
 
 .pTB10-f {
-  padding-top: 10px;
+  padding-top: 10px !important;
   padding-bottom: 10px !important; }
 
 .pLR10-f {
-  padding-left: 10px;
+  padding-left: 10px !important;
   padding-right: 10px !important; }
 
 .ltr .pRa10-f {
@@ -18042,11 +18042,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   padding-left: 15px !important; }
 
 .pTB15-f {
-  padding-top: 15px;
+  padding-top: 15px !important;
   padding-bottom: 15px !important; }
 
 .pLR15-f {
-  padding-left: 15px;
+  padding-left: 15px !important;
   padding-right: 15px !important; }
 
 .ltr .pRa15-f {
@@ -18112,11 +18112,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   padding-left: 20px !important; }
 
 .pTB20-f {
-  padding-top: 20px;
+  padding-top: 20px !important;
   padding-bottom: 20px !important; }
 
 .pLR20-f {
-  padding-left: 20px;
+  padding-left: 20px !important;
   padding-right: 20px !important; }
 
 .ltr .pRa20-f {
@@ -18182,11 +18182,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   padding-left: 25px !important; }
 
 .pTB25-f {
-  padding-top: 25px;
+  padding-top: 25px !important;
   padding-bottom: 25px !important; }
 
 .pLR25-f {
-  padding-left: 25px;
+  padding-left: 25px !important;
   padding-right: 25px !important; }
 
 .ltr .pRa25-f {
@@ -18252,11 +18252,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   padding-left: 50px !important; }
 
 .pTB50-f {
-  padding-top: 50px;
+  padding-top: 50px !important;
   padding-bottom: 50px !important; }
 
 .pLR50-f {
-  padding-left: 50px;
+  padding-left: 50px !important;
   padding-right: 50px !important; }
 
 .ltr .pRa50-f {
@@ -18322,11 +18322,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   padding-left: 100px !important; }
 
 .pTB100-f {
-  padding-top: 100px;
+  padding-top: 100px !important;
   padding-bottom: 100px !important; }
 
 .pLR100-f {
-  padding-left: 100px;
+  padding-left: 100px !important;
   padding-right: 100px !important; }
 
 .ltr .pRa100-f {
@@ -18395,11 +18395,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   margin-left: 0px !important; }
 
 .mTB0-f {
-  margin-top: 0px;
+  margin-top: 0px !important;
   margin-bottom: 0px !important; }
 
 .mLR0-f {
-  margin-left: 0px;
+  margin-left: 0px !important;
   margin-right: 0px !important; }
 
 .ltr .mRa0-f {
@@ -18465,11 +18465,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   margin-left: 1px !important; }
 
 .mTB1-f {
-  margin-top: 1px;
+  margin-top: 1px !important;
   margin-bottom: 1px !important; }
 
 .mLR1-f {
-  margin-left: 1px;
+  margin-left: 1px !important;
   margin-right: 1px !important; }
 
 .ltr .mRa1-f {
@@ -18535,11 +18535,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   margin-left: 2px !important; }
 
 .mTB2-f {
-  margin-top: 2px;
+  margin-top: 2px !important;
   margin-bottom: 2px !important; }
 
 .mLR2-f {
-  margin-left: 2px;
+  margin-left: 2px !important;
   margin-right: 2px !important; }
 
 .ltr .mRa2-f {
@@ -18605,11 +18605,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   margin-left: 3px !important; }
 
 .mTB3-f {
-  margin-top: 3px;
+  margin-top: 3px !important;
   margin-bottom: 3px !important; }
 
 .mLR3-f {
-  margin-left: 3px;
+  margin-left: 3px !important;
   margin-right: 3px !important; }
 
 .ltr .mRa3-f {
@@ -18675,11 +18675,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   margin-left: 5px !important; }
 
 .mTB5-f {
-  margin-top: 5px;
+  margin-top: 5px !important;
   margin-bottom: 5px !important; }
 
 .mLR5-f {
-  margin-left: 5px;
+  margin-left: 5px !important;
   margin-right: 5px !important; }
 
 .ltr .mRa5-f {
@@ -18745,11 +18745,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   margin-left: 10px !important; }
 
 .mTB10-f {
-  margin-top: 10px;
+  margin-top: 10px !important;
   margin-bottom: 10px !important; }
 
 .mLR10-f {
-  margin-left: 10px;
+  margin-left: 10px !important;
   margin-right: 10px !important; }
 
 .ltr .mRa10-f {
@@ -18815,11 +18815,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   margin-left: 15px !important; }
 
 .mTB15-f {
-  margin-top: 15px;
+  margin-top: 15px !important;
   margin-bottom: 15px !important; }
 
 .mLR15-f {
-  margin-left: 15px;
+  margin-left: 15px !important;
   margin-right: 15px !important; }
 
 .ltr .mRa15-f {
@@ -18885,11 +18885,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   margin-left: 20px !important; }
 
 .mTB20-f {
-  margin-top: 20px;
+  margin-top: 20px !important;
   margin-bottom: 20px !important; }
 
 .mLR20-f {
-  margin-left: 20px;
+  margin-left: 20px !important;
   margin-right: 20px !important; }
 
 .ltr .mRa20-f {
@@ -18955,11 +18955,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   margin-left: 25px !important; }
 
 .mTB25-f {
-  margin-top: 25px;
+  margin-top: 25px !important;
   margin-bottom: 25px !important; }
 
 .mLR25-f {
-  margin-left: 25px;
+  margin-left: 25px !important;
   margin-right: 25px !important; }
 
 .ltr .mRa25-f {
@@ -19025,11 +19025,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   margin-left: 50px !important; }
 
 .mTB50-f {
-  margin-top: 50px;
+  margin-top: 50px !important;
   margin-bottom: 50px !important; }
 
 .mLR50-f {
-  margin-left: 50px;
+  margin-left: 50px !important;
   margin-right: 50px !important; }
 
 .ltr .mRa50-f {
@@ -19095,11 +19095,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   margin-left: 100px !important; }
 
 .mTB100-f {
-  margin-top: 100px;
+  margin-top: 100px !important;
   margin-bottom: 100px !important; }
 
 .mLR100-f {
-  margin-left: 100px;
+  margin-left: 100px !important;
   margin-right: 100px !important; }
 
 .ltr .mRa100-f {
