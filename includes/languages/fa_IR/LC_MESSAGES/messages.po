@@ -9548,7 +9548,7 @@ msgstr "چهارشنبه"
 
 #: dash/addons/includes/languages/trans_static.php:884
 msgid "thursday"
-msgstr "سه شنبه"
+msgstr "پنج‌ شنبه"
 
 #: dash/addons/includes/languages/trans_static.php:885
 msgid "friday"
