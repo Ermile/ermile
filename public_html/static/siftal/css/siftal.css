@@ -2164,7 +2164,7 @@ progress.xl, meter.xl {
 .tbl1.v1 thead a:focus {
   color: #fff; }
 
-.tbl1.v1 tr:nth-child(even) {
+.tbl1.v1 tbody tr:nth-child(even) {
   background-color: #f8f6ff; }
 
 .tbl1.v1 tbody tr:hover {
@@ -2330,7 +2330,7 @@ progress.xl, meter.xl {
   color: #fff;
   background-color: #36304a; }
 
-.tbl1.v6 tr:nth-child(even) {
+.tbl1.v6 tbody tr:nth-child(even) {
   background-color: #f5f5f5; }
 
 .tbl1.v6 tbody tr:hover {
@@ -2352,7 +2352,7 @@ progress.xl, meter.xl {
 .tbl1.v7 td {
   color: #808080; }
 
-.tbl1.v7 tr:nth-child(even) {
+.tbl1.v7 tbody tr:nth-child(even) {
   background-color: #eaf8e6; }
 
 .tbl1.v7 tbody tr:hover {
@@ -2407,7 +2407,7 @@ progress.xl, meter.xl {
 .tbl1.v9 td {
   color: #808080; }
 
-.tbl1.v9 tr:nth-child(even) {
+.tbl1.v9 tbody tr:nth-child(even) {
   background-color: #e9faff; }
 
 .tbl1.v9 tbody tr:hover td {
@@ -2442,6 +2442,10 @@ progress.xl, meter.xl {
 
 .tbl1.v10 tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.1); }
+
+.tbl1.v10 a {
+  color: #fff;
+  font-weight: 700; }
 
 .tbl1 thead th[data-sort] {
   transition: background-color 0.3s;
