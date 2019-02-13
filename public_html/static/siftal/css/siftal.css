@@ -2060,6 +2060,9 @@ progress.xl, meter.xl {
 .tbl [class^="sf-"] {
   display: inline-block; }
 
+.tblBox {
+  overflow-x: auto; }
+
 .tbl1 {
   background-color: #fff;
   width: 100%;
