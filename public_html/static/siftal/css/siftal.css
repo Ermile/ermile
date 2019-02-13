@@ -21180,9 +21180,6 @@ body.siftal .cbox table {
   border-radius: 0.5rem; }
 
 @media all and (min-width: 1400px) {
-  html {
-    font-size: 70%; }
-
   .cn {
     max-width: 1400px;
     min-width: 1024px; }
@@ -21533,9 +21530,6 @@ body.siftal .cbox table {
   .siftal[data-clean].rtl #sidebar {
     right: -300px; } }
 @media all and (min-width: 768px) and (max-width: 959px) {
-  html {
-    font-size: 60%; }
-
   .cn {
     min-width: 710px;
     max-width: 940px; }
@@ -21880,9 +21874,6 @@ body.siftal .cbox table {
   .mm0 {
     padding: 0; } }
 @media (max-width: 767px) {
-  html {
-    font-size: 50%; }
-
   .cn {
     min-width: 290px;
     max-width: 750px;
