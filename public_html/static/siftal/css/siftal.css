@@ -20401,6 +20401,7 @@ body.siftal .full .middle {
   direction: ltr; }
 
 .siftal[data-in="su"] {
+  background: none;
   background-color: #333; }
 
 .siftal[data-in="su"] .dashHead {
