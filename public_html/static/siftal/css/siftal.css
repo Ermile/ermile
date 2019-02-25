@@ -2456,6 +2456,9 @@ progress.xl, meter.xl {
 .tbl1.v10 tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.1); }
 
+.tbl1.v10 tr.disabled {
+  opacity: 0.3; }
+
 .tbl1.v10 a {
   color: #fff;
   font-weight: 700; }
@@ -17080,7 +17083,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   right: 23px; }
 
 .radioGateway {
-  padding: 0.5em;
+  margin: 5px;
   position: relative;
   cursor: pointer;
   display: inline-flex; }
@@ -17095,14 +17098,13 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   opacity: 0; }
 
 .radioGateway label {
-  padding: 1px;
   position: relative;
   cursor: pointer;
-  border: 2px solid #efefef;
+  border: 2px solid #f8f8f8;
   transition: 0.3s;
-  background-color: rgba(0, 0, 0, 0.1);
-  width: 70px;
-  height: 70px;
+  background-color: #f8f8f8;
+  width: 68px;
+  height: 68px;
   border-radius: 0.25rem; }
 
 .radioGateway img {
@@ -17110,19 +17112,51 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   height: auto; }
 
 .radioGateway input:checked + label {
-  border-color: #37aaa7;
-  background-color: rgba(240, 240, 240, 0.5);
-  box-shadow: inset 0px 0px 30px 0px #4090d0; }
+  border-color: #1f8fff;
+  background-color: #fff; }
 
 .radioGateway input:hover + label {
   opacity: 0.8;
-  border-color: #ccc; }
+  border-color: #1f8fff; }
 
 .radioGateway input:focus + label {
-  border-color: #00a0f0; }
+  background-color: #fff; }
 
-.radioGateway input:active + label {
-  transform: translateY(5px); }
+.radioGateway input + label:after {
+  font-family: "siftal", "tahoma" !important;
+  content: "\e022";
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+  text-align: center;
+  background-color: #1f8fff;
+  color: #fff;
+  position: absolute;
+  top: -7px;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.25s cubic-bezier(0.2, 1, 0.2, 1);
+  -moz-transition: all 0.25s cubic-bezier(0.2, 1, 0.2, 1);
+  -o-transition: all 0.25s cubic-bezier(0.2, 1, 0.2, 1);
+  transition: all 0.25s cubic-bezier(0.2, 1, 0.2, 1); }
+
+.ltr .radioGateway input + label:after {
+  left: -7px; }
+
+.rtl .radioGateway input + label:after {
+  right: -7px; }
+
+.radioGateway input:checked + label:after {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1); }
 
 .radioRating .rateBox {
   display: inline-block;
@@ -19978,8 +20012,7 @@ body .we500 {
     color: #fff; }
 
 .light {
-  background-color: #f6f8fa;
-  color: #111; }
+  background-color: #f6f8fa; }
 
 .light.outline {
   background-color: transparent;
@@ -19988,11 +20021,11 @@ body .we500 {
 
 .light:hover {
   background-color: #e2e6ea;
-  color: #111; }
+  color: #333 !important; }
 
 .light:focus {
   background-color: #d0d6e0;
-  color: #111; }
+  color: #111 !important; }
 
 .light:active, .light.active {
   background-color: #c0d0e0;
@@ -20189,6 +20222,9 @@ body .we500 {
   height: 100%;
   color: #333;
   background-color: #f2f2f2;
+  background: linear-gradient(0deg, #eee 0%, #f6f6f6 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   -webkit-touch-callout: none;
   cursor: default;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -21051,20 +21087,22 @@ body.siftal .full .middle {
   margin: 1em auto;
   color: #777; }
 
-.payTicket .topBox .priceBox {
+.payTicket .topBox .payPriceBox {
   background: #d7dbde;
-  text-align: left;
+  text-align: center;
   padding: 0 1rem;
   height: 120px;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
 
 .payTicket .topBox .price {
   display: inline-block;
+  max-width: 100%;
+  height: 120px;
   vertical-align: middle;
   font-size: 30px;
   line-height: 120px;
   overflow: hidden;
-  height: 120px;
   transition: 0.2s; }
 
 .payTicket .topBox .unit {
@@ -21121,7 +21159,7 @@ body.siftal .full .middle {
 .payTicket .status .myStatus {
   font-size: 60px;
   min-width: 60px;
-  line-height: 120px;
+  line-height: 110px;
   overflow: hidden;
   height: 120px;
   display: block;
@@ -21129,7 +21167,7 @@ body.siftal .full .middle {
 
 .payTicket .status .statusDesc {
   position: absolute;
-  bottom: 1rem;
+  bottom: 2rem;
   right: 0;
   left: 0;
   text-align: center;
@@ -21138,23 +21176,40 @@ body.siftal .full .middle {
 .payTicket.active {
   color: #1f8fff; }
 
-.payTicket.active .topBox .priceBox {
-  background: #c5e2ff; }
+.payTicket.active .topBox .payPriceBox {
+  background: #c5e2ff;
+  transition: 0.3s; }
 
 .payTicket.active .breakLine {
-  background-color: #c5e2ff; }
+  background-color: #c5e2ff;
+  transition: 0.3s; }
 
 .payTicket.active .breakLine:before, .payTicket.active .breakLine:after {
   border-top-color: #c5e2ff;
-  border-right-color: #c5e2ff; }
+  border-right-color: #c5e2ff;
+  transition: 0.3s; }
 
 .payTicket.active .status {
-  background-color: #c5e2ff; }
+  background-color: #c5e2ff;
+  transition: 0.3s; }
+
+.payTicket.active:hover .topBox .payPriceBox {
+  background: #b0d8ff; }
+
+.payTicket.active:hover .breakLine {
+  background-color: #b0d8ff; }
+
+.payTicket.active:hover .breakLine:before, .payTicket.active:hover .breakLine:after {
+  border-top-color: #b0d8ff;
+  border-right-color: #b0d8ff; }
+
+.payTicket.active:hover .status {
+  background-color: #b0d8ff; }
 
 .payTicket.positive {
   color: #2c662d; }
 
-.payTicket.positive .topBox .priceBox {
+.payTicket.positive .topBox .payPriceBox {
   background: #9dd026; }
 
 .payTicket.positive .breakLine {
@@ -21170,7 +21225,7 @@ body.siftal .full .middle {
 .payTicket.negative {
   color: #9f3a38; }
 
-.payTicket.negative .topBox .priceBox {
+.payTicket.negative .topBox .payPriceBox {
   background: #fff6f6; }
 
 .payTicket.negative .breakLine {
@@ -21186,7 +21241,7 @@ body.siftal .full .middle {
 .payTicket.warning {
   color: #573a08; }
 
-.payTicket.warning .topBox .priceBox {
+.payTicket.warning .topBox .payPriceBox {
   background: #eadc2c; }
 
 .payTicket.warning .breakLine {
@@ -21200,12 +21255,12 @@ body.siftal .full .middle {
   background-color: #eadc2c; }
 
 .payTicketDetail {
-  background-color: #fff;
   color: #555;
   font-size: 1.2em;
-  margin: 0 auto;
-  padding: 1em;
-  border-radius: 0.5rem; }
+  margin: 0 auto; }
+
+.payTicketDetail .msg {
+  background-color: #fff; }
 
 @media all and (min-width: 1400px) {
   .cn {
