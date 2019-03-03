@@ -20012,7 +20012,8 @@ body .we500 {
     color: #fff; }
 
 .light {
-  background-color: #f6f8fa; }
+  background-color: #f6f8fa;
+  color: #333; }
 
 .light.outline {
   background-color: transparent;
