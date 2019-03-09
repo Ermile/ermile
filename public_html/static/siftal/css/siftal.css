@@ -20530,7 +20530,7 @@ body.siftal .full .middle {
   width: 70%; }
 
 .tbl1.openable th.date, .tbl1.openable td.date {
-  width: 150px; }
+  max-width: 150px; }
 
 .tbl1.openable th.via, .tbl1.openable td.via {
   width: 75px; }
