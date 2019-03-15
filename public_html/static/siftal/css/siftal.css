@@ -10,35 +10,35 @@ Version       1.0.0
   font-family: IRANSans;
   font-style: normal;
   font-weight: 700;
-  font-display: block;
+  font-display: fallback;
   src: url(../fonts/IRANSans/4.2/eot/IRANSansWeb_Bold.eot);
   src: url(../fonts/IRANSans/4.2/eot/IRANSansWeb_Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/IRANSans/4.2/woff2/IRANSansWeb_Bold.woff2) format("woff2"), url(../fonts/IRANSans/4.2/woff/IRANSansWeb_Bold.woff) format("woff"), url(../fonts/IRANSans/4.2/ttf/IRANSansWeb_Bold.ttf) format("truetype"); }
 @font-face {
   font-family: IRANSans;
   font-style: normal;
   font-weight: 500;
-  font-display: block;
+  font-display: fallback;
   src: url(../fonts/IRANSans/4.2/eot/IRANSansWeb_Medium.eot);
   src: url(../fonts/IRANSans/4.2/eot/IRANSansWeb_Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/IRANSans/4.2/woff2/IRANSansWeb_Medium.woff2) format("woff2"), url(../fonts/IRANSans/4.2/woff/IRANSansWeb_Medium.woff) format("woff"), url(../fonts/IRANSans/4.2/ttf/IRANSansWeb_Medium.ttf) format("truetype"); }
 @font-face {
   font-family: IRANSans;
   font-style: normal;
   font-weight: 300;
-  font-display: block;
+  font-display: fallback;
   src: url(../fonts/IRANSans/4.2/eot/IRANSansWeb_Light.eot);
   src: url(../fonts/IRANSans/4.2/eot/IRANSansWeb_Light.eot?#iefix) format("embedded-opentype"), url(../fonts/IRANSans/4.2/woff2/IRANSansWeb_Light.woff2) format("woff2"), url(../fonts/IRANSans/4.2/woff/IRANSansWeb_Light.woff) format("woff"), url(../fonts/IRANSans/4.2/ttf/IRANSansWeb_Light.ttf) format("truetype"); }
 @font-face {
   font-family: IRANSans;
   font-style: normal;
   font-weight: 200;
-  font-display: block;
+  font-display: fallback;
   src: url(../fonts/IRANSans/4.2/eot/IRANSansWeb_UltraLight.eot);
   src: url(../fonts/IRANSans/4.2/eot/IRANSansWeb_UltraLight.eot?#iefix) format("embedded-opentype"), url(../fonts/IRANSans/4.2/woff2/IRANSansWeb_UltraLight.woff2) format("woff2"), url(../fonts/IRANSans/4.2/woff/IRANSansWeb_UltraLight.woff) format("woff"), url(../fonts/IRANSans/4.2/ttf/IRANSansWeb_UltraLight.ttf) format("truetype"); }
 @font-face {
   font-family: IRANSans;
   font-style: normal;
   font-weight: 400;
-  font-display: block;
+  font-display: fallback;
   src: url(../fonts/IRANSans/4.2/eot/IRANSansWeb.eot);
   src: url(../fonts/IRANSans/4.2/eot/IRANSansWeb.eot?#iefix) format("embedded-opentype"), url(../fonts/IRANSans/4.2/woff2/IRANSansWeb.woff2) format("woff2"), url(../fonts/IRANSans/4.2/woff/IRANSansWeb.woff) format("woff"), url(../fonts/IRANSans/4.2/ttf/IRANSansWeb.ttf) format("truetype"); }
 /* roboto fontface for en text*/
@@ -49,7 +49,7 @@ Version       1.0.0
   font-style: normal;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWebBlack';
   src: url(../fonts/lato/LatoLatin-BlackItalic.eot);
@@ -57,7 +57,7 @@ Version       1.0.0
   font-style: italic;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWeb';
   src: url(../fonts/lato/LatoLatin-Bold.eot);
@@ -65,7 +65,7 @@ Version       1.0.0
   font-style: normal;
   font-weight: 700;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWeb';
   src: url(../fonts/lato/LatoLatin-BoldItalic.eot);
@@ -73,7 +73,7 @@ Version       1.0.0
   font-style: italic;
   font-weight: 700;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWeb';
   src: url(../fonts/lato/LatoLatin-Italic.eot);
@@ -81,7 +81,7 @@ Version       1.0.0
   font-style: italic;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWeb';
   src: url(../fonts/lato/LatoLatin-Regular.eot);
@@ -89,7 +89,7 @@ Version       1.0.0
   font-style: normal;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWebHairline';
   src: url(../fonts/lato/LatoLatin-Hairline.eot);
@@ -97,7 +97,7 @@ Version       1.0.0
   font-style: normal;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWebHairline';
   src: url(../fonts/lato/LatoLatin-HairlineItalic.eot);
@@ -105,7 +105,7 @@ Version       1.0.0
   font-style: italic;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWebHeavy';
   src: url(../fonts/lato/LatoLatin-Heavy.eot);
@@ -113,7 +113,7 @@ Version       1.0.0
   font-style: normal;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWebHeavy';
   src: url(../fonts/lato/LatoLatin-HeavyItalic.eot);
@@ -121,7 +121,7 @@ Version       1.0.0
   font-style: italic;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWebLight';
   src: url(../fonts/lato/LatoLatin-Light.eot);
@@ -129,7 +129,7 @@ Version       1.0.0
   font-style: normal;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWebLight';
   src: url(../fonts/lato/LatoLatin-LightItalic.eot);
@@ -137,7 +137,7 @@ Version       1.0.0
   font-style: italic;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWebMedium';
   src: url(../fonts/lato/LatoLatin-Medium.eot);
@@ -145,7 +145,7 @@ Version       1.0.0
   font-style: normal;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWebMedium';
   src: url(../fonts/lato/LatoLatin-MediumItalic.eot);
@@ -153,7 +153,7 @@ Version       1.0.0
   font-style: italic;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWebSemibold';
   src: url(../fonts/lato/LatoLatin-Semibold.eot);
@@ -161,7 +161,7 @@ Version       1.0.0
   font-style: normal;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWebSemibold';
   src: url(../fonts/lato/LatoLatin-SemiboldItalic.eot);
@@ -169,7 +169,7 @@ Version       1.0.0
   font-style: italic;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWebThin';
   src: url(../fonts/lato/LatoLatin-Thin.eot);
@@ -177,7 +177,7 @@ Version       1.0.0
   font-style: normal;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: 'LatoLatinWebThin';
   src: url(../fonts/lato/LatoLatin-ThinItalic.eot);
@@ -185,14 +185,14 @@ Version       1.0.0
   font-style: italic;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-display: block; }
+  font-display: fallback; }
 @font-face {
   font-family: "siftal";
   src: url("../fonts/siftal/siftal.eot");
   src: url("../fonts/siftal/siftal.eot?#iefix") format("embedded-opentype"), url("../fonts/siftal/siftal.woff") format("woff"), url("../fonts/siftal/siftal.ttf") format("truetype"), url("../fonts/siftal/siftal.svg#siftal") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: block; }
+  font-display: fallback; }
 span, object, iframe, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -614,6 +614,12 @@ address {
   content: " ";
   display: block;
   clear: both; }
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important; }
 
 #ermileBadge {
   padding: 10px 1.5em;
@@ -19191,6 +19197,15 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 .floatN {
   float: none; }
 
+.floatR-f {
+  float: right !important; }
+
+.floatL-f {
+  float: left !important; }
+
+.floatN-f {
+  float: none !important; }
+
 .ltr .floatRa {
   float: right; }
 
@@ -19202,6 +19217,18 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 
 .rtl .floatLa {
   float: right; }
+
+.ltr .floatRa-f {
+  float: right !important; }
+
+.rtl .floatRa-f {
+  float: left !important; }
+
+.ltr .floatLa-f {
+  float: left !important; }
+
+.rtl .floatLa-f {
+  float: right !important; }
 
 .fs05 {
   font-size: 0.5em; }
