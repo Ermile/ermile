@@ -3512,7 +3512,7 @@ img.mini {
   left: 0;
   background-color: #fff;
   display: block;
-  z-index: 3;
+  z-index: 1000;
   text-align: center;
   padding: 1em; }
 
@@ -20256,6 +20256,10 @@ body .we500 {
   -webkit-touch-callout: none;
   cursor: default;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none; }
@@ -20332,6 +20336,12 @@ body .we500 {
   height: 100%;
   position: relative;
   background-color: #302b2b;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   position: fixed;
   top: 0;
@@ -20528,8 +20538,10 @@ body.siftal .full .middle {
   background-color: #333;
   color: #eee;
   padding: 1em;
-  user-select: text;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text; }
 
 .siftal[data-in="api"] code {
   background-color: rgba(0, 0, 0, 0.4);
@@ -20541,6 +20553,8 @@ body.siftal .full .middle {
   font-family: monospace, sans-serif; }
 
 .siftal[data-in="api"] .msg.url span {
+  -webkit-user-select: text;
+  -moz-user-select: text;
   user-select: text; }
 
 .siftal[data-in="api"] .cbox ol {
@@ -20699,7 +20713,9 @@ body.siftal .full .middle {
 .siftal .dashHead h1 img {
   height: 50px;
   width: 50px;
-  padding: 5px; }
+  max-width: 50px;
+  padding: 5px;
+  overflow: hidden; }
 
 .siftal .dashHead h1 span {
   padding: 0 0.5em;
@@ -20731,6 +20747,18 @@ body.siftal .full .middle {
   transition-property: color, background-color;
   color: #888;
   max-height: 50px; }
+
+.siftal .dashHead .hm div:before {
+  content: "\e20c";
+  font-family: "siftal","tahoma" !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.5em; }
 
 .siftal .dashHead .hm a:hover, .siftal .dashHead .hm div:hover {
   color: #555;
@@ -20794,7 +20822,9 @@ body.siftal .full .middle {
 .siftal .dashHead .profileShow img {
   height: 40px;
   width: 40px;
+  max-width: 40px;
   border-radius: 50%;
+  overflow: hidden;
   margin: 5px; }
 
 .siftal .dashHead .notification[data-new]:after {
@@ -20852,7 +20882,7 @@ body.siftal .full .middle {
 
 .siftal #sidebar figure .avatar:after {
   font-family: "siftal";
-  content: "\e05f";
+  content: "\e20c";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -20863,7 +20893,7 @@ body.siftal .full .middle {
   font-size: 2em;
   border-radius: 50%;
   color: #fff;
-  opacity: 0;
+  opacity: 0.3;
   transition: 0.3s;
   margin: 5px; }
 
@@ -20888,6 +20918,7 @@ body.siftal .full .middle {
   border-color: transparent #fff; }
 
 .siftal #sidebar figure:hover .avatar:after {
+  content: "\e05f";
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 1; }
 
