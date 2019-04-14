@@ -14,7 +14,7 @@
 .medium-toolbar-arrow-under:after,.medium-toolbar-arrow-over:before{border-style:solid;content:'';display:block;height:0;left:50%;margin-left:-8px;position:absolute;width:0}
 .medium-toolbar-arrow-under:after{border-width:8px 8px 0}
 .medium-toolbar-arrow-over:before{border-width:0 8px 8px;top:-8px}
-.medium-editor-toolbar{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;left:0;position:absolute;top:0;visibility:hidden;z-index:2000}
+.medium-editor-toolbar{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;left:0;position:absolute;top:0;visibility:hidden;z-index:2000;direction:ltr;}
 .medium-editor-toolbar ul{margin:0;padding:0}
 .medium-editor-toolbar li{float:left;list-style:none;margin:0;padding:0}
 .medium-editor-toolbar li button{box-sizing:border-box;cursor:pointer;display:block;font-size:14px;line-height:1.33;margin:0;padding:15px;text-decoration:none}
@@ -32,7 +32,7 @@
 .medium-editor-toolbar-form .medium-editor-toolbar-form-row{line-height:14px;margin-left:5px;padding-bottom:5px}
 .medium-editor-toolbar-form .medium-editor-toolbar-input,.medium-editor-toolbar-form label{border:none;box-sizing:border-box;font-size:14px;margin:0;padding:6px;width:316px;display:inline-block}
 .medium-editor-toolbar-form .medium-editor-toolbar-input:focus,.medium-editor-toolbar-form label:focus{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:none;box-shadow:none;outline:0}
-.medium-editor-toolbar-form a{display:inline-block;font-size:24px;font-weight:bolder;margin:0 10px;text-decoration:none}
+.medium-editor-toolbar-form a{display:inline-block;font-size:24px;font-weight:bolder;margin:0 10px;text-decoration:none;vertical-align:middle;}
 .medium-editor-toolbar-form-active{display:block}
 .medium-editor-toolbar-actions:after{clear:both;content:"";display:table}
 .medium-editor-element{word-wrap:break-word;min-height:30px;max-height:initial;cursor:text}
@@ -49,7 +49,7 @@
 .medium-editor-toolbar li .medium-editor-button-last{border-bottom-right-radius:5px;border-top-right-radius:5px}
 .medium-editor-toolbar li .medium-editor-button-active{background-color:#000;background:-webkit-linear-gradient(top,#242424,rgba(0,0,0,0.89));background:linear-gradient(to bottom,#242424,rgba(0,0,0,0.89));color:#fff}
 .medium-editor-toolbar-form{background:#242424;border-radius:5px;color:#999}
-.medium-editor-toolbar-form .medium-editor-toolbar-input{background:#242424;box-sizing:border-box;color:#ccc;height:50px}
+.medium-editor-toolbar-form .medium-editor-toolbar-input{background:#242424;box-sizing:border-box;color:#ccc;height:50px;direction: ltr;}
 .medium-editor-toolbar-form a{color:#fff}
 .medium-editor-toolbar-anchor-preview{background:#242424;border-radius:5px;color:#fff}
 .medium-editor-placeholder:after{color:#b3b3b1}

@@ -20843,7 +20843,8 @@ body.siftal .full .middle {
   max-width: 40px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 5px; }
+  margin: 5px;
+  position: relative; }
 
 .siftal .dashHead .notification[data-new]:after {
   content: "\2a";
