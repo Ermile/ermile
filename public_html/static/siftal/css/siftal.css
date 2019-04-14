@@ -20421,6 +20421,11 @@ body .we500 {
 .siftal .dashHead.cloner[data-cloner-trigger] {
   top: 0; }
 
+.siftal[data-clean] .dashHead.cloner {
+  right: 0;
+  left: 0;
+  width: 100%; }
+
 .siftal #main #content {
   padding: 1em 2%; }
 
