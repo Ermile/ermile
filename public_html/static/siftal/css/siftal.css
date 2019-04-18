@@ -20648,7 +20648,9 @@ body.siftal .full .middle {
   margin-bottom: 1em;
   -webkit-user-select: text;
   -moz-user-select: text;
-  user-select: text; }
+  user-select: text;
+  max-height: 500px;
+  overflow-y: auto; }
 
 .siftal[data-in="api"] code {
   background-color: rgba(0, 0, 0, 0.4);
@@ -20871,7 +20873,9 @@ body.siftal .full .middle {
   transition-duration: 0.3s;
   transition-property: color, background-color;
   color: #888;
-  max-height: 50px; }
+  max-height: 50px;
+  outline: none;
+  cursor: pointer; }
 
 .siftal .dashHead .hm div:before {
   content: "\e20c";
