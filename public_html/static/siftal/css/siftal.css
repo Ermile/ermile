@@ -389,7 +389,8 @@ pre {
   display: block;
   direction: ltr;
   font-family: monospace, sans-serif;
-  font-size: 1em; }
+  font-size: 1em;
+  overflow: auto; }
 
 kbd {
   margin: 0;
@@ -20648,9 +20649,7 @@ body.siftal .full .middle {
   margin-bottom: 1em;
   -webkit-user-select: text;
   -moz-user-select: text;
-  user-select: text;
-  max-height: 500px;
-  overflow-y: auto; }
+  user-select: text; }
 
 .siftal[data-in="api"] code {
   background-color: rgba(0, 0, 0, 0.4);
