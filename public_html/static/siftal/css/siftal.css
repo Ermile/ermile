@@ -808,6 +808,9 @@ a:focus {
 a:active {
   outline: 0; }
 
+span:focus {
+  outline: none; }
+
 ::-webkit-selection {
   background-color: #cce0ff;
   color: rgba(0, 0, 0, 0.87); }
@@ -2551,10 +2554,10 @@ progress.xl, meter.xl {
   background-color: rgba(0, 0, 0, 0.1); }
 
 .tbox {
-  margin: 0.5em 0 1.5em;
+  margin: 0 0 10px;
   font-size: 1.2em;
   position: relative;
-  padding: 1em 1.5em;
+  padding: 5px 1em;
   border: 1px solid transparent;
   border-radius: 0.25rem;
   line-height: 1.25;
@@ -2570,10 +2573,10 @@ progress.xl, meter.xl {
   border-color: #fff; }
 
 .ltr .tbox.pictogram {
-  padding-right: 7em; }
+  padding-right: 5em; }
 
 .rtl .tbox.pictogram {
-  padding-left: 7em; }
+  padding-left: 5em; }
 
 .tbox p {
   color: #777;
@@ -2584,7 +2587,10 @@ progress.xl, meter.xl {
 
 .tbox h2 {
   font-weight: 700;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  line-height: 28px;
+  margin: 0;
+  display: inline-block; }
 
 .tbox h2 .badge {
   font-size: 65%;
@@ -2594,7 +2600,7 @@ progress.xl, meter.xl {
   line-height: 1.3; }
 
 .tbox.pictogram > span[class^="sf-"] {
-  font-size: 4em;
+  font-size: 3em;
   transition: color 0.1s;
   position: absolute;
   line-height: 50px;
@@ -2851,6 +2857,9 @@ a.dcard:hover {
   z-index: 2;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg); }
+
+.dcard img {
+  width: 100%; }
 
 .ltr .f .c:first-child .dcard {
   margin-left: 0; }
@@ -20986,7 +20995,7 @@ body.siftal .full .middle {
   height: calc(100% - 70px); }
 
 .siftal #sidebar figure {
-  padding: 4em 0;
+  padding: 2em 0;
   text-align: center;
   color: #ddd; }
 
@@ -21116,7 +21125,12 @@ body.siftal .full .middle {
 
 .siftal #sidebar ul > li.title {
   background-color: #333;
-  padding: 0 1em; }
+  transition: 0.3s;
+  padding: 0.5em 1em;
+  margin-top: 0.7em; }
+
+.siftal #sidebar ul > li.title:hover {
+  background-color: #000; }
 
 .siftal #sidebar ul > li.detail {
   background-color: #333;
@@ -21136,6 +21150,15 @@ body.siftal .full .middle {
 .siftal #sidebar ul > li > a {
   position: relative;
   display: block;
+  padding: 1em 1.5em;
+  color: #d5d5d5;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  max-width: 300px;
+  margin: 0 auto;
+  line-height: 1.5em; }
+
+.siftal #sidebar ul > li.item {
   padding: 1em 1.5em;
   color: #d5d5d5;
   transition: background-color 0.3s;
@@ -22821,8 +22844,8 @@ body [data-response-hide] {
 .superAdmin {
   position: fixed;
   z-index: 10;
-  top: 55px;
-  left: 10px;
+  top: 45px;
+  left: 5px;
   width: 30px;
   height: 30px;
   transition: 0.3s;
