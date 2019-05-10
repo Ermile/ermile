@@ -16367,6 +16367,7 @@ span.input {
 
 .input .addon {
   padding: 5px 1em;
+  line-height: 24px;
   text-align: center;
   border-radius: 0.25rem;
   white-space: nowrap;
@@ -16698,8 +16699,8 @@ input[type="number"]::-webkit-outer-spin-button {
   cursor: pointer;
   height: 36px;
   width: 80px;
-  background: #eee;
-  border-radius: 15px;
+  background: #efefef;
+  border-radius: 20px;
   transition: .2s;
   border: 1px solid transparent;
   overflow: hidden;
@@ -16709,10 +16710,10 @@ input[type="number"]::-webkit-outer-spin-button {
   display: inline-block; }
 
 .switch1 label:first-of-type:hover {
-  border-color: rgba(0, 0, 0, 0.2); }
+  border-color: rgba(0, 0, 0, 0.1); }
 
 .switch1 input:focus + label:first-of-type {
-  border-color: rgba(128, 192, 208, 0.9); }
+  border-color: rgba(76, 175, 80, 0.9); }
 
 .switch1 label:first-of-type:before {
   content: "OFF";
@@ -16749,12 +16750,10 @@ input[type="number"]::-webkit-outer-spin-button {
   pointer-events: none; }
 
 .switch1 input:checked + label:first-of-type {
-  background: #33414e;
-  background: #34A7C1;
-  background-color: #4090d0; }
+  background-color: #40d060; }
 
 .switch1 input:focus:checked + label:first-of-type {
-  background-color: #105090; }
+  background-color: #40c060; }
 
 .switch1 input:checked + label:first-of-type:before {
   content: "ON";
@@ -22582,6 +22581,21 @@ body.siftal .full .middle {
 
   .siftal .tbox p {
     display: none; }
+
+  .siftal .tbox i {
+    display: none; }
+
+  .ltr .tbox.pictogram {
+    padding-right: 1em; }
+
+  .rtl .tbox.pictogram {
+    padding-left: 1em; }
+
+  .tbox.pictogram > span[class^="sf-"] {
+    display: none; }
+
+  .siftal .tbox h2 {
+    font-size: 1.2em; }
 
   .tbl td.collapsing.sauto, .tbl th.collapsing.sauto {
     white-space: initial; }
