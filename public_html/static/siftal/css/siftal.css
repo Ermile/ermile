@@ -193,7 +193,7 @@ Version       1.0.0
   src: url("../fonts/siftal/siftal.eot?#iefix") format("embedded-opentype"), url("../fonts/siftal/siftal.woff") format("woff"), url("../fonts/siftal/siftal.ttf") format("truetype"), url("../fonts/siftal/siftal.svg#siftal") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback; }
+  font-display: block; }
 span, object, iframe, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -17196,7 +17196,8 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   background-color: #f8f8f8;
   width: 68px;
   height: 68px;
-  border-radius: 0.25rem; }
+  border-radius: 0.25rem;
+  padding: 2px; }
 
 .radioGateway img {
   width: 100%;
@@ -17249,6 +17250,25 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   -o-transform: scale(1);
   transform: scale(1); }
 
+.radioGateway.blink label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  animation: pulseOn 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  box-shadow: 0 0 0 0 rgba(108, 166, 15, 0.7); }
+
+.ltr .radioGateway.blink label::before {
+  left: 0; }
+
+.rtl .radioGateway.blink label::before {
+  right: 0; }
+
+@keyframes pulseOn {
+  100% {
+    box-shadow: 0 0 0 15px rgba(232, 76, 61, 0); } }
 .radioRating .rateBox {
   display: inline-block;
   min-height: 3em; }
