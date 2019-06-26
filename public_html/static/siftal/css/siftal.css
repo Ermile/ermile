@@ -22237,7 +22237,7 @@ body.siftal .full .middle {
     padding: 0; } }
 @media (max-width: 767px) {
   .cn {
-    min-width: 290px;
+    min-width: 280px;
     max-width: 750px;
     width: 96%; }
 
