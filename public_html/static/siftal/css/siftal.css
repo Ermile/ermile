@@ -20525,7 +20525,7 @@ body .we500 {
   width: 100%;
   z-index: 9;
   cursor: col-resize;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0);
   transition: .3s;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -20559,8 +20559,8 @@ body .we500 {
   left: initial;
   right: 250px; }
 
-.siftal #main:hover:before {
-  background-color: rgba(0, 0, 0, 0.5); }
+.siftal #main:before:hover {
+  background-color: rgba(0, 0, 0, 0.2); }
 
 .siftal #main:hover:after {
   color: #eee; }
