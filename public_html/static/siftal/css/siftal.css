@@ -21820,6 +21820,27 @@ body.siftal .full .middle {
   padding: 2em;
   text-align: center; }
 
+/*header lang*/
+.blogEx footer .langlist {
+  margin: 1em 0; }
+
+.blogEx footer .langlist a {
+  color: #999;
+  background-color: #fff;
+  padding: .5em 1em;
+  margin: 0.5rem;
+  transition: 0.3s color;
+  display: inline-block; }
+
+.blogEx footer .langlist a:hover {
+  color: #aaa; }
+
+.blogEx footer .langlist a:focus {
+  color: #bbb; }
+
+.blogEx footer .langlist a.active {
+  color: #22bb88; }
+
 @media (min-width: 1400px) {
   .cn {
     max-width: 1400px;
