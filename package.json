@@ -1,0 +1,10 @@
+{
+  "name": "Ermile",
+  "version": "2.0.0",
+  "description": "Software solution Provider",
+  "homepage": "https://Ermile.com",
+  "dependencies": {
+    "siftal": "^6.9.0",
+    "dash": "^18.0.0",
+  }
+}
