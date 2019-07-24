@@ -1,10 +1,12 @@
 {
   "name": "Ermile",
-  "version": "2.0.0",
   "description": "Software solution Provider",
+  "version": "2.0.0",
   "homepage": "https://Ermile.com",
+  "repository": "github:Ermile/ermile-website",
+  "license": "MIT",
   "dependencies": {
-    "siftal": "^6.9.0",
     "dash": "^18.0.0",
+    "siftal": "^6.9.0"
   }
 }
