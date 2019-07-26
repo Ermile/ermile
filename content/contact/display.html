@@ -1,55 +1,48 @@
 {%extends display.main%}
 
-{%set pageTitle%}{%trans "Contact Us"%}{%endset%}
-
-
-{%set pageDesc%}
-{%trans "Knowing your valuable comments about bugs and problems and more importantly your precious offers will help us in this way."%}
-{%endset%}
 
 {%block page%}
 
- <div class="f content p">
+ <div class="f fs12">
   <div class="c6 s12">
    <p>{%trans "Thank you for choosing us."%}<br/>{%trans "We do our best to improve our quality. So, knowing your valuable comments about bugs and problems and more importantly your precious offers will help us in this way."%}</p>
-   <form method="post" data-clear class="dft">
+   {%if tempTicketCodeURL%}
+   <div class="msg success2 txtC"><a data-direct href="{{tempTicketCodeURL}}">{%trans "You can access the ticketing status through this link"%}</a></div>
+   {%endif%}
+   <form method="post" data-clear autocomplete='off'>
     {%include display.hive%}
    {%if login%}
    {%else%}
-    <div class="f pab">
-     <label class="c2" for="name">{%trans "Name"%}</label>
-     <input class="c" type="text" name="name" id="name" placeholder='{%trans "Full Name"%}' maxlength='40'>
+    <div class="input pA5">
+     <label class="addon" for="name">{%trans "Name"%}</label>
+     <input type="text" name="name" id="name" placeholder='{%trans "Full Name"%}' maxlength='40'>
     </div>
-    <div class="f pab">
-     <label class="c2" for="mobile">{%trans "Mobile"%}</label>
-     <input class="c en" type="tel" name="mobile" id="mobile" placeholder='98 912 333 4444' maxlength="17" autocomplete="off" data-validity='{%trans "Please enter valid mobile number. `:val` is incorrect"%}'>
+    <div class="input pA5">
+     <label class="addon" for="mobile">{%trans "Mobile"%}</label>
+     <input type="tel" name="mobile" id="mobile" placeholder='98 912 333 4444' maxlength="17" autocomplete="off" data-validity='{%trans "Please enter valid mobile number. `:val` is incorrect"%}'>
     </div>
-    <div class="f pab">
-     <label class="c2" for="email">{%trans "Email"%}</label>
-     <input class="c en" type="email" name="email" id="email" placeholder='mail@example.com' maxlength='40'>
+    <div class="input pA5">
+     <label class="addon" for="email">{%trans "Email"%}</label>
+     <input type="email" name="email" id="email" placeholder='mail@example.com' maxlength='40'>
     </div>
    {%endif%}
-    <div class="f pab">
-     <label class="c2" for="content">{%trans "Message"%} *</label>
-     <textarea class="c textarea" name="content" placeholder='{%trans "Your Message"%}' minlength="5" maxlength="1000" data-resizable></textarea>
+    <div class="pA5">
+     <textarea class="c txt" name="content" placeholder='{%trans "Your Message"%}' rows=4 minlength="5" maxlength="1000" data-resizable></textarea>
     </div>
-    <div class="f pab">
-     <div class="c2"></div>
-     <button type="submit" name="submit-contact" class="c btn try submit-contact">{%trans "Send"%}</button>
+    <div class="input pA5 mTB25">
+     <button type="submit" name="submit-contact" class="btn block success">{%trans "Send"%}</button>
     </div>
 
    </form>
   </div>
 
 
-  <div class="c4 s12 os bg-white pas">
-     <h3>{%trans "How to contact us"%}</h3>
+  <div class="c5 s12 os bg-white pA25">
+    <h3>{%trans "How to contact us"%}</h3>
     <div class="contact-data">
 
-       <address class="vcard">
-        <div class="email ltr">info@ermile.com</div>
-        <a class="tel ltr" href="tel:+982536505281">{{"(+98) 25" | fitNumber}} {{"3650 5281" | fitNumber}}</a>
-        <div class="author author_name hide"><span class="fn">{%trans "ermile"%}</span></div>
+       <address class="vcard mB10 pA10">
+        <div class="author author_name hide"><span class="fn">{%trans "Ermile"%}</span></div>
         <div class="adr">
 {%if lang.current =='en'%}
           <div class="extended-address">{%trans "Ermile, Floor2, Yas Building"%}</div>
@@ -64,10 +57,12 @@
 {%endif%}
           <div class="postal-code">{{"37196-17540" | fitNumber }}</div>
         </div>
+        <div class="email ltr">info@Ermile.com</div>
+        <a class="tel ltr" href="tel:+982536505281">{{"(+98) 25" | fitNumber}} {{"3650 5281" | fitNumber}}</a>
        </address>
     </div>
-    <a href="https://goo.gl/maps/rczwR4c9CAH2" target="_blank" class="map" title='{{site.title}} {%trans "on map"%}'>
-     <img src="{{url.static}}/images/map.png" alt='{{site.title}} {%trans "on map"%}'>
+    <a href="https://goo.gl/maps/Je4m2qQ6zFw" target="_blank" class="map" title='{%trans "Our location on map"%}'>
+     <img src="{{url.static}}/images/map.png" alt="{{site.title}}" class="block">
     </a>
 
   </div>

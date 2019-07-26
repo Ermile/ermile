@@ -23,20 +23,11 @@ body{background-color: #fff;-webkit-font-smoothing: antialiased;}
 #landing .desc h3{font-size: 1em;}
 
 /* custom landing background*/
-body[data-page=pricing] #landing{background-image: url(../images/site/bg-azvir-pricing.jpg);background-position:top right}
-body[data-page=pricing] #landing .bg::after{background-color: rgba(255,255,255,0.2);}
-body[data-page=pricing] #landing .desc{text-shadow: 0 0 20px #000}
-body[data-page=changelog] #landing{background-image: url(../images/site/bg-azvir-changelog.jpg);}
-body[data-page=changelog] #landing .bg::after{background-color: rgba(0,0,0,0.1);}
-body[data-page=changelog] #landing .desc{text-shadow: 0 0 20px #000}
-
-body[data-page=contact] #landing{background-image: url(../images/site/bg-azvir-contact.jpg);}
-body[data-page=privacy] #landing{background-image: url(../images/site/bg-azvir-privacy.jpg);}
-body[data-page=terms] #landing{background-image: url(../images/site/bg-azvir-terms.jpg);}
-body[data-page=about] #landing{background-image: url(../images/site/bg-azvir-about.jpg);}
-body[data-page=help] #landing{background-image: url(../images/site/bg-azvir-help.jpg);}
-body[data-page=help_faq] #landing{background-image: url(../images/site/bg-azvir-faq.jpg);}
-body[data-page=socialresponsibility] #landing{background-image: url(../images/site/bg-azvir-socialresponsibility.jpg);}
+body[data-page=contact] #landing{background-image: url(../images/homepage/bg-ermile-contact.jpg);}
+body[data-page=privacy] #landing{background-image: url(../images/homepage/bg-ermile-privacy.jpg);}
+body[data-page=socialresponsibility] #landing{background-image: url(../images/homepage/bg-ermile-socialresponsibility.jpg);}
+body[data-page=terms] #landing{background-image: url(../images/homepage/bg-ermile-terms.jpg);}
+body[data-page=about] #landing{background-image: url(../images/homepage/bg-ermile-about.jpg);}
 
 
 
