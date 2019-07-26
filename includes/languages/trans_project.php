@@ -103,29 +103,29 @@ class twigTransTerms
 
 	//-------------------------------------------------------content\home\display.html
 	echo T_("Be easy and relax, we are do all works needed.");                        // Line 7
-	echo T_("This is name of our company in Iran");                                   // Line 32
-	echo T_("Knowledge Based Company");                                               // Line 33
-	echo T_("Ermile&reg; is our brand and we are start form the hot summer of 2015.");// Line 34
-	echo T_("From the first day of starting this company we are stay ahead of the tech curve and create cutting edge technology.");// Line 34
-	echo T_("In spring of 2019 after finish analyse and evaluation process of our services, Iran Vice-Presidency for science and technology is confirmed that our works is knowledge based.");// Line 35
-	echo T_("Jibres");                                                                // Line 47
-	echo T_("Integrated Sales and Online Accounting");                                // Line 48
-	echo T_("Jibres is not just an online accounting software;");                     // Line 49
-	echo T_("We try to create the best financial platform that has everything you need to sale and manage your financial life.");// Line 49
-	echo T_("jibres");                                                                // Line 53
-	echo T_("Sarshomar");                                                             // Line 95
-	echo T_("Ask Anyone Anywhere");                                                   // Line 74
-	echo T_("Focus on your question. Do not be too concerned about how to ask or analyze. Equipped with an integrated platform, Sarshomar has made it possible for you to ask your questions via any means.");// Line 75
-	echo T_("Tejarak");                                                               // Line 89
-	echo T_("Do attendance easily and enjoy real time reports");                      // Line 90
-	echo T_("Setup your dedicated and beautiful attendance system in less than a minute and have a real time and scrupulously monitoring on your business from anywhere.");// Line 91
-	echo T_("Azvir");                                                                 // Line 115
-	echo T_("Pioneer Academy Selection");                                             // Line 116
-	echo T_("Azvir provides complete and beautiful solutions for your school; Do all things easily and enjoy.");// Line 117
-	echo T_("Just select awesome");                                                   // Line 127
-	echo T_("Enterprise scale");                                                      // Line 137
-	echo T_("Our enterprise solution brings the power and utility of Ermile to large, complex organizations.");// Line 138
-	echo T_("Get in Touch");                                                          // Line 139
+	echo T_("This is name of our company in Iran");                                   // Line 33
+	echo T_("Knowledge Based Company");                                               // Line 34
+	echo T_("Ermile&reg; is our brand and we are start form the hot summer of 2015.");// Line 35
+	echo T_("From the first day of starting this company we are stay ahead of the tech curve and create cutting edge technology.");// Line 35
+	echo T_("In spring of 2019 after finish analyse and evaluation process of our services, Iran Vice-Presidency for science and technology is confirmed that our works is knowledge based.");// Line 36
+	echo T_("Jibres");                                                                // Line 48
+	echo T_("Integrated Sales and Online Accounting");                                // Line 49
+	echo T_("Jibres is not just an online accounting software;");                     // Line 50
+	echo T_("We try to create the best financial platform that has everything you need to sale and manage your financial life.");// Line 50
+	echo T_("jibres");                                                                // Line 54
+	echo T_("Sarshomar");                                                             // Line 96
+	echo T_("Ask Anyone Anywhere");                                                   // Line 75
+	echo T_("Focus on your question. Do not be too concerned about how to ask or analyze. Equipped with an integrated platform, Sarshomar has made it possible for you to ask your questions via any means.");// Line 76
+	echo T_("Tejarak");                                                               // Line 90
+	echo T_("Do attendance easily and enjoy real time reports");                      // Line 91
+	echo T_("Setup your dedicated and beautiful attendance system in less than a minute and have a real time and scrupulously monitoring on your business from anywhere.");// Line 92
+	echo T_("Azvir");                                                                 // Line 116
+	echo T_("Pioneer Academy Selection");                                             // Line 117
+	echo T_("Azvir provides complete and beautiful solutions for your school; Do all things easily and enjoy.");// Line 118
+	echo T_("Just select awesome");                                                   // Line 128
+	echo T_("Enterprise scale");                                                      // Line 138
+	echo T_("Our enterprise solution brings the power and utility of Ermile to large, complex organizations.");// Line 139
+	echo T_("Get in Touch");                                                          // Line 140
 
 	//---------------------------------------------------content\template\dafault.html
 	echo T_("For share via social networks");                                         // Line 35
@@ -147,12 +147,13 @@ class twigTransTerms
 	echo T_("Home");                                                                  // Line 40
 	echo T_("About");                                                                 // Line 41
 	echo T_("Contact");                                                               // Line 42
-	echo T_("Social Responsibility");                                                 // Line 46
-	echo T_("Terms of Service");                                                      // Line 47
+	echo T_("System Status");                                                         // Line 43
+	echo T_("Social Responsibility");                                                 // Line 47
+	echo T_("Terms of Service");                                                      // Line 48
 	echo T_("Privacy Policy");                                                        // Line 3
-	echo T_("Careers");                                                               // Line 49
-	echo T_("Made with Love at Ermile ❤️");                                           // Line 50
-	echo T_("Proudly Made in IRAN");                                                  // Line 50
+	echo T_("Careers");                                                               // Line 50
+	echo T_("Made with Love at Ermile ❤️");                                           // Line 52
+	echo T_("Proudly Made in IRAN");                                                  // Line 52
 
 	//----------------------------------------------------content\template\header.html
 
@@ -183,7 +184,7 @@ class twigTransTerms
 	echo T_("In fact, we have employed all updated technologies of the world to provide you with the maximum security.");// Line 24
 	echo T_("As the final remark, we wish to assure you that our main concern is to secure your privacy and protect your information against impermissible access.");// Line 26
 
-	//------------------------------content\template\static\social-responsibility.html
+	//-------------------------------content\template\static\socialresponsibility.html
 	echo T_("Ermile Social Responsibility");                                          // Line 3
 	echo T_("Social responsibility refers to our role in maintaining, caring about and helping our society, while having set as its goal a responsibility-centered enterprise along with wealth production.");// Line 13
 	echo T_("The issue of the social responsibility of organizations and corporations towards the society is from among the important issues being focused on in recent years.");// Line 15
