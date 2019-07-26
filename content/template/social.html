@@ -1,14 +1,17 @@
 <nav class="share1">
+{%if social.facebook%}
   <a data-direct href="https://www.facebook.com/{{social.facebook}}" class="facebook">ermile facebook</a>
+{%endif%}
+{%if social.twitter%}
   <a data-direct href="https://twitter.com/{{social.twitter}}" class="twitter">ermile twitter</a>
-  <a data-direct href="https://plus.google.com/{{social.googleplus}}" class="googleplus">ermile google+</a>
+{%endif%}
+{%if social.telegram%}
   <a data-direct href="https://t.me/{{social.telegram}}" class="telegram">ermile telegram</a>
+{%endif%}
+{%if social.instagram%}
   <a data-direct href="https://instagram.com/{{social.instagram}}" class="instagram">ermile instagram</a>
+{%endif%}
 {%if social.linkedin%}
   <a data-direct href="https://www.linkedin.com/{{social.linkedin}}" class="linkedin">ermile linkedin</a>
 {%endif%}
-{%if false%}
-  <a data-direct href="{{url.kingdom}}/rss" class="rss">ermile rss</a>
-{%endif%}
-
 </nav>
