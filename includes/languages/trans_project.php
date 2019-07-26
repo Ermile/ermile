@@ -73,7 +73,7 @@ class twigTransTerms
 	echo T_("Qom");                                                                   // Line 61
 	echo T_("Iran");                                                                  // Line 60
 	echo T_("Floor2, Yas Building");                                                  // Line 63
-	echo T_("+98 25 3773 5183");                                                      // Line 331
+	echo T_("+98 25 3650 5281");                                                      // Line 12
 	echo T_("Kindly register your Information");                                      // Line 349
 	echo T_("Name");                                                                  // Line 20
 	echo T_("Mobile");                                                                // Line 24
@@ -87,7 +87,7 @@ class twigTransTerms
 	echo T_("We do our best to improve our quality. So, knowing your valuable comments about bugs and problems and more importantly your precious offers will help us in this way.");// Line 14
 	echo T_("Full Name");                                                             // Line 21
 	echo T_("Please enter valid mobile number. `:val` is incorrect");                 // Line 25
-	echo T_("Email");                                                                 // Line 28
+	echo T_("Email");                                                                 // Line 24
 	echo T_("Message");                                                               // Line 33
 	echo T_("Your Message");                                                          // Line 34
 	echo T_("Send");                                                                  // Line 38
@@ -102,71 +102,66 @@ class twigTransTerms
 	echo T_("Update git repository");                                                 // Line 47
 
 	//-------------------------------------------------------content\home\display.html
-	echo T_("Software Solution Designer");                                            // Line 25
-	echo T_("If you are not finded a solution for your problem, call us.");           // Line 26
-	echo T_("We can provide a wide range of enterprise services to you.");            // Line 26
-	echo T_("This is our slogan in Ermile.");                                         // Line 52
-	echo T_("We belive that we can do anywork, without complexity, as soon as posible.");// Line 52
-	echo T_("Be easy and relax, we are do all works needed.");                        // Line 53
-	echo T_("Ermile do anywork");                                                     // Line 57
-	echo T_("Sarshomar");                                                             // Line 96
-	echo T_("Ask Anyone Anywhere");                                                   // Line 76
-	echo T_("Focus on your question. Do not be too concerned about how to ask or analyze. Equipped with an integrated platform, Sarshomar has made it possible for you to ask your questions via any means.");// Line 77
-	echo T_("Tejarak");                                                               // Line 90
-	echo T_("Do attendance easily and enjoy real time reports");                      // Line 91
-	echo T_("Setup your dedicated and beautiful attendance system in less than a minute and have a real time and scrupulously monitoring on your business from anywhere.");// Line 92
-	echo T_("Azvir");                                                                 // Line 116
-	echo T_("Pioneer Schools Selection");                                             // Line 117
-	echo T_("Azvir provides complete and beautiful solutions for your school; Do all things easily and enjoy.");// Line 118
-	echo T_("What are you waiting for?");                                             // Line 133
-	echo T_("Not sure how to start?");                                                // Line 134
-	echo T_("Tejarak is <span>free</span> to use as long as you want for teams of all sizes.");// Line 134
-	echo T_("Not worries.");                                                          // Line 134
-	echo T_("FREE ticket to Enter to the 21st century!");                             // Line 136
-	echo T_("You can easily upgrade to ");                                            // Line 138
-	echo T_("our paid plans");                                                        // Line 138
-	echo T_(", which offer more features and controls.");                             // Line 138
-	echo T_("Is your team interested in deploying?");                                 // Line 149
-	echo T_("We can help.");                                                          // Line 149
-	echo T_("Get in Touch");                                                          // Line 161
-	echo T_("Enterprise scale");                                                      // Line 159
-	echo T_("Our enterprise solution brings the power and utility of Ermile to large, complex organizations.");// Line 160
-
-	//--------------------------------------------------------content\main\layout.html
-	echo T_("Next →");                                                                // Line 37
-	echo T_("← Back");                                                                // Line 37
-	echo T_("Skip");                                                                  // Line 37
-	echo T_("Done");                                                                  // Line 37
+	echo T_("Be easy and relax, we are do all works needed.");                        // Line 7
+	echo T_("This is name of our company in Iran");                                   // Line 32
+	echo T_("Knowledge Based Company");                                               // Line 33
+	echo T_("Ermile&reg; is our brand and we are start form the hot summer of 2015.");// Line 34
+	echo T_("From the first day of starting this company we are stay ahead of the tech curve and create cutting edge technology.");// Line 34
+	echo T_("In spring of 2019 after finish analyse and evaluation process of our services, Iran Vice-Presidency for science and technology is confirmed that our works is knowledge based.");// Line 35
+	echo T_("Jibres");                                                                // Line 47
+	echo T_("Integrated Sales and Online Accounting");                                // Line 48
+	echo T_("Jibres is not just an online accounting software;");                     // Line 49
+	echo T_("We try to create the best financial platform that has everything you need to sale and manage your financial life.");// Line 49
+	echo T_("jibres");                                                                // Line 53
+	echo T_("Sarshomar");                                                             // Line 95
+	echo T_("Ask Anyone Anywhere");                                                   // Line 74
+	echo T_("Focus on your question. Do not be too concerned about how to ask or analyze. Equipped with an integrated platform, Sarshomar has made it possible for you to ask your questions via any means.");// Line 75
+	echo T_("Tejarak");                                                               // Line 89
+	echo T_("Do attendance easily and enjoy real time reports");                      // Line 90
+	echo T_("Setup your dedicated and beautiful attendance system in less than a minute and have a real time and scrupulously monitoring on your business from anywhere.");// Line 91
+	echo T_("Azvir");                                                                 // Line 115
+	echo T_("Pioneer Academy Selection");                                             // Line 116
+	echo T_("Azvir provides complete and beautiful solutions for your school; Do all things easily and enjoy.");// Line 117
+	echo T_("Just select awesome");                                                   // Line 127
+	echo T_("Enterprise scale");                                                      // Line 137
+	echo T_("Our enterprise solution brings the power and utility of Ermile to large, complex organizations.");// Line 138
+	echo T_("Get in Touch");                                                          // Line 139
 
 	//---------------------------------------------------content\template\dafault.html
-	echo T_("View your current location and navigate to parent of it");               // Line 9
-	echo T_("Some right reserved!");                                                  // Line 28
+	echo T_("For share via social networks");                                         // Line 35
+	echo T_("News Code");                                                             // Line 35
+	echo T_("Recommended for you");                                                   // Line 56
+	echo T_("Download");                                                              // Line 121
+	echo T_("PDF");                                                                   // Line 121
 
 	//----------------------------------------------------content\template\footer.html
-	echo T_("Home");                                                                  // Line 5
-	echo T_("About");                                                                 // Line 7
-	echo T_("Press and Media");                                                       // Line 8
-	echo T_("Careers");                                                               // Line 10
-	echo T_("Social Responsibility");                                                 // Line 26
-	echo T_("Enamad");                                                                // Line 17
-	echo T_("Learn More");                                                            // Line 23
-	echo T_("Terms of Service");                                                      // Line 24
+	echo T_("Let's hear your needs");                                                 // Line 2
+	echo T_("Get in touch");                                                          // Line 3
+	echo T_("Address");                                                               // Line 7
+	echo T_("Ermile, Qom, Iran");                                                     // Line 9
+	echo T_("Floor2, Yas Building, 1st alley, Haft-e-tir St");                        // Line 9
+	echo T_("Tel");                                                                   // Line 13
+	echo T_("+98-25-3650-5281");                                                      // Line 14
+	echo T_("+98-25-3650-5460");                                                      // Line 15
+	echo T_("Zip Code");                                                              // Line 20
+	echo T_("Home");                                                                  // Line 40
+	echo T_("About");                                                                 // Line 41
+	echo T_("Contact");                                                               // Line 42
+	echo T_("Social Responsibility");                                                 // Line 46
+	echo T_("Terms of Service");                                                      // Line 47
 	echo T_("Privacy Policy");                                                        // Line 3
-	echo T_("Support");                                                               // Line 14
-	echo T_("Contact");                                                               // Line 31
-	echo T_("Proudly Made in IRAN");                                                  // Line 45
-	echo T_("Control Panel");                                                         // Line 52
-	echo T_("Admin Panel");                                                           // Line 20
-	echo T_("Exit Session");                                                          // Line 54
-	echo T_("Another Session");                                                       // Line 55
+	echo T_("Careers");                                                               // Line 49
+	echo T_("Made with Love at Ermile ❤️");                                           // Line 50
+	echo T_("Proudly Made in IRAN");                                                  // Line 50
 
 	//----------------------------------------------------content\template\header.html
-	echo T_("+98 25 3650 5281");                                                      // Line 14
 
-	//-----------------------------------------content\template\static\enterprise.html
-	echo T_("Enterprise");                                                            // Line 3
-	echo T_("Have a headaches? We have soulutions. Be patient...");                   // Line 6
-	echo T_("Big companies simply don’t work like small companies, and they don’t use Tejarak the same way either. That’s why there’s Enterprise.");// Line 14
+	//--------------------------------------------------content\template\shareBox.html
+	echo T_("Share");                                                                 // Line 2
+	echo T_("facebook");                                                              // Line 4
+	echo T_("twitter");                                                               // Line 5
+	echo T_("linkedin");                                                              // Line 6
+	echo T_("telegram");                                                              // Line 7
 
 	//--------------------------------------------content\template\static\privacy.html
 	echo T_("We wish to assure you that our main concern is to secure your privacy and protect your information against impermissible access.");// Line 6
@@ -341,6 +336,8 @@ class twigTransTerms
 
 	//-----------------------------------------------------public_html\static\js\mv.js
 
+	//-------------------------------------------------public_html\static\js\script.js
+
 	//---------------------public_html\static\siftal\fonts\siftal\icons-reference.html
 
 	//--------------------------------------public_html\static\siftal\js\error_page.js
@@ -348,8 +345,6 @@ class twigTransTerms
 	//-----------------------public_html\static\siftal\js\highcharts\highcharts.min.js
 
 	//-----------------------------------public_html\static\siftal\js\highlight.min.js
-
-	//--------------------------------------public_html\static\siftal\js\siftal.min.js
 
  }
 }

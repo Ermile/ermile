@@ -76,7 +76,6 @@ body[data-page=socialresponsibility] #landing{background-image: url(../images/si
 .touchBox .value a:hover{border-bottom-color:#777;}
 .touchBox .value a:focus{border-bottom-color:#c9aa5d;}
 
-
 footer{position:relative;padding: 5em 0;font-size: 1.5em;background-color: #4c4845;color:#fff;user-select:none;}
 footer h2{text-align:center;font-size:4em;font-weight:900;margin:0;}
 footer h2 a{color:#fff;padding:0}
@@ -175,11 +174,16 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
 .tile h4{margin:0;font-weight:200;color:#999;padding:0 10%;}
 
 /* brand box*/
-.brandTile h2{font-size:4em;max-width:600px;margin-right:auto;margin-left:auto;}
+.brandTile h2{font-size:4em;max-width:600px;margin: 1em auto;}
 .brandTile h3{padding:0 2em;margin-bottom:1em;max-width:600px;color:#333;margin-right:auto;margin-left:auto;}
 .brandTile h4{padding:0 2em;margin-bottom:1em;max-width:600px;color:#333;margin-right:auto;margin-left:auto;}
 .brandTile img{max-width: 280px;}
 
+/* enterprise box*/
+.offer-enterprise{font-size:1.5em;background-color:#4070c0;color: #fff}
+.offer-enterprise h2{color:#fff;margin-bottom: 0.5em;}
+.offer-enterprise h3{color:#eee;padding:0;margin-bottom:1em;}
+.offer-enterprise h4{color:#ddd;padding:0}
 
 /* bg*/
 .bg-white{background-color:#fff;}

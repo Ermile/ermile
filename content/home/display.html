@@ -17,6 +17,7 @@
 {{block('azvir')}}
 
 {{block('awesomeBox')}}
+{{block('enterprise')}}
 
 
 {%endblock%}
@@ -132,11 +133,11 @@
 
 
 {%block enterprise%}
- <div class="tile" id='offer-enterprise'>
+ <div class="tile offer-enterprise">
   <div class="cn">
    <h2>{%trans "Enterprise scale"%}</h2>
    <h3>{%trans "Our enterprise solution brings the power and utility of Ermile to large, complex organizations."%}</h3>
-   <a href="{{url.here}}/contact" class="btn">{%trans "Get in Touch"%}</a>
+   <a href="{{url.here}}/contact" class="btn light outline">{%trans "Get in Touch"%}</a>
   </div>
  </div>
 {%endblock%}
