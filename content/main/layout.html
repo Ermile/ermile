@@ -2,26 +2,10 @@
 
 {%use 'content/main/header-social.html'%}
 
-{%set siftalCSS%}off{%endset%}
-
-{%block head_css%}
- <link rel="stylesheet" href="{{url.static}}/css/ermile.css?v=10.3.0">
-{%endblock%}
-
 {%block body%}
-{%include 'content/template/header.html'%}
  <div class="wrapper" data-xhr='wrapper'>
+{%include 'content/template/header.html'%}
 {%block content%}
-  <div class="page-block">
-   <div class="cn">
-{%block pageTitle%}
-    <div class="tile">
-     <h2>{{pageTitle}}</h2>
-     <h3>{{pageDesc}}</h3>
-    </div>
-{%endblock%}
-   </div>
-  </div>
   <div class="pc">
    <div class="cn">
 {%block page%}{%endblock%}
@@ -31,10 +15,5 @@
 {%endblock%}
  </div>
 {%include 'content/template/footer.html'%}
-
-
-{%set introOption%}
-.setOptions({ 'nextLabel': '{%trans "Next →"%}', 'prevLabel': '{%trans "← Back"%}', 'skipLabel': '{%trans "Skip"%}', 'doneLabel': '{%trans "Done"%}', 'showStepNumbers': 'false', 'showProgress': 'true' })
-{%endset%}
 
 {%endblock%}

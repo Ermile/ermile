@@ -15,7 +15,7 @@ if(!defined('db_log_name'))
 
 self::$language =
 [
-	'default' => 'fa',
+	'default' => 'en',
 	'list'    => ['fa','en',],
 ];
 /**

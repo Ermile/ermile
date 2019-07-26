@@ -1,77 +1,75 @@
 {%extends display.main%}
 
-
 {%block content%}
 
- {{block('topHomepage')}}
-
- {{block('meeting')}}
-
- {{block('abc')}}
- {{block('sarshomar')}}
- {{block('tejarak')}}
- {{block('azvir')}}
- {{block('table')}}
-
-
- {{block('enterprise')}}
-
-{%endblock%}
-
-
-{%block topHomepage%}
- <div class="tile" id='firstView'>
+<section class="ForgetAllThings">
   <div class="cn">
-   <h2>{%trans "Software Solution Designer"%}</h2>
-   <h3>{%trans "If you are not finded a solution for your problem, call us."%} {%trans "We can provide a wide range of enterprise services to you."%}</h3>
+    <h2>{%trans "Be easy and relax, we are do all works needed."%}</h2>
+    <p>{{site.desc}}</p>
+  </div>
+</section>
+
+{{block('heroBox')}}
+
+{{block('jibres')}}
+{{block('sarshomar')}}
+{{block('tejarak')}}
+{{block('azvir')}}
+
+{{block('awesomeBox')}}
+
+
+{%endblock%}
+
+
+
+
+
+
+{%block heroBox%}
+<section class='heroBox'>
+  <div class="cn">
+    <h2 title='{%trans "This is name of our company in Iran"%}'>{{site.company}}</h2>
+    <h3>{%trans "Knowledge Based Company"%}</h3>
+    <p>{%trans "Ermile&reg; is our brand and we are start form the hot summer of 2015."%} {%trans "From the first day of starting this company we are stay ahead of the tech curve and create cutting edge technology."%}</p>
+    <p>{%trans "In spring of 2019 after finish analyse and evaluation process of our services, Iran Vice-Presidency for science and technology is confirmed that our works is knowledge based."%}</p>
+  </div>
+</section>
+{%endblock%}
+
+
+
+{%block jibres%}
+ <div class="tile brandTile bg-gray" id='jibres'>
+  <div class="cn f fix align-center">
+
+   <div class="c6 s12">
+    <h2><a href="https://jibres.com" target="_blank">{%trans "Jibres"%}</a></h2>
+    <h3>{%trans "Integrated Sales and Online Accounting"%}</h3>
+    <h4>{%trans "Jibres is not just an online accounting software;"%} {%trans "We try to create the best financial platform that has everything you need to sale and manage your financial life."%}</h4>
+   </div>
+   <div class='c6'>
+    <a href="https://jibres.com" target="_blank">
+     <img src='https://jibres.com/static/images/logo/svg/jibres-logo.svg' alt='{%trans "jibres"%}'>
+    </a>
+   </div>
+
   </div>
  </div>
 {%endblock%}
 
-
-{%block meeting%}
- <div id='meeting'>
-    <img src='{{url.static}}/images/homepage/meeting.jpg' alt='{{site.desc}}'>
- </div>
-{%endblock%}
-
-
-{%block table%}
- <div id='table'>
-    <img src='{{url.static}}/images/homepage/ermile_table.jpg' alt='{{site.desc}}'>
- </div>
-{%endblock%}
-
-
-
-{%block abc%}
- <div class="tile" id='everythingSync'>
-  <div class="cn f fix">
-   <div class="c m12 s12">
-    <h2>{{site.slogan}} </h2>
-    <h3>{%trans "This is our slogan in Ermile."%} {%trans "We belive that we can do anywork, without complexity, as soon as posible."%}</h3>
-    <h3>{%trans "Be easy and relax, we are do all works needed."%}</h3>
-   </div>
-
-   <div class='x3 c4 m12 s12'>
-    <img src='{{url.static}}/images/homepage/anywork.svg' alt='{%trans "Ermile do anywork"%}'>
-   </div>
-
-  </div>
- </div>
-{%endblock%}
 
 
 {%block sarshomar%}
  <div class="tile brandTile" id='sarshomar'>
-  <div class="cn f fix">
+  <div class="cn f fix align-center">
 
-   <div class='c3 s10'>
+   <div class='c6'>
     <a href="https://sarshomar.com" target="_blank">
      <img src='https://sarshomar.com/static/images/logo/svg/sarshomar-logo.svg' alt='{%trans "Sarshomar"%}'>
     </a>
    </div>
-   <div class="c s12">
+   <div class="c6 s12">
     <h2><a href="https://sarshomar.com" target="_blank">{%trans "Sarshomar"%}</a></h2>
     <h3>{%trans "Ask Anyone Anywhere"%}</h3>
     <h4>{%trans "Focus on your question. Do not be too concerned about how to ask or analyze. Equipped with an integrated platform, Sarshomar has made it possible for you to ask your questions via any means."%}</h4>
@@ -82,16 +80,17 @@
 {%endblock%}
 
 
-{%block tejarak%}
- <div class="tile bg-gray brandTile" id='tejarak'>
-  <div class="cn f fix">
 
-   <div class="c s12">
+{%block tejarak%}
+ <div class="tile brandTile bg-gray" id='tejarak'>
+  <div class="cn f fix align-center">
+
+   <div class="c6 s12">
     <h2><a href="https://tejarak.com" target="_blank">{%trans "Tejarak"%}</a></h2>
     <h3>{%trans "Do attendance easily and enjoy real time reports"%}</h3>
     <h4>{%trans "Setup your dedicated and beautiful attendance system in less than a minute and have a real time and scrupulously monitoring on your business from anywhere."%}</h4>
    </div>
-   <div class='c3 s10'>
+   <div class='c6'>
     <a href="https://tejarak.com" target="_blank">
      <img src='https://tejarak.com/static/images/logo/svg/tejarak-logo.svg' alt='{%trans "Sarshomar"%}'>
     </a>
@@ -105,16 +104,16 @@
 
 {%block azvir%}
  <div class="tile brandTile" id='azvir'>
-  <div class="cn f fix">
+  <div class="cn f fix align-center">
 
-   <div class='c3 s10'>
+   <div class='c6'>
     <a href="https://azvir.com" target="_blank">
      <img src='https://azvir.com/static/images/logo/azvir.svg' alt='{%trans "Azvir"%}'>
     </a>
    </div>
-   <div class="c s12">
+   <div class="c6 s12">
     <h2><a href="https://azvir.com" target="_blank">{%trans "Azvir"%}</a></h2>
-    <h3>{%trans "Pioneer Schools Selection"%}</h3>
+    <h3>{%trans "Pioneer Academy Selection"%}</h3>
     <h4>{%trans "Azvir provides complete and beautiful solutions for your school; Do all things easily and enjoy."%}</h4>
    </div>
 
@@ -124,33 +123,12 @@
 
 
 
-
-{%block tryRegister%}
- {%if login.id%}
- {%else%}
- <div class="tile" id='notReady'>
-  <div class="cn">
-   <h2>{%trans "What are you waiting for?"%}</h2>
-   <h3>{%trans "Not sure how to start?"%} {%trans "Tejarak is <span>free</span> to use as long as you want for teams of all sizes."%} {%trans "Not worries."%}</h3>
-   <h3>
-   <a href="{{url.here}}/enter" data-direct class="btn">{%trans "FREE ticket to Enter to the 21st century!"%}</a>
-   </h3>
-   <h4>{%trans "You can easily upgrade to "%} <a href='{{url.here}}/pricing'>{%trans "our paid plans"%}</a>{%trans ", which offer more features and controls."%}</h4>
-  </div>
- </div>
- {%endif%}
+{%block awesomeBox%}
+<section class='awesomeBox' title='{%trans "Just select awesome"%}' data-tippy-placement="bottom" data-tippy-animation="scale" data-tippy-inertia="true" data-tippy-duration="[600, 300]" data-tippy-arrow="true" data-tippy-size="large" data-tippy-followcursor="true">
+  <img src='{{url.static}}/images/homepage/ermile_table.jpg' alt='{{site.title}}'>
+</section>
 {%endblock%}
 
-
-
-{%block enterpriseold%}
- <div class="tile" id='offer-enterprise'>
-  <div class="cn">
-   <h3>{%trans "Is your team interested in deploying?"%} {%trans "We can help."%}</h3>
-   <a href="{{url.here}}/enterprise" class="btn">{%trans "Get in Touch"%}</a>
-  </div>
- </div>
-{%endblock%}
 
 
 {%block enterprise%}
@@ -162,6 +140,5 @@
   </div>
  </div>
 {%endblock%}
-
 
 

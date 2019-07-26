@@ -19,10 +19,10 @@
  <meta property ="og:url"                  content="{{url.pwd}}"/>
  <meta property ="og:type"                 content="website"/>
 {%block facebookImages%}
-{%if site.currentlang == 'fa'%}
+{%if lang.current == 'fa'%}
  <meta property ='og:locale'               content='fa_IR'/>
 {%endif%}
-{%if site.currentlang == 'fa'%}
+{%if lang.current == 'fa'%}
  <meta property ="og:image"                content="{{url.static}}/images/share/og-wide-fa.png"/>
 {%else%}
  <meta property ="og:image"                content="{{url.static}}/images/share/og-wide-en.png"/>

@@ -1,60 +1,60 @@
- <footer id='tfooter'>
-  <div class="cn">
+<section class='touchBox' id='contactus'>
+  <h4 class="fs06">{%trans "Let's hear your needs"%}</h4>
+  <h3>{%trans "Get in touch"%}</h3>
+  <address>
+    <div class="f mB50">
+      <div class="c6 s12">
+        <div class="label">{%trans "Email"%}</div>
+        <div class="value ltr"><a href="mailto:info@ermile.com">info@Ermile.com</a></div>
+      </div>
+      <div class="c6 s12">
+        <div class="label">{%trans "Tel"%}</div>
+        <div class="value ltr"><a href="tel:+982536505281">{%trans "+98-25-3650-5281"%}</a></div>
+      </div>
+    </div>
+    <div class="f">
+      <div class="c6 s12">
+        <div class="label">{%trans "Address"%}</div>
+        <div class="value"><a href="https://goo.gl/maps/g11ns6zT9hH2" target="_blank">{%trans "Ermile, Qom, Iran"%}</a></div>
+      </div>
+      <div class="c6 s12">
+        <div class="label">{%trans "Zip Code"%}</div>
+        <div class="value"><a href="{{url.kingdom}}/contact">{{"37196-17540" | fitNumber(false)}}</a></div>
+      </div>
+    </div>
+  </address>
+</section>
 
-   <nav class="f top">
-    <a class="cauto link_home" href="{{url.here}}">{%trans "Home"%}</a>
-{%if false%}
-    <a class="cauto hide" href="{{url.here}}/about">{%trans "About"%}</a>
-    <a class="cauto hide" href="{{url.here}}/press">{%trans "Press and Media"%}</a>
-{%endif%}
-    <a class="cauto" href="{%if site.currentlang =='fa'%}https://ermile.com/fa{%else%}https://ermile.com{%endif%}/careers" target="_blank">{%trans "Careers"%}</a>
-    <a class="cauto" href="{{url.here}}/social-responsibility">{%trans "Social Responsibility"%}</a>
+
+<footer>
+  <div class="cn">
+    <h2><a href="{{url.kingdom}}">{{site.title}}</a></h2>
+    <h3>{{site.slogan}}</h3>
+    {{langList({'html':true}) | raw}}
+    {%include 'content/template/social.html'%}
+
+   <nav class="top">
+    <a class="link_home" href="{{url.kingdom}}">{%trans "Home"%}</a>
+    <a href="{{url.kingdom}}/about">{%trans "About"%}</a>
+    <a href="{{url.kingdom}}/contact">{%trans "Contact"%}</a>
+    <a href="{{url.kingdom}}/pricing">{%trans "Pricing"%}</a>
+    <a href="{{url.kingdom}}/help/faq">{%trans "FAQ"%}</a>
    </nav>
 
    <div class="f middle">
-{%if site.currentlang =='fa' and false%}
-    <nav class="cauto enamad hide">
-     <a href="#enamad"><img src="{{url.static}}/images/cert/enamad2.png" alt='{%trans "Enamad"%}' onclick='window.open("https://trustseal.enamad.ir/Verify.aspx?id=61968&p=hwmbnbpdjzpghwmbaqgw", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")'></a>
-    </nav>
-{%endif%}
-
-
-    <nav class="c3 s12">
-     <h4>{%trans "Learn More"%}</h4>
-      <a href="{{url.here}}/terms">{%trans "Terms of Service"%}</a>
-      <a href="{{url.here}}/privacy">{%trans "Privacy Policy"%}</a>
-      <a href="{{url.here}}/social-responsibility">{%trans "Social Responsibility"%}</a>
-    </nav>
-
-    <nav class="c3 s12">
-     <h4>{%trans "Support"%}</h4>
-      <a href="{{url.here}}/contact">{%trans "Contact"%}</a>
-      <a href="https://status.ermile.com" target="_blank">{%trans "System Status"%}</a>
-    </nav>
-
-{%if true%}
-    <div class="c s12 os">
-     {%include template.social%}
-    </div>
-{%endif%}
-
+      <a class="c s6" href="{{url.kingdom}}/terms">{%trans "Terms of Service"%}</a>
+      <a class="c s6" href="{{url.kingdom}}/privacy">{%trans "Privacy Policy"%}</a>
+      <a class="c s6" href="{{url.kingdom}}/socialresponsibility">{%trans "Social Responsibility"%}</a>
+      <a class="c s6" href="{%if lang.current =='fa'%}https://ermile.com/fa{%else%}https://ermile.com{%endif%}/careers" target="_blank">{%trans "Careers"%}</a>
+      <a class="c s6" href="{{url.kingdom}}/changelog">{%trans "Changelog"%}</a>
+      <div class="c12 s6 love"><a href="{%if lang.current =='fa'%}https://ermile.com/fa{%else%}https://ermile.com{%endif%}" target="_blank" title='{%trans "Made with Love at Ermile ❤️"%}'>{%trans "Proudly Made in IRAN"%}</a></div>
    </div>
 
-   <div class="f bottom">
-    <div class="c s6">{{langList({'html':true}) | raw}}</div>
-    <div class="cauto "><span>{{footer_stat}}</span></div>
-    <div class="c s6 love"><a href="{%if site.currentlang =='fa'%}https://ermile.com/fa{%else%}https://ermile.com{%endif%}" target="_blank">{%trans "Proudly Made in IRAN"%}</a></div>
-   </div>
-
-  </div>
-
-{%if perm('cp') or main_account or perm('admin:everyone_login:view')%}
-  <div id="xaccess">
-{%if perm('cp') and false%}<a href="{{url.here}}/cp" data-direct>{%trans "Control Panel"%}</a>{%endif%}
-{%if perm('admin')%}<a href="{{url.here}}/a">{%trans "Admin Panel"%}</a>{%endif%}
-{%if main_account %}<a href="{{url.here}}/enter?mobile={{main_mobile}}&referer={{url.pwd}}" data-direct>{%trans "Exit Session"%}</a>{%endif%}
-{%if perm('admin:everyone_login:view') %}<a href="{{url.here}}/enter" data-direct>{%trans "Another Session"%}</a>{%endif%}
-  </div>
+{%if lang.current =='fa'%}
+     <div class="enamad">
+      <a href="#enamad" id='enamad'><img src="{{url.static}}/images/cert/enamad1.png" alt='{%trans "Enamad"%}' onclick='window.open("https://trustseal.enamad.ir/Verify.aspx?id=70527&p=qgwldrfsyncrwkynqgwl", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")'></a>
+     </div>
 {%endif%}
 
- </footer>
+  </div>
+</footer>

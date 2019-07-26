@@ -1,25 +1,23 @@
-{%set logoImg%}
-{%if site.currentlang =='fa'%}
-<img src='{{url.static}}/images/logo/svg/ermile.svg' alt='{{site.title}} | {{site.desc}}'>{%else%}
-<img src='{{url.static}}/images/logo/svg/ermile.svg' alt='{{site.title}} | {{site.desc}}'>{%endif%}
-{%endset%}
-
- <header id="theader" data-scroll>
-  <div class="cn f">
-   <h1 class="cauto logo">
-    <a class="flex" href='{{url.here}}' tabindex='1'>{{logoImg}}<span>{{site.title}}</span></a>
-   </h1>
-
-   <nav class="c flex theader-links">
-    <a href="tel:00982536505281">{%trans "Support"%} {%trans "+98 25 3650 5281"%}</a>
-   </nav>
-
-   <nav data-xhr="header-profile" class="cauto flex os">
-    <div class="vm"><span class="sf-globe"></span>{{langList({'html':true, 'all2':true}) | raw}}</div>
-{%if login.id%}
-    <a href="{{url.here}}/cp" data-direct class="btn">{%trans "Admin Panel"%}</a>
-{%else%}
-{%endif%}
+<section id='landing' data-scroll {%if datarow%}class="isBlog"{%endif%}>
+  <div class="bg"></div>
+  <div id="nodes"></div>
+  <header class="f">
+    <div class="c logo">
+      <a href="{{url.kingdom}}">
+        <img src="{{url.static}}/images/logo/ermile.png" alt='{{site.title}}'>
+        <h1>{{site.title}}<sup>&reg;</sup></h1> <span>//</span> <h3>{{site.slogan}}</h3>
+      </a>
+    </div>
+    <nav class="cauto os">
+      <a href="tel:00982536505281">{%trans "+98 25 3650 5281"%}</a>
     </nav>
+{{langList({'html':true, 'class': 'cauto os'}) | raw}}
+  </header>
+  <div class="desc">
+    <div class="cn">
+      <h1>{{page.title}}</h1>
+      <h2 class="mB25">{{page.desc}}</h2>
+    </div>
+    <div class="mT10 scrollDownArrow"><span class="sf-angle-down fs20"></span></div>
   </div>
- </header>
+</section>
