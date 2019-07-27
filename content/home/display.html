@@ -17,6 +17,7 @@
 {{block('azvir')}}
 
 {{block('awesomeBox')}}
+{{block('ermileMembers')}}
 {{block('enterprise')}}
 
 
@@ -32,7 +33,7 @@
   <div class="cn">
     <h2 title='{%trans "This is name of our company in Iran"%}'>{{site.company}}</h2>
     <h3>{%trans "Knowledge Based Company"%}</h3>
-    <p>{%trans "Ermile&reg; is our brand and we are start form the hot summer of 2015."%} {%trans "From the first day of starting this company we are stay ahead of the tech curve and create cutting edge technology."%}</p>
+    <p class="mB20-f">{%trans "Ermile&reg; is our brand and we are start form the hot summer of 2015."%} {%trans "From the first day of starting this company we are stay ahead of the tech curve and create cutting edge technology."%}</p>
     <p>{%trans "In spring of 2019 after finish analyse and evaluation process of our services, Iran Vice-Presidency for science and technology is confirmed that our works is knowledge based."%}</p>
   </div>
 </section>
@@ -142,4 +143,17 @@
  </div>
 {%endblock%}
 
+
+
+
+{%block ermileMembers%}
+ <div class="tile" id='ermileTeam'>
+  <div class="cn">
+   <h2 class="mB20-f"><a href="https://tejarak.com/ermile" target="_blank">{%trans "Ermile Team"%} <span class="sf-bolt"></span></a></h2>
+   <div class="browserBox"><span></span>
+    <iframe src="https://tejarak.com/ermile"></iframe>
+   </div>
+  </div>
+ </div>
+{%endblock%}
 
