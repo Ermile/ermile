@@ -29,6 +29,8 @@ body[data-page=privacy] #landing .bg{background-image: url(../images/homepage/bg
 body[data-page=socialresponsibility] #landing .bg{background-image: url(../images/homepage/bg-ermile-socialresponsibility.jpg);}
 body[data-page=terms] #landing .bg{background-image: url(../images/homepage/bg-ermile-terms.jpg);}
 body[data-page=about] #landing .bg{background-image: url(../images/homepage/bg-ermile-about.jpg);}
+body[data-page=blog] #landing .bg{background-image: url(../images/homepage/bg-ermile-blog.jpg);}
+#landing.isBlog .bg{background-image: url(../images/homepage/bg-ermile-news.jpg);}
 
 
 
