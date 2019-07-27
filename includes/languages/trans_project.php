@@ -68,32 +68,30 @@ class twigTransTerms
 	echo T_("If you have any work experience, kindly provide complete information about it in your CV.");// Line 294
 	echo T_("Be sure to mention your personal information, picture and Interests.");  // Line 295
 	echo T_("Please note down your CV with a suitable font and it should be in pdf file.");// Line 296
-	echo T_("Ermile, Floor2, Yas Building");                                          // Line 55
-	echo T_("1st alley, Haft-e-tir St");                                              // Line 62
-	echo T_("Qom");                                                                   // Line 61
-	echo T_("Iran");                                                                  // Line 60
-	echo T_("Floor2, Yas Building");                                                  // Line 63
+	echo T_("Ermile, Floor2, Yas Building");                                          // Line 48
+	echo T_("1st alley, Haft-e-tir St");                                              // Line 55
+	echo T_("Qom");                                                                   // Line 54
+	echo T_("Iran");                                                                  // Line 53
+	echo T_("Floor2, Yas Building");                                                  // Line 56
 	echo T_("+98 25 3650 5281");                                                      // Line 12
 	echo T_("Kindly register your Information");                                      // Line 349
-	echo T_("Name");                                                                  // Line 20
-	echo T_("Mobile");                                                                // Line 24
+	echo T_("Name");                                                                  // Line 17
+	echo T_("Mobile");                                                                // Line 21
 	echo T_("Upload CV");                                                             // Line 354
 	echo T_("Send your Information");                                                 // Line 356
 
 	//----------------------------------------------------content\contact\display.html
-	echo T_("Contact Us");                                                            // Line 3
-	echo T_("Knowing your valuable comments about bugs and problems and more importantly your precious offers will help us in this way.");// Line 7
-	echo T_("Thank you for choosing us.");                                            // Line 14
-	echo T_("We do our best to improve our quality. So, knowing your valuable comments about bugs and problems and more importantly your precious offers will help us in this way.");// Line 14
-	echo T_("Full Name");                                                             // Line 21
-	echo T_("Please enter valid mobile number. `:val` is incorrect");                 // Line 25
+	echo T_("Thank you for choosing us.");                                            // Line 8
+	echo T_("We do our best to improve our quality. So, knowing your valuable comments about bugs and problems and more importantly your precious offers will help us in this way.");// Line 8
+	echo T_("You can access the ticketing status through this link");                 // Line 10
+	echo T_("Full Name");                                                             // Line 18
+	echo T_("Please enter valid mobile number. `:val` is incorrect");                 // Line 22
 	echo T_("Email");                                                                 // Line 24
-	echo T_("Message");                                                               // Line 33
-	echo T_("Your Message");                                                          // Line 34
-	echo T_("Send");                                                                  // Line 38
-	echo T_("How to contact us");                                                     // Line 46
-	echo T_("ermile");                                                                // Line 52
-	echo T_("on map");                                                                // Line 70
+	echo T_("Your Message");                                                          // Line 30
+	echo T_("Send");                                                                  // Line 33
+	echo T_("How to contact us");                                                     // Line 41
+	echo T_("Ermile");                                                                // Line 151
+	echo T_("Our location on map");                                                   // Line 64
 
 	//--------------------------------------------------------content\git\display.html
 	echo T_("Last update");                                                           // Line 28
@@ -103,29 +101,35 @@ class twigTransTerms
 
 	//-------------------------------------------------------content\home\display.html
 	echo T_("Be easy and relax, we are do all works needed.");                        // Line 7
-	echo T_("This is name of our company in Iran");                                   // Line 33
-	echo T_("Knowledge Based Company");                                               // Line 34
-	echo T_("Ermile&reg; is our brand and we are start form the hot summer of 2015.");// Line 35
-	echo T_("From the first day of starting this company we are stay ahead of the tech curve and create cutting edge technology.");// Line 35
-	echo T_("In spring of 2019 after finish analyse and evaluation process of our services, Iran Vice-Presidency for science and technology is confirmed that our works is knowledge based.");// Line 36
-	echo T_("Jibres");                                                                // Line 48
-	echo T_("Integrated Sales and Online Accounting");                                // Line 49
-	echo T_("Jibres is not just an online accounting software;");                     // Line 50
-	echo T_("We try to create the best financial platform that has everything you need to sale and manage your financial life.");// Line 50
-	echo T_("jibres");                                                                // Line 54
-	echo T_("Sarshomar");                                                             // Line 96
-	echo T_("Ask Anyone Anywhere");                                                   // Line 75
-	echo T_("Focus on your question. Do not be too concerned about how to ask or analyze. Equipped with an integrated platform, Sarshomar has made it possible for you to ask your questions via any means.");// Line 76
-	echo T_("Tejarak");                                                               // Line 90
-	echo T_("Do attendance easily and enjoy real time reports");                      // Line 91
-	echo T_("Setup your dedicated and beautiful attendance system in less than a minute and have a real time and scrupulously monitoring on your business from anywhere.");// Line 92
-	echo T_("Azvir");                                                                 // Line 116
-	echo T_("Pioneer Academy Selection");                                             // Line 117
-	echo T_("Azvir provides complete and beautiful solutions for your school; Do all things easily and enjoy.");// Line 118
-	echo T_("Just select awesome");                                                   // Line 128
-	echo T_("Enterprise scale");                                                      // Line 138
-	echo T_("Our enterprise solution brings the power and utility of Ermile to large, complex organizations.");// Line 139
-	echo T_("Get in Touch");                                                          // Line 140
+	echo T_("This is name of our company in Iran");                                   // Line 35
+	echo T_("Knowledge Based Company");                                               // Line 36
+	echo T_("Ermile&reg; is our brand and we are start form the hot summer of 2015.");// Line 37
+	echo T_("From the first day of starting this company we are stay ahead of the tech curve and create cutting edge technology.");// Line 37
+	echo T_("In spring of 2019 after finish analyse and evaluation process of our services, Iran Vice-Presidency for science and technology is confirmed that our works is knowledge based.");// Line 38
+	echo T_("jibres");                                                                // Line 51
+	echo T_("Jibres");                                                                // Line 55
+	echo T_("Integrated Sales and Online Accounting");                                // Line 56
+	echo T_("Jibres is not just an online accounting software;");                     // Line 57
+	echo T_("We try to create the best financial platform that has everything you need to sale and manage your financial life.");// Line 57
+	echo T_("Sarshomar");                                                             // Line 76
+	echo T_("Ask Anyone Anywhere");                                                   // Line 77
+	echo T_("Focus on your question. Do not be too concerned about how to ask or analyze. Equipped with an integrated platform, Sarshomar has made it possible for you to ask your questions via any means.");// Line 78
+	echo T_("Azvir");                                                                 // Line 97
+	echo T_("Pioneer Academy Selection");                                             // Line 98
+	echo T_("Azvir provides complete and beautiful solutions for your school; Do all things easily and enjoy.");// Line 99
+	echo T_("Tejarak");                                                               // Line 145
+	echo T_("Do attendance easily and enjoy real time reports");                      // Line 146
+	echo T_("Setup your dedicated and beautiful attendance system in less than a minute and have a real time and scrupulously monitoring on your business from anywhere.");// Line 120
+	echo T_("IranPresidents");                                                        // Line 135
+	echo T_("Iran Presidents");                                                       // Line 137
+	echo T_("Live and complete result of iran elections after revolution until now.");// Line 138
+	echo T_("Dead Browser");                                                          // Line 153
+	echo T_("Check health status of your browser and say it's live or dead!");        // Line 154
+	echo T_("Just select awesome");                                                   // Line 166
+	echo T_("Enterprise scale");                                                      // Line 176
+	echo T_("Our enterprise solution brings the power and utility of Ermile to large, complex organizations.");// Line 177
+	echo T_("Get in Touch");                                                          // Line 178
+	echo T_("Ermile Team");                                                           // Line 189
 
 	//---------------------------------------------------content\template\dafault.html
 	echo T_("For share via social networks");                                         // Line 35

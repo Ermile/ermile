@@ -184,12 +184,14 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
   .heroBox{padding: 50px 0;}
   .heroBox h2:before{display: none;}
   .heroBox h2:after{display:block;margin:1em auto;min-width:100px;}
-  .heroBox h3{font-size: 2em}
+  .rtl .heroBox h3{font-size: 2.4em}
+  .ltr .heroBox h3{font-size: 2em}
   .heroBox p{width: 100%}
   .brandTile h2{margin: 0.5em auto}
   .brandTile img{max-width: 200px;}
   .awesomeBox h3{top:-150px;z-index:2}
-  .browserBox{max-width: 90%;}
+  .browserBox{max-width: 95%;}
+  .browserBox iframe{min-height: 300px;}
   .touchBox{font-size:2.5em;}
   footer .enamad{position:relative;margin-top:1em;}
   #landing header .logo img{position:static;}
