@@ -33,11 +33,11 @@ body[data-page=about] #landing .bg{background-image: url(../images/homepage/bg-e
 
 
 /* heroBox*/
-.heroBox{text-align:center;font-size: 1.7em;background-color: #4c4845;color: #fff;padding:150px 0 180px}
+.heroBox{text-align:center;font-size: 1.7em;background-color: #142833;color: #fff;padding:150px 0 180px}
 .heroBox.standalone{margin: 30px 0;}
 .heroBox h2{margin: 20px auto 60px;font-size: 1em;text-transform: uppercase;text-shadow: 0 0 10px #000;user-select:none;}
 .heroBox h2:before, .heroBox h2:after{content: "";border-top: 2px solid #FFF;width: 60px;padding-bottom: 4px;display: inline-block;margin: 0 20px;vertical-align:-webkit-baseline-middle;}
-.heroBox h3{color: #c9aa5d;font-size: 3em;margin: 0.5em 0 1em;font-weight: bold;text-transform: uppercase;text-shadow: 0 0 30px #000;}
+.heroBox h3{color: #ffbc00;font-size: 3em;margin: 0.5em 0 1em;font-weight: bold;text-transform: uppercase;text-shadow: 0 0 30px #c0aa10;}
 .heroBox p{font-weight:100;width:60%;text-align:center;margin: 0 auto 1em}
 
 
@@ -59,7 +59,7 @@ body[data-page=about] #landing .bg{background-image: url(../images/homepage/bg-e
 .awesomeBox img{display:block;margin:0 auto;}
 
 /* touchBox*/
-.touchBox{background-color:#333;color:#fff;text-align:center;padding:3em 0 5em;position:relative;font-size:3em;user-select: none;}
+.touchBox{background-color:#222;color:#fff;text-align:center;padding:3em 0 5em;position:relative;font-size:3em;user-select: none;}
 .touchBox p{margin:0;}
 .touchBox h3{text-transform:uppercase;margin-bottom:1em;font-weight:900}
 .touchBox address{font-style:normal;}
@@ -68,7 +68,7 @@ body[data-page=about] #landing .bg{background-image: url(../images/homepage/bg-e
 .touchBox .value a:hover{border-bottom-color:#777;}
 .touchBox .value a:focus{border-bottom-color:#c9aa5d;}
 
-footer{position:relative;padding: 5em 0;font-size: 1.5em;background-color: #4c4845;color:#fff;user-select:none;}
+footer{position:relative;padding: 5em 0;font-size: 1.5em;background-color: #414a4c;color:#fff;user-select:none;}
 footer h2{text-align:center;font-size:4em;font-weight:900;margin:0;}
 footer h2 a{color:#fff;padding:0}
 footer h2 a:hover{color:#fff;background-color:transparent;}
@@ -133,7 +133,7 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
 
 #ermileServices img{max-width: 100px;margin-bottom: 1em;}
 /* enterprise box*/
-.offer-enterprise{font-size:1.2em;background-color:#4070c0;color: #fff;user-select: none;}
+.offer-enterprise{font-size:1.2em;background-color:#0d98b7;color: #fff;user-select: none;}
 .offer-enterprise h2{color:#fff;margin-bottom: 0.5em;}
 .offer-enterprise h3{color:#eee;padding:0;margin-bottom:1em;}
 .offer-enterprise h4{color:#ddd;padding:0}
