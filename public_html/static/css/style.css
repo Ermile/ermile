@@ -15,13 +15,33 @@ img{user-select: none;}
 .rtl #landing header .logo h1{padding-left:0;padding-right:0.2em;}
 #landing header .logo h3{display:inline-block;margin:0;font-size:0.8em;}
 #landing header nav a{padding:10px 0.5em;}
-#landing .bg{width: 100%;height: 100%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: -1;background-image: url("../images/homepage/meeting.jpg");background-position: center;background-size: cover;-webkit-transform: scale(1.1);transform: scale(1.1);overflow: hidden;}
+#landing .bg{width: 100%;height: 100%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: -1;background-image: url("../images/bg/bg-ermile-1.jpg");background-position: center;background-size: cover;-webkit-transform: scale(1.1);transform: scale(1.1);overflow: hidden;}
 #landing .bg::after{content: "";position: absolute;top: 0;bottom: 0;right: 0;left: 0;background-color: rgba(0,0,0,0.4);z-index: -1}
 #landing #nodes{width: 100%;height: 100%;position: absolute;top: 0;bottom: 0;left: 0;right: 0;overflow: hidden;z-index: 0;}
 #landing #nodes-del::after{content: "";position: absolute;top: 0;bottom: 0;right: 0;left: 0;}
 #landing .desc{position: absolute;bottom: 0;right: 3%;left: 3%;color: #fff;text-align: center;padding-top:1em;}
 #landing .desc h2{font-size: 1em;}
 #landing .desc h3{font-size: 1em;}
+
+/* random images*/
+
+#landing .bg.i1{background-image: url(../images/bg/bg-ermile-1.jpg);}
+#landing .bg.i2{background-image: url(../images/bg/bg-ermile-2.jpg);}
+#landing .bg.i3{background-image: url(../images/bg/bg-ermile-3.jpg);}
+#landing .bg.i4{background-image: url(../images/bg/bg-ermile-4.jpg);}
+#landing .bg.i5{background-image: url(../images/bg/bg-ermile-5.jpg);}
+#landing .bg.i6{background-image: url(../images/bg/bg-ermile-6.jpg);}
+#landing .bg.i7{background-image: url(../images/bg/bg-ermile-7.jpg);}
+#landing .bg.i8{background-image: url(../images/bg/bg-ermile-8.jpg);}
+#landing .bg.i9{background-image: url(../images/bg/bg-ermile-9.jpg);}
+#landing .bg.i10{background-image: url(../images/bg/bg-ermile-10.jpg);}
+#landing .bg.i11{background-image: url(../images/bg/bg-ermile-11.jpg);}
+#landing .bg.i12{background-image: url(../images/bg/bg-ermile-12.jpg);}
+#landing .bg.i13{background-image: url(../images/bg/bg-ermile-13.jpg);}
+#landing .bg.i14{background-image: url(../images/bg/bg-ermile-14.jpg);}
+#landing .bg.i15{background-image: url(../images/bg/bg-ermile-15.jpg);}
+#landing .bg.i16{background-image: url(../images/bg/bg-ermile-16.jpg);}
+
 
 /* custom landing background*/
 body[data-page=contact] #landing .bg{background-image: url(../images/homepage/bg-ermile-contact.jpg);}

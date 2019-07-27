@@ -10,6 +10,11 @@ class view
 		\dash\data::page_title(T_('As easy as ABC'));
 		\dash\data::page_desc(T_('We provide a wide range of enterprise services to you.'));
 		\dash\data::page_special(true);
+
+		if(\dash\url::module() === null)
+		{
+			\dash\data::bgRand('i'. mt_rand(1, 5));
+		}
 	}
 }
 ?>
