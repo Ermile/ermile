@@ -13,7 +13,7 @@ class view
 
 		if(\dash\url::module() === null)
 		{
-			\dash\data::bgRand('i'. mt_rand(1, 5));
+			\dash\data::bgRand('i'. mt_rand(1, 16));
 		}
 	}
 }
