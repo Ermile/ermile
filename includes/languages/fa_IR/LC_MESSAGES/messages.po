@@ -17972,7 +17972,7 @@ msgstr "کدکاربر ثبت نشد است"
 
 #: dash/lib/utility/upload.php:437 dash/node_modules/dash/lib/utility/upload.php:431
 msgid "The size of file is larger than the upload space you have"
-msgstr "اندازه فایل شما بزرگتر از سایر در اختیار گرفته برای شماست"
+msgstr "اندازه فایل شما بیشتر از حداکثر حجم قابل قبول سرور است"
 
 #: dash/lib/utility/upload.php:487 dash/node_modules/dash/lib/utility/upload.php:476
 msgid "File successful uploaded"
