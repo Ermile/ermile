@@ -1,26 +1,26 @@
 <section class='touchBox' id='contactus'>
-  <h4 class="fs06">{%trans "Let's hear your needs"%}</h4>
-  <h3>{%trans "Get in touch"%}</h3>
+  <h4 class="fs06" data-aos="fade-down">{%trans "Let's hear your needs"%}</h4>
+  <h3 data-aos="zoom-in" data-aos-delay="200">{%trans "Get in touch"%}</h3>
   <address>
     <div class="f mB20">
-      <div class="c6 s12 pA10">
+      <div class="c6 s12 pA10" data-aos="fade-up-right" data-aos-delay="200">
         <div class="label">{%trans "Address"%}</div>
         <div class="value">
           <a href="https://goo.gl/maps/g11ns6zT9hH2" target="_blank">{%trans "Ermile, Qom, Iran"%}<div class="fs06 mT10">{%trans "Floor2, Yas Building, 1st alley, Haft-e-tir St"%}</div></a>
         </div>
       </div>
-      <div class="c6 s12 pA10">
+      <div class="c6 s12 pA10" data-aos="fade-up-left" data-aos-delay="200">
         <div class="label">{%trans "Tel"%}</div>
         <div class="value ltr mB10"><a href="tel:+982536505281">{%trans "+98-25-3650-5281"%}</a></div>
         <div class="value ltr"><a href="tel:+982536505460">{%trans "+98-25-3650-5460"%}</a></div>
       </div>
     </div>
     <div class="f">
-      <div class="c6 s12 pA10">
+      <div class="c6 s12 pA10" data-aos="fade-up-right" data-aos-delay="400">
         <div class="label">{%trans "Zip Code"%}</div>
         <div class="value"><a href="{{url.kingdom}}/contact">{{"37196-17540" | fitNumber(false)}}</a></div>
       </div>
-      <div class="c6 s12 pA10">
+      <div class="c6 s12 pA10" data-aos="fade-up-left" data-aos-delay="400">
         <div class="label">{%trans "Email"%}</div>
         <div class="value ltr"><a href="mailto:info@ermile.com">info@Ermile.com</a></div>
       </div>
@@ -29,21 +29,21 @@
 </section>
 
 
-<footer>
-  <div class="cn">
+<footer >
+  <div class="cn" data-aos="zoom-in">
     <h2><a href="{{url.kingdom}}">{{site.title}}</a></h2>
     <h3>{{site.slogan}}</h3>
     {{langList({'html':true}) | raw}}
     {%include 'content/template/social.html'%}
 
-   <nav class="top">
+   <nav class="top" >
     <a class="link_home" href="{{url.kingdom}}">{%trans "Home"%}</a>
     <a href="{{url.kingdom}}/about">{%trans "About"%}</a>
     <a href="{{url.kingdom}}/contact">{%trans "Contact"%}</a>
     <a href="https://status.ermile.com" target="_blank">{%trans "System Status"%}</a>
    </nav>
 
-   <div class="f middle">
+   <div class="f middle" data-aos="fade-up">
       <a class="c s6" href="{{url.kingdom}}/socialresponsibility">{%trans "Social Responsibility"%}</a>
       <a class="c s6" href="{{url.kingdom}}/terms">{%trans "Terms of Service"%}</a>
       <a class="c s6" href="{{url.kingdom}}/privacy">{%trans "Privacy Policy"%}</a>
