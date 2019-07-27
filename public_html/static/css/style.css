@@ -179,7 +179,7 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
   #landing header .logo span{display:none;}
   #landing header .logo h3{display:none;}
   #landing header nav{font-size:0.7em;}
-  .rtl #landing .desc h1{font-size:1.9em}
+  .rtl #landing .desc h1{font-size:1.9em;font-weight: 900;}
   .ForgetAllThings{font-size: 1.8em;}
   .heroBox{padding: 50px 0;}
   .heroBox h2:before{display: none;}
@@ -193,7 +193,7 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
   .browserBox{max-width: 95%;}
   .browserBox iframe{min-height: 300px;}
   .touchBox{font-size:2.5em;}
-  footer .enamad{position:relative;margin-top:1em;}
+  footer{padding:3em 0 1em}
   #landing header .logo img{position:static;}
   .ltr #landing header .logo img{left:-5px;right:inherit;}
 }
