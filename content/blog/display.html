@@ -1,0 +1,47 @@
+{%extends display.main%}
+
+
+{%block pageData%}
+
+
+   <nav class="breadcrumb block msg hide" data-xhr="breadcrumb" tabindex='-1' data-step='4' data-intro='{%trans "View your current location and navigate to parent of it"%}' data-position='bottom'>
+   {{breadcrumb(null, true) | raw}}
+   </nav>
+
+
+{{block('posts')}}
+
+
+{%endblock%}
+
+
+
+{%block posts%}
+
+
+{%if allPostList %}
+<article class="postListPreview">
+  {%for key, value in allPostList%}
+    <section class="f">
+{%if value.meta.thumb%}
+      <div class="cauto s12 pRa10 txtC">
+        <a href="{{url.here}}/{{value.url}}"><img src="{{value.meta.thumb}}" alt="{{value.title}}" width="150px"></a>
+      </div>
+{%endif%}
+      <div class="c s12">
+        <h3><a href="{{url.here}}/{{value.url}}">{{value.title}}</a></h3>
+        <p>{{value.excerpt}}</p>
+      </div>
+    </section>
+  {%endfor%}
+</article>
+
+
+{%include display.pagination%}
+
+{%endif%}
+
+
+{%endblock%}
+
+
