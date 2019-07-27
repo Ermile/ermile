@@ -1,10 +1,10 @@
-body{background-color: #fff;-webkit-font-smoothing: antialiased;}
+body{background-color: #fff;-webkit-font-smoothing: antialiased;overflow: hidden;}
 
 ::selection {background-color:#c9aa5d;color:#fff;}
 img{user-select: none;}
 
 /*landing for all pages*/
-#landing{position: relative;font-size:1.8em;min-height:600px;height:100vh;background: url(../images/homepage/meeting.jpg);background-size: cover;user-select:none;background-repeat:no-repeat;background-position: center;}
+#landing{position: relative;font-size:1.8em;min-height:600px;height:100vh;user-select:none;overflow: hidden;}
 #landing.isBlog{min-height:300px;height: 50vh;}
 /*#landing.isBlog .scrollDownArrow{display: none;}*/
 #landing header{height:70px;line-height:70px; position: absolute;top:2em;right:5%;left:5%;color: #fff;background-color:rgba(0,0,0,0.5);padding:0 2%}
@@ -15,8 +15,8 @@ img{user-select: none;}
 .rtl #landing header .logo h1{padding-left:0;padding-right:0.2em;}
 #landing header .logo h3{display:inline-block;margin:0;font-size:0.8em;}
 #landing header nav a{padding:10px 0.5em;}
-#landing .bg img{display:block;margin:0 auto}
-#landing .bg::after{content: "";position: absolute;top: 0;bottom: 0;right: 0;left: 0;background-color: rgba(0,0,0,0.4);}
+#landing .bg{width: 100%;height: 100%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: -1;background-image: url("../images/homepage/meeting.jpg");background-position: center;background-size: cover;-webkit-transform: scale(1.1);transform: scale(1.1);overflow: hidden;}
+#landing .bg::after{content: "";position: absolute;top: 0;bottom: 0;right: 0;left: 0;background-color: rgba(0,0,0,0.4);z-index: -1}
 #landing #nodes{width: 100%;height: 100%;position: absolute;top: 0;bottom: 0;left: 0;right: 0;overflow: hidden;z-index: 0;}
 #landing #nodes-del::after{content: "";position: absolute;top: 0;bottom: 0;right: 0;left: 0;}
 #landing .desc{position: absolute;bottom: 0;right: 3%;left: 3%;color: #fff;text-align: center;padding-top:1em;}
