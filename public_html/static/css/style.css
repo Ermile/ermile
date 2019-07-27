@@ -1,9 +1,10 @@
 body{background-color: #fff;-webkit-font-smoothing: antialiased;}
 
 ::selection {background-color:#c9aa5d;color:#fff;}
+img{user-select: none;}
 
 /*landing for all pages*/
-#landing{position: relative;font-size:2em;min-height:600px;height:100vh;background: url(../images/homepage/meeting.jpg);background-size: cover;user-select:none;background-repeat:no-repeat;background-position: center;}
+#landing{position: relative;font-size:1.8em;min-height:600px;height:100vh;background: url(../images/homepage/meeting.jpg);background-size: cover;user-select:none;background-repeat:no-repeat;background-position: center;}
 #landing.isBlog{min-height:300px;height: 50vh;}
 /*#landing.isBlog .scrollDownArrow{display: none;}*/
 #landing header{height:70px;line-height:70px; position: absolute;top:2em;right:5%;left:5%;color: #fff;background-color:rgba(0,0,0,0.5);padding:0 2%}
@@ -22,9 +23,6 @@ body{background-color: #fff;-webkit-font-smoothing: antialiased;}
 #landing .desc h2{font-size: 1em;}
 #landing .desc h3{font-size: 1em;}
 
-img{
-  user-select: none;
-}
 /* custom landing background*/
 body[data-page=contact] #landing{background-image: url(../images/homepage/bg-ermile-contact.jpg);}
 body[data-page=privacy] #landing{background-image: url(../images/homepage/bg-ermile-privacy.jpg);}
@@ -40,7 +38,7 @@ body[data-page=about] #landing{background-image: url(../images/homepage/bg-ermil
 .heroBox h2{margin: 20px auto 60px;font-size: 1em;text-transform: uppercase;text-shadow: 0 0 10px #000;user-select:none;}
 .heroBox h2:before, .heroBox h2:after{content: "";border-top: 2px solid #FFF;width: 60px;padding-bottom: 4px;display: inline-block;margin: 0 20px;vertical-align:-webkit-baseline-middle;}
 .heroBox h3{color: #c9aa5d;font-size: 3em;margin: 0.5em 0 1em;font-weight: bold;text-transform: uppercase;text-shadow: 0 0 30px #000;}
-.heroBox p{font-weight:100;width:60%;margin:0 auto;text-align:center;}
+.heroBox p{font-weight:100;width:60%;text-align:center;}
 
 
 /* chairBox*/
@@ -52,7 +50,7 @@ body[data-page=about] #landing{background-image: url(../images/homepage/bg-ermil
 .ForgetAllThings{padding:5em 0;font-size:2.5em;text-align: center;}
 .ForgetAllThings h2{font-weight:900;margin-bottom:1em;}
 .rtl .ForgetAllThings h2{font-size: 1.5em;}
-.ForgetAllThings p{font-weight:100;}
+.ForgetAllThings p{font-weight:100;margin: 0}
 .ForgetAllThings p span{color: #208085}
 
 /* awesomeBox*/
@@ -87,13 +85,6 @@ footer a{color:#eee;transition:0.3s}
 footer a:hover{color:#fff;background-color:rgba(0,0,0,0.2)}
 footer a:focus{color:#fff;background-color:rgba(0,0,0,0.5)}
 footer .love a{display:block;}
-footer .enamad{position:absolute;top:0;left:0;padding:0;transition:0.3s;}
-footer .enamad a{display:block;max-width:90px;padding:0;position:relative;background-color:#eee;margin:0 auto;}
-footer .enamad a:hover{background-color:#fff}
-footer .enamad a:focus{background-color:#ddd}
-footer .enamad img{display:block;max-width:100%;padding:0.5em 0}
-footer .enamad a:before{content:"";position:absolute;top:-4px;right:0;left:0;height:4px;background-image:url(../images/cert/footer-box.svg);background-repeat:repeat-x;}
-footer .enamad a:after{content:"";position:absolute;bottom:-4px;right:0;left:0;height:4px;background-image:url(../images/cert/footer-box.svg);background-repeat:repeat-x;-webkit-transform:rotate(180deg);transform:rotate(180deg)}
 
 
 
@@ -108,44 +99,9 @@ footer .enamad a:after{content:"";position:absolute;bottom:-4px;right:0;left:0;h
 .pc{font-size:1.2em;background-color:#eee;color:#333;}
 .pc p{font-size:1.2em;line-height:2em;margin-bottom:2em;}
 .rtl .pc p{text-align:justify;}
-.prTable{padding:1em 0;font-size:1.2em;}
-[data-page="homepage"] .prTable{font-size:1.5em;}
-.prBox{background-color:#fff;min-height:250px;max-width:250px;margin:1em auto;text-align:center;color:#999;border-radius:3px;transition:0.3s}
-
-[data-page="for_academy"] .prBox{min-height: 220px;}
-.prBox:hover{box-shadow:0 0 5px 0 #aaa}
-.prBox h3{border-bottom:3px solid #eee;margin-bottom:0;font-size:2.5em;}
-.prBox .price{padding:2em 0}
-.prBox .price span{display:block;font-size:5em;font-weight:100;}
-.prBox .price sup{font-size:0.3em;vertical-align:super;}
-.prBox .price sub{font-size:0.2em;vertical-align:middle;}
-.prBox .price abbr{display:block;}
-.prBox p{font-size:1em;padding:1em 1.5em;font-weight:100;margin:0;text-align:center!important;line-height:2em}
-.rtl .prBox p{padding:1em 0.5em;}
-.prBox ul{padding:1em 0;font-weight:100;}
-.prBox ul li{padding:0.5em 2em;line-height:1.3em;}
-.bold{font-weight:bold}
-
-.prBox.free .price{color:#777;}
-.prBox.free h3{color:#777;border-color:#777}
-.prBox.simple .price{color:#bfc21d;}
-.prBox.simple h3{color:#bfc21d;border-color:#bfc21d}
-.prBox.standard .price{color:#1da4c2;}
-.prBox.standard h3{color:#1da4c2;border-color:#1da4c2}
-.prBox.full .price{color:#c01541;}
-.prBox.full h3{color:#c01541;border-color:#c01541}
 
 
 
-.pricingTable{text-align:center;color:#888}
-.pricingTable .price .c{font-size:1.4em;font-weight:500;color:#333}
-.pricingTable .price:hover .c{color:#fff}
-.pricingTable .price:hover small{color:#eee}
-.ltr .pricingTable .c4, .ltr .pricingTable .c12{text-align:left}
-.rtl .pricingTable .c4, .rtl .pricingTable .c12{text-align:right;}
-.pricingTable sup{font-size:0.6em;padding:0 0.3em;}
-.pricingTable small{color:#777;font-size:0.6em;transition:0.3s}
-.pricingTable .f:hover small{color:#eee}
 body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:#ddd;}
 /* faq design*/
 .faq h3{margin:0;}
@@ -169,12 +125,12 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
 
 /* brand box*/
 .brandTile h2{font-size:4em;max-width:600px;margin: 1em auto;}
-.brandTile h3{padding:0 2em;margin-bottom:1em;max-width:600px;color:#333;margin-right:auto;margin-left:auto;}
-.brandTile h4{padding:0 2em;margin-bottom:1em;max-width:600px;color:#333;margin-right:auto;margin-left:auto;}
+.brandTile h3{padding:0 5%;margin-bottom:1em;max-width:600px;color:#333;margin-right:auto;margin-left:auto;}
+.brandTile h4{padding:0 2%;margin-bottom:1em;max-width:600px;color:#333;margin-right:auto;margin-left:auto;}
 .brandTile img{max-width: 280px;}
 
 /* enterprise box*/
-.offer-enterprise{font-size:1.5em;background-color:#4070c0;color: #fff;user-select: none;}
+.offer-enterprise{font-size:1.2em;background-color:#4070c0;color: #fff;user-select: none;}
 .offer-enterprise h2{color:#fff;margin-bottom: 0.5em;}
 .offer-enterprise h3{color:#eee;padding:0;margin-bottom:1em;}
 .offer-enterprise h4{color:#ddd;padding:0}
@@ -201,175 +157,6 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
 .bg-hot{background-color:#c01541;color:#fff}
 
 
-/* table style*/
-.dtc > div{transition:0.3s;}
-.dtc > div > *{padding:1em 1em;}
-.dtc > .th{background-color:#e0d7c1;font-weight:700}
-.dtc > .gh{font-weight:700;background-color:#d9dddd;margin-top:1em;}
-.dtc > .th:hover{background-color:#d0c7b1;}
-.dtc > .th.gh:hover{background-color:#c9cdcd;}
-.dtc > div:not(.th):hover{background-color:#c01541;color:#fff!important}
-.dtc > div a{color:#333;transition:0.3s;}
-.dtc > div:hover a{color:#fff;}
-
-
-
-
-
-
-
-
-.pricing {
-  color: #7a90ff;
-  padding: 10em 0 5em;
-  position: relative;
-  -webkit-font-smoothing: antialiased;
-  font-size: 1.5rem;
-
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: center;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto 3em;
-}
-.pricing-item {
-  position: relative;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  align-items: stretch;
-  text-align: center;
-  -webkit-flex: 0 1 330px;
-  flex: 0 1 330px;
-}
-.pricing-action {
-  color: inherit;
-  border: none;
-  background: none;
-}
-.pricing-action:focus {
-  outline: none;
-}
-
-.pricing-feature-list {
-  text-align: left;
-}
-
-.pricing .pricing-item {
-  cursor: default;
-  color: #84697c;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(46, 59, 125, 0.23);
-  border-radius: 20px 20px 10px 10px;
-  margin: 1em;
-}
-
-@media screen and (min-width: 66.25em) {
-  .pricing .pricing-item {
-    margin: 1em -0.5em;
-  }
-
-  .pricing .pricing__item--featured {
-    margin: 0;
-    z-index: 10;
-    box-shadow: 0 0 20px rgba(46, 59, 125, 0.23);
-  }
-}
-.pricing .pricing-deco {
-  border-radius: 10px 10px 0 0;
-  background: rgba(76, 70, 101, 0.99);
-  padding: 5em 0 12em;
-  position: relative;
-}
-.pricing .pricing-deco-img {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 160px;
-}
-.pricing .pricing-title {
-  font-size: 1em;
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #fff;
-}
-.pricing .deco-layer {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-}
-.pricing .pricing-item:hover .deco-layer--1 {
-  -webkit-transform: translate3d(15px, 0, 0);
-  transform: translate3d(15px, 0, 0);
-}
-.pricing .pricing-item:hover .deco-layer--2 {
-  -webkit-transform: translate3d(-15px, 0, 0);
-  transform: translate3d(-15px, 0, 0);
-}
-.pricing .icon {
-  font-size: 2.5em;
-}
-.pricing .pricing-price {
-  /*font-family: 'Open Sans', sans-serif;*/
-  font-size: 4em;
-  font-weight: bold;
-  padding: 0;
-  color: #fff;
-  margin: 0 0 0.25em 0;
-  line-height: 0.75;
-  z-index:2;
-  position: relative;
-}
-.pricing .pricing-currency {
-  font-size: 0.15em;
-  vertical-align: top;
-}
-.pricing .pricing-period {
-  font-size: 0.15em;
-  padding: 0 0 0 0.5em;
-  font-style: italic;
-}
-.pricing .pricing__sentence {
-  font-weight: bold;
-  margin: 0 0 1em 0;
-  padding: 0 0 0.5em;
-}
-.pricing .pricing-feature-list {
-  margin: 0;
-  padding: 0.25em 0 2.5em;
-  list-style: none;
-  text-align: center;
-}
-.pricing .pricing-feature {
-  padding: 1em 0;
-}
-.pricing .pricing-action {
-  font-weight: bold;
-  margin: auto 3em 2em 3em;
-  padding: 1em 2em;
-  color: #fff;
-  border-radius: 30px;
-  background: #4d4766;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-.pricing .pricing-action:hover, .pricing .pricing-action:focus {
-  background-color: #100A13;
-}
-
-.pricing .pricing-item--featured .pricing-deco {
-  padding: 5em 0 8.885em 0;
-}
-
-
-
-
 
 /* ---------------------------------------------------------------- responsive of site */
 @media all and (min-width: 1400px){}
@@ -383,23 +170,21 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
 @media all and (max-width: 767px) {
   /* about */
   .p,.pa{padding:5rem 4%;padding:5rem 0;}
-  /* pricing */
-  .pricingTable .f > div{font-size:1rem;}
-  .pricingTable .f.price .c{font-size:1.2rem;}
-  .dtc > div > *{padding:1rem .5rem;}
-  .box{padding:2em;margin:0.5em;}
-  /*check above code, use from old version*/
 
-  #landing{min-height:500px;height:90vh}
+  #landing{min-height:300px;height:70vh}
+  #landing .scrollDownArrow{display: none;}
   #landing header .logo h1{font-size:1em}
   #landing header .logo span{display:none;}
   #landing header .logo h3{display:none;}
   #landing header nav{font-size:0.7em;}
-  .ForgetAllThings{font-size: 2em;}
+  .ForgetAllThings{font-size: 1.8em;}
+  .heroBox{padding: 50px 0;}
   .heroBox h2:before{display: none;}
   .heroBox h2:after{display:block;margin:1em auto;min-width:100px;}
+  .heroBox h3{font-size: 2em}
   .heroBox p{width: 100%}
   .awesomeBox h3{top:-150px;z-index:2}
+  .browserBox{max-width: 90%;}
   .touchBox{font-size:2.5em;}
   footer .enamad{position:relative;margin-top:1em;}
   #landing header .logo img{position:static;}
@@ -411,6 +196,3 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
 @media print {
 
 }
-
-
-
