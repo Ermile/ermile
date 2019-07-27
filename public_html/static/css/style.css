@@ -138,7 +138,7 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
 .offer-enterprise h3{color:#eee;padding:0;margin-bottom:1em;}
 .offer-enterprise h4{color:#ddd;padding:0}
 
-.browserBox{max-width:700px;border:3px solid #e5e5e8;border-top-width:30px;border-radius:5px;box-shadow:0 0 10px 1px #e5e5e8;margin:0 auto;position:relative;background-color:#e5e5e8;}
+.browserBox{max-width:800px;border:3px solid #e5e5e8;border-top-width:30px;border-radius:5px;box-shadow:0 0 10px 1px #e5e5e8;margin:0 auto;position:relative;background-color:#e5e5e8;}
 .browserBox::before{content:'https://tejarak.com/ermile';position:absolute;height:14px;background-color:#d6d7d6;border-radius:5px;top:-22px;right:10px;left:80px;transition:0.3s;padding: 2px 1em;text-align: left;direction: ltr;color: #777}
 .browserBox:hover::before{background-color:#ccc}
 .browserBox span{position:absolute;height:14px;width:14px;background-color:#d6d7d6;border-radius:50%;top:-22px;left:10px;transition:0.3s;}
@@ -146,7 +146,7 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
 .browserBox span::after{content:'';position:absolute;height:14px;width:14px;background-color:#d6d7d6;border-radius:50%;left:40px;cursor:auto;}
 .browserBox:hover span{background-color:#777;cursor:not-allowed;}
 .browserBox img{display:block;margin:0 auto;cursor:progress;}
-.browserBox iframe{width: 100%;min-height: 400px;display: block;}
+.browserBox iframe{width: 100%;min-height: 500px;display: block;}
 
 /* bg*/
 .bg-white{background-color:#fff;}
