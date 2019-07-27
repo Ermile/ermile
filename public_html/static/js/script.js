@@ -31,7 +31,7 @@ AnimatoriJS('nodes',
 {
   "particles": {
     "number": {
-      "value": 160,
+      "value": 50,
       "density": {
         "enable": true,
         "value_area": 800
@@ -41,7 +41,7 @@ AnimatoriJS('nodes',
       "value": "#ffffff"
     },
     "shape": {
-      "type": "circle",
+      "type": "edge",
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -56,12 +56,12 @@ AnimatoriJS('nodes',
       }
     },
     "opacity": {
-      "value": 0.6,
+      "value": 0.7,
       "random": true,
       "anim": {
-        "enable": true,
+        "enable": false,
         "speed": 1,
-        "opacity_min": 0,
+        "opacity_min": 0.1,
         "sync": false
       }
     },
@@ -69,10 +69,10 @@ AnimatoriJS('nodes',
       "value": 20,
       "random": true,
       "anim": {
-        "enable": false,
-        "speed": 4,
-        "size_min": 0.3,
-        "sync": false
+        "enable": true,
+        "speed": 5,
+        "size_min": 0.5,
+        "sync": true
       }
     },
     "line_linked": {
@@ -84,21 +84,21 @@ AnimatoriJS('nodes',
     },
     "move": {
       "enable": true,
-      "speed": 1,
-      "direction": "none",
+      "speed": 3,
+      "direction": "top",
       "random": true,
       "straight": false,
       "out_mode": "out",
       "bounce": false,
       "attract": {
-        "enable": false,
+        "enable": true,
         "rotateX": 600,
-        "rotateY": 600
+        "rotateY": 1200
       }
     }
   },
   "interactivity": {
-    "detect_on": "canvas",
+    "detect_on": "window",
     "events": {
       "onhover": {
         "enable": true,
@@ -106,8 +106,7 @@ AnimatoriJS('nodes',
       },
       "onclick": {
         "enable": true,
-        // "mode": "push",
-        "mode": "repulse"
+        "mode": "remove"
       },
       "resize": true
     },
@@ -115,14 +114,14 @@ AnimatoriJS('nodes',
       "grab": {
         "distance": 200,
         "line_linked": {
-          "opacity": 0.5
+          "opacity": 1
         }
       },
       "bubble": {
-        "distance": 250,
-        "size": 0,
+        "distance": 400,
+        "size": 40,
         "duration": 2,
-        "opacity": 0,
+        "opacity": 8,
         "speed": 3
       },
       "repulse": {
