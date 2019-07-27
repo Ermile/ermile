@@ -13,8 +13,8 @@
 
 {{block('jibres')}}
 {{block('sarshomar')}}
-{{block('tejarak')}}
 {{block('azvir')}}
+
 {{block('services')}}
 
 {{block('awesomeBox')}}
@@ -85,7 +85,7 @@
 
 
 {%block azvir%}
- <div class="tile brandTile" id='azvir'>
+ <div class="tile brandTile bg-gray" id='azvir'>
   <div class="cn f fix align-center">
 
    <div class='c6 s12'>
@@ -106,12 +106,12 @@
 
 
 {%block tejarak%}
- <div class="tile brandTile bg-gray" id='tejarak'>
+ <div class="tile brandTile" id='tejarak'>
   <div class="cn f fix align-center">
 
    <div class='c6 s12'>
     <a href="https://tejarak.com" target="_blank">
-     <img src='https://tejarak.com/static/images/logo/svg/tejarak-logo.svg' alt='{%trans "Sarshomar"%}'>
+     <img src='https://tejarak.com/static/images/logo/svg/tejarak-logo.svg' alt='{%trans "Tejarak"%}'>
     </a>
    </div>
    <div class="c6 s12">
@@ -127,7 +127,37 @@
 
 
 {%block services%}
+<div class="tile bg-gray3" id='ermileServices'>
+  <div class="cn">
+    <div class="f">
+     <div class="c4 s12 pA10 mB20">
+      <a href="https://iranpresidents.com" target="_blank">
+       <img src='https://iranpresidents.com/static/images/logo/png/iranpresidents-logo.png' alt='{%trans "IranPresidents"%}'>
+      </a>
+      <h2><a href="https://iranpresidents.com" target="_blank">{%trans "Iran Presidents"%}</a></h2>
+      <h3>{%trans "Live and complete result of iran elections after revolution until now."%}</h3>
+     </div>
 
+     <div class="c4 s12 pA10 mB20" id="tejarak">
+      <a href="https://tejarak.com" target="_blank">
+       <img src='https://tejarak.com/static/images/logo/svg/tejarak-logo.svg' alt='{%trans "Tejarak"%}'>
+      </a>
+      <h2><a href="https://tejarak.com" target="_blank">{%trans "Tejarak"%}</a></h2>
+      <h3>{%trans "Do attendance easily and enjoy real time reports"%}</h3>
+     </div>
+
+     <div class="c4 s12 pA10 mB20">
+      <a href="https://deadbrowser.com" target="_blank">
+       <img src='https://ermile.com/static/images/logo/svg/ermile.svg' alt='{%trans "Ermile"%}'>
+      </a>
+      <h2><a href="https://deadbrowser.com" target="_blank">{%trans "Dead Browser"%}</a></h2>
+      <h3>{%trans "Check health status of your browser and say it's live or dead!"%}</h3>
+     </div>
+
+
+    </div>
+  </div>
+</div>
 {%endblock%}
 
 

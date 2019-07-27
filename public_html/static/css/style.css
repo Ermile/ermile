@@ -128,8 +128,10 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
 .brandTile h3{padding:0 5%;margin-bottom:1em;max-width:600px;color:#333;margin-right:auto;margin-left:auto;}
 .brandTile h4{padding:0 2%;margin-bottom:1em;max-width:600px;color:#333;margin-right:auto;margin-left:auto;}
 .brandTile a{display: block;}
-.brandTile img{max-width: 300px;}
+.brandTile img{max-width: 300px;background-color:#fff;border-radius: 50%;}
+.brandTile#azvir img{padding: 10px;}
 
+#ermileServices img{max-width: 100px;margin-bottom: 1em;}
 /* enterprise box*/
 .offer-enterprise{font-size:1.2em;background-color:#4070c0;color: #fff;user-select: none;}
 .offer-enterprise h2{color:#fff;margin-bottom: 0.5em;}
