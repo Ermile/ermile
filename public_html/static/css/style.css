@@ -5,7 +5,7 @@ img{user-select: none;}
 
 /*landing for all pages*/
 #landing{position: relative;font-size:1.8em;min-height:600px;height:100vh;user-select:none;overflow: hidden;}
-#landing.isBlog{min-height:300px;height: 50vh;}
+#landing.isBlog{min-height:350px;height: 50vh;}
 /*#landing.isBlog .scrollDownArrow{display: none;}*/
 #landing header{height:70px;line-height:70px; position: absolute;top:2em;right:5%;left:5%;color: #fff;background-color:rgba(0,0,0,0.5);padding:0 2%}
 #landing header a{color: #fff;transition:0.3s;}
