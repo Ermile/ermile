@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile - Persian\n"
-"POT-Creation-Date: 2019-07-27 21:16+0430\n"
-"PO-Revision-Date: 2019-07-27 21:33+0430\n"
+"POT-Creation-Date: 2019-07-28 18:05+0430\n"
+"PO-Revision-Date: 2019-07-28 18:05+0430\n"
 "Last-Translator: Javad <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -2680,13 +2680,13 @@ msgstr "ثبت‌نام در :name"
 
 #: dash/addons/content_enter/signup/view.php:17
 #: dash/node_modules/dash/addons/content_enter/signup/view.php:17
-#: ermile/includes/languages/trans_project.php:198
+#: ermile/includes/languages/trans_project.php:199
 msgid "Terms of Service"
 msgstr "شرایط استفاده"
 
 #: dash/addons/content_enter/signup/view.php:18
 #: dash/node_modules/dash/addons/content_enter/signup/view.php:18
-#: ermile/content/privacy/view.php:9 ermile/includes/languages/trans_project.php:199
+#: ermile/content/privacy/view.php:9 ermile/includes/languages/trans_project.php:200
 msgid "Privacy Policy"
 msgstr "حریم خصوصی"
 
@@ -11022,7 +11022,7 @@ msgid "Duplicate - File exist"
 msgstr "تکراری - فایل وجود دارد"
 
 #: dash/addons/includes/languages/trans_static.php:185
-#: dash/lib/utility/upload.php:512
+#: dash/lib/utility/upload.php:517
 #: dash/node_modules/dash/addons/includes/languages/trans_static.php:185
 #: dash/node_modules/dash/lib/utility/upload.php:500
 msgid "Fail on tranfering file"
@@ -11959,14 +11959,14 @@ msgstr "وب‌سایت"
 #: dash/addons/includes/languages/trans_static.php:426
 #: dash/node_modules/dash/addons/includes/languages/trans_static.php:426
 #: ermile/includes/languages/trans_dash.php:354
-#: ermile/includes/languages/trans_project.php:208
+#: ermile/includes/languages/trans_project.php:209
 msgid "facebook"
 msgstr "فیسبوک"
 
 #: dash/addons/includes/languages/trans_static.php:427
 #: dash/node_modules/dash/addons/includes/languages/trans_static.php:427
 #: ermile/includes/languages/trans_dash.php:355
-#: ermile/includes/languages/trans_project.php:209
+#: ermile/includes/languages/trans_project.php:210
 msgid "twitter"
 msgstr "توییتر"
 
@@ -11979,7 +11979,7 @@ msgstr "اینستاگرام"
 #: dash/addons/includes/languages/trans_static.php:429
 #: dash/node_modules/dash/addons/includes/languages/trans_static.php:429
 #: ermile/includes/languages/trans_dash.php:353
-#: ermile/includes/languages/trans_project.php:210
+#: ermile/includes/languages/trans_project.php:211
 msgid "linkedin"
 msgstr "لینکداین"
 
@@ -15246,11 +15246,11 @@ msgstr "اطلاعات با موفقیت اضافه شد"
 msgid "Record successfully updated"
 msgstr "اطلاعات با موفقیت بروزرسانی شد"
 
-#: dash/lib/app/file.php:178 dash/node_modules/dash/lib/app/file.php:59
+#: dash/lib/app/file.php:179 dash/node_modules/dash/lib/app/file.php:59
 msgid "Unable to upload, because of selected upload name"
 msgstr "ناتوان در آپلود، به دلیل نام آپلود انتخاب شده"
 
-#: dash/lib/app/file.php:212 dash/node_modules/dash/lib/app/file.php:103
+#: dash/lib/app/file.php:214 dash/node_modules/dash/lib/app/file.php:103
 msgid "Can not upload file. undefined error"
 msgstr "ناتوان در آپلود فایل. خطای تعریف نشده"
 
@@ -15554,7 +15554,7 @@ msgstr "پاسخ"
 
 #: dash/lib/app/log/support_tools.php:103
 #: dash/node_modules/dash/lib/app/log/support_tools.php:103
-#: ermile/includes/languages/trans_project.php:211
+#: ermile/includes/languages/trans_project.php:212
 msgid "telegram"
 msgstr "تلگرام"
 
@@ -16355,31 +16355,31 @@ msgstr "اگر راهکاری مناسب برای مشکل خود نیافته�
 msgid "Software Solution Designer"
 msgstr "ارائه‌دهنده‌ی راهکارهای مدرن نرم‌افزاری"
 
-#: dash/lib/engine/view.php:191 dash/node_modules/dash/lib/engine/view.php:206
+#: dash/lib/engine/view.php:182 dash/node_modules/dash/lib/engine/view.php:206
 msgid "Latest news"
 msgstr "آخرین اخبار"
 
-#: dash/lib/engine/view.php:247 dash/node_modules/dash/lib/engine/view.php:257
+#: dash/lib/engine/view.php:272 dash/node_modules/dash/lib/engine/view.php:257
 msgid "You are using Internet Explorer."
 msgstr "شما از اینترنت اکسپلورر استفاده می‌کنید."
 
-#: dash/lib/engine/view.php:247 dash/node_modules/dash/lib/engine/view.php:257
+#: dash/lib/engine/view.php:272 dash/node_modules/dash/lib/engine/view.php:257
 msgid "Really!!!"
 msgstr "واقعا!!!"
 
-#: dash/lib/engine/view.php:247 dash/node_modules/dash/lib/engine/view.php:257
+#: dash/lib/engine/view.php:272 dash/node_modules/dash/lib/engine/view.php:257
 msgid "IE is DIE!"
 msgstr "آی‌ای مرده است!"
 
-#: dash/lib/engine/view.php:252 dash/node_modules/dash/lib/engine/view.php:262
+#: dash/lib/engine/view.php:277 dash/node_modules/dash/lib/engine/view.php:262
 msgid "You need to update your :browser to new version."
 msgstr "شما نیازمند ارتقای :browser خود به نسخه جدید هستید."
 
-#: dash/lib/engine/view.php:252 dash/node_modules/dash/lib/engine/view.php:262
+#: dash/lib/engine/view.php:277 dash/node_modules/dash/lib/engine/view.php:262
 msgid "The world is changing rapidly!"
 msgstr "دنیا به‌سرعت در حال تغییر است!"
 
-#: dash/lib/engine/view.php:263 dash/node_modules/dash/lib/engine/view.php:273
+#: dash/lib/engine/view.php:288 dash/node_modules/dash/lib/engine/view.php:273
 msgid "Please use famous browser to have better experience!"
 msgstr "لطفا برای بهرمندی از تجربه مطلوب‌تر از مرورگرهای مطرح استفاده کنید."
 
@@ -17959,27 +17959,23 @@ msgstr "فایل با موفقیت آپلود شد"
 msgid "Failed to transfer file while moving to temp"
 msgstr "خطا در انتقال فایل در زمان جابجایی به پوشه موقت"
 
-#: dash/lib/utility/upload.php:365 dash/node_modules/dash/lib/utility/upload.php:363
+#: dash/lib/utility/upload.php:370 dash/node_modules/dash/lib/utility/upload.php:363
 msgid "upload name not found"
 msgstr "نام آپلود یافت نشد"
 
-#: dash/lib/utility/upload.php:372 dash/node_modules/dash/lib/utility/upload.php:370
+#: dash/lib/utility/upload.php:377 dash/node_modules/dash/lib/utility/upload.php:370
 msgid "folder prefix not found"
 msgstr "پیشوند پوشه یافت نشد"
 
-#: dash/lib/utility/upload.php:379 dash/node_modules/dash/lib/utility/upload.php:377
-msgid "user id not set"
-msgstr "کدکاربر ثبت نشد است"
-
-#: dash/lib/utility/upload.php:437 dash/node_modules/dash/lib/utility/upload.php:431
+#: dash/lib/utility/upload.php:442 dash/node_modules/dash/lib/utility/upload.php:431
 msgid "The size of file is larger than the upload space you have"
 msgstr "اندازه فایل شما بیشتر از حداکثر حجم قابل قبول سرور است"
 
-#: dash/lib/utility/upload.php:487 dash/node_modules/dash/lib/utility/upload.php:476
+#: dash/lib/utility/upload.php:492 dash/node_modules/dash/lib/utility/upload.php:476
 msgid "File successful uploaded"
 msgstr "فایل با موفقیت آپلود شد"
 
-#: dash/lib/utility/upload.php:498 dash/node_modules/dash/lib/utility/upload.php:486
+#: dash/lib/utility/upload.php:503 dash/node_modules/dash/lib/utility/upload.php:486
 msgid "Fail on tranfering file, upload from path"
 msgstr "خطا در انتقال فایل، آپلود از آدرس"
 
@@ -18053,6 +18049,10 @@ msgstr "لطفا نوع ترم را مشخص کنید"
 #: dash/node_modules/dash/lib/engine/view.php:304
 msgid "Support center"
 msgstr "مرکز پشتیبانی"
+
+#: dash/node_modules/dash/lib/utility/upload.php:377
+msgid "user id not set"
+msgstr "کدکاربر ثبت نشد است"
 
 #: ermile/content/blog/view.php:11
 msgid "Know about our stories and events"
@@ -19391,30 +19391,34 @@ msgid "Zip Code"
 msgstr "کد پستی"
 
 #: ermile/includes/languages/trans_project.php:196
+msgid "Blog"
+msgstr "بلاگ"
+
+#: ermile/includes/languages/trans_project.php:197
 msgid "System Status"
 msgstr "وضعیت سیستم"
 
-#: ermile/includes/languages/trans_project.php:197
+#: ermile/includes/languages/trans_project.php:198
 msgid "Social Responsibility"
 msgstr "مسئولیت اجتماعی"
 
-#: ermile/includes/languages/trans_project.php:200
+#: ermile/includes/languages/trans_project.php:201
 msgid "Careers"
 msgstr "فرصت‌های شغلی"
 
-#: ermile/includes/languages/trans_project.php:201
+#: ermile/includes/languages/trans_project.php:202
 msgid "Made with Love at Ermile ❤️"
 msgstr "با عشق در ارمایل ساختیمش ❤️"
 
-#: ermile/includes/languages/trans_project.php:202
+#: ermile/includes/languages/trans_project.php:203
 msgid "Proudly Made in IRAN"
 msgstr "با افتخار ساخت ایران"
 
-#: ermile/includes/languages/trans_project.php:207
+#: ermile/includes/languages/trans_project.php:208
 msgid "Share"
 msgstr "اشتراک‌گذاری"
 
-#: ermile/includes/languages/trans_project.php:214
+#: ermile/includes/languages/trans_project.php:215
 msgid ""
 "Utilizing Ermile's services means the acceptance of and commitment to observing "
 "all the tenors of this agreement."
@@ -19422,7 +19426,7 @@ msgstr ""
 "استفاده از خدمات ارمایل به منزله‌ پذیرش و تعهد به رعایت تمام مفاد مندرج در این "
 "توافق‌نامه است."
 
-#: ermile/includes/languages/trans_project.php:215
+#: ermile/includes/languages/trans_project.php:216
 msgid ""
 "It is worth mentioning that due to the insecurity of cyberspace, you should never "
 "post your vital information on either Ermile or any other services!"
@@ -19430,7 +19434,7 @@ msgstr ""
 "لازم به یادآوری‌ست که با توجه به ناامن بودن فضای ‌مجازی، نه تنها در ارمایل بلکه در "
 "هیچ سرویس دیگری، اطلاعات حیاتی خود را منتشر نکنید!"
 
-#: ermile/includes/languages/trans_project.php:216
+#: ermile/includes/languages/trans_project.php:217
 msgid ""
 "User's personal information is strictly confidential in our service. Ermile "
 "preserves the information as encoded and will not under any conditions transfer "
@@ -19440,7 +19444,7 @@ msgstr ""
 "اطلاعات را به صورت کدشده نگه‌داری کرده و تحت هیچ شرایطی آن را به غیر واگذار نخواهد "
 "کرد."
 
-#: ermile/includes/languages/trans_project.php:217
+#: ermile/includes/languages/trans_project.php:218
 msgid ""
 "In case there is a request for receiving user's information by the competent "
 "authorities, according to the country the user lives in, Ermile will cooperate "
@@ -19451,7 +19455,7 @@ msgstr ""
 "کشور محل سکونت کاربر، ارمایل تنها پس از دریافت حکم قضایی کشور درخواست کننده، "
 "توانایی همکاری با آنان را خواهد داشت."
 
-#: ermile/includes/languages/trans_project.php:218
+#: ermile/includes/languages/trans_project.php:219
 msgid ""
 "Ermile will not offer any guarantee as to the quality of the products or services "
 "presented by the teams and will not accept any responsibility in this regard!"
@@ -19459,7 +19463,7 @@ msgstr ""
 "ارمایل هیچگونه ضمانتی در مورد کیفیت محصولات یا خدمات ارائه شده توسط تیم‌ها را "
 "نمی‌پذیرد و مسئولیتی در قبال آن ندارد!"
 
-#: ermile/includes/languages/trans_project.php:219
+#: ermile/includes/languages/trans_project.php:220
 msgid ""
 "Users should assume responsibility for any harm, both material and immaterial, "
 "caused by direct, indirect or penal factors and due to their utilization of this "
@@ -19468,7 +19472,7 @@ msgstr ""
 "خسارت‌های‌ مادی و معنوی ناشی از عوامل مستقیم، غیرمستقیم و کیفری، در قبال استفاده از "
 "این سرویس برعهده کاربران بوده و ارمایل هیچ‌گونه مسئولیتی در اینباره ندارد."
 
-#: ermile/includes/languages/trans_project.php:220
+#: ermile/includes/languages/trans_project.php:221
 msgid ""
 "Ermile accepts no responsibility, under any conditions, for the harms caused by "
 "users' mutual trust in each other or by the disclosure of information by users."
@@ -19476,7 +19480,7 @@ msgstr ""
 "تحت هیچ شرایطی ارمایل مسئولیت خسارت‌های وارده در اثر اعتماد و اتکاء اعضاء به "
 "یکدیگر و فاش‌شدن اطلاعات توسط کاربر را نمی‌پذیرد."
 
-#: ermile/includes/languages/trans_project.php:221
+#: ermile/includes/languages/trans_project.php:222
 msgid ""
 "Ermile will do its best to protect both the users' information and the service; "
 "however, regarding the lack of certainty within the cyberspace, it will not "
@@ -19486,7 +19490,7 @@ msgstr ""
 "توجه به عدم قطعیت در فضای مجازی، مسئولیتی در مورد از بین رفتن اطلاعات قرارگرفته "
 "بر روی سرویس نخواهد پذیرفت."
 
-#: ermile/includes/languages/trans_project.php:222
+#: ermile/includes/languages/trans_project.php:223
 msgid ""
 "We will publicize our information and news only via Ermile's formal website. "
 "Accordingly, those who publicize any attributed news and claims, within social "
@@ -19497,7 +19501,7 @@ msgstr ""
 "خبر و ادعای نسبت‌داده‌شده در رسانه‌ها و شبکه‌های اجتماعی به عهده منتشرکننده آن بوده و "
 "ارمایل مسئولیتی در قبال آن ندارد."
 
-#: ermile/includes/languages/trans_project.php:223
+#: ermile/includes/languages/trans_project.php:224
 msgid ""
 "Ermile will bear no responsibility for whatsoever messages sent to users, "
 "including those indicating winning a lottery, and all our information "
@@ -19507,7 +19511,7 @@ msgstr ""
 "پیام دیگری نداشته و تمام اطلاع‌رسانی‌های ما از طریق روش‌های برقراری ارتباط کاربر با "
 "ارمایل خواهد بود."
 
-#: ermile/includes/languages/trans_project.php:224
+#: ermile/includes/languages/trans_project.php:225
 msgid ""
 "Any misuse of Ermile's trade name is prohibited and will be suable by making a "
 "complaint to the legal competent authorities."
@@ -19515,7 +19519,7 @@ msgstr ""
 "هرگونه سوءاستفاده از نام تجاری ارمایل ممنوع بوده و از طریق شکایت به مراجع قانونی "
 "دارای صلاحیت، قابل پیگرد خواهد بود."
 
-#: ermile/includes/languages/trans_project.php:225
+#: ermile/includes/languages/trans_project.php:226
 msgid ""
 "Furthermore, this agreement, under the name Terms and Conditions, will be "
 "available and observable, in all pages of the website. Users will be responsible "
@@ -19524,7 +19528,7 @@ msgstr ""
 "هم‌چنین این توافق‌نامه در تمام صفحات وب‌سایت با عنوان شرایط و قوانین موجود و قابل "
 "مشاهده است. مسئولیت عدم کسب اطلاع از آخرین تغییرات برعهده کاربر خواهد بود."
 
-#: ermile/includes/languages/trans_project.php:226
+#: ermile/includes/languages/trans_project.php:227
 msgid ""
 "It should be mentioned that in case there would be any modifications in the above-"
 "mentioned tenors, an updated version will be available for the public, and as "
@@ -19533,7 +19537,7 @@ msgstr ""
 "لازم به ذکر است که درصورت هرگونه تغییر در مفاد ذکر شده، نسخه به‌روزشده آن در دسترس "
 "عموم قرار خواهد گرفت و به اطلاع تمام کاربران خواهد رسید."
 
-#: ermile/includes/languages/trans_project.php:229
+#: ermile/includes/languages/trans_project.php:230
 msgid "Translation"
 msgstr "ترجمه"
 

@@ -1063,7 +1063,7 @@ class twigTransTerms
 	echo T_("You have another database for logs");                                    // Line 38
 	echo T_("Click for create backup from log database");                             // Line 38
 	echo T_("Auto backup");                                                           // Line 51
-	echo T_("MB");                                                                    // Line 50
+	echo T_("MB");                                                                    // Line 27
 	echo T_("Start backup every");                                                    // Line 131
 	echo T_("Year");                                                                  // Line 133
 	echo T_("Month");                                                                 // Line 134
@@ -1439,10 +1439,10 @@ class twigTransTerms
 	echo T_("Enter a valid username!");                                               // Line 373
 
 	//-------------------------------------------addons\includes\html\display-mvc.html
-	echo T_("You are supervisor!");                                                   // Line 98
-	echo T_("Control Panel");                                                         // Line 103
-	echo T_("JavaScript is required to use our service.");                            // Line 117
-	echo T_("Enable JavaScript in your browser or use one which supports it.");       // Line 118
+	echo T_("You are supervisor!");                                                   // Line 91
+	echo T_("Control Panel");                                                         // Line 96
+	echo T_("JavaScript is required to use our service.");                            // Line 110
+	echo T_("Enable JavaScript in your browser or use one which supports it.");       // Line 111
 
 	//----------------------------------------addons\includes\html\inc_commentadd.html
 	echo T_("Your rate");                                                             // Line 27

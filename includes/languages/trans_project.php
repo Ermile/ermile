@@ -193,13 +193,14 @@ class twigTransTerms
 	echo T_("Home");                                                                  // Line 40
 	echo T_("About");                                                                 // Line 41
 	echo T_("Contact");                                                               // Line 42
-	echo T_("System Status");                                                         // Line 43
-	echo T_("Social Responsibility");                                                 // Line 47
-	echo T_("Terms of Service");                                                      // Line 48
-	echo T_("Privacy Policy");                                                        // Line 49
-	echo T_("Careers");                                                               // Line 50
-	echo T_("Made with Love at Ermile ❤️");                                           // Line 52
-	echo T_("Proudly Made in IRAN");                                                  // Line 52
+	echo T_("Blog");                                                                  // Line 43
+	echo T_("System Status");                                                         // Line 44
+	echo T_("Social Responsibility");                                                 // Line 48
+	echo T_("Terms of Service");                                                      // Line 49
+	echo T_("Privacy Policy");                                                        // Line 50
+	echo T_("Careers");                                                               // Line 51
+	echo T_("Made with Love at Ermile ❤️");                                           // Line 53
+	echo T_("Proudly Made in IRAN");                                                  // Line 53
 
 	//----------------------------------------------------content\template\header.html
 
