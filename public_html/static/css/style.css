@@ -205,6 +205,7 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
   #landing header .logo h3{display:none;}
   #landing header nav{font-size:0.7em;}
   .rtl #landing .desc h1{font-size:1.9em;font-weight: 900;}
+  .rtl #landing.isBlog{font-size: 1.5em;}
   .ForgetAllThings{font-size: 1.8em;}
   .heroBox{padding: 50px 0;}
   .heroBox h2:before{display: none;}
