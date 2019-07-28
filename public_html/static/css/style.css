@@ -200,7 +200,7 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
   .p,.pa{padding:5rem 4%;padding:5rem 0;}
 
   #landing{min-height:500px;height:70vh}
-  #landing header{height:50px;line-height: 50px;}
+  #landing header{height:50px;line-height: 50px;top: 1em;}
   #landing header .logo img{padding: 1px;height: 48px;vertical-align: top;margin: 1px 0;}
   #landing header .logo h1{font-size:1em}
   #landing header .logo span{display:none;}
