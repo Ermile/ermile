@@ -114,8 +114,7 @@ footer .love a{display:block;}
 .page-block{padding:5em 0;font-size:1.2em}
 /* section head*/
 .tile{padding:5em 0;width:100%;overflow:hidden;text-align:center;}
-.pc{font-size:1.3em;background-color:#eee;color:#333;padding:3em 0;}
-.pc p{font-size:1.2em;line-height:2em;margin-bottom:2em;}
+.pc{background-color:#eee;color:#333;padding:3em 0;}
 .rtl .pc p{text-align:justify;}
 
 
@@ -132,8 +131,6 @@ body .pc .em{font-weight:bold;text-align:center;padding:1em 5%;background-color:
 .pc ul.list{margin:3em 5%;}
 .pc ul.list li{font-size:1.1em;line-height:2em;transition:0.3s}
 .pc ul.list li:hover{background-color:#e0d7c1;}
-.pc h3{font-size:3em;}
-.pc h4{font-size:1.5em;margin-bottom:0}
 
 /* tile*/
 .tile h2{margin:0;font-size:3em;color:#333}
