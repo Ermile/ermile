@@ -47,13 +47,13 @@
   <div class="cn f fix align-center">
 
    <div class='c6 s12'>
-    <a href="https://jibres.com/{{lang.current}}" target="_blank" data-aos="fade-right" data-aos-delay="300">
-     <img src='https://jibres.com/static/images/logo/svg/jibres-logo.svg' alt='{%trans "jibres"%}'>
+    <a href="{%if lang.current == 'fa'%}https://jibres.ir{%else%}https://jibres.com{%endif%}" target="_blank" data-aos="fade-right" data-aos-delay="300">
+     <img src='https://jibres.com/static/logo/icon/svg/Jibres-Logo-icon.svg' alt='{%trans "jibres"%}'>
     </a>
    </div>
    <div class="c6 s12" data-aos="fade-left">
-    <h2><a href="https://jibres.com/{{lang.current}}" target="_blank">{%trans "Jibres"%}</a></h2>
-    <h3>{%trans "Integrated Sales and Online Accounting"%}</h3>
+    <h2><a href="{%if lang.current == 'fa'%}https://jibres.ir{%else%}https://jibres.com{%endif%}" target="_blank">{%trans "Jibres"%}</a></h2>
+    <h3>{%trans "Integrated Sales Platform"%}</h3>
     <h4>{%trans "Jibres is not just an online accounting software;"%} {%trans "We try to create the best financial platform that has everything you need to sale and manage your financial life."%}</h4>
    </div>
 
